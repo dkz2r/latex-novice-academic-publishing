@@ -6,14 +6,14 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- How are LaTeX documents structured?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Identify the different kinds of section commands in LaTeX.
+- Create a list within a LaTeX document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -36,15 +36,15 @@ Hello World!
 
 This is my first LaTeX document.
 
-\section{My First Section}
+\section{Sections}
 
 I can add content to my first section!
 
-\subsection{Details about the First section}
+\subsection{Subsection}
 
-I can put a subsection inside of my first section.
+I can put a subsection inside my first section.
 
-\section{My Second Section}
+\section{Second Section}
 
 And this text will go into another section.
 
@@ -66,16 +66,181 @@ documentation for the class you are using.
 
 :::
 
+## Lists
+
+In LaTeX, as in markdown, there are two types of lists: ordered and unordered. They are both
+defined with `\begin{...}` and `\end{...}` commands, as we saw with the document body. Let's add
+an ordered list to our document.
+
+```latex
+\documentclass{article}
+
+\begin{document}
+Hello World!
+
+This is my first LaTeX document.
+
+\section{Sections}
+
+I can add content to my first section!
+
+\subsection{Subsection}
+
+I can put a subsection inside my first section.
+
+\section{Lists}
+
+There are two types of lists: ordered and unordered
+
+\subsection{Ordered}
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\end{document}
+```
+
+When you compile this document, you should see something like this in the preview pane:
+
+![](fig/03-logical-structure/enumerated-list.PNG){alt='Our document with an enumerated list.'}
+
+::: callout
+
+Note that the `\item` commands do not need to be enclosed in braces. These commands do not take
+any arguments, so they can be used as standalone commands. The text that follows the `\item`
+command will be treated as the content of the list item.
+
+:::
+
+Adding an unordered list is just as easy. We can use the exact same syntax, but replace the
+`enumerate` environment with `itemize`.
+
+```latex
+\documentclass{article}
+
+\begin{document}
+Hello World!
+
+This is my first LaTeX document.
+
+\section{Sections}
+
+I can add content to my first section!
+
+\subsection{Subsection}
+
+I can put a subsection inside my first section.
+
+\section{Lists}
+
+There are two types of lists: ordered and unordered
+
+\subsection{Ordered}
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\subsection{Unordered}
+
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{itemize}
+
+\end{document}
+```
+
+![](fig/03-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'}
+
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1: What needs to change?
 
+We have the following in our LaTeX document:
 
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\begin{enumerate}
+  \item Banana Bread
+  \item Carrot Muffins
+  \item Apple Cake
+\end{enumerate}
+
+\end{document}
+```
+
+How would we modify this to change this unordered list to an ordered list?
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
+You would need to change the `enumerate` environment to `itemize`:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\begin{itemize}
+  \item Banana Bread
+  \item Carrot Muffins
+  \item Apple Cake
+\end{itemize}
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Can you do it?
+
+We would like to have the following appear in our LaTeX document:
+
+- Apples
+  1. Gala
+  2. Fuji
+  3. Granny Smith
+- Bananas
+- Oranges
+
+How would you write this in LaTeX?
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\begin{itemize}
+  \item Apples
+  \begin{enumerate}
+    \item Gala
+    \item Fuji
+    \item Granny Smith
+  \end{enumerate}
+  \item Bananas
+  \item Oranges
+\end{itemize}
+
+```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -89,3 +254,48 @@ documentation for the class you are using.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+::: spoiler
+
+After this episode, here is what our LaTeX document looks like:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+Hello World!
+
+This is my first LaTeX document.
+
+\section{Sections}
+
+I can add content to my first section!
+
+\subsection{Subsection}
+
+I can put a subsection inside my first section.
+
+\section{Lists}
+
+There are two types of lists: ordered and unordered
+
+\subsection{Ordered}
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\subsection{Unordered}
+
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{itemize}
+
+\end{document}
+```
+
+:::
