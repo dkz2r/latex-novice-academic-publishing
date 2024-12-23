@@ -107,12 +107,13 @@ times. For example, in our table above, we can instead write:
   Banana & 6        & 2.00  \\
   Orange & 4        & 1.20  \\
 \end{tabular}
+```
 
 :::
 
 ### Adding Horizontal Lines
 
-We're going to introduce another package here: `booktabs`. This package provides a few commands 
+We're going to introduce another package here: `booktabs`. This package provides a few commands
 that make it easier to create professional looking tables. To use it, add the following to your
 preamble:
 
@@ -127,10 +128,10 @@ preamble:
 - `\bottomrule`: creates a line at the bottom of the table
 
 Horizontal lines make tables easier to read and understand, and they can be used to separate the
-header from the body of the table, and the body from the footer. We can insert these commands into 
+header from the body of the table, and the body from the footer. We can insert these commands into
 our table to add horizontal lines:
 
-```latex  
+```latex
 \begin{tabular}{*{3}{l}}
   \toprule
   Fruit  & Quantity & Price \\
@@ -151,9 +152,9 @@ avoided.
 
 ### Partial Horizontal Lines
 
-Another useful feature of `booktabs` is the ability to create partial horizontal lines with the 
+Another useful feature of `booktabs` is the ability to create partial horizontal lines with the
 `\cmidrule` command. This command accepts the arguments {number-number}, where the first number is
-the column to start the line and the second number is the column to end the line. 
+the column to start the line and the second number is the column to end the line.
 
 ```latex
 \subsection{Partial Horizontal Lines}
@@ -174,7 +175,7 @@ the column to start the line and the second number is the column to end the line
 
 ### Merging Cells
 
-We can merge cells horizontally using the `\multicolumn` command. This command takes three 
+We can merge cells horizontally using the `\multicolumn` command. This command takes three
 arguments:
 
 - The number of cells which should be merged
@@ -213,7 +214,7 @@ table to create the impression of vertical merging.
 What is the output of this command?
 
 ```r
-paste("This", "new", "lesson", "looks", "good") 
+paste("This", "new", "lesson", "looks", "good")
 ```
 
 :::::::::::::::::::::::: solution
@@ -262,7 +263,7 @@ dynamic reports with {knitr}, so we now use mathjax to describe this:
 
 `$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
 
-Cool, right?
+Cool, right?****
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
