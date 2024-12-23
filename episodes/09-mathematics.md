@@ -1,46 +1,67 @@
 ---
-title: 'mathematics'
+title: 'Mathematics'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
-
+- 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Math Mode
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+Typesetting mathematical expressions in LaTeX is one of its greatest strengths. We can mark up 
+mathematical content in a logical way in what is known as *math mode*.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+There are two kinds of math mode in LaTeX:
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+- **Inline math mode**: for typesetting math within a line of text
+- **Display math mode**: for typesetting math on its own line
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+### Inline Math Mode
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+Inline math mode is marked using a pair of dollar sign symbols (`$ ... $`). It is also possible to 
+use the notation `\(...\)` to mark inline math mode. Simple expressions are entered without any 
+special markup, and you'll see that the math is spaced out nicely and has letters in italic.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+```latex
+\subsection{Inline Math Mode}
+
+The Pythagorean theorem is \(a^2 + b^2 = c^2\).
+```
+
+There are a lot of symbols and specialist math mode commands available in LaTeX:
+
+- Superscripts: `x^2`
+- Subscripts: `x_1`
+- Greek letters: `\alpha`, `\beta`, `\gamma`, etc.
+- Operators: `\times`, `\div`, `\sin`, `\log`, etc.
+- Fractions: `\frac{numerator}{denominator}`
+- Roots: `\sqrt{expression}`
+- Sums and integrals: `\sum`, `\int`, `\oint`, etc.
+- Brackets: `()`, `[]`, `{}`, `\langle`, `\rangle`, etc.
+
+### Display Math Mode
+
+Display math mode uses the exact same commands as inline math mode, but it is centered by default
+and is intended for larger equations that are "part of a paragraph":
+
+```latex
+\subsection{Display Math Mode}
+
+The quadratic formula is:
+
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+```
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 

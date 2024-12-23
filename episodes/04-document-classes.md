@@ -1,5 +1,5 @@
 ---
-title: 'document-classes'
+title: 'Using Document Classes'
 teaching: 10
 exercises: 2
 ---
@@ -22,7 +22,7 @@ exercises: 2
 A document class sets up the general layout of the document, including (but not limited to):
 
 - design (margins, fonts, spacing, etc)
-- avaialibility of chapters
+- availability of chapters
 - title page layout
 
 Document classes can also add new commands and environments to the document.

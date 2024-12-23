@@ -1,5 +1,5 @@
 ---
-title: 'extending-latex'
+title: 'Extending LaTeX'
 teaching: 10
 exercises: 2
 ---

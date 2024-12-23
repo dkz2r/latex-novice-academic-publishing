@@ -1,39 +1,86 @@
 ---
-title: 'citations-and-references'
+title: 'Citations and References'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Citations and References
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+For bibliographic citations, while you can include references sources directly in our document, 
+usually you will get that information from one or more external files. Such a file is a database
+of references, containing the information in a processing-friendly format. Using one or more
+reference databases lets you re-use information and avoid manual formatting.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+### Reference Databases (BiBTeX)
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+Reference databases are normally referred to as *BiBTeX* files, and have the extension `.bib`. They
+contain one or more entries, one for each reference, and within each are a series of fields.
+
+```bibtex
+@article{Thomas2008,
+  author  = {Thomas, Christine M. and Liu, Tianbiao and Hall, Michael B.
+             and Darensbourg, Marcetta Y.},
+  title   = {Series of Mixed Valent {Fe(II)Fe(I)} Complexes That Model the
+             {H(OX)} State of [{FeFe}]Hydrogenase: Redox Properties,
+             Density-Functional Theory Investigation, and Reactivity with
+             Extrinsic {CO}},
+  journal = {Inorg. Chem.},
+  year    = {2008},
+  volume  = {47},
+  number  = {15},
+  pages   = {7009-7024},
+  doi     = {10.1021/ic800654a},
+}
+@book{Graham1995,
+  author    = {Ronald L. Graham and Donald E. Knuth and Oren Patashnik},
+  title     = {Concrete Mathematics},
+  publisher = {Addison-Wesley},
+  year      = {1995},
+}
+```
+
+This is an example of a BiBTeX file that contains a reference for an article and another for a 
+book. Each entry type starts with a the `@` symbol, and all information appears within a pair of
+curly braces `{}`.
+
+The various fields are given in key-value format. Exactly which fields you need to give depends on 
+the type of entry. 
+
+::: callout
+
+You might notice that in the `author` field, each entry is separated by the word `and`. This is
+essential: the format of the output needs to know which author is which. 
+
+You might also notice that in the article title, some entries are in an extra set of braces. This
+is to prevent any case-changing that might be applied to the title.
+
+:::
+
+Editing BiBTeX files by hand can be tedious, a number of tools exist to help you manage your 
+reference files. 
+
+### Transferring Information from the Database to the Document
+
+There are three steps to get your information from the database into your document:
+
+1. Use LaTeX to compile your document, which creates a file with a list of references that are 
+   cited in the document.
+2. Run a program that takes information from the database of references, picks out the references
+   that are cited in the document, and puts them in order. 
+3. Compile your document again, so that LaTeX can use that information to resolve the citations 
+   used in your document. 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 

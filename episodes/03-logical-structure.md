@@ -1,5 +1,5 @@
 ---
-title: 'The Logical Structure of a LaTeX Document'
+title: 'The Logical Structure of a Document'
 teaching: 10
 exercises: 2
 ---

@@ -1,5 +1,5 @@
 ---
-title: 'using-graphics'
+title: 'Using Graphics'
 teaching: 10
 exercises: 2
 ---

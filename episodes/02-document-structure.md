@@ -1,5 +1,5 @@
 ---
-title: 'Document Structure in LaTeX'
+title: 'Document Structure'
 teaching: 10
 exercises: 2
 ---

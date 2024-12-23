@@ -70,14 +70,141 @@ Now that we have the array package loaded and we know how to define columns, we 
 using the `tabular` environment.
 
 ```latex
+
+Tables are defined using the `tabular` environment.
+
 \begin{tabular}{lll}
   Fruit  & Quantity & Price \\
   Apple  & 5        & 1.50  \\
   Banana & 6        & 2.00  \\
   Orange & 4        & 1.20  \\
 \end{tabular}
+```
+
+This will create a table with three columns, all left-aligned. The values of each row are separated
+by `&` and the rows are separated by `\\`. We do now yet have any horizontal lines in the table, so
+it will look like this:
+
+IMAGE HERE
+
+::: callout
+
+Note that the `&` and `\\` characters are aligned in our example. This isn't strictly necessary in
+LaTeX, but it makes the code much easier to read.
+
+:::
+
+::: callout
+
+If your table has many columns, it may get cumbersome to write out the column definitions every
+time. In this case you can make things easier by using `*{num}{string}` to repeat the string `num`
+times. For example, in our table above, we can instead write:
+
+```latex
+\begin{tabular}{*{3}{l}}
+  Fruit  & Quantity & Price \\
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+\end{tabular}
+
+:::
+
+### Adding Horizontal Lines
+
+We're going to introduce another package here: `booktabs`. This package provides a few commands 
+that make it easier to create professional looking tables. To use it, add the following to your
+preamble:
+
+```latex
+\usepackage{booktabs}
+```
+
+`booktabs` provides three commands for creating horizontal lines in your table:
+
+- `\toprule`: creates a line at the top of the table
+- `\midrule`: creates a line in the middle of the table
+- `\bottomrule`: creates a line at the bottom of the table
+
+Horizontal lines make tables easier to read and understand, and they can be used to separate the
+header from the body of the table, and the body from the footer. We can insert these commands into 
+our table to add horizontal lines:
+
+```latex  
+\begin{tabular}{*{3}{l}}
+  \toprule
+  Fruit  & Quantity & Price \\
+  \midrule
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+  \bottomrule
+\end{tabular}
+```
+
+::: callout
+
+A general recommendation is to use lines sparsely in your tables, and vertical lines should be
+avoided.
+
+:::
+
+### Partial Horizontal Lines
+
+Another useful feature of `booktabs` is the ability to create partial horizontal lines with the 
+`\cmidrule` command. This command accepts the arguments {number-number}, where the first number is
+the column to start the line and the second number is the column to end the line. 
+
+```latex
+\subsection{Partial Horizontal Lines}
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  Fruit  & Quantity &  Price \\
+  \midrule
+  Apple  & 5        &  1.50  \\
+  Banana & 6        &  2.00  \\
+  Orange & 4        &  1.20  \\
+  \cmidrule{3-3}
+  Total & 15        & 28.20  \\
+  \bottomrule
+\end{tabular}
 
 ```
+
+### Merging Cells
+
+We can merge cells horizontally using the `\multicolumn` command. This command takes three 
+arguments:
+
+- The number of cells which should be merged
+- The alignment of the merged cell (l, c, or r)
+- The contents of the merged cell
+
+```latex
+\subsection{Merging Cells}
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  \multicolumn{3}{c}{Overall Inventory} \\
+  Fruit  & Quantity &  Price  \\
+  \midrule
+  Apple  & 5        &  1.50   \\
+  Banana & 6        &  2.00   \\
+  Orange & 4        &  1.20   \\
+  \midrule
+  \multicolumn{2}{c}{Summary} \\
+  Total & 15        & 28.20   \\
+  \bottomrule
+\end{tabular}
+```
+
+::: callout
+
+Vertical merging is not supported in LaTeX. Usually it is sufficient to leave empty rows in the
+table to create the impression of vertical merging.
+
+:::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -86,7 +213,7 @@ using the `tabular` environment.
 What is the output of this command?
 
 ```r
-paste("This", "new", "lesson", "looks", "good")
+paste("This", "new", "lesson", "looks", "good") 
 ```
 
 :::::::::::::::::::::::: solution
