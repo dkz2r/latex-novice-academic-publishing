@@ -255,7 +255,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-document-structure.html">2. Document Structure in LaTeX</a>
+        <a href="02-document-structure.html">2. Document Structure</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -267,7 +267,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-logical-structure.html">3. The Logical Structure of a LaTeX Document</a>
+        <a href="03-logical-structure.html">3. The Logical Structure of a Document</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -279,7 +279,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-document-classes.html">4. document-classes</a>
+        <a href="04-document-classes.html">4. Using Document Classes</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -291,7 +291,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-extending-latex.html">5. extending-latex</a>
+        <a href="05-extending-latex.html">5. Extending LaTeX</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -303,7 +303,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-using-graphics.html">6. using-graphics</a>
+        <a href="06-using-graphics.html">6. Using Graphics</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -327,7 +327,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-cross-references.html">8. cross-references</a>
+        <a href="08-cross-references.html">8. Adding Cross References</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -339,7 +339,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="09-mathematics.html">9. mathematics</a>
+        <a href="09-mathematics.html">9. Mathematics</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -351,7 +351,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-text-and-spacing.html">10. fonts-and-spacing</a>
+        <a href="10-text-and-spacing.html">10. Fonts and Spacing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -363,7 +363,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="11-citations-and-references.html">11. citations-and-references</a>
+        <a href="11-citations-and-references.html">11. Citations and References</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -636,9 +636,9 @@ to delete the project.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-02-document-structure"><p>Content from <a href="02-document-structure.html">Document Structure in LaTeX</a></p>
+</section></section><section id="aio-02-document-structure"><p>Content from <a href="02-document-structure.html">Document Structure</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/02-document-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -653,7 +653,8 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What is the basic structure of a LaTeX document?</li>
-<li>How do I render a LaTeX document into a PDF?</li>
+<li>How do I see what my LaTeX document looks like when it’s
+rendered?</li>
 </ul>
 </div>
 </div>
@@ -665,6 +666,7 @@ any links that you are not going to use.
 <ul>
 <li>Become familiar with the basic structure of a LaTeX document.</li>
 <li>Use Overleaf to render a LaTeX document into a PDF.</li>
+<li>Identify how to add special characters to a LaTeX document.</li>
 </ul>
 </div>
 </div>
@@ -926,14 +928,37 @@ arguments in curly braces <code>{}</code>.</li>
 </div>
 </div>
 </div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>After this episode, here is what our LaTeX document looks like:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>Hello World!</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </div>
-</section></section><section id="aio-03-logical-structure"><p>Content from <a href="03-logical-structure.html">The Logical Structure of a LaTeX Document</a></p>
+</section></section><section id="aio-03-logical-structure"><p>Content from <a href="03-logical-structure.html">The Logical Structure of a Document</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/03-logical-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -947,8 +972,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How are LaTeX documents structured?</li>
 </ul>
 </div>
 </div>
@@ -958,9 +982,8 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Identify the different kinds of section commands in LaTeX.</li>
+<li>Create a list within a LaTeX document.</li>
 </ul>
 </div>
 </div>
@@ -989,15 +1012,15 @@ your document. Let’s add sections to our document.</p>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>This is my first LaTeX document.</span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="kw">\section</span>{My First Section}</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
 <span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>I can add content to my first section!</span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="kw">\subsection</span>{Details about the First section}</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
 <span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>I can put a subsection inside of my first section.</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>I can put a subsection inside my first section.</span>
 <span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="kw">\section</span>{My Second Section}</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="kw">\section</span>{Second Section}</span>
 <span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>And this text will go into another section.</span>
 <span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a></span>
@@ -1022,27 +1045,208 @@ using.</p>
 </div>
 </div>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+</section><section><h2 class="section-heading" id="lists">Lists<a class="anchor" aria-label="anchor" href="#lists"></a>
+</h2>
+<hr class="half-width">
+<p>In LaTeX, as in markdown, there are two types of lists: ordered and
+unordered. They are both defined with <code>\begin{...}</code> and
+<code>\end{...}</code> commands, as we saw with the document body. Let’s
+add an ordered list to our document.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>Hello World!</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>I can add content to my first section!</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>I can put a subsection inside my first section.</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>There are two types of lists: ordered and unordered</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>When you compile this document, you should see something like this in
+the preview pane:</p>
+<figure><img src="fig/03-logical-structure/enumerated-list.PNG" alt="Our document with an enumerated list." class="figure mx-auto d-block"></figure><div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note that the <code>\item</code> commands do not need to be enclosed
+in braces. These commands do not take any arguments, so they can be used
+as standalone commands. The text that follows the <code>\item</code>
+command will be treated as the content of the list item.</p>
+</div>
+</div>
+</div>
+<p>Adding an unordered list is just as easy. We can use the exact same
+syntax, but replace the <code>enumerate</code> environment with
+<code>itemize</code>.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>Hello World!</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>I can add content to my first section!</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>I can put a subsection inside my first section.</span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a>There are two types of lists: ordered and unordered</span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb3-31"><a href="#cb3-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb3-32"><a href="#cb3-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb3-34"><a href="#cb3-34" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb3-35"><a href="#cb3-35" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<figure><img src="fig/03-logical-structure/itemized-list.PNG" alt="Our document with an unordered list." class="figure mx-auto d-block"></figure><div id="challenge-1-what-needs-to-change" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="challenge-1-what-needs-to-change" class="callout-inner">
+<h3 class="callout-title">Challenge 1: What needs to change?</h3>
 <div class="callout-content">
-
+<p>We have the following in our LaTeX document:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  <span class="fu">\item</span> Banana Bread</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  <span class="fu">\item</span> Carrot Muffins</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>  <span class="fu">\item</span> Apple Cake</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>How would we modify this to change this unordered list to an ordered
+list?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  Answer
-  </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-
+<p>You would need to change the <code>enumerate</code> environment to
+<code>itemize</code>:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">\item</span> Banana Bread</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">\item</span> Carrot Muffins</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>  <span class="fu">\item</span> Apple Cake</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-can-you-do-it" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-2-can-you-do-it" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Can you do it?</h3>
+<div class="callout-content">
+<p>We would like to have the following appear in our LaTeX document:</p>
+<ul>
+<li>Apples
+<ol style="list-style-type: decimal">
+<li>Gala</li>
+<li>Fuji</li>
+<li>Granny Smith</li>
+</ol>
+</li>
+<li>Bananas</li>
+<li>Oranges</li>
+</ul>
+<p>How would you write this in LaTeX?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">\item</span> Apples</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>    <span class="fu">\item</span> Gala</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>    <span class="fu">\item</span> Fuji</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>    <span class="fu">\item</span> Granny Smith</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  <span class="fu">\item</span> Bananas</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>  <span class="fu">\item</span> Oranges</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -1067,13 +1271,65 @@ locally</li>
 </div>
 </div>
 </div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>After this episode, here is what our LaTeX document looks like:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>Hello World!</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>I can add content to my first section!</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>I can put a subsection inside my first section.</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a>There are two types of lists: ordered and unordered</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb7-32"><a href="#cb7-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb7-33"><a href="#cb7-33" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-35"><a href="#cb7-35" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-04-document-classes"><p>Content from <a href="04-document-classes.html">document-classes</a></p>
+</section></section><section id="aio-04-document-classes"><p>Content from <a href="04-document-classes.html">Using Document Classes</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/04-document-classes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1087,8 +1343,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What is a LaTeX Document class?</li>
+<li>How does a document class affect the layout of a LaTeX
+document?</li>
 </ul>
 </div>
 </div>
@@ -1097,38 +1354,150 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="what-is-a-document-class">What is a Document Class?<a class="anchor" aria-label="anchor" href="#what-is-a-document-class"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
+<p>A document class sets up the general layout of the document,
+including (but not limited to):</p>
+<ul>
+<li>design (margins, fonts, spacing, etc)</li>
+<li>availability of chapters</li>
+<li>title page layout</li>
+</ul>
+<p>Document classes can also add new commands and environments to the
+document.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Document classes can also set global options that apply to the
+document as a whole.</p>
+<p>These options are set in square brackets after the document class
+name, for example:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>[12pt]{<span class="ex">article</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="the-base-document-classes">The Base Document Classes<a class="anchor" aria-label="anchor" href="#the-base-document-classes"></a>
+</h2>
+<hr class="half-width">
+<p>LaTeX comes with a set of standard document classes:</p>
+<ul>
 <li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
+<code>article</code>: a short document without chapters</li>
 <li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
+<code>report</code>: a longer document with chapters, indended for
+single sided printing</li>
 <li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
+<code>book</code>: a longer document with chapters, intended for
+double sided printing, as well as other features like front and back
+matter</li>
+<li>
+<code>letter</code>: a short document with no sections</li>
+<li>
+<code>slides</code>: a document for creating slide
+presentations</li>
+</ul>
+<div class="section level3">
+<h3 id="options-for-the-article-class">Options for the Article Class<a class="anchor" aria-label="anchor" href="#options-for-the-article-class"></a>
+</h3>
+</div>
+<div class="section level3">
+<h3 id="writing-a-letter">Writing a Letter<a class="anchor" aria-label="anchor" href="#writing-a-letter"></a>
+</h3>
+<p>So far we’ve been using the <code>article</code> document class.
+Let’s try using the <code>letter</code> document class to write a
+letter.</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>We’ve been working in “main.tex” so far, but we can create as many
+files in this project as we want. Let’s create a new file called
+“letter.tex” and write our letter there.</p>
+</div>
+</div>
+</div>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">letter</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">letter</span>}{Some Address<span class="fu">\\</span>Some Street<span class="fu">\\</span>Some City}</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="fu">\opening</span>{Dear Sir or Madam,}</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>The text goes Here</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="fu">\closing</span>{Yours,}</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">letter</span>}</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note the <code>\\</code> used to create line breaks in the address -
+we’ll get back to line breaking in a bit.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="creating-a-presentation">Creating a Presentation<a class="anchor" aria-label="anchor" href="#creating-a-presentation"></a>
+</h2>
+<hr class="half-width">
+<p>The <code>slides</code> document class was developed for making
+physical slides in the mid-1980s, and so doesn’t have any of the
+features we might use in modern presentations</p>
+</section><section><h2 class="section-heading" id="function-rich-classes">Function-rich Classes<a class="anchor" aria-label="anchor" href="#function-rich-classes"></a>
+</h2>
+<hr class="half-width">
+<p>The core classes included with base LaTeX are very stable, but this
+means they are also somewhat conservateive in terms of features. Over
+time, third parties have developed a number of more powerfull classes
+that add new features and functionality to LaTeX documents.</p>
+<p>These include:</p>
+<ul>
+<li>
+<code>amsbook</code>, <code>amsart</code>, and <code>amsproc</code>:
+classes for documents that use the American Mathematical Society’s
+style</li>
+<li>
+<code>beamer</code>: a class for creating slide presentations</li>
+<li>
+<code>KOMA-Script</code>: a set of classes that provide a more
+modern look and feel to LaTeX documents by providing parallel classes to
+the base classes</li>
+<li>
+<code>memoir</code>: a class that provides a lot of functionality
+for creating books, reports, and articles</li>
+</ul>
+<p>These classes have lots of custimization options that we can
+explore</p>
 <div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1137,7 +1506,7 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1151,7 +1520,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1178,7 +1547,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -1190,7 +1559,7 @@ reinforce the objectives.</li>
 </h2>
 <hr class="half-width">
 <p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
+<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),   init.angle = 315,   col = c("deepskyblue", "yellow", "yellow3"),   border = FALSE )</code>
 Or you can use pandoc markdown for static figures with the following
 syntax:</p>
 <p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
@@ -1223,13 +1592,65 @@ locally</li>
 </div>
 </div>
 </div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>After this episode, here is what our LaTeX document looks like:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>Hello World!</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>I can add content to my first section!</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>I can put a subsection inside my first section.</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a>There are two types of lists: ordered and unordered</span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-05-extending-latex"><p>Content from <a href="05-extending-latex.html">extending-latex</a></p>
+</section></section><section id="aio-05-extending-latex"><p>Content from <a href="05-extending-latex.html">Extending LaTeX</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/05-extending-latex.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1243,8 +1664,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How can I extend LaTeX to suit my needs?</li>
+<li>How can I define my own commands in LaTeX?</li>
 </ul>
 </div>
 </div>
@@ -1254,111 +1675,271 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Demonstrate how to extend LaTeX using packages.</li>
+<li>Add custom commands to a LaTeX document.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="adding-packages">Adding Packages<a class="anchor" aria-label="anchor" href="#adding-packages"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<p>After we’ve declared a class, we can use the preamble section of our
+document to add one or more packages in order to extend LaTeX’s
+functionality. Packages are collections of commands and environments
+that add new features to LaTeX, for example:</p>
+<ul>
+<li>Changing how some parts of LaTeX work.</li>
+<li>Adding new commands.</li>
+<li>Changing the appearance/design of the document.</li>
+</ul></section><section><h2 class="section-heading" id="changing-how-latex-works">Changing how LaTeX works<a class="anchor" aria-label="anchor" href="#changing-how-latex-works"></a>
+</h2>
+<hr class="half-width">
+<p>The “kernel” of LaTeX is quite limited in terms of user
+customisation, as some add-on packages deal with fairly common ideas.
+For example, how LaTeX deals with language-specific typesetting (e.g.
+hyphenation, quotation marks, punctuation, localisation) is handled by
+the <code>babel</code> package.</p>
+<p>An example:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="bu">\usepackage</span>[width = 6cm]{<span class="ex">geometry</span>} <span class="co">% To force hyphenation here</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>This is a lot of filler which is going to demonstrate how LaTeX hyphenates</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>material, and which will be able to give us at least one hyphenation point.</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>This is a lot of filler which is going to demonstrate how LaTeX hyphenates</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>material, and which will be able to give us at least one hyphenation point.</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>This will produce a document with a narrow text block, which will
+force LaTeX to hyphenate words in order to fit them in the available
+space. Try adding a <code>%</code> before the <code>\usepackage</code>
+line and rendering the document again to see the difference.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Different languages have different rules around hypenation, quotation
+marks, punctuation, etc. We can use the <code>babel</code> package to
+set these rules for different languages like this:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\usepackage</span>[english]{<span class="ex">babel</span>}</span></code></pre>
+</div>
+<p>or</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\usepackage</span>[german]{<span class="ex">babel</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="changing-the-design">Changing the Design<a class="anchor" aria-label="anchor" href="#changing-the-design"></a>
+</h2>
+<hr class="half-width">
+<p>It’s useful to be able to adjust some aspects of the design
+independent of the document class, for example, the page margins. We
+used the <code>geometry</code> package in our previous example to set
+the width of the text block, but now let’s use it to specifically set
+the margins of our document:</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>So far we’ve been showing the entire document in the examples. Going
+forward, we’ll only show the relevant sections of the document that
+we’re discussing, so keep in mind when we are talking about “adding this
+to the preamble” we mean adding it to the section of the document
+<em>before</em> the <code>\begin{document}</code> command.</p>
+</div>
+</div>
+</div>
+<p>Let’s add this to the preamble of our document:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span></code></pre>
+</div>
+<p>You should see that adding this package and setting the “margin”
+option to <code>1in</code> has shrunk the margins of the document (try
+commenting out the <code>\usepackage</code> line with a <code>%</code>
+and recompiling to see the difference).</p>
+</section><section><h2 class="section-heading" id="defining-custom-commands">Defining Custom Commands<a class="anchor" aria-label="anchor" href="#defining-custom-commands"></a>
+</h2>
+<hr class="half-width">
+<p>Using other people’s packages is great, but what if there is some
+kind of functionality we want to add to our document that isn’t covered
+by a package? Or some specific formatting we want to use repeatedly? We
+can define our own commands in LaTeX using the <code>\newcommand</code>
+command.</p>
+<p>The <code>\newcommand</code> syntax looks like this:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
+</div>
+<p>As an example, let’s define a command that will highlight specific
+works in a document, so that they appear italicised and underlined. We
+<em>could</em> do this by writing <code>\textbf{\underline{word}}</code>
+around each word we want to highlight:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>This is my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{LaTeX}} document.</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>I can add content to my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{section}}!</span></code></pre>
+</div>
+<p>We can add this to each of our important terms in our document -
+maybe it looks something like this:</p>
+<figure><img src="fig/05-extending-latex/kw-highlight-underline.PNG" alt="Our document with keywords highlighted in bold and underlined." class="figure mx-auto d-block"></figure><p>In a long document this would quickly become tedious. Instead, let’s
+define a new command called <code>\kw</code> in the preamble of our
+document that will do this for us:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co">% Highlight Keywords using the \kw{} command</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textbf</span>{<span class="fu">\underline</span>{#1}}}</span></code></pre>
+</div>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The line starting with <code>%</code> is a comment in LaTeX. Comments
+are ignored by the LaTeX compiler and are used to add notes to the
+document for the author’s reference.</p>
+</div>
+</div>
+</div>
+<p>Now we can use the <code>\kw</code> command to highlight words in our
+document:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span></code></pre>
+</div>
+<p>This also means that we can easily change the formatting of all the
+words we’ve highlighted by updating the definition of the
+<code>\kw</code> command. Let’s say we wanted to change the formatting
+to bold and change the colour to blue:</p>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Standard LaTeX does not have a built-in way to change the colour of
+text, but we can use the <code>xcolor</code> package to do this by
+adding the <code>\usepackage{xcolor}</code> line to the preamble of our
+document</p>
+</div>
+</div>
+</div>
+<p>Let’s replace our <code>\kw</code> command with this new definition:
+<code>\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}</code></p>
+<p>When we recompile the document we should see that the formatting of
+our keywords has changed all at once:</p>
+<figure><img src="fig/05-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure><div id="challenge-1-importing-a-new-package" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="challenge-1-importing-a-new-package" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Importing a new package</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<p>A useful package to preview what your document will look like before
+your write a lot of text is the <code>lipsum</code> package. This
+package provides sample text blocks from a common placeholder text.</p>
+<p>How would you add the lipsum package to the preamble of your
+document?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<p>Add the line <code>\usepackage{lipsum}</code> to the preamble of your
+document.</p>
+<p>You can then use the <code>\lipsum</code> command in the body of your
+document to add some dummy text.</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div id="challenge-2-what-does-this-mean" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<div id="challenge-2-what-does-this-mean" class="callout-inner">
+<h3 class="callout-title">Challenge 2: What does this mean?</h3>
 <div class="callout-content">
-
+<p>The defintion of a new command in LaTeX is done with the
+<code>\newcommand</code> command. The syntax for this command is:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
+</div>
+<p>So if we modify the <code>\kw</code> command we defined above to look
+like this:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+</div>
+<p>What would the new <code>\kw</code> command do? and how would we use
+it?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution2"> Output </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+<p>The new <code>\kw</code> command would take two arguments: the first
+argument would be the colour we want to use to highlight the word, and
+the second argument would be the word we want to highlight. We would use
+it like this:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
-Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1379,13 +1960,69 @@ locally</li>
 </div>
 </div>
 </div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>After this episode, here is what our LaTeX document looks like:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="co">% Highlight Keywords using the \kw{} command</span></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textbf</span>{<span class="fu">\underline</span>{#1}}}</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>Hello World!</span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a></span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>I can put a <span class="fu">\kw</span>{subsection} inside my first section.</span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb12-21"><a href="#cb12-21" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a>There are two types of lists: <span class="fu">\kw</span>{ordered} and <span class="fu">\kw</span>{unordered}.</span>
+<span id="cb12-23"><a href="#cb12-23" tabindex="-1"></a></span>
+<span id="cb12-24"><a href="#cb12-24" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a></span>
+<span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb12-27"><a href="#cb12-27" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb12-28"><a href="#cb12-28" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb12-29"><a href="#cb12-29" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb12-30"><a href="#cb12-30" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb12-31"><a href="#cb12-31" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb12-33"><a href="#cb12-33" tabindex="-1"></a></span>
+<span id="cb12-34"><a href="#cb12-34" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb12-35"><a href="#cb12-35" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb12-36"><a href="#cb12-36" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb12-37"><a href="#cb12-37" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb12-38"><a href="#cb12-38" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb12-39"><a href="#cb12-39" tabindex="-1"></a></span>
+<span id="cb12-40"><a href="#cb12-40" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-06-using-graphics"><p>Content from <a href="06-using-graphics.html">using-graphics</a></p>
+</section></section><section id="aio-06-using-graphics"><p>Content from <a href="06-using-graphics.html">Using Graphics</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/06-using-graphics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1399,8 +2036,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How do I include images in a LaTeX document?</li>
 </ul>
 </div>
 </div>
@@ -1410,38 +2046,213 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Demonstrate how to include images in a LaTeX document.</li>
+<li>Show how to position images manually / automatically in a LaTeX
+document.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="the-graphicx-package">The Graphicx Package<a class="anchor" aria-label="anchor" href="#the-graphicx-package"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
+<p>In order to use graphics in our document, we’ll need to use the
+<code>graphicx</code> package, which adds the
+<code>\includegraphics</code> command to LaTeX. We’ll add this to the
+preamble of our document:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">graphicx</span>}</span></code></pre>
+</div>
+<p>We can now include several types of images in our document,
+including:</p>
+<ul>
+<li>JPEG</li>
+<li>PNG</li>
+<li>PDF</li>
+<li>EPS</li>
+</ul>
+<div class="section level3">
+<h3 id="uploading-images-to-overleaf">Uploading Images to Overleaf<a class="anchor" aria-label="anchor" href="#uploading-images-to-overleaf"></a>
+</h3>
+<p>In order to incorporate an image into our document, we’ll need to
+upload it to Overleaf. We can do this by clicking on the “Upload” icon
+on the upper left corner of the Overleaf editor:</p>
+<figure><img src="fig/06-using-graphics/overleaf-upload.png" alt="The upload icon in Overleaf." class="figure mx-auto d-block"></figure><p>We can then either drag and drop the image into the upload window or
+click on the “Select files” button to choose the image from our
+computer.</p>
+<p>For the purposes of this lesson, we’ll use the following image:</p>
+<figure><img src="fig/06-using-graphics/example-image.png" alt="Our example image." class="figure mx-auto d-block"></figure><p>Once you have uploaded the image, you should see it in the “Files”
+section of the Overleaf editor:</p>
+<figure><img src="fig/06-using-graphics/overleaf-uploaded-image.PNG" alt="The uploaded image in Overleaf." class="figure mx-auto d-block"></figure>
+</div>
+</section><section><h2 class="section-heading" id="including-an-image-in-a-latex-document">Including an Image in a LaTeX Document<a class="anchor" aria-label="anchor" href="#including-an-image-in-a-latex-document"></a>
+</h2>
+<hr class="half-width">
+<p>Now that we have our image uploaded, we can include it in our
+document using the <code>\includegraphics</code> command:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">example-image.png</span>}</span></code></pre>
+</div>
+<p>Your document should now look like this:</p>
+<figure><img src="fig/06-using-graphics/document-with-image.PNG" alt="Our document with an included image." class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>If you just want to see how an image might look in your document
+without having to upload one, you can use the filepath
+<code>example-image</code> in the <code>\includegraphics</code> command.
+This will display a image in your document that you can replace
+later.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="adjusting-the-appearance-of-the-image">Adjusting the appearance of the image<a class="anchor" aria-label="anchor" href="#adjusting-the-appearance-of-the-image"></a>
+</h3>
+<p>We can adjust the appearance of the image by passing options to the
+<code>\includegraphics</code> command. For example, we can specify the
+height of the image:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.png</span>}</span></code></pre>
+</div>
+<figure><img src="fig/06-using-graphics/document-with-small-image.PNG" alt="Our document with a smaller image." class="figure mx-auto d-block"></figure><div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Some other possible options from the <code>graphicx</code> package
+include:</p>
+<ul>
 <li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
+<code>width</code>: the width of the image</li>
 <li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
+<code>scale</code>: the scaling factor of the image</li>
 <li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+<code>angle</code>: the angle of rotation of the image</li>
+<li>
+<code>clip</code>: whether to clip the image to its bounding
+box</li>
+<li>
+<code>trim</code>: trim the image by a specified amount</li>
+<li>
+<code>draft</code>: display a box instead of the image</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="positioning-the-image">Positioning the image<a class="anchor" aria-label="anchor" href="#positioning-the-image"></a>
+</h3>
+<p>We can place the image inside of an environment to help position it
+in the document. Let’s try placing the <code>\includegraphics</code>
+command inside of a <code>\begin{center}</code> and
+<code>\end{center}</code> environment:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">center</span>}</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span></code></pre>
+</div>
+<p>You should see that the image is now centered on the page:</p>
+<figure><img src="fig/06-using-graphics/document-with-centered-image.PNG" alt="Our document with a centered image." class="figure mx-auto d-block"></figure>
+</div>
+</section><section><h2 class="section-heading" id="floating-images">“Floating” Images<a class="anchor" aria-label="anchor" href="#floating-images"></a>
+</h2>
+<hr class="half-width">
+<p>It’s often the case that images need to “float” around the document
+as new text is added or removed. this is called a “floating” image.
+Images are normally included as floats so that we don’t end up with
+large gaps in the document.</p>
+<p>To make an image float, we can use the <code>figure</code>
+environment:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
+</div>
+<p>When we render the document, we can see that, even though we placed
+the image at the end of the document, it appears at the top of the
+page:</p>
+<figure><img src="fig/06-using-graphics/document-with-floating-image.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>You might have noticed that instead of using the
+<code>\begin{center}</code> and <code>\end{center}</code> environment,
+we used the <code>\centering</code> command inside of the
+<code>figure</code> environment. This is because the <code>figure</code>
+environment is a floating environment, and the <code>\centering</code>
+command is the recommended way to center content inside of a floating
+environment.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="controlling-the-position-of-a-floating-image">Controlling the Position of a Floating Image<a class="anchor" aria-label="anchor" href="#controlling-the-position-of-a-floating-image"></a>
+</h3>
+<p>We can pass parameters to the <code>figure</code> environment to
+control the position of the floating image:</p>
+<ul>
+<li>
+<code>h</code>: Place the float “here” (where it appears in the
+code)</li>
+<li>
+<code>t</code>: Place the float at the “top” of the page</li>
+<li>
+<code>b</code>: Place the float at the “bottom” of the page</li>
+<li>
+<code>p</code>: Place the float on a “page” by itself</li>
+</ul>
+<p>It is also possible to combine these options. For example, to place
+the float here if possible, but otherwise at the top of the page, we can
+use the <code>ht</code> option:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="adding-a-caption">Adding a Caption<a class="anchor" aria-label="anchor" href="#adding-a-caption"></a>
+</h3>
+<p>We can add a caption to our image by using the <code>\caption</code>
+command inside of the <code>figure</code> environment:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="fu">\caption</span>{This is a caption for our image.}</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
+</div>
+<p>When we render the document, we can see that the caption appears
+below the image:</p>
+<figure><img src="fig/06-using-graphics/document-with-floating-image-caption.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -1449,7 +2260,7 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1463,7 +2274,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1490,7 +2301,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -1498,23 +2309,6 @@ reinforce the objectives.</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
-Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1539,9 +2333,10 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></section><section id="aio-07-tables"><p>Content from <a href="07-tables.html">tables</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/07-tables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1555,8 +2350,7 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>How do I add tables to a LaTeX document?</li>
 </ul>
 </div>
 </div>
@@ -1565,38 +2359,288 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="defining-tables">Defining Tables<a class="anchor" aria-label="anchor" href="#defining-tables"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
+<p>Tables in LaTeX are set using the <code>tabular</code> environment.
+For our purposes here, we are going to use the <code>array</code>
+package to create a table, which provides additionl functionality for
+creating tables.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}</span></code></pre>
+</div>
+<p>In order to create a table, we need to tell latex how may columns we
+will need and how they should be aligned.</p>
+<p>Available column types are:</p>
+<table class="table">
+<colgroup>
+<col width="55%">
+<col width="44%">
+</colgroup>
+<thead><tr class="header">
+<th>Column Type</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>l</code></td>
+<td>left-aligned</td>
+</tr>
+<tr class="even">
+<td><code>c</code></td>
+<td>centered</td>
+</tr>
+<tr class="odd">
+<td><code>r</code></td>
+<td>right-aligned</td>
+</tr>
+<tr class="even">
+<td><code>p{width}</code></td>
+<td>a column with fixed width width; the text will be automatically line
+wrapped and fully justified</td>
+</tr>
+<tr class="odd">
+<td><code>m{width}</code></td>
+<td>like p, but vertically centered compared to the rest of the row</td>
+</tr>
+<tr class="even">
+<td><code>b{width}</code></td>
+<td>like p, but bottom aligned</td>
+</tr>
+<tr class="odd">
+<td><code>w{align}{width}</code></td>
+<td>prints the contents with a fixed width, silently overprinting if
+things get larger. (You can choose the horizontal alignment using l, c,
+or r.)</td>
+</tr>
+<tr class="even">
+<td><code>W{align}{width}</code></td>
+<td>like w, but this will issue an overfull box warning if things get
+too wide.</td>
+</tr>
+</tbody>
+</table>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The columns l, c and r will have the natural width of the widest
+entry in the column. Each column must be declared, so if you want a
+table with three centered columns, you would use <code>ccc</code> as the
+column declaration.</p>
+</div>
+</div>
+</div>
+<p>There are also a few other preamble-tokens that are available. These
+don’t define a column, but can be useful as well:</p>
+<div class="line-block">Token | Description |<br>
+Token | Description |</div>
+<p>|———–|——————————————————————————————————| |
+<code>{num}{string}</code> | repeats string for num times in the
+preamble. With this you can define multiple identical columns. | |
+<code>&gt;{decl}</code> | this will put decl before the contents of
+every cell in the following column (this is useful, e.g., to set a
+different font for this column) | | <code>&lt;{decl}</code> | this will
+put decl after the contents of each cell in the previous column | |
+<code>|</code> | add a vertical rule | | <code>@{decl}</code> | replace
+the space between two columns with decl | | <code>!{decl}</code> | add
+decl in the center of the existing space |</p>
+</section><section><h2 class="section-heading" id="creating-a-table">Creating a Table<a class="anchor" aria-label="anchor" href="#creating-a-table"></a>
+</h2>
+<hr class="half-width">
+<p>Now that we have the array package loaded and we know how to define
+columns, we can create a table using the <code>tabular</code>
+environment.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>Tables are defined using the `tabular` environment.</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{lll}</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+<p>This will create a table with three columns, all left-aligned. The
+values of each row are separated by <code>&amp;</code> and the rows are
+separated by <code>\\</code>. We do now yet have any horizontal lines in
+the table, so it will look like this:</p>
+<p>IMAGE HERE</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note that the <code>&amp;</code> and <code>\\</code> characters are
+aligned in our example. This isn’t strictly necessary in LaTeX, but it
+makes the code much easier to read.</p>
+</div>
+</div>
+</div>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>If your table has many columns, it may get cumbersome to write out
+the column definitions every time. In this case you can make things
+easier by using <code>*{num}{string}</code> to repeat the string
+<code>num</code> times. For example, in our table above, we can instead
+write:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="adding-horizontal-lines">Adding Horizontal Lines<a class="anchor" aria-label="anchor" href="#adding-horizontal-lines"></a>
+</h3>
+<p>We’re going to introduce another package here: <code>booktabs</code>.
+This package provides a few commands that make it easier to create
+professional looking tables. To use it, add the following to your
+preamble:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span></code></pre>
+</div>
+<p><code>booktabs</code> provides three commands for creating horizontal
+lines in your table:</p>
+<ul>
 <li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
+<code>\toprule</code>: creates a line at the top of the table</li>
 <li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
+<code>\midrule</code>: creates a line in the middle of the
+table</li>
 <li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
+<code>\bottomrule</code>: creates a line at the bottom of the
+table</li>
+</ul>
+<p>Horizontal lines make tables easier to read and understand, and they
+can be used to separate the header from the body of the table, and the
+body from the footer. We can insert these commands into our table to add
+horizontal lines:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>A general recommendation is to use lines sparsely in your tables, and
+vertical lines should be avoided.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="partial-horizontal-lines">Partial Horizontal Lines<a class="anchor" aria-label="anchor" href="#partial-horizontal-lines"></a>
+</h3>
+<p>Another useful feature of <code>booktabs</code> is the ability to
+create partial horizontal lines with the <code>\cmidrule</code> command.
+This command accepts the arguments {number-number}, where the first
+number is the column to start the line and the second number is the
+column to end the line.</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">\subsection</span>{Partial Horizontal Lines}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price <span class="fu">\\</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span>  1.50  <span class="fu">\\</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00  <span class="fu">\\</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20  <span class="fu">\\</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>  <span class="fu">\cmidrule</span>{3-3}</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  Total <span class="op">&amp;</span> 15        <span class="op">&amp;</span> 28.20  <span class="fu">\\</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="merging-cells">Merging Cells<a class="anchor" aria-label="anchor" href="#merging-cells"></a>
+</h3>
+<p>We can merge cells horizontally using the <code>\multicolumn</code>
+command. This command takes three arguments:</p>
+<ul>
+<li>The number of cells which should be merged</li>
+<li>The alignment of the merged cell (l, c, or r)</li>
+<li>The contents of the merged cell</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">\subsection</span>{Merging Cells}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="fu">\multicolumn</span>{3}{c}{Overall Inventory} <span class="fu">\\</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price  <span class="fu">\\</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span>  1.50   <span class="fu">\\</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00   <span class="fu">\\</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20   <span class="fu">\\</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="fu">\multicolumn</span>{2}{c}{Summary} <span class="fu">\\</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>  Total <span class="op">&amp;</span> 15        <span class="op">&amp;</span> 28.20   <span class="fu">\\</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+<div id="callout5" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Vertical merging is not supported in LaTeX. Usually it is sufficient
+to leave empty rows in the table to create the impression of vertical
+merging.</p>
+</div>
+</div>
+</div>
 <div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1605,7 +2649,7 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1619,7 +2663,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1646,10 +2690,11 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1658,7 +2703,7 @@ reinforce the objectives.</li>
 </h2>
 <hr class="half-width">
 <p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
+<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),   init.angle = 315,   col = c("deepskyblue", "yellow", "yellow3"),   border = FALSE )</code>
 Or you can use pandoc markdown for static figures with the following
 syntax:</p>
 <p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
@@ -1670,7 +2715,7 @@ syntax:</p>
 create dynamic reports with {knitr}, so we now use mathjax to describe
 this:</p>
 <p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Cool, right?****</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1695,9 +2740,9 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-08-cross-references"><p>Content from <a href="08-cross-references.html">cross-references</a></p>
+</section></section><section id="aio-08-cross-references"><p>Content from <a href="08-cross-references.html">Adding Cross References</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/08-cross-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1710,10 +2755,8 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
@@ -1721,38 +2764,81 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="cross-references">Cross References<a class="anchor" aria-label="anchor" href="#cross-references"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
+<p>When writing a document of any length, you’ll often want to refer to
+numbered elements such as figures, tables, equations, or sections. LaTeX
+provides a way to automatically number these elements and refer to them
+in your text.</p>
+<div class="section level3">
+<h3 id="label-and-ref">Label and Ref<a class="anchor" aria-label="anchor" href="#label-and-ref"></a>
+</h3>
+<p>To have LaTex remember a specific spot in your document, you have to
+use the <code>\label{}</code> command to mark it, and the
+<code>\ref{}</code> command to refer to it. For example:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">\section</span>{Cross References}</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="kw">\label</span>{<span class="ex">sec:cross-references</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="kw">\subsection</span>{Material for the Introduction}</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>In this section, we introduce two new concepts:</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{cp{9cm}}</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>  Command <span class="op">&amp;</span> Description <span class="fu">\\</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>  <span class="fu">\kw</span>{label} <span class="op">&amp;</span> Marks a spot in the document <span class="fu">\\</span></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>  <span class="fu">\kw</span>{ref} <span class="op">&amp;</span> Refers to a marked spot in the document <span class="fu">\\</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="kw">\label</span>{<span class="ex">tab:cross-reference-commands</span>}</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>We can refer to the section with the <span class="fu">\kw</span>{ref} command, like this: <span class="kw">\ref</span>{<span class="ex">sec:cross-references</span>}. We </span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>can likewise refer to the table like this: <span class="kw">\ref</span>{<span class="ex">tab:cross-reference-commands</span>}.</span></code></pre>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The <code>sec</code> and <code>tab</code> prefixes in the
+<code>\label{}</code> command are not required, but they help to
+identify the type of element being labeled. This is especially useful
+when you have many labels in your document.</p>
+</div>
+</div>
+</div>
+<p>The label command always refers to the previous numbered entry: a
+section, a table, a figure, etc. This means that the
+<code>\label{}</code> command should always come <em>after</em> the
+numbered element you want to refer to.</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note that the <code>ref</code> command does not insert the section or
+table name, but rather the number associated with it. We would still
+write “Refer to Table <span class="math inline">\(\ref{tab:cross-reference-commands}\)</span>”, but
+the benefit is that if the table number changes, the reference will
+update automatically.</p>
+</div>
+</div>
+</div>
 <div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1761,7 +2847,7 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1810,6 +2896,7 @@ reinforce the objectives.</li>
 </div>
 </div>
 </div>
+</div>
 </section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
 </h2>
 <hr class="half-width">
@@ -1851,9 +2938,9 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-09-mathematics"><p>Content from <a href="09-mathematics.html">mathematics</a></p>
+</section></section><section id="aio-09-mathematics"><p>Content from <a href="09-mathematics.html">Mathematics</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/09-mathematics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1866,10 +2953,8 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
@@ -1877,38 +2962,81 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="math-mode">Math Mode<a class="anchor" aria-label="anchor" href="#math-mode"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
+<p>Typesetting mathematical expressions in LaTeX is one of its greatest
+strengths. We can mark up mathematical content in a logical way in what
+is known as <em>math mode</em>.</p>
+<p>There are two kinds of math mode in LaTeX:</p>
+<ul>
 <li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
+<strong>Inline math mode</strong>: for typesetting math within a
+line of text</li>
 <li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
+<strong>Display math mode</strong>: for typesetting math on its own
+line</li>
+</ul>
+<div class="section level3">
+<h3 id="inline-math-mode">Inline Math Mode<a class="anchor" aria-label="anchor" href="#inline-math-mode"></a>
+</h3>
+<p>Inline math mode is marked using a pair of dollar sign symbols
+(<code>$ ... $</code>). It is also possible to use the notation
+<code>\(...\)</code> to mark inline math mode. Simple expressions are
+entered without any special markup, and you’ll see that the math is
+spaced out nicely and has letters in italic.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">\subsection</span>{Inline Math Mode}</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>The Pythagorean theorem is <span class="ss">\(a^2 + b^2 = c^2\)</span>.</span></code></pre>
+</div>
+<p>There are a lot of symbols and specialist math mode commands
+available in LaTeX:</p>
+<ul>
+<li>Superscripts: <code>x^2</code>
+</li>
+<li>Subscripts: <code>x_1</code>
+</li>
+<li>Greek letters: <code>\alpha</code>, <code>\beta</code>,
+<code>\gamma</code>, etc.</li>
+<li>Operators: <code>\times</code>, <code>\div</code>,
+<code>\sin</code>, <code>\log</code>, etc.</li>
+<li>Fractions: <code>\frac{numerator}{denominator}</code>
+</li>
+<li>Roots: <code>\sqrt{expression}</code>
+</li>
+<li>Sums and integrals: <code>\sum</code>, <code>\int</code>,
+<code>\oint</code>, etc.</li>
+<li>Brackets: <code>()</code>, <code>[]</code>, <code>{}</code>,
+<code>\langle</code>, <code>\rangle</code>, etc.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="display-math-mode">Display Math Mode<a class="anchor" aria-label="anchor" href="#display-math-mode"></a>
+</h3>
+<p>Display math mode uses the exact same commands as inline math mode,
+but it is centered by default and is intended for larger equations that
+are “part of a paragraph”:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\subsection</span>{Display Math Mode}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>The quadratic formula is:</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="ss">x = </span><span class="sc">\frac</span><span class="ss">{-b </span><span class="sc">\pm</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{b^2 - 4ac}}{2a}</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
+</div>
 <div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1917,7 +3045,242 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
+<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>You can add a line with at least three colons and a
+<code>solution</code> tag.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
+</h2>
+<hr class="half-width">
+<p>You can include figures generated from R Markdown:</p>
+<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
+Or you can use pandoc markdown for static figures with the following
+syntax:</p>
+<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
+<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
+</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
+</h2>
+<hr class="half-width">
+<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
+create dynamic reports with {knitr}, so we now use mathjax to describe
+this:</p>
+<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
+<p>Cool, right?</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Use <code>.md</code> files for episodes when you want static
+content</li>
+<li>Use <code>.Rmd</code> files for episodes when you need to generate
+output</li>
+<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
+with your lesson</li>
+<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
+locally</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-10-text-and-spacing"><p>Content from <a href="10-text-and-spacing.html">Fonts and Spacing</a></p>
+<hr>
+<p>Last updated on 2024-12-23 |
+
+        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/10-text-and-spacing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul><li>
+</li></ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul><li>
+</li></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="paragraph-spacing">Paragraph Spacing<a class="anchor" aria-label="anchor" href="#paragraph-spacing"></a>
+</h2>
+<hr class="half-width">
+<p>A common style is to have no indents for paragraphs, but to instead
+have a “blank line” between them. We can achieve this using the
+<code>parskip</code> package:</p>
 <div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}</span></code></pre>
+</div>
+<p>In our document, we can now use a blank line to separate
+paragraphs:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\section</span>{Fonts and Spacing}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">\lipsum</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">\lipsum</span></span></code></pre>
+</div>
+<p>(Commend out the “usepackage” line and recompile to see the
+difference.)</p>
+</section><section><h2 class="section-heading" id="forcing-a-new-line">Forcing a New Line<a class="anchor" aria-label="anchor" href="#forcing-a-new-line"></a>
+</h2>
+<hr class="half-width">
+<p>Most of the time, you should not force a new line in your document;
+you almost certainly want to use a new paragraph or <code>parskip</code>
+instead. However, there are a <em>few</em> places where you might want
+to force a new line:</p>
+<ul>
+<li>At the end of table rows</li>
+<li>Inside a <code>center</code> environment</li>
+<li>In poetry (the <code>verse</code> environment)</li>
+</ul>
+<p>To force a new line, we can use the <code>\\</code> command.</p>
+</section><section><h2 class="section-heading" id="adding-explicit-space">Adding Explicit Space<a class="anchor" aria-label="anchor" href="#adding-explicit-space"></a>
+</h2>
+<hr class="half-width">
+<p>We can insert a thin space (about half the normal thickness) use the
+<code>\,</code> command.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>In math mode, there are also other commands:</p>
+<ul>
+<li>
+<code>\.</code> for a “dot” space</li>
+<li>
+<code>\:</code> for a “colon” space</li>
+<li>
+<code>\;</code> for a “thick” space</li>
+<li>
+<code>\!</code> for a “negative” space</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Very rarely, for example when creating a title page, you might want
+to add explicit horizontal or vertical space. We can do this using the
+<code>\hspace</code> and <code>\vspace</code> commands:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">\hspace</span>{1cm} <span class="co">% 1cm of horizontal space</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">\vspace</span>{1cm} <span class="co">% 1cm of vertical space</span></span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="explicit-text-formatting">Explicit Text Formatting<a class="anchor" aria-label="anchor" href="#explicit-text-formatting"></a>
+</h2>
+<hr class="half-width">
+<p>We’ve touched on this in previous episodes, but we can also use the
+following commands to format text explicitly:</p>
+<ul>
+<li>
+<code>\textbf{}</code> for bold text</li>
+<li>
+<code>\textit{}</code> for italic text</li>
+<li>
+<code>\textrm{}</code> for roman text</li>
+<li>
+<code>\textsf{}</code> for sans serif text</li>
+<li>
+<code>\texttt{}</code> for typewriter text</li>
+<li>
+<code>\textsc{}</code> for small caps text</li>
+</ul>
+<p>We can set the font size in the same way. All sizes are relative to
+the base font size:</p>
+<ul>
+<li>
+<code>\huge</code> for huge text</li>
+<li>
+<code>\large</code> for large text</li>
+<li>
+<code>\normalsize</code> for normal text</li>
+<li>
+<code>\small</code> for small text</li>
+<li>
+<code>\footnotesize</code> for footnote text</li>
+</ul>
+<div id="challenge-1-can-you-do-it" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div class="callout-content">
+<p>What is the output of this command?</p>
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2007,165 +3370,9 @@ locally</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-10-text-and-spacing"><p>Content from <a href="10-text-and-spacing.html">fonts-and-spacing</a></p>
+</section></section><section id="aio-11-citations-and-references"><p>Content from <a href="11-citations-and-references.html">Citations and References</a></p>
 <hr>
-<p>Last updated on 2024-12-18 |
-
-        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/10-text-and-spacing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h2>
-<hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
-<div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
-</h2>
-<hr class="half-width">
-<p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
-Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a>
-</h2>
-<hr class="half-width">
-<p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
-<div class="callout-content">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-11-citations-and-references"><p>Content from <a href="11-citations-and-references.html">citations-and-references</a></p>
-<hr>
-<p>Last updated on 2024-12-18 |
+<p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/11-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2178,10 +3385,8 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
@@ -2189,37 +3394,91 @@ any links that you are not going to use.
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
+<ul><li>
+</li></ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="citations-and-references">Citations and References<a class="anchor" aria-label="anchor" href="#citations-and-references"></a>
 </h2>
 <hr class="half-width">
-<p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
+<p>For bibliographic citations, while you can include references sources
+directly in our document, usually you will get that information from one
+or more external files. Such a file is a database of references,
+containing the information in a processing-friendly format. Using one or
+more reference databases lets you re-use information and avoid manual
+formatting.</p>
+<div class="section level3">
+<h3 id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a>
+</h3>
+<p>Reference databases are normally referred to as <em>BiBTeX</em>
+files, and have the extension <code>.bib</code>. They contain one or
+more entries, one for each reference, and within each are a series of
+fields.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BIBTEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bibtex" tabindex="0"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">Thomas2008</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="dt">author</span>  = {Thomas, Christine M. and Liu, Tianbiao and Hall, Michael B.</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>             and Darensbourg, Marcetta Y.},</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  <span class="dt">title</span>   = {Series of Mixed Valent {Fe(II)Fe(I)} Complexes That Model the</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>             {H(OX)} State of [{FeFe}]Hydrogenase: Redox Properties,</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>             Density-Functional Theory Investigation, and Reactivity with</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>             Extrinsic {CO}},</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>  <span class="dt">journal</span> = {Inorg. Chem.},</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>  <span class="dt">year</span>    = {2008},</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>  <span class="dt">volume</span>  = {47},</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>  <span class="dt">number</span>  = {15},</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>  <span class="dt">pages</span>   = {7009-7024},</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>  <span class="dt">doi</span>     = {10.1021/ic800654a},</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>}</span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="va">@book</span>{<span class="ot">Graham1995</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>  <span class="dt">author</span>    = {Ronald L. Graham and Donald E. Knuth and Oren Patashnik},</span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>  <span class="dt">title</span>     = {Concrete Mathematics},</span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>  <span class="dt">publisher</span> = {Addison-Wesley},</span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>  <span class="dt">year</span>      = {1995},</span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a>}</span></code></pre>
+</div>
+<p>This is an example of a BiBTeX file that contains a reference for an
+article and another for a book. Each entry type starts with a the
+<code>@</code> symbol, and all information appears within a pair of
+curly braces <code>{}</code>.</p>
+<p>The various fields are given in key-value format. Exactly which
+fields you need to give depends on the type of entry.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>You might notice that in the <code>author</code> field, each entry is
+separated by the word <code>and</code>. This is essential: the format of
+the output needs to know which author is which.</p>
+<p>You might also notice that in the article title, some entries are in
+an extra set of braces. This is to prevent any case-changing that might
+be applied to the title.</p>
+</div>
+</div>
+</div>
+<p>Editing BiBTeX files by hand can be tedious, a number of tools exist
+to help you manage your reference files.</p>
+</div>
+<div class="section level3">
+<h3 id="transferring-information-from-the-database-to-the-document">Transferring Information from the Database to the Document<a class="anchor" aria-label="anchor" href="#transferring-information-from-the-database-to-the-document"></a>
+</h3>
+<p>There are three steps to get your information from the database into
+your document:</p>
 <ol style="list-style-type: decimal">
-<li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
-<li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
-<li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
+<li>Use LaTeX to compile your document, which creates a file with a list
+of references that are cited in the document.</li>
+<li>Run a program that takes information from the database of
+references, picks out the references that are cited in the document, and
+puts them in order.</li>
+<li>Compile your document again, so that LaTeX can use that information
+to resolve the citations used in your document.</li>
 </ol>
 <div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
@@ -2229,7 +3488,7 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -2243,7 +3502,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2270,10 +3529,11 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2399,7 +3659,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2426,7 +3686,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -2555,7 +3815,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2582,7 +3842,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -2711,7 +3971,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2738,7 +3998,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -2991,8 +4251,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/aio.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/aio.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-18",
-  "datePublished": "2024-12-18"
+  "dateModified": "2024-12-23",
+  "datePublished": "2024-12-23"
 }
 
   </script><script>

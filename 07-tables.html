@@ -215,7 +215,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-document-structure.html">2. Document Structure in LaTeX</a>
+        <a href="02-document-structure.html">2. Document Structure</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -224,7 +224,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-logical-structure.html">3. The Logical Structure of a LaTeX Document</a>
+        <a href="03-logical-structure.html">3. The Logical Structure of a Document</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -233,7 +233,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-document-classes.html">4. document-classes</a>
+        <a href="04-document-classes.html">4. Using Document Classes</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -242,7 +242,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-extending-latex.html">5. extending-latex</a>
+        <a href="05-extending-latex.html">5. Extending LaTeX</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -251,7 +251,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-using-graphics.html">6. using-graphics</a>
+        <a href="06-using-graphics.html">6. Using Graphics</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -270,7 +270,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#introduction">Introduction</a></li>
+        <ul><li><a href="#defining-tables">Defining Tables</a></li>
+<li><a href="#creating-a-table">Creating a Table</a></li>
 <li><a href="#figures">Figures</a></li>
 <li><a href="#math">Math</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -282,7 +283,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-cross-references.html">8. cross-references</a>
+        <a href="08-cross-references.html">8. Adding Cross References</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -291,7 +292,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="09-mathematics.html">9. mathematics</a>
+        <a href="09-mathematics.html">9. Mathematics</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -300,7 +301,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-text-and-spacing.html">10. fonts-and-spacing</a>
+        <a href="10-text-and-spacing.html">10. Fonts and Spacing</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -309,7 +310,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="11-citations-and-references.html">11. citations-and-references</a>
+        <a href="11-citations-and-references.html">11. Citations and References</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -400,16 +401,16 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="06-using-graphics.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: using-graphics
+          Previous: Using Graphics
         </a>
         <a class="chapter-link float-end" href="08-cross-references.html" rel="next">
-          Next: cross-references...
+          Next: Adding Cross...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>tables</h1>
-        <p>Last updated on 2024-12-18 |
+        <p>Last updated on 2024-12-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/07-tables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -428,8 +429,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<ul><li>How do I add tables to a LaTeX document?</li>
 </ul></div>
 </div>
 </div>
@@ -437,33 +437,251 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul></div>
+<ul><li>
+</li></ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal"><li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
+<section><h2 class="section-heading" id="defining-tables">Defining Tables<a class="anchor" aria-label="anchor" href="#defining-tables"></a></h2>
+<hr class="half-width"><p>Tables in LaTeX are set using the <code>tabular</code> environment.
+For our purposes here, we are going to use the <code>array</code>
+package to create a table, which provides additionl functionality for
+creating tables.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}</span></code></pre>
+</div>
+<p>In order to create a table, we need to tell latex how may columns we
+will need and how they should be aligned.</p>
+<p>Available column types are:</p>
+<table class="table"><colgroup><col width="55%"><col width="44%"></colgroup><thead><tr class="header"><th>Column Type</th>
+<th>Description</th>
+</tr></thead><tbody><tr class="odd"><td><code>l</code></td>
+<td>left-aligned</td>
+</tr><tr class="even"><td><code>c</code></td>
+<td>centered</td>
+</tr><tr class="odd"><td><code>r</code></td>
+<td>right-aligned</td>
+</tr><tr class="even"><td><code>p{width}</code></td>
+<td>a column with fixed width width; the text will be automatically line
+wrapped and fully justified</td>
+</tr><tr class="odd"><td><code>m{width}</code></td>
+<td>like p, but vertically centered compared to the rest of the row</td>
+</tr><tr class="even"><td><code>b{width}</code></td>
+<td>like p, but bottom aligned</td>
+</tr><tr class="odd"><td><code>w{align}{width}</code></td>
+<td>prints the contents with a fixed width, silently overprinting if
+things get larger. (You can choose the horizontal alignment using l, c,
+or r.)</td>
+</tr><tr class="even"><td><code>W{align}{width}</code></td>
+<td>like w, but this will issue an overfull box warning if things get
+too wide.</td>
+</tr></tbody></table><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The columns l, c and r will have the natural width of the widest
+entry in the column. Each column must be declared, so if you want a
+table with three centered columns, you would use <code>ccc</code> as the
+column declaration.</p>
+</div>
+</div>
+</div>
+<p>There are also a few other preamble-tokens that are available. These
+don’t define a column, but can be useful as well:</p>
+<div class="line-block">Token | Description |<br>
+Token | Description |</div>
+<p>|———–|——————————————————————————————————| |
+<code>{num}{string}</code> | repeats string for num times in the
+preamble. With this you can define multiple identical columns. | |
+<code>&gt;{decl}</code> | this will put decl before the contents of
+every cell in the following column (this is useful, e.g., to set a
+different font for this column) | | <code>&lt;{decl}</code> | this will
+put decl after the contents of each cell in the previous column | |
+<code>|</code> | add a vertical rule | | <code>@{decl}</code> | replace
+the space between two columns with decl | | <code>!{decl}</code> | add
+decl in the center of the existing space |</p>
+</section><section><h2 class="section-heading" id="creating-a-table">Creating a Table<a class="anchor" aria-label="anchor" href="#creating-a-table"></a></h2>
+<hr class="half-width"><p>Now that we have the array package loaded and we know how to define
+columns, we can create a table using the <code>tabular</code>
+environment.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>Tables are defined using the `tabular` environment.</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{lll}</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+<p>This will create a table with three columns, all left-aligned. The
+values of each row are separated by <code>&amp;</code> and the rows are
+separated by <code>\\</code>. We do now yet have any horizontal lines in
+the table, so it will look like this:</p>
+<p>IMAGE HERE</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note that the <code>&amp;</code> and <code>\\</code> characters are
+aligned in our example. This isn’t strictly necessary in LaTeX, but it
+makes the code much easier to read.</p>
+</div>
+</div>
+</div>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>If your table has many columns, it may get cumbersome to write out
+the column definitions every time. In this case you can make things
+easier by using <code>*{num}{string}</code> to repeat the string
+<code>num</code> times. For example, in our table above, we can instead
+write:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="adding-horizontal-lines">Adding Horizontal Lines<a class="anchor" aria-label="anchor" href="#adding-horizontal-lines"></a></h3>
+<p>We’re going to introduce another package here: <code>booktabs</code>.
+This package provides a few commands that make it easier to create
+professional looking tables. To use it, add the following to your
+preamble:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span></code></pre>
+</div>
+<p><code>booktabs</code> provides three commands for creating horizontal
+lines in your table:</p>
+<ul><li>
+<code>\toprule</code>: creates a line at the top of the table</li>
 <li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
+<code>\midrule</code>: creates a line in the middle of the
+table</li>
 <li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol><div id="challenge-1-can-you-do-it" class="callout challenge">
+<code>\bottomrule</code>: creates a line at the bottom of the
+table</li>
+</ul><p>Horizontal lines make tables easier to read and understand, and they
+can be used to separate the header from the body of the table, and the
+body from the footer. We can insert these commands into our table to add
+horizontal lines:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>A general recommendation is to use lines sparsely in your tables, and
+vertical lines should be avoided.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="partial-horizontal-lines">Partial Horizontal Lines<a class="anchor" aria-label="anchor" href="#partial-horizontal-lines"></a></h3>
+<p>Another useful feature of <code>booktabs</code> is the ability to
+create partial horizontal lines with the <code>\cmidrule</code> command.
+This command accepts the arguments {number-number}, where the first
+number is the column to start the line and the second number is the
+column to end the line.</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">\subsection</span>{Partial Horizontal Lines}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price <span class="fu">\\</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span>  1.50  <span class="fu">\\</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00  <span class="fu">\\</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20  <span class="fu">\\</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>  <span class="fu">\cmidrule</span>{3-3}</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  Total <span class="op">&amp;</span> 15        <span class="op">&amp;</span> 28.20  <span class="fu">\\</span></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="merging-cells">Merging Cells<a class="anchor" aria-label="anchor" href="#merging-cells"></a></h3>
+<p>We can merge cells horizontally using the <code>\multicolumn</code>
+command. This command takes three arguments:</p>
+<ul><li>The number of cells which should be merged</li>
+<li>The alignment of the merged cell (l, c, or r)</li>
+<li>The contents of the merged cell</li>
+</ul><div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">\subsection</span>{Merging Cells}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="fu">\multicolumn</span>{3}{c}{Overall Inventory} <span class="fu">\\</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price  <span class="fu">\\</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span>  1.50   <span class="fu">\\</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00   <span class="fu">\\</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20   <span class="fu">\\</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="fu">\multicolumn</span>{2}{c}{Summary} <span class="fu">\\</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>  Total <span class="op">&amp;</span> 15        <span class="op">&amp;</span> 28.20   <span class="fu">\\</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+<div id="callout5" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Vertical merging is not supported in LaTeX. Usually it is sufficient
+to leave empty rows in the table to create the impression of vertical
+merging.</p>
+</div>
+</div>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -471,7 +689,7 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -485,7 +703,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -512,7 +730,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -520,9 +738,10 @@ reinforce the objectives.</li>
 </div>
 </div>
 </div>
+</div>
 </section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a></h2>
 <hr class="half-width"><p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
+<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),   init.angle = 315,   col = c("deepskyblue", "yellow", "yellow3"),   border = FALSE )</code>
 Or you can use pandoc markdown for static figures with the following
 syntax:</p>
 <p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
@@ -532,7 +751,7 @@ syntax:</p>
 create dynamic reports with {knitr}, so we now use mathjax to describe
 this:</p>
 <p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
+<p>Cool, right?****</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -564,10 +783,10 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="06-using-graphics.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: using-graphics
+          Previous: Using Graphics
         </a>
         <a class="chapter-link float-end" href="08-cross-references.html" rel="next">
-          Next: cross-references...
+          Next: Adding Cross...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -613,8 +832,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/07-tables.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/07-tables.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-18",
-  "datePublished": "2024-12-18"
+  "dateModified": "2024-12-23",
+  "datePublished": "2024-12-23"
 }
 
   </script><script>
