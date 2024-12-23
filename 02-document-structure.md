@@ -1,5 +1,5 @@
 ---
-title: 'Document Structure in LaTeX'
+title: 'Document Structure'
 teaching: 10
 exercises: 2
 ---
@@ -7,7 +7,7 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What is the basic structure of a LaTeX document?
-- How do I render a LaTeX document into a PDF?
+- How do I see what my LaTeX document looks like when it's rendered?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -15,6 +15,7 @@ exercises: 2
 
 - Become familiar with the basic structure of a LaTeX document.
 - Use Overleaf to render a LaTeX document into a PDF.
+- Identify how to add special characters to a LaTeX document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -223,3 +224,18 @@ the text correctly:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::: spoiler
+
+After this episode, here is what our LaTeX document looks like:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+Hello World!
+
+This is my first LaTeX document.
+\end{document}
+```
+
+:::

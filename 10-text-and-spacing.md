@@ -1,39 +1,96 @@
 ---
-title: 'fonts-and-spacing'
+title: 'Fonts and Spacing'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Paragraph Spacing
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+A common style is to have no indents for paragraphs, but to instead have a "blank line" between 
+them. We can achieve this using the `parskip` package:
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+```latex
+\usepackage[parfill]{parskip}
+```
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+In our document, we can now use a blank line to separate paragraphs:
+
+```latex
+\section{Fonts and Spacing}
+
+\lipsum
+
+\lipsum
+```
+
+(Commend out the "usepackage" line and recompile to see the difference.)
+
+## Forcing a New Line
+
+Most of the time, you should not force a new line in your document; you almost certainly want to
+use a new paragraph or `parskip` instead. However, there are a *few* places where you might want
+to force a new line:
+
+- At the end of table rows
+- Inside a `center` environment
+- In poetry (the `verse` environment)
+
+To force a new line, we can use the `\\` command.
+
+## Adding Explicit Space
+
+We can insert a thin space (about half the normal thickness) use the `\,` command.
+
+::: callout
+
+In math mode, there are also other commands:
+
+- `\.` for a "dot" space
+- `\:` for a "colon" space
+- `\;` for a "thick" space
+- `\!` for a "negative" space
+
+:::
+
+Very rarely, for example when creating a title page, you might want to add explicit horizontal or
+vertical space. We can do this using the `\hspace` and `\vspace` commands:
+
+```latex
+\hspace{1cm} % 1cm of horizontal space
+\vspace{1cm} % 1cm of vertical space
+```
+
+## Explicit Text Formatting
+
+We've touched on this in previous episodes, but we can also use the following commands to format
+text explicitly:
+
+- `\textbf{}` for bold text
+- `\textit{}` for italic text
+- `\textrm{}` for roman text
+- `\textsf{}` for sans serif text
+- `\texttt{}` for typewriter text
+- `\textsc{}` for small caps text
+
+We can set the font size in the same way. All sizes are relative to the base font size:
+
+- `\huge` for huge text
+- `\large` for large text
+- `\normalsize` for normal text
+- `\small` for small text
+- `\footnotesize` for footnote text
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 

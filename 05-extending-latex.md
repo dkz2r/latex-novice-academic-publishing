@@ -1,106 +1,234 @@
 ---
-title: 'extending-latex'
+title: 'Extending LaTeX'
 teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- How can I extend LaTeX to suit my needs?
+- How can I define my own commands in LaTeX?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Demonstrate how to extend LaTeX using packages.
+- Add custom commands to a LaTeX document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Adding Packages
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+After we've declared a class, we can use the preamble section of our document to add one or more
+packages in order to extend LaTeX's functionality. Packages are collections of commands and
+environments that add new features to LaTeX, for example:
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+- Changing how some parts of LaTeX work.
+- Adding new commands.
+- Changing the appearance/design of the document.
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+## Changing how LaTeX works
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+The "kernel" of LaTeX is quite limited in terms of user customisation, as some add-on packages deal
+with fairly common ideas. For example, how LaTeX deals with language-specific typesetting (e.g.
+hyphenation, quotation marks, punctuation, localisation) is handled by the `babel` package.
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+An example:
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+```latex
+\documentclass{article}
 
-::::::::::::::::::::::::::::::::::::: challenge 
+\usepackage[width = 6cm]{geometry} % To force hyphenation here
 
-## Challenge 1: Can you do it?
+\begin{document}
 
-What is the output of this command?
+This is a lot of filler which is going to demonstrate how LaTeX hyphenates
+material, and which will be able to give us at least one hyphenation point.
+This is a lot of filler which is going to demonstrate how LaTeX hyphenates
+material, and which will be able to give us at least one hyphenation point.
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+\end{document}
 ```
 
-:::::::::::::::::::::::: solution 
+This will produce a document with a narrow text block, which will force LaTeX to hyphenate words in
+order to fit them in the available space. Try adding a `%` before the `\usepackage` line and
+rendering the document again to see the difference.
+
+::: callout
+
+Different languages have different rules around hypenation, quotation marks, punctuation, etc.
+We can use the `babel` package to set these rules for different languages like this:
+
+```latex
+\usepackage[english]{babel}
+```
+
+or
+
+```latex
+\usepackage[german]{babel}
+```
+
+:::
+
+## Changing the Design
+
+It's useful to be able to adjust some aspects of the design independent of the document class, for
+example, the page margins. We used the `geometry` package in our previous example to set the width
+of the text block, but now let's use it to specifically set the margins of our document:
+
+::: callout
+
+So far we've been showing the entire document in the examples. Going forward, we'll only show the
+relevant sections of the document that we're discussing, so keep in mind when we are talking about
+"adding this to the preamble" we mean adding it to the section of the document *before* the
+`\begin{document}` command.
+
+:::
+
+Let's add this to the preamble of our document:
+
+```latex
+\documentclass{article}
+```
+
+You should see that adding this package and setting the "margin" option to `1in` has shrunk the
+margins of the document (try commenting out the `\usepackage` line with a `%` and recompiling to
+see the difference).
+
+## Defining Custom Commands
+
+Using other people's packages is great, but what if there is some kind of functionality we want to
+add to our document that isn't covered by a package? Or some specific formatting we want to use
+repeatedly? We can define our own commands in LaTeX using the `\newcommand` command.
+
+The `\newcommand` syntax looks like this:
+
+```latex
+\newcommand{\commandname}[number of arguments]{definition}
+```
+
+As an example, let's define a command that will highlight specific works in a document, so that
+they appear italicised and underlined. We *could* do this by writing `\textbf{\underline{word}}`
+around each word we want to highlight:
+
+```latex
+This is my first \textbf{\underline{LaTeX}} document.
+
+\section{Sections}
+
+I can add content to my first \textbf{\underline{section}}!
+```
+
+We can add this to each of our important terms in our document - maybe it looks something like this:
+
+![](fig/05-extending-latex/kw-highlight-underline.PNG){alt='Our document with keywords highlighted in bold and underlined.'}
+
+
+In a long document this would quickly become tedious. Instead, let's define a new command called
+`\kw` in the preamble of our document that will do this for us:
+
+```latex
+% Highlight Keywords using the \kw{} command
+\newcommand{\kw}[1]{\textbf{\underline{#1}}}
+```
+
+::: callout
+
+The line starting with `%` is a comment in LaTeX. Comments are ignored by the LaTeX compiler and
+are used to add notes to the document for the author's reference.
+
+:::
+
+Now we can use the `\kw` command to highlight words in our document:
+
+```latex
+This is my first \kw{LaTeX} document.
+
+\section{Sections}
+
+I can add content to my first \kw{section}!
+```
+
+This also means that we can easily change the formatting of all the words we've highlighted by
+updating the definition of the `\kw` command. Let's say we wanted to change the formatting to bold
+and change the colour to blue:
+
+::: callout
+
+Standard LaTeX does not have a built-in way to change the colour of text, but we can use the
+`xcolor` package to do this by adding the `\usepackage{xcolor}` line to the preamble of our
+document
+
+:::
+
+Let's replace our `\kw` command with this new definition:
+`\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}`
+
+When we recompile the document we should see that the formatting of our keywords has changed all at
+once:
+
+![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in blue.'}
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 1: Importing a new package
+
+A useful package to preview what your document will look like before your write a lot of text is
+the `lipsum` package. This package provides sample text blocks from a common placeholder text.
+
+How would you add the lipsum package to the preamble of your document?
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+Add the line `\usepackage{lipsum}` to the preamble of your document.
+
+You can then use the `\lipsum` command in the body of your document to add some dummy text.
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: What does this mean?
+
+The defintion of a new command in LaTeX is done with the `\newcommand` command. The syntax for this
+command is:
+
+```latex
+\newcommand{\commandname}[number of arguments]{definition}
+```
+
+So if we modify the `\kw` command we defined above to look like this:
+
+```latex
+\newcommand{\kw}[2]{\textcolor{#1}{\textbf{#2}}}
+```
+
+What would the new `\kw` command do? and how would we use it?
+
+:::::::::::::::::::::::: solution
 
 ## Output
- 
-```output
-[1] "This new lesson looks good"
+
+The new `\kw` command would take two arguments: the first argument would be the colour we want to
+use to highlight the word, and the second argument would be the word we want to highlight. We would
+use it like this:
+
+```latex
+\kw{red}{my keyword}
 ```
 
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
-
-You can include figures generated from R Markdown:
-
-```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
-```
-Or you can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
-
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `.md` files for episodes when you want static content
 - Use `.Rmd` files for episodes when you need to generate output
@@ -109,3 +237,51 @@ Cool, right?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::: spoiler
+
+After this episode, here is what our LaTeX document looks like:
+
+```latex
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+
+% Highlight Keywords using the \kw{} command
+\newcommand{\kw}[1]{\textbf{\underline{#1}}}
+
+\begin{document}
+Hello World!
+
+This is my first \kw{LaTeX} document.
+
+\section{Sections}
+
+I can add content to my first \kw{section}!
+
+\subsection{Subsection}
+
+I can put a \kw{subsection} inside my first section.
+
+\section{Lists}
+
+There are two types of lists: \kw{ordered} and \kw{unordered}.
+
+\subsection{Ordered}
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\subsection{Unordered}
+
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{itemize}
+
+\end{document}
+```
+
+:::

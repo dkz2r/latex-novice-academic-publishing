@@ -1,46 +1,73 @@
 ---
-title: 'cross-references'
+title: 'Adding Cross References'
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Cross References
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+When writing a document of any length, you'll often want to refer to numbered elements such as 
+figures, tables, equations, or sections. LaTeX provides a way to automatically number these elements
+and refer to them in your text.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+### Label and Ref
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+To have LaTex remember a specific spot in your document, you have to use the `\label{}` command to 
+mark it, and the `\ref{}` command to refer to it. For example:
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+```latex	
+\section{Cross References}
+\label{sec:cross-references}
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+\subsection{Material for the Introduction}
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+In this section, we introduce two new concepts:
+
+\begin{tabular}{cp{9cm}}
+  Command & Description \\
+  \toprule
+  \kw{label} & Marks a spot in the document \\
+  \kw{ref} & Refers to a marked spot in the document \\
+  \bottomrule
+\label{tab:cross-reference-commands}
+\end{tabular}
+
+We can refer to the section with the \kw{ref} command, like this: \ref{sec:cross-references}. We 
+can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
+```
+
+::: callout
+
+The `sec` and `tab` prefixes in the `\label{}` command are not required, but they help to identify
+the type of element being labeled. This is especially useful when you have many labels in your
+document.
+
+:::
+
+The label command always refers to the previous numbered entry: a section, a table, a figure, etc.
+This means that the `\label{}` command should always come *after* the numbered element you want to
+refer to.
+
+::: callout
+
+Note that the `ref` command does not insert the section or table name, but rather the number 
+associated with it. We would still write "Refer to Table \ref{tab:cross-reference-commands}", but
+the benefit is that if the table number changes, the reference will update automatically.
+
+:::
+
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
