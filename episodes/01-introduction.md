@@ -62,7 +62,7 @@ minimum requirements for a LaTeX document.
 
 ## The Main Menu
 
-When we want to switch projects or create anew one, we can use the main menu at the top of the
+When we want to switch projects or create a new one, we can use the main menu at the top of the
 screen, which is indicated by a small "house" icon. Clicking on this icon will take us back to the
 main landing page for overleaf, where we initially created our project.
 
