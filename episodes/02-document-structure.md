@@ -92,7 +92,7 @@ what happens.
 
 You've probably noticed by now that the characters `\`, `{`, and `}` are special characters in
 LaTeX. There are others though, such as `$`, `%`, `&`, `#` and `^`. These characters tend to be
-much less common in text, but you can use them by "excaping" them with a backslash. For example,
+much less common in text, but you can use them by "escaping" them with a backslash. For example,
 
 - `\%` produces `%`
 - `\&` produces `&`
