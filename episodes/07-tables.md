@@ -19,7 +19,7 @@ exercises: 2
 ## Defining Tables
 
 Tables in LaTeX are set using the `tabular` environment. For our purposes here, we are going to
-use the `array` package to create a table, which provides additionl functionality for creating
+use the `array` package to create a table, which provides additional functionality for creating
 tables.
 
 ```latex
