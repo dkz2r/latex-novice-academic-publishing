@@ -44,7 +44,7 @@ These options are set in square brackets after the document class name, for exam
 LaTeX comes with a set of standard document classes:
 
 - `article`: a short document without chapters
-- `report`: a longer document with chapters, indended for single sided printing
+- `report`: a longer document with chapters, intended for single sided printing
 - `book`: a longer document with chapters, intended for double sided printing, as well as other
    features like front and back matter
 - `letter`: a short document with no sections
@@ -96,8 +96,8 @@ doesn't have any of the features we might use in modern presentations
 ## Function-rich Classes
 
 The core classes included with base LaTeX are very stable, but this means they are also somewhat
-conservateive in terms of features. Over time, third parties have developed a number of more
-powerfull classes that add new features and functionality to LaTeX documents.
+conservative in terms of features. Over time, third parties have developed a number of more
+powerful classes that add new features and functionality to LaTeX documents.
 
 These include:
 
@@ -108,7 +108,7 @@ These include:
                  providing parallel classes to the base classes
 - `memoir`: a class that provides a lot of functionality for creating books, reports, and articles
 
-These classes have lots of custimization options that we can explore
+These classes have lots of customization options that we can explore
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
