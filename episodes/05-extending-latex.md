@@ -30,9 +30,9 @@ environments that add new features to LaTeX, for example:
 
 ## Changing how LaTeX works
 
-The "kernel" of LaTeX is quite limited in terms of user customisation, as some add-on packages deal
+The "kernel" of LaTeX is quite limited in terms of user customization, as some add-on packages deal
 with fairly common ideas. For example, how LaTeX deals with language-specific typesetting (e.g.
-hyphenation, quotation marks, punctuation, localisation) is handled by the `babel` package.
+hyphenation, quotation marks, punctuation, localization) is handled by the `babel` package.
 
 An example:
 
@@ -57,7 +57,7 @@ rendering the document again to see the difference.
 
 ::: callout
 
-Different languages have different rules around hypenation, quotation marks, punctuation, etc.
+Different languages have different rules around hyphenation, quotation marks, punctuation, etc.
 We can use the `babel` package to set these rules for different languages like this:
 
 ```latex
@@ -153,11 +153,11 @@ I can add content to my first \kw{section}!
 
 This also means that we can easily change the formatting of all the words we've highlighted by
 updating the definition of the `\kw` command. Let's say we wanted to change the formatting to bold
-and change the colour to blue:
+and change the color to blue:
 
 ::: callout
 
-Standard LaTeX does not have a built-in way to change the colour of text, but we can use the
+Standard LaTeX does not have a built-in way to change the color of text, but we can use the
 `xcolor` package to do this by adding the `\usepackage{xcolor}` line to the preamble of our
 document
 
@@ -196,7 +196,7 @@ You can then use the `\lipsum` command in the body of your document to add some 
 
 ## Challenge 2: What does this mean?
 
-The defintion of a new command in LaTeX is done with the `\newcommand` command. The syntax for this
+The definition of a new command in LaTeX is done with the `\newcommand` command. The syntax for this
 command is:
 
 ```latex
@@ -215,7 +215,7 @@ What would the new `\kw` command do? and how would we use it?
 
 ## Output
 
-The new `\kw` command would take two arguments: the first argument would be the colour we want to
+The new `\kw` command would take two arguments: the first argument would be the color we want to
 use to highlight the word, and the second argument would be the word we want to highlight. We would
 use it like this:
 
