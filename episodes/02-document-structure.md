@@ -69,6 +69,32 @@ Everything before the `\begin{document}` command is called the *preamble*. The p
 you set up the document, including the document class, title, author, and any other settings you
 want to apply to the entire document.
 
+### Comments
+
+We can add comments to our document by using the `%` character. Anything after the `%` on a line is
+ignored by LaTeX. As in any other programming language, comments are useful for explaining what the
+code is doing. We'll start incorporating comments into our document going forward to explain some 
+of the specifics of the LaTeX code we're writing. 
+
+As we go, you should use your version of the document to add your own comments as a way of taking 
+notes on what you're learning, and to act as a reference for yourself in the future!
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article} 
+
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+Hello World!
+
+This is my first LaTeX document.
+\end{document} 
+```
+
+Going forward, the examples we provide will not always include comments, but you should add them 
+to your document as you see fit.
+
 ## Rendering the Document
 
 In your Overleaf project, click the green *Recompile* button to render the document. This will
@@ -82,11 +108,69 @@ we want to render the document, we can use `Ctrl + S` or `Ctrl + Enter` (Windows
 
 :::
 
+### Errors, Warnings and the Log
+
+Inevitably, everyone makes mistakes when writing LaTeX documents. When you recompile your document,
+you might not see any changes in the preview pane. This could be because there is an error in your
+document. If there is an error, you will see a red number next to  the "Recompile" button over the 
+"Logs and output files" button. You will also see certain lines highlighted in red in the text
+editor, along with a suggestion of what the error might be.
+
+Let's introduce an error into our project to see what this might look like. Let's introduce a typo
+into the `documentclass` command by changing it to `documnetclass`. When we recompile the document,
+we can see our errors:
+
+![Error in the LaTeX document](fig/02-document-structure/document-errors.png){alt='Error in the LaTeX document.'}
+
+And if we click on the "Logs and output files" button, we can see a more detailed error message:
+
+![Error message in the LaTeX document](fig/02-document-structure/document-error-message.png){alt='Error message in the LaTeX document.'}
+
+We can see similar messages when hovering over the small red circle next to the error in the text
+editor:
+
+![Error message on Hover](fig/02-document-structure/document-error-hover.png){alt='Error message on Hover.'}
+
+### Fixing Errors
+
+Our tiny typo seems to have caused quite a number of issues! This can happen, the important thing 
+is to read the error message and try to understand what it's telling you. In this case it says:
+
+```
+Undefined control sequence. ./main.tex, 2
+
+The compiler is having trouble understanding a command you have used. Check that the command is 
+spelled correctly. If the command is part of a package, make sure you have included the package 
+in your preamble using \usepackage{...}.
+```
+
+In order to diagnose the issue, we can first look at the name of the message. In this case, it's
+`Undefined control sequence`. This means that LaTeX doesn't recognize the command we've used.
+Specifically, it says, this undefined sequence is on line 2 of the `main.tex` file. We can then
+look at the line and see that we've made a typo in the `\documentclass` command.
+
+As soon as we fix this typo and recompile our document, we should see the preview pane update and
+all of the remaining errors disappear.
+
+::: callout
+
+The subsequent errors, talking about "missing begin document", and "font size command not defined"
+are all cascading errors from the initial error. When LaTeX encounters an error, it can't continue
+to compile the document, so it stops and reports the error it found. This can sometimes lead to
+multiple error messages, but generally it's important to fix the first error first, as this will
+often resolve subsequent errors.
+
+:::
+
 ## Paragraphs
 
 Note that we have an empty line between our two lines of text. This is important in LaTeX, as this
 indicates a new paragraph. Let's try removing the empty line and recompiling the document to see
 what happens.
+
+You should see that the two lines of text are now displayed on the same line. This is because LaTeX
+treats the two lines as part of the same paragraph. If you want to start a new paragraph, you need
+to leave a blank line between the two paragraphs.
 
 ## Special Characters
 
@@ -100,65 +184,6 @@ much less common in text, but you can use them by "escaping" them with a backsla
 - `\^` produces `^`
 
 and so on.
-
-
-
-
-
-
-
-
-
-
-
-
-### Let's make this document a bit more interesting
-Now we're going to add in some dummy text to get a sense of what a more-complete document would
-look like.
-
-We'll do this using the `lipsum` package, which provides sample text blocks from a common
-placeholder text.
-
-> ## Lorem Ipsum
->
-> Lorem Ipsum is a common piece of placeholder text used in publishing and graphic design. It is
-> often used to demonstrate the visual form of a document without relying on meaningful content.
->
-> The text itself comes from the first-century BC work *De finibus bonorum et malorum* by Marcus
-> Tullius Cicero.
-{: .callout}
-
-We'll need to add a new `\usepackage{}` command, with the argument `lipsum`, to the metadata
-section. Then we can add the `\lipsum` commands to the document body:
-
-
-```latex
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{lipsum}
-
-\title{Irish Fairy Tales}
-\author{James Stephens}
-
-\begin{document}
-
-\maketitle
-
-\section{Introduction}
-\lipsum
-
-\end{document}
-```
-
-When we recompile the document, we'll see that the `\lipsum` command has added some dummy text to
-the document body below the section heading.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
-
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -229,13 +254,16 @@ the text correctly:
 After this episode, here is what our LaTeX document looks like:
 
 ```latex
-\documentclass{article}
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article} 
 
-\begin{document}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
 Hello World!
 
 This is my first LaTeX document.
-\end{document}
+\end{document} 
 ```
 
 :::

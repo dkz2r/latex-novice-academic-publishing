@@ -13,7 +13,8 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
--
+- Identify the various types of document classes available in LaTeX
+- Create a document using an alternative document class
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

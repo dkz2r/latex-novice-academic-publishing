@@ -111,6 +111,7 @@ Deleting the "A test project" project:
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - We can use Overleaf to edit and render LaTeX documents.
+- An Overleaf project can contain many files.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

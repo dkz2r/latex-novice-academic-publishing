@@ -1,5 +1,5 @@
 ---
-title: 'tables'
+title: 'Tables'
 teaching: 10
 exercises: 2
 ---
@@ -7,6 +7,7 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions
 
 - How do I add tables to a LaTeX document?
+- How can I format a table in a LaTeX document?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -207,7 +208,7 @@ table to create the impression of vertical merging.
 
 :::
 
-::::::::::::::::::::::::::::::::::::: challenge
+::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Challenge 1: Can you do it?
 
@@ -217,10 +218,10 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution
+:::::::::::::::::::::::: solution 
 
 ## Output
-
+ 
 ```output
 [1] "This new lesson looks good"
 ```
@@ -230,7 +231,7 @@ paste("This", "new", "lesson", "looks", "good")
 
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution
+:::::::::::::::::::::::: solution 
 
 You can add a line with at least three colons and a `solution` tag.
 

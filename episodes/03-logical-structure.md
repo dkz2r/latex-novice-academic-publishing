@@ -29,17 +29,22 @@ LaTeX will handle all of the numbering, formatting, vertical spacing, fonts, and
 keep these elements consistent throughout your document. Let's add sections to our document.
 
 ```latex
-\documentclass{article}
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article} 
 
-\begin{document}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
 Hello World!
 
 This is my first LaTeX document.
 
+% The section command automatically numbers and formats the section heading.
 \section{Sections}
 
 I can add content to my first section!
 
+% The subsection command does the same thing, but for sections within sections.
 \subsection{Subsection}
 
 I can put a subsection inside my first section.
@@ -72,27 +77,36 @@ In LaTeX, as in markdown, there are two types of lists: ordered and unordered. T
 defined with `\begin{...}` and `\end{...}` commands, as we saw with the document body. Let's add
 an ordered list to our document.
 
-```latex
-\documentclass{article}
+We'll replace our "Second Section" with on for "Lists" and add an ordered list:
 
-\begin{document}
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article} 
+
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
 Hello World!
 
 This is my first LaTeX document.
 
+% The section command automatically numbers and formats the section heading.
 \section{Sections}
 
 I can add content to my first section!
 
+% The subsection command does the same thing, but for sections within sections.
 \subsection{Subsection}
 
 I can put a subsection inside my first section.
 
 \section{Lists}
 
-There are two types of lists: ordered and unordered
+There are two types of lists: ordered and unordered.
 
 \subsection{Ordered}
+
+Ordered lists have a number or letter associated with each item.
 
 \begin{enumerate}
   \item Item 1
@@ -119,26 +133,33 @@ Adding an unordered list is just as easy. We can use the exact same syntax, but 
 `enumerate` environment with `itemize`.
 
 ```latex
-\documentclass{article}
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article} 
 
-\begin{document}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
 Hello World!
 
 This is my first LaTeX document.
 
+% The section command automatically numbers and formats the section heading.
 \section{Sections}
 
 I can add content to my first section!
 
+% The subsection command does the same thing, but for sections within sections.
 \subsection{Subsection}
 
 I can put a subsection inside my first section.
 
 \section{Lists}
 
-There are two types of lists: ordered and unordered
+There are two types of lists: ordered and unordered.
 
 \subsection{Ordered}
+
+Ordered lists do not have numbers or letters associated with each item.
 
 \begin{enumerate}
   \item Item 1
@@ -147,6 +168,8 @@ There are two types of lists: ordered and unordered
 \end{enumerate}
 
 \subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
 
 \begin{itemize}
   \item Item 1
@@ -260,26 +283,33 @@ How would you write this in LaTeX?
 After this episode, here is what our LaTeX document looks like:
 
 ```latex
-\documentclass{article}
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article} 
 
-\begin{document}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
 Hello World!
 
 This is my first LaTeX document.
 
+% The section command automatically numbers and formats the section heading.
 \section{Sections}
 
 I can add content to my first section!
 
+% The subsection command does the same thing, but for sections within sections.
 \subsection{Subsection}
 
 I can put a subsection inside my first section.
 
 \section{Lists}
 
-There are two types of lists: ordered and unordered
+There are two types of lists: ordered and unordered.
 
 \subsection{Ordered}
+
+Ordered lists do not have numbers associated with each item.
 
 \begin{enumerate}
   \item Item 1
@@ -288,6 +318,8 @@ There are two types of lists: ordered and unordered
 \end{enumerate}
 
 \subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
 
 \begin{itemize}
   \item Item 1

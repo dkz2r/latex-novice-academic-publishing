@@ -6,13 +6,14 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- 
+- How do I add mathematical expressions to a LaTeX document?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- 
+- Create Inline and Display Math Mode expressions in LaTeX
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Math Mode

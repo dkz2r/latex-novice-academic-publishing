@@ -6,7 +6,8 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- 
+- bibtex-ext
+- siunitx
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -23,10 +24,12 @@ usually you will get that information from one or more external files. Such a fi
 of references, containing the information in a processing-friendly format. Using one or more
 reference databases lets you re-use information and avoid manual formatting.
 
-### Reference Databases (BiBTeX)
+## Reference Databases (BiBTeX)
 
 Reference databases are normally referred to as *BiBTeX* files, and have the extension `.bib`. They
 contain one or more entries, one for each reference, and within each are a series of fields.
+
+Create a new file in your project called `references.bib` and add the following content:
 
 ```bibtex
 @article{Thomas2008,
@@ -68,19 +71,32 @@ is to prevent any case-changing that might be applied to the title.
 
 :::
 
+### BibTeX Format
+
+
+
 Editing BiBTeX files by hand can be tedious, a number of tools exist to help you manage your 
 reference files. 
 
 ### Transferring Information from the Database to the Document
 
-There are three steps to get your information from the database into your document:
+When using Overleaf, we just need to make sure that the bibliography file is present in the project 
+and properly referenced in our document. Check to make sure that your `main.tex` file is in the 
+same directory as your `references.bib` file. Then, at the bottom of your `main.tex` file, add the
+following lines:
 
-1. Use LaTeX to compile your document, which creates a file with a list of references that are 
-   cited in the document.
-2. Run a program that takes information from the database of references, picks out the references
-   that are cited in the document, and puts them in order. 
-3. Compile your document again, so that LaTeX can use that information to resolve the citations 
-   used in your document. 
+```latex
+\bibliographystyle{plain}
+\bibliography{references}
+```
+
+The first lines tells LaTeX how to format the references, and the second line tells LaTeX where to
+find the references.
+
+::: callout 
+
+There are many different bibliography styles available, and you can find a list of them at
+[CTAN](https://ctan.org/topic/biblio).
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
