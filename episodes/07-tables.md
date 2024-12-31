@@ -21,11 +21,26 @@ exercises: 2
 
 Tables in LaTeX are set using the `tabular` environment. For our purposes here, we are going to
 use the `array` package to create a table, which provides additional functionality for creating
-tables.
+tables. We'll add this to the preamble of our document:
 
 ```latex
 \usepackage{array}
 ```
+
+::: callout
+
+As we start to add more and more packages to our preamble, it can get a bit unwieldy. For now, 
+let's just keep them alphabetized to make it keep things organized. Our imports should now look 
+like this:
+
+```latex	
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+```
+
+:::
 
 In order to create a table, we need to tell latex how may columns we will need and how they should
 be aligned.
@@ -71,8 +86,9 @@ Now that we have the array package loaded and we know how to define columns, we 
 using the `tabular` environment.
 
 ```latex
+\section{Tables}
 
-Tables are defined using the `tabular` environment.
+\kw{Tables} are defined using the \cmd{tabular} environment.
 
 \begin{tabular}{lll}
   Fruit  & Quantity & Price \\
@@ -133,6 +149,11 @@ header from the body of the table, and the body from the footer. We can insert t
 our table to add horizontal lines:
 
 ```latex
+\subsection{Tables with Horizontal Lines}
+
+We can use the \cmd{toprule}, \cmd{midrule}, and \cmd{bottomrule} commands from the \cmd{booktabs}
+package to create horizontal lines in our table.
+
 \begin{tabular}{*{3}{l}}
   \toprule
   Fruit  & Quantity & Price \\
@@ -275,3 +296,184 @@ Cool, right?****
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::: spoiler
+
+After this episode, here is what our LaTeX document looks like:
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Highlight Keywords using \kw{}
+\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
+
+% Italics for commands with \cmd{}
+\newcommand{\cmd}[1]{\textit{#1}}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+Hello World!
+
+This is my first \kw{LaTeX} document.
+
+% The section command automatically numbers and formats the section heading.
+\section{Sections}
+
+I can add content to my first \kw{section}!
+
+% The subsection command does the same thing, but for sections within sections.
+\subsection{Subsection}
+
+I can put a \kw{subsection} inside my first section.
+
+\section{Lists}
+
+There are two types of \kw{lists}: \kw{ordered} and \kw{unordered}.
+
+\subsection{Ordered}
+
+Ordered lists do not have numbers associated with each item.
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
+
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{itemize}
+
+\section{Graphics}
+
+We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the 
+\cmd{includegraphics} command.
+
+\includegraphics{example-image.png}
+
+\subsection{Small Image}
+
+We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
+
+\includegraphics[height=4cm]{example-image.png}
+
+\begin{itemize}
+  \item width: the width of the image
+  \item scale: the scaling factor of the image
+  \item angle: the angle of rotation of the image
+  \item clip: whether to clip the image to its bounding box
+  \item trim: trim the image by a specified amount
+  \item draft: display a box instead of the image
+\end{itemize}
+
+\subsection{Centered Image}
+
+By placing the \cmd{includegraphics} command inside a center environment, we can center the
+image on the page.
+
+\begin{center}
+  \includegraphics[height=2cm]{example-image.png}
+\end{center}
+
+\subsection{Floating Image}
+
+\kw{Floating images} can move around the page as text is added or removed. We can use the 
+\cmd{figure}environment to create a floating image.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=2cm]{example-image.png}
+\end{figure}
+
+Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
+
+\begin{itemize}
+  \item h: Place the float "here" (where it appears in the code)
+  \item t: Place the float at the "top" of the page
+  \item b: Place the float at the "bottom" of the page
+  \item p: Place the float on a "page" by itself
+\end{itemize}
+
+\subsection{Caption}
+
+We can add a \kw{caption} to our floating image by using the \cmd{caption} command inside of the
+\cmd{figure} environment.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=2cm]{example-image.png}
+  \caption{This is a caption for our image.}
+\end{figure}
+
+\section{Tables}
+
+\kw{Tables} are defined using the \cmd{tabular} environment.
+
+\begin{tabular}{lll}
+  Fruit  & Quantity & Price \\
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+\end{tabular}
+
+\subsection{Tables with Horizontal Lines}
+
+We can use the \cmd{toprule}, \cmd{midrule}, and \cmd{bottomrule} commands from the \cmd{booktabs}
+package to create horizontal lines in our table.
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  Fruit  & Quantity & Price \\
+  \midrule
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+  \bottomrule
+\end{tabular}
+
+\subsection{Partial Horizontal Lines}
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  Fruit  & Quantity &  Price \\
+  \midrule
+  Apple  & 5        &  1.50  \\
+  Banana & 6        &  2.00  \\
+  Orange & 4        &  1.20  \\
+  \cmidrule{3-3}
+  Total & 15        & 28.20  \\
+  \bottomrule
+\end{tabular}
+
+\subsection{Merging Cells}
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  \multicolumn{3}{c}{Overall Inventory} \\
+  Fruit  & Quantity &  Price  \\
+  \midrule
+  Apple  & 5        &  1.50   \\
+  Banana & 6        &  2.00   \\
+  Orange & 4        &  1.20   \\
+  \midrule
+  \multicolumn{2}{c}{Summary} \\
+  Total & 15        & 28.20   \\
+  \bottomrule
+\end{tabular}
+
+\end{document}
+```
+
+:::

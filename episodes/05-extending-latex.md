@@ -28,49 +28,28 @@ environments that add new features to LaTeX, for example:
 - Adding new commands.
 - Changing the appearance/design of the document.
 
-## Changing how LaTeX works
-
-The "kernel" of LaTeX is quite limited in terms of user customization, as some add-on packages deal
-with fairly common ideas. For example, how LaTeX deals with language-specific typesetting (e.g.
-hyphenation, quotation marks, punctuation, localization) is handled by the `babel` package.
-
-An example:
+We can add a package to our document by using the `\usepackage` command in the preamble of our
+document. For example, to add the `geometry` package to our document, we would add the following 
+line to the preamble:
 
 ```latex
-\documentclass{article}
-
-\usepackage[width = 6cm]{geometry} % To force hyphenation here
-
-\begin{document}
-
-This is a lot of filler which is going to demonstrate how LaTeX hyphenates
-material, and which will be able to give us at least one hyphenation point.
-This is a lot of filler which is going to demonstrate how LaTeX hyphenates
-material, and which will be able to give us at least one hyphenation point.
-
-\end{document}
+\usepackage{geometry}
 ```
 
-This will produce a document with a narrow text block, which will force LaTeX to hyphenate words in
-order to fit them in the available space. Try adding a `%` before the `\usepackage` line and
-rendering the document again to see the difference.
-
-::: callout
-
-Different languages have different rules around hyphenation, quotation marks, punctuation, etc.
-We can use the `babel` package to set these rules for different languages like this:
+In addition to the name of the package in the curly braces, we can also add options to the package
+by adding them in square brackets before the package name. For example, to set the width of the 
+text block in our document to 6cm, we would update this line to look like this:
 
 ```latex
-\usepackage[english]{babel}
+\usepackage[width = 6cm]{geometry}
 ```
 
-or
+Give this a try in our `main.tex` document to see what happens. When you render the document, you
+should see something like this:
 
-```latex
-\usepackage[german]{babel}
-```
+![](fig/05-extending-latex/geometry-set-width.png){alt='A document with a narrow text block.'}
 
-:::
+However this isn't what we really want, so we'll remove this line from our document.
 
 ## Changing the Design
 
@@ -90,7 +69,7 @@ relevant sections of the document that we're discussing, so keep in mind when we
 Let's add this to the preamble of our document:
 
 ```latex
-\documentclass{article}
+\usepackage[margin=1in]{geometry}
 ```
 
 You should see that adding this package and setting the "margin" option to `1in` has shrunk the
@@ -130,16 +109,10 @@ In a long document this would quickly become tedious. Instead, let's define a ne
 `\kw` in the preamble of our document that will do this for us:
 
 ```latex
+% The \newcommand defines a new custom command
 % Highlight Keywords using the \kw{} command
 \newcommand{\kw}[1]{\textbf{\underline{#1}}}
 ```
-
-::: callout
-
-The line starting with `%` is a comment in LaTeX. Comments are ignored by the LaTeX compiler and
-are used to add notes to the document for the author's reference.
-
-:::
 
 Now we can use the `\kw` command to highlight words in our document:
 
@@ -151,6 +124,21 @@ This is my first \kw{LaTeX} document.
 I can add content to my first \kw{section}!
 ```
 
+::: callout
+
+Let's take a minute to go through and add the `\kw` command to all the keywords in our document.
+
+- LaTeX
+- section
+- subsection
+- lists
+- ordered
+- unordered
+
+:::
+
+### Code Reuse
+
 This also means that we can easily change the formatting of all the words we've highlighted by
 updating the definition of the `\kw` command. Let's say we wanted to change the formatting to bold
 and change the color to blue:
@@ -159,7 +147,11 @@ and change the color to blue:
 
 Standard LaTeX does not have a built-in way to change the color of text, but we can use the
 `xcolor` package to do this by adding the `\usepackage{xcolor}` line to the preamble of our
-document
+document:
+
+```latex
+\usepackage{xcolor}
+```
 
 :::
 
@@ -170,6 +162,18 @@ When we recompile the document we should see that the formatting of our keywords
 once:
 
 ![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in blue.'}
+
+## Defining Multiple Commands
+
+We can define as many commands as we like in the preamble of our document. Let's add another one 
+that we can use to highlight commands in the document:
+
+```latex
+% Italics for commands
+\newcommand{\cmd}[1]{\textit{#1}}
+```
+
+We'll use this command in later sections.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -242,30 +246,38 @@ use it like this:
 After this episode, here is what our LaTeX document looks like:
 
 ```latex
+% This command tells LaTeX what kind of document we are creating (article).
 \documentclass{article}
+
 \usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
 
 % Highlight Keywords using the \kw{} command
-\newcommand{\kw}[1]{\textbf{\underline{#1}}}
+\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
 
-\begin{document}
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
 Hello World!
 
 This is my first \kw{LaTeX} document.
 
+% The section command automatically numbers and formats the section heading.
 \section{Sections}
 
 I can add content to my first \kw{section}!
 
+% The subsection command does the same thing, but for sections within sections.
 \subsection{Subsection}
 
 I can put a \kw{subsection} inside my first section.
 
 \section{Lists}
 
-There are two types of lists: \kw{ordered} and \kw{unordered}.
+There are two types of \kw{lists}: \kw{ordered} and \kw{unordered}.
 
 \subsection{Ordered}
+
+Ordered lists do not have numbers associated with each item.
 
 \begin{enumerate}
   \item Item 1
@@ -274,6 +286,8 @@ There are two types of lists: \kw{ordered} and \kw{unordered}.
 \end{enumerate}
 
 \subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
 
 \begin{itemize}
   \item Item 1

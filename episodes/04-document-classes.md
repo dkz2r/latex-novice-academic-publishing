@@ -51,7 +51,8 @@ LaTeX comes with a set of standard document classes:
 - `letter`: a short document with no sections
 - `slides`: a document for creating slide presentations
 
-### Options for the Article Class
+We're going to leave our `main.tex` file for a minute and play around with some of these document
+classes.
 
 ### Writing a Letter
 
@@ -92,7 +93,27 @@ Note the `\\` used to create line breaks in the address - we'll get back to line
 ## Creating a Presentation
 
 The `slides` document class was developed for making physical slides in the mid-1980s, and so
-doesn't have any of the features we might use in modern presentations
+doesn't have any of the features we might use in modern presentations. Let's create a simple
+presentation using the `slides` document class. Start another new document called "slides.tex".
+
+```latex
+\documentclass{slides}
+
+\begin{document}
+
+\begin{slide}
+The slides document class is a good starting point for creating a presentation.
+\end{slide}
+
+\begin{slide}
+Being entirely text-based, it's not as powerful or user-friendly as modern presentation software.
+\end{slide}
+
+\end{document}
+```
+
+When you compile this document, you should end up with a document that has two pages, each with the
+text of each slide centered in the middle of the page.
 
 ## Function-rich Classes
 
@@ -109,72 +130,95 @@ These include:
                  providing parallel classes to the base classes
 - `memoir`: a class that provides a lot of functionality for creating books, reports, and articles
 
-These classes have lots of customization options that we can explore
+These classes have a lot of customization options that can be used to alter the appearance of the
+document to exactly match your needs. We'll explore how to figure out how to use these classes in
+a later episode. 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1: Which don't belong?
 
-What is the output of this command?
+Which of the following are not a standard LaTeX document class?
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+- `article`
+- `report`
+- `book`
+- `letter`
+- `presentation`
+- `memoir`
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```output
-[1] "This new lesson looks good"
-```
+`presentation` is not a standard LaTeX document class - the correct class is `slides`. Also 
+`memoir` is not a standard LaTeX document class, but a third-party class.
 
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2: What happens?
+
+Suppose we have the following LaTeX slide presentation, but we want to turn it into an article.
+We can change the document class from "slides" to "article", but what happens? Why? and 
+
+```latex
+\documentclass{slides}
+
+\begin{document}
+
+\begin{slide}
+Apples are an edible fruit produced by an apple tree. The tree originated in Central Asia, but
+has since been introduced to many other regions.
+\end{slide}
+
+\begin{slide}
+Some popular apple varieties include:
+\begin{itemize}
+  \item Gala
+  \item Fuji
+  \item Golden Delicious
+\end{itemize}
+\end{slide}
+
+\end{document}
+```
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+We can chang the document class from "slides" to "article", but the `slide` environment does not
+exist in the `article` document class. We end up with errors when we try to compile the document, 
+complaining that the `slide` environment is not defined. We need to change the `slide` environments
+to `sections` or `subsections` to maintain the structure of the document:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\section{Apples}
+Apples are an edible fruit produced by an apple tree. The tree originated in Central Asia, but
+has since been introduced to many other regions.
+
+\subsection{Popular Apple Varieties}
+Some popular apple varieties include:
+\begin{itemize}
+  \item Gala
+  \item Fuji
+  \item Golden Delicious
+\end{itemize}
+
+\end{document}
+```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
-
-You can include figures generated from R Markdown:
-
-```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),
-  init.angle = 315,
-  col = c("deepskyblue", "yellow", "yellow3"),
-  border = FALSE
-)
-```
-Or you can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
-
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- LaTeX document classes set the general layout of the document
+- The base document classes are `article`, `report`, `book`, `letter`, and `slides`
+- Third-party classes can provide additional features
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -183,26 +227,33 @@ Cool, right?
 After this episode, here is what our LaTeX document looks like:
 
 ```latex
-\documentclass{article}
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article} 
 
-\begin{document}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
 Hello World!
 
 This is my first LaTeX document.
 
+% The section command automatically numbers and formats the section heading.
 \section{Sections}
 
 I can add content to my first section!
 
+% The subsection command does the same thing, but for sections within sections.
 \subsection{Subsection}
 
 I can put a subsection inside my first section.
 
 \section{Lists}
 
-There are two types of lists: ordered and unordered
+There are two types of lists: ordered and unordered.
 
 \subsection{Ordered}
+
+Ordered lists do not have numbers associated with each item.
 
 \begin{enumerate}
   \item Item 1
@@ -211,6 +262,8 @@ There are two types of lists: ordered and unordered
 \end{enumerate}
 
 \subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
 
 \begin{itemize}
   \item Item 1
