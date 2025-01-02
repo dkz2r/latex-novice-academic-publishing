@@ -132,6 +132,7 @@ TO BE ADDED LATER
 ```latex
 TO BE ADDED LATER
 ```
+:::
 
 ::: spoiler
 `graphics.tex`
@@ -171,6 +172,7 @@ TO BE ADDED LATER
 ```latex
 TO BE ADDED LATER
 ```
+:::
 
 Then, in our `main.tex` document, we'll include each of these files using the `\input{filename}`:
 
@@ -209,6 +211,7 @@ put these into their own directory called "includes":
 ```latex
 TO BE ADDED LATER
 ```
+:::
 
 ::: spoiler
 `custom-commands.tex`
@@ -216,6 +219,7 @@ TO BE ADDED LATER
 ```latex
 TO BE ADDED LATER
 ```
+:::
 
 ::: spoiler
 `titlepage.tex`
@@ -223,6 +227,7 @@ TO BE ADDED LATER
 ```latex
 TO BE ADDED LATER
 ```
+:::
 
 ### Our New main.tex
 
