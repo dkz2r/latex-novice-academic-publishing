@@ -253,9 +253,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#adding-packages">Adding Packages</a></li>
-<li><a href="#changing-how-latex-works">Changing how LaTeX works</a></li>
 <li><a href="#changing-the-design">Changing the Design</a></li>
 <li><a href="#defining-custom-commands">Defining Custom Commands</a></li>
+<li><a href="#defining-multiple-commands">Defining Multiple Commands</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -274,7 +274,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-tables.html">7. tables</a>
+        <a href="07-tables.html">7. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -410,7 +410,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Extending LaTeX</h1>
-        <p>Last updated on 2024-12-23 |
+        <p>Last updated on 2025-01-02 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/05-extending-latex.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -455,64 +455,36 @@ that add new features to LaTeX, for example:</p>
 <ul><li>Changing how some parts of LaTeX work.</li>
 <li>Adding new commands.</li>
 <li>Changing the appearance/design of the document.</li>
-</ul></section><section><h2 class="section-heading" id="changing-how-latex-works">Changing how LaTeX works<a class="anchor" aria-label="anchor" href="#changing-how-latex-works"></a></h2>
-<hr class="half-width"><p>The “kernel” of LaTeX is quite limited in terms of user
-customisation, as some add-on packages deal with fairly common ideas.
-For example, how LaTeX deals with language-specific typesetting (e.g.
-hyphenation, quotation marks, punctuation, localisation) is handled by
-the <code>babel</code> package.</p>
-<p>An example:</p>
+</ul><p>We can add a package to our document by using the
+<code>\usepackage</code> command in the preamble of our document. For
+example, to add the <code>geometry</code> package to our document, we
+would add the following line to the preamble:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="bu">\usepackage</span>[width = 6cm]{<span class="ex">geometry</span>} <span class="co">% To force hyphenation here</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>This is a lot of filler which is going to demonstrate how LaTeX hyphenates</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>material, and which will be able to give us at least one hyphenation point.</span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>This is a lot of filler which is going to demonstrate how LaTeX hyphenates</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>material, and which will be able to give us at least one hyphenation point.</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">geometry</span>}</span></code></pre>
 </div>
-<p>This will produce a document with a narrow text block, which will
-force LaTeX to hyphenate words in order to fit them in the available
-space. Try adding a <code>%</code> before the <code>\usepackage</code>
-line and rendering the document again to see the difference.</p>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
-<div class="callout-content">
-<p>Different languages have different rules around hypenation, quotation
-marks, punctuation, etc. We can use the <code>babel</code> package to
-set these rules for different languages like this:</p>
+<p>In addition to the name of the package in the curly braces, we can
+also add options to the package by adding them in square brackets before
+the package name. For example, to set the width of the text block in our
+document to 6cm, we would update this line to look like this:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\usepackage</span>[english]{<span class="ex">babel</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\usepackage</span>[width = 6cm]{<span class="ex">geometry</span>}</span></code></pre>
 </div>
-<p>or</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\usepackage</span>[german]{<span class="ex">babel</span>}</span></code></pre>
-</div>
-</div>
-</div>
-</div>
+<p>Give this a try in our <code>main.tex</code> document to see what
+happens. When you render the document, you should see something like
+this:</p>
+<figure><img src="../fig/05-extending-latex/geometry-set-width.png" alt="A document with a narrow text block." class="figure mx-auto d-block"></figure><p>However this isn’t what we really want, so we’ll remove this line
+from our document.</p>
 </section><section><h2 class="section-heading" id="changing-the-design">Changing the Design<a class="anchor" aria-label="anchor" href="#changing-the-design"></a></h2>
 <hr class="half-width"><p>It’s useful to be able to adjust some aspects of the design
 independent of the document class, for example, the page margins. We
 used the <code>geometry</code> package in our previous example to set
 the width of the text block, but now let’s use it to specifically set
 the margins of our document:</p>
-<div id="callout2" class="callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -528,10 +500,10 @@ to the preamble” we mean adding it to the section of the document
 </div>
 </div>
 <p>Let’s add this to the preamble of our document:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span></code></pre>
 </div>
 <p>You should see that adding this package and setting the “margin”
 option to <code>1in</code> has shrunk the margins of the document (try
@@ -544,35 +516,71 @@ by a package? Or some specific formatting we want to use repeatedly? We
 can define our own commands in LaTeX using the <code>\newcommand</code>
 command.</p>
 <p>The <code>\newcommand</code> syntax looks like this:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
 </div>
 <p>As an example, let’s define a command that will highlight specific
 works in a document, so that they appear italicised and underlined. We
 <em>could</em> do this by writing <code>\textbf{\underline{word}}</code>
 around each word we want to highlight:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>This is my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{LaTeX}} document.</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>I can add content to my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{section}}!</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>This is my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{LaTeX}} document.</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>I can add content to my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{section}}!</span></code></pre>
 </div>
 <p>We can add this to each of our important terms in our document -
 maybe it looks something like this:</p>
 <figure><img src="../fig/05-extending-latex/kw-highlight-underline.PNG" alt="Our document with keywords highlighted in bold and underlined." class="figure mx-auto d-block"></figure><p>In a long document this would quickly become tedious. Instead, let’s
 define a new command called <code>\kw</code> in the preamble of our
 document that will do this for us:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co">% The \newcommand defines a new custom command</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">% Highlight Keywords using the \kw{} command</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textbf</span>{<span class="fu">\underline</span>{#1}}}</span></code></pre>
+</div>
+<p>Now we can use the <code>\kw</code> command to highlight words in our
+document:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co">% Highlight Keywords using the \kw{} command</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textbf</span>{<span class="fu">\underline</span>{#1}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span></code></pre>
 </div>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Let’s take a minute to go through and add the <code>\kw</code>
+command to all the keywords in our document.</p>
+<ul><li>LaTeX</li>
+<li>section</li>
+<li>subsection</li>
+<li>lists</li>
+<li>ordered</li>
+<li>unordered</li>
+</ul></div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="code-reuse">Code Reuse<a class="anchor" aria-label="anchor" href="#code-reuse"></a></h3>
+<p>This also means that we can easily change the formatting of all the
+words we’ve highlighted by updating the definition of the
+<code>\kw</code> command. Let’s say we wanted to change the formatting
+to bold and change the color to blue:</p>
 <div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -580,38 +588,15 @@ document that will do this for us:</p>
 <div class="callout-inner">
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
-<p>The line starting with <code>%</code> is a comment in LaTeX. Comments
-are ignored by the LaTeX compiler and are used to add notes to the
-document for the author’s reference.</p>
-</div>
-</div>
-</div>
-<p>Now we can use the <code>\kw</code> command to highlight words in our
+<p>Standard LaTeX does not have a built-in way to change the color of
+text, but we can use the <code>xcolor</code> package to do this by
+adding the <code>\usepackage{xcolor}</code> line to the preamble of our
 document:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code></pre>
 </div>
-<p>This also means that we can easily change the formatting of all the
-words we’ve highlighted by updating the definition of the
-<code>\kw</code> command. Let’s say we wanted to change the formatting
-to bold and change the colour to blue:</p>
-<div id="callout4" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
-<div class="callout-content">
-<p>Standard LaTeX does not have a built-in way to change the colour of
-text, but we can use the <code>xcolor</code> package to do this by
-adding the <code>\usepackage{xcolor}</code> line to the preamble of our
-document</p>
 </div>
 </div>
 </div>
@@ -619,7 +604,19 @@ document</p>
 <code>\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}</code></p>
 <p>When we recompile the document we should see that the formatting of
 our keywords has changed all at once:</p>
-<figure><img src="../fig/05-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure><div id="challenge-1-importing-a-new-package" class="callout challenge">
+<figure><img src="../fig/05-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure></div>
+</section><section><h2 class="section-heading" id="defining-multiple-commands">Defining Multiple Commands<a class="anchor" aria-label="anchor" href="#defining-multiple-commands"></a></h2>
+<hr class="half-width"><p>We can define as many commands as we like in the preamble of our
+document. Let’s add another one that we can use to highlight commands in
+the document:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co">% Italics for commands</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span></code></pre>
+</div>
+<p>We’ll use this command in later sections.</p>
+<div id="challenge-1-importing-a-new-package" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -656,19 +653,19 @@ document to add some dummy text.</p>
 <div id="challenge-2-what-does-this-mean" class="callout-inner">
 <h3 class="callout-title">Challenge 2: What does this mean?</h3>
 <div class="callout-content">
-<p>The defintion of a new command in LaTeX is done with the
+<p>The definition of a new command in LaTeX is done with the
 <code>\newcommand</code> command. The syntax for this command is:</p>
-<div class="codewrapper sourceCode" id="cb9">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
-</div>
-<p>So if we modify the <code>\kw</code> command we defined above to look
-like this:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
+</div>
+<p>So if we modify the <code>\kw</code> command we defined above to look
+like this:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
 </div>
 <p>What would the new <code>\kw</code> command do? and how would we use
 it?</p>
@@ -683,13 +680,13 @@ it?</p>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The new <code>\kw</code> command would take two arguments: the first
-argument would be the colour we want to use to highlight the word, and
+argument would be the color we want to use to highlight the word, and
 the second argument would be the word we want to highlight. We would use
 it like this:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
 </div>
 </div>
 </div>
@@ -721,49 +718,59 @@ locally</li>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="co">% Highlight Keywords using the \kw{} command</span></span>
-<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textbf</span>{<span class="fu">\underline</span>{#1}}}</span>
-<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>Hello World!</span>
-<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
-<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a></span>
-<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span>
-<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a></span>
-<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
-<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a></span>
-<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>I can put a <span class="fu">\kw</span>{subsection} inside my first section.</span>
-<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a></span>
-<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
-<span id="cb12-21"><a href="#cb12-21" tabindex="-1"></a></span>
-<span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a>There are two types of lists: <span class="fu">\kw</span>{ordered} and <span class="fu">\kw</span>{unordered}.</span>
-<span id="cb12-23"><a href="#cb12-23" tabindex="-1"></a></span>
-<span id="cb12-24"><a href="#cb12-24" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
-<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a></span>
-<span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb12-27"><a href="#cb12-27" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb12-28"><a href="#cb12-28" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb12-29"><a href="#cb12-29" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb12-30"><a href="#cb12-30" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb12-31"><a href="#cb12-31" tabindex="-1"></a></span>
-<span id="cb12-32"><a href="#cb12-32" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
-<span id="cb12-33"><a href="#cb12-33" tabindex="-1"></a></span>
-<span id="cb12-34"><a href="#cb12-34" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb12-35"><a href="#cb12-35" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb12-36"><a href="#cb12-36" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb12-37"><a href="#cb12-37" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb12-38"><a href="#cb12-38" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb12-39"><a href="#cb12-39" tabindex="-1"></a></span>
-<span id="cb12-40"><a href="#cb12-40" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="co">% Highlight Keywords using the \kw{} command</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textcolor</span>{blue}{<span class="fu">\textbf</span>{#1}}}</span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a>Hello World!</span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span>
+<span id="cb13-20"><a href="#cb13-20" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
+<span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb13-23"><a href="#cb13-23" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" tabindex="-1"></a>I can put a <span class="fu">\kw</span>{subsection} inside my first section.</span>
+<span id="cb13-25"><a href="#cb13-25" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb13-27"><a href="#cb13-27" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" tabindex="-1"></a>There are two types of <span class="fu">\kw</span>{lists}: <span class="fu">\kw</span>{ordered} and <span class="fu">\kw</span>{unordered}.</span>
+<span id="cb13-29"><a href="#cb13-29" tabindex="-1"></a></span>
+<span id="cb13-30"><a href="#cb13-30" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb13-31"><a href="#cb13-31" tabindex="-1"></a></span>
+<span id="cb13-32"><a href="#cb13-32" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
+<span id="cb13-33"><a href="#cb13-33" tabindex="-1"></a></span>
+<span id="cb13-34"><a href="#cb13-34" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb13-35"><a href="#cb13-35" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb13-36"><a href="#cb13-36" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb13-37"><a href="#cb13-37" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb13-38"><a href="#cb13-38" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb13-39"><a href="#cb13-39" tabindex="-1"></a></span>
+<span id="cb13-40"><a href="#cb13-40" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb13-41"><a href="#cb13-41" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="#cb13-42" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
+<span id="cb13-43"><a href="#cb13-43" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="#cb13-44" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb13-45"><a href="#cb13-45" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb13-46"><a href="#cb13-46" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb13-47"><a href="#cb13-47" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb13-48"><a href="#cb13-48" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb13-49"><a href="#cb13-49" tabindex="-1"></a></span>
+<span id="cb13-50"><a href="#cb13-50" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -831,8 +838,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/05-extending-latex.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/05-extending-latex.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-23",
-  "datePublished": "2024-12-23"
+  "dateModified": "2025-01-02",
+  "datePublished": "2025-01-02"
 }
 
   </script><script>

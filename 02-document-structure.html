@@ -275,7 +275,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-tables.html">7. tables</a>
+        <a href="07-tables.html">7. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -411,7 +411,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Document Structure</h1>
-        <p>Last updated on 2024-12-23 |
+        <p>Last updated on 2025-01-02 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/02-document-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -515,6 +515,34 @@ pairs in a single LaTeX document, but you must have exactly as many
 the <em>preamble</em>. The preamble is where you set up the document,
 including the document class, title, author, and any other settings you
 want to apply to the entire document.</p>
+<div class="section level3">
+<h3 id="comments">Comments<a class="anchor" aria-label="anchor" href="#comments"></a></h3>
+<p>We can add comments to our document by using the <code>%</code>
+character. Anything after the <code>%</code> on a line is ignored by
+LaTeX. As in any other programming language, comments are useful for
+explaining what the code is doing. We’ll start incorporating comments
+into our document going forward to explain some of the specifics of the
+LaTeX code we’re writing.</p>
+<p>As we go, you should use your version of the document to add your own
+comments as a way of taking notes on what you’re learning, and to act as
+a reference for yourself in the future!</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>} </span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>Hello World!</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>} </span></code></pre>
+</div>
+<p>Going forward, the examples we provide will not always include
+comments, but you should add them to your document as you see fit.</p>
+</div>
 </section><section><h2 class="section-heading" id="rendering-the-document">Rendering the Document<a class="anchor" aria-label="anchor" href="#rendering-the-document"></a></h2>
 <hr class="half-width"><p>In your Overleaf project, click the green <em>Recompile</em> button
 to render the document. This will generate a preview of the document in
@@ -534,17 +562,78 @@ the document and render it in one step.</p>
 </div>
 </div>
 </div>
+<div class="section level3">
+<h3 id="errors-warnings-and-the-log">Errors, Warnings and the Log<a class="anchor" aria-label="anchor" href="#errors-warnings-and-the-log"></a></h3>
+<p>Inevitably, everyone makes mistakes when writing LaTeX documents.
+When you recompile your document, you might not see any changes in the
+preview pane. This could be because there is an error in your document.
+If there is an error, you will see a red number next to the “Recompile”
+button over the “Logs and output files” button. You will also see
+certain lines highlighted in red in the text editor, along with a
+suggestion of what the error might be.</p>
+<p>Let’s introduce an error into our project to see what this might look
+like. Let’s introduce a typo into the <code>documentclass</code> command
+by changing it to <code>documnetclass</code>. When we recompile the
+document, we can see our errors:</p>
+<figure><img src="fig/02-document-structure/document-errors.png" alt="Error in the LaTeX document." class="figure mx-auto d-block"><div class="figcaption">Error in the LaTeX document</div>
+</figure><p>And if we click on the “Logs and output files” button, we can see a
+more detailed error message:</p>
+<figure><img src="fig/02-document-structure/document-error-message.png" alt="Error message in the LaTeX document." class="figure mx-auto d-block"><div class="figcaption">Error message in the LaTeX document</div>
+</figure><p>We can see similar messages when hovering over the small red circle
+next to the error in the text editor:</p>
+<figure><img src="fig/02-document-structure/document-error-hover.png" alt="Error message on Hover." class="figure mx-auto d-block"><div class="figcaption">Error message on Hover</div>
+</figure></div>
+<div class="section level3">
+<h3 id="fixing-errors">Fixing Errors<a class="anchor" aria-label="anchor" href="#fixing-errors"></a></h3>
+<p>Our tiny typo seems to have caused quite a number of issues! This can
+happen, the important thing is to read the error message and try to
+understand what it’s telling you. In this case it says:</p>
+<pre><code>Undefined control sequence. ./main.tex, 2
+
+The compiler is having trouble understanding a command you have used. Check that the command is
+spelled correctly. If the command is part of a package, make sure you have included the package
+in your preamble using \usepackage{...}.</code></pre>
+<p>In order to diagnose the issue, we can first look at the name of the
+message. In this case, it’s <code>Undefined control sequence</code>.
+This means that LaTeX doesn’t recognize the command we’ve used.
+Specifically, it says, this undefined sequence is on line 2 of the
+<code>main.tex</code> file. We can then look at the line and see that
+we’ve made a typo in the <code>\documentclass</code> command.</p>
+<p>As soon as we fix this typo and recompile our document, we should see
+the preview pane update and all of the remaining errors disappear.</p>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The subsequent errors, talking about “missing begin document”, and
+“font size command not defined” are all cascading errors from the
+initial error. When LaTeX encounters an error, it can’t continue to
+compile the document, so it stops and reports the error it found. This
+can sometimes lead to multiple error messages, but generally it’s
+important to fix the first error first, as this will often resolve
+subsequent errors.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="paragraphs">Paragraphs<a class="anchor" aria-label="anchor" href="#paragraphs"></a></h2>
 <hr class="half-width"><p>Note that we have an empty line between our two lines of text. This
 is important in LaTeX, as this indicates a new paragraph. Let’s try
 removing the empty line and recompiling the document to see what
 happens.</p>
+<p>You should see that the two lines of text are now displayed on the
+same line. This is because LaTeX treats the two lines as part of the
+same paragraph. If you want to start a new paragraph, you need to leave
+a blank line between the two paragraphs.</p>
 </section><section><h2 class="section-heading" id="special-characters">Special Characters<a class="anchor" aria-label="anchor" href="#special-characters"></a></h2>
 <hr class="half-width"><p>You’ve probably noticed by now that the characters <code>\</code>,
 <code>{</code>, and <code>}</code> are special characters in LaTeX.
 There are others though, such as <code>$</code>, <code>%</code>,
 <code>&amp;</code>, <code>#</code> and <code>^</code>. These characters
-tend to be much less common in text, but you can use them by “excaping”
+tend to be much less common in text, but you can use them by “escaping”
 them with a backslash. For example,</p>
 <ul><li>
 <code>\%</code> produces <code>%</code>
@@ -559,46 +648,6 @@ them with a backslash. For example,</p>
 <code>\^</code> produces <code>^</code>
 </li>
 </ul><p>and so on.</p>
-<div class="section level3">
-<h3 id="lets-make-this-document-a-bit-more-interesting">Let’s make this document a bit more interesting<a class="anchor" aria-label="anchor" href="#lets-make-this-document-a-bit-more-interesting"></a></h3>
-<p>Now we’re going to add in some dummy text to get a sense of what a
-more-complete document would look like.</p>
-<p>We’ll do this using the <code>lipsum</code> package, which provides
-sample text blocks from a common placeholder text.</p>
-<blockquote>
-<h2 id="lorem-ipsum">Lorem Ipsum</h2>
-<p>Lorem Ipsum is a common piece of placeholder text used in publishing
-and graphic design. It is often used to demonstrate the visual form of a
-document without relying on meaningful content.</p>
-<p>The text itself comes from the first-century BC work <em>De finibus
-bonorum et malorum</em> by Marcus Tullius Cicero. {: .callout}</p>
-</blockquote>
-<p>We’ll need to add a new <code>\usepackage{}</code> command, with the
-argument <code>lipsum</code>, to the metadata section. Then we can add
-the <code>\lipsum</code> commands to the document body:</p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">\usepackage</span>[utf8]{<span class="ex">inputenc</span>}</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">\title</span>{Irish Fairy Tales}</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="fu">\author</span>{James Stephens}</span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="fu">\maketitle</span></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="kw">\section</span>{Introduction}</span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="fu">\lipsum</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
-<p>When we recompile the document, we’ll see that the
-<code>\lipsum</code> command has added some dummy text to the document
-body below the section heading.</p>
-
 <div id="challenge-1-whats-wrong-with-this-document" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -608,20 +657,20 @@ body below the section heading.</p>
 <div class="callout-content">
 <p>There is an error in the following LaTeX document. Can you find
 it?</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">\title</span>{My First LaTeX Document}</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>I've created a new LaTeX document.</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>But there's an issue with it that's preventing it from rendering correctly.</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>Can you find and fix the error?</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">\title</span>{My First LaTeX Document}</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>I've created a new LaTeX document.</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>But there's an issue with it that's preventing it from rendering correctly.</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>Can you find and fix the error?</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -661,10 +710,10 @@ missing the <code>\begin{document}</code> command.</p>
 <div class="accordion-body">
 <p>We need to use escapes before each of the special characters. The
 following LaTeX code will display the text correctly:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>5 is greater than 3 <span class="fu">\&amp;</span> 2 is less than 4. This is 100<span class="fu">\%</span> true.</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>5 is greater than 3 <span class="fu">\&amp;</span> 2 is less than 4. This is 100<span class="fu">\%</span> true.</span></code></pre>
 </div>
 </div>
 </div>
@@ -692,16 +741,19 @@ arguments in curly braces <code>{}</code>.</li>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>Hello World!</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>This is my first LaTeX document.</span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>} </span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>Hello World!</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>} </span></code></pre>
 </div>
 </div>
 </div>
@@ -711,7 +763,6 @@ arguments in curly braces <code>{}</code>.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="01-introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -770,8 +821,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/02-document-structure.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/02-document-structure.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-23",
-  "datePublished": "2024-12-23"
+  "dateModified": "2025-01-02",
+  "datePublished": "2025-01-02"
 }
 
   </script><script>

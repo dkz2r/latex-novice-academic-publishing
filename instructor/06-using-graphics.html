@@ -273,7 +273,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-tables.html">7. tables</a>
+        <a href="07-tables.html">7. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -403,13 +403,13 @@
           Previous: Extending LaTeX
         </a>
         <a class="chapter-link float-end" href="../instructor/07-tables.html" rel="next">
-          Next: tables...
+          Next: Tables...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Using Graphics</h1>
-        <p>Last updated on 2024-12-23 |
+        <p>Last updated on 2025-01-02 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/06-using-graphics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -462,7 +462,24 @@ including:</p>
 <li>PNG</li>
 <li>PDF</li>
 <li>EPS</li>
-</ul><div class="section level3">
+</ul><p>For the purposes of this lesson, we’ll use the following image:</p>
+<figure><img src="../fig/06-using-graphics/example-image.png" alt="Our example image." class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Download this image to your computer either be right-clicking on the
+image and selecting “Save Image As…” or by clicking on the image and
+saving it from the browser.</p>
+<p>You can use any image you like for this lesson. Just make sure to
+replace <code>example-image.png</code> with the name of your image in
+the following examples.</p>
+</div>
+</div>
+</div>
+<div class="section level3">
 <h3 id="uploading-images-to-overleaf">Uploading Images to Overleaf<a class="anchor" aria-label="anchor" href="#uploading-images-to-overleaf"></a></h3>
 <p>In order to incorporate an image into our document, we’ll need to
 upload it to Overleaf. We can do this by clicking on the “Upload” icon
@@ -470,8 +487,7 @@ on the upper left corner of the Overleaf editor:</p>
 <figure><img src="../fig/06-using-graphics/overleaf-upload.png" alt="The upload icon in Overleaf." class="figure mx-auto d-block"></figure><p>We can then either drag and drop the image into the upload window or
 click on the “Select files” button to choose the image from our
 computer.</p>
-<p>For the purposes of this lesson, we’ll use the following image:</p>
-<figure><img src="../fig/06-using-graphics/example-image.png" alt="Our example image." class="figure mx-auto d-block"></figure><p>Once you have uploaded the image, you should see it in the “Files”
+<p>Once you have uploaded the image, you should see it in the “Files”
 section of the Overleaf editor:</p>
 <figure><img src="../fig/06-using-graphics/overleaf-uploaded-image.PNG" alt="The uploaded image in Overleaf." class="figure mx-auto d-block"></figure></div>
 </section><section><h2 class="section-heading" id="including-an-image-in-a-latex-document">Including an Image in a LaTeX Document<a class="anchor" aria-label="anchor" href="#including-an-image-in-a-latex-document"></a></h2>
@@ -480,10 +496,15 @@ document using the <code>\includegraphics</code> command:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">example-image.png</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\section</span>{Graphics}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>We can include <span class="fu">\kw</span>{images} in our document using the <span class="fu">\cmd</span>{graphicx} package, which lets us use the </span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="fu">\cmd</span>{includegraphics} command.</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">example-image.png</span>}</span></code></pre>
 </div>
 <p>Your document should now look like this:</p>
-<figure><img src="../fig/06-using-graphics/document-with-image.PNG" alt="Our document with an included image." class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<figure><img src="../fig/06-using-graphics/document-with-image.PNG" alt="Our document with an included image." class="figure mx-auto d-block"></figure><div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -493,22 +514,38 @@ document using the <code>\includegraphics</code> command:</p>
 <p>If you just want to see how an image might look in your document
 without having to upload one, you can use the filepath
 <code>example-image</code> in the <code>\includegraphics</code> command.
-This will display a image in your document that you can replace
-later.</p>
+This will display a placeholder image in your document that you can
+replace later.</p>
 </div>
 </div>
 </div>
 <div class="section level3">
 <h3 id="adjusting-the-appearance-of-the-image">Adjusting the appearance of the image<a class="anchor" aria-label="anchor" href="#adjusting-the-appearance-of-the-image"></a></h3>
 <p>We can adjust the appearance of the image by passing options to the
-<code>\includegraphics</code> command. For example, we can specify the
-height of the image:</p>
+<code>\includegraphics</code> command, just like we did earlier with the
+<code>geometry</code> package. For example, we can specify the height of
+the image:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.png</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="kw">\subsection</span>{Small Image}</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>We can pass parameters to the <span class="fu">\cmd</span>{includegraphics} command to adjust the appearance of the image.</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>Other possible options include:</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>  <span class="fu">\item</span> width: the width of the image</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>  <span class="fu">\item</span> scale: the scaling factor of the image</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>  <span class="fu">\item</span> angle: the angle of rotation of the image</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>  <span class="fu">\item</span> clip: whether to clip the image to its bounding box</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>  <span class="fu">\item</span> trim: trim the image by a specified amount</span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>  <span class="fu">\item</span> draft: display a box instead of the image</span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre>
 </div>
-<figure><img src="../fig/06-using-graphics/document-with-small-image.PNG" alt="Our document with a smaller image." class="figure mx-auto d-block"></figure><div id="callout2" class="callout">
+<figure><img src="../fig/06-using-graphics/document-with-small-image.PNG" alt="Our document with a smaller image." class="figure mx-auto d-block"></figure><div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -543,9 +580,14 @@ command inside of a <code>\begin{center}</code> and
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">center</span>}</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">\subsection</span>{Centered Image}</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>By placing the <span class="fu">\cmd</span>{includegraphics} command inside a center environment, we can center the</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>image on the page.</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">center</span>}</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span></code></pre>
 </div>
 <p>You should see that the image is now centered on the page:</p>
 <figure><img src="../fig/06-using-graphics/document-with-centered-image.PNG" alt="Our document with a centered image." class="figure mx-auto d-block"></figure></div>
@@ -559,15 +601,20 @@ environment:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">\centering</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\subsection</span>{Floating Image}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="fu">\kw</span>{Floating images} can move around the page as text is added or removed. We can use the </span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="fu">\cmd</span>{figure}environment to create a floating image.</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
 </div>
 <p>When we render the document, we can see that, even though we placed
 the image at the end of the document, it appears at the top of the
 page:</p>
-<figure><img src="../fig/06-using-graphics/document-with-floating-image.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout3" class="callout">
+<figure><img src="../fig/06-using-graphics/document-with-floating-image.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -599,14 +646,24 @@ code)</li>
 <code>p</code>: Place the float on a “page” by itself</li>
 </ul><p>It is also possible to combine these options. For example, to place
 the float here if possible, but otherwise at the top of the page, we can
-use the <code>ht</code> option:</p>
+use the <code>ht</code> option. Let’s update our <code>figure</code>
+environment to use the <code>ht</code> option:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="fu">\centering</span></span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>Control the position of a floating image by passing paratmeters to the <span class="fu">\cmd</span>{figure} environment:</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  <span class="fu">\item</span> h: Place the float "here" (where it appears in the code)</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>  <span class="fu">\item</span> t: Place the float at the "top" of the page</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  <span class="fu">\item</span> b: Place the float at the "bottom" of the page</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  <span class="fu">\item</span> p: Place the float on a "page" by itself</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -616,11 +673,16 @@ command inside of the <code>figure</code> environment:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="fu">\centering</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="fu">\caption</span>{This is a caption for our image.}</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">\subsection</span>{Caption}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>We can add a <span class="fu">\kw</span>{caption} to our floating image by using the <span class="fu">\cmd</span>{caption} command inside of the</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="fu">\cmd</span>{figure} environment.</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  <span class="fu">\caption</span>{This is a caption for our image.}</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
 </div>
 <p>When we render the document, we can see that the caption appears
 below the image:</p>
@@ -688,15 +750,148 @@ below the image:</p>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<ul><li>Use the <code>graphicx</code> package to include images in a LaTeX
+document.</li>
+<li>Adjust the appearance of images using the
+<code>\includegraphics</code> command.</li>
+<li>Position images manually or automatically using the
+<code>figure</code> environment.</li>
+<li>Control the position of floating images using parameters in the
+<code>figure</code> environment.</li>
+<li>Add captions to floating images using the <code>\caption</code>
+command.</li>
 </ul></div>
+</div>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>After this episode, here is what our LaTeX document looks like:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">graphicx</span>}</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co">% Highlight Keywords using \kw{}</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textcolor</span>{blue}{<span class="fu">\textbf</span>{#1}}}</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">% Italics for commands with \cmd{}</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>Hello World!</span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a>I can put a <span class="fu">\kw</span>{subsection} inside my first section.</span>
+<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a>There are two types of <span class="fu">\kw</span>{lists}: <span class="fu">\kw</span>{ordered} and <span class="fu">\kw</span>{unordered}.</span>
+<span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a></span>
+<span id="cb10-34"><a href="#cb10-34" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb10-35"><a href="#cb10-35" tabindex="-1"></a></span>
+<span id="cb10-36"><a href="#cb10-36" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
+<span id="cb10-37"><a href="#cb10-37" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb10-39"><a href="#cb10-39" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb10-40"><a href="#cb10-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb10-41"><a href="#cb10-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb10-42"><a href="#cb10-42" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb10-43"><a href="#cb10-43" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb10-45"><a href="#cb10-45" tabindex="-1"></a></span>
+<span id="cb10-46"><a href="#cb10-46" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
+<span id="cb10-47"><a href="#cb10-47" tabindex="-1"></a></span>
+<span id="cb10-48"><a href="#cb10-48" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-49"><a href="#cb10-49" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb10-50"><a href="#cb10-50" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb10-51"><a href="#cb10-51" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb10-52"><a href="#cb10-52" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-53"><a href="#cb10-53" tabindex="-1"></a></span>
+<span id="cb10-54"><a href="#cb10-54" tabindex="-1"></a><span class="kw">\section</span>{Graphics}</span>
+<span id="cb10-55"><a href="#cb10-55" tabindex="-1"></a></span>
+<span id="cb10-56"><a href="#cb10-56" tabindex="-1"></a>We can include <span class="fu">\kw</span>{images} in our document using the <span class="fu">\cmd</span>{graphicx} package, which lets us use the </span>
+<span id="cb10-57"><a href="#cb10-57" tabindex="-1"></a><span class="fu">\cmd</span>{includegraphics} command.</span>
+<span id="cb10-58"><a href="#cb10-58" tabindex="-1"></a></span>
+<span id="cb10-59"><a href="#cb10-59" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-60"><a href="#cb10-60" tabindex="-1"></a></span>
+<span id="cb10-61"><a href="#cb10-61" tabindex="-1"></a><span class="kw">\subsection</span>{Small Image}</span>
+<span id="cb10-62"><a href="#cb10-62" tabindex="-1"></a></span>
+<span id="cb10-63"><a href="#cb10-63" tabindex="-1"></a>We can pass parameters to the <span class="fu">\cmd</span>{includegraphics} command to adjust the appearance of the image.</span>
+<span id="cb10-64"><a href="#cb10-64" tabindex="-1"></a></span>
+<span id="cb10-65"><a href="#cb10-65" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-66"><a href="#cb10-66" tabindex="-1"></a></span>
+<span id="cb10-67"><a href="#cb10-67" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-68"><a href="#cb10-68" tabindex="-1"></a>  <span class="fu">\item</span> width: the width of the image</span>
+<span id="cb10-69"><a href="#cb10-69" tabindex="-1"></a>  <span class="fu">\item</span> scale: the scaling factor of the image</span>
+<span id="cb10-70"><a href="#cb10-70" tabindex="-1"></a>  <span class="fu">\item</span> angle: the angle of rotation of the image</span>
+<span id="cb10-71"><a href="#cb10-71" tabindex="-1"></a>  <span class="fu">\item</span> clip: whether to clip the image to its bounding box</span>
+<span id="cb10-72"><a href="#cb10-72" tabindex="-1"></a>  <span class="fu">\item</span> trim: trim the image by a specified amount</span>
+<span id="cb10-73"><a href="#cb10-73" tabindex="-1"></a>  <span class="fu">\item</span> draft: display a box instead of the image</span>
+<span id="cb10-74"><a href="#cb10-74" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-75"><a href="#cb10-75" tabindex="-1"></a></span>
+<span id="cb10-76"><a href="#cb10-76" tabindex="-1"></a><span class="kw">\subsection</span>{Centered Image}</span>
+<span id="cb10-77"><a href="#cb10-77" tabindex="-1"></a></span>
+<span id="cb10-78"><a href="#cb10-78" tabindex="-1"></a>By placing the <span class="fu">\cmd</span>{includegraphics} command inside a center environment, we can center the</span>
+<span id="cb10-79"><a href="#cb10-79" tabindex="-1"></a>image on the page.</span>
+<span id="cb10-80"><a href="#cb10-80" tabindex="-1"></a></span>
+<span id="cb10-81"><a href="#cb10-81" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">center</span>}</span>
+<span id="cb10-82"><a href="#cb10-82" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-83"><a href="#cb10-83" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span>
+<span id="cb10-84"><a href="#cb10-84" tabindex="-1"></a></span>
+<span id="cb10-85"><a href="#cb10-85" tabindex="-1"></a><span class="kw">\subsection</span>{Floating Image}</span>
+<span id="cb10-86"><a href="#cb10-86" tabindex="-1"></a></span>
+<span id="cb10-87"><a href="#cb10-87" tabindex="-1"></a><span class="fu">\kw</span>{Floating images} can move around the page as text is added or removed. We can use the </span>
+<span id="cb10-88"><a href="#cb10-88" tabindex="-1"></a><span class="fu">\cmd</span>{figure}environment to create a floating image.</span>
+<span id="cb10-89"><a href="#cb10-89" tabindex="-1"></a></span>
+<span id="cb10-90"><a href="#cb10-90" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
+<span id="cb10-91"><a href="#cb10-91" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb10-92"><a href="#cb10-92" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-93"><a href="#cb10-93" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
+<span id="cb10-94"><a href="#cb10-94" tabindex="-1"></a></span>
+<span id="cb10-95"><a href="#cb10-95" tabindex="-1"></a>Control the position of a floating image by passing paratmeters to the <span class="fu">\cmd</span>{figure} environment:</span>
+<span id="cb10-96"><a href="#cb10-96" tabindex="-1"></a></span>
+<span id="cb10-97"><a href="#cb10-97" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-98"><a href="#cb10-98" tabindex="-1"></a>  <span class="fu">\item</span> h: Place the float "here" (where it appears in the code)</span>
+<span id="cb10-99"><a href="#cb10-99" tabindex="-1"></a>  <span class="fu">\item</span> t: Place the float at the "top" of the page</span>
+<span id="cb10-100"><a href="#cb10-100" tabindex="-1"></a>  <span class="fu">\item</span> b: Place the float at the "bottom" of the page</span>
+<span id="cb10-101"><a href="#cb10-101" tabindex="-1"></a>  <span class="fu">\item</span> p: Place the float on a "page" by itself</span>
+<span id="cb10-102"><a href="#cb10-102" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-103"><a href="#cb10-103" tabindex="-1"></a></span>
+<span id="cb10-104"><a href="#cb10-104" tabindex="-1"></a><span class="kw">\subsection</span>{Caption}</span>
+<span id="cb10-105"><a href="#cb10-105" tabindex="-1"></a></span>
+<span id="cb10-106"><a href="#cb10-106" tabindex="-1"></a>We can add a <span class="fu">\kw</span>{caption} to our floating image by using the <span class="fu">\cmd</span>{caption} command inside of the</span>
+<span id="cb10-107"><a href="#cb10-107" tabindex="-1"></a><span class="fu">\cmd</span>{figure} environment.</span>
+<span id="cb10-108"><a href="#cb10-108" tabindex="-1"></a></span>
+<span id="cb10-109"><a href="#cb10-109" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
+<span id="cb10-110"><a href="#cb10-110" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb10-111"><a href="#cb10-111" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-112"><a href="#cb10-112" tabindex="-1"></a>  <span class="fu">\caption</span>{This is a caption for our image.}</span>
+<span id="cb10-113"><a href="#cb10-113" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
+<span id="cb10-114"><a href="#cb10-114" tabindex="-1"></a></span>
+<span id="cb10-115"><a href="#cb10-115" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <!--
@@ -716,7 +911,7 @@ any links that you are not going to use.
           Previous: Extending LaTeX
         </a>
         <a class="chapter-link float-end" href="../instructor/07-tables.html" rel="next">
-          Next: tables...
+          Next: Tables...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -762,8 +957,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/06-using-graphics.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/06-using-graphics.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-23",
-  "datePublished": "2024-12-23"
+  "dateModified": "2025-01-02",
+  "datePublished": "2025-01-02"
 }
 
   </script><script>

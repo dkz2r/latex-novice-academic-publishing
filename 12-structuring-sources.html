@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-tables.html">7. tables</a>
+        <a href="07-tables.html">7. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -315,9 +315,10 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#introduction">Introduction</a></li>
-<li><a href="#figures">Figures</a></li>
-<li><a href="#math">Math</a></li>
+        <ul><li><a href="#project-structure">Project Structure</a></li>
+<li><a href="#commands">Commands</a></li>
+<li><a href="#updating-our-project">Updating Our Project</a></li>
+<li><a href="#structuring-the-document">Structuring the document</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -409,7 +410,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>structuring-sources</h1>
-        <p>Last updated on 2024-12-18 |
+        <p>Last updated on 2025-01-02 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-structuring-sources.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -428,8 +429,10 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<ul><li>How can we make it easier to manage large LaTeX projects?</li>
+<li>How can we reuse parts of our LaTeX document in other
+documents?</li>
+<li>How can we structure our LaTeX project?</li>
 </ul></div>
 </div>
 </div>
@@ -437,33 +440,421 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<ul><li>Learn how to use commands to include other files in your LaTeX
+document</li>
+<li>Restructure a LaTeX project to use multiple files</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>This is a lesson created via The Carpentries Workbench. It is written
-in <a href="https://pandoc.org/MANUAL.html" class="external-link">Pandoc-flavored Markdown</a>
-for static files (with extension <code>.md</code>) and <a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> for dynamic files
-that can render code into output (with extension <code>.Rmd</code>).
-Please refer to the <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introduction to The
-Carpentries Workbench</a> for full documentation.</p>
-<p>What you need to know is that there are three sections required for a
-valid Carpentries lesson template:</p>
-<ol style="list-style-type: decimal"><li>
-<code>questions</code> are displayed at the beginning of the episode
-to prime the learner for the content.</li>
+<section><h2 class="section-heading" id="project-structure">Project Structure<a class="anchor" aria-label="anchor" href="#project-structure"></a></h2>
+<hr class="half-width"><p>So far, we’ve been putting all of our LaTeX code into a single
+document. This is fine for small projects, but even with what we have
+here so far, you might have started to feel like things are getting a
+little unwieldy and hard to manage.</p>
+<p>One of the great things we can do with LaTeX is break our document up
+into smaller “sources”, which allows us to work on each part of the
+document separately. You can imagine this might be helpful when working
+on a large document with multiple chapters, where each chapter is a
+separate file. You might also find this useful when you intend to reuse
+parts of your document in other documents, like title pages, tables of
+contents, or lists of figures.</p>
+<p>This also helps with collaboration, as multiple people can work on
+different parts of the document at the same time without having to worry
+about conflicts.</p>
+</section><section><h2 class="section-heading" id="commands">Commands<a class="anchor" aria-label="anchor" href="#commands"></a></h2>
+<hr class="half-width"><p>There are two important commands to know when working with multiple
+sources:</p>
+<ul><li><code>\input{filename}</code></li>
+<li><code>\include{filename}</code></li>
+</ul><p>The <code>\input{filename}</code> command will include the contents
+of the file <code>filename.tex</code> at the point where the command is
+called as though it was typed directly into the main document. This can
+be useful for things that are not, for example, separate chapters, but
+rather things like a title page, a table of contents, or a list of
+figures.</p>
+<p>The <code>\include{filename}</code> command will do the same thing,
+but it will also start a new page before including the file. This is
+useful for including separate chapters or sections of your document.</p>
+<div class="section level3">
+<h3 id="input-example">Input Example<a class="anchor" aria-label="anchor" href="#input-example"></a></h3>
+<p>Let’s try out using the <code>\input{filename}</code> command. We’ll
+create a new file called <code>input_example.tex</code> in our project
+directory with the following contents:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">\cmd</span>{Input} is useful for including things as if they were typed directly into the main document.</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>Things like commands don't have to be defined in the included file, as long as they are defined in</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>the main document.</span></code></pre>
+</div>
+<p>Then, in our <code>main.tex</code> document, let’s add the following
+section:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\section</span>{Project Structure}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="kw">\subsection</span>{Input}</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">\input</span>{input_example}</span></code></pre>
+</div>
+<p>When we compile our document, we should see the contents of
+<code>input_example.tex</code> included in our main document.</p>
+</div>
+<div class="section level3">
+<h3 id="include-example">Include Example<a class="anchor" aria-label="anchor" href="#include-example"></a></h3>
+<p>Let’s try out using the <code>\include{filename}</code> command.
+We’ll create a new file called <code>include_example.tex</code> in our
+project directory with the following contents:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">\cmd</span>{Include} is useful for including things as if they were typed directly into the main document,</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>but it will also start a new page before including the file.</span></code></pre>
+</div>
+<p>Then, in our <code>main.tex</code> document, let’s add the following
+section:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">\subsection</span>{Include}</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">include_example</span>}</span></code></pre>
+</div>
+<p>When we compile our document, we should see the contents of
+<code>include_example.tex</code>, however this time the content will
+have included a new page before the content.</p>
+</div>
+</section><section><h2 class="section-heading" id="updating-our-project">Updating Our Project<a class="anchor" aria-label="anchor" href="#updating-our-project"></a></h2>
+<hr class="half-width"><p>Now that we’ve seen how to use the <code>\input{filename}</code> and
+<code>\include{filename}</code> commands, let’s refactor our project to
+use them. We’ll take each section and put it in it’s own file, then
+include the files in our <code>main.tex</code> document. This will main
+our main document easier to read and manage, while separating out the
+content into more manageable pieces.</p>
+<p>Let’s also organize our files a little bit. Instead of putting
+everything in the “root” directory of this project, we’ll create a
+folder called “content” and put our section files in there.</p>
+<div class="section level3">
+<h3 id="separating-our-sections">Separating Our Sections<a class="anchor" aria-label="anchor" href="#separating-our-sections"></a></h3>
+<p>Let’s make files in our “content” directory for each of our
+sections:</p>
+<ul><li><code>sections.tex</code></li>
+<li><code>lists.tex</code></li>
+<li><code>graphics.tex</code></li>
+<li><code>tables.tex</code></li>
+<li><code>cross-references.tex</code></li>
+<li><code>math.tex</code></li>
+<li><code>text-and-spacing.tex</code></li>
+</ul><p>We’ll move the content from each section into the corresponding
+file.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p><code>sections.tex</code></p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p><code>lists.tex</code></p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div class="accordion-body">
+<p><code>graphics.tex</code></p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div class="accordion-body">
+<p><code>tables.tex</code></p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
+  <h3 class="accordion-header" id="headingSpoiler5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div class="accordion-body">
+<p><code>cross-references.tex</code></p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler6" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler6" aria-expanded="false" aria-controls="collapseSpoiler6">
+  <h3 class="accordion-header" id="headingSpoiler6">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
+<div class="accordion-body">
+<p><code>math.tex</code></p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler7" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler7" aria-expanded="false" aria-controls="collapseSpoiler7">
+  <h3 class="accordion-header" id="headingSpoiler7">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
+<div class="accordion-body">
+<p><code>text-and-spacing.tex</code></p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Then, in our <code>main.tex</code> document, we’ll include each of
+these files using the <code>\input{filename}</code>:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">\input</span>{content/sections}</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fu">\input</span>{content/lists}</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="fu">\input</span>{content/graphics}</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="fu">\input</span>{content/tables}</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="fu">\input</span>{content/cross-references}</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="fu">\input</span>{content/math}</span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="fu">\input</span>{content/text-and-spacing}</span></code></pre>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note that the <code>\input{filename}</code> command does not require
+the <code>.tex</code> extension. LaTeX will assume that the file is a
+<code>.tex</code> file if no extension is provided.</p>
+</div>
+</div>
+</div>
+<p>When we compile our document, we should see the same content as
+before, but now we can make changes in our content files, and the
+changes will be reflected in our main document.</p>
+</div>
+<div class="section level3">
+<h3 id="other-files">Other Files<a class="anchor" aria-label="anchor" href="#other-files"></a></h3>
+<p>While we’re at it, let’s also create files for our packages,
+commands, and title page. We’ll also put these into their own directory
+called “includes”:</p>
+<ul><li><code>packages.tex</code></li>
 <li>
-<code>objectives</code> are the learning objectives for an episode
-displayed with the questions.</li>
+<code>custom-commands.tex</code><br></li>
+<li><code>titlepage.tex</code></li>
+</ul><div id="accordionSpoiler8" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler8" aria-expanded="false" aria-controls="collapseSpoiler8">
+  <h3 class="accordion-header" id="headingSpoiler8">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler8" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler8" aria-labelledby="headingSpoiler8">
+<div class="accordion-body">
+<p><code>packages.tex</code></p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler9" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler9" aria-expanded="false" aria-controls="collapseSpoiler9">
+  <h3 class="accordion-header" id="headingSpoiler9">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler9" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler9" aria-labelledby="headingSpoiler9">
+<div class="accordion-body">
+<p><code>custom-commands.tex</code></p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler10" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler10" aria-expanded="false" aria-controls="collapseSpoiler10">
+  <h3 class="accordion-header" id="headingSpoiler10">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler10" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler10" aria-labelledby="headingSpoiler10">
+<div class="accordion-body">
+<p><code>titlepage.tex</code></p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>TO BE ADDED LATER</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="our-new-main-tex">Our New main.tex<a class="anchor" aria-label="anchor" href="#our-new-main-tex"></a></h3>
+<p>Our <code>main.tex</code> document should now look like this:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a><span class="fu">\input</span>{includes/packages}</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a><span class="fu">\input</span>{includes/custom-commands}</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a><span class="fu">\input</span>{includes/titlepage}</span>
+<span id="cb16-12"><a href="#cb16-12" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" tabindex="-1"></a>Hello World!</span>
+<span id="cb16-14"><a href="#cb16-14" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
+<span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a><span class="fu">\input</span>{content/sections}</span>
+<span id="cb16-18"><a href="#cb16-18" tabindex="-1"></a><span class="fu">\input</span>{content/lists}</span>
+<span id="cb16-19"><a href="#cb16-19" tabindex="-1"></a><span class="fu">\input</span>{content/graphics}</span>
+<span id="cb16-20"><a href="#cb16-20" tabindex="-1"></a><span class="fu">\input</span>{content/tables}</span>
+<span id="cb16-21"><a href="#cb16-21" tabindex="-1"></a><span class="fu">\input</span>{content/cross-references}</span>
+<span id="cb16-22"><a href="#cb16-22" tabindex="-1"></a><span class="fu">\input</span>{content/math}</span>
+<span id="cb16-23"><a href="#cb16-23" tabindex="-1"></a><span class="fu">\input</span>{content/text-and-spacing}</span>
+<span id="cb16-24"><a href="#cb16-24" tabindex="-1"></a></span>
+<span id="cb16-25"><a href="#cb16-25" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note that we still need to put the content in the appropriate order.
+For example, you can’t add <code>\input{includes/packages}</code> at the
+end of the document, as it needs to be included before the document
+starts.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="structuring-the-document">Structuring the document<a class="anchor" aria-label="anchor" href="#structuring-the-document"></a></h2>
+<hr class="half-width"><p>There’s a few more commands we can add to our document to help
+structure it:</p>
+<ul><li><code>\frontmatter</code></li>
+<li><code>\mainmatter</code></li>
 <li>
-<code>keypoints</code> are displayed at the end of the episode to
-reinforce the objectives.</li>
-</ol><div id="challenge-1-can-you-do-it" class="callout challenge">
+<code>\backmatter</code>,</li>
+<li><code>\appendix</code></li>
+</ul><p>These help separate the document into parts by affecting formatting
+rules. For example, - <code>\frontmatter</code> will remove page numbers
+and change the numbering style to roman numerals. -
+<code>\mainmatter</code> will reset the page numbers and change the
+numbering style to arabic numerals. - <code>\backmatter</code> will
+remove page numbers and change the numbering style to roman numerals. -
+<code>\appendix</code> will change the numbering style to letters.</p>
+<p>Let’s add these commands to our <code>main.tex</code> document:</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a><span class="fu">\input</span>{includes/packages}</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a><span class="fu">\input</span>{includes/custom-commands}</span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" tabindex="-1"></a><span class="fu">\frontmatter</span></span>
+<span id="cb17-12"><a href="#cb17-12" tabindex="-1"></a><span class="fu">\input</span>{includes/titlepage}</span>
+<span id="cb17-13"><a href="#cb17-13" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" tabindex="-1"></a>Hello World!</span>
+<span id="cb17-15"><a href="#cb17-15" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
+<span id="cb17-17"><a href="#cb17-17" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" tabindex="-1"></a><span class="fu">\mainmatter</span></span>
+<span id="cb17-19"><a href="#cb17-19" tabindex="-1"></a><span class="fu">\input</span>{content/sections}</span>
+<span id="cb17-20"><a href="#cb17-20" tabindex="-1"></a><span class="fu">\input</span>{content/lists}</span>
+<span id="cb17-21"><a href="#cb17-21" tabindex="-1"></a><span class="fu">\input</span>{content/graphics}</span>
+<span id="cb17-22"><a href="#cb17-22" tabindex="-1"></a><span class="fu">\input</span>{content/tables}</span>
+<span id="cb17-23"><a href="#cb17-23" tabindex="-1"></a><span class="fu">\input</span>{content/cross-references}</span>
+<span id="cb17-24"><a href="#cb17-24" tabindex="-1"></a><span class="fu">\input</span>{content/math}</span>
+<span id="cb17-25"><a href="#cb17-25" tabindex="-1"></a><span class="fu">\input</span>{content/text-and-spacing}</span>
+<span id="cb17-26"><a href="#cb17-26" tabindex="-1"></a></span>
+<span id="cb17-27"><a href="#cb17-27" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -471,7 +862,7 @@ reinforce the objectives.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -520,19 +911,6 @@ reinforce the objectives.</li>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a></h2>
-<hr class="half-width"><p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
-Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a></h2>
-<hr class="half-width"><p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -540,14 +918,13 @@ this:</p>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<ul><li>LaTeX projects can contain many files that reference each other</li>
+<li>The <code>\input{filename}</code> and
+<code>\include{filename}</code> commands allow you to include the
+contents of other files in your document</li>
+<li>The <code>\frontmatter</code>, <code>\mainmatter</code>,
+<code>\backmatter</code>, and <code>\appendix</code> commands help
+structure your document</li>
 </ul></div>
 </div>
 </div>
@@ -613,8 +990,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/12-structuring-sources.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/12-structuring-sources.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-18",
-  "datePublished": "2024-12-23"
+  "dateModified": "2025-01-02",
+  "datePublished": "2025-01-02"
 }
 
   </script><script>

@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-tables.html">7. tables</a>
+        <a href="07-tables.html">7. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -307,8 +307,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#citations-and-references">Citations and References</a></li>
-<li><a href="#figures">Figures</a></li>
-<li><a href="#math">Math</a></li>
+<li><a href="#reference-databases-bibtex">Reference Databases (BiBTeX)</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -409,7 +408,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Citations and References</h1>
-        <p>Last updated on 2024-12-23 |
+        <p>Last updated on 2025-01-02 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/11-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -428,8 +427,9 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>
-</li></ul></div>
+<ul><li>bibtex-ext</li>
+<li>siunitx</li>
+</ul></div>
 </div>
 </div>
 <div class="col-md-8">
@@ -449,12 +449,13 @@ or more external files. Such a file is a database of references,
 containing the information in a processing-friendly format. Using one or
 more reference databases lets you re-use information and avoid manual
 formatting.</p>
-<div class="section level3">
-<h3 id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a></h3>
-<p>Reference databases are normally referred to as <em>BiBTeX</em>
+</section><section><h2 class="section-heading" id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a></h2>
+<hr class="half-width"><p>Reference databases are normally referred to as <em>BiBTeX</em>
 files, and have the extension <code>.bib</code>. They contain one or
 more entries, one for each reference, and within each are a series of
 fields.</p>
+<p>Create a new file in your project called <code>references.bib</code>
+and add the following content:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BIBTEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -501,21 +502,40 @@ be applied to the title.</p>
 </div>
 </div>
 </div>
+<div class="section level3">
+<h3 id="bibtex-format">BibTeX Format<a class="anchor" aria-label="anchor" href="#bibtex-format"></a></h3>
 <p>Editing BiBTeX files by hand can be tedious, a number of tools exist
 to help you manage your reference files.</p>
 </div>
 <div class="section level3">
 <h3 id="transferring-information-from-the-database-to-the-document">Transferring Information from the Database to the Document<a class="anchor" aria-label="anchor" href="#transferring-information-from-the-database-to-the-document"></a></h3>
-<p>There are three steps to get your information from the database into
-your document:</p>
-<ol style="list-style-type: decimal"><li>Use LaTeX to compile your document, which creates a file with a list
-of references that are cited in the document.</li>
-<li>Run a program that takes information from the database of
-references, picks out the references that are cited in the document, and
-puts them in order.</li>
-<li>Compile your document again, so that LaTeX can use that information
-to resolve the citations used in your document.</li>
-</ol><div id="challenge-1-can-you-do-it" class="callout challenge">
+<p>When using Overleaf, we just need to make sure that the bibliography
+file is present in the project and properly referenced in our document.
+Check to make sure that your <code>main.tex</code> file is in the same
+directory as your <code>references.bib</code> file. Then, at the bottom
+of your <code>main.tex</code> file, add the following lines:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\bibliographystyle</span>{<span class="ex">plain</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="bu">\bibliography</span>{<span class="ex">references</span>}</span></code></pre>
+</div>
+<p>The first lines tells LaTeX how to format the references, and the
+second line tells LaTeX where to find the references.</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>There are many different bibliography styles available, and you can
+find a list of them at <a href="https://ctan.org/topic/biblio" class="external-link">CTAN</a>.</p>
+</div>
+</div>
+</div>
+
+<div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -523,7 +543,7 @@ to resolve the citations used in your document.</li>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -572,20 +592,6 @@ to resolve the citations used in your document.</li>
 </div>
 </div>
 </div>
-</div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a></h2>
-<hr class="half-width"><p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
-Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a></h2>
-<hr class="half-width"><p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -593,21 +599,15 @@ this:</p>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></div>
+<ul><li>
+</li></ul></div>
 </div>
 </div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="10-text-and-spacing.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -666,8 +666,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/11-citations-and-references.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/11-citations-and-references.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-23",
-  "datePublished": "2024-12-23"
+  "dateModified": "2025-01-02",
+  "datePublished": "2025-01-02"
 }
 
   </script><script>

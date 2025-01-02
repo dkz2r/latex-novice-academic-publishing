@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-tables.html">7. tables</a>
+        <a href="07-tables.html">7. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -301,8 +301,8 @@
 <li><a href="#forcing-a-new-line">Forcing a New Line</a></li>
 <li><a href="#adding-explicit-space">Adding Explicit Space</a></li>
 <li><a href="#explicit-text-formatting">Explicit Text Formatting</a></li>
-<li><a href="#figures">Figures</a></li>
-<li><a href="#math">Math</a></li>
+<li><a href="#text-alignment">Text Alignment</a></li>
+<li><a href="#creating-a-title-page">Creating a Title Page</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -412,7 +412,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Fonts and Spacing</h1>
-        <p>Last updated on 2024-12-23 |
+        <p>Last updated on 2025-01-02 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/10-text-and-spacing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -431,28 +431,50 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>
-</li></ul></div>
+<ul><li>How can we set paragraph spacing in LaTeX?</li>
+<li>How can we customize text formatting in LaTeX?</li>
+<li>How can we align text in LaTeX?</li>
+</ul></div>
 </div>
 </div>
 <div class="col-md-8">
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>
-</li></ul></div>
+<ul><li>Add custom spacing between paragraphs in LaTeX.</li>
+<li>Create a title page with custom text formatting.</li>
+</ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="paragraph-spacing">Paragraph Spacing<a class="anchor" aria-label="anchor" href="#paragraph-spacing"></a></h2>
-<hr class="half-width"><p>A common style is to have no indents for paragraphs, but to instead
-have a “blank line” between them. We can achieve this using the
-<code>parskip</code> package:</p>
+<hr class="half-width"><p>A common style in LaTeX is to have no indents for paragraphs, but to
+incorporate a blank line between them. We can achieve this using the
+<code>parskip</code> package.</p>
+<p>We’re going to use another package here just to show off some
+commands without having to write a lot of text: the <code>lipsum</code>
+package. This package provides the <code>\lipsum</code> command, which
+generates “Lorem Ipsum” text.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span></code></pre>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Lorem Ipsum is a common piece of placeholder text used in publishing
+and graphic design. It is often used to demonstrate the visual form of a
+document without relying on meaningful content.</p>
+<p>The text itself comes from the first-century BC work <em>De finibus
+bonorum et malorum</em> by Marcus Tullius Cicero.</p>
+</div>
+</div>
 </div>
 <p>In our document, we can now use a blank line to separate
 paragraphs:</p>
@@ -461,12 +483,24 @@ paragraphs:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\section</span>{Fonts and Spacing}</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">\lipsum</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">\lipsum</span></span></code></pre>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">% Generate some "Lorem Ipsum" text</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">% The parameters mean "include paragraphs 1 thru 2" from the "Lorem Ipsum" text</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">\lipsum</span>[1-2]</span></code></pre>
 </div>
-<p>(Commend out the “usepackage” line and recompile to see the
-difference.)</p>
+<p>Compile the document and take a look at our section. You should see
+that our first paragraph has no indent, and there is no blank line
+between it and the following paragraph. The second paragraph does have
+an indent. This is the default behavior in LaTeX.</p>
+<p>Now let’s add our package:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}</span></code></pre>
+</div>
+<p>Keep an eye on the preview pane as you compile the document. You
+should see that the first paragraph now has a blank line between it and
+the second paragraph, and there is no indent on the first line of the
+second paragraph.</p>
 </section><section><h2 class="section-heading" id="forcing-a-new-line">Forcing a New Line<a class="anchor" aria-label="anchor" href="#forcing-a-new-line"></a></h2>
 <hr class="half-width"><p>Most of the time, you should not force a new line in your document;
 you almost certainly want to use a new paragraph or <code>parskip</code>
@@ -479,7 +513,7 @@ to force a new line:</p>
 </section><section><h2 class="section-heading" id="adding-explicit-space">Adding Explicit Space<a class="anchor" aria-label="anchor" href="#adding-explicit-space"></a></h2>
 <hr class="half-width"><p>We can insert a thin space (about half the normal thickness) use the
 <code>\,</code> command.</p>
-<div id="callout1" class="callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -501,12 +535,15 @@ to force a new line:</p>
 <p>Very rarely, for example when creating a title page, you might want
 to add explicit horizontal or vertical space. We can do this using the
 <code>\hspace</code> and <code>\vspace</code> commands:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">\hspace</span>{1cm} <span class="co">% 1cm of horizontal space</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">\vspace</span>{1cm} <span class="co">% 1cm of vertical space</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">\hspace</span>{1cm} <span class="co">% 1cm of horizontal space</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">\vspace</span>{1cm} <span class="co">% 1cm of vertical space</span></span></code></pre>
 </div>
+<p>We can also use the <code>\vfill</code> command to fill the remaining
+space on a page. This is useful for centering content vertically on a
+page.</p>
 </section><section><h2 class="section-heading" id="explicit-text-formatting">Explicit Text Formatting<a class="anchor" aria-label="anchor" href="#explicit-text-formatting"></a></h2>
 <hr class="half-width"><p>We’ve touched on this in previous episodes, but we can also use the
 following commands to format text explicitly:</p>
@@ -534,7 +571,52 @@ the base font size:</p>
 <code>\small</code> for small text</li>
 <li>
 <code>\footnotesize</code> for footnote text</li>
-</ul><div id="challenge-1-can-you-do-it" class="callout challenge">
+</ul></section><section><h2 class="section-heading" id="text-alignment">Text Alignment<a class="anchor" aria-label="anchor" href="#text-alignment"></a></h2>
+<hr class="half-width"><p>We can align text using the following commands:</p>
+<ul><li>
+<code>\centering</code> to center text</li>
+<li>
+<code>\raggedright</code> to left-align text</li>
+<li>
+<code>\raggedleft</code> to right-align text</li>
+</ul></section><section><h2 class="section-heading" id="creating-a-title-page">Creating a Title Page<a class="anchor" aria-label="anchor" href="#creating-a-title-page"></a></h2>
+<hr class="half-width"><p>Using all of this, let’s create a simple title page for our document.
+We’ll put this just after the <code>\begin{document}</code> command, and
+enclose everything in a <code>titlepage</code> environment:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">titlepage</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="fu">\centering</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>    </span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>    <span class="fu">\huge</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    <span class="fu">\textbf</span>{My Example Document}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>    <span class="fu">\vspace</span>{1cm}</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    <span class="fu">\normalsize</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    <span class="fu">\textit</span>{An example of a LaTeX document}</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>    <span class="fu">\vfill</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>    January 1, 2000</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span></code></pre>
+</div>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>The <code>titlepage</code> environment is a special environment that
+LaTeX uses to create a title page. It sets some simple formating rules,
+like removing multiple columns and resetting the page number. It also
+prevents styling rules we add like <code>centering</code> from affecting
+the rest of the document.</p>
+</div>
+</div>
+</div>
+
+<div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -542,7 +624,7 @@ the base font size:</p>
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
 <p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -591,19 +673,6 @@ the base font size:</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a></h2>
-<hr class="half-width"><p>You can include figures generated from R Markdown:</p>
-<p><code>{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"} pie(   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),    init.angle = 315,    col = c("deepskyblue", "yellow", "yellow3"),    border = FALSE )</code>
-Or you can use pandoc markdown for static figures with the following
-syntax:</p>
-<p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
-</figure></section><section><h2 class="section-heading" id="math">Math<a class="anchor" aria-label="anchor" href="#math"></a></h2>
-<hr class="half-width"><p>One of our episodes contains <span class="math inline">\(\LaTeX\)</span> equations when describing how to
-create dynamic reports with {knitr}, so we now use mathjax to describe
-this:</p>
-<p><code>$\alpha = \dfrac{1}{(1 - \beta)^2}$</code> becomes: <span class="math inline">\(\alpha = \dfrac{1}{(1 - \beta)^2}\)</span></p>
-<p>Cool, right?</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -611,14 +680,18 @@ this:</p>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<ul><li>Use the <code>parskip</code> package to add space between
+paragraphs</li>
+<li>Force a new line with <code>\\</code>
+</li>
+<li>Add explicit space with <code>\hspace</code> and
+<code>\vspace</code>
+</li>
+<li>Format text explicitly with <code>\textbf</code>,
+<code>\textit</code>, etc.</li>
+<li>Align text with <code>\centering</code>, <code>\raggedright</code>,
+and <code>\raggedleft</code>
+</li>
 </ul></div>
 </div>
 </div>
@@ -684,8 +757,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/10-text-and-spacing.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/10-text-and-spacing.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2024-12-23",
-  "datePublished": "2024-12-23"
+  "dateModified": "2025-01-02",
+  "datePublished": "2025-01-02"
 }
 
   </script><script>
