@@ -264,10 +264,11 @@ You can add a line with at least three colons and a `solution` tag.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Use the `graphicx` package to include images in a LaTeX document.
+- Adjust the appearance of images using the `\includegraphics` command.
+- Position images manually or automatically using the `figure` environment.
+- Control the position of floating images using parameters in the `figure` environment.
+- Add captions to floating images using the `\caption` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

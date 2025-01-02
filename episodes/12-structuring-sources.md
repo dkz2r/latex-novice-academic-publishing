@@ -6,41 +6,310 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- How can we make it easier to manage large LaTeX projects?
+- How can we reuse parts of our LaTeX document in other documents?
+- How can we structure our LaTeX project?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Learn how to use commands to include other files in your LaTeX document
+- Restructure a LaTeX project to use multiple files
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Project Structure
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown][pandoc] for static files (with extension `.md`) and
-[R Markdown][r-markdown] for dynamic files that can render code into output
-(with extension `.Rmd`). Please refer to the [Introduction to The Carpentries
-Workbench][carpentries-workbench] for full documentation.
+So far, we've been putting all of our LaTeX code into a single document. This is fine for small
+projects, but even with what we have here so far, you might have started to feel like things are
+getting a little unwieldy and hard to manage. 
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson template:
+One of the great things we can do with LaTeX is break our document up into smaller "sources", which
+allows us to work on each part of the document separately. You can imagine this might be helpful 
+when working on a large document with multiple chapters, where each chapter is a separate file. You
+might also find this useful when you intend to reuse parts of your document in other documents, 
+like title pages, tables of contents, or lists of figures.
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+This also helps with collaboration, as multiple people can work on different parts of the document
+at the same time without having to worry about conflicts.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+## Commands
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+There are two important commands to know when working with multiple sources:
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+- `\input{filename}`
+- `\include{filename}`
+
+The `\input{filename}` command will include the contents of the file `filename.tex` at the point
+where the command is called as though it was typed directly into the main document. This can be 
+useful for things that are not, for example, separate chapters, but rather things like a title 
+page, a table of contents, or a list of figures. 
+
+The `\include{filename}` command will do the same thing, but it will also start a new page before
+including the file. This is useful for including separate chapters or sections of your document.
+
+### Input Example
+
+Let's try out using the `\input{filename}` command. We'll create a new file called 
+`input_example.tex` in our project directory with the following contents:
+
+```latex
+\cmd{Input} is useful for including things as if they were typed directly into the main document.
+Things like commands don't have to be defined in the included file, as long as they are defined in
+the main document.
+```
+
+Then, in our `main.tex` document, let's add the following section:
+
+```latex
+\section{Project Structure}
+
+\subsection{Input}
+
+\input{input_example}
+```
+
+When we compile our document, we should see the contents of `input_example.tex` included in our
+main document.
+
+### Include Example
+
+Let's try out using the `\include{filename}` command. We'll create a new file called
+`include_example.tex` in our project directory with the following contents:
+
+```latex
+\cmd{Include} is useful for including things as if they were typed directly into the main document,
+but it will also start a new page before including the file.
+```
+
+Then, in our `main.tex` document, let's add the following section:
+
+```latex
+\subsection{Include}
+
+\include{include_example}
+```
+
+When we compile our document, we should see the contents of `include_example.tex`, however this 
+time the content will have included a new page before the content.
+
+## Updating Our Project
+
+Now that we've seen how to use the `\input{filename}` and `\include{filename}` commands, let's
+refactor our project to use them. We'll take each section and put it in it's own file, then include
+the files in our `main.tex` document. This will main our main document easier to read and manage, 
+while separating out the content into more manageable pieces.
+
+Let's also organize our files a little bit. Instead of putting everything in the "root" directory
+of this project, we'll create a folder called "content" and put our section files in there.
+
+### Separating Our Sections
+
+Let's make files in our "content" directory for each of our sections:
+
+- `sections.tex`
+- `lists.tex`
+- `graphics.tex`
+- `tables.tex`
+- `cross-references.tex`
+- `math.tex`
+- `text-and-spacing.tex`
+
+We'll move the content from each section into the corresponding file.
+
+::: spoiler
+`sections.tex`
+
+```latex
+TO BE ADDED LATER
+```
+:::
+
+::: spoiler
+`lists.tex`
+
+```latex
+TO BE ADDED LATER
+```
+
+::: spoiler
+`graphics.tex`
+
+```latex
+TO BE ADDED LATER
+```
+:::
+
+::: spoiler
+`tables.tex`
+
+```latex
+TO BE ADDED LATER
+```	
+:::
+
+::: spoiler
+`cross-references.tex`
+
+```latex
+TO BE ADDED LATER
+```
+:::
+
+::: spoiler
+`math.tex`
+
+```latex
+TO BE ADDED LATER
+```
+:::
+
+::: spoiler
+`text-and-spacing.tex`
+
+```latex
+TO BE ADDED LATER
+```
+
+Then, in our `main.tex` document, we'll include each of these files using the `\input{filename}`:
+
+```latex
+\input{content/sections}
+\input{content/lists}
+\input{content/graphics}
+\input{content/tables}
+\input{content/cross-references}
+\input{content/math}
+\input{content/text-and-spacing}
+```
+
+::: callout
+
+Note that the `\input{filename}` command does not require the `.tex` extension. LaTeX will assume
+that the file is a `.tex` file if no extension is provided.
+
+:::
+
+When we compile our document, we should see the same content as before, but now we can make changes
+in our content files, and the changes will be reflected in our main document.
+
+### Other Files
+
+While we're at it, let's also create files for our packages, commands, and title page. We'll also
+put these into their own directory called "includes":
+
+- `packages.tex`
+- `custom-commands.tex`  
+- `titlepage.tex`
+
+::: spoiler
+`packages.tex`
+
+```latex
+TO BE ADDED LATER
+```
+
+::: spoiler
+`custom-commands.tex`
+
+```latex
+TO BE ADDED LATER
+```
+
+::: spoiler
+`titlepage.tex`
+
+```latex
+TO BE ADDED LATER
+```
+
+### Our New main.tex
+
+Our `main.tex` document should now look like this:
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+\input{includes/packages}
+
+\input{includes/custom-commands}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+
+\input{includes/titlepage}
+
+Hello World!
+
+This is my first \kw{LaTeX} document.
+
+\input{content/sections}
+\input{content/lists}
+\input{content/graphics}
+\input{content/tables}
+\input{content/cross-references}
+\input{content/math}
+\input{content/text-and-spacing}
+
+\end{document}
+```
+
+::: callout
+
+Note that we still need to put the content in the appropriate order. For example, you can't add 
+`\input{includes/packages}` at the end of the document, as it needs to be included before the
+document starts.
+
+:::
+
+## Structuring the document
+
+There's a few more commands we can add to our document to help structure it:
+
+- `\frontmatter`
+- `\mainmatter`
+- `\backmatter`,
+- `\appendix`
+
+These help separate the document into parts by affecting formatting rules. For example, 
+- `\frontmatter` will remove page numbers and change the numbering style to roman numerals. 
+- `\mainmatter` will reset the page numbers and change the numbering style to arabic numerals. 
+- `\backmatter` will remove page numbers and change the numbering style to roman numerals.
+- `\appendix` will change the numbering style to letters.
+
+Let's add these commands to our `main.tex` document:
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+\input{includes/packages}
+
+\input{includes/custom-commands}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+
+\frontmatter
+\input{includes/titlepage}
+
+Hello World!
+
+This is my first \kw{LaTeX} document.
+
+\mainmatter
+\input{content/sections}
+\input{content/lists}
+\input{content/graphics}
+\input{content/tables}
+\input{content/cross-references}
+\input{content/math}
+\input{content/text-and-spacing}
+
+\end{document}
+```
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -72,40 +341,12 @@ You can add a line with at least three colons and a `solution` tag.
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
-
-You can include figures generated from R Markdown:
-
-```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
-  border = FALSE
-)
-```
-Or you can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- LaTeX projects can contain many files that reference each other
+- The `\input{filename}` and `\include{filename}` commands allow you to include the contents of other files in your document
+- The `\frontmatter`, `\mainmatter`, `\backmatter`, and `\appendix` commands help structure your document
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
