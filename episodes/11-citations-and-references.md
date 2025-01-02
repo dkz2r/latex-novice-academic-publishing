@@ -98,6 +98,8 @@ find the references.
 There are many different bibliography styles available, and you can find a list of them at
 [CTAN](https://ctan.org/topic/biblio).
 
+:::
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
 Inline instructor notes can help inform instructors of timing challenges
