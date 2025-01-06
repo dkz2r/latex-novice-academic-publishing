@@ -66,6 +66,28 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \]
 ```
 
+### Math in Enviroments
+
+We can include math in an environment called `equation` to number the equations:
+
+```latex
+\subsection{Math in Environments}
+
+The quadratic formula is:
+
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\label{eq:quadratic}
+\end{equation}
+```
+
+We can now refer to this equation using the `\ref` command, just like we did in the previous
+section:
+
+```latex
+The quadratic formula is given in Equation~\ref{eq:quadratic}.
+```
+
 ## The `amsmath` Package
 
 Mathematical notation is very rich, and the tools in the LaTeX kernel are sometimes not enough to
