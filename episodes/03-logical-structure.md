@@ -1,5 +1,5 @@
 ---
-title: 'The Logical Structure of a Document'
+title: 'The Structure of a Document'
 teaching: 10
 exercises: 2
 ---

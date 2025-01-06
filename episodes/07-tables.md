@@ -235,24 +235,43 @@ table to create the impression of vertical merging.
 
 ## Challenge 1: Can you do it?
 
-What is the output of this command?
+Try to make the following table in LaTeX:
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+| Make | Model | Year |
+|------|-------|------|
+| Volkswagen | Golf | 84,282 |
+| Fiat | 500 | 52,337 |
+| Opel | Corsa | 50,191 |
+| Mini | Mini | 40,142 |
+| Volkswagen | Passat | 39,261 |
+
 
 :::::::::::::::::::::::: solution
 
-## Output
+## Answer
 
-```output
-[1] "This new lesson looks good"
+```latex
+\begin{tabular}{lll}
+  \toprule
+  Make        & Model & Year  \\
+  \midrule
+  Volkswagen  & Golf  & 84,282 \\
+  Fiat        & 500   & 52,337 \\
+  Opel        & Corsa & 50,191 \\
+  Mini        & Mini  & 40,142 \\
+  Volkswagen  & Passat& 39,261 \\
+  \bottomrule
+\end{tabular}
 ```
 
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2: Are Tables like Images?
+
+When we were working with graphics in the previous section, we learned about adding captions to
+images. Can you add a caption to the table you created in Challenge 1 that says "Top 5 Car Models
+in Germany (2024)"
 
 :::::::::::::::::::::::: solution
 

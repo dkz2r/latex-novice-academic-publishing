@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How can we set paragraph spacing in LaTeX?
 - How can we customize text formatting in LaTeX?
@@ -21,12 +21,12 @@ exercises: 2
 
 ## Paragraph Spacing
 
-A common style in LaTeX is to have no indents for paragraphs, but to incorporate a blank line 
+A common style in LaTeX is to have no indents for paragraphs, but to incorporate a blank line
 between them. We can achieve this using the `parskip` package.
 
 We're going to use another package here just to show off some commands without having to write a
 lot of text: the `lipsum` package. This package provides the `\lipsum` command, which generates
-"Lorem Ipsum" text. 
+"Lorem Ipsum" text.
 
 ```latex
 \usepackage{lipsum}
@@ -53,7 +53,7 @@ In our document, we can now use a blank line to separate paragraphs:
 ```
 
 Compile the document and take a look at our section. You should see that our first paragraph has no
-indent, and there is no blank line between it and the following paragraph. The second paragraph 
+indent, and there is no blank line between it and the following paragraph. The second paragraph
 does have an indent. This is the default behavior in LaTeX.
 
 Now let's add our package:
@@ -62,7 +62,7 @@ Now let's add our package:
 \usepackage[parfill]{parskip}
 ```
 
-Keep an eye on the preview pane as you compile the document. You should see that the first 
+Keep an eye on the preview pane as you compile the document. You should see that the first
 paragraph now has a blank line between it and the second paragraph, and there is no indent on the
 first line of the second paragraph.
 
@@ -90,6 +90,7 @@ In math mode, there are also other commands:
 - `\:` for a "colon" space
 - `\;` for a "thick" space
 - `\!` for a "negative" space
+- `\,` for a "thin" space
 
 :::
 
@@ -136,13 +137,13 @@ We can align text using the following commands:
 
 ## Creating a Title Page
 
-Using all of this, let's create a simple title page for our document. We'll put this just after 
+Using all of this, let's create a simple title page for our document. We'll put this just after
 the `\begin{document}` command, and enclose everything in a `titlepage` environment:
 
 ```latex
 \begin{titlepage}
     \centering
-    
+
     \huge
     \textbf{My Example Document}
 
@@ -172,7 +173,7 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
@@ -182,10 +183,10 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Output
- 
+
 ```output
 [1] "This new lesson looks good"
 ```
@@ -195,14 +196,14 @@ paste("This", "new", "lesson", "looks", "good")
 
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use the `parskip` package to add space between paragraphs
 - Force a new line with `\\`
