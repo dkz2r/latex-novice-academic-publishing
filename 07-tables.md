@@ -31,11 +31,11 @@ tables. We'll add this to the preamble of our document:
 
 ::: callout
 
-As we start to add more and more packages to our preamble, it can get a bit unwieldy. For now, 
-let's just keep them alphabetized to make it keep things organized. Our imports should now look 
+As we start to add more and more packages to our preamble, it can get a bit unwieldy. For now,
+let's just keep them alphabetized to make it keep things organized. Our imports should now look
 like this:
 
-```latex	
+```latex
 \usepackage{array}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -231,7 +231,7 @@ table to create the impression of vertical merging.
 
 :::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
@@ -241,10 +241,10 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Output
- 
+
 ```output
 [1] "This new lesson looks good"
 ```
@@ -254,7 +254,7 @@ paste("This", "new", "lesson", "looks", "good")
 
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 You can add a line with at least three colons and a `solution` tag.
 
@@ -332,7 +332,7 @@ Unordered lists are just a series of items preceded by a marker.
 
 \section{Graphics}
 
-We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the 
+We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
 \includegraphics{example-image.png}
@@ -363,7 +363,7 @@ image on the page.
 
 \subsection{Floating Image}
 
-\kw{Floating images} can move around the page as text is added or removed. We can use the 
+\kw{Floating images} can move around the page as text is added or removed. We can use the
 \cmd{figure}environment to create a floating image.
 
 \begin{figure}[ht]
