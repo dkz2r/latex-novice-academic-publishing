@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How can I ensure that numbers in my document are automatically updated?
 - How can I refer to numbered elements in my document?
@@ -20,16 +20,16 @@ exercises: 2
 
 ## Cross References
 
-When writing a document of any length, you'll often want to refer to numbered elements such as 
+When writing a document of any length, you'll often want to refer to numbered elements such as
 figures, tables, equations, or sections. LaTeX provides a way to automatically number these elements
 and refer to them in your text.
 
 ### Label and Ref
 
-To have LaTex remember a specific spot in your document, you have to use the `\label{}` command to 
+To have LaTex remember a specific spot in your document, you have to use the `\label{}` command to
 mark it, and the `\ref{}` command to refer to it. For example:
 
-```latex	
+```latex
 \section{Cross References}
 \label{sec:cross-references}
 
@@ -46,7 +46,7 @@ In this section, we introduce two new concepts:
 \label{tab:cross-reference-commands}
 \end{tabular}
 
-We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}. 
+We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
 We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
 ```
 
@@ -64,15 +64,19 @@ refer to.
 
 ::: callout
 
-Note that the `ref` command does not insert the section or table name, but rather the number 
+Note that the `ref` command does not insert the section or table name, but rather the number
 associated with it. We would still write "Refer to Table \ref{tab:cross-reference-commands}", but
 the benefit is that if the table number changes because we've added or removed sections before it,
 the reference will update automatically.
 
+There are packages that can provide more advanced cross-referencing capabilities, such as the
+`cleveref` package, which can automatically detect the type of element being referenced and insert
+the appropriate name. For more details about this, refer to the references section.
+
 :::
 
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
@@ -82,10 +86,10 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Output
- 
+
 ```output
 [1] "This new lesson looks good"
 ```
@@ -95,14 +99,14 @@ paste("This", "new", "lesson", "looks", "good")
 
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - The `\label{}` command marks a spot in the document.
 - The `\ref{}` command refers to a marked spot in the document.
@@ -171,7 +175,7 @@ Unordered lists are just a series of items preceded by a marker.
 
 \section{Graphics}
 
-We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the 
+We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
 \includegraphics{example-image.png}
@@ -202,7 +206,7 @@ image on the page.
 
 \subsection{Floating Image}
 
-\kw{Floating images} can move around the page as text is added or removed. We can use the 
+\kw{Floating images} can move around the page as text is added or removed. We can use the
 \cmd{figure}environment to create a floating image.
 
 \begin{figure}[ht]
@@ -302,7 +306,7 @@ In this section, we introduce two new concepts:
 \label{tab:cross-reference-commands}
 \end{tabular}
 
-We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}. 
+We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
 We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
 
 \end{document}

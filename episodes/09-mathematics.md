@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do I add mathematical expressions to a LaTeX document?
 
@@ -18,7 +18,7 @@ exercises: 2
 
 ## Math Mode
 
-Typesetting mathematical expressions in LaTeX is one of its greatest strengths. We can mark up 
+Typesetting mathematical expressions in LaTeX is one of its greatest strengths. We can mark up
 mathematical content in a logical way in what is known as *math mode*.
 
 There are two kinds of math mode in LaTeX:
@@ -28,8 +28,8 @@ There are two kinds of math mode in LaTeX:
 
 ### Inline Math Mode
 
-Inline math mode is marked using a pair of dollar sign symbols (`$ ... $`). It is also possible to 
-use the notation `\(...\)` to mark inline math mode. Simple expressions are entered without any 
+Inline math mode is marked using a pair of dollar sign symbols (`$ ... $`). It is also possible to
+use the notation `\(...\)` to mark inline math mode. Simple expressions are entered without any
 special markup, and you'll see that the math is spaced out nicely and has letters in italic.
 
 ```latex
@@ -66,37 +66,48 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \]
 ```
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
-What is the output of this command?
+See if you can write the following mathematical expression in LaTeX:
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+- Special Relativity: t' = t / sqrt(1 - v^2 / c^2)
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Output
- 
-```output
-[1] "This new lesson looks good"
+
+```latex
+\[
+t' = \frac{t}{\sqrt{1 - \frac{v^2}{c^2}}}
+\]
 ```
 
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2: What's wrong with this?
 
-:::::::::::::::::::::::: solution 
+What's wrong with the following LaTeX code?
 
-You can add a line with at least three colons and a `solution` tag.
+```latex
+\(F = G * (m_1 m_2) / r^2 \)
+```
+
+
+:::::::::::::::::::::::: solution
+
+The code is missing the `\frac` command to create a fraction. The correct code should be:
+
+```latex
+\(F = G \frac{m_1 m_2}{r^2} \)
+```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Inline math mode is marked with `$ ... $` or `\(...\`
 - Display math mode is marked with `\[ ... \]`
