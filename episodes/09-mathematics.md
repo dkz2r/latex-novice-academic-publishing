@@ -66,6 +66,50 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \]
 ```
 
+## The `amsmath` Package
+
+Mathematical notation is very rich, and the tools in the LaTeX kernel are sometimes not enough to
+cover everything. The `amsmath` package extends the capabilities of LaTeX for more complex
+mathematical typesetting. Let's try it out:
+
+Add the following to your document:
+
+```latex
+\subsection{The `amsmath` Package}
+
+Solve the following recurrence for $ n,k\geq 0 $:
+\[
+Q_{n,0} = 1   \quad Q_{0,k} = [k=0];
+\]
+
+\[
+Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{for $n$, $k>0$.}
+\]
+```
+
+That look ok, but we really want the equations to be aligned vertically, not centered on the page.
+We can use the `align` environment from the `amsmath` package to do this:
+
+```latex
+\usepackage{amsmath}
+```
+
+```latex
+\subsection{The `amsmath` Package}
+
+Solve the following recurrence for $ n,k\geq 0 $:
+\begin{align*}
+  Q_{n,0} &= 1   \quad Q_{0,k} = [k=0];  \\
+  Q_{n,k} &= Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{for $n$, $k>0$.}
+\end{align*}
+```
+
+The `align*` environment makes the equations line up on the amperstand (`&`)
+
+There's far too many options to cover here, but the `amsmath` User Guide contains many more
+examples.
+
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
