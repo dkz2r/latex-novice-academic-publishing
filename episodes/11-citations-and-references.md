@@ -4,22 +4,23 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - bibtex-ext
 - siunitx
+- cite, cites, parentcite, parentcites, autocite, smartcite
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- 
+-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Citations and References
 
-For bibliographic citations, while you can include references sources directly in our document, 
+For bibliographic citations, while you can include references sources directly in our document,
 usually you will get that information from one or more external files. Such a file is a database
 of references, containing the information in a processing-friendly format. Using one or more
 reference databases lets you re-use information and avoid manual formatting.
@@ -54,17 +55,17 @@ Create a new file in your project called `references.bib` and add the following 
 }
 ```
 
-This is an example of a BiBTeX file that contains a reference for an article and another for a 
+This is an example of a BiBTeX file that contains a reference for an article and another for a
 book. Each entry type starts with a the `@` symbol, and all information appears within a pair of
 curly braces `{}`.
 
-The various fields are given in key-value format. Exactly which fields you need to give depends on 
-the type of entry. 
+The various fields are given in key-value format. Exactly which fields you need to give depends on
+the type of entry.
 
 ::: callout
 
 You might notice that in the `author` field, each entry is separated by the word `and`. This is
-essential: the format of the output needs to know which author is which. 
+essential: the format of the output needs to know which author is which.
 
 You might also notice that in the article title, some entries are in an extra set of braces. This
 is to prevent any case-changing that might be applied to the title.
@@ -75,13 +76,13 @@ is to prevent any case-changing that might be applied to the title.
 
 
 
-Editing BiBTeX files by hand can be tedious, a number of tools exist to help you manage your 
-reference files. 
+Editing BiBTeX files by hand can be tedious, a number of tools exist to help you manage your
+reference files.
 
 ### Transferring Information from the Database to the Document
 
-When using Overleaf, we just need to make sure that the bibliography file is present in the project 
-and properly referenced in our document. Check to make sure that your `main.tex` file is in the 
+When using Overleaf, we just need to make sure that the bibliography file is present in the project
+and properly referenced in our document. Check to make sure that your `main.tex` file is in the
 same directory as your `references.bib` file. Then, at the bottom of your `main.tex` file, add the
 following lines:
 
@@ -93,7 +94,7 @@ following lines:
 The first lines tells LaTeX how to format the references, and the second line tells LaTeX where to
 find the references.
 
-::: callout 
+::: callout
 
 There are many different bibliography styles available, and you can find a list of them at
 [CTAN](https://ctan.org/topic/biblio).
@@ -107,7 +108,7 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
@@ -117,10 +118,10 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Output
- 
+
 ```output
 [1] "This new lesson looks good"
 ```
@@ -130,16 +131,16 @@ paste("This", "new", "lesson", "looks", "good")
 
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
-- 
+-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
