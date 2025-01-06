@@ -489,14 +489,12 @@ arguments in curly braces <code>{}</code>.</li>
 </ul></section><section id="03-logical-structure"><h2 class="section-heading"><a href="03-logical-structure.html">The Logical Structure of a Document</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>LaTeX documents are structured using section commands.</li>
+<li>There are many different section commands in LaTeX, including
+<code>\subsubsection{...}</code>, <code>\paragraph{...}</code>,
+<code>\chapter{...}</code>, and more.</li>
+<li>Lists in LaTeX are created using the <code>enumerate</code> and
+<code>itemize</code> environments.</li>
 </ul></section><section id="04-document-classes"><h2 class="section-heading"><a href="04-document-classes.html">Using Document Classes</a></h2>
 <hr class="half-width">
 <ul>
@@ -509,27 +507,25 @@ locally</li>
 </ul></section><section id="05-extending-latex"><h2 class="section-heading"><a href="05-extending-latex.html">Extending LaTeX</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
+<li>We can extend LaTeX’s functionality by adding packages to our
+document.</li>
+<li>We can define custom commands in LaTeX using the
+<code>\newcommand</code> command.</li>
 </ul></section><section id="06-using-graphics"><h2 class="section-heading"><a href="06-using-graphics.html">Using Graphics</a></h2>
 <hr class="half-width">
 <ul>
-<li>Use the <code>graphicx</code> package to include images in a LaTeX
-document.</li>
-<li>Adjust the appearance of images using the
+<li>The <code>graphicx</code> package allows us to include images in our
+LaTeX document.</li>
+<li>We can adjust the appearance of images using options in the
 <code>\includegraphics</code> command.</li>
-<li>Position images manually or automatically using the
-<code>figure</code> environment.</li>
-<li>Control the position of floating images using parameters in the
-<code>figure</code> environment.</li>
-<li>Add captions to floating images using the <code>\caption</code>
-command.</li>
+<li>We can position images manually or automatically using environments
+like <code>center</code> and <code>figure</code>.</li>
+<li>Floating images can move around the page as text is added or
+removed.</li>
+<li>We can control the position of floating images using parameters in
+the <code>figure</code> environment.</li>
+<li>We can add captions to floating images using the
+<code>\caption</code> command.</li>
 </ul></section><section id="07-tables"><h2 class="section-heading"><a href="07-tables.html">Tables</a></h2>
 <hr class="half-width">
 <ul>
@@ -664,8 +660,8 @@ locally</li>
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/key-points.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/key-points.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-01-03",
-  "datePublished": "2025-01-03"
+  "dateModified": "2025-01-06",
+  "datePublished": "2025-01-06"
 }
 
   </script><script>
