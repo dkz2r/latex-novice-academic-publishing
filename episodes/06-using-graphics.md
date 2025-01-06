@@ -43,7 +43,7 @@ Download this image to your computer either be right-clicking on the image and s
 Image As..." or by clicking on the image and saving it from the browser.
 
 You can use any image you like for this lesson. Just make sure to replace `example-image.png` with
-the name of your image in the following examples. 
+the name of your image in the following examples.
 
 :::
 
@@ -69,7 +69,7 @@ command:
 ```latex
 \section{Graphics}
 
-We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the 
+We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
 \includegraphics{example-image.png}
@@ -90,7 +90,7 @@ placeholder image in your document that you can replace later.
 ### Adjusting the appearance of the image
 
 We can adjust the appearance of the image by passing options to the `\includegraphics` command, just
-like we did earlier with the `geometry` package. For example, we can specify the height of the 
+like we did earlier with the `geometry` package. For example, we can specify the height of the
 image:
 
 ```latex
@@ -158,7 +158,7 @@ To make an image float, we can use the `figure` environment:
 ```latex
 \subsection{Floating Image}
 
-\kw{Floating images} can move around the page as text is added or removed. We can use the 
+\kw{Floating images} can move around the page as text is added or removed. We can use the
 \cmd{figure}environment to create a floating image.
 
 \begin{figure}
@@ -264,11 +264,12 @@ You can add a line with at least three colons and a `solution` tag.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use the `graphicx` package to include images in a LaTeX document.
-- Adjust the appearance of images using the `\includegraphics` command.
-- Position images manually or automatically using the `figure` environment.
-- Control the position of floating images using parameters in the `figure` environment.
-- Add captions to floating images using the `\caption` command.
+- The `graphicx` package allows us to include images in our LaTeX document.
+- We can adjust the appearance of images using options in the `\includegraphics` command.
+- We can position images manually or automatically using environments like `center` and `figure`.
+- Floating images can move around the page as text is added or removed.
+- We can control the position of floating images using parameters in the `figure` environment.
+- We can add captions to floating images using the `\caption` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -332,7 +333,7 @@ Unordered lists are just a series of items preceded by a marker.
 
 \section{Graphics}
 
-We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the 
+We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
 \includegraphics{example-image.png}
@@ -363,7 +364,7 @@ image on the page.
 
 \subsection{Floating Image}
 
-\kw{Floating images} can move around the page as text is added or removed. We can use the 
+\kw{Floating images} can move around the page as text is added or removed. We can use the
 \cmd{figure}environment to create a floating image.
 
 \begin{figure}[ht]

@@ -29,7 +29,7 @@ environments that add new features to LaTeX, for example:
 - Changing the appearance/design of the document.
 
 We can add a package to our document by using the `\usepackage` command in the preamble of our
-document. For example, to add the `geometry` package to our document, we would add the following 
+document. For example, to add the `geometry` package to our document, we would add the following
 line to the preamble:
 
 ```latex
@@ -37,7 +37,7 @@ line to the preamble:
 ```
 
 In addition to the name of the package in the curly braces, we can also add options to the package
-by adding them in square brackets before the package name. For example, to set the width of the 
+by adding them in square brackets before the package name. For example, to set the width of the
 text block in our document to 6cm, we would update this line to look like this:
 
 ```latex
@@ -165,7 +165,7 @@ once:
 
 ## Defining Multiple Commands
 
-We can define as many commands as we like in the preamble of our document. Let's add another one 
+We can define as many commands as we like in the preamble of our document. Let's add another one
 that we can use to highlight commands in the document:
 
 ```latex
@@ -234,10 +234,8 @@ use it like this:
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- We can extend LaTeX's functionality by adding packages to our document.
+- We can define custom commands in LaTeX using the `\newcommand` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

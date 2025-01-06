@@ -30,7 +30,7 @@ keep these elements consistent throughout your document. Let's add sections to o
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article} 
+\documentclass{article}
 
 
 % Everything before the \begin{document} command is called the preamble.
@@ -81,7 +81,7 @@ We'll replace our "Second Section" with on for "Lists" and add an ordered list:
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article} 
+\documentclass{article}
 
 
 % Everything before the \begin{document} command is called the preamble.
@@ -134,7 +134,7 @@ Adding an unordered list is just as easy. We can use the exact same syntax, but 
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article} 
+\documentclass{article}
 
 
 % Everything before the \begin{document} command is called the preamble.
@@ -270,10 +270,9 @@ How would you write this in LaTeX?
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- LaTeX documents are structured using section commands.
+- There are many different section commands in LaTeX, including `\subsubsection{...}`, `\paragraph{...}`, `\chapter{...}`, and more.
+- Lists in LaTeX are created using the `enumerate` and `itemize` environments.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -284,7 +283,7 @@ After this episode, here is what our LaTeX document looks like:
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article} 
+\documentclass{article}
 
 
 % Everything before the \begin{document} command is called the preamble.

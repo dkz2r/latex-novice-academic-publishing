@@ -132,7 +132,7 @@ These include:
 
 These classes have a lot of customization options that can be used to alter the appearance of the
 document to exactly match your needs. We'll explore how to figure out how to use these classes in
-a later episode. 
+a later episode.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -149,9 +149,9 @@ Which of the following are not a standard LaTeX document class?
 
 :::::::::::::::::::::::: solution
 
-## Output
+## Answer
 
-`presentation` is not a standard LaTeX document class - the correct class is `slides`. Also 
+`presentation` is not a standard LaTeX document class - the correct class is `slides`. Also
 `memoir` is not a standard LaTeX document class, but a third-party class.
 
 :::::::::::::::::::::::::::::::::
@@ -160,7 +160,7 @@ Which of the following are not a standard LaTeX document class?
 ## Challenge 2: What happens?
 
 Suppose we have the following LaTeX slide presentation, but we want to turn it into an article.
-We can change the document class from "slides" to "article", but what happens? Why? and 
+We can change the document class from "slides" to "article", but what happens? And why?
 
 ```latex
 \documentclass{slides}
@@ -187,7 +187,7 @@ Some popular apple varieties include:
 :::::::::::::::::::::::: solution
 
 We can chang the document class from "slides" to "article", but the `slide` environment does not
-exist in the `article` document class. We end up with errors when we try to compile the document, 
+exist in the `article` document class. We end up with errors when we try to compile the document,
 complaining that the `slide` environment is not defined. We need to change the `slide` environments
 to `sections` or `subsections` to maintain the structure of the document:
 
@@ -228,7 +228,7 @@ After this episode, here is what our LaTeX document looks like:
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article} 
+\documentclass{article}
 
 
 % Everything before the \begin{document} command is called the preamble.
