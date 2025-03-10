@@ -204,7 +204,7 @@ We have the following in our LaTeX document:
 \end{document}
 ```
 
-How would we modify this to change this unordered list to an ordered list?
+How would we modify this to change this ordered list to an unordered list?
 
 :::::::::::::::::::::::: solution
 
@@ -264,6 +264,7 @@ How would you write this in LaTeX?
   \item Oranges
 \end{itemize}
 
+\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
