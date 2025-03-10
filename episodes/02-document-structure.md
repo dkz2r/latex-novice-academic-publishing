@@ -185,6 +185,8 @@ often resolve subsequent errors.
 
 :::
 
+## Challenges
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: What's wrong with this document?

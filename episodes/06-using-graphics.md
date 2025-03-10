@@ -232,6 +232,8 @@ When we render the document, we can see that the caption appears below the image
 
 ![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
 
+## Challenges
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?

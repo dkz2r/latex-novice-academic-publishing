@@ -131,6 +131,7 @@ The `align*` environment makes the equations line up on the amperstand (`&`)
 There's far too many options to cover here, but the `amsmath` User Guide contains many more
 examples.
 
+## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

@@ -269,6 +269,8 @@ document starts.
 
 :::
 
+## Challenges
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?

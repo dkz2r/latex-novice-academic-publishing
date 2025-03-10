@@ -75,6 +75,7 @@ the appropriate name. For more details about this, refer to the references secti
 
 :::
 
+## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

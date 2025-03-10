@@ -182,6 +182,7 @@ Unordered lists are just a series of items preceded by a marker.
 
 ![](fig/03-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'}
 
+## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

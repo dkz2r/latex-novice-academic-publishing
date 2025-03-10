@@ -134,6 +134,8 @@ These classes have a lot of customization options that can be used to alter the 
 document to exactly match your needs. We'll explore how to figure out how to use these classes in
 a later episode.
 
+## Challenges
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Which don't belong?

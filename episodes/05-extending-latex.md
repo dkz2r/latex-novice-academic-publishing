@@ -175,6 +175,8 @@ that we can use to highlight commands in the document:
 
 We'll use this command in later sections.
 
+## Challenges
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Importing a new package

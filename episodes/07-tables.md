@@ -231,6 +231,8 @@ table to create the impression of vertical merging.
 
 :::
 
+## Challenges
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
