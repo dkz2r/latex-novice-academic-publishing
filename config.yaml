@@ -1,4 +1,3 @@
----
 #------------------------------------------------------------
 # Values for this lesson.
 #------------------------------------------------------------
@@ -9,38 +8,39 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-# Note that you can also use a custom carpentry type. For more info,
-# see the documentation: https://carpentries.github.io/sandpaper-docs/editing.html
-carpentry: "incubator"
+# 
+# This option supports custom types so lessons can be branded
+# and themed with your own logo and alt-text (see `carpentry_description`)
+# See https://carpentries.github.io/sandpaper-docs/editing.html#adding-a-custom-logo
+carpentry: 'incubator'
 
-# Custom carpentry description
-# This will be used as the alt text for the logo
-# carpentry_description: "Custom Carpentry"
+# Alt-text description of the lesson.
+carpentry_description: 'Lesson Description'
 
 # Overall title for pages.
-title: "An Introduction to Using LaTeX for Academic Publishing"
+title: 'Lesson Title' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: "2024-12-09"
+created: ~ # FIXME
 
 # Comma-separated list of keywords for the lesson
-keywords: "markdown, software, latex"
+keywords: 'software, data, lesson, The Carpentries' # FIXME
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: "pre-alpha"
+life_cycle: 'pre-alpha' # FIXME
 
-# License of the lesson materials (recommended CC-BY 4.0)
-license: "CC-BY 4.0"
+# License of the lesson
+license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: "https://github.com/dkz2r/latex-novice-academic-publishing"
+source: 'https://github.com/carpentries/workbench-template-md' # FIXME
 
 # Default branch of your lesson
-branch: "main"
+branch: 'main'
 
 # Who to contact if there are any issues
-contact: "hartman@itc.rwth-aachen.de"
+contact: 'team@carpentries.org' # FIXME
 
 # Navigation ------------------------------------------------
 #
@@ -65,35 +65,21 @@ contact: "hartman@itc.rwth-aachen.de"
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes:
-  - 01-introduction.md
-  - 02-document-structure.md
-  - 03-logical-structure.md
-  - 04-document-classes.md
-  - 05-extending-latex.md
-  - 06-using-graphics.md
-  - 07-tables.md
-  - 08-cross-references.md
-  - 09-mathematics.md
-  - 10-text-and-spacing.md
-  - 11-citations-and-references.md
-  - 12-structuring-sources.md
-  - 13-font-and-encoding.md
-  - 14-error-handling.md
-  - 15-documentation-and-finding-help.md
+episodes: 
+- introduction.md
 
 # Information for Learners
-learners:
+learners: 
 
 # Information for Instructors
-instructors:
+instructors: 
 
 # Learner Profiles
-profiles:
+profiles: 
 
 # Customisation ---------------------------------------------
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
 
-carpentry_description: An Introduction to Using LaTeX for Academic Publishing
+
