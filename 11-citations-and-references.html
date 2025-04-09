@@ -408,7 +408,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Citations and References</h1>
-        <p>Last updated on 2025-04-02 |
+        <p>Last updated on 2025-04-09 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/11-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -447,9 +447,9 @@
 <hr class="half-width"><p>For bibliographic citations, while you can include references sources
 directly in our document, usually you will get that information from one
 or more external files. Such a file is a database of references,
-containing the information in a processing-friendly format. Using one or
-more reference databases lets you re-use information and avoid manual
-formatting.</p>
+containing the information in a processing-friendly format (which is
+called <code>BibTeX</code>). Using one or more reference databases lets
+you re-use information and avoid manual formatting.</p>
 </section><section><h2 class="section-heading" id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a></h2>
 <hr class="half-width"><p>Reference databases are normally referred to as <em>BiBTeX</em>
 files, and have the extension <code>.bib</code>. They contain one or
@@ -483,7 +483,8 @@ fields.</p>
 </div>
 <p>This is an example of a BiBTeX file that contains a reference for an
 article and another for a book. Each entry type starts with a the
-<code>@</code> symbol, and all information appears within a pair of
+<code>@</code> symbol, followed by the type of the referencing item
+(e.g. <code>article</code>) and all information appears within a pair of
 curly braces <code>{}</code>.</p>
 <p>The various fields are given in key-value format. Exactly which
 fields you need to give depends on the type of entry.</p>
@@ -541,6 +542,8 @@ import biblatex:</p>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\usepackage</span>[style=authoryear]{<span class="ex">biblatex</span>}</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">\addbibresource</span>{sample-references.bib}</span></code></pre>
 </div>
+<p>Do not forget to write the suffix of your referencing file, too
+(<code>.bib</code>).</p>
 <p>Then, at the bottom of your <code>main.tex</code> file, add the
 following lines:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -558,37 +561,53 @@ document yet. Let’s add a citation:</p>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>One of the best features of LaTeX when writing academic documents is the ability to easily and</span>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>confidently <span class="fu">\kw</span>{cite references}.</span>
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>We can cite the article by Thomas <span class="kw">\autocite</span>{<span class="ex">Thomas2008</span>} and it will show up in the references.</span></code></pre>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>We can cite the article by Thomas (e.g. with `<span class="fu">\autocite</span>{Thomas2008}`) and it will show up in the references.</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>now appears at the end of the document. `<span class="fu">\autocite</span>` is a command that automatically chooses the</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>citation style for you.</span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>Let’s explore some of the other citation commands available in `biblatex`:</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>- `<span class="fu">\cite</span>{key}` or `<span class="fu">\cite</span>{key1,key2}`: Cite the reference with the given key.</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>- `<span class="fu">\cites</span>{key1}{key2}{key-n}`: Cite multiple references.</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>- `<span class="fu">\parentcite</span>{key}`: Cite the parent reference of the given key.</span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>- `<span class="fu">\autocite</span>{key}`: Automatically choose the citation style.</span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>- `<span class="fu">\smartcite</span>{key}`: Automatically choose the citation style, but with more control.</span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>- `footcite{key}`: Cite the reference in a footnote.</span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a>```latex</span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a>A plain citation looks like this <span class="kw">\cite</span>{<span class="ex">Graham1995</span>}, while multiple citations look like this</span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="kw">\cites</span>{<span class="ex">Graham1995</span>}[see][p. 42]{<span class="ex">Thomas2008</span>}. We already used autocite, but we can also use the</span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a>similar smartcite <span class="fu">\smartcite</span>{Graham1995}. The benefit with smartcite is that you</span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>can setup that e.g. all references should go into a footnote. You can continue</span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a>using smartcite when you are *in* a footnote and it will then detect that there</span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a>is no need for creating another footnote but behaving like autocite.</span></code></pre>
 </div>
-<p>You should see that the citation appears in the text
-(<code>(Thomas et al. 2008)</code>), and the reference now appears at
-the end of the document. <code>\autocite</code> is a command that
-automatically chooses the citation style for you.</p>
-<p>Let’s explore some of the other citation commands available in
-<code>biblatex</code>:</p>
-<ul><li>
-<code>\cite{key}</code>: Cite the reference with the given key.</li>
-<li>
-<code>\cites{key1}[key2]</code>: Cite multiple references.</li>
-<li>
-<code>\parentcite{key}</code>: Cite the parent reference of the
-given key.</li>
-<li>
-<code>\autocite{key}</code>: Automatically choose the citation
-style.</li>
-<li>
-<code>\smartcite{key}</code>: Automatically choose the citation
-style, but with more control.</li>
-<li>
-<code>footcite{key}</code>: Cite the reference in a footnote.</li>
-</ul><div class="codewrapper sourceCode" id="cb5">
+<p>If you want to have all entries of your referencing file in your
+bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
+for all entries or you type <code>\cite{*}</code>. This will print all
+entries first in your text section and puts them into the bibliography.
+You can also go with <code>\nocite{*}</code> then the reference is only
+internally called and put into the bibliography.</p>
+<p>It is always good to tidy up your <code>.bib</code>-file and use the
+fields accordingly. In case you want to omit certain fields in your
+bibliography you can do so on the fly:</p>
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>A plain citation looks like this <span class="kw">\cite</span>{<span class="ex">Graham1995</span>}, while multiple citations look like this</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="kw">\cites</span>{<span class="ex">Graham1995</span>}[see][p. 42]{<span class="ex">Thomas2008</span>}. We already used autocite, but we can also use the</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>similar smartcite <span class="fu">\smartcite</span>{Graham1995}, which gives us more control with additional options like</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="fu">\smartcite</span>[see][p. 42]{Thomas2008} or <span class="fu">\smartcite</span>[see][]{Thomas2008}.</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">\AtEveryBibitem</span>{</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">\clearfield</span>{url}</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">\clearfield</span>{month}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">\clearfield</span>{note}</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  <span class="fu">\clearfield</span>{isbn}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">\clearname</span>{translator}</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">\clearlist</span>{language}</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>}</span></code></pre>
 </div>
+<p>With this command you will delete the content of the fields in the
+bibliography. Note, that there is <code>\clear*field*</code>,
+<code>\clear*name*</code> and <code>\clear*list*</code>.</p>
 </div>
 <div id="nav-tabpanel-1-natbib" class="tab-pane" aria-labelledby="nav-tab-1-natbib" role="tabpanel">
 <p>When using Overleaf, we just need to make sure that the bibliography
@@ -660,7 +679,10 @@ reference.</li>
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>There are many different bibliography styles available, and you can
-find a list of them at <a href="https://ctan.org/topic/biblio" class="external-link">CTAN</a>.</p>
+find a list of them at <a href="https://ctan.org/topic/biblio" class="external-link">CTAN</a>.
+Check if one of those bibligraphy and citation styles meets your
+requirements. If you want to finetune an existing one we suggest to take
+a look at <a href="https://texdoc.org/serve/biblatex-ext/0" class="external-link">biblatex-ext</a>.</p>
 </div>
 </div>
 </div>
@@ -877,8 +899,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/11-citations-and-references.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/11-citations-and-references.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-02",
-  "datePublished": "2025-04-02"
+  "dateModified": "2025-04-09",
+  "datePublished": "2025-04-09"
 }
 
   </script><script>

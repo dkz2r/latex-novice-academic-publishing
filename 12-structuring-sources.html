@@ -409,7 +409,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>structuring-sources</h1>
-        <p>Last updated on 2025-04-02 |
+        <p>Last updated on 2025-04-09 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-structuring-sources.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -475,7 +475,11 @@ rather things like a title page, a table of contents, or a list of
 figures.</p>
 <p>The <code>\include{filename}</code> command will do the same thing,
 but it will also start a new page before including the file. This is
-useful for including separate chapters or sections of your document.</p>
+useful for including separate chapters or sections of your document.
+When you use <code>\include{filename}</code> you can also use
+<code>\includeonly{filename1,filename2}</code> in your preamble. This
+will then only insert the file mentioned but respect all other files
+regarding e.g. pagenumber, references etc.</p>
 <div class="section level3">
 <h3 id="input-example">Input Example<a class="anchor" aria-label="anchor" href="#input-example"></a></h3>
 <p>Let’s try out using the <code>\input{filename}</code> command. We’ll
@@ -941,8 +945,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/12-structuring-sources.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/12-structuring-sources.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-02",
-  "datePublished": "2025-04-02"
+  "dateModified": "2025-04-09",
+  "datePublished": "2025-04-09"
 }
 
   </script><script>
