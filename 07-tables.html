@@ -272,6 +272,7 @@
       <div class="accordion-body">
         <ul><li><a href="#defining-tables">Defining Tables</a></li>
 <li><a href="#creating-a-table">Creating a Table</a></li>
+<li><a href="#challenges">Challenges</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -317,7 +318,7 @@
 <div class="accordion accordion-flush" id="accordionFlush13">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading13">
-        <a href="12-structuring-sources.html">12. structuring-sources</a>
+        <a href="12-structuring-sources.html">12. Structuring Sources</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -326,7 +327,7 @@
 <div class="accordion accordion-flush" id="accordionFlush14">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading14">
-        <a href="13-font-and-encoding.html">13. font-and-encoding</a>
+        <a href="13-font-and-encoding.html">13. Fonts and Encodings</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -335,7 +336,7 @@
 <div class="accordion accordion-flush" id="accordionFlush15">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading15">
-        <a href="14-error-handling.html">14. error-handling</a>
+        <a href="14-error-handling.html">14. Error Handling</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -344,7 +345,7 @@
 <div class="accordion accordion-flush" id="accordionFlush16">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading16">
-        <a href="15-documentation-and-finding-help.html">15. documentation-and-finding-help</a>
+        <a href="15-documentation-and-finding-help.html">15. Documentation and Finding Help</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -408,7 +409,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Tables</h1>
-        <p>Last updated on 2025-04-09 |
+        <p>Last updated on 2025-04-10 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/07-tables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -709,7 +710,9 @@ merging.</p>
 </div>
 </div>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout challenge">
+</div>
+</section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
+<hr class="half-width"><div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -880,13 +883,13 @@ a table.</li>
 <span id="cb10-58"><a href="#cb10-58" tabindex="-1"></a>We can include <span class="fu">\kw</span>{images} in our document using the <span class="fu">\cmd</span>{graphicx} package, which lets us use the</span>
 <span id="cb10-59"><a href="#cb10-59" tabindex="-1"></a><span class="fu">\cmd</span>{includegraphics} command.</span>
 <span id="cb10-60"><a href="#cb10-60" tabindex="-1"></a></span>
-<span id="cb10-61"><a href="#cb10-61" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-61"><a href="#cb10-61" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb10-62"><a href="#cb10-62" tabindex="-1"></a></span>
 <span id="cb10-63"><a href="#cb10-63" tabindex="-1"></a><span class="kw">\subsection</span>{Small Image}</span>
 <span id="cb10-64"><a href="#cb10-64" tabindex="-1"></a></span>
 <span id="cb10-65"><a href="#cb10-65" tabindex="-1"></a>We can pass parameters to the <span class="fu">\cmd</span>{includegraphics} command to adjust the appearance of the image.</span>
 <span id="cb10-66"><a href="#cb10-66" tabindex="-1"></a></span>
-<span id="cb10-67"><a href="#cb10-67" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-67"><a href="#cb10-67" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb10-68"><a href="#cb10-68" tabindex="-1"></a></span>
 <span id="cb10-69"><a href="#cb10-69" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
 <span id="cb10-70"><a href="#cb10-70" tabindex="-1"></a>  <span class="fu">\item</span> width: the width of the image</span>
@@ -903,7 +906,7 @@ a table.</li>
 <span id="cb10-81"><a href="#cb10-81" tabindex="-1"></a>image on the page.</span>
 <span id="cb10-82"><a href="#cb10-82" tabindex="-1"></a></span>
 <span id="cb10-83"><a href="#cb10-83" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">center</span>}</span>
-<span id="cb10-84"><a href="#cb10-84" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-84"><a href="#cb10-84" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb10-85"><a href="#cb10-85" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span>
 <span id="cb10-86"><a href="#cb10-86" tabindex="-1"></a></span>
 <span id="cb10-87"><a href="#cb10-87" tabindex="-1"></a><span class="kw">\subsection</span>{Floating Image}</span>
@@ -913,7 +916,7 @@ a table.</li>
 <span id="cb10-91"><a href="#cb10-91" tabindex="-1"></a></span>
 <span id="cb10-92"><a href="#cb10-92" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
 <span id="cb10-93"><a href="#cb10-93" tabindex="-1"></a>  <span class="fu">\centering</span></span>
-<span id="cb10-94"><a href="#cb10-94" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-94"><a href="#cb10-94" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb10-95"><a href="#cb10-95" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
 <span id="cb10-96"><a href="#cb10-96" tabindex="-1"></a></span>
 <span id="cb10-97"><a href="#cb10-97" tabindex="-1"></a>Control the position of a floating image by passing paratmeters to the <span class="fu">\cmd</span>{figure} environment:</span>
@@ -932,7 +935,7 @@ a table.</li>
 <span id="cb10-110"><a href="#cb10-110" tabindex="-1"></a></span>
 <span id="cb10-111"><a href="#cb10-111" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
 <span id="cb10-112"><a href="#cb10-112" tabindex="-1"></a>  <span class="fu">\centering</span></span>
-<span id="cb10-113"><a href="#cb10-113" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.png</span>}</span>
+<span id="cb10-113"><a href="#cb10-113" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb10-114"><a href="#cb10-114" tabindex="-1"></a>  <span class="fu">\caption</span>{This is a caption for our image.}</span>
 <span id="cb10-115"><a href="#cb10-115" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
 <span id="cb10-116"><a href="#cb10-116" tabindex="-1"></a></span>
@@ -1002,7 +1005,6 @@ a table.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="06-using-graphics.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -1061,8 +1063,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/07-tables.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/07-tables.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-09",
-  "datePublished": "2025-04-09"
+  "dateModified": "2025-04-10",
+  "datePublished": "2025-04-10"
 }
 
   </script><script>
