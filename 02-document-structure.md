@@ -54,7 +54,7 @@ Let's look at the commands we've used so far:
 
 - `\documentclass{article}`: This command tells LaTeX what kind of document we are creating. (We
   might also use this command to instruct LaTeX to use a specific font size, paper size, or other
-  document settings.)
+  document settings - more on this later!)
 - `\begin{document}` and `\end{document}`: These commands mark the beginning and end of the
   document body. These commands are required in every LaTeX document and create the document body.
 
@@ -69,7 +69,7 @@ Everything before the `\begin{document}` command is called the *preamble*. The p
 you set up the document, including the document class, title, author, and any other settings you
 want to apply to the entire document.
 
-### Comments
+## Comments
 
 We can add comments to our document by using the `%` character. Anything after the `%` on a line is
 ignored by LaTeX. As in any other programming language, comments are useful for explaining what the
@@ -143,16 +143,18 @@ Let's introduce an error into our project to see what this might look like. Let'
 into the `documentclass` command by changing it to `documnetclass`. When we recompile the document,
 we can see our errors:
 
-![Error in the LaTeX document](fig/02-document-structure/document-errors.png){alt='Error in the LaTeX document.'}
+![Error in the LaTeX document](fig/02-document-structure/document-errors.PNG){alt='Error in the LaTeX document.'}
 
 And if we click on the "Logs and output files" button, we can see a more detailed error message:
 
-![Error message in the LaTeX document](fig/02-document-structure/document-error-message.png){alt='Error message in the LaTeX document.'}
+![Error message in the LaTeX document](fig/02-document-structure/document-error-message.PNG){alt='Error message in the LaTeX document.'}
 
 We can see similar messages when hovering over the small red circle next to the error in the text
 editor:
 
-![Error message on Hover](fig/02-document-structure/document-error-hover.png){alt='Error message on Hover.'}
+![Error message on Hover](fig/02-document-structure/document-error-hover.PNG){alt='Error message on Hover.'}
+
+We'll look more into how we can read and fix errors [in a later episode](/14-error-handling.html).
 
 ### Fixing Errors
 
@@ -185,11 +187,15 @@ often resolve subsequent errors.
 
 :::
 
+## Challenges
+
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: What's wrong with this document?
 
 There is an error in the following LaTeX document. Can you find it?
+
+(Feel to make a new project in Overleaf to test this out!)
 
 ```latex
 \documentclass{article}
@@ -244,8 +250,11 @@ the text correctly:
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - We can use Overleaf to edit and render LaTeX documents.
+- The `%` character is used to add comments to a LaTeX document.
 - LaTeX documents are a mixture of text and commands.
 - Commands start with a backslash `\` and sometimes have arguments in curly braces `{}`.
+- We can view errors by either clicking on the "Logs and output files" or hovering over the red
+    circle in the text editor.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

@@ -47,7 +47,7 @@ text block in our document to 6cm, we would update this line to look like this:
 Give this a try in our `main.tex` document to see what happens. When you render the document, you
 should see something like this:
 
-![](fig/05-extending-latex/geometry-set-width.png){alt='A document with a narrow text block.'}
+![](fig/05-extending-latex/geometry-set-width.PNG){alt='A document with a narrow text block.'}
 
 However this isn't what we really want, so we'll remove this line from our document.
 
@@ -174,6 +174,8 @@ that we can use to highlight commands in the document:
 ```
 
 We'll use this command in later sections.
+
+## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

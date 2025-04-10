@@ -1,10 +1,10 @@
 ---
-title: 'font-and-encoding'
+title: 'Fonts and Encodings'
 teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do you write a lesson using R Markdown and `{sandpaper}`?
 
@@ -19,9 +19,13 @@ exercises: 2
 
 ## Fonts and Encoding
 
-MISSING CONTENT
+When LaTeX was first developed, it was designed to work with a limited set of fonts and encodings.
+Accented letters required the use of special commands, such as `\c{c}` for "ç" or `\~{n}` for "ñ".
 
-::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenges
+
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
@@ -31,10 +35,10 @@ What is the output of this command?
 paste("This", "new", "lesson", "looks", "good")
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Output
- 
+
 ```output
 [1] "This new lesson looks good"
 ```
@@ -44,14 +48,14 @@ paste("This", "new", "lesson", "looks", "good")
 
 ## Challenge 2: how do you nest solutions within challenge blocks?
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `.md` files for episodes when you want static content
 - Use `.Rmd` files for episodes when you need to generate output

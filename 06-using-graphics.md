@@ -35,14 +35,14 @@ We can now include several types of images in our document, including:
 
 For the purposes of this lesson, we'll use the following image:
 
-![](fig/06-using-graphics/example-image.png){alt='Our example image.'}
+![](fig/06-using-graphics/example-image.PNG){alt='Our example image.'}
 
 ::: callout
 
 Download this image to your computer either be right-clicking on the image and selecting "Save
 Image As..." or by clicking on the image and saving it from the browser.
 
-You can use any image you like for this lesson. Just make sure to replace `example-image.png` with
+You can use any image you like for this lesson. Just make sure to replace `example-image.PNG` with
 the name of your image in the following examples.
 
 :::
@@ -52,7 +52,7 @@ the name of your image in the following examples.
 In order to incorporate an image into our document, we'll need to upload it to Overleaf. We can do
 this by clicking on the "Upload" icon on the upper left corner of the Overleaf editor:
 
-![](fig/06-using-graphics/overleaf-upload.png){alt='The upload icon in Overleaf.'}
+![](fig/06-using-graphics/overleaf-upload.PNG){alt='The upload icon in Overleaf.'}
 
 We can then either drag and drop the image into the upload window or click on the "Select files"
 button to choose the image from our computer.
@@ -72,7 +72,7 @@ command:
 We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
-\includegraphics{example-image.png}
+\includegraphics{example-image.PNG}
 ```
 
 Your document should now look like this:
@@ -98,7 +98,7 @@ image:
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=4cm]{example-image.png}
+\includegraphics[height=4cm]{example-image.PNG}
 
 Other possible options include:
 
@@ -139,7 +139,7 @@ By placing the \cmd{includegraphics} command inside a center environment, we can
 image on the page.
 
 \begin{center}
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
 \end{center}
 ```
 
@@ -163,7 +163,7 @@ To make an image float, we can use the `figure` environment:
 
 \begin{figure}
   \centering
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 ```
 
@@ -197,7 +197,7 @@ to use the `ht` option:
 ```latex
 \begin{figure}[ht]
   \centering
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 
 Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
@@ -223,7 +223,7 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 
 \begin{figure}
   \centering
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
   \caption{This is a caption for our image.}
 \end{figure}
 ```
@@ -231,6 +231,8 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 When we render the document, we can see that the caption appears below the image:
 
 ![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
+
+## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -336,13 +338,13 @@ Unordered lists are just a series of items preceded by a marker.
 We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
-\includegraphics{example-image.png}
+\includegraphics{example-image.PNG}
 
 \subsection{Small Image}
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=4cm]{example-image.png}
+\includegraphics[height=4cm]{example-image.PNG}
 
 \begin{itemize}
   \item width: the width of the image
@@ -359,7 +361,7 @@ By placing the \cmd{includegraphics} command inside a center environment, we can
 image on the page.
 
 \begin{center}
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
 \end{center}
 
 \subsection{Floating Image}
@@ -369,7 +371,7 @@ image on the page.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 
 Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
@@ -388,7 +390,7 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
   \caption{This is a caption for our image.}
 \end{figure}
 

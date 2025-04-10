@@ -1,5 +1,5 @@
 ---
-title: 'structuring-sources'
+title: 'Structuring Sources'
 teaching: 10
 exercises: 2
 ---
@@ -272,6 +272,8 @@ Note that we still need to put the content in the appropriate order. For example
 document starts.
 
 :::
+
+## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
