@@ -54,7 +54,7 @@ Let's look at the commands we've used so far:
 
 - `\documentclass{article}`: This command tells LaTeX what kind of document we are creating. (We
   might also use this command to instruct LaTeX to use a specific font size, paper size, or other
-  document settings.)
+  document settings - more on this later!)
 - `\begin{document}` and `\end{document}`: These commands mark the beginning and end of the
   document body. These commands are required in every LaTeX document and create the document body.
 
@@ -69,7 +69,7 @@ Everything before the `\begin{document}` command is called the *preamble*. The p
 you set up the document, including the document class, title, author, and any other settings you
 want to apply to the entire document.
 
-### Comments
+## Comments
 
 We can add comments to our document by using the `%` character. Anything after the `%` on a line is
 ignored by LaTeX. As in any other programming language, comments are useful for explaining what the
@@ -193,6 +193,8 @@ often resolve subsequent errors.
 
 There is an error in the following LaTeX document. Can you find it?
 
+(Feel to make a new project in Overleaf to test this out!)
+
 ```latex
 \documentclass{article}
 
@@ -246,8 +248,11 @@ the text correctly:
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - We can use Overleaf to edit and render LaTeX documents.
+- The `%` character is used to add comments to a LaTeX document.
 - LaTeX documents are a mixture of text and commands.
 - Commands start with a backslash `\` and sometimes have arguments in curly braces `{}`.
+- We can view errors by either clicking on the "Logs and output files" or hovering over the red
+    circle in the text editor.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
