@@ -48,6 +48,10 @@ page, a table of contents, or a list of figures.
 
 The `\include{filename}` command will do the same thing, but it will also start a new page before
 including the file. This is useful for including separate chapters or sections of your document.
+When you use `\include{filename}` you can also use
+`\includeonly{filename1,filename2}` in your preamble. This will then only insert
+the file mentioned but respect all other files regarding e.g. pagenumber,
+references etc.
 
 ### Input Example
 

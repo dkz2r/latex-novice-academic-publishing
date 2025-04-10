@@ -22,7 +22,8 @@ exercises: 2
 
 For bibliographic citations, while you can include references sources directly in our document,
 usually you will get that information from one or more external files. Such a file is a database
-of references, containing the information in a processing-friendly format. Using one or more
+of references, containing the information in a processing-friendly format (which
+is called `BibTeX`). Using one or more
 reference databases lets you re-use information and avoid manual formatting.
 
 ## Reference Databases (BiBTeX)
@@ -56,7 +57,8 @@ Create a new file in your project called `sample-references.bib` and add the fol
 ```
 
 This is an example of a BiBTeX file that contains a reference for an article and another for a
-book. Each entry type starts with a the `@` symbol, and all information appears within a pair of
+book. Each entry type starts with a the `@` symbol, followed by the type of the
+referencing item (e.g. `article`) and all information appears within a pair of
 curly braces `{}`.
 
 The various fields are given in key-value format. Exactly which fields you need to give depends on
@@ -96,6 +98,7 @@ At the top of our `main.tex` file, we'll add a line to import biblatex:
 \usepackage[style=authoryear]{biblatex}
 \addbibresource{sample-references.bib}
 ```
+Do not forget to write the suffix of your referencing file, too (`.bib`).
 
 Then, at the bottom of your `main.tex` file, add the following lines:
 
@@ -103,7 +106,7 @@ Then, at the bottom of your `main.tex` file, add the following lines:
 \printbibliography
 ```
 
-And... nothing? Right, because we haven't cited anything in our document yet. Let's add a citation:
+And... nothing? Right, because we haven’t cited anything in our document yet. Let’s add a citation:
 
 ```latex
 \section{Reference Databases}
@@ -111,17 +114,16 @@ And... nothing? Right, because we haven't cited anything in our document yet. Le
 One of the best features of LaTeX when writing academic documents is the ability to easily and
 confidently \kw{cite references}.
 
-We can cite the article by Thomas \autocite{Thomas2008} and it will show up in the references.
-```
+We can cite the article by Thomas (e.g. with `\autocite{Thomas2008}`) and it will show up in the references.
 
 You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference
 now appears at the end of the document. `\autocite` is a command that automatically chooses the
 citation style for you.
 
-Let's explore some of the other citation commands available in `biblatex`:
+Let’s explore some of the other citation commands available in `biblatex`:
 
-- `\cite{key}`: Cite the reference with the given key.
-- `\cites{key1}[key2]`: Cite multiple references.
+- `\cite{key}` or `\cite{key1,key2}`: Cite the reference with the given key.
+- `\cites{key1}{key2}{key-n}`: Cite multiple references.
 - `\parentcite{key}`: Cite the parent reference of the given key.
 - `\autocite{key}`: Automatically choose the citation style.
 - `\smartcite{key}`: Automatically choose the citation style, but with more control.
@@ -130,9 +132,43 @@ Let's explore some of the other citation commands available in `biblatex`:
 ```latex
 A plain citation looks like this \cite{Graham1995}, while multiple citations look like this
 \cites{Graham1995}[see][p. 42]{Thomas2008}. We already used autocite, but we can also use the
-similar smartcite \smartcite{Graham1995}, which gives us more control with additional options like
-\smartcite[see][p. 42]{Thomas2008} or \smartcite[see][]{Thomas2008}.
+similar smartcite \smartcite{Graham1995}. The benefit with smartcite is that you
+can setup that e.g. all references should go into a footnote. You can continue
+using smartcite when you are *in* a footnote and it will then detect that there
+is no need for creating another footnote but behaving like autocite.
 ```
+
+
+#### Good to know
+
+If you want to have all entries of your referencing file in your bibliography,
+you can either go with `\cite{key1,key2,.....}` for all entries or you type
+`\cite{*}`.
+This will print all entries first in your text section and puts them into the
+bibliography. You can also go with `\nocite{*}` then the reference is only
+internally called and put into the bibliography. 
+
+
+
+It is always good to tidy up your `.bib`-file and use the fields accordingly. In
+case you want to omit certain fields in your bibliography you can do so on the
+fly:
+```latex 
+\AtEveryBibitem{
+  \clearfield{url}
+  \clearfield{month}
+  \clearfield{note}
+  \clearfield{isbn}
+  \clearname{translator}
+  \clearlist{language}
+}
+```
+
+With this command you will delete the content of the fields in the bibliography.
+Note, that there is `\clear*field*`, `\clear*name*` and `\clear*list*`.
+
+
+
 
 ### natbib
 
@@ -182,12 +218,17 @@ A plain citation looks like this \citep{Graham1995}, while multiple citations lo
 gives us a textual citation, or \citealt{Thomas2008}, which gives us a citation without parentheses.
 ```
 
+
+
 :::
+
 
 ::: callout
 
 There are many different bibliography styles available, and you can find a list of them at
 [CTAN](https://ctan.org/topic/biblio).
+Check if one of those bibligraphy and citation styles meets your requirements.
+If you want to finetune an existing one we suggest to take a look at [biblatex-ext](https://texdoc.org/serve/biblatex-ext/0).
 
 :::
 
