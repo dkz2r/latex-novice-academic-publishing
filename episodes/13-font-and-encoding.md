@@ -1,5 +1,5 @@
 ---
-title: 'font-and-encoding'
+title: 'Fonts and Encodings'
 teaching: 10
 exercises: 2
 ---
@@ -19,7 +19,9 @@ exercises: 2
 
 ## Fonts and Encoding
 
-MISSING CONTENT
+When LaTeX was first developed, it was designed to work with a limited set of fonts and encodings.
+Accented letters required the use of special commands, such as `\c{c}` for "ç" or `\~{n}` for "ñ".
+
 
 ## Challenges
 

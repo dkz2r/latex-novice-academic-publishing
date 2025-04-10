@@ -1,5 +1,5 @@
 ---
-title: 'structuring-sources'
+title: 'Structuring Sources'
 teaching: 10
 exercises: 2
 ---

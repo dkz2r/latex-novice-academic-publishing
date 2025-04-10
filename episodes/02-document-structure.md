@@ -154,6 +154,8 @@ editor:
 
 ![Error message on Hover](fig/02-document-structure/document-error-hover.png){alt='Error message on Hover.'}
 
+We'll look more into how we can read and fix errors [in a later episode](/14-error-handling.html).
+
 ### Fixing Errors
 
 Our tiny typo seems to have caused quite a number of issues! This can happen, the important thing

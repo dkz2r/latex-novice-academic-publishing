@@ -1,5 +1,5 @@
 ---
-title: 'documentation-and-finding-help'
+title: 'Documentation and Finding Help'
 teaching: 10
 exercises: 2
 ---
