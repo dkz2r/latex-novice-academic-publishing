@@ -356,13 +356,13 @@ Unordered lists are just a series of items preceded by a marker.
 We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
-\includegraphics{example-image.png}
+\includegraphics{example-image.PNG}
 
 \subsection{Small Image}
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=4cm]{example-image.png}
+\includegraphics[height=4cm]{example-image.PNG}
 
 \begin{itemize}
   \item width: the width of the image
@@ -379,7 +379,7 @@ By placing the \cmd{includegraphics} command inside a center environment, we can
 image on the page.
 
 \begin{center}
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
 \end{center}
 
 \subsection{Floating Image}
@@ -389,7 +389,7 @@ image on the page.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 
 Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
@@ -408,7 +408,7 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[height=2cm]{example-image.png}
+  \includegraphics[height=2cm]{example-image.PNG}
   \caption{This is a caption for our image.}
 \end{figure}
 

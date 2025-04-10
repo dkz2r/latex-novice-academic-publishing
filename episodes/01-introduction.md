@@ -43,7 +43,7 @@ that says 'New Project' in the top left corner of the screen. This will open a d
 a number of options. We'll select 'Blank Project' from this menu. Name the project 'LaTeX Workshop'
 and click 'Create'.
 
-![The Overleaf Main Page](fig/01-introduction/overleaf-main-page.png){alt='The Overleaf main page.'}
+![The Overleaf Main Page](fig/01-introduction/overleaf-main-page.PNG){alt='The Overleaf main page.'}
 
 ## The Overleaf Interface
 Once the project is created, you'll see that it isn't quite blank. There are four main panels when
@@ -54,7 +54,7 @@ you open a new project in Overleaf:
 - 3. The *Text Editor* in the middle, where you can write your LaTeX code.
 - 4. The *Preview Pane* on the right, which shows a preview of the compiled document.
 
-![The Overleaf Interface](fig/01-introduction/overleaf-interface.png){alt='The Overleaf interface.'}
+![The Overleaf Interface](fig/01-introduction/overleaf-interface.PNG){alt='The Overleaf interface.'}
 
 You'll notice that our project isn't quite blank, as we have a file called `main.tex` open in the
 text editor with some LaTeX code already written. This is a basic LaTeX document, with some of the
