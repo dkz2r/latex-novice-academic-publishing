@@ -2,27 +2,53 @@
 title: Setup
 ---
 
-This workshop will demonstrate how to use [Overleaf](https://www.overleaf.com/) in order to write
-and render LaTeX documents. Overleaf is a cloud-based LaTeX editor, meaning that you can access it
-from any computer with an internet connection, without the need to install any additional software.
-As part of the preparation for workshop, you should register for an account on Overleaf.
+FIXME: Setup instructions live in this document. Please specify the tools and
+the data sets the Learner needs to have installed.
+
+## Data Sets
+
+<!--
+FIXME: place any data you want learners to use in `episodes/data` and then use
+       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
+       link to it, replacing the example.com link.
+-->
+Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
 
 ## Software Setup
 
-Optionally, it is possible to write and render LaTeX documents on your local machine. You will
-need both a TeX system and an text editor installed. The TeX system is responsible for compiling
-and rendering the LaTeX document, while the text editor is where you will write the LaTeX code.
-
-There are two popular TeX systems: [TeX Live](https://tug.org/texlive/) and
-[MiKTeX](https://miktex.org/). Each of these has it's own advantages and disadvantages. A detailed
-comparison can be found on [The LaTeX Project Website](https://www.latex-project.org/get/).
-
-
 ::::::::::::::::::::::::::::::::::::::: discussion
 
-### Using a Local Setup
+### Details
 
-If you would like to use a local setup you are welcome to do so, however be aware that our live
-demonstations and all images in this lesson are based on the Overleaf Interface.
+Setup for different systems can be presented in dropdown menus via a `spoiler`
+tag. They will join to this discussion block, so you can give a general overview
+of the software used in this lesson here and fill out the individual operating
+systems (and potentially add more, e.g. online setup) in the solutions blocks.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::: spoiler
+
+### Windows
+
+Use PuTTY
+
+::::::::::::::::::::::::
+
+:::::::::::::::: spoiler
+
+### MacOS
+
+Use Terminal.app
+
+::::::::::::::::::::::::
+
+
+:::::::::::::::: spoiler
+
+### Linux
+
+Use Terminal
+
+::::::::::::::::::::::::
+
