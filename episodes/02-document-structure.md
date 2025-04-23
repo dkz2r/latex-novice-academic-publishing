@@ -60,8 +60,8 @@ Let's look at the commands we've used so far:
 
 ::: callout
 
-You can have multiple \begin{...} and \end{...} pairs in a single LaTeX document, but
-you must have exactly as many \begin{...} commands as \end{...} commands.
+You can have multiple `\begin{...}` and `\end{...}` pairs in a single LaTeX document, but
+you must have exactly as many `\begin{...}` commands as `\end{...}` commands.
 
 :::
 
