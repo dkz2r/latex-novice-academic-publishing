@@ -315,7 +315,7 @@ Moreover, Option D gives us the same result as Option A and Option C, although w
 ::::::::::::::::::::::::::::::::::::: challenge
 
 
-## Challenge 4: One line of code with paragraphs.
+## Challenge 4: One line of code with paragraphs and special characters.
 
 How would I display the following text in a LaTeX document but using just one line of code?
 
