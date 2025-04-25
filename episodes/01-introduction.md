@@ -97,13 +97,87 @@ Creating a new project:
 - Click "Create".
 
 Closing and reopening the "LaTeX Workshop" project:
+
 - Click the "house" icon on the top menu bar to return to the main Overleaf page.
 - Click on the "LaTeX Workshop" project to reopen it.
 
 Deleting the "A test project" project:
+
 - Click the "house" icon on the top menu bar to return to the main Overleaf page.
 - Click the "trash can" icon next to the "A test project" project.
 - Confirm that you want to delete the project.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Copy your current project, then delete it
+
+See if you can create a copy of your current project "LaTeX Workshop" in Overleaf. Name it "A copy project". Then close the project
+and reopen the "LaTeX Workshop" project. Finally, delete the "A test project" project.
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+Creating a copy project:
+
+- Click the "house" icon on the top menu bar to return to the main Overleaf page.
+- For the "LaTeX Workshop" project, navigate to the right column "Actions". 
+- Click on the first button, the "copy" button, in the "Actions" column for the "LaTeX Workshop" project.
+- Enter in "A copy project" as the project name.
+- Click "Copy".
+
+Closing and reopening the "LaTeX Workshop" project:
+
+- Click the "house" icon on the top menu bar to return to the main Overleaf page.
+- Click on the "LaTeX Workshop" project to reopen it.
+
+Deleting the "A copy project" project:
+
+- Click the "house" icon on the top menu bar to return to the main Overleaf page.
+- Click the "trash can" icon next to the "A copy project" project.
+- Confirm that you want to delete the project.
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Three ways to download your project as pdf
+
+See if you can download your new project "LaTeX Workshop" in Overleaf as a pdf file. 
+In your current project "LaTeX Workshop", navigate to the *Preview Pane* on the right. 
+At the panel bar for the *Preview Pane*, find the button to download a pdf. 
+If you have figured out the described way for downloading the pdf, try to find two alternative options on how to save your project as a pdf. 
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+
+Option A as described in the task: 
+
+- In "LaTeX Workshop", navigate to the *Preview Pane* on the right. 
+- At the panel bar for the *Preview Pane*, there is a button with an arrow pointing downwards. 
+- If you hover over this button, it displays "Download PDF". 
+- Click on that button and a pdf of your current project "LaTeX Workshop" will be downloaded.
+
+Option B: 
+
+- In "LaTeX Workshop", click on the top left icon which contains the Overleaf symbol with the word "Menu". 
+- The Menu sidebar will open on the left. 
+- In the first paragraph "Downloads", click on the "pdf" button on the right to download your current project "LaTeX Workshop".
+
+Option C: 
+
+- Click the "house" icon on the top menu bar to return to the main Overleaf page.
+- In "All projects", you can find your project "LaTeX Workshop". 
+- Navigate to the column "Actions" on the right side.
+- If you hover over the third button, it says "Download PDF". 
+- Click on this button to download your current project "LaTeX Workshop". 
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
