@@ -116,7 +116,9 @@ what happens.
 
 You should see that the two lines of text are now displayed on the same line. This is because LaTeX
 treats the two lines as part of the same paragraph. If you want to start a new paragraph, you need
-to leave a blank line between the two paragraphs.
+to leave a blank line between the two paragraphs. Instead of using an empty line, there is also 
+the command `\par` that leads you to the same result of creating a new paragraph. 
+More on this in one of the challenges below.  
 
 ## Special Characters
 
