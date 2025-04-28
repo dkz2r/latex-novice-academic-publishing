@@ -130,7 +130,7 @@ times. For example, in our table above, we can instead write:
 
 :::
 
-### Adding Horizontal Lines
+## Adding Horizontal Lines
 
 We're going to introduce another package here: `booktabs`. This package provides a few commands
 that make it easier to create professional looking tables. To use it, add the following to your
@@ -174,7 +174,7 @@ avoided.
 
 :::
 
-### Partial Horizontal Lines
+## Partial Horizontal Lines
 
 Another useful feature of `booktabs` is the ability to create partial horizontal lines with the
 `\cmidrule` command. This command accepts the arguments {number-number}, where the first number is
@@ -197,7 +197,7 @@ the column to start the line and the second number is the column to end the line
 
 ```
 
-### Merging Cells
+## Merging Cells
 
 We can merge cells horizontally using the `\multicolumn` command. This command takes three
 arguments:
