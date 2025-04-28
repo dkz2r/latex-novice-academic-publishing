@@ -265,31 +265,130 @@ place a float at the bottom of the page, even if there is not enough space for i
 
 ## Challenge 1: Can you do it?
 
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+Create a new document in Overleaf and add the "example-image" image to it. Using the `graphicx`
+package, how would you rotate the image 45 degrees?
 
 :::::::::::::::::::::::: solution
 
-## Output
+We can use the `angle` option in the `\includegraphics` command to rotate the image:
 
-```output
-[1] "This new lesson looks good"
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\includegraphics[angle=45]{example-image.png}
+
+\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2: Making a command for images
+
+In the previous section, we created a command to highlight keywords in our document. Let's create
+a new command to make it easier to include images in our document. We'll create a command called
+`\centeredimage` that takes two arguments: the image filename and the caption. The resulting image
+should be centered on the page and have a caption below it. Use the example-image.png from earlier
+in this episode.
+
+Your file should look like this:
+
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+% Define our new command
+%%% YOUR COMMAND HERE %%%
+
+\begin{document}
+
+\centeredimage{example-image.png}{"My Image"}
+\centeredimage{example-image.png}{"My Other Image"}
+
+\end{document}
+```
+
+And your output should look [like this](fig/06-using-graphics/challenge-image-command-output.PNG).
+
+Reminder: The syntax for creating a new command is:
+
+```latex
+\newcommand{\cmdname}[numargs]{definition}
+```
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+% Define our new command
+\newcommand{\centeredimage}[2]{
+  \begin{figure}
+    \centering
+    \includegraphics{#1}
+    \caption{#2}
+  \end{figure}
+}
+
+\begin{document}
+
+\centeredimage{example-image.png}{"My Image"}
+\centeredimage{example-image.png}{"My Other Image"}
+
+\end{document}
+```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Clipping and Trimming
+
+We didn't really talk about the `clip` and `trim` options in the `graphicx` package, but they are
+very useful for customizing the appearance of images.
+
+- The `clip` option allows us to clip the image to its bounding box, which can be useful for removing
+  unwanted parts of the image.
+- The `trim` option allows us to trim the image by a specified amount, which can be useful for
+  removing whitespace around the image.
+
+These options are generally used together. The `trim` option takes four arguments seperated by
+spaces, each indicating a direction to trim the image from. `clip` is a boolean option - if it is
+present, the image will be clipped.
+
+Using the `example-image` image, create a new document that uses the `clip` and `trim` options to
+display something like [this](fig/06-using-graphics/challenge-trimmed-image.PNG).
+
+(You don't have to be exact, just make sure to use the `clip` and `trim` options.)
+
+:::::::::::::::::::::::: solution
+
+The parameters in the `trim` option are in the order of left, bottom, right, and top. The values
+in this example are in centimeters, but you can also use other units like inches or millimeters.
+
+Here's one way to do it:
+
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\includegraphics[clip, trim=0.5cm 0.5cm 6.5cm 4cm]{example-image.PNG}
+\includegraphics[clip, trim=3cm 3cm 3cm 3cm]{example-image.PNG}
+\includegraphics[clip, trim=3cm 4cm 4cm 0.5cm]{example-image.PNG}
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
