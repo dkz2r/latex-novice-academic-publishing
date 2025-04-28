@@ -96,6 +96,10 @@ placeholder image in your document that you can replace later.
 
 ### Adjusting the appearance of the image
 
+But wait! The image is too big, and it doesn't fit on the page, so LaTeX has moved it to the next
+page. Since the image is a little too large to fit on the same page as the text, LaTeX has moved it
+automatically to the next page. Let's address that by making the image smaller.
+
 We can adjust the appearance of the image by passing options to the `\includegraphics` command, just
 like we did earlier with the `geometry` package. For example, we can specify the height of the
 image:
@@ -105,7 +109,7 @@ image:
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=4cm]{example-image.PNG}
+\includegraphics[height=2cm]{example-image.PNG}
 
 Other possible options include:
 
@@ -207,7 +211,7 @@ to use the `ht` option:
   \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 
-Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
+Control the position of a floating image by passing parameters to the \cmd{figure} environment:
 
 \begin{itemize}
   \item h: Place the float "here" (where it appears in the code)
@@ -238,6 +242,13 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 When we render the document, we can see that the caption appears below the image:
 
 ![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
+
+::: callout
+
+Note that the caption is automatically numbered "Figure 1". Very handy! We'll see how we can
+automatically reference figures and tables in a later episode.
+
+:::
 
 ::: spoiler
 
@@ -390,7 +401,7 @@ image on the page.
   \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 
-Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
+Control the position of a floating image by passing parameters to the \cmd{figure} environment:
 
 \begin{itemize}
   \item h: Place the float "here" (where it appears in the code)
