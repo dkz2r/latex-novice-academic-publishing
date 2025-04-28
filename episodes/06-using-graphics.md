@@ -232,6 +232,15 @@ When we render the document, we can see that the caption appears below the image
 
 ![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
 
+::: spoiler
+
+Another package that we can use to work with images in LaTeX is the `hvfloat` package. This package
+is an alterantive way of controlling the position of floating elemnents in LaTeX, like images
+and tables. It provides a more flexible way of positioning floats allowing us to, for example,
+place a float at the bottom of the page, even if there is not enough space for it to fit.
+
+:::
+
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
