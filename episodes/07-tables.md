@@ -237,33 +237,49 @@ table to create the impression of vertical merging.
 
 ## Challenge 1: Can you do it?
 
-Try to make the following table in LaTeX:
+Try to replicate the following table in LaTeX:
 
-| Make | Model | Year |
-|------|-------|------|
-| Volkswagen | Golf | 84,282 |
-| Fiat | 500 | 52,337 |
-| Opel | Corsa | 50,191 |
-| Mini | Mini | 40,142 |
-| Volkswagen | Passat | 39,261 |
+| Make        | Model     | Sold     |
+|-------------|-----------|----------|
+| Volkswagen  | Golf      | 7,687    |
+| Skoda       | Octavia   | 4,078    |
+| Seat        | Leon      | 3,922    |
+| Volkswagen  | Passat    | 3,776    |
+| Mercedes    | GLK,GLC   | 3,143    |
+|             | **Total** | *22,606* |
 
+Your LaTaX version should look something like [this](fig/07-tables/challenge-make-a-table.PNG)
+
+Note that the last row is a bit different from the others. The first two columns are merged, the
+text "Total" is right-aligned and bold, and the value in the last column is italicized.
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
 ```latex
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
 \begin{tabular}{lll}
   \toprule
-  Make        & Model & Year  \\
+  Make        & Model   & Sold   \\
   \midrule
-  Volkswagen  & Golf  & 84,282 \\
-  Fiat        & 500   & 52,337 \\
-  Opel        & Corsa & 50,191 \\
-  Mini        & Mini  & 40,142 \\
-  Volkswagen  & Passat& 39,261 \\
+  Volkswagen  & Golf    & 7,687 \\
+  Skoda       & Octavia & 4,078 \\
+  Seat        & Leon    & 3,922 \\
+  Volkswagen  & Passat  & 3,776 \\
+  Mercedes    & GLK,GLC & 3,143 \\
+  \midrule
+  \multicolumn{2}{r}{\textbf{Total}} & \textit{22,606} \\
   \bottomrule
 \end{tabular}
+
+\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
@@ -272,14 +288,115 @@ Try to make the following table in LaTeX:
 ## Challenge 2: Are Tables like Images?
 
 When we were working with graphics in the previous section, we learned about adding captions to
-images. Can you add a caption to the table you created in Challenge 1 that says "Top 5 Car Models
-in Germany (2024)"
+images. Can you add a caption to the table you created in Challenge 1 that says "Car Sales by
+Make/Model (January 2025)"? (Make sure the table is centered on the page!)
+
+*Hint: We want to make sure the caption stays with the table, so we should put the table inside an
+environment. For images we use the "figure" environment, but for tables we can use the "table"
+environment.*
+
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+## Answer
+
+```latex
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
+\begin{table}[ht]
+
+  \begin{tabular}{lll}
+    \centering % Center the table
+    \toprule
+    Make        & Model   & Sold   \\
+    \midrule
+    Volkswagen  & Golf    & 7,687 \\
+    Skoda       & Octavia & 4,078 \\
+    Seat        & Leon    & 3,922 \\
+    Volkswagen  & Passat  & 3,776 \\
+    Mercedes    & GLK,GLC & 3,143 \\
+    \midrule
+    \multicolumn{2}{r}{\textbf{Total}} & \textit{22,606} \\
+    \bottomrule
+  \end{tabular}
+
+  \caption{Car Sales by Make/Model (January 2025)} % Add a caption to the table
+
+\end{table}
+
+\end{document}
+```
 
 :::::::::::::::::::::::::::::::::
+
+## Challenge 3: Making the Table Colorful
+
+We used the `xcolor` package to add color to our text in an earlier episode. Can you use the
+`xcolor` package to make the header and summary rows of the table in Challenge 1 a different color?
+What about changing the color of the text in the summary row? Can we make the rows of the table
+alternate colors?
+
+A few things that will help you:
+- We need to import the `xcolor` package in the preamble of our document.
+- The `xcolor` package doesn't automatically support coloring tables, so we need to add the `table`
+  option to the package import.
+- `\rowcolor{(<color>}`
+- `\rowcolors{<starting row number>}{<color1>}{<color2>}`
+- You can make lighter versions of colors by adding `!<percentage>` to the color name. For example,
+  `red!10` is a light red color, while `red!90` is a darker red color.
+
+There's no right answer to this challenge, so feel free to experiment with different colors!
+[Here's an example of what you can do.](fig/07-tables/challenge-colorful-table.PNG)
+
+
+:::::::::::::::::::::::: solution
+
+```latex
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[table]{xcolor} % Import xcolor with the table option
+
+\begin{document}
+
+\begin{table}[ht]
+  \centering
+  \rowcolors{2}{red!10}{gray!10} % Alternate row colors between red and gray
+  \begin{tabular}{lll}
+    \toprule
+    \rowcolor{green!20} % Set the header row color to green
+    Make          & Model            & Sold  \\
+    \midrule
+    Volkswagen    & Golf             & 7,687 \\
+    Skoda         & Octavia          & 4,078 \\
+    Seat          & Leon             & 3,922 \\
+    Volkswagen    & Passat           & 3,776 \\
+    Mercedes      & GLK,GLC          & 3,143 \\
+    \midrule
+    \rowcolor{blue!20} % Set the summary row color to blue
+    \multicolumn{2}{r}{
+      % Set the text color to blue and bold for the summary row
+      \textbf{\textcolor{blue!75}{Total}}} & \textit{\textcolor{blue!75}{22,606}} \\
+    \bottomrule
+  \end{tabular}
+
+  \caption{Car Sales by Make/Model (January 2025)} % Add a caption to the table
+
+\end{table}
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::::::::::::
+
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
