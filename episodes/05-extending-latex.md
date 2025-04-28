@@ -183,7 +183,7 @@ We can define as many commands as we like in the preamble of our document. Let's
 that we can use to highlight commands in the document:
 
 ```latex
-% Italics for commands
+% Italicise LaTeX commands
 \newcommand{\cmd}[1]{\textit{#1}}
 ```
 
@@ -268,6 +268,8 @@ After this episode, here is what our LaTeX document looks like:
 
 % Highlight Keywords using the \kw{} command
 \newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
+% Italicise LaTeX commands
+\newcommand{\cmd}[1]{\textit{#1}}
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here
