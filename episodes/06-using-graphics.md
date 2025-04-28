@@ -35,7 +35,7 @@ We can now include several types of images in our document, including:
 
 For the purposes of this lesson, we'll use the following image:
 
-![](fig/06-using-graphics/example-image.PNG){alt='Our example image.'}
+![](fig/06-using-graphics/example-image.png){alt='Our example image.'}
 
 ::: callout
 
