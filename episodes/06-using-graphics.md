@@ -61,6 +61,13 @@ Once you have uploaded the image, you should see it in the "Files" section of th
 
 ![](fig/06-using-graphics/overleaf-uploaded-image.PNG){alt='The uploaded image in Overleaf.'}
 
+::: spoiler
+
+You can also use the "From external URL" option to add an image directly from a URL, which would
+let you use an image from a website directly without having to download it first.
+
+:::
+
 ## Including an Image in a LaTeX Document
 
 Now that we have our image uploaded, we can include it in our document using the `\includegraphics`
