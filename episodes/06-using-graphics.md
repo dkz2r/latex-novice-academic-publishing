@@ -211,6 +211,22 @@ Control the position of a floating image by passing paratmeters to the \cmd{figu
 
 ```
 
+::: callout
+
+You can use the package `wrapfig` together with `graphicx` in your preamble.
+This makes the `wrapfigure` environment available and we can place an `\includegraphics` command inside it to create a figure around which text will be wrapped. Here is how we can specify a `wrapfigure` environment:
+
+```latex
+\begin{wrapfigure}[lineheight]{position}{width}
+  ...
+\end{wrapfigure}
+```
+
+We will describe the `wrapfigure` environment in more detail in one of the challenges below. 
+:::
+
+
+
 ### Adding a Caption
 
 We can add a caption to our image by using the `\caption` command inside of the `figure` environment:
@@ -238,28 +254,144 @@ When we render the document, we can see that the caption appears below the image
 
 ## Challenge 1: Can you do it?
 
-What is the output of this command?
+Consider again our running example of `example-image.PNG`. 
+Include this image into your LaTeX document by using the `figure` environment. 
+Make sure that your image is centered and rotate the image by 45 degree.
+Add the following caption to your image: "This caption has a **bold** word included." 
+How would your LaTeX look like?
+ 
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```output
-[1] "This new lesson looks good"
+We use the `\centering` command in the `figure` environment and specify `angle=45` to rotate the image. 
+
+```latex
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{figure}
+  \centering
+  \includegraphics[angle=45]{example-image.PNG}
+  \caption{This caption has a \textbf{bold} word included.}
+\end{figure}
+
+\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 2: What is wrong here?
+
+Have a look at the following LaTeX code: 
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\centering
+\begin{figure}
+  \includegraphics[height=3cm, draft]{example-image.PNG}
+  \caption{This caption has a \textbf{bold} word included.}
+\end{figure}
+
+\end{document}
+```
+
+Can you spot all the errors in this LaTeX code? 
+Change the code such that the image is displayed with a height of 3cm, width of 4cm and centered.  
+
+
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+First, the command `\usepackage{graphicx}` is missing in the preamble. 
+Second, the `\centering` command has to be placed into the `figure` environment. 
+Third, the `draft` argument has to be removed from and `width=4cm` added to the `\includegraphics` command. 
+
+The corrected LaTeX code looks like this: 
+
+```latex
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=3cm, width=4cm]{example-image.PNG}
+  \caption{This caption has a \textbf{bold} word included.}
+\end{figure}
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 3: The `wrapfig` package.
+
+
+Have a look at the following LaTeX code that uses the `wrapfigure` environment. 
+Can you already guess how the images will be displayed in your document?
+
+
+```latex
+\documentclass{article}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{wrapfigure}{r}{0.1\textwidth} 
+    \centering
+    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
+\end{wrapfigure}
+
+The package wrapfigure lets you position images around your text. 
+That comes in handy if you want to integrate images seamlessly into your written sentences. Therefore, I add a few more sentences here to showcase this integration to you.
+
+
+
+\begin{wrapfigure}{l}{0.1\textwidth}
+    \centering
+    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
+\end{wrapfigure}
+
+Be careful, you need both packages, wrapfig and graphicx, in your preamble to display your images and wrap them accordingly. There are several ways to display images, 
+depending on the arguments you specify. For 
+instance, you can scale the image width according to the width of the text.  
+
+
+\end{document}
+```
+
+:::::::::::::::::::::::: solution
+
+
+The first image will be placed at the right of the following paragraph of text as `{r}` is specified as an argument within the first `wrapfigure` environment. 
+The second image will be placed at the left of its following paragraph of text as `{l}` is specified as an argument within the second `wrapfigure` environment.  
+Moreover, both images are scaled by being 0.1 of the width of the text in your document.  
+
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
