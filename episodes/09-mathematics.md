@@ -213,8 +213,13 @@ The code is missing the `\frac` command to create a fraction. The correct code s
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Inline math mode is marked with `$ ... $` or `\(...\`
+- Inline math mode is marked with `$ ... $` or `\(...\)`
 - Display math mode is marked with `\[ ... \]`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::: spoiler
+
+After this episode, [here is what our LaTeX document looks like](files/document_state/ep-09.tex).
+
+:::
