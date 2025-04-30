@@ -277,30 +277,88 @@ document starts.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1: Refactor Your Document with Multiple Files
 
-What is the output of this command?
+Refactor the following LaTeX document to use multiple files.
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+```latex
+% This is the main document: main.tex
+
+\documentclass{article}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \huge
+    \textbf{My Custom LaTeX Title Page}
+
+    \vspace{1cm} % Space between title and subtitle
+    \normalsize
+    \textit{A Sample Document with Custom Formatting}
+
+    \vfill % Fill remaining space
+    \large
+    January 1, 2025
+\end{titlepage}
+
+
+\section{Tables}
+
+\begin{tabular}{lll}
+  Fruit  & Quantity & Price \\
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+\end{tabular}
+
+\section{Graphics}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=2cm]{example-image.PNG}
+  \caption{This is a caption for our image.}
+\end{figure}
+
+
+\end{document}
 ```
+
+
+- Separate the content into different files for the sections by `tables.tex` and `graphics.tex`.
+- Organize the file for the titlepage in a folder named "includes" and name the file `titlepage.tex`.
+- Organize the files for tables and graphics in a folder named "content".
+- Use the `\input` command to include the titlepage and the content in your `main.tex` document.
+
+
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```output
-[1] "This new lesson looks good"
+```latex
+% This is the main document: main.tex
+
+\documentclass{article}
+
+
+\begin{document}
+
+% Include title page
+\input{includes/titlepage}
+
+% Include content from different files in the "content" folder
+\input{content/sections}
+\input{content/lists}
+\input{content/graphics}
+\input{content/tables}
+\input{content/cross-references}
+\input{content/math}
+\input{content/text-and-spacing}
+
+\end{document}
 ```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution
-
-You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
