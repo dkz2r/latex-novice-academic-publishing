@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage[style=authoryear]{biblatex}
+
+\addbibresource{references.bib}
+
+\title{Structuring Sources}
+\author{Person Personname}
+\date{April 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\lipsum[1][1-5]
+\autocite{dupont2021}
+\lipsum[1][6-15]
+\autocite{jansen2022}
+
+\section{Model Architecture}
+\lipsum[2]
+
+\subsection{First Model}
+\lipsum[3][1-5]
+
+\subsection{Second Model}
+\lipsum[3][5-10]
+
+\section{Model Results}
+\lipsum[4]
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Group} & \textbf{Model} & \textbf{F1 Score} & \textbf{Train Time (s)} \\
+\midrule
+A & Random Forest     & 0.94 & 15.3 \\
+A & SVM (RBF)         & 0.90 & 22.1 \\
+A & Logistic Regression & 0.87 & 5.6 \\
+B & Neural Network     & 0.96 & 45.7 \\
+B & Gradient Boosting  & 0.93 & 18.4 \\
+\bottomrule
+\end{tabular}
+\caption{Performance Metrics of Machine Learning Models by Group}
+\label{tab:model_results}
+\end{table}
+
+\lipsum[5][1]
+\autocite{ivanova2020}
+\lipsum[5][2]
+(See Table  \ref{tab:model_results}).
+\lipsum[5][6-10]
+
+\section{Conclusion}
+\lipsum[6-7]
+
+\printbibliography
+
+\end{document}
