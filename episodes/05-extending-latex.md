@@ -91,13 +91,13 @@ The `\newcommand` syntax looks like this:
 ::: callout
 
 We could be even more flexible by using an *optional* argument in our `\newcommand`.
-Then the general structure of the command looks like this 
+Then the general structure of the command looks like this
 
 ```latex
 \newcommand{\commandname}[number of arguments][default value for the first argument]{definition}
 ```
 
-You can learn more about optional arguments in the last challenge of this episode. 
+You can learn more about optional arguments in the last challenge of this episode.
 
 :::
 
@@ -117,7 +117,8 @@ I can add content to my first \textbf{\underline{section}}!
 
 We can add this to each of our important terms in our document - maybe it looks something like this:
 
-![](fig/05-extending-latex/kw-highlight-underline.PNG){alt='Our document with keywords highlighted in bold and underlined.'}
+![](fig/05-extending-latex/kw-highlight-underline.PNG){alt='Our document with keywords highlighted
+in bold and underlined.'}
 
 
 In a long document this would quickly become tedious. Instead, let's define a new command called
@@ -176,7 +177,8 @@ Let's replace our `\kw` command with this new definition:
 When we recompile the document we should see that the formatting of our keywords has changed all at
 once:
 
-![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in blue.'}
+![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in
+blue.'}
 
 ## Defining Multiple Commands
 
@@ -253,22 +255,24 @@ use it like this:
 
 ## Challenge 3: Can you write your own command with two arguments?
 
-Suppose you want to define a new command that takes as input two words as arguments. 
+Suppose you want to define a new command that takes as input two words as arguments.
 This first word shall be written **bold** while the second word shall be written *italic*.
 Moreover, the first and the second word are separated by a comma followed by a whitespace.
 
 Use `\newcommand` to define this command that takes two arguments as inputs and name it `\bo_it`.
 Write the following sentence into your LaTeX document using your new command `\bo_it`:
 
-This newly defined command highlights these two words: **Apple**, *Banana*. 
+This newly defined command highlights these two words: **Apple**, *Banana*.
 
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-The new `\boit` command would take two arguments: the first argument would be used with `\tetxbf{#1}` to make the first word appear **bold**, and the second argument would be used with `\tetxit{#2}` to make the first word appear *italic*. 
-Between `\tetxbf{#1}` and `\tetxit{#2}`, we would write `, ` to separate both words. 
+The new `\boit` command would take two arguments: the first argument would be used with
+`\tetxbf{#1}` to make the first word appear **bold**, and the second argument would be used with
+`\tetxit{#2}` to make the first word appear *italic*.
+Between `\tetxbf{#1}` and `\tetxit{#2}`, we would write `, ` to separate both words.
 We would use the new command like this:
 
 ```latex
@@ -276,7 +280,7 @@ We would use the new command like this:
 
 \newcommand{\boit}[2]{\textbf{#1}, \textit{#2}}
 
-\begin{document} 
+\begin{document}
 
 This newly defined command highlights these two words: \boit{Apple}{Banana}.
 
@@ -293,22 +297,24 @@ This newly defined command highlights these two words: \boit{Apple}{Banana}.
 ## Challenge 4: Optional arguments
 
 New commands can be made even more flexible by defining commands that take an optional argument.
-Then the general LaTeX code for this looks like this: 
+Then the general LaTeX code for this looks like this:
 
 ```latex
 \newcommand{\commandname}[number of arguments][default value for the first argument]{definition}
 ```
 
-The optional argument can be accessed and changed by writing square brackets `[]` directly after the `\commandname` in the body of your document.
+The optional argument can be accessed and changed by writing square brackets `[]` directly after
+the `\commandname` in the body of your document.
 
-Consider the following, modified example of our `\kw` from before where we now use an optional argument.
+Consider the following, modified example of our `\kw` from before where we now use an optional
+argument.
 
 ```latex
 \newcommand{\kw}[2][red]{\textcolor{#1}{\textbf{#2}}}
 ```
 
-In your LaTeX file, use the new `\kw` command to write down the words "Banana" in yellow, "Apple" in red, and 
-"Blueberry" in blue. Each word should be written in a separate line. 
+In your LaTeX file, use the new `\kw` command to write down the words "Banana" in yellow, "Apple"
+in red, and "Blueberry" in blue. Each word should be written in a separate line.
 
 :::::::::::::::::::::::: solution
 
@@ -316,15 +322,15 @@ In your LaTeX file, use the new `\kw` command to write down the words "Banana" i
 
 We can exploit the optional argument in `\kw` to write down the given words very efficiently.
 For the first word, we change the optional argument to "yellow".
-For the second word, we stick with the default value of "red". 
-For the third word, we change the optional argument to "blue".  
+For the second word, we stick with the default value of "red".
+For the third word, we change the optional argument to "blue".
 
 ```latex
 \documentclass{article}
 
 \newcommand{\kw}[2][red]{\textcolor{#1}{\textbf{#2}}}
 
-\begin{document} 
+\begin{document}
 
 \kw[yellow]{Banana}
 
