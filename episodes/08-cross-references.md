@@ -81,31 +81,57 @@ the appropriate name. For more details about this, refer to the references secti
 
 ## Challenge 1: Can you do it?
 
-What is the output of this command?
+In your LaTeX document, include the image `example-image.PNG` and cross-reference it in the text. Make sure the figure has a caption and is labeled and centered properly. 
+Use the `\includegraphics` command to add the image and wrap it in a `figure` environment.
+Then, refer to it in the text using the `\ref` command.
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+You may find the following LaTeX template helpful. 
+
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\section{Cross-referencing Figures}
+
+
+
+\end{document}
 ```
+
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```output
-[1] "This new lesson looks good"
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\section{Cross-referencing Figures}
+
+Here is an example of a figure in the document. We will refer to it later in the text.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=4cm]{example-image.PNG} 
+  \caption{This is an example figure.}
+  \label{fig:example-image}
+\end{figure}
+
+In the text, we can refer to the figure using its label: Figure \ref{fig:example-image}.
+
+\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
