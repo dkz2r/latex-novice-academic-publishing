@@ -66,6 +66,14 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \]
 ```
 
+::: spoiler
+
+Math Mode in LaTeX is not just for LaTeX users! It is also used other tools like Jupyter Notebooks,
+R Markdown and many markdown processors. There are even extensions for Google Docs and Microsoft
+Word that allow you to use LaTeX math mode.
+
+:::
+
 ### Math in Enviroments
 
 We can include math in an environment called `equation` to number the equations:
