@@ -810,56 +810,8 @@ list?</p>
 </button>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
-<p>After this episode, here is what our LaTeX document looks like:</p>
-<div class="codewrapper sourceCode" id="cb9">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>Hello World!</span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>This is my first LaTeX document.</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>I can add content to my first section!</span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
-<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>I can put a subsection inside my first section.</span>
-<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a></span>
-<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
-<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>There are two types of lists: ordered and unordered.</span>
-<span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a></span>
-<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
-<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a></span>
-<span id="cb9-27"><a href="#cb9-27" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
-<span id="cb9-28"><a href="#cb9-28" tabindex="-1"></a></span>
-<span id="cb9-29"><a href="#cb9-29" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb9-30"><a href="#cb9-30" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a></span>
-<span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
-<span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a></span>
-<span id="cb9-37"><a href="#cb9-37" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
-<span id="cb9-38"><a href="#cb9-38" tabindex="-1"></a></span>
-<span id="cb9-39"><a href="#cb9-39" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb9-40"><a href="#cb9-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb9-41"><a href="#cb9-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb9-42"><a href="#cb9-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb9-43"><a href="#cb9-43" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb9-44"><a href="#cb9-44" tabindex="-1"></a></span>
-<span id="cb9-45"><a href="#cb9-45" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
+<p>After this episode, <a href="../files/document_state/ep-03.tex">here is
+what our LaTeX document looks like</a>.</p>
 </div>
 </div>
 </div>

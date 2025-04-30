@@ -874,63 +874,8 @@ document.</li>
 </button>
 <div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
-<p>After this episode, here is what our LaTeX document looks like:</p>
-<div class="codewrapper sourceCode" id="cb19">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
-<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span>
-<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a><span class="co">% Highlight Keywords using the \kw{} command</span></span>
-<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textcolor</span>{blue}{<span class="fu">\textbf</span>{#1}}}</span>
-<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a><span class="co">% Italicise LaTeX commands</span></span>
-<span id="cb19-10"><a href="#cb19-10" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span>
-<span id="cb19-11"><a href="#cb19-11" tabindex="-1"></a></span>
-<span id="cb19-12"><a href="#cb19-12" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
-<span id="cb19-13"><a href="#cb19-13" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
-<span id="cb19-14"><a href="#cb19-14" tabindex="-1"></a>Hello World!</span>
-<span id="cb19-15"><a href="#cb19-15" tabindex="-1"></a></span>
-<span id="cb19-16"><a href="#cb19-16" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
-<span id="cb19-17"><a href="#cb19-17" tabindex="-1"></a></span>
-<span id="cb19-18"><a href="#cb19-18" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb19-19"><a href="#cb19-19" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb19-20"><a href="#cb19-20" tabindex="-1"></a></span>
-<span id="cb19-21"><a href="#cb19-21" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span>
-<span id="cb19-22"><a href="#cb19-22" tabindex="-1"></a></span>
-<span id="cb19-23"><a href="#cb19-23" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb19-24"><a href="#cb19-24" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
-<span id="cb19-25"><a href="#cb19-25" tabindex="-1"></a></span>
-<span id="cb19-26"><a href="#cb19-26" tabindex="-1"></a>I can put a <span class="fu">\kw</span>{subsection} inside my first section.</span>
-<span id="cb19-27"><a href="#cb19-27" tabindex="-1"></a></span>
-<span id="cb19-28"><a href="#cb19-28" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
-<span id="cb19-29"><a href="#cb19-29" tabindex="-1"></a></span>
-<span id="cb19-30"><a href="#cb19-30" tabindex="-1"></a>There are two types of <span class="fu">\kw</span>{lists}: <span class="fu">\kw</span>{ordered} and <span class="fu">\kw</span>{unordered}.</span>
-<span id="cb19-31"><a href="#cb19-31" tabindex="-1"></a></span>
-<span id="cb19-32"><a href="#cb19-32" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
-<span id="cb19-33"><a href="#cb19-33" tabindex="-1"></a></span>
-<span id="cb19-34"><a href="#cb19-34" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
-<span id="cb19-35"><a href="#cb19-35" tabindex="-1"></a></span>
-<span id="cb19-36"><a href="#cb19-36" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb19-37"><a href="#cb19-37" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb19-38"><a href="#cb19-38" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb19-39"><a href="#cb19-39" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb19-40"><a href="#cb19-40" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb19-41"><a href="#cb19-41" tabindex="-1"></a></span>
-<span id="cb19-42"><a href="#cb19-42" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
-<span id="cb19-43"><a href="#cb19-43" tabindex="-1"></a></span>
-<span id="cb19-44"><a href="#cb19-44" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
-<span id="cb19-45"><a href="#cb19-45" tabindex="-1"></a></span>
-<span id="cb19-46"><a href="#cb19-46" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb19-47"><a href="#cb19-47" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb19-48"><a href="#cb19-48" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb19-49"><a href="#cb19-49" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb19-50"><a href="#cb19-50" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb19-51"><a href="#cb19-51" tabindex="-1"></a></span>
-<span id="cb19-52"><a href="#cb19-52" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
+<p>After this episode, <a href="../files/document_state/ep-05.tex">here is
+what our LaTeX document looks like</a>.</p>
 </div>
 </div>
 </div>

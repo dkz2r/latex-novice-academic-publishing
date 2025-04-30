@@ -1,11 +1,9 @@
 % This command tells LaTeX what kind of document we are creating (article).
 \documentclass{article}
 
-\usepackage{array}
-\usepackage{booktabs}
 \usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{graphicx}
 
 % Highlight Keywords using \kw{}
 \newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
@@ -94,7 +92,7 @@ image on the page.
   \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 
-Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
+Control the position of a floating image by passing parameters to the \cmd{figure} environment:
 
 \begin{itemize}
   \item h: Place the float "here" (where it appears in the code)
@@ -113,94 +111,5 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
   \includegraphics[height=2cm]{example-image.PNG}
   \caption{This is a caption for our image.}
 \end{figure}
-
-\section{Tables}
-
-\kw{Tables} are defined using the \cmd{tabular} environment.
-
-\begin{tabular}{*{3}{l}}
-  Fruit  & Quantity & Price \\
-  Apple  & 5        & 1.50  \\
-  Banana & 6        & 2.00  \\
-  Orange & 4        & 1.20  \\
-\end{tabular}
-
-\subsection{Tables with Horizontal Lines}
-
-We can use the \cmd{\textbackslash toprule}, \cmd{\textbackslash midrule}, and
-\cmd{\textbackslash bottomrule} commands from the \cmd{booktabs} package to create horizontal
-lines in our table.
-
-\begin{tabular}{*{3}{l}}
-  \toprule
-  Fruit  & Quantity & Price \\
-  \midrule
-  Apple  & 5        & 1.50  \\
-  Banana & 6        & 2.00  \\
-  Orange & 4        & 1.20  \\
-  \bottomrule
-\end{tabular}
-
-\subsection{Partial Horizontal Lines}
-
-The \cmd{\textbackslash cmidrule} command can be used to create partial horizontal lines in a
-table. The command accepts the arguments {number-number}, where the first number is the column to
-start the line and last number is the column to end the line.
-
-\begin{tabular}{*{3}{l}}
-  \toprule
-  Fruit  & Quantity &  Price \\
-  \midrule
-  Apple  & 5        &  1.50  \\
-  Banana & 6        &  2.00  \\
-  Orange & 4        &  1.20  \\
-  \cmidrule{3-3}
-  Total & 15        & 28.20  \\
-  \bottomrule
-\end{tabular}
-
-\subsection{Merging Cells}
-
-Merge cells horizontally using the \cmd{\textbackslash multicolumn} command. This command takes
-three arguments:
-
-\begin{itemize}
-  \item The number of cells which should be merged
-  \item The alignment of the merged cell (l, c, or r)
-  \item The contents of the merged cell
-\end{itemize}
-
-\begin{tabular}{*{3}{l}}
-  \toprule
-  \multicolumn{3}{c}{Overall Inventory} \\
-  Fruit  & Quantity &  Price  \\
-  \midrule
-  Apple  & 5        &  1.50   \\
-  Banana & 6        &  2.00   \\
-  Orange & 4        &  1.20   \\
-  \midrule
-  \multicolumn{2}{c}{Summary} \\
-  Total & 15        & 28.20   \\
-  \bottomrule
-\end{tabular}
-
-\section{Cross References}
-\label{sec:cross-references}
-
-\subsection{Material for the Introduction}
-
-In this section, we introduce two new concepts:
-
-\begin{tabular}{cp{9cm}}
-  Command & Description \\
-  \toprule
-  \cmd{label} & Marks a spot in the document \\
-  \cmd{ref} & Refers to a marked spot in the document \\
-  \bottomrule
-\label{tab:cross-reference-commands}
-\end{tabular}
-
-We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
-We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
 
 \end{document}
