@@ -1,0 +1,52 @@
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+
+% Highlight Keywords using the \kw{} command
+\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
+% Italicise LaTeX commands
+\newcommand{\cmd}[1]{\textit{#1}}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+Hello World!
+
+This is my first \kw{LaTeX} document.
+
+% The section command automatically numbers and formats the section heading.
+\section{Sections}
+
+I can add content to my first \kw{section}!
+
+% The subsection command does the same thing, but for sections within sections.
+\subsection{Subsection}
+
+I can put a \kw{subsection} inside my first section.
+
+\section{Lists}
+
+There are two types of \kw{lists}: \kw{ordered} and \kw{unordered}.
+
+\subsection{Ordered}
+
+Ordered lists do not have numbers associated with each item.
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
+
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{itemize}
+
+\end{document}

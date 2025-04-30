@@ -127,7 +127,7 @@ Note that the `\item` commands do not need to be enclosed in braces. These comma
 any arguments, so they can be used as standalone commands. The text that follows the `\item`
 command will be treated as the content of the list item. However, you are able to specify your own
 bullet point symbols with `\item[]` manually. For instance, if you want a list with small letters in brackets
-you can use the following LaTeX code:  
+you can use the following LaTeX code:
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
@@ -337,54 +337,6 @@ How would you write this in LaTeX **without** using `enumerate` but `itemize` wi
 
 ::: spoiler
 
-After this episode, here is what our LaTeX document looks like:
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-Hello World!
-
-This is my first LaTeX document.
-
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
-
-I can add content to my first section!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a subsection inside my first section.
-
-\section{Lists}
-
-There are two types of lists: ordered and unordered.
-
-\subsection{Ordered}
-
-Ordered lists do not have numbers associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{enumerate}
-
-\subsection{Unordered}
-
-Unordered lists are just a series of items preceded by a marker.
-
-\begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{itemize}
-
-\end{document}
-```
+After this episode, [here is what our LaTeX document looks like](files/document_state/ep-03.tex).
 
 :::

@@ -1,7 +1,6 @@
 % This command tells LaTeX what kind of document we are creating (article).
 \documentclass{article}
 
-\usepackage{amsmath}
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage[margin=1in]{geometry}
@@ -185,72 +184,5 @@ three arguments:
   Total & 15        & 28.20   \\
   \bottomrule
 \end{tabular}
-
-\section{Cross References}
-\label{sec:cross-references}
-
-\subsection{Material for the Introduction}
-
-In this section, we introduce two new concepts:
-
-\begin{tabular}{cp{9cm}}
-  Command & Description \\
-  \toprule
-  \kw{label} & Marks a spot in the document \\
-  \kw{ref} & Refers to a marked spot in the document \\
-  \bottomrule
-\label{tab:cross-reference-commands}
-\end{tabular}
-
-We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
-We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
-
-\section{Mathematics}
-
-There are two kinds of math mode in LaTeX: inline and display. Inline math mode is marked with
-a pair of dollar signs, whereas display math mode is marked with a pair of square brackets.
-
-\subsection{Inline Math Mode}
-
-The Pythagorean theorem is $a^2 + b^2 = c^2$.
-
-\subsection{Display Math Mode}
-
-The Fourier Transform is defined as:
-
-\[
-\hat{f}(\xi) = \int_{-\infty}^\infty f(x) e^{-2\pi i \xi x} \, dx
-\]
-
-Where:
-\begin{itemize}
-  \item \( f(x) \) is the function we are transforming,
-  \item \( \hat{f}(\xi) \) is the Fourier Transform of \( f(x) \),
-  \item \( \xi \) is the frequency variable,
-  \item \( i \) is the imaginary unit.
-\end{itemize}
-
-\subsection{Math in Environments}
-
-The quadratic formula is:
-
-\begin{equation}
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\label{eq:quadratic}
-\end{equation}
-
-This will allow us to refer to the equation later in the document with \cmd{ref} like this:
-Refer to Equation \ref{eq:quadratic}.
-
-\subsection{The `amsmath` Package}
-
-Solve the following recurrence for $ n,k\geq 0 $:
-\[
-Q_{n,0} = 1   \quad Q_{0,k} = [k=0];
-\]
-
-\[
-Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{for $n$, $k>0$.}
-\]
 
 \end{document}
