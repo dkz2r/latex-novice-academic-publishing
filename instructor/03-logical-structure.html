@@ -409,7 +409,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The Structure of a Document</h1>
-        <p>Last updated on 2025-04-23 |
+        <p>Last updated on 2025-04-30 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/03-logical-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -506,7 +506,7 @@ using.</p>
 unordered. They are both defined with <code>\begin{...}</code> and
 <code>\end{...}</code> commands, as we saw with the document body. Let’s
 add an ordered list to our document.</p>
-<p>We’ll replace our “Second Section” with on for “Lists” and add an
+<p>We’ll replace our “Second Section” with one for “Lists” and add an
 ordered list:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -559,13 +559,10 @@ the preview pane:</p>
 <p>Note that the <code>\item</code> commands do not need to be enclosed
 in braces. These commands do not take any arguments, so they can be used
 as standalone commands. The text that follows the <code>\item</code>
-command will be treated as the content of the list item.</p>
-</div>
-</div>
-</div>
-<p>Adding an unordered list is just as easy. We can use the exact same
-syntax, but replace the <code>enumerate</code> environment with
-<code>itemize</code>.</p>
+command will be treated as the content of the list item. However, you
+are able to specify your own bullet point symbols with
+<code>\item[]</code> manually. For instance, if you want a list with
+small letters in brackets you can use the following LaTeX code:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -575,45 +572,70 @@ syntax, but replace the <code>enumerate</code> environment with
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>Hello World!</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>This is my first LaTeX document.</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>I can add content to my first section!</span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a>I can put a subsection inside my first section.</span>
-<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
-<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>There are two types of lists: ordered and unordered.</span>
-<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
-<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a>Ordered lists do not have numbers or letters associated with each item.</span>
-<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb3-30"><a href="#cb3-30" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb3-31"><a href="#cb3-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb3-32"><a href="#cb3-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb3-33"><a href="#cb3-33" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb3-34"><a href="#cb3-34" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
-<span id="cb3-36"><a href="#cb3-36" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
-<span id="cb3-38"><a href="#cb3-38" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb3-40"><a href="#cb3-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb3-41"><a href="#cb3-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb3-42"><a href="#cb3-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb3-43"><a href="#cb3-43" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb3-44"><a href="#cb3-44" tabindex="-1"></a></span>
-<span id="cb3-45"><a href="#cb3-45" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">% List with custom bullet point symbols</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>  <span class="fu">\item</span>[(a)] Item 1</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>  <span class="fu">\item</span>[(b)] Item 2</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>  <span class="fu">\item</span>[(c)] Item 3</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Adding an unordered list is just as easy. We can use the exact same
+syntax, but replace the <code>enumerate</code> environment with
+<code>itemize</code>.</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>Hello World!</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>I can add content to my first section!</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>I can put a subsection inside my first section.</span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a>There are two types of lists: ordered and unordered.</span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a>Ordered lists do not have numbers or letters associated with each item.</span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a></span>
+<span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
+<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb4-43"><a href="#cb4-43" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb4-44"><a href="#cb4-44" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <figure><img src="../fig/03-logical-structure/itemized-list.PNG" alt="Our document with an unordered list." class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
 <hr class="half-width"><div id="challenge-1-what-needs-to-change" class="callout challenge">
@@ -624,20 +646,20 @@ syntax, but replace the <code>enumerate</code> environment with
 <h3 class="callout-title">Challenge 1: What needs to change?</h3>
 <div class="callout-content">
 <p>We have the following in our LaTeX document:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  <span class="fu">\item</span> Banana Bread</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  <span class="fu">\item</span> Carrot Muffins</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>  <span class="fu">\item</span> Apple Cake</span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">\item</span> Banana Bread</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">\item</span> Carrot Muffins</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>  <span class="fu">\item</span> Apple Cake</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <p>How would we modify this to change this ordered list to an unordered
 list?</p>
@@ -649,24 +671,24 @@ list?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You would need to change the <code>enumerate</code> environment to
 <code>itemize</code>:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">\item</span> Banana Bread</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">\item</span> Carrot Muffins</span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>  <span class="fu">\item</span> Apple Cake</span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">\item</span> Banana Bread</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>  <span class="fu">\item</span> Carrot Muffins</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>  <span class="fu">\item</span> Apple Cake</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -696,27 +718,70 @@ list?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">\item</span> Apples</span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>    <span class="fu">\item</span> Gala</span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>    <span class="fu">\item</span> Fuji</span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>    <span class="fu">\item</span> Granny Smith</span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>  <span class="fu">\item</span> Bananas</span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>  <span class="fu">\item</span> Oranges</span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="fu">\item</span> Apples</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>    <span class="fu">\item</span> Gala</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>    <span class="fu">\item</span> Fuji</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>    <span class="fu">\item</span> Granny Smith</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="fu">\item</span> Bananas</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>  <span class="fu">\item</span> Oranges</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-3-enumerate-your-list-manually" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-3-enumerate-your-list-manually" class="callout-inner">
+<h3 class="callout-title">Challenge 3: Enumerate your list manually</h3>
+<div class="callout-content">
+<p>We would like to have the following appear in our LaTeX document:</p>
+<ol style="list-style-type: decimal"><li>Gala</li>
+<li>Fuji</li>
+<li>Granny Smith</li>
+</ol><p>How would you write this in LaTeX <strong>without</strong> using
+<code>enumerate</code> but <code>itemize</code> with
+<code>\item[]</code>?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>  <span class="fu">\item</span>[1.] Gala</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>  <span class="fu">\item</span>[2.] Fuji</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>  <span class="fu">\item</span>[3.] Granny Smith</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -743,57 +808,57 @@ list?</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>Hello World!</span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>This is my first LaTeX document.</span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>I can add content to my first section!</span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a>I can put a subsection inside my first section.</span>
-<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a></span>
-<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
-<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a></span>
-<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a>There are two types of lists: ordered and unordered.</span>
-<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a></span>
-<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
-<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a></span>
-<span id="cb7-27"><a href="#cb7-27" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
-<span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a></span>
-<span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb7-32"><a href="#cb7-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb7-33"><a href="#cb7-33" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
-<span id="cb7-36"><a href="#cb7-36" tabindex="-1"></a></span>
-<span id="cb7-37"><a href="#cb7-37" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
-<span id="cb7-38"><a href="#cb7-38" tabindex="-1"></a></span>
-<span id="cb7-39"><a href="#cb7-39" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb7-40"><a href="#cb7-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb7-41"><a href="#cb7-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb7-42"><a href="#cb7-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb7-43"><a href="#cb7-43" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb7-44"><a href="#cb7-44" tabindex="-1"></a></span>
-<span id="cb7-45"><a href="#cb7-45" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>Hello World!</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>I can add content to my first section!</span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>I can put a subsection inside my first section.</span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a></span>
+<span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>There are two types of lists: ordered and unordered.</span>
+<span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
+<span id="cb9-28"><a href="#cb9-28" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb9-30"><a href="#cb9-30" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a></span>
+<span id="cb9-37"><a href="#cb9-37" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
+<span id="cb9-38"><a href="#cb9-38" tabindex="-1"></a></span>
+<span id="cb9-39"><a href="#cb9-39" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb9-40"><a href="#cb9-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb9-41"><a href="#cb9-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb9-42"><a href="#cb9-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb9-43"><a href="#cb9-43" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb9-44"><a href="#cb9-44" tabindex="-1"></a></span>
+<span id="cb9-45"><a href="#cb9-45" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -861,7 +926,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/03-logical-structure.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/03-logical-structure.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-23",
+  "dateModified": "2025-04-30",
   "datePublished": "2025-04-30"
 }
 
