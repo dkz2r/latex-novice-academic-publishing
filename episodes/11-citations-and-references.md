@@ -115,22 +115,23 @@ And... nothing? Right, because we haven’t cited anything in our document yet. 
 One of the best features of LaTeX when writing academic documents is the ability to easily and
 confidently \kw{cite references}.
 
-We can cite the article by Thomas (e.g. with `\autocite{Thomas2008}`) and it will show up in the references.
+We can cite the article by Thomas (e.g. with `\textbackslash autocite\{Thomas2008\}`) and it will show up in the references.
 
 You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference
-now appears at the end of the document. `\autocite` is a command that automatically chooses the
+now appears at the end of the document. \cmd{\textbackslash autocite} is a command that automatically chooses the
 citation style for you.
 
-Let’s explore some of the other citation commands available in `biblatex`:
+Some additional commands that are available in  `biblatex`:
 
-- `\cite{key}` or `\cite{key1,key2}`: Cite the reference with the given key.
-- `\cites{key1}{key2}{key-n}`: Cite multiple references.
-- `\parentcite{key}`: Cite the parent reference of the given key.
-- `\autocite{key}`: Automatically choose the citation style.
-- `\smartcite{key}`: Automatically choose the citation style, but with more control.
-- `footcite{key}`: Cite the reference in a footnote.
+\begin{itemize}
+    \item `\textbackslash cite\{key\}` or `\textbackslash cite\{key1, key2\}`: Cite the reference with the given key
+    \item `\textbackslash cites\{key1\}\{key2\}\{key-n\}`: Cite multiple references.
+    \item `\textbackslash usepackage\{\}\textbackslash parentcite\{key\}`: Cite the parent reference of the given key.
+    \item `\textbackslash autocite\{key\}`: Automatically choose the citation style.
+    \item `\textbackslash smartcite\{key\}`: Automatically choose the citation style, but with more control.
+    \item `\textbackslash footcite\{key\}`: Cite the reference in a footnote.
+\end{itemize}
 
-```latex
 A plain citation looks like this \cite{Graham1995}, while multiple citations look like this
 \cites{Graham1995}[see][p. 42]{Thomas2008}. We already used autocite, but we can also use the
 similar smartcite \smartcite{Graham1995}. The benefit with smartcite is that you

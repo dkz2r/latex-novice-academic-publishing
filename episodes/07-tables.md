@@ -68,24 +68,17 @@ column declaration.
 
 :::
 
-
-There are also a few other preamble-tokens that are available. These don't define a column, but
-can be useful as well:
-
-| Token | Description |
-| Token     | Description                                                                                          |
-|-----------|------------------------------------------------------------------------------------------------------|
-| `{num}{string}` | repeats string for num times in the preamble. With this you can define multiple identical columns. |
-| `>{decl}` | this will put decl before the contents of every cell in the following column (this is useful, e.g., to set a different font for this column) |
-| `<{decl}` | this will put decl after the contents of each cell in the previous column                             |
-| `|`       | add a vertical rule                                                                                  |
-| `@{decl}` | replace the space between two columns with decl                                                      |
-| `!{decl}` | add decl in the center of the existing space                                                         |
-
 ## Creating a Table
 
 Now that we have the array package loaded and we know how to define columns, we can create a table
 using the `tabular` environment.
+
+::: callout
+
+Note that the `&` and `\\` characters are aligned in our example. This isn't strictly necessary in
+LaTeX, but it makes the code much easier to read.
+
+:::
 
 ```latex
 \section{Tables}
@@ -101,17 +94,10 @@ using the `tabular` environment.
 ```
 
 This will create a table with three columns, all left-aligned. The values of each row are separated
-by `&` and the rows are separated by `\\`. We do now yet have any horizontal lines in the table, so
+by `&` and the rows are separated by `\\`. We do not yet have any horizontal lines in the table, so
 it will look like this:
 
-IMAGE HERE
-
-::: callout
-
-Note that the `&` and `\\` characters are aligned in our example. This isn't strictly necessary in
-LaTeX, but it makes the code much easier to read.
-
-:::
+![](fig/07-tables/simple-table.PNG){alt='Example output of a simple table'}
 
 ::: callout
 
@@ -167,6 +153,11 @@ package to create horizontal lines in our table.
 \end{tabular}
 ```
 
+Your table should look something like this:
+
+![](fig/07-tables/table-with-horizontal-lines.PNG){alt='Example output of a table with horizontal
+lines'}
+
 ::: callout
 
 A general recommendation is to use lines sparsely in your tables, and vertical lines should be
@@ -183,6 +174,10 @@ the column to start the line and the second number is the column to end the line
 ```latex
 \subsection{Partial Horizontal Lines}
 
+The \cmd{cmidrule} command can be used to create partial horizontal lines in a table. The command
+accepts the arguments {number-number}, where the first number is the column to start the line and
+last number is the column to end the line.
+
 \begin{tabular}{*{3}{l}}
   \toprule
   Fruit  & Quantity &  Price \\
@@ -197,6 +192,12 @@ the column to start the line and the second number is the column to end the line
 
 ```
 
+This table should come out looking something like this:
+
+![](fig/07-tables/table-with-partial-lines.PNG){alt='Example output of a table with partial
+lines'}
+
+
 ## Merging Cells
 
 We can merge cells horizontally using the `\multicolumn` command. This command takes three
@@ -208,6 +209,14 @@ arguments:
 
 ```latex
 \subsection{Merging Cells}
+
+Merge cells horizontally using the \cmd{multicolumn} command. This command takes three arguments:
+
+\begin{itemize}
+  \item The number of cells which should be merged
+  \item The alignment of the merged cell (l, c, or r)
+  \item The contents of the merged cell
+\end{itemize}
 
 \begin{tabular}{*{3}{l}}
   \toprule
@@ -231,6 +240,10 @@ table to create the impression of vertical merging.
 
 :::
 
+This will create a table that looks like this:
+
+![](fig/07-tables/table-with-merged-cell.PNG){alt='Example output of a table with merged cells'}
+
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
@@ -248,10 +261,13 @@ Try to replicate the following table in LaTeX:
 | Mercedes    | GLK,GLC   | 3,143    |
 |             | **Total** | *22,606* |
 
-Your LaTaX version should look something like [this](fig/07-tables/challenge-make-a-table.PNG)
+Your LaTaX version should look something like [this](fig/07-tables/challenge-make-a-table.PNG ).
 
-Note that the last row is a bit different from the others. The first two columns are merged, the
+Note that the last row is a bit different from the others. The first two columns re merged, the
 text "Total" is right-aligned and bold, and the value in the last column is italicized.
+
+(Data for this challenge is from
+[Statista](https://www.statista.com/statistics/1546704/monthly-best-selling-car-models-in-germany/))
 
 :::::::::::::::::::::::: solution
 
@@ -404,6 +420,8 @@ There's no right answer to this challenge, so feel free to experiment with diffe
 - Tables in LaTeX are created using the `tabular` environment.
 - The `array` package provides additional functionality for creating tables.
 - The `booktabs` package provides commands for creating horizontal lines in tables.
+- We can create horizontal lines in tables using the `\toprule`, `\midrule`, and `\bottomrule`
+  commands.
 - The `\multicolumn` command can be used to merge cells in a table.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -422,10 +440,9 @@ After this episode, here is what our LaTeX document looks like:
 \usepackage{graphicx}
 \usepackage{xcolor}
 
-% Highlight Keywords using \kw{}
+% Highlight Keywords using the \kw{} command
 \newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
-
-% Italics for commands with \cmd{}
+% Italicise LaTeX commands
 \newcommand{\cmd}[1]{\textit{#1}}
 
 % Everything before the \begin{document} command is called the preamble.
@@ -473,13 +490,15 @@ Unordered lists are just a series of items preceded by a marker.
 We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
-\includegraphics{example-image.PNG}
+\includegraphics{example-image.png}
 
 \subsection{Small Image}
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=4cm]{example-image.PNG}
+\includegraphics[height=2cm]{example-image.PNG}
+
+Other possible options include:
 
 \begin{itemize}
   \item width: the width of the image
@@ -523,7 +542,7 @@ Control the position of a floating image by passing paratmeters to the \cmd{figu
 We can add a \kw{caption} to our floating image by using the \cmd{caption} command inside of the
 \cmd{figure} environment.
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
   \includegraphics[height=2cm]{example-image.PNG}
   \caption{This is a caption for our image.}
@@ -533,7 +552,7 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 
 \kw{Tables} are defined using the \cmd{tabular} environment.
 
-\begin{tabular}{lll}
+\begin{tabular}{*{3}{l}}
   Fruit  & Quantity & Price \\
   Apple  & 5        & 1.50  \\
   Banana & 6        & 2.00  \\
@@ -557,6 +576,10 @@ package to create horizontal lines in our table.
 
 \subsection{Partial Horizontal Lines}
 
+The \cmd{cmidrule} command can be used to create partial horizontal lines in a table. The command
+accepts the arguments {number-number}, where the first number is the column to start the line and
+last number is the column to end the line.
+
 \begin{tabular}{*{3}{l}}
   \toprule
   Fruit  & Quantity &  Price \\
@@ -571,6 +594,14 @@ package to create horizontal lines in our table.
 
 \subsection{Merging Cells}
 
+Merge cells horizontally using the \cmd{multicolumn} command. This command takes three arguments:
+
+\begin{itemize}
+  \item The number of cells which should be merged
+  \item The alignment of the merged cell (l, c, or r)
+  \item The contents of the merged cell
+\end{itemize}
+
 \begin{tabular}{*{3}{l}}
   \toprule
   \multicolumn{3}{c}{Overall Inventory} \\
@@ -584,6 +615,25 @@ package to create horizontal lines in our table.
   Total & 15        & 28.20   \\
   \bottomrule
 \end{tabular}
+
+\section{Cross References}
+\label{sec:cross-references}
+
+\subsection{Material for the Introduction}
+
+In this section, we introduce two new concepts:
+
+\begin{tabular}{cp{9cm}}
+  Command & Description \\
+  \toprule
+  \kw{label} & Marks a spot in the document \\
+  \kw{ref} & Refers to a marked spot in the document \\
+  \bottomrule
+\label{tab:cross-reference-commands}
+\end{tabular}
+
+We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
+We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
 
 \end{document}
 ```
