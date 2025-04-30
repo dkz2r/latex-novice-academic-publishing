@@ -378,8 +378,69 @@ The corrected LaTeX code looks like this:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
+## Challenge 3: Making a command for images
 
-## Challenge 3: The `wrapfig` package.
+In the previous section, we created a command to highlight keywords in our document. Let's create
+a new command to make it easier to include images in our document. We'll create a command called
+`\centeredimage` that takes two arguments: the image filename and the caption. The resulting image
+should be centered on the page and have a caption below it. Use the example-image.png from earlier
+in this episode.
+
+Your file should look like this:
+
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+% Define our new command
+%%% YOUR COMMAND HERE %%%
+
+\begin{document}
+
+\centeredimage{example-image.png}{"My Image"}
+\centeredimage{example-image.png}{"My Other Image"}
+
+\end{document}
+```
+
+And your output should look [like this](fig/06-using-graphics/challenge-image-command-output.PNG).
+
+Reminder: The syntax for creating a new command is:
+
+```latex
+\newcommand{\cmdname}[numargs]{definition}
+```
+
+:::::::::::::::::::::::: solution
+
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+% Define our new command
+\newcommand{\centeredimage}[2]{
+  \begin{figure}
+    \centering
+    \includegraphics{#1}
+    \caption{#2}
+  \end{figure}
+}
+
+\begin{document}
+
+\centeredimage{example-image.png}{"My Image"}
+\centeredimage{example-image.png}{"My Other Image"}
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 4: The `wrapfig` package.
 
 
 Have a look at the following LaTeX code that uses the `wrapfigure` environment.
