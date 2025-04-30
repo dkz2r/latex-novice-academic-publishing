@@ -465,9 +465,12 @@ spaced out nicely and has letters in italic.</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">\section</span>{Mathematics}</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="kw">\subsection</span>{Inline Math Mode}</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>The Pythagorean theorem is <span class="ss">\(a^2 + b^2 = c^2\)</span>.</span></code></pre>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>There are two kinds of math mode in LaTeX: inline and display. Inline math mode is marked with</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>a pair of dollar signs, whereas display math mode is marked with a pair of square brackets.</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="kw">\subsection</span>{Inline Math Mode}</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>The Pythagorean theorem is <span class="ss">$a^2 + b^2 = c^2$</span>.</span></code></pre>
 </div>
 <p>There are a lot of symbols and specialist math mode commands
 available in LaTeX:</p>
@@ -492,17 +495,40 @@ available in LaTeX:</p>
 <h3 id="display-math-mode">Display Math Mode<a class="anchor" aria-label="anchor" href="#display-math-mode"></a></h3>
 <p>Display math mode uses the exact same commands as inline math mode,
 but it is centered by default and is intended for larger equations that
-are “part of a paragraph”:</p>
+are “part of a paragraph”. It is also started and ended with a pair of
+square brackets (<code>\[ ... \]</code>).</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Remember that <code>[</code> and <code>]</code> are special
+characters in LaTeX, which is why we have to “escape” it with a
+backslash(<code>\</code>) here.</p>
+</div>
+</div>
+</div>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\subsection</span>{Display Math Mode}</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>The quadratic formula is:</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>The Fourier Transform is defined as:</span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="ss">x = </span><span class="sc">\frac</span><span class="ss">{-b </span><span class="sc">\pm</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{b^2 - 4ac}}{2a}</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="sc">\hat</span><span class="ss">{f}(</span><span class="sc">\xi</span><span class="ss">) = </span><span class="sc">\int</span><span class="ss">_{-</span><span class="sc">\infty</span><span class="ss">}^</span><span class="sc">\infty</span><span class="ss"> f(x) e^{-2</span><span class="sc">\pi</span><span class="ss"> i </span><span class="sc">\xi</span><span class="ss"> x} </span><span class="sc">\,</span><span class="ss"> dx</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="ss">\]</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>Where:</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( f(x) \)</span> is the function we are transforming,</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( </span><span class="sc">\hat</span><span class="ss">{f}(</span><span class="sc">\xi</span><span class="ss">) \)</span> is the Fourier Transform of <span class="ss">\( f(x) \)</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( </span><span class="sc">\xi</span><span class="ss"> \)</span> is the frequency variable,</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( i \)</span> is the imaginary unit.</span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre>
 </div>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
@@ -534,7 +560,10 @@ number the equations:</p>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="ss">x = </span><span class="sc">\frac</span><span class="ss">{-b </span><span class="sc">\pm</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{b^2 - 4ac}}{2a}</span></span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="sc">\label</span><span class="ss">{eq:quadratic}</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>This will allow us to refer to the equation later in the document with <span class="fu">\cmd</span>{ref} like this:</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>Refer to Equation <span class="kw">\ref</span>{<span class="ex">eq:quadratic</span>}.</span></code></pre>
 </div>
 <p>We can now refer to this equation using the <code>\ref</code>
 command, just like we did in the previous section:</p>
@@ -550,38 +579,45 @@ are sometimes not enough to cover everything. The <code>amsmath</code>
 package extends the capabilities of LaTeX for more complex mathematical
 typesetting. Let’s try it out:</p>
 <p>Add the following to your document:</p>
+<p>(In the preamble)</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="ss">Q_{n,0} = 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];</span></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="ss">\]</span></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="ss">Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for $n$, $k&gt;0$.}</span></span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre>
+</div>
+<p>(In the body)</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="ss">Q_{n,0} = 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];</span></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="ss">\]</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="ss">Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for $n$, $k&gt;0$.}</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
 </div>
 <p>That look ok, but we really want the equations to be aligned
 vertically, not centered on the page. We can use the <code>align</code>
 environment from the <code>amsmath</code> package to do this:</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre>
-</div>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align*</span>}</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="ss">  Q_{n,0} &amp;= 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];  </span><span class="sc">\\</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="ss">  Q_{n,k} &amp;= Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for </span><span class="er">$</span><span class="ss">n</span><span class="er">$</span><span class="ss">, </span><span class="er">$</span><span class="ss">k&gt;0</span><span class="er">$</span><span class="ss">.}</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align*</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align*</span>}</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="ss">  Q_{n,0} &amp;= 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];  </span><span class="sc">\\</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="ss">  Q_{n,k} &amp;= Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for </span><span class="er">$</span><span class="ss">n</span><span class="er">$</span><span class="ss">, </span><span class="er">$</span><span class="ss">k&gt;0</span><span class="er">$</span><span class="ss">.}</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align*</span>}</span></code></pre>
 </div>
 <p>The <code>align*</code> environment makes the equations line up on
 the amperstand (<code>&amp;</code>)</p>
@@ -608,12 +644,12 @@ LaTeX:</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="ss">t' = </span><span class="sc">\frac</span><span class="ss">{t}{</span><span class="sc">\sqrt</span><span class="ss">{1 - </span><span class="sc">\frac</span><span class="ss">{v^2}{c^2}}}</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="ss">t' = </span><span class="sc">\frac</span><span class="ss">{t}{</span><span class="sc">\sqrt</span><span class="ss">{1 - </span><span class="sc">\frac</span><span class="ss">{v^2}{c^2}}}</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -627,10 +663,10 @@ LaTeX:</p>
 <h3 class="callout-title">Challenge 2: What’s wrong with this?</h3>
 <div class="callout-content">
 <p>What’s wrong with the following LaTeX code?</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ss">\(F = G * (m_1 m_2) / r^2 \)</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ss">\(F = G * (m_1 m_2) / r^2 \)</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -644,10 +680,10 @@ LaTeX:</p>
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ss">\(F = G </span><span class="sc">\frac</span><span class="ss">{m_1 m_2}{r^2} \)</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ss">\(F = G </span><span class="sc">\frac</span><span class="ss">{m_1 m_2}{r^2} \)</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -661,11 +697,24 @@ fraction. The correct code should be:</p>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Inline math mode is marked with <code>$ ... $</code> or
-<code>\(...\</code>
+<code>\(...\)</code>
 </li>
 <li>Display math mode is marked with <code>\[ ... \]</code>
 </li>
 </ul></div>
+</div>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div class="accordion-body">
+<p>After this episode, <a href="files/document_state/ep-09.tex">here is
+what our LaTeX document looks like</a>.</p>
+</div>
+</div>
 </div>
 </div>
 <!--

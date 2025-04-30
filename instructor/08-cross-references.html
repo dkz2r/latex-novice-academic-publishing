@@ -560,7 +560,7 @@ issue. What is it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The <code>\ref{}</code> command is correctly written, but the
 <code>\ref{}</code> command only returns the number of the label it is
@@ -618,7 +618,7 @@ correct. Why or why not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You might have expected the output to be either “As indicated in
 Section 2, …” or “As indicated in Section ???”, but it actually returns
@@ -652,205 +652,10 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
-<p>After this episode, here is what our LaTeX document looks like:</p>
-<div class="codewrapper sourceCode" id="cb4">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">graphicx</span>}</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co">% Highlight Keywords using \kw{}</span></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[1]{<span class="fu">\textcolor</span>{blue}{<span class="fu">\textbf</span>{#1}}}</span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co">% Italics for commands with \cmd{}</span></span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
-<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>Hello World!</span>
-<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a></span>
-<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a>This is my first <span class="fu">\kw</span>{LaTeX} document.</span>
-<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>I can add content to my first <span class="fu">\kw</span>{section}!</span>
-<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a></span>
-<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
-<span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a></span>
-<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a>I can put a <span class="fu">\kw</span>{subsection} inside my first section.</span>
-<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a></span>
-<span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
-<span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a></span>
-<span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a>There are two types of <span class="fu">\kw</span>{lists}: <span class="fu">\kw</span>{ordered} and <span class="fu">\kw</span>{unordered}.</span>
-<span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a></span>
-<span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
-<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a></span>
-<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
-<span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a></span>
-<span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb4-43"><a href="#cb4-43" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb4-44"><a href="#cb4-44" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb4-45"><a href="#cb4-45" tabindex="-1"></a></span>
-<span id="cb4-46"><a href="#cb4-46" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
-<span id="cb4-47"><a href="#cb4-47" tabindex="-1"></a></span>
-<span id="cb4-48"><a href="#cb4-48" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
-<span id="cb4-49"><a href="#cb4-49" tabindex="-1"></a></span>
-<span id="cb4-50"><a href="#cb4-50" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-51"><a href="#cb4-51" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb4-52"><a href="#cb4-52" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb4-53"><a href="#cb4-53" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb4-54"><a href="#cb4-54" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-55"><a href="#cb4-55" tabindex="-1"></a></span>
-<span id="cb4-56"><a href="#cb4-56" tabindex="-1"></a><span class="kw">\section</span>{Graphics}</span>
-<span id="cb4-57"><a href="#cb4-57" tabindex="-1"></a></span>
-<span id="cb4-58"><a href="#cb4-58" tabindex="-1"></a>We can include <span class="fu">\kw</span>{images} in our document using the <span class="fu">\cmd</span>{graphicx} package, which lets us use the</span>
-<span id="cb4-59"><a href="#cb4-59" tabindex="-1"></a><span class="fu">\cmd</span>{includegraphics} command.</span>
-<span id="cb4-60"><a href="#cb4-60" tabindex="-1"></a></span>
-<span id="cb4-61"><a href="#cb4-61" tabindex="-1"></a><span class="bu">\includegraphics</span>{<span class="ex">example-image.PNG</span>}</span>
-<span id="cb4-62"><a href="#cb4-62" tabindex="-1"></a></span>
-<span id="cb4-63"><a href="#cb4-63" tabindex="-1"></a><span class="kw">\subsection</span>{Small Image}</span>
-<span id="cb4-64"><a href="#cb4-64" tabindex="-1"></a></span>
-<span id="cb4-65"><a href="#cb4-65" tabindex="-1"></a>We can pass parameters to the <span class="fu">\cmd</span>{includegraphics} command to adjust the appearance of the image.</span>
-<span id="cb4-66"><a href="#cb4-66" tabindex="-1"></a></span>
-<span id="cb4-67"><a href="#cb4-67" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.PNG</span>}</span>
-<span id="cb4-68"><a href="#cb4-68" tabindex="-1"></a></span>
-<span id="cb4-69"><a href="#cb4-69" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-70"><a href="#cb4-70" tabindex="-1"></a>  <span class="fu">\item</span> width: the width of the image</span>
-<span id="cb4-71"><a href="#cb4-71" tabindex="-1"></a>  <span class="fu">\item</span> scale: the scaling factor of the image</span>
-<span id="cb4-72"><a href="#cb4-72" tabindex="-1"></a>  <span class="fu">\item</span> angle: the angle of rotation of the image</span>
-<span id="cb4-73"><a href="#cb4-73" tabindex="-1"></a>  <span class="fu">\item</span> clip: whether to clip the image to its bounding box</span>
-<span id="cb4-74"><a href="#cb4-74" tabindex="-1"></a>  <span class="fu">\item</span> trim: trim the image by a specified amount</span>
-<span id="cb4-75"><a href="#cb4-75" tabindex="-1"></a>  <span class="fu">\item</span> draft: display a box instead of the image</span>
-<span id="cb4-76"><a href="#cb4-76" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-77"><a href="#cb4-77" tabindex="-1"></a></span>
-<span id="cb4-78"><a href="#cb4-78" tabindex="-1"></a><span class="kw">\subsection</span>{Centered Image}</span>
-<span id="cb4-79"><a href="#cb4-79" tabindex="-1"></a></span>
-<span id="cb4-80"><a href="#cb4-80" tabindex="-1"></a>By placing the <span class="fu">\cmd</span>{includegraphics} command inside a center environment, we can center the</span>
-<span id="cb4-81"><a href="#cb4-81" tabindex="-1"></a>image on the page.</span>
-<span id="cb4-82"><a href="#cb4-82" tabindex="-1"></a></span>
-<span id="cb4-83"><a href="#cb4-83" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">center</span>}</span>
-<span id="cb4-84"><a href="#cb4-84" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
-<span id="cb4-85"><a href="#cb4-85" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span>
-<span id="cb4-86"><a href="#cb4-86" tabindex="-1"></a></span>
-<span id="cb4-87"><a href="#cb4-87" tabindex="-1"></a><span class="kw">\subsection</span>{Floating Image}</span>
-<span id="cb4-88"><a href="#cb4-88" tabindex="-1"></a></span>
-<span id="cb4-89"><a href="#cb4-89" tabindex="-1"></a><span class="fu">\kw</span>{Floating images} can move around the page as text is added or removed. We can use the</span>
-<span id="cb4-90"><a href="#cb4-90" tabindex="-1"></a><span class="fu">\cmd</span>{figure}environment to create a floating image.</span>
-<span id="cb4-91"><a href="#cb4-91" tabindex="-1"></a></span>
-<span id="cb4-92"><a href="#cb4-92" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
-<span id="cb4-93"><a href="#cb4-93" tabindex="-1"></a>  <span class="fu">\centering</span></span>
-<span id="cb4-94"><a href="#cb4-94" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
-<span id="cb4-95"><a href="#cb4-95" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
-<span id="cb4-96"><a href="#cb4-96" tabindex="-1"></a></span>
-<span id="cb4-97"><a href="#cb4-97" tabindex="-1"></a>Control the position of a floating image by passing paratmeters to the <span class="fu">\cmd</span>{figure} environment:</span>
-<span id="cb4-98"><a href="#cb4-98" tabindex="-1"></a></span>
-<span id="cb4-99"><a href="#cb4-99" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-100"><a href="#cb4-100" tabindex="-1"></a>  <span class="fu">\item</span> h: Place the float "here" (where it appears in the code)</span>
-<span id="cb4-101"><a href="#cb4-101" tabindex="-1"></a>  <span class="fu">\item</span> t: Place the float at the "top" of the page</span>
-<span id="cb4-102"><a href="#cb4-102" tabindex="-1"></a>  <span class="fu">\item</span> b: Place the float at the "bottom" of the page</span>
-<span id="cb4-103"><a href="#cb4-103" tabindex="-1"></a>  <span class="fu">\item</span> p: Place the float on a "page" by itself</span>
-<span id="cb4-104"><a href="#cb4-104" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-105"><a href="#cb4-105" tabindex="-1"></a></span>
-<span id="cb4-106"><a href="#cb4-106" tabindex="-1"></a><span class="kw">\subsection</span>{Caption}</span>
-<span id="cb4-107"><a href="#cb4-107" tabindex="-1"></a></span>
-<span id="cb4-108"><a href="#cb4-108" tabindex="-1"></a>We can add a <span class="fu">\kw</span>{caption} to our floating image by using the <span class="fu">\cmd</span>{caption} command inside of the</span>
-<span id="cb4-109"><a href="#cb4-109" tabindex="-1"></a><span class="fu">\cmd</span>{figure} environment.</span>
-<span id="cb4-110"><a href="#cb4-110" tabindex="-1"></a></span>
-<span id="cb4-111"><a href="#cb4-111" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[ht]</span>
-<span id="cb4-112"><a href="#cb4-112" tabindex="-1"></a>  <span class="fu">\centering</span></span>
-<span id="cb4-113"><a href="#cb4-113" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
-<span id="cb4-114"><a href="#cb4-114" tabindex="-1"></a>  <span class="fu">\caption</span>{This is a caption for our image.}</span>
-<span id="cb4-115"><a href="#cb4-115" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
-<span id="cb4-116"><a href="#cb4-116" tabindex="-1"></a></span>
-<span id="cb4-117"><a href="#cb4-117" tabindex="-1"></a><span class="kw">\section</span>{Tables}</span>
-<span id="cb4-118"><a href="#cb4-118" tabindex="-1"></a></span>
-<span id="cb4-119"><a href="#cb4-119" tabindex="-1"></a><span class="fu">\kw</span>{Tables} are defined using the <span class="fu">\cmd</span>{tabular} environment.</span>
-<span id="cb4-120"><a href="#cb4-120" tabindex="-1"></a></span>
-<span id="cb4-121"><a href="#cb4-121" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{lll}</span>
-<span id="cb4-122"><a href="#cb4-122" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
-<span id="cb4-123"><a href="#cb4-123" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
-<span id="cb4-124"><a href="#cb4-124" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
-<span id="cb4-125"><a href="#cb4-125" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
-<span id="cb4-126"><a href="#cb4-126" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
-<span id="cb4-127"><a href="#cb4-127" tabindex="-1"></a></span>
-<span id="cb4-128"><a href="#cb4-128" tabindex="-1"></a><span class="kw">\subsection</span>{Tables with Horizontal Lines}</span>
-<span id="cb4-129"><a href="#cb4-129" tabindex="-1"></a></span>
-<span id="cb4-130"><a href="#cb4-130" tabindex="-1"></a>We can use the <span class="fu">\cmd</span>{toprule}, <span class="fu">\cmd</span>{midrule}, and <span class="fu">\cmd</span>{bottomrule} commands from the <span class="fu">\cmd</span>{booktabs}</span>
-<span id="cb4-131"><a href="#cb4-131" tabindex="-1"></a>package to create horizontal lines in our table.</span>
-<span id="cb4-132"><a href="#cb4-132" tabindex="-1"></a></span>
-<span id="cb4-133"><a href="#cb4-133" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
-<span id="cb4-134"><a href="#cb4-134" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
-<span id="cb4-135"><a href="#cb4-135" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span> Price <span class="fu">\\</span></span>
-<span id="cb4-136"><a href="#cb4-136" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
-<span id="cb4-137"><a href="#cb4-137" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span> 1.50  <span class="fu">\\</span></span>
-<span id="cb4-138"><a href="#cb4-138" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span> 2.00  <span class="fu">\\</span></span>
-<span id="cb4-139"><a href="#cb4-139" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span> 1.20  <span class="fu">\\</span></span>
-<span id="cb4-140"><a href="#cb4-140" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
-<span id="cb4-141"><a href="#cb4-141" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
-<span id="cb4-142"><a href="#cb4-142" tabindex="-1"></a></span>
-<span id="cb4-143"><a href="#cb4-143" tabindex="-1"></a><span class="kw">\subsection</span>{Partial Horizontal Lines}</span>
-<span id="cb4-144"><a href="#cb4-144" tabindex="-1"></a></span>
-<span id="cb4-145"><a href="#cb4-145" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
-<span id="cb4-146"><a href="#cb4-146" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
-<span id="cb4-147"><a href="#cb4-147" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price <span class="fu">\\</span></span>
-<span id="cb4-148"><a href="#cb4-148" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
-<span id="cb4-149"><a href="#cb4-149" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span>  1.50  <span class="fu">\\</span></span>
-<span id="cb4-150"><a href="#cb4-150" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00  <span class="fu">\\</span></span>
-<span id="cb4-151"><a href="#cb4-151" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20  <span class="fu">\\</span></span>
-<span id="cb4-152"><a href="#cb4-152" tabindex="-1"></a>  <span class="fu">\cmidrule</span>{3-3}</span>
-<span id="cb4-153"><a href="#cb4-153" tabindex="-1"></a>  Total <span class="op">&amp;</span> 15        <span class="op">&amp;</span> 28.20  <span class="fu">\\</span></span>
-<span id="cb4-154"><a href="#cb4-154" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
-<span id="cb4-155"><a href="#cb4-155" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
-<span id="cb4-156"><a href="#cb4-156" tabindex="-1"></a></span>
-<span id="cb4-157"><a href="#cb4-157" tabindex="-1"></a><span class="kw">\subsection</span>{Merging Cells}</span>
-<span id="cb4-158"><a href="#cb4-158" tabindex="-1"></a></span>
-<span id="cb4-159"><a href="#cb4-159" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{3}{l}}</span>
-<span id="cb4-160"><a href="#cb4-160" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
-<span id="cb4-161"><a href="#cb4-161" tabindex="-1"></a>  <span class="fu">\multicolumn</span>{3}{c}{Overall Inventory} <span class="fu">\\</span></span>
-<span id="cb4-162"><a href="#cb4-162" tabindex="-1"></a>  Fruit  <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price  <span class="fu">\\</span></span>
-<span id="cb4-163"><a href="#cb4-163" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
-<span id="cb4-164"><a href="#cb4-164" tabindex="-1"></a>  Apple  <span class="op">&amp;</span> 5        <span class="op">&amp;</span>  1.50   <span class="fu">\\</span></span>
-<span id="cb4-165"><a href="#cb4-165" tabindex="-1"></a>  Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00   <span class="fu">\\</span></span>
-<span id="cb4-166"><a href="#cb4-166" tabindex="-1"></a>  Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20   <span class="fu">\\</span></span>
-<span id="cb4-167"><a href="#cb4-167" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
-<span id="cb4-168"><a href="#cb4-168" tabindex="-1"></a>  <span class="fu">\multicolumn</span>{2}{c}{Summary} <span class="fu">\\</span></span>
-<span id="cb4-169"><a href="#cb4-169" tabindex="-1"></a>  Total <span class="op">&amp;</span> 15        <span class="op">&amp;</span> 28.20   <span class="fu">\\</span></span>
-<span id="cb4-170"><a href="#cb4-170" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
-<span id="cb4-171"><a href="#cb4-171" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
-<span id="cb4-172"><a href="#cb4-172" tabindex="-1"></a></span>
-<span id="cb4-173"><a href="#cb4-173" tabindex="-1"></a><span class="kw">\section</span>{Cross References}</span>
-<span id="cb4-174"><a href="#cb4-174" tabindex="-1"></a><span class="kw">\label</span>{<span class="ex">sec:cross-references</span>}</span>
-<span id="cb4-175"><a href="#cb4-175" tabindex="-1"></a></span>
-<span id="cb4-176"><a href="#cb4-176" tabindex="-1"></a><span class="kw">\subsection</span>{Material for the Introduction}</span>
-<span id="cb4-177"><a href="#cb4-177" tabindex="-1"></a></span>
-<span id="cb4-178"><a href="#cb4-178" tabindex="-1"></a>In this section, we introduce two new concepts:</span>
-<span id="cb4-179"><a href="#cb4-179" tabindex="-1"></a></span>
-<span id="cb4-180"><a href="#cb4-180" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{cp{9cm}}</span>
-<span id="cb4-181"><a href="#cb4-181" tabindex="-1"></a>  Command <span class="op">&amp;</span> Description <span class="fu">\\</span></span>
-<span id="cb4-182"><a href="#cb4-182" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
-<span id="cb4-183"><a href="#cb4-183" tabindex="-1"></a>  <span class="fu">\cmd</span>{label} <span class="op">&amp;</span> Marks a spot in the document <span class="fu">\\</span></span>
-<span id="cb4-184"><a href="#cb4-184" tabindex="-1"></a>  <span class="fu">\cmd</span>{ref} <span class="op">&amp;</span> Refers to a marked spot in the document <span class="fu">\\</span></span>
-<span id="cb4-185"><a href="#cb4-185" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
-<span id="cb4-186"><a href="#cb4-186" tabindex="-1"></a><span class="kw">\label</span>{<span class="ex">tab:cross-reference-commands</span>}</span>
-<span id="cb4-187"><a href="#cb4-187" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
-<span id="cb4-188"><a href="#cb4-188" tabindex="-1"></a></span>
-<span id="cb4-189"><a href="#cb4-189" tabindex="-1"></a>We can <span class="fu">\kw</span>{refer} to the section with the <span class="fu">\cmd</span>{ref} command, like this: <span class="kw">\ref</span>{<span class="ex">sec:cross-references</span>}.</span>
-<span id="cb4-190"><a href="#cb4-190" tabindex="-1"></a>We can likewise refer to the table like this: <span class="kw">\ref</span>{<span class="ex">tab:cross-reference-commands</span>}.</span>
-<span id="cb4-191"><a href="#cb4-191" tabindex="-1"></a></span>
-<span id="cb4-192"><a href="#cb4-192" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
+<p>After this episode, <a href="../files/document_state/ep-08.tex">here is
+what our LaTeX document looks like</a>.</p>
 </div>
 </div>
 </div>

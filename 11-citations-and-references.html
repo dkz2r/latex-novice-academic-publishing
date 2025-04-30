@@ -564,28 +564,29 @@ document yet. Let’s add a citation:</p>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>One of the best features of LaTeX when writing academic documents is the ability to easily and</span>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>confidently <span class="fu">\kw</span>{cite references}.</span>
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>We can cite the article by Thomas (e.g. with `<span class="fu">\autocite</span>{Thomas2008}`) and it will show up in the references.</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>We can cite the article by Thomas (e.g. with `<span class="fu">\textbackslash</span> autocite<span class="fu">\{</span>Thomas2008<span class="fu">\}</span>`) and it will show up in the references.</span>
 <span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
 <span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference</span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>now appears at the end of the document. `<span class="fu">\autocite</span>` is a command that automatically chooses the</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>now appears at the end of the document. <span class="fu">\cmd</span>{<span class="fu">\textbackslash</span> autocite} is a command that automatically chooses the</span>
 <span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>citation style for you.</span>
 <span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>Let’s explore some of the other citation commands available in `biblatex`:</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>Some additional commands that are available in  `biblatex`:</span>
 <span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>- `<span class="fu">\cite</span>{key}` or `<span class="fu">\cite</span>{key1,key2}`: Cite the reference with the given key.</span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>- `<span class="fu">\cites</span>{key1}{key2}{key-n}`: Cite multiple references.</span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>- `<span class="fu">\parentcite</span>{key}`: Cite the parent reference of the given key.</span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>- `<span class="fu">\autocite</span>{key}`: Automatically choose the citation style.</span>
-<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>- `<span class="fu">\smartcite</span>{key}`: Automatically choose the citation style, but with more control.</span>
-<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>- `footcite{key}`: Cite the reference in a footnote.</span>
-<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a></span>
-<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a>```latex</span>
-<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a>A plain citation looks like this <span class="kw">\cite</span>{<span class="ex">Graham1995</span>}, while multiple citations look like this</span>
-<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="kw">\cites</span>{<span class="ex">Graham1995</span>}[see][p. 42]{<span class="ex">Thomas2008</span>}. We already used autocite, but we can also use the</span>
-<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a>similar smartcite <span class="fu">\smartcite</span>{Graham1995}. The benefit with smartcite is that you</span>
-<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>can setup that e.g. all references should go into a footnote. You can continue</span>
-<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a>using smartcite when you are *in* a footnote and it will then detect that there</span>
-<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a>is no need for creating another footnote but behaving like autocite.</span></code></pre>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> cite<span class="fu">\{</span>key<span class="fu">\}</span>` or `<span class="fu">\textbackslash</span> cite<span class="fu">\{</span>key1, key2<span class="fu">\}</span>`: Cite the reference with the given key</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> cites<span class="fu">\{</span>key1<span class="fu">\}\{</span>key2<span class="fu">\}\{</span>key-n<span class="fu">\}</span>`: Cite multiple references.</span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> usepackage<span class="fu">\{\}\textbackslash</span> parentcite<span class="fu">\{</span>key<span class="fu">\}</span>`: Cite the parent reference of the given key.</span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> autocite<span class="fu">\{</span>key<span class="fu">\}</span>`: Automatically choose the citation style.</span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> smartcite<span class="fu">\{</span>key<span class="fu">\}</span>`: Automatically choose the citation style, but with more control.</span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> footcite<span class="fu">\{</span>key<span class="fu">\}</span>`: Cite the reference in a footnote.</span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a>A plain citation looks like this <span class="kw">\cite</span>{<span class="ex">Graham1995</span>}, while multiple citations look like this</span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a><span class="kw">\cites</span>{<span class="ex">Graham1995</span>}[see][p. 42]{<span class="ex">Thomas2008</span>}. We already used autocite, but we can also use the</span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>similar smartcite <span class="fu">\smartcite</span>{Graham1995}. The benefit with smartcite is that you</span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a>can setup that e.g. all references should go into a footnote. You can continue</span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a>using smartcite when you are *in* a footnote and it will then detect that there</span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a>is no need for creating another footnote but behaving like autocite.</span></code></pre>
 </div>
 <p>If you want to have all entries of your referencing file in your
 bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
@@ -709,7 +710,7 @@ there. What differences do you notice?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The <code>natbib</code> package is a bit more manual than
 <code>biblatex</code>. You have to specify the bibliography style and
@@ -751,7 +752,7 @@ delete the reference and re-compile your document. What happens?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You might expect removing the reference to either error or remove the
 citation from the text, but it doesn’t - instead we get a placeholder in
@@ -805,7 +806,7 @@ reference in the text like this:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We are referencing the key <code>mikolov</code> in our document, but
 the key in our BiBTeX file is <code>mikolov2013</code>. We need to
