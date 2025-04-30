@@ -224,7 +224,8 @@ Some popular apple varieties include:
 
 ## Challenge 3: Make your own beamer slides
 
-Consider the following minimal example of an initial `beamer` presentation. Let's create a new file called "beamer.tex" and copy the following code as a template into it:
+Consider the following minimal example of an initial `beamer` presentation. Let's create a new file
+called "beamer.tex" and copy the following code as a template into it:
 
 ```latex
 \documentclass{beamer}
@@ -240,21 +241,25 @@ Consider the following minimal example of an initial `beamer` presentation. Let'
 
 \begin{frame}
 \frametitle{Sample frame title}
-This is some text in the first frame. This is some text in the first frame. This is some text in the first frame.
+This is some text in the first frame. This is some text in the first frame. This is some text in
+the first frame.
 \end{frame}
 
 \end{document}
 ```
 
-Adapt these slides in the following way: 
+Adapt these slides in the following way:
 
 1. Change the title to "LaTeX Workshop"
-2. Change the name of the author to your name. 
+2. Change the name of the author to your name.
 3. Change the institution name to "ABCD Project Group".
 4. Change the date to "2025".
-5. Change the frame title of the first slide after the title page to "What I have learned in this episode" and replace the example text on the slide with your key takeaway from this section. 
-6. Besides the title page and the slide after the title page, create a third slide with the title "What I learned in the previous episodes". 
-7. Add an unordered list as content to this slide and describe in three bullet points your key takeaways from the previous episodes.
+5. Change the frame title of the first slide after the title page to "What I have learned in this
+   episode" and replace the example text on the slide with your key takeaway from this section.
+6. Besides the title page and the slide after the title page, create a third slide with the title
+   "What I learned in the previous episodes".
+7. Add an unordered list as content to this slide and describe in three bullet points your key
+   takeaways from the previous episodes.
 
 
 :::::::::::::::::::::::: solution
@@ -274,16 +279,16 @@ Adapt these slides in the following way:
 
 \begin{frame}
 \frametitle{What I have learned in this episode}
-My key takeaway from this episode. 
+My key takeaway from this episode.
 \end{frame}
 
 \begin{frame}
 \frametitle{What I learned in the previous episodes}
-\begin{itemize} 
+\begin{itemize}
   \item Key learning 1
   \item Key learning 2
   \item Key learning 3
-\end{itemize} 
+\end{itemize}
 \end{frame}
 
 \end{document}
