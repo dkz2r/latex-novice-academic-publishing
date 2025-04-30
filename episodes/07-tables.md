@@ -139,8 +139,9 @@ our table to add horizontal lines:
 ```latex
 \subsection{Tables with Horizontal Lines}
 
-We can use the \cmd{toprule}, \cmd{midrule}, and \cmd{bottomrule} commands from the \cmd{booktabs}
-package to create horizontal lines in our table.
+We can use the \cmd{\textbackslash toprule}, \cmd{\textbackslash midrule}, and
+\cmd{\textbackslash bottomrule} commands from the \cmd{booktabs} package to create horizontal
+lines in our table.
 
 \begin{tabular}{*{3}{l}}
   \toprule
@@ -174,9 +175,9 @@ the column to start the line and the second number is the column to end the line
 ```latex
 \subsection{Partial Horizontal Lines}
 
-The \cmd{cmidrule} command can be used to create partial horizontal lines in a table. The command
-accepts the arguments {number-number}, where the first number is the column to start the line and
-last number is the column to end the line.
+The \cmd{\textbackslash cmidrule} command can be used to create partial horizontal lines in a
+table. The command accepts the arguments {number-number}, where the first number is the column to
+start the line and last number is the column to end the line.
 
 \begin{tabular}{*{3}{l}}
   \toprule
@@ -210,7 +211,8 @@ arguments:
 ```latex
 \subsection{Merging Cells}
 
-Merge cells horizontally using the \cmd{multicolumn} command. This command takes three arguments:
+Merge cells horizontally using the \cmd{\textbackslash multicolumn} command. This command takes
+three arguments:
 
 \begin{itemize}
   \item The number of cells which should be merged
