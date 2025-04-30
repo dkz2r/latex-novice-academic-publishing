@@ -411,7 +411,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Using Document Classes</h1>
-        <p>Last updated on 2025-04-23 |
+        <p>Last updated on 2025-04-30 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/04-document-classes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -667,7 +667,7 @@ to turn it into an article. We can change the document class from
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>We can chang the document class from “slides” to “article”, but the
+<p>We can change the document class from “slides” to “article”, but the
 <code>slide</code> environment does not exist in the
 <code>article</code> document class. We end up with errors when we try
 to compile the document, complaining that the <code>slide</code>
@@ -699,6 +699,95 @@ maintain the structure of the document:</p>
 </div>
 </div>
 </div>
+<div id="challenge-3-make-your-own-beamer-slides" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-3-make-your-own-beamer-slides" class="callout-inner">
+<h3 class="callout-title">Challenge 3: Make your own beamer slides</h3>
+<div class="callout-content">
+<p>Consider the following minimal example of an initial
+<code>beamer</code> presentation. Let’s create a new file called
+“beamer.tex” and copy the following code as a template into it:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">\title</span>{Sample title}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">\author</span>{Anonymous}</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">\institute</span>{Overleaf}</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="fu">\date</span>{2021}</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="fu">\frametitle</span>{Sample frame title}</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>This is some text in the first frame. This is some text in the first frame. This is some text in</span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>the first frame.</span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>Adapt these slides in the following way:</p>
+<ol style="list-style-type: decimal"><li>Change the title to “LaTeX Workshop”</li>
+<li>Change the name of the author to your name.</li>
+<li>Change the institution name to “ABCD Project Group”.</li>
+<li>Change the date to “2025”.</li>
+<li>Change the frame title of the first slide after the title page to
+“What I have learned in this episode” and replace the example text on
+the slide with your key takeaway from this section.</li>
+<li>Besides the title page and the slide after the title page, create a
+third slide with the title “What I learned in the previous
+episodes”.</li>
+<li>Add an unordered list as content to this slide and describe in three
+bullet points your key takeaways from the previous episodes.</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="fu">\title</span>{LaTeX Workshop}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="fu">\author</span>{My Name}</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="fu">\institute</span>{ABCD Project Group}</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="fu">\date</span>{2025}</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="fu">\frametitle</span>{What I have learned in this episode}</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>My key takeaway from this episode.</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="fu">\frametitle</span>{What I learned in the previous episodes}</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 1</span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 2</span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 3</span>
+<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -723,54 +812,54 @@ maintain the structure of the document:</p>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>Hello World!</span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>This is my first LaTeX document.</span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>I can add content to my first section!</span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a></span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
-<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a>I can put a subsection inside my first section.</span>
-<span id="cb6-20"><a href="#cb6-20" tabindex="-1"></a></span>
-<span id="cb6-21"><a href="#cb6-21" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
-<span id="cb6-22"><a href="#cb6-22" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" tabindex="-1"></a>There are two types of lists: ordered and unordered.</span>
-<span id="cb6-24"><a href="#cb6-24" tabindex="-1"></a></span>
-<span id="cb6-25"><a href="#cb6-25" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
-<span id="cb6-26"><a href="#cb6-26" tabindex="-1"></a></span>
-<span id="cb6-27"><a href="#cb6-27" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
-<span id="cb6-28"><a href="#cb6-28" tabindex="-1"></a></span>
-<span id="cb6-29"><a href="#cb6-29" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb6-30"><a href="#cb6-30" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb6-31"><a href="#cb6-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb6-32"><a href="#cb6-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb6-33"><a href="#cb6-33" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb6-34"><a href="#cb6-34" tabindex="-1"></a></span>
-<span id="cb6-35"><a href="#cb6-35" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
-<span id="cb6-36"><a href="#cb6-36" tabindex="-1"></a></span>
-<span id="cb6-37"><a href="#cb6-37" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
-<span id="cb6-38"><a href="#cb6-38" tabindex="-1"></a></span>
-<span id="cb6-39"><a href="#cb6-39" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb6-40"><a href="#cb6-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
-<span id="cb6-41"><a href="#cb6-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
-<span id="cb6-42"><a href="#cb6-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
-<span id="cb6-43"><a href="#cb6-43" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb6-44"><a href="#cb6-44" tabindex="-1"></a></span>
-<span id="cb6-45"><a href="#cb6-45" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co">% This command tells LaTeX what kind of document we are creating (article).</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co">% Everything before the \begin{document} command is called the preamble.</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>Hello World!</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>This is my first LaTeX document.</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>I can add content to my first section!</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a>I can put a subsection inside my first section.</span>
+<span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" tabindex="-1"></a><span class="kw">\section</span>{Lists}</span>
+<span id="cb8-22"><a href="#cb8-22" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" tabindex="-1"></a>There are two types of lists: ordered and unordered.</span>
+<span id="cb8-24"><a href="#cb8-24" tabindex="-1"></a></span>
+<span id="cb8-25"><a href="#cb8-25" tabindex="-1"></a><span class="kw">\subsection</span>{Ordered}</span>
+<span id="cb8-26"><a href="#cb8-26" tabindex="-1"></a></span>
+<span id="cb8-27"><a href="#cb8-27" tabindex="-1"></a>Ordered lists do not have numbers associated with each item.</span>
+<span id="cb8-28"><a href="#cb8-28" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb8-30"><a href="#cb8-30" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb8-31"><a href="#cb8-31" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb8-32"><a href="#cb8-32" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb8-33"><a href="#cb8-33" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb8-34"><a href="#cb8-34" tabindex="-1"></a></span>
+<span id="cb8-35"><a href="#cb8-35" tabindex="-1"></a><span class="kw">\subsection</span>{Unordered}</span>
+<span id="cb8-36"><a href="#cb8-36" tabindex="-1"></a></span>
+<span id="cb8-37"><a href="#cb8-37" tabindex="-1"></a>Unordered lists are just a series of items preceded by a marker.</span>
+<span id="cb8-38"><a href="#cb8-38" tabindex="-1"></a></span>
+<span id="cb8-39"><a href="#cb8-39" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb8-40"><a href="#cb8-40" tabindex="-1"></a>  <span class="fu">\item</span> Item 1</span>
+<span id="cb8-41"><a href="#cb8-41" tabindex="-1"></a>  <span class="fu">\item</span> Item 2</span>
+<span id="cb8-42"><a href="#cb8-42" tabindex="-1"></a>  <span class="fu">\item</span> Item 3</span>
+<span id="cb8-43"><a href="#cb8-43" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb8-44"><a href="#cb8-44" tabindex="-1"></a></span>
+<span id="cb8-45"><a href="#cb8-45" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -838,7 +927,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/04-document-classes.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/04-document-classes.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-23",
+  "dateModified": "2025-04-30",
   "datePublished": "2025-04-30"
 }
 
