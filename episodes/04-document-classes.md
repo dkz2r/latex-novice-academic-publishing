@@ -250,7 +250,7 @@ Adapt these slides in the following way:
 
 1. Change the title to "LaTeX Workshop"
 2. Change the name of the author to your name. 
-3. Change the institution name to "DKZ.2R".
+3. Change the institution name to "ABCD Project Group".
 4. Change the date to "2025".
 5. Change the frame title of the first slide after the title page to "What I have learned in this episode" and replace the example text on the slide with your key takeaway from this section. 
 6. Besides the title page and the slide after the title page, create a third slide with the title "What I learned in the previous episodes". 
@@ -265,7 +265,7 @@ Adapt these slides in the following way:
 %Information to be included in the title page:
 \title{LaTeX Workshop}
 \author{My Name}
-\institute{DKZ.2R}
+\institute{ABCD Project Group}
 \date{2025}
 
 \begin{document}
