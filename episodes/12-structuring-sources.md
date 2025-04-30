@@ -289,30 +289,35 @@ document starts.
 
 ## Challenge 1: Can you do it?
 
-What is the output of this command?
+Let's make a new project called "structuring-sources". Add the following files to your project:
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+- `main.tex` (copy the contents from [this file](files/12-structuring-sources/main.tex))
+- `references.bib` (copy the contents from [this file](files/12-structuring-sources/references.bib))
+
+How might we use `\input{}` and `\include{}` to break our project up into smaller files?
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```output
-[1] "This new lesson looks good"
+There isn't a specific correct answer for this challenge, but one idea might be something that
+looks like this:
+
+```
+├── main.tex
+├── preamble.tex
+├── refereces.bib
+├── content/
+│   ├── introduction.tex
+│   ├── model_architecture.tex
+│   ├── model_results.tex
+│   └── conclusion.tex
+├── tables/
+    └── model_results.tex
 ```
 
 :::::::::::::::::::::::::::::::::
 
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
