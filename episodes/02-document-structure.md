@@ -177,16 +177,16 @@ Let's introduce an error into our project to see what this might look like. Let'
 into the `documentclass` command by changing it to `documnetclass`. When we recompile the document,
 we can see our errors:
 
-![Error in the LaTeX document](fig/02-document-structure/document-errors.PNG){alt='Error in the LaTeX document.'}
+![Error in the LaTeX document](fig/02-document-structure/document-errors.png){alt='Error in the LaTeX document.'}
 
 And if we click on the "Logs and output files" button, we can see a more detailed error message:
 
-![Error message in the LaTeX document](fig/02-document-structure/document-error-message.PNG){alt='Error message in the LaTeX document.'}
+![Error message in the LaTeX document](fig/02-document-structure/document-error-message.png){alt='Error message in the LaTeX document.'}
 
 We can see similar messages when hovering over the small red circle next to the error in the text
 editor:
 
-![Error message on Hover](fig/02-document-structure/document-error-hover.PNG){alt='Error message on Hover.'}
+![Error message on Hover](fig/02-document-structure/document-error-hover.png){alt='Error message on Hover.'}
 
 We'll look more into how we can read and fix errors [in a later episode](/14-error-handling.html).
 
