@@ -44,7 +44,7 @@ like this:
 
 :::
 
-In order to create a table, we need to tell latex how may columns we will need and how they should
+In order to create a table, we need to tell latex how many columns we will need and how they should
 be aligned.
 
 Available column types are:
@@ -54,7 +54,7 @@ Available column types are:
 | `l`               | left-aligned  |
 | `c`               | centered      |
 | `r`               | right-aligned |
-| `p{width}`        | a column with fixed width width; the text will be automatically line wrapped and fully justified |
+| `p{width}`        | a column with fixed width; the text will be automatically line wrapped and fully justified |
 | `m{width}`        | like p, but vertically centered compared to the rest of the row |
 | `b{width}`        | like p, but bottom aligned |
 | `w{align}{width}` | prints the contents with a fixed width, silently overprinting if things get larger. (You can choose the horizontal alignment using l, c, or r.) |
@@ -226,8 +226,14 @@ arguments:
 
 ::: callout
 
-Vertical merging is not supported in LaTeX. Usually it is sufficient to leave empty rows in the
-table to create the impression of vertical merging.
+Vertical merging is supported in LaTeX by using the `multirow` package which has the `\multirow` command equipped with it.
+It is similarly structured as `\multicolumn` by using three arguments:
+
+- The number of rows which should be merged
+- The width of the column (i.e. 4em)
+- The contents of the merged rows.
+
+You can find an example in the challenges below.
 
 :::
 
@@ -267,20 +273,112 @@ Try to make the following table in LaTeX:
 ```
 
 :::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: Are Tables like Images?
 
-When we were working with graphics in the previous section, we learned about adding captions to
-images. Can you add a caption to the table you created in Challenge 1 that says "Top 5 Car Models
-in Germany (2024)"
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Merging rows.
+
+Consider the following LaTeX code that creates a table using the command `\multirow`. 
+Can you guess how this table will look like? 
+How many columns will it have? 
+How many rows?
+Are any rows or columns combined?
+
+
+```latex
+
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{tabular}{*{4}{l}}
+  \toprule
+    & Food & Quantity &  Price  \\
+  \midrule
+  \multirow{3}{4em}{Fruit} & Apple  & 5  &  1.50   \\
+  & Banana & 6        &  2.00   \\
+  & Orange & 4        &  1.20   \\
+  \midrule
+  \multirow{2}{4em}{Cheese} & Brie & 2 & 3.30 \\
+   & Asiago   & 3 & 2.90   \\
+  \bottomrule
+\end{tabular}
+
+\end{document}
+```
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+The table will have 4 columns where the first column does not have a column name. 
+The table will have 6 rows. 
+The first row is the column name row. 
+Rows 2 to 4 are merged for "Fruit". 
+Rows 5 and 6 are merged for "Cheese". 
+
+
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 4: Adding merged rows to your table.
+
+Consider again the LaTeX code for the table in challenge 3. 
+Add four more rows to this table that contain information about the following four sorts of bread: 
+
+- Brioche, 3, 3.00
+- Bagel, 2, 3.50
+- Matzah, 4, 3.60
+- Naan, 2, 3.40
+
+Use `\multirow` to subsume those bread types under the category "Bread".
+
+
+:::::::::::::::::::::::: solution
+
+```latex
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{tabular}{*{4}{l}}
+  \toprule
+    & Food & Quantity &  Price  \\
+  \midrule
+  \multirow{3}{4em}{Fruit} & Apple  & 5  &  1.50   \\
+  & Banana & 6        &  2.00   \\
+  & Orange & 4        &  1.20   \\
+  \midrule
+  \multirow{2}{4em}{Cheese} & Brie & 2 & 3.30 \\
+   & Asiago   & 3 & 2.90   \\
+   \midrule
+  \multirow{4}{4em}{Bread} & Brioche & 3 & 3.00 \\
+  & Bagel & 2 & 3.50 \\
+  & Matzah & 4 & 3.60 \\
+  & Naan & 2 & 3.40 \\
+  \bottomrule
+\end{tabular}
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -288,6 +386,7 @@ You can add a line with at least three colons and a `solution` tag.
 - The `array` package provides additional functionality for creating tables.
 - The `booktabs` package provides commands for creating horizontal lines in tables.
 - The `\multicolumn` command can be used to merge cells in a table.
+- The `\multirow` command in the `multirow` package can be used to merge rows in a table.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
