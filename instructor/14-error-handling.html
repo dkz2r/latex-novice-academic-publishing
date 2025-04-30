@@ -335,6 +335,7 @@
       <div class="accordion-body">
         <ul><li><a href="#error-handling">Error Handling</a></li>
 <li><a href="#anatomy-of-an-error-message">Anatomy of an Error Message</a></li>
+<li><a href="#errors-vs-warnings-vs-information">Errors vs Warnings vs Information</a></li>
 <li><a href="#fixing-a-common-error">Fixing a Common Error</a></li>
 <li><a href="#challenges">Challenges</a></li>
 <li><a href="#figures">Figures</a></li>
@@ -412,7 +413,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Error Handling</h1>
-        <p>Last updated on 2025-04-23 |
+        <p>Last updated on 2025-04-30 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/14-error-handling.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -484,6 +485,38 @@ and I'll forget about whatever was undefined.</code></pre>
 <p>Of course, we know what the error was, so we can just fix it by
 changing <code>\documnetclass</code> back to
 <code>\documentclass</code>.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>In general, the first error message in the list is the most useful
+one to look at. The other error messages are often just a result of the
+first error cascading down the document, so fixing the first one will
+often fix the rest of them too.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="errors-vs-warnings-vs-information">Errors vs Warnings vs Information<a class="anchor" aria-label="anchor" href="#errors-vs-warnings-vs-information"></a></h2>
+<hr class="half-width"><p>Not all messages are equal! LaTeX has three different types of
+messages:</p>
+<ul><li>
+<code>Error</code>: This is a serious issue that will prevent your
+document from compiling. You need to fix this before you can
+continue.</li>
+<li>
+<code>Warning</code>: This is a less serious issue that may not
+prevent your document from compiling, but it may cause issues with the
+output. You should still try to fix this, but it may not be
+critical.</li>
+<li>
+<code>Information</code>: This is just a message that provides
+additional information about the document. You can usually ignore
+this.</li>
+</ul><p>In Overleaf, error messages are shown in red, warnings are shown in
+yellow, and information messages in blue.</p>
 </section><section><h2 class="section-heading" id="fixing-a-common-error">Fixing a Common Error<a class="anchor" aria-label="anchor" href="#fixing-a-common-error"></a></h2>
 <hr class="half-width"><p>This time, instead of introducing an error into our document, let’s
 create a new file called <code>my-error-example.tex</code> and add the
@@ -681,7 +714,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/14-error-handling.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/14-error-handling.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-23",
+  "dateModified": "2025-04-30",
   "datePublished": "2025-04-30"
 }
 

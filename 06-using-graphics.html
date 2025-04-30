@@ -462,7 +462,7 @@ including:</p>
 <li>PDF</li>
 <li>EPS</li>
 </ul><p>For the purposes of this lesson, we’ll use the following image:</p>
-<figure><img src="fig/06-using-graphics/example-image.PNG" alt="Our example image." class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<figure><img src="fig/06-using-graphics/example-image.png" alt="Our example image." class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -488,7 +488,21 @@ click on the “Select files” button to choose the image from our
 computer.</p>
 <p>Once you have uploaded the image, you should see it in the “Files”
 section of the Overleaf editor:</p>
-<figure><img src="fig/06-using-graphics/overleaf-uploaded-image.PNG" alt="The uploaded image in Overleaf." class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/06-using-graphics/overleaf-uploaded-image.PNG" alt="The uploaded image in Overleaf." class="figure mx-auto d-block"></figure><div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>You can also use the “From external URL” option to add an image
+directly from a URL, which would let you use an image from a website
+directly without having to download it first.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="including-an-image-in-a-latex-document">Including an Image in a LaTeX Document<a class="anchor" aria-label="anchor" href="#including-an-image-in-a-latex-document"></a></h2>
 <hr class="half-width"><p>Now that we have our image uploaded, we can include it in our
 document using the <code>\includegraphics</code> command:</p>
@@ -520,6 +534,11 @@ replace later.</p>
 </div>
 <div class="section level3">
 <h3 id="adjusting-the-appearance-of-the-image">Adjusting the appearance of the image<a class="anchor" aria-label="anchor" href="#adjusting-the-appearance-of-the-image"></a></h3>
+<p>But wait! The image is too big, and it doesn’t fit on the page, so
+LaTeX has moved it to the next page. Since the image is a little too
+large to fit on the same page as the text, LaTeX has moved it
+automatically to the next page. Let’s address that by making the image
+smaller.</p>
 <p>We can adjust the appearance of the image by passing options to the
 <code>\includegraphics</code> command, just like we did earlier with the
 <code>geometry</code> package. For example, we can specify the height of
@@ -531,7 +550,7 @@ the image:</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>We can pass parameters to the <span class="fu">\cmd</span>{includegraphics} command to adjust the appearance of the image.</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=4cm]{<span class="ex">example-image.PNG</span>}</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>Other possible options include:</span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
@@ -655,7 +674,7 @@ environment to use the <code>ht</code> option:</p>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
 <span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>Control the position of a floating image by passing paratmeters to the <span class="fu">\cmd</span>{figure} environment:</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>Control the position of a floating image by passing parameters to the <span class="fu">\cmd</span>{figure} environment:</span>
 <span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
 <span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
 <span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>  <span class="fu">\item</span> h: Place the float "here" (where it appears in the code)</span>
@@ -710,7 +729,37 @@ command inside of the <code>figure</code> environment:</p>
 </div>
 <p>When we render the document, we can see that the caption appears
 below the image:</p>
-<figure><img src="fig/06-using-graphics/document-with-floating-image-caption.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure></div>
+<figure><img src="fig/06-using-graphics/document-with-floating-image-caption.PNG" alt="Our document with a floating image." class="figure mx-auto d-block"></figure><div id="callout6" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Note that the caption is automatically numbered “Figure 1”. Very
+handy! We’ll see how we can automatically reference figures and tables
+in a later episode.</p>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p>Another package that we can use to work with images in LaTeX is the
+<code>hvfloat</code> package. This package is an alterantive way of
+controlling the position of floating elemnents in LaTeX, like images and
+tables. It provides a more flexible way of positioning floats allowing
+us to, for example, place a float at the bottom of the page, even if
+there is not enough space for it to fit.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
 <hr class="half-width"><div id="challenge-1-can-you-do-it" class="callout challenge">
 <div class="callout-square">
@@ -906,12 +955,12 @@ the <code>figure</code> environment.</li>
 </ul></div>
 </div>
 </div>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
 <div class="codewrapper sourceCode" id="cb13">
@@ -1011,7 +1060,7 @@ the <code>figure</code> environment.</li>
 <span id="cb13-92"><a href="#cb13-92" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[height=2cm]{<span class="ex">example-image.PNG</span>}</span>
 <span id="cb13-93"><a href="#cb13-93" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span>
 <span id="cb13-94"><a href="#cb13-94" tabindex="-1"></a></span>
-<span id="cb13-95"><a href="#cb13-95" tabindex="-1"></a>Control the position of a floating image by passing paratmeters to the <span class="fu">\cmd</span>{figure} environment:</span>
+<span id="cb13-95"><a href="#cb13-95" tabindex="-1"></a>Control the position of a floating image by passing parameters to the <span class="fu">\cmd</span>{figure} environment:</span>
 <span id="cb13-96"><a href="#cb13-96" tabindex="-1"></a></span>
 <span id="cb13-97"><a href="#cb13-97" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
 <span id="cb13-98"><a href="#cb13-98" tabindex="-1"></a>  <span class="fu">\item</span> h: Place the float "here" (where it appears in the code)</span>

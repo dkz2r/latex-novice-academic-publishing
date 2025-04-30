@@ -410,7 +410,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Structuring Sources</h1>
-        <p>Last updated on 2025-04-23 |
+        <p>Last updated on 2025-04-30 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-structuring-sources.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -530,6 +530,23 @@ section:</p>
 <p>When we compile our document, we should see the contents of
 <code>include_example.tex</code>, however this time the content will
 have included a new page before the content.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Another important thing to note about the
+<code>\include{filename}</code> command is that it cannot contain
+another <code>\include{}</code> command - this will result in an
+error.</p>
+<p>You can, however, use <code>\input{}</code> inside an
+<code>\include{}</code> command or an <code>\input{}</code> command
+inside another <code>\input{}</code> command.</p>
+</div>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="updating-our-project">Updating Our Project<a class="anchor" aria-label="anchor" href="#updating-our-project"></a></h2>
 <hr class="half-width"><p>Now that we’ve seen how to use the <code>\input{filename}</code> and
@@ -686,7 +703,7 @@ these files using the <code>\input{filename}</code>:</p>
 <span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="fu">\input</span>{content/math}</span>
 <span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="fu">\input</span>{content/text-and-spacing}</span></code></pre>
 </div>
-<div id="callout1" class="callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -795,7 +812,7 @@ called “includes”:</p>
 <span id="cb16-24"><a href="#cb16-24" tabindex="-1"></a></span>
 <span id="cb16-25"><a href="#cb16-25" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<div id="callout2" class="callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -947,7 +964,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/12-structuring-sources.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/12-structuring-sources.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-23",
+  "dateModified": "2025-04-30",
   "datePublished": "2025-04-30"
 }
 
