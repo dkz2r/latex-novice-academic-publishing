@@ -77,7 +77,7 @@ In LaTeX, as in markdown, there are two types of lists: ordered and unordered. T
 defined with `\begin{...}` and `\end{...}` commands, as we saw with the document body. Let's add
 an ordered list to our document.
 
-We'll replace our "Second Section" with on for "Lists" and add an ordered list:
+We'll replace our "Second Section" with one for "Lists" and add an ordered list:
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
@@ -125,7 +125,27 @@ When you compile this document, you should see something like this in the previe
 
 Note that the `\item` commands do not need to be enclosed in braces. These commands do not take
 any arguments, so they can be used as standalone commands. The text that follows the `\item`
-command will be treated as the content of the list item.
+command will be treated as the content of the list item. However, you are able to specify your own
+bullet point symbols with `\item[]` manually. For instance, if you want a list with small letters in brackets
+you can use the following LaTeX code:  
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+
+% List with custom bullet point symbols
+\begin{itemize}
+  \item[(a)] Item 1
+  \item[(b)] Item 2
+  \item[(c)] Item 3
+\end{itemize}
+
+\end{document}
+```
 
 :::
 
@@ -262,6 +282,42 @@ How would you write this in LaTeX?
   \end{enumerate}
   \item Bananas
   \item Oranges
+\end{itemize}
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 3: Enumerate your list manually
+
+We would like to have the following appear in our LaTeX document:
+
+
+1. Gala
+2. Fuji
+3. Granny Smith
+
+
+How would you write this in LaTeX **without** using `enumerate` but `itemize` with `\item[]`?
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\begin{itemize}
+  \item[1.] Gala
+  \item[2.] Fuji
+  \item[3.] Granny Smith
 \end{itemize}
 
 \end{document}

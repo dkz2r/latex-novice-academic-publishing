@@ -60,8 +60,8 @@ Let's look at the commands we've used so far:
 
 ::: callout
 
-You can have multiple \begin{...} and \end{...} pairs in a single LaTeX document, but
-you must have exactly as many \begin{...} commands as \end{...} commands.
+You can have multiple `\begin{...}` and `\end{...}` pairs in a single LaTeX document, but
+you must have exactly as many `\begin{...}` commands as `\end{...}` commands.
 
 :::
 
@@ -116,7 +116,9 @@ what happens.
 
 You should see that the two lines of text are now displayed on the same line. This is because LaTeX
 treats the two lines as part of the same paragraph. If you want to start a new paragraph, you need
-to leave a blank line between the two paragraphs.
+to leave a blank line between the two paragraphs. Instead of using an empty line, there is also 
+the command `\par` that leads you to the same result of creating a new paragraph. 
+More on this in one of the challenges below.  
 
 ## Special Characters
 
@@ -130,6 +132,28 @@ much less common in text, but you can use them by "escaping" them with a backsla
 - `\^` produces `^`
 
 and so on.
+
+::: callout
+
+Sometimes, special characters can, unintentionally, conflate with characters that are used after that special character.
+You can prevent that by typing `{}` directly behind your special character.
+The following LaTeX code gives you an example: 
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+Here, the letter a is conflated with \^{} by typing \^ a.
+
+To prevent that, type \^{} a.  
+
+\end{document}
+```  
+
+:::
+
+
 
 ## Errors, Warnings and the Log
 
@@ -241,6 +265,79 @@ the text correctly:
 
 ```latex
 5 is greater than 3 \& 2 is less than 4. This is 100\% true.
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Paragraphs with `\par`.
+
+In the section about Paragraphs from above we learned that empty lines are important to create paragraphs. 
+However, there is also a LaTeX command called `\par` which might be of help for us. 
+Consider the LaTeX code below. Can you already guess which of these options prints *Hello World!* and *This is my first LaTeX document.* in two separate lines?
+(Feel to make a new project in Overleaf to test this out!)  
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+% Option A
+Hello World!
+
+This is my first LaTeX document.
+
+% Option B
+Hello World! This is my first LaTeX document.
+
+% Option C
+Hello World! \par This is my first LaTeX document.
+
+% Option D
+Hello World! \par
+
+This is my first LaTeX document.
+\end{document}
+```
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+The command `\par` initiates a new paragraph for us even if we write text in just one line (see Option C). 
+Solely, Option B out of all four options does not create the intended new paragraph as neither an empty line nor `\par` is used. 
+Moreover, Option D gives us the same result as Option A and Option C, although we used both, `\par` and an empty line.  
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 4: One line of code with paragraphs and special characters.
+
+How would I display the following text in a LaTeX document but using just one line of code?
+
+```
+Hello World! This is my first LaTeX document. 
+Now, I know how to initiate paragraphs without an empty line. 
+Even more, I can write # and ^ correctly using LaTeX.  
+``` 
+
+
+:::::::::::::::::::::::: solution
+
+## Answer
+
+We need to use `\par` to initiate a new paragraph without using a new line of code. 
+Moreover, we need to use escapes before each of the special characters. The following LaTeX code will display
+the text correctly:
+
+```latex
+Hello World! This is my first LaTeX document. \par Now, I know how to initiate paragraphs without an empty line. \par Even more, I can write \# and \^{} correctly using LaTeX.  
 ```
 
 :::::::::::::::::::::::::::::::::
