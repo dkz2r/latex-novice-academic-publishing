@@ -98,6 +98,16 @@ Then, in our `main.tex` document, let's add the following section:
 When we compile our document, we should see the contents of `include_example.tex`, however this
 time the content will have included a new page before the content.
 
+::: callout
+
+Another important thing to note about the `\include{filename}` command is that it cannot contain
+another `\include{}` command - this will result in an error.
+
+You can, however, use `\input{}` inside an `\include{}` command or an `\input{}` command inside
+another `\input{}` command.
+
+:::
+
 ## Updating Our Project
 
 Now that we've seen how to use the `\input{filename}` and `\include{filename}` commands, let's
