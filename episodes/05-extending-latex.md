@@ -153,6 +153,20 @@ Let's take a minute to go through and add the `\kw` command to all the keywords 
 
 :::
 
+::: spoiler
+
+Related to the `\newcommand` command, we can also use the `\renewcommand` command to change the
+definition of an existing command. This is useful, for example, if we want to change the
+effect of a command partway through a document, or if we want to change the definition of a
+command that is already defined in a package. It has an identical syntax to the `\newcommand`
+command:
+
+```latex
+\renewcommand{\commandname}[number of arguments]{definition}
+```
+
+:::
+
 ### Code Reuse
 
 This also means that we can easily change the formatting of all the words we've highlighted by
@@ -186,7 +200,7 @@ We can define as many commands as we like in the preamble of our document. Let's
 that we can use to highlight commands in the document:
 
 ```latex
-% Italics for commands
+% Italicise LaTeX commands
 \newcommand{\cmd}[1]{\textit{#1}}
 ```
 
@@ -367,6 +381,8 @@ After this episode, here is what our LaTeX document looks like:
 
 % Highlight Keywords using the \kw{} command
 \newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
+% Italicise LaTeX commands
+\newcommand{\cmd}[1]{\textit{#1}}
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here

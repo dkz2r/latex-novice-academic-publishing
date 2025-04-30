@@ -79,30 +79,86 @@ the appropriate name. For more details about this, refer to the references secti
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1: What's wrong with this code?
 
-What is the output of this command?
+Here's a section from a larger document. Why might the references not be working as expected? (This
+is a tiny but common issue!)
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+```latex
+\section{Findings}
+\label{sec:findings}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    Color & Pre-treatment & Post-treatment \\
+    \midrule
+    Blue  & 30\% & 35\% \\
+    Green & 15\% & 55\% \\
+    Red   & 10\% & 12\% \\
+    \bottomrule
+  \end{tabular}
+  \caption{Findings from the survey.}
+  \label{tab:findings}
+\end{table}
+
+As shown in \ref{tab:findings} post-treatment values are higher...
+
 ```
+
+The document compiles without error, but the reference text has an issue. What is it?
 
 :::::::::::::::::::::::: solution
 
-## Output
-
-```output
-[1] "This new lesson looks good"
-```
+The `\ref{}` command is correctly written, but the `\ref{}` command only returns the number of the
+label it is referring to. In this case, it will return the number of the table, not the name of the
+table. To fix this, you can write "As shown in Table \ref{tab:findings}..."
 
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2: Where does the reference go?
+
+We mentioned that the `\label{}` command should always come after the numbered element you want to
+refer to. What do you think would happen if we put the `\label{}` command before the numbered
+element? For example:
+
+```latex
+\documentclass{article}
+
+\usepackage{lipsum}
+
+\begin{document}
+
+\section{Introduction}
+\label{sec:intro}
+\lipsum[1]
+
+\label{sec:methods}
+\section{Methodology}
+\lipsum[2]
+
+\section{Findings}
+As indicated in Section \ref{sec:methods}, \lipsum[3][2]
+
+\end{document}
+```
+
+*The `\lipsum` package is a nice way of quickly generating large amounts of placeholder text -
+great if you just want to get an idea of how your document will look!*
+
+Before you run the code, think about what will happen. What do you expect the output to be?
+Run the code and see if your expectations were correct. Why or why not?
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+You might have expected the output to be either "As indicated in Section 2, ..." or "As indicated
+in Section ???", but it actually returns "As indicated in Section 1, ...". This is because the
+`\label{}` command marks the section number **immediately preceding** it. In this case, the
+`\label{}` command is placed before the `\section{Methodology}` command, so it marks the section
+number of the previous section, which is the `Introduction` section. The fact that the
+`Introduction` section already has a label does not matter.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
