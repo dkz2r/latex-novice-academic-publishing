@@ -6,15 +6,16 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- bibtex-ext
-- siunitx
-- cite, cites, parentcite, parentcites, autocite, smartcite
+- How do I add bibliographic references to my document?
+- How do I format my references in LaTeX?
+- How do I cite references in my document?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
--
+- Learn how to use a reference database to manage references in LaTeX documents.
+- Explore different ways of citing references in our document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -146,14 +147,14 @@ you can either go with `\cite{key1,key2,.....}` for all entries or you type
 `\cite{*}`.
 This will print all entries first in your text section and puts them into the
 bibliography. You can also go with `\nocite{*}` then the reference is only
-internally called and put into the bibliography. 
+internally called and put into the bibliography.
 
 
 
 It is always good to tidy up your `.bib`-file and use the fields accordingly. In
 case you want to omit certain fields in your bibliography you can do so on the
 fly:
-```latex 
+```latex
 \AtEveryBibitem{
   \clearfield{url}
   \clearfield{month}
@@ -229,12 +230,6 @@ There are many different bibliography styles available, and you can find a list 
 [CTAN](https://ctan.org/topic/biblio).
 Check if one of those bibligraphy and citation styles meets your requirements.
 If you want to finetune an existing one we suggest to take a look at [biblatex-ext](https://texdoc.org/serve/biblatex-ext/0).
-
-:::
-
-::: callout
-
-
 
 :::
 
@@ -334,7 +329,12 @@ just be sure to clear all of your warnings before finializing your document.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
--
+- References are stored in a reference database, seperate from the LaTeX document.
+- BiBTeX files are used to store references in a processing-friendly format and have the extension
+  `.bib`.
+- There are multiple libraries available to manage references in LaTeX documents, including
+  `natbib` and `biblatex`.
+- We can use the `\cite` command or one of its variants to cite references in our document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
