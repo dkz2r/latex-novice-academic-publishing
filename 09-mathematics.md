@@ -35,9 +35,12 @@ special markup, and you'll see that the math is spaced out nicely and has letter
 ```latex
 \section{Mathematics}
 
+There are two kinds of math mode in LaTeX: inline and display. Inline math mode is marked with
+a pair of dollar signs, whereas display math mode is marked with a pair of square brackets.
+
 \subsection{Inline Math Mode}
 
-The Pythagorean theorem is \(a^2 + b^2 = c^2\).
+The Pythagorean theorem is $a^2 + b^2 = c^2$.
 ```
 
 There are a lot of symbols and specialist math mode commands available in LaTeX:
@@ -54,16 +57,33 @@ There are a lot of symbols and specialist math mode commands available in LaTeX:
 ### Display Math Mode
 
 Display math mode uses the exact same commands as inline math mode, but it is centered by default
-and is intended for larger equations that are "part of a paragraph":
+and is intended for larger equations that are "part of a paragraph". It is also started and ended
+with a pair of square brackets (`\[ ... \]`).
+
+::: callout
+
+Remember that `[` and `]` are special characters in LaTeX, which is why we have to "escape" it with
+a backslash(`\`) here.
+
+:::
 
 ```latex
 \subsection{Display Math Mode}
 
-The quadratic formula is:
+The Fourier Transform is defined as:
 
 \[
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\hat{f}(\xi) = \int_{-\infty}^\infty f(x) e^{-2\pi i \xi x} \, dx
 \]
+
+Where:
+
+\begin{itemize}
+  \item \( f(x) \) is the function we are transforming,
+  \item \( \hat{f}(\xi) \) is the Fourier Transform of \( f(x) \),
+  \item \( \xi \) is the frequency variable,
+  \item \( i \) is the imaginary unit.
+\end{itemize}
 ```
 
 ::: spoiler
@@ -87,6 +107,9 @@ The quadratic formula is:
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \label{eq:quadratic}
 \end{equation}
+
+This will allow us to refer to the equation later in the document with \cmd{ref} like this:
+Refer to Equation \ref{eq:quadratic}.
 ```
 
 We can now refer to this equation using the `\ref` command, just like we did in the previous
@@ -104,6 +127,12 @@ mathematical typesetting. Let's try it out:
 
 Add the following to your document:
 
+(In the preamble)
+```latex
+\usepackage{amsmath}
+```
+
+(In the body)
 ```latex
 \subsection{The `amsmath` Package}
 
@@ -184,8 +213,13 @@ The code is missing the `\frac` command to create a fraction. The correct code s
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Inline math mode is marked with `$ ... $` or `\(...\`
+- Inline math mode is marked with `$ ... $` or `\(...\)`
 - Display math mode is marked with `\[ ... \]`
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::: spoiler
+
+After this episode, [here is what our LaTeX document looks like](files/document_state/ep-09.tex).
+
+:::
