@@ -23,7 +23,7 @@ A large number of LaTeX packages are available on [CTAN](https://ctan.org/). CTA
 packages and related documentation for many widely used LaTeX packages. You can search the archive
 for specific strings, or browse by category.
 
-![](fig/15-docum)entation-and-help/ctan-screenshot.PNG){alt='CTAN page for the geometry package.'}
+![](fig/15-documentation-and-help/ctan-screenshot.PNG){alt='CTAN page for the geometry package.'}
 Project pages
 
 Individual package pages often contain links to detailed documentation, including PDF manuals and
