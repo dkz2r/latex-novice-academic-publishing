@@ -363,6 +363,61 @@ Refactor the following LaTeX document to use multiple files.
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Why did we do this?
+
+In our `content/tables.tex` file, we have a bunch of `\input{}` commands for the tables instead of
+writing the tables directly in the file. Why did we do this? What is the benefit of doing this?
+
+:::::::::::::::::::::::: solution
+
+Using an `\input` command inserts the table contents directly into the document as though it was
+typed, which means that we can reuse the same table in multiple documents without having to copy
+paste it. For example, if we were making a presentation in LaTeX, we could use the same table
+in our presentation. This means that if we make a change to the table, it will be reflected in
+all of the documents in which we use it.
+
+(This reflects the programming principle of "Don't Repeat Yourself" (DRY)!)
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Restructuring a larger document?
+
+Let's make a new project called "structuring-sources". Add the following files to your project:
+
+- `main.tex` (copy the contents from [this file](files/12-structuring-sources/main.tex))
+- `references.bib` (copy the contents from [this file](files/12-structuring-sources/references.bib))
+
+How might we use `\input{}` and `\include{}` to break our project up into smaller files?
+
+:::::::::::::::::::::::: solution
+
+## Output
+
+There isn't a specific correct answer for this challenge, but one idea might be something that
+looks like this:
+
+```
+├── main.tex
+├── preamble.tex
+├── refereces.bib
+├── content/
+│   ├── introduction.tex
+│   ├── model_architecture.tex
+│   ├── model_results.tex
+│   └── conclusion.tex
+├── tables/
+    └── model_results.tex
+```
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
