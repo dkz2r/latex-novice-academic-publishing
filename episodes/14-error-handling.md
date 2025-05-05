@@ -63,6 +63,28 @@ and I'll forget about whatever was undefined.
 Of course, we know what the error was, so we can just fix it by changing `\documnetclass` back to
 `\documentclass`.
 
+::: callout
+
+In general, the first error message in the list is the most useful one to look at. The other error
+messages are often just a result of the first error cascading down the document, so fixing the first
+one will often fix the rest of them too.
+
+:::
+
+## Errors vs Warnings vs Information
+
+Not all messages are equal! LaTeX has three different types of messages:
+
+- `Error`: This is a serious issue that will prevent your document from compiling. You need to fix
+  this before you can continue.
+- `Warning`: This is a less serious issue that may not prevent your document from compiling, but it
+  may cause issues with the output. You should still try to fix this, but it may not be critical.
+- `Information`: This is just a message that provides additional information about the document. You
+  can usually ignore this.
+
+In Overleaf, error messages are shown in red, warnings are shown in yellow, and information
+messages in blue.
+
 ## Fixing a Common Error
 
 This time, instead of introducing an error into our document, let's create a new file called

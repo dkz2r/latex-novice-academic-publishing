@@ -157,6 +157,9 @@ Which of the following are not a standard LaTeX document class?
 `memoir` is not a standard LaTeX document class, but a third-party class.
 
 :::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
 
 
 ## Challenge 2: What happens?
@@ -188,7 +191,7 @@ Some popular apple varieties include:
 
 :::::::::::::::::::::::: solution
 
-We can chang the document class from "slides" to "article", but the `slide` environment does not
+We can change the document class from "slides" to "article", but the `slide` environment does not
 exist in the `article` document class. We end up with errors when we try to compile the document,
 complaining that the `slide` environment is not defined. We need to change the `slide` environments
 to `sections` or `subsections` to maintain the structure of the document:
@@ -216,6 +219,86 @@ Some popular apple varieties include:
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 3: Make your own beamer slides
+
+Consider the following minimal example of an initial `beamer` presentation. Let's create a new file
+called "beamer.tex" and copy the following code as a template into it:
+
+```latex
+\documentclass{beamer}
+%Information to be included in the title page:
+\title{Sample title}
+\author{Anonymous}
+\institute{Overleaf}
+\date{2021}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Sample frame title}
+This is some text in the first frame. This is some text in the first frame. This is some text in
+the first frame.
+\end{frame}
+
+\end{document}
+```
+
+Adapt these slides in the following way:
+
+1. Change the title to "LaTeX Workshop"
+2. Change the name of the author to your name.
+3. Change the institution name to "ABCD Project Group".
+4. Change the date to "2025".
+5. Change the frame title of the first slide after the title page to "What I have learned in this
+   episode" and replace the example text on the slide with your key takeaway from this section.
+6. Besides the title page and the slide after the title page, create a third slide with the title
+   "What I learned in the previous episodes".
+7. Add an unordered list as content to this slide and describe in three bullet points your key
+   takeaways from the previous episodes.
+
+
+:::::::::::::::::::::::: solution
+
+
+```latex
+\documentclass{beamer}
+%Information to be included in the title page:
+\title{LaTeX Workshop}
+\author{My Name}
+\institute{ABCD Project Group}
+\date{2025}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{What I have learned in this episode}
+My key takeaway from this episode.
+\end{frame}
+
+\begin{frame}
+\frametitle{What I learned in the previous episodes}
+\begin{itemize}
+  \item Key learning 1
+  \item Key learning 2
+  \item Key learning 3
+\end{itemize}
+\end{frame}
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - LaTeX document classes set the general layout of the document
@@ -226,54 +309,6 @@ Some popular apple varieties include:
 
 ::: spoiler
 
-After this episode, here is what our LaTeX document looks like:
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-Hello World!
-
-This is my first LaTeX document.
-
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
-
-I can add content to my first section!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a subsection inside my first section.
-
-\section{Lists}
-
-There are two types of lists: ordered and unordered.
-
-\subsection{Ordered}
-
-Ordered lists do not have numbers associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{enumerate}
-
-\subsection{Unordered}
-
-Unordered lists are just a series of items preceded by a marker.
-
-\begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{itemize}
-
-\end{document}
-```
+After this episode, [here is what our LaTeX document looks like](files/document_state/ep-04.tex).
 
 :::

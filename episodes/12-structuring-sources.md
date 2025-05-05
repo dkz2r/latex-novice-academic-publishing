@@ -98,6 +98,16 @@ Then, in our `main.tex` document, let's add the following section:
 When we compile our document, we should see the contents of `include_example.tex`, however this
 time the content will have included a new page before the content.
 
+::: callout
+
+Another important thing to note about the `\include{filename}` command is that it cannot contain
+another `\include{}` command - this will result in an error.
+
+You can, however, use `\input{}` inside an `\include{}` command or an `\input{}` command inside
+another `\input{}` command.
+
+:::
+
 ## Updating Our Project
 
 Now that we've seen how to use the `\input{filename}` and `\include{filename}` commands, let's
@@ -325,12 +335,10 @@ Refactor the following LaTeX document to use multiple files.
 \end{document}
 ```
 
-
 - Separate the content into different files for the sections by `tables.tex` and `graphics.tex`.
 - Organize the file for the titlepage in a folder named "includes" and name the file `titlepage.tex`.
 - Organize the files for tables and graphics in a folder named "content".
 - Use the `\input` command to include the titlepage and the content in your `main.tex` document.
-
 
 
 :::::::::::::::::::::::: solution
@@ -381,6 +389,7 @@ all of the documents in which we use it.
 (This reflects the programming principle of "Don't Repeat Yourself" (DRY)!)
 
 :::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
