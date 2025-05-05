@@ -409,7 +409,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Mathematics</h1>
-        <p>Last updated on 2025-04-30 |
+        <p>Last updated on 2025-05-05 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/09-mathematics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -537,7 +537,7 @@ backslash(<code>\</code>) here.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Math Mode in LaTeX is not just for LaTeX users! It is also used other
 tools like Jupyter Notebooks, R Markdown and many markdown processors.
@@ -644,7 +644,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -678,7 +678,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
@@ -686,6 +686,71 @@ fraction. The correct code should be:</p>
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ss">\(F = G </span><span class="sc">\frac</span><span class="ss">{m_1 m_2}{r^2} \)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-3-the-amsmath-package-and-referencing-equations" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-3-the-amsmath-package-and-referencing-equations" class="callout-inner">
+<h3 class="callout-title">Challenge 3: The <code>amsmath</code> package
+and referencing equations</h3>
+<div class="callout-content">
+<p>Add the following equation to your document: E = mc^2. For this, use
+the <code>amsmath</code> package and a numbered <code>align</code>
+environment. Label the equation using <code>\label</code>. Then, use the
+<code>\ref</code> command to refer to the equation in the text. You may
+find the following LaTeX template helpful:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>} <span class="co">% For better equation formatting</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="kw">\section</span>{Referencing Equations}</span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>} <span class="co">% For better equation formatting</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="kw">\section</span>{Referencing Equations}</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>We can include a numbered equation as follows:</span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="ss">  E = mc^2</span></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a><span class="ss">  </span><span class="sc">\label</span><span class="ss">{eq:energy}</span></span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a>Now, we refer to the equation in the text. The famous equation is <span class="kw">\ref</span>{<span class="ex">eq:energy</span>}.</span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -711,7 +776,7 @@ fraction. The correct code should be:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-09.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -781,8 +846,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/09-mathematics.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/09-mathematics.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-30",
-  "datePublished": "2025-04-30"
+  "dateModified": "2025-05-05",
+  "datePublished": "2025-05-05"
 }
 
   </script><script>
