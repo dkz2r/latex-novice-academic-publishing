@@ -36,23 +36,16 @@ Create a new file in your project called `sample-references.bib` and add the fol
 
 ```bibtex
 @article{Thomas2008,
-  author  = {Thomas, Christine M. and Liu, Tianbiao and Hall, Michael B.
-             and Darensbourg, Marcetta Y.},
-  title   = {Series of Mixed Valent {Fe(II)Fe(I)} Complexes That Model the
-             {H(OX)} State of [{FeFe}]Hydrogenase: Redox Properties,
-             Density-Functional Theory Investigation, and Reactivity with
-             Extrinsic {CO}},
-  journal = {Inorg. Chem.},
+  author  = {Thomas, Christine M.},
+  title   = {The Fascinating World of Penguins},
+  journal = {Penguin Chronicles},
   year    = {2008},
-  volume  = {47},
-  number  = {15},
   pages   = {7009-7024},
-  doi     = {10.1021/ic800654a},
 }
 @book{Graham1995,
-  author    = {Ronald L. Graham and Donald E. Knuth and Oren Patashnik},
-  title     = {Concrete Mathematics},
-  publisher = {Addison-Wesley},
+  author    = {Richard L. Graham and Lisa A. Harris},
+  title     = {The Humble Paperclip: Master of the Modern Office},
+  publisher = {Scranton Press},
   year      = {1995},
 }
 ```
