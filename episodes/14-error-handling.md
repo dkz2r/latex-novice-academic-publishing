@@ -138,61 +138,124 @@ Our Current Inventory:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1: Identify the error
 
-What is the output of this command?
+Take a look at the following LaTeX excerpt:
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+```latex
+\documentclass{article}
+
+\begin{document}
+
+My Amazing Content: $\alpha = \fraction{1}{(1 - \beta)^2}$
+
+\end{document}
 ```
+
+Attempting to compile this document results in the following error message:
+
+```
+! Undefined control sequence.
+l.4 $\alpha = \fraction
+                       {1}{(1 - \beta)^2}$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+```
+
+Without running the code, can you identify the issue?
 
 :::::::::::::::::::::::: solution
 
-## Output
-
-```output
-[1] "This new lesson looks good"
-```
+The error message indicates that the command `\fraction` is not defined. The correct command
+should be `\frac`.
 
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2: Identify the error
+
+Here's another LaTeX excerpt:
+
+```latex
+\documentclass{article}
+
+\usepackage{booktab}
+
+\begin{document}
+
+More Amazing Content!
+
+\end{document}
+```
+
+The following error message appears when you try to compile this document:
+
+```
+! LaTeX Error: File `booktab.sty' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
+```
+
+Why is this error occurring? What is the solution?
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+The error message indicates that the package `booktab` is not found. The correct package name
+should be `booktabs`
 
 :::::::::::::::::::::::::::::::::
+
+# Challenge 3: Why do I get this warning?
+
+The following code generates a warning message:
+
+```latex
+\documentclass{article}
+
+\usepackage{graphicx}
+\begin{document}
+
+\section{Adding a rotated image}
+
+We can rotate an image by setting the "angle" parameter:
+
+\includegraphics[scale=2, angle=45]{figures/example-image.png}
+\end{document}
+```
+
+The text of the warning message is:
+
+```
+Overfull \hbox (390.7431pt too wide) in paragraph at lines 10--11
+[][]
+ []
+
+[1
+
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \vbox (170.7431pt too high) has occurred while \output is active []
+
+[2 <./figures/example-image.png>] (./output.aux)
+```
+
+The document compiles successfully, but the warning message won't go away. Why is this
+happening? How can you fix it?
+
+:::::::::::::::::::::::: solution
+
+The message is indicating that the image is too wide for the page, which is causing an "overfull
+hbox" (overfull horizontal box) error. This is a common issue when including images in LaTeX.
+The warning will not prevent the document from compiling, but it may point to something we should
+take a look at, in this case, an image that flows off the page.
+
+:::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Figures
-
-You can include figures generated from R Markdown:
-
-```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
-pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),
-  init.angle = 315,
-  col = c("deepskyblue", "yellow", "yellow3"),
-  border = FALSE
-)
-```
-Or you can use pandoc markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
