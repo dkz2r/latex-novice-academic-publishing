@@ -177,89 +177,30 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Create a Title Page with Custom Formatting
+## Challenge 1: Can you do it?
 
-Using the content covered, create a title page with custom formatting. Your title page should have:
+What is the output of this command?
 
-- A centered title "My Custom LaTeX Title Page" in large, bold text.
-- A centered subtitle "A Sample Document with Custom Formatting" in italic text, smaller than the title.
-- The date centered at the bottom of the page.
-
-You can use the commands `\vspace` and `\vfill` to make fill blank space between the items and may find the following LaTeX template helpful:
-
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\begin{titlepage}
-    
-
-
-
-\end{titlepage}
-
-\end{document}
+```r
+paste("This", "new", "lesson", "looks", "good")
 ```
-
-
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\begin{titlepage}
-    \centering
-    \huge
-    \textbf{My Custom LaTeX Title Page}
-
-    \vspace{1cm} % Space between title and subtitle
-    \normalsize
-    \textit{A Sample Document with Custom Formatting}
-
-    \vfill % Fill remaining space
-    \large
-    January 1, 2025
-\end{titlepage}
-
-\end{document}
+```output
+[1] "This new lesson looks good"
 ```
 
 :::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 2: Adjust Paragraph Spacing in Your Document
-
-Create a LaTeX document with the following:
-
-- Use the `parskip` package to adjust the paragraph spacing.
-- Generate some text using the `lipsum` package.
-- Ensure that paragraphs are separated by a blank line (without indentation).
+## Challenge 2: how do you nest solutions within challenge blocks?
 
 :::::::::::::::::::::::: solution
 
-```latex
-\documentclass{article}
-\usepackage{lipsum}  % To generate sample text
-\usepackage[parfill]{parskip}  % Adds space between paragraphs without indentation
-
-\begin{document}
-
-\section{Paragraph Spacing Example}
-
-% Generating Lorem Ipsum text with the lipsum package
-\lipsum[1-2]
-
-\end{document}
-````
+You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
