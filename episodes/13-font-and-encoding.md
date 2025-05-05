@@ -17,42 +17,134 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Fonts and Encoding
+## documentclass Parameters
 
-When LaTeX was first developed, it was designed to work with a limited set of fonts and encodings.
-Accented letters required the use of special commands, such as `\c{c}` for "ç" or `\~{n}` for "ñ".
+In an earlier episode we learned that we can change the font size of the entire document by
+changing the `\documentclass` command. For example, we can change the font size to 12pt by using:
 
+```latex
+\documentclass[12pt]{article}
+```
+
+But we can add other parameters to this command to change the overall layout of the document.
+For example, we can set the size of the document to A4 paper by using:
+
+```latex
+\documentclass[a4paper]{article}
+```
+
+We can also change the entire document to a two-column layout by using:
+
+```latex
+\documentclass[twocolumn]{article}
+```
+
+And we can of course combine these options:
+
+```latex
+\documentclass[a4paper,12pt,twocolumn]{article}
+```
+
+## Fonts
+
+We saw earlier that we can create commands of our own in LaTeX, but there is also a `renewcommand`
+command that let's us change the definition of an existing command. This might be useful if you
+want the definition of a command to change throughout the document, however there are also some
+commands that are pre-defined that we can modify with this command.
+
+For Example, we can change the font of the entire document by adding the following line to the
+`preamble/custom-commands.tex` file:
+
+```latex
+% Change the font of the entire document to a monospace font
+\renewcommand{\familydefault}{\ttdefault}
+```
+
+When you compile the document you should see something like this:
+
+IMAGE GOES HERE
+
+### More Fonts
+
+Unfortunately, the default LaTeX installation does not come with many fonts. However, there are
+additional packages that you can include if you are looking for a specific font. Let's try making
+our document look like it's using the `Times New Roman` font. To do this, all we need to do is add
+the following import to the `preamble/packages.tex` file:
+
+```latex
+\usepackage{tgtermes}
+```
+
+::: callout
+
+You can find a large selection of fonts at [The LaTeX Font Catalogue](https://www.tug.org/FontCatalogue/),
+complete with examples of how to use them in your document.
+
+:::
 
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1:
 
-What is the output of this command?
+We saw how to change the font of the entire document using the `\renewcommand` command. But what if
+only want a specific section of the document to be in a different font? What would we have to
+modify in the following code to make the text in the first `\section{}` command use a different
+font?
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+```latex
+\documentclass{article}
+
+\usepackage{tgtermes}
+\usepackage{lipsum}
+
+\begin{document}
+
+\texttt{
+\section{My Section}
+\lipsum[1]
+}
+
+
+\section{My Other Section}
+\lipsum[2]
+
+\end{document}
 ```
 
 :::::::::::::::::::::::: solution
 
-## Output
+```latex
+\documentclass{article}
 
-```output
-[1] "This new lesson looks good"
+\usepackage{tgtermes}
+\usepackage{lipsum}
+
+\begin{document}
+
+\section{My Section}
+\renewcommand{\familydefault}{\ttdefault}
+\lipsum[1]
+
+\section{My Other Section}
+\renewcommand{\familydefault}{\rmdefault}
+\lipsum[2]
+
+\end{document}
 ```
+
 
 :::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+## Challenge 2:
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
-
 :::::::::::::::::::::::::::::::::
+
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
