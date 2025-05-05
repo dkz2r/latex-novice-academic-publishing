@@ -44,7 +44,7 @@ like this:
 
 :::
 
-In order to create a table, we need to tell latex how may columns we will need and how they should
+In order to create a table, we need to tell latex how many columns we will need and how they should
 be aligned.
 
 Available column types are:
@@ -54,7 +54,7 @@ Available column types are:
 | `l`               | left-aligned  |
 | `c`               | centered      |
 | `r`               | right-aligned |
-| `p{width}`        | a column with fixed width width; the text will be automatically line wrapped and fully justified |
+| `p{width}`        | a column with fixed width; the text will be automatically line wrapped and fully justified |
 | `m{width}`        | like p, but vertically centered compared to the rest of the row |
 | `b{width}`        | like p, but bottom aligned |
 | `w{align}{width}` | prints the contents with a fixed width, silently overprinting if things get larger. (You can choose the horizontal alignment using l, c, or r.) |
@@ -237,8 +237,14 @@ three arguments:
 
 ::: callout
 
-Vertical merging is not supported in LaTeX. Usually it is sufficient to leave empty rows in the
-table to create the impression of vertical merging.
+Vertical merging is supported in LaTeX by using the `multirow` package which has the `\multirow` command equipped with it.
+It is similarly structured as `\multicolumn` by using three arguments:
+
+- The number of rows which should be merged
+- The width of the column (i.e. 4em)
+- The contents of the merged rows.
+
+You can find an example in the challenges below.
 
 :::
 
@@ -302,57 +308,105 @@ text "Total" is right-aligned and bold, and the value in the last column is ital
 
 :::::::::::::::::::::::::::::::::
 
+## Challenge 2: Merging rows.
 
-## Challenge 2: Are Tables like Images?
+Consider the following LaTeX code that creates a table using the command `\multirow`.
+Can you guess how this table will look like?
+How many columns will it have?
+How many rows?
+Are any rows or columns combined?
 
-When we were working with graphics in the previous section, we learned about adding captions to
-images. Can you add a caption to the table you created in Challenge 1 that says "Car Sales by
-Make/Model (January 2025)"? (Make sure the table is centered on the page!)
+
+```latex
+
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{tabular}{*{4}{l}}
+  \toprule
+    & Food & Quantity &  Price  \\
+  \midrule
+  \multirow{3}{4em}{Fruit} & Apple  & 5  &  1.50   \\
+  & Banana & 6        &  2.00   \\
+  & Orange & 4        &  1.20   \\
+  \midrule
+  \multirow{2}{4em}{Cheese} & Brie & 2 & 3.30 \\
+   & Asiago   & 3 & 2.90   \\
+  \bottomrule
+\end{tabular}
+
+\end{document}
+```
+
+:::::::::::::::::::::::: solution
+
+The table will have 4 columns where the first column does not have a column name.
+The table will have 6 rows.
+The first row is the column name row.
+Rows 2 to 4 are merged for "Fruit".
+Rows 5 and 6 are merged for "Cheese".
+
+
 
 *Hint: We want to make sure the caption stays with the table, so we should put the table inside an
 environment. For images we use the "figure" environment, but for tables we can use the "table"
 environment.*
 
+:::::::::::::::::::::::::::::::::
+
+
+## Challenge 3: Adding merged rows to your table.
+
+Consider again the LaTeX code for the table in challenge 3.
+Add four more rows to this table that contain information about the following four sorts of bread:
+
+- Brioche, 3, 3.00
+- Bagel, 2, 3.50
+- Matzah, 4, 3.60
+- Naan, 2, 3.40
+
+Use `\multirow` to subsume those bread types under the category "Bread".
+
 
 :::::::::::::::::::::::: solution
-
-## Answer
 
 ```latex
 \documentclass{article}
 
-\usepackage{array}
 \usepackage{booktabs}
+\usepackage{multirow}
 
 \begin{document}
 
-\begin{table}[ht]
-
-  \begin{tabular}{lll}
-    \centering % Center the table
-    \toprule
-    Make        & Model   & Sold   \\
-    \midrule
-    Volkswagen  & Golf    & 7,687 \\
-    Skoda       & Octavia & 4,078 \\
-    Seat        & Leon    & 3,922 \\
-    Volkswagen  & Passat  & 3,776 \\
-    Mercedes    & GLK,GLC & 3,143 \\
-    \midrule
-    \multicolumn{2}{r}{\textbf{Total}} & \textit{22,606} \\
-    \bottomrule
-  \end{tabular}
-
-  \caption{Car Sales by Make/Model (January 2025)} % Add a caption to the table
-
-\end{table}
+\begin{tabular}{*{4}{l}}
+  \toprule
+    & Food & Quantity &  Price  \\
+  \midrule
+  \multirow{3}{4em}{Fruit} & Apple  & 5  &  1.50   \\
+  & Banana & 6        &  2.00   \\
+  & Orange & 4        &  1.20   \\
+  \midrule
+  \multirow{2}{4em}{Cheese} & Brie & 2 & 3.30 \\
+   & Asiago   & 3 & 2.90   \\
+   \midrule
+  \multirow{4}{4em}{Bread} & Brioche & 3 & 3.00 \\
+  & Bagel & 2 & 3.50 \\
+  & Matzah & 4 & 3.60 \\
+  & Naan & 2 & 3.40 \\
+  \bottomrule
+\end{tabular}
 
 \end{document}
 ```
 
+
 :::::::::::::::::::::::::::::::::
 
-## Challenge 3: Making the Table Colorful
+## Challenge 4: Making the Table Colorful
 
 We used the `xcolor` package to add color to our text in an earlier episode. Can you use the
 `xcolor` package to make the header and summary rows of the table in Challenge 1 a different color?
@@ -413,18 +467,15 @@ There's no right answer to this challenge, so feel free to experiment with diffe
 
 
 :::::::::::::::::::::::::::::::::
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Tables in LaTeX are created using the `tabular` environment.
 - The `array` package provides additional functionality for creating tables.
 - The `booktabs` package provides commands for creating horizontal lines in tables.
-- We can create horizontal lines in tables using the `\toprule`, `\midrule`, and `\bottomrule`
-  commands.
 - The `\multicolumn` command can be used to merge cells in a table.
+- The `\multirow` command in the `multirow` package can be used to merge rows in a table.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
