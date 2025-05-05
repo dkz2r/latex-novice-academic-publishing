@@ -971,7 +971,7 @@ them with a backslash. For example,</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>What about the <code>\</code> character?</p>
 <p>The <code>\</code> character is used to escape other characters in
@@ -1104,7 +1104,7 @@ it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Each section of a LaTeX document must be enclosed in a pair of
 <code>\begin{...}</code> and <code>\end{...}</code>. This document is
@@ -1130,7 +1130,7 @@ missing the <code>\begin{document}</code> command.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>We need to use escapes before each of the special characters. The
 following LaTeX code will display the text correctly:</p>
@@ -1191,7 +1191,7 @@ Overleaf to test this out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The command <code>\par</code> initiates a new paragraph for us even
 if we write text in just one line (see Option C). Solely, Option B out
@@ -1223,7 +1223,7 @@ Even more, I can write # and ^ correctly using LaTeX.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Answer </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>We need to use <code>\par</code> to initiate a new paragraph without
 using a new line of code. Moreover, we need to use escapes before each
@@ -1263,7 +1263,7 @@ or hovering over the red circle in the text editor.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
 <div class="codewrapper sourceCode" id="cb11">
@@ -1938,7 +1938,7 @@ episode.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><code>presentation</code> is not a standard LaTeX document class -
 the correct class is <code>slides</code>. Also <code>memoir</code> is
@@ -1988,7 +1988,7 @@ to turn it into an article. We can change the document class from
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>We can change the document class from “slides” to “article”, but the
 <code>slide</code> environment does not exist in the
@@ -2077,7 +2077,7 @@ bullet points your key takeaways from the previous episodes.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2136,7 +2136,7 @@ bullet points your key takeaways from the previous episodes.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-04.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -2347,7 +2347,7 @@ command to all the keywords in our document.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Related to the <code>\newcommand</code> command, we can also use the
 <code>\renewcommand</code> command to change the definition of an
@@ -2432,7 +2432,7 @@ document?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Add the line <code>\usepackage{lipsum}</code> to the preamble of your
 document.</p>
@@ -2473,7 +2473,7 @@ it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Output </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The new <code>\kw</code> command would take two arguments: the first
 argument would be the color we want to use to highlight the word, and
@@ -2514,7 +2514,7 @@ sentence into your LaTeX document using your new command
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Output </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The new <code>\boit</code> command would take two arguments: the
 first argument would be used with <code>\tetxbf{#1}</code> to make the
@@ -2576,7 +2576,7 @@ blue. Each word should be written in a separate line.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Output </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>We can exploit the optional argument in <code>\kw</code> to write
 down the given words very efficiently. For the first word, we change the
@@ -2626,7 +2626,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-05.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -3300,7 +3300,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-07-tables"><p>Content from <a href="07-tables.html">Tables</a></p>
 <hr>
-<p>Last updated on 2025-04-30 |
+<p>Last updated on 2025-05-05 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/07-tables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -3368,7 +3368,7 @@ keep things organized. Our imports should now look like this:</p>
 </div>
 </div>
 </div>
-<p>In order to create a table, we need to tell latex how may columns we
+<p>In order to create a table, we need to tell latex how many columns we
 will need and how they should be aligned.</p>
 <p>Available column types are:</p>
 <table class="table">
@@ -3395,7 +3395,7 @@ will need and how they should be aligned.</p>
 </tr>
 <tr class="even">
 <td><code>p{width}</code></td>
-<td>a column with fixed width width; the text will be automatically line
+<td>a column with fixed width; the text will be automatically line
 wrapped and fully justified</td>
 </tr>
 <tr class="odd">
@@ -3630,9 +3630,16 @@ command. This command takes three arguments:</p>
 <div class="callout-inner">
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
-<p>Vertical merging is not supported in LaTeX. Usually it is sufficient
-to leave empty rows in the table to create the impression of vertical
-merging.</p>
+<p>Vertical merging is supported in LaTeX by using the
+<code>multirow</code> package which has the <code>\multirow</code>
+command equipped with it. It is similarly structured as
+<code>\multicolumn</code> by using three arguments:</p>
+<ul>
+<li>The number of rows which should be merged</li>
+<li>The width of the column (i.e. 4em)</li>
+<li>The contents of the merged rows.</li>
+</ul>
+<p>You can find an example in the challenges below.</p>
 </div>
 </div>
 </div>
@@ -3732,17 +3739,57 @@ the value in the last column is italicized.</p>
 </div>
 </div>
 </div>
-<div id="challenge-2-are-tables-like-images" class="callout challenge">
+<div id="challenge-2-merging-rows." class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-2-are-tables-like-images" class="callout-inner">
-<h3 class="callout-title">Challenge 2: Are Tables like Images?</h3>
+<div id="challenge-2-merging-rows." class="callout-inner">
+<h3 class="callout-title">Challenge 2: Merging rows.</h3>
 <div class="callout-content">
-<p>When we were working with graphics in the previous section, we
-learned about adding captions to images. Can you add a caption to the
-table you created in Challenge 1 that says “Car Sales by Make/Model
-(January 2025)”? (Make sure the table is centered on the page!)</p>
+<p>Consider the following LaTeX code that creates a table using the
+command <code>\multirow</code>. Can you guess how this table will look
+like? How many columns will it have? How many rows? Are any rows or
+columns combined?</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multirow</span>}</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{4}{l}}</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>    <span class="op">&amp;</span> Food <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price  <span class="fu">\\</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>  <span class="fu">\multirow</span>{3}{4em}{Fruit} <span class="op">&amp;</span> Apple  <span class="op">&amp;</span> 5  <span class="op">&amp;</span>  1.50   <span class="fu">\\</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>  <span class="op">&amp;</span> Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00   <span class="fu">\\</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>  <span class="op">&amp;</span> Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20   <span class="fu">\\</span></span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a>  <span class="fu">\multirow</span>{2}{4em}{Cheese} <span class="op">&amp;</span> Brie <span class="op">&amp;</span> 2 <span class="op">&amp;</span> 3.30 <span class="fu">\\</span></span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>   <span class="op">&amp;</span> Asiago   <span class="op">&amp;</span> 3 <span class="op">&amp;</span> 2.90   <span class="fu">\\</span></span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>The table will have 4 columns where the first column does not have a
+column name. The table will have 6 rows. The first row is the column
+name row. Rows 2 to 4 are merged for “Fruit”. Rows 5 and 6 are merged
+for “Cheese”.</p>
 <p><em>Hint: We want to make sure the caption stays with the table, so
 we should put the table inside an environment. For images we use the
 “figure” environment, but for tables we can use the “table”
@@ -3750,56 +3797,75 @@ environment.</em></p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">table</span>}[ht]</span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a></span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">tabular</span>}{lll}</span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>    <span class="fu">\centering</span> <span class="co">% Center the table</span></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>    <span class="fu">\toprule</span></span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>    Make        <span class="op">&amp;</span> Model   <span class="op">&amp;</span> Sold   <span class="fu">\\</span></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>    <span class="fu">\midrule</span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>    Volkswagen  <span class="op">&amp;</span> Golf    <span class="op">&amp;</span> 7,687 <span class="fu">\\</span></span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>    Skoda       <span class="op">&amp;</span> Octavia <span class="op">&amp;</span> 4,078 <span class="fu">\\</span></span>
-<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a>    Seat        <span class="op">&amp;</span> Leon    <span class="op">&amp;</span> 3,922 <span class="fu">\\</span></span>
-<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>    Volkswagen  <span class="op">&amp;</span> Passat  <span class="op">&amp;</span> 3,776 <span class="fu">\\</span></span>
-<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>    Mercedes    <span class="op">&amp;</span> GLK,GLC <span class="op">&amp;</span> 3,143 <span class="fu">\\</span></span>
-<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>    <span class="fu">\midrule</span></span>
-<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>    <span class="fu">\multicolumn</span>{2}{r}{<span class="fu">\textbf</span>{Total}} <span class="op">&amp;</span> <span class="fu">\textit</span>{22,606} <span class="fu">\\</span></span>
-<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>    <span class="fu">\bottomrule</span></span>
-<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
-<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a></span>
-<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a>  <span class="fu">\caption</span>{Car Sales by Make/Model (January 2025)} <span class="co">% Add a caption to the table</span></span>
-<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a></span>
-<span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">table</span>}</span>
-<span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a></span>
-<span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-3-making-the-table-colorful" class="callout challenge">
+<div id="challenge-3-adding-merged-rows-to-your-table." class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-3-making-the-table-colorful" class="callout-inner">
-<h3 class="callout-title">Challenge 3: Making the Table Colorful</h3>
+<div id="challenge-3-adding-merged-rows-to-your-table." class="callout-inner">
+<h3 class="callout-title">Challenge 3: Adding merged rows to your table.</h3>
+<div class="callout-content">
+<p>Consider again the LaTeX code for the table in challenge 3. Add four
+more rows to this table that contain information about the following
+four sorts of bread:</p>
+<ul>
+<li>Brioche, 3, 3.00</li>
+<li>Bagel, 2, 3.50</li>
+<li>Matzah, 4, 3.60</li>
+<li>Naan, 2, 3.40</li>
+</ul>
+<p>Use <code>\multirow</code> to subsume those bread types under the
+category “Bread”.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multirow</span>}</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">tabular</span>}{*{4}{l}}</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>  <span class="fu">\toprule</span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>    <span class="op">&amp;</span> Food <span class="op">&amp;</span> Quantity <span class="op">&amp;</span>  Price  <span class="fu">\\</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>  <span class="fu">\multirow</span>{3}{4em}{Fruit} <span class="op">&amp;</span> Apple  <span class="op">&amp;</span> 5  <span class="op">&amp;</span>  1.50   <span class="fu">\\</span></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>  <span class="op">&amp;</span> Banana <span class="op">&amp;</span> 6        <span class="op">&amp;</span>  2.00   <span class="fu">\\</span></span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>  <span class="op">&amp;</span> Orange <span class="op">&amp;</span> 4        <span class="op">&amp;</span>  1.20   <span class="fu">\\</span></span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>  <span class="fu">\midrule</span></span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>  <span class="fu">\multirow</span>{2}{4em}{Cheese} <span class="op">&amp;</span> Brie <span class="op">&amp;</span> 2 <span class="op">&amp;</span> 3.30 <span class="fu">\\</span></span>
+<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>   <span class="op">&amp;</span> Asiago   <span class="op">&amp;</span> 3 <span class="op">&amp;</span> 2.90   <span class="fu">\\</span></span>
+<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>   <span class="fu">\midrule</span></span>
+<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>  <span class="fu">\multirow</span>{4}{4em}{Bread} <span class="op">&amp;</span> Brioche <span class="op">&amp;</span> 3 <span class="op">&amp;</span> 3.00 <span class="fu">\\</span></span>
+<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a>  <span class="op">&amp;</span> Bagel <span class="op">&amp;</span> 2 <span class="op">&amp;</span> 3.50 <span class="fu">\\</span></span>
+<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a>  <span class="op">&amp;</span> Matzah <span class="op">&amp;</span> 4 <span class="op">&amp;</span> 3.60 <span class="fu">\\</span></span>
+<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>  <span class="op">&amp;</span> Naan <span class="op">&amp;</span> 2 <span class="op">&amp;</span> 3.40 <span class="fu">\\</span></span>
+<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a>  <span class="fu">\bottomrule</span></span>
+<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
+<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a></span>
+<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-4-making-the-table-colorful" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-4-making-the-table-colorful" class="callout-inner">
+<h3 class="callout-title">Challenge 4: Making the Table Colorful</h3>
 <div class="callout-content">
 <p>We used the <code>xcolor</code> package to add color to our text in
 an earlier episode. Can you use the <code>xcolor</code> package to make
@@ -3822,50 +3888,50 @@ what you can do.</a></p>
 </div>
 </div>
 </div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="bu">\usepackage</span>[table]{<span class="ex">xcolor</span>} <span class="co">% Import xcolor with the table option</span></span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">table</span>}[ht]</span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>  <span class="fu">\centering</span></span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>  <span class="fu">\rowcolors</span>{2}{red!10}{gray!10} <span class="co">% Alternate row colors between red and gray</span></span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">tabular</span>}{lll}</span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>    <span class="fu">\toprule</span></span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    <span class="fu">\rowcolor</span>{green!20} <span class="co">% Set the header row color to green</span></span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    Make          <span class="op">&amp;</span> Model            <span class="op">&amp;</span> Sold  <span class="fu">\\</span></span>
-<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>    <span class="fu">\midrule</span></span>
-<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>    Volkswagen    <span class="op">&amp;</span> Golf             <span class="op">&amp;</span> 7,687 <span class="fu">\\</span></span>
-<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>    Skoda         <span class="op">&amp;</span> Octavia          <span class="op">&amp;</span> 4,078 <span class="fu">\\</span></span>
-<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a>    Seat          <span class="op">&amp;</span> Leon             <span class="op">&amp;</span> 3,922 <span class="fu">\\</span></span>
-<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a>    Volkswagen    <span class="op">&amp;</span> Passat           <span class="op">&amp;</span> 3,776 <span class="fu">\\</span></span>
-<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a>    Mercedes      <span class="op">&amp;</span> GLK,GLC          <span class="op">&amp;</span> 3,143 <span class="fu">\\</span></span>
-<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>    <span class="fu">\midrule</span></span>
-<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a>    <span class="fu">\rowcolor</span>{blue!20} <span class="co">% Set the summary row color to blue</span></span>
-<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a>    <span class="fu">\multicolumn</span>{2}{r}{</span>
-<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>      <span class="co">% Set the text color to blue and bold for the summary row</span></span>
-<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>      <span class="fu">\textbf</span>{<span class="fu">\textcolor</span>{blue!75}{Total}}} <span class="op">&amp;</span> <span class="fu">\textit</span>{<span class="fu">\textcolor</span>{blue!75}{22,606}} <span class="fu">\\</span></span>
-<span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a>    <span class="fu">\bottomrule</span></span>
-<span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
-<span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a></span>
-<span id="cb11-30"><a href="#cb11-30" tabindex="-1"></a>  <span class="fu">\caption</span>{Car Sales by Make/Model (January 2025)} <span class="co">% Add a caption to the table</span></span>
-<span id="cb11-31"><a href="#cb11-31" tabindex="-1"></a></span>
-<span id="cb11-32"><a href="#cb11-32" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">table</span>}</span>
-<span id="cb11-33"><a href="#cb11-33" tabindex="-1"></a></span>
-<span id="cb11-34"><a href="#cb11-34" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="bu">\usepackage</span>[table]{<span class="ex">xcolor</span>} <span class="co">% Import xcolor with the table option</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">table</span>}[ht]</span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>  <span class="fu">\rowcolors</span>{2}{red!10}{gray!10} <span class="co">% Alternate row colors between red and gray</span></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">tabular</span>}{lll}</span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a>    <span class="fu">\toprule</span></span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a>    <span class="fu">\rowcolor</span>{green!20} <span class="co">% Set the header row color to green</span></span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a>    Make          <span class="op">&amp;</span> Model            <span class="op">&amp;</span> Sold  <span class="fu">\\</span></span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a>    <span class="fu">\midrule</span></span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a>    Volkswagen    <span class="op">&amp;</span> Golf             <span class="op">&amp;</span> 7,687 <span class="fu">\\</span></span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>    Skoda         <span class="op">&amp;</span> Octavia          <span class="op">&amp;</span> 4,078 <span class="fu">\\</span></span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a>    Seat          <span class="op">&amp;</span> Leon             <span class="op">&amp;</span> 3,922 <span class="fu">\\</span></span>
+<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a>    Volkswagen    <span class="op">&amp;</span> Passat           <span class="op">&amp;</span> 3,776 <span class="fu">\\</span></span>
+<span id="cb12-21"><a href="#cb12-21" tabindex="-1"></a>    Mercedes      <span class="op">&amp;</span> GLK,GLC          <span class="op">&amp;</span> 3,143 <span class="fu">\\</span></span>
+<span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a>    <span class="fu">\midrule</span></span>
+<span id="cb12-23"><a href="#cb12-23" tabindex="-1"></a>    <span class="fu">\rowcolor</span>{blue!20} <span class="co">% Set the summary row color to blue</span></span>
+<span id="cb12-24"><a href="#cb12-24" tabindex="-1"></a>    <span class="fu">\multicolumn</span>{2}{r}{</span>
+<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a>      <span class="co">% Set the text color to blue and bold for the summary row</span></span>
+<span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a>      <span class="fu">\textbf</span>{<span class="fu">\textcolor</span>{blue!75}{Total}}} <span class="op">&amp;</span> <span class="fu">\textit</span>{<span class="fu">\textcolor</span>{blue!75}{22,606}} <span class="fu">\\</span></span>
+<span id="cb12-27"><a href="#cb12-27" tabindex="-1"></a>    <span class="fu">\bottomrule</span></span>
+<span id="cb12-28"><a href="#cb12-28" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
+<span id="cb12-29"><a href="#cb12-29" tabindex="-1"></a></span>
+<span id="cb12-30"><a href="#cb12-30" tabindex="-1"></a>  <span class="fu">\caption</span>{Car Sales by Make/Model (January 2025)} <span class="co">% Add a caption to the table</span></span>
+<span id="cb12-31"><a href="#cb12-31" tabindex="-1"></a></span>
+<span id="cb12-32"><a href="#cb12-32" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">table</span>}</span>
+<span id="cb12-33"><a href="#cb12-33" tabindex="-1"></a></span>
+<span id="cb12-34"><a href="#cb12-34" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -3885,11 +3951,10 @@ environment.</li>
 creating tables.</li>
 <li>The <code>booktabs</code> package provides commands for creating
 horizontal lines in tables.</li>
-<li>We can create horizontal lines in tables using the
-<code>\toprule</code>, <code>\midrule</code>, and
-<code>\bottomrule</code> commands.</li>
 <li>The <code>\multicolumn</code> command can be used to merge cells in
 a table.</li>
+<li>The <code>\multirow</code> command in the <code>multirow</code>
+package can be used to merge rows in a table.</li>
 </ul>
 </div>
 </div>
@@ -4061,7 +4126,7 @@ using the <code>\ref</code> command.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>As shown in <span class="math inline">\(\ref{tab:findings}\)</span>
 post-treatment values are higher…</p>
@@ -4140,7 +4205,7 @@ correct. Why or why not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You might have expected the output to be either “As indicated in
 Section 2, …” or “As indicated in Section ???”, but it actually returns
@@ -4198,7 +4263,7 @@ issue. What is it? Why does this happen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The <code>\ref{}</code> command is correctly written, but the
 <code>\ref{}</code> command only returns the number of the label it is
@@ -4229,7 +4294,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-08.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4376,7 +4441,7 @@ backslash(<code>\</code>) here.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Math Mode in LaTeX is not just for LaTeX users! It is also used other
 tools like Jupyter Notebooks, R Markdown and many markdown processors.
@@ -4490,7 +4555,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4524,7 +4589,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
@@ -4575,7 +4640,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4624,7 +4689,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-09.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4867,7 +4932,7 @@ the rest of the document.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -4922,7 +4987,7 @@ LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4974,7 +5039,7 @@ indentation).</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6190,7 +6255,7 @@ special commands, such as <code>\c{c}</code> for “ç” or
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6217,7 +6282,7 @@ special commands, such as <code>\c{c}</code> for “ç” or
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
