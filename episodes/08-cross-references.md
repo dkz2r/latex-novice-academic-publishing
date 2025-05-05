@@ -91,7 +91,6 @@ You may find the following LaTeX template helpful.
 \documentclass{article}
 \usepackage{graphicx}
 
-
 \begin{document}
 
 \section{Cross-referencing Figures}

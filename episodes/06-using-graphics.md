@@ -35,7 +35,7 @@ We can now include several types of images in our document, including:
 
 For the purposes of this lesson, we'll use the following image:
 
-![](fig/06-using-graphics/example-image.PNG){alt='Our example image.'}
+![](fig/06-using-graphics/example-image.png){alt='Our example image.'}
 
 ::: callout
 
@@ -60,6 +60,13 @@ button to choose the image from our computer.
 Once you have uploaded the image, you should see it in the "Files" section of the Overleaf editor:
 
 ![](fig/06-using-graphics/overleaf-uploaded-image.PNG){alt='The uploaded image in Overleaf.'}
+
+::: spoiler
+
+You can also use the "From external URL" option to add an image directly from a URL, which would
+let you use an image from a website directly without having to download it first.
+
+:::
 
 ## Including an Image in a LaTeX Document
 
@@ -89,6 +96,10 @@ placeholder image in your document that you can replace later.
 
 ### Adjusting the appearance of the image
 
+But wait! The image is too big, and it doesn't fit on the page, so LaTeX has moved it to the next
+page. Since the image is a little too large to fit on the same page as the text, LaTeX has moved it
+automatically to the next page. Let's address that by making the image smaller.
+
 We can adjust the appearance of the image by passing options to the `\includegraphics` command, just
 like we did earlier with the `geometry` package. For example, we can specify the height of the
 image:
@@ -98,7 +109,7 @@ image:
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=4cm]{example-image.PNG}
+\includegraphics[height=2cm]{example-image.PNG}
 
 Other possible options include:
 
@@ -200,7 +211,7 @@ to use the `ht` option:
   \includegraphics[height=2cm]{example-image.PNG}
 \end{figure}
 
-Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
+Control the position of a floating image by passing parameters to the \cmd{figure} environment:
 
 \begin{itemize}
   \item h: Place the float "here" (where it appears in the code)
@@ -211,9 +222,28 @@ Control the position of a floating image by passing paratmeters to the \cmd{figu
 
 ```
 
+::: callout
+
+You can use the package `wrapfig` together with `graphicx` in your preamble.
+This makes the `wrapfigure` environment available and we can place an `\includegraphics` command
+inside it to create a figure around which text will be wrapped. Here is how we can specify a
+`wrapfigure` environment:
+
+```latex
+\begin{wrapfigure}[lineheight]{position}{width}
+  ...
+\end{wrapfigure}
+```
+
+We will describe the `wrapfigure` environment in more detail in one of the challenges below.
+:::
+
+
+
 ### Adding a Caption
 
-We can add a caption to our image by using the `\caption` command inside of the `figure` environment:
+We can add a caption to our image by using the `\caption` command inside of the `figure`
+environment:
 
 ```latex
 \subsection{Caption}
@@ -232,37 +262,233 @@ When we render the document, we can see that the caption appears below the image
 
 ![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
 
+::: callout
+
+Note that the caption is automatically numbered "Figure 1". Very handy! We'll see how we can
+automatically reference figures and tables in a later episode.
+
+:::
+
+::: spoiler
+
+Another package that we can use to work with images in LaTeX is the `hvfloat` package. This package
+is an alterantive way of controlling the position of floating elemnents in LaTeX, like images
+and tables. It provides a more flexible way of positioning floats allowing us to, for example,
+place a float at the bottom of the page, even if there is not enough space for it to fit.
+
+:::
+
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
-What is the output of this command?
+Consider again our running example of `example-image.PNG`.
+Include this image into your LaTeX document by using the `figure` environment.
+Make sure that your image is centered and rotate the image by 45 degree.
+Add the following caption to your image: "This caption has a **bold** word included."
+How would your LaTeX look like?
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+
+
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```output
-[1] "This new lesson looks good"
+We use the `\centering` command in the `figure` environment and specify `angle=45` to rotate the
+image.
+
+```latex
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{figure}
+  \centering
+  \includegraphics[angle=45]{example-image.PNG}
+  \caption{This caption has a \textbf{bold} word included.}
+\end{figure}
+
+\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Challenge 2: how do you nest solutions within challenge blocks?
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 2: What is wrong here?
+
+Have a look at the following LaTeX code:
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+\centering
+\begin{figure}
+  \includegraphics[height=3cm, draft]{example-image.PNG}
+  \caption{This caption has a \textbf{bold} word included.}
+\end{figure}
+
+\end{document}
+```
+
+Can you spot all the errors in this LaTeX code?
+Change the code such that the image is displayed with a height of 3cm, width of 4cm and centered.
+
+
 
 :::::::::::::::::::::::: solution
 
-You can add a line with at least three colons and a `solution` tag.
+First, the command `\usepackage{graphicx}` is missing in the preamble.
+Second, the `\centering` command has to be placed into the `figure` environment.
+Third, the `draft` argument has to be removed from and `width=4cm` added to the `\includegraphics`
+command.
+
+The corrected LaTeX code looks like this:
+
+```latex
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=3cm, width=4cm]{example-image.PNG}
+  \caption{This caption has a \textbf{bold} word included.}
+\end{figure}
+
+\end{document}
+```
+
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Making a command for images
+
+In the previous section, we created a command to highlight keywords in our document. Let's create
+a new command to make it easier to include images in our document. We'll create a command called
+`\centeredimage` that takes two arguments: the image filename and the caption. The resulting image
+should be centered on the page and have a caption below it. Use the example-image.png from earlier
+in this episode.
+
+Your file should look like this:
+
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+% Define our new command
+%%% YOUR COMMAND HERE %%%
+
+\begin{document}
+
+\centeredimage{example-image.png}{"My Image"}
+\centeredimage{example-image.png}{"My Other Image"}
+
+\end{document}
+```
+
+And your output should look [like this](fig/06-using-graphics/challenge-image-command-output.PNG).
+
+Reminder: The syntax for creating a new command is:
+
+```latex
+\newcommand{\cmdname}[numargs]{definition}
+```
+
+:::::::::::::::::::::::: solution
+
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+% Define our new command
+\newcommand{\centeredimage}[2]{
+  \begin{figure}
+    \centering
+    \includegraphics{#1}
+    \caption{#2}
+  \end{figure}
+}
+
+\begin{document}
+
+\centeredimage{example-image.png}{"My Image"}
+\centeredimage{example-image.png}{"My Other Image"}
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+## Challenge 4: The `wrapfig` package.
+
+
+Have a look at the following LaTeX code that uses the `wrapfigure` environment.
+Can you already guess how the images will be displayed in your document?
+
+
+```latex
+\documentclass{article}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{wrapfigure}{r}{0.1\textwidth}
+    \centering
+    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
+\end{wrapfigure}
+
+The package wrapfigure lets you position images around your text.
+That comes in handy if you want to integrate images seamlessly into your written sentences.
+Therefore, I add a few more sentences here to showcase this integration to you.
+
+\begin{wrapfigure}{l}{0.1\textwidth}
+    \centering
+    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
+\end{wrapfigure}
+
+Be careful, you need both packages, wrapfig and graphicx, in your preamble to display your images
+and wrap them accordingly. There are several ways to display images, depending on the arguments you
+specify. For instance, you can scale the image width according to the width of the text.
+
+\end{document}
+```
+
+:::::::::::::::::::::::: solution
+
+
+The first image will be placed at the right of the following paragraph of text as `{r}` is
+specified as an argument within the first `wrapfigure` environment.
+The second image will be placed at the left of its following paragraph of text as `{l}` is
+specified as an argument within the second `wrapfigure` environment.
+Moreover, both images are scaled by being 0.1 of the width of the text in your document.
+
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -277,124 +503,6 @@ You can add a line with at least three colons and a `solution` tag.
 
 ::: spoiler
 
-After this episode, here is what our LaTeX document looks like:
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-\usepackage[margin=1in]{geometry}
-\usepackage{xcolor}
-\usepackage{graphicx}
-
-% Highlight Keywords using \kw{}
-\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
-
-% Italics for commands with \cmd{}
-\newcommand{\cmd}[1]{\textit{#1}}
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-Hello World!
-
-This is my first \kw{LaTeX} document.
-
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
-
-I can add content to my first \kw{section}!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a \kw{subsection} inside my first section.
-
-\section{Lists}
-
-There are two types of \kw{lists}: \kw{ordered} and \kw{unordered}.
-
-\subsection{Ordered}
-
-Ordered lists do not have numbers associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{enumerate}
-
-\subsection{Unordered}
-
-Unordered lists are just a series of items preceded by a marker.
-
-\begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{itemize}
-
-\section{Graphics}
-
-We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
-\cmd{includegraphics} command.
-
-\includegraphics{example-image.PNG}
-
-\subsection{Small Image}
-
-We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
-
-\includegraphics[height=4cm]{example-image.PNG}
-
-\begin{itemize}
-  \item width: the width of the image
-  \item scale: the scaling factor of the image
-  \item angle: the angle of rotation of the image
-  \item clip: whether to clip the image to its bounding box
-  \item trim: trim the image by a specified amount
-  \item draft: display a box instead of the image
-\end{itemize}
-
-\subsection{Centered Image}
-
-By placing the \cmd{includegraphics} command inside a center environment, we can center the
-image on the page.
-
-\begin{center}
-  \includegraphics[height=2cm]{example-image.PNG}
-\end{center}
-
-\subsection{Floating Image}
-
-\kw{Floating images} can move around the page as text is added or removed. We can use the
-\cmd{figure}environment to create a floating image.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[height=2cm]{example-image.PNG}
-\end{figure}
-
-Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
-
-\begin{itemize}
-  \item h: Place the float "here" (where it appears in the code)
-  \item t: Place the float at the "top" of the page
-  \item b: Place the float at the "bottom" of the page
-  \item p: Place the float on a "page" by itself
-\end{itemize}
-
-\subsection{Caption}
-
-We can add a \kw{caption} to our floating image by using the \cmd{caption} command inside of the
-\cmd{figure} environment.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[height=2cm]{example-image.PNG}
-  \caption{This is a caption for our image.}
-\end{figure}
-
-\end{document}
-```
+After this episode, [here is what our LaTeX document looks like](files/document_state/ep-06.tex).
 
 :::

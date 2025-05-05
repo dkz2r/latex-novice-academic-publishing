@@ -88,6 +88,21 @@ The `\newcommand` syntax looks like this:
 \newcommand{\commandname}[number of arguments]{definition}
 ```
 
+::: callout
+
+We could be even more flexible by using an *optional* argument in our `\newcommand`.
+Then the general structure of the command looks like this
+
+```latex
+\newcommand{\commandname}[number of arguments][default value for the first argument]{definition}
+```
+
+You can learn more about optional arguments in the last challenge of this episode.
+
+:::
+
+
+
 As an example, let's define a command that will highlight specific works in a document, so that
 they appear italicised and underlined. We *could* do this by writing `\textbf{\underline{word}}`
 around each word we want to highlight:
@@ -102,7 +117,8 @@ I can add content to my first \textbf{\underline{section}}!
 
 We can add this to each of our important terms in our document - maybe it looks something like this:
 
-![](fig/05-extending-latex/kw-highlight-underline.PNG){alt='Our document with keywords highlighted in bold and underlined.'}
+![](fig/05-extending-latex/kw-highlight-underline.PNG){alt='Our document with keywords highlighted
+in bold and underlined.'}
 
 
 In a long document this would quickly become tedious. Instead, let's define a new command called
@@ -137,6 +153,20 @@ Let's take a minute to go through and add the `\kw` command to all the keywords 
 
 :::
 
+::: spoiler
+
+Related to the `\newcommand` command, we can also use the `\renewcommand` command to change the
+definition of an existing command. This is useful, for example, if we want to change the
+effect of a command partway through a document, or if we want to change the definition of a
+command that is already defined in a package. It has an identical syntax to the `\newcommand`
+command:
+
+```latex
+\renewcommand{\commandname}[number of arguments]{definition}
+```
+
+:::
+
 ### Code Reuse
 
 This also means that we can easily change the formatting of all the words we've highlighted by
@@ -161,7 +191,8 @@ Let's replace our `\kw` command with this new definition:
 When we recompile the document we should see that the formatting of our keywords has changed all at
 once:
 
-![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in blue.'}
+![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in
+blue.'}
 
 ## Defining Multiple Commands
 
@@ -169,7 +200,7 @@ We can define as many commands as we like in the preamble of our document. Let's
 that we can use to highlight commands in the document:
 
 ```latex
-% Italics for commands
+% Italicise LaTeX commands
 \newcommand{\cmd}[1]{\textit{#1}}
 ```
 
@@ -234,6 +265,102 @@ use it like this:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Can you write your own command with two arguments?
+
+Suppose you want to define a new command that takes as input two words as arguments.
+This first word shall be written **bold** while the second word shall be written *italic*.
+Moreover, the first and the second word are separated by a comma followed by a whitespace.
+
+Use `\newcommand` to define this command that takes two arguments as inputs and name it `\bo_it`.
+Write the following sentence into your LaTeX document using your new command `\bo_it`:
+
+This newly defined command highlights these two words: **Apple**, *Banana*.
+
+
+:::::::::::::::::::::::: solution
+
+## Output
+
+The new `\boit` command would take two arguments: the first argument would be used with
+`\tetxbf{#1}` to make the first word appear **bold**, and the second argument would be used with
+`\tetxit{#2}` to make the first word appear *italic*.
+Between `\tetxbf{#1}` and `\tetxit{#2}`, we would write `, ` to separate both words.
+We would use the new command like this:
+
+```latex
+\documentclass{article}
+
+\newcommand{\boit}[2]{\textbf{#1}, \textit{#2}}
+
+\begin{document}
+
+This newly defined command highlights these two words: \boit{Apple}{Banana}.
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 4: Optional arguments
+
+New commands can be made even more flexible by defining commands that take an optional argument.
+Then the general LaTeX code for this looks like this:
+
+```latex
+\newcommand{\commandname}[number of arguments][default value for the first argument]{definition}
+```
+
+The optional argument can be accessed and changed by writing square brackets `[]` directly after
+the `\commandname` in the body of your document.
+
+Consider the following, modified example of our `\kw` from before where we now use an optional
+argument.
+
+```latex
+\newcommand{\kw}[2][red]{\textcolor{#1}{\textbf{#2}}}
+```
+
+In your LaTeX file, use the new `\kw` command to write down the words "Banana" in yellow, "Apple"
+in red, and "Blueberry" in blue. Each word should be written in a separate line.
+
+:::::::::::::::::::::::: solution
+
+## Output
+
+We can exploit the optional argument in `\kw` to write down the given words very efficiently.
+For the first word, we change the optional argument to "yellow".
+For the second word, we stick with the default value of "red".
+For the third word, we change the optional argument to "blue".
+
+```latex
+\documentclass{article}
+
+\newcommand{\kw}[2][red]{\textcolor{#1}{\textbf{#2}}}
+
+\begin{document}
+
+\kw[yellow]{Banana}
+
+\kw{Apple}
+
+\kw[blue]{Blueberry}
+
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - We can extend LaTeX's functionality by adding packages to our document.
@@ -243,59 +370,6 @@ use it like this:
 
 ::: spoiler
 
-After this episode, here is what our LaTeX document looks like:
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-\usepackage[margin=1in]{geometry}
-\usepackage{xcolor}
-
-% Highlight Keywords using the \kw{} command
-\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-Hello World!
-
-This is my first \kw{LaTeX} document.
-
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
-
-I can add content to my first \kw{section}!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a \kw{subsection} inside my first section.
-
-\section{Lists}
-
-There are two types of \kw{lists}: \kw{ordered} and \kw{unordered}.
-
-\subsection{Ordered}
-
-Ordered lists do not have numbers associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{enumerate}
-
-\subsection{Unordered}
-
-Unordered lists are just a series of items preceded by a marker.
-
-\begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{itemize}
-
-\end{document}
-```
+After this episode, [here is what our LaTeX document looks like](files/document_state/ep-05.tex).
 
 :::

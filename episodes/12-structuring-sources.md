@@ -98,6 +98,16 @@ Then, in our `main.tex` document, let's add the following section:
 When we compile our document, we should see the contents of `include_example.tex`, however this
 time the content will have included a new page before the content.
 
+::: callout
+
+Another important thing to note about the `\include{filename}` command is that it cannot contain
+another `\include{}` command - this will result in an error.
+
+You can, however, use `\input{}` inside an `\include{}` command or an `\input{}` command inside
+another `\input{}` command.
+
+:::
+
 ## Updating Our Project
 
 Now that we've seen how to use the `\input{filename}` and `\include{filename}` commands, let's
@@ -277,34 +287,146 @@ document starts.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1: Refactor Your Document with Multiple Files
 
-What is the output of this command?
+Refactor the following LaTeX document to use multiple files.
 
-```r
-paste("This", "new", "lesson", "looks", "good")
+```latex
+% This is the main document: main.tex
+
+\documentclass{article}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \huge
+    \textbf{My Custom LaTeX Title Page}
+
+    \vspace{1cm} % Space between title and subtitle
+    \normalsize
+    \textit{A Sample Document with Custom Formatting}
+
+    \vfill % Fill remaining space
+    \large
+    January 1, 2025
+\end{titlepage}
+
+
+\section{Tables}
+
+\begin{tabular}{lll}
+  Fruit  & Quantity & Price \\
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+\end{tabular}
+
+\section{Graphics}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=2cm]{example-image.PNG}
+  \caption{This is a caption for our image.}
+\end{figure}
+
+
+\end{document}
 ```
+
+- Separate the content into different files for the sections by `tables.tex` and `graphics.tex`.
+- Organize the file for the titlepage in a folder named "includes" and name the file `titlepage.tex`.
+- Organize the files for tables and graphics in a folder named "content".
+- Use the `\input` command to include the titlepage and the content in your `main.tex` document.
+
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
-```output
-[1] "This new lesson looks good"
+```latex
+% This is the main document: main.tex
+
+\documentclass{article}
+
+
+\begin{document}
+
+% Include title page
+\input{includes/titlepage}
+
+% Include content from different files in the "content" folder
+\input{content/sections}
+\input{content/lists}
+\input{content/graphics}
+\input{content/tables}
+\input{content/cross-references}
+\input{content/math}
+\input{content/text-and-spacing}
+
+\end{document}
 ```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution
-
-You can add a line with at least three colons and a `solution` tag.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Why did we do this?
+
+In our `content/tables.tex` file, we have a bunch of `\input{}` commands for the tables instead of
+writing the tables directly in the file. Why did we do this? What is the benefit of doing this?
+
+:::::::::::::::::::::::: solution
+
+Using an `\input` command inserts the table contents directly into the document as though it was
+typed, which means that we can reuse the same table in multiple documents without having to copy
+paste it. For example, if we were making a presentation in LaTeX, we could use the same table
+in our presentation. This means that if we make a change to the table, it will be reflected in
+all of the documents in which we use it.
+
+(This reflects the programming principle of "Don't Repeat Yourself" (DRY)!)
+
+:::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Restructuring a larger document?
+
+Let's make a new project called "structuring-sources". Add the following files to your project:
+
+- `main.tex` (copy the contents from [this file](files/12-structuring-sources/main.tex))
+- `references.bib` (copy the contents from [this file](files/12-structuring-sources/references.bib))
+
+How might we use `\input{}` and `\include{}` to break our project up into smaller files?
+
+:::::::::::::::::::::::: solution
+
+## Output
+
+There isn't a specific correct answer for this challenge, but one idea might be something that
+looks like this:
+
+```
+├── main.tex
+├── preamble.tex
+├── refereces.bib
+├── content/
+│   ├── introduction.tex
+│   ├── model_architecture.tex
+│   ├── model_results.tex
+│   └── conclusion.tex
+├── tables/
+    └── model_results.tex
+```
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
