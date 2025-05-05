@@ -1,0 +1,256 @@
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Highlight Keywords using the \kw{} command
+\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
+% Italicise LaTeX commands
+\newcommand{\cmd}[1]{\textit{#1}}
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+Hello World!
+
+This is my first \kw{LaTeX} document.
+
+% The section command automatically numbers and formats the section heading.
+\section{Sections}
+
+I can add content to my first \kw{section}!
+
+% The subsection command does the same thing, but for sections within sections.
+\subsection{Subsection}
+
+I can put a \kw{subsection} inside my first section.
+
+\section{Lists}
+
+There are two types of \kw{lists}: \kw{ordered} and \kw{unordered}.
+
+\subsection{Ordered}
+
+Ordered lists do not have numbers associated with each item.
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
+
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{itemize}
+
+\section{Graphics}
+
+We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
+\cmd{includegraphics} command.
+
+\includegraphics{example-image.png}
+
+\subsection{Small Image}
+
+We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
+
+\includegraphics[height=2cm]{example-image.PNG}
+
+Other possible options include:
+
+\begin{itemize}
+  \item width: the width of the image
+  \item scale: the scaling factor of the image
+  \item angle: the angle of rotation of the image
+  \item clip: whether to clip the image to its bounding box
+  \item trim: trim the image by a specified amount
+  \item draft: display a box instead of the image
+\end{itemize}
+
+\subsection{Centered Image}
+
+By placing the \cmd{includegraphics} command inside a center environment, we can center the
+image on the page.
+
+\begin{center}
+  \includegraphics[height=2cm]{example-image.PNG}
+\end{center}
+
+\subsection{Floating Image}
+
+\kw{Floating images} can move around the page as text is added or removed. We can use the
+\cmd{figure}environment to create a floating image.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=2cm]{example-image.PNG}
+\end{figure}
+
+Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
+
+\begin{itemize}
+  \item h: Place the float "here" (where it appears in the code)
+  \item t: Place the float at the "top" of the page
+  \item b: Place the float at the "bottom" of the page
+  \item p: Place the float on a "page" by itself
+\end{itemize}
+
+\subsection{Caption}
+
+We can add a \kw{caption} to our floating image by using the \cmd{caption} command inside of the
+\cmd{figure} environment.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[height=2cm]{example-image.PNG}
+  \caption{This is a caption for our image.}
+\end{figure}
+
+\section{Tables}
+
+\kw{Tables} are defined using the \cmd{tabular} environment.
+
+\begin{tabular}{*{3}{l}}
+  Fruit  & Quantity & Price \\
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+\end{tabular}
+
+\subsection{Tables with Horizontal Lines}
+
+We can use the \cmd{\textbackslash toprule}, \cmd{\textbackslash midrule}, and
+\cmd{\textbackslash bottomrule} commands from the \cmd{booktabs} package to create horizontal
+lines in our table.
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  Fruit  & Quantity & Price \\
+  \midrule
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+  \bottomrule
+\end{tabular}
+
+\subsection{Partial Horizontal Lines}
+
+The \cmd{\textbackslash cmidrule} command can be used to create partial horizontal lines in a
+table. The command accepts the arguments {number-number}, where the first number is the column to
+start the line and last number is the column to end the line.
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  Fruit  & Quantity &  Price \\
+  \midrule
+  Apple  & 5        &  1.50  \\
+  Banana & 6        &  2.00  \\
+  Orange & 4        &  1.20  \\
+  \cmidrule{3-3}
+  Total & 15        & 28.20  \\
+  \bottomrule
+\end{tabular}
+
+\subsection{Merging Cells}
+
+Merge cells horizontally using the \cmd{\textbackslash multicolumn} command. This command takes
+three arguments:
+
+\begin{itemize}
+  \item The number of cells which should be merged
+  \item The alignment of the merged cell (l, c, or r)
+  \item The contents of the merged cell
+\end{itemize}
+
+\begin{tabular}{*{3}{l}}
+  \toprule
+  \multicolumn{3}{c}{Overall Inventory} \\
+  Fruit  & Quantity &  Price  \\
+  \midrule
+  Apple  & 5        &  1.50   \\
+  Banana & 6        &  2.00   \\
+  Orange & 4        &  1.20   \\
+  \midrule
+  \multicolumn{2}{c}{Summary} \\
+  Total & 15        & 28.20   \\
+  \bottomrule
+\end{tabular}
+
+\section{Cross References}
+\label{sec:cross-references}
+
+\subsection{Material for the Introduction}
+
+In this section, we introduce two new concepts:
+
+\begin{tabular}{cp{9cm}}
+  Command & Description \\
+  \toprule
+  \kw{label} & Marks a spot in the document \\
+  \kw{ref} & Refers to a marked spot in the document \\
+  \bottomrule
+\label{tab:cross-reference-commands}
+\end{tabular}
+
+We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
+We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
+
+\section{Mathematics}
+
+There are two kinds of math mode in LaTeX: inline and display. Inline math mode is marked with
+a pair of dollar signs, whereas display math mode is marked with a pair of square brackets.
+
+\subsection{Inline Math Mode}
+
+The Pythagorean theorem is $a^2 + b^2 = c^2$.
+
+\subsection{Display Math Mode}
+
+The Fourier Transform is defined as:
+
+\[
+\hat{f}(\xi) = \int_{-\infty}^\infty f(x) e^{-2\pi i \xi x} \, dx
+\]
+
+Where:
+\begin{itemize}
+  \item \( f(x) \) is the function we are transforming,
+  \item \( \hat{f}(\xi) \) is the Fourier Transform of \( f(x) \),
+  \item \( \xi \) is the frequency variable,
+  \item \( i \) is the imaginary unit.
+\end{itemize}
+
+\subsection{Math in Environments}
+
+The quadratic formula is:
+
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\label{eq:quadratic}
+\end{equation}
+
+This will allow us to refer to the equation later in the document with \cmd{ref} like this:
+Refer to Equation \ref{eq:quadratic}.
+
+\subsection{The `amsmath` Package}
+
+Solve the following recurrence for $ n,k\geq 0 $:
+\[
+Q_{n,0} = 1   \quad Q_{0,k} = [k=0];
+\]
+
+\[
+Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{for $n$, $k>0$.}
+\]
+
+\end{document}

@@ -68,24 +68,17 @@ column declaration.
 
 :::
 
-
-There are also a few other preamble-tokens that are available. These don't define a column, but
-can be useful as well:
-
-| Token | Description |
-| Token     | Description                                                                                          |
-|-----------|------------------------------------------------------------------------------------------------------|
-| `{num}{string}` | repeats string for num times in the preamble. With this you can define multiple identical columns. |
-| `>{decl}` | this will put decl before the contents of every cell in the following column (this is useful, e.g., to set a different font for this column) |
-| `<{decl}` | this will put decl after the contents of each cell in the previous column                             |
-| `|`       | add a vertical rule                                                                                  |
-| `@{decl}` | replace the space between two columns with decl                                                      |
-| `!{decl}` | add decl in the center of the existing space                                                         |
-
 ## Creating a Table
 
 Now that we have the array package loaded and we know how to define columns, we can create a table
 using the `tabular` environment.
+
+::: callout
+
+Note that the `&` and `\\` characters are aligned in our example. This isn't strictly necessary in
+LaTeX, but it makes the code much easier to read.
+
+:::
 
 ```latex
 \section{Tables}
@@ -101,17 +94,10 @@ using the `tabular` environment.
 ```
 
 This will create a table with three columns, all left-aligned. The values of each row are separated
-by `&` and the rows are separated by `\\`. We do now yet have any horizontal lines in the table, so
+by `&` and the rows are separated by `\\`. We do not yet have any horizontal lines in the table, so
 it will look like this:
 
-IMAGE HERE
-
-::: callout
-
-Note that the `&` and `\\` characters are aligned in our example. This isn't strictly necessary in
-LaTeX, but it makes the code much easier to read.
-
-:::
+![](fig/07-tables/simple-table.PNG){alt='Example output of a simple table'}
 
 ::: callout
 
@@ -130,7 +116,7 @@ times. For example, in our table above, we can instead write:
 
 :::
 
-### Adding Horizontal Lines
+## Adding Horizontal Lines
 
 We're going to introduce another package here: `booktabs`. This package provides a few commands
 that make it easier to create professional looking tables. To use it, add the following to your
@@ -153,8 +139,9 @@ our table to add horizontal lines:
 ```latex
 \subsection{Tables with Horizontal Lines}
 
-We can use the \cmd{toprule}, \cmd{midrule}, and \cmd{bottomrule} commands from the \cmd{booktabs}
-package to create horizontal lines in our table.
+We can use the \cmd{\textbackslash toprule}, \cmd{\textbackslash midrule}, and
+\cmd{\textbackslash bottomrule} commands from the \cmd{booktabs} package to create horizontal
+lines in our table.
 
 \begin{tabular}{*{3}{l}}
   \toprule
@@ -167,6 +154,11 @@ package to create horizontal lines in our table.
 \end{tabular}
 ```
 
+Your table should look something like this:
+
+![](fig/07-tables/table-with-horizontal-lines.PNG){alt='Example output of a table with horizontal
+lines'}
+
 ::: callout
 
 A general recommendation is to use lines sparsely in your tables, and vertical lines should be
@@ -174,7 +166,7 @@ avoided.
 
 :::
 
-### Partial Horizontal Lines
+## Partial Horizontal Lines
 
 Another useful feature of `booktabs` is the ability to create partial horizontal lines with the
 `\cmidrule` command. This command accepts the arguments {number-number}, where the first number is
@@ -182,6 +174,10 @@ the column to start the line and the second number is the column to end the line
 
 ```latex
 \subsection{Partial Horizontal Lines}
+
+The \cmd{\textbackslash cmidrule} command can be used to create partial horizontal lines in a
+table. The command accepts the arguments {number-number}, where the first number is the column to
+start the line and last number is the column to end the line.
 
 \begin{tabular}{*{3}{l}}
   \toprule
@@ -197,7 +193,13 @@ the column to start the line and the second number is the column to end the line
 
 ```
 
-### Merging Cells
+This table should come out looking something like this:
+
+![](fig/07-tables/table-with-partial-lines.PNG){alt='Example output of a table with partial
+lines'}
+
+
+## Merging Cells
 
 We can merge cells horizontally using the `\multicolumn` command. This command takes three
 arguments:
@@ -208,6 +210,15 @@ arguments:
 
 ```latex
 \subsection{Merging Cells}
+
+Merge cells horizontally using the \cmd{\textbackslash multicolumn} command. This command takes
+three arguments:
+
+\begin{itemize}
+  \item The number of cells which should be merged
+  \item The alignment of the merged cell (l, c, or r)
+  \item The contents of the merged cell
+\end{itemize}
 
 \begin{tabular}{*{3}{l}}
   \toprule
@@ -237,53 +248,71 @@ You can find an example in the challenges below.
 
 :::
 
+This will create a table that looks like this:
+
+![](fig/07-tables/table-with-merged-cell.PNG){alt='Example output of a table with merged cells'}
+
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Can you do it?
 
-Try to make the following table in LaTeX:
+Try to replicate the following table in LaTeX:
 
-| Make | Model | Year |
-|------|-------|------|
-| Volkswagen | Golf | 84,282 |
-| Fiat | 500 | 52,337 |
-| Opel | Corsa | 50,191 |
-| Mini | Mini | 40,142 |
-| Volkswagen | Passat | 39,261 |
+| Make        | Model     | Sold     |
+|-------------|-----------|----------|
+| Volkswagen  | Golf      | 7,687    |
+| Skoda       | Octavia   | 4,078    |
+| Seat        | Leon      | 3,922    |
+| Volkswagen  | Passat    | 3,776    |
+| Mercedes    | GLK,GLC   | 3,143    |
+|             | **Total** | *22,606* |
 
+Your LaTaX version should look something like [this](fig/07-tables/challenge-make-a-table.PNG ).
+
+Note that the last row is a bit different from the others. The first two columns re merged, the
+text "Total" is right-aligned and bold, and the value in the last column is italicized.
+
+(Data for this challenge is from
+[Statista](https://www.statista.com/statistics/1546704/monthly-best-selling-car-models-in-germany/))
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
 ```latex
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{booktabs}
+
+\begin{document}
+
 \begin{tabular}{lll}
   \toprule
-  Make        & Model & Year  \\
+  Make        & Model   & Sold   \\
   \midrule
-  Volkswagen  & Golf  & 84,282 \\
-  Fiat        & 500   & 52,337 \\
-  Opel        & Corsa & 50,191 \\
-  Mini        & Mini  & 40,142 \\
-  Volkswagen  & Passat& 39,261 \\
+  Volkswagen  & Golf    & 7,687 \\
+  Skoda       & Octavia & 4,078 \\
+  Seat        & Leon    & 3,922 \\
+  Volkswagen  & Passat  & 3,776 \\
+  Mercedes    & GLK,GLC & 3,143 \\
+  \midrule
+  \multicolumn{2}{r}{\textbf{Total}} & \textit{22,606} \\
   \bottomrule
 \end{tabular}
+
+\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Challenge 2: Merging rows.
 
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 3: Merging rows.
-
-Consider the following LaTeX code that creates a table using the command `\multirow`. 
-Can you guess how this table will look like? 
-How many columns will it have? 
+Consider the following LaTeX code that creates a table using the command `\multirow`.
+Can you guess how this table will look like?
+How many columns will it have?
 How many rows?
 Are any rows or columns combined?
 
@@ -315,24 +344,25 @@ Are any rows or columns combined?
 
 :::::::::::::::::::::::: solution
 
-The table will have 4 columns where the first column does not have a column name. 
-The table will have 6 rows. 
-The first row is the column name row. 
-Rows 2 to 4 are merged for "Fruit". 
-Rows 5 and 6 are merged for "Cheese". 
+The table will have 4 columns where the first column does not have a column name.
+The table will have 6 rows.
+The first row is the column name row.
+Rows 2 to 4 are merged for "Fruit".
+Rows 5 and 6 are merged for "Cheese".
 
 
+
+*Hint: We want to make sure the caption stays with the table, so we should put the table inside an
+environment. For images we use the "figure" environment, but for tables we can use the "table"
+environment.*
 
 :::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
 
 
-## Challenge 4: Adding merged rows to your table.
+## Challenge 3: Adding merged rows to your table.
 
-Consider again the LaTeX code for the table in challenge 3. 
-Add four more rows to this table that contain information about the following four sorts of bread: 
+Consider again the LaTeX code for the table in challenge 3.
+Add four more rows to this table that contain information about the following four sorts of bread:
 
 - Brioche, 3, 3.00
 - Bagel, 2, 3.50
@@ -375,10 +405,69 @@ Use `\multirow` to subsume those bread types under the category "Bread".
 
 
 :::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Challenge 4: Making the Table Colorful
+
+We used the `xcolor` package to add color to our text in an earlier episode. Can you use the
+`xcolor` package to make the header and summary rows of the table in Challenge 1 a different color?
+What about changing the color of the text in the summary row? Can we make the rows of the table
+alternate colors?
+
+A few things that will help you:
+- We need to import the `xcolor` package in the preamble of our document.
+- The `xcolor` package doesn't automatically support coloring tables, so we need to add the `table`
+  option to the package import.
+- `\rowcolor{(<color>}`
+- `\rowcolors{<starting row number>}{<color1>}{<color2>}`
+- You can make lighter versions of colors by adding `!<percentage>` to the color name. For example,
+  `red!10` is a light red color, while `red!90` is a darker red color.
+
+There's no right answer to this challenge, so feel free to experiment with different colors!
+[Here's an example of what you can do.](fig/07-tables/challenge-colorful-table.PNG)
 
 
+:::::::::::::::::::::::: solution
 
+```latex
+\documentclass{article}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[table]{xcolor} % Import xcolor with the table option
+
+\begin{document}
+
+\begin{table}[ht]
+  \centering
+  \rowcolors{2}{red!10}{gray!10} % Alternate row colors between red and gray
+  \begin{tabular}{lll}
+    \toprule
+    \rowcolor{green!20} % Set the header row color to green
+    Make          & Model            & Sold  \\
+    \midrule
+    Volkswagen    & Golf             & 7,687 \\
+    Skoda         & Octavia          & 4,078 \\
+    Seat          & Leon             & 3,922 \\
+    Volkswagen    & Passat           & 3,776 \\
+    Mercedes      & GLK,GLC          & 3,143 \\
+    \midrule
+    \rowcolor{blue!20} % Set the summary row color to blue
+    \multicolumn{2}{r}{
+      % Set the text color to blue and bold for the summary row
+      \textbf{\textcolor{blue!75}{Total}}} & \textit{\textcolor{blue!75}{22,606}} \\
+    \bottomrule
+  \end{tabular}
+
+  \caption{Car Sales by Make/Model (January 2025)} % Add a caption to the table
+
+\end{table}
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -392,182 +481,6 @@ Use `\multirow` to subsume those bread types under the category "Bread".
 
 ::: spoiler
 
-After this episode, here is what our LaTeX document looks like:
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-\usepackage{array}
-\usepackage{booktabs}
-\usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{xcolor}
-
-% Highlight Keywords using \kw{}
-\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
-
-% Italics for commands with \cmd{}
-\newcommand{\cmd}[1]{\textit{#1}}
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-Hello World!
-
-This is my first \kw{LaTeX} document.
-
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
-
-I can add content to my first \kw{section}!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a \kw{subsection} inside my first section.
-
-\section{Lists}
-
-There are two types of \kw{lists}: \kw{ordered} and \kw{unordered}.
-
-\subsection{Ordered}
-
-Ordered lists do not have numbers associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{enumerate}
-
-\subsection{Unordered}
-
-Unordered lists are just a series of items preceded by a marker.
-
-\begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
-\end{itemize}
-
-\section{Graphics}
-
-We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
-\cmd{includegraphics} command.
-
-\includegraphics{example-image.PNG}
-
-\subsection{Small Image}
-
-We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
-
-\includegraphics[height=4cm]{example-image.PNG}
-
-\begin{itemize}
-  \item width: the width of the image
-  \item scale: the scaling factor of the image
-  \item angle: the angle of rotation of the image
-  \item clip: whether to clip the image to its bounding box
-  \item trim: trim the image by a specified amount
-  \item draft: display a box instead of the image
-\end{itemize}
-
-\subsection{Centered Image}
-
-By placing the \cmd{includegraphics} command inside a center environment, we can center the
-image on the page.
-
-\begin{center}
-  \includegraphics[height=2cm]{example-image.PNG}
-\end{center}
-
-\subsection{Floating Image}
-
-\kw{Floating images} can move around the page as text is added or removed. We can use the
-\cmd{figure}environment to create a floating image.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[height=2cm]{example-image.PNG}
-\end{figure}
-
-Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
-
-\begin{itemize}
-  \item h: Place the float "here" (where it appears in the code)
-  \item t: Place the float at the "top" of the page
-  \item b: Place the float at the "bottom" of the page
-  \item p: Place the float on a "page" by itself
-\end{itemize}
-
-\subsection{Caption}
-
-We can add a \kw{caption} to our floating image by using the \cmd{caption} command inside of the
-\cmd{figure} environment.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[height=2cm]{example-image.PNG}
-  \caption{This is a caption for our image.}
-\end{figure}
-
-\section{Tables}
-
-\kw{Tables} are defined using the \cmd{tabular} environment.
-
-\begin{tabular}{lll}
-  Fruit  & Quantity & Price \\
-  Apple  & 5        & 1.50  \\
-  Banana & 6        & 2.00  \\
-  Orange & 4        & 1.20  \\
-\end{tabular}
-
-\subsection{Tables with Horizontal Lines}
-
-We can use the \cmd{toprule}, \cmd{midrule}, and \cmd{bottomrule} commands from the \cmd{booktabs}
-package to create horizontal lines in our table.
-
-\begin{tabular}{*{3}{l}}
-  \toprule
-  Fruit  & Quantity & Price \\
-  \midrule
-  Apple  & 5        & 1.50  \\
-  Banana & 6        & 2.00  \\
-  Orange & 4        & 1.20  \\
-  \bottomrule
-\end{tabular}
-
-\subsection{Partial Horizontal Lines}
-
-\begin{tabular}{*{3}{l}}
-  \toprule
-  Fruit  & Quantity &  Price \\
-  \midrule
-  Apple  & 5        &  1.50  \\
-  Banana & 6        &  2.00  \\
-  Orange & 4        &  1.20  \\
-  \cmidrule{3-3}
-  Total & 15        & 28.20  \\
-  \bottomrule
-\end{tabular}
-
-\subsection{Merging Cells}
-
-\begin{tabular}{*{3}{l}}
-  \toprule
-  \multicolumn{3}{c}{Overall Inventory} \\
-  Fruit  & Quantity &  Price  \\
-  \midrule
-  Apple  & 5        &  1.50   \\
-  Banana & 6        &  2.00   \\
-  Orange & 4        &  1.20   \\
-  \midrule
-  \multicolumn{2}{c}{Summary} \\
-  Total & 15        & 28.20   \\
-  \bottomrule
-\end{tabular}
-
-\end{document}
-```
+After this episode, [here is what our LaTeX document looks like](files/document_state/ep-07.tex).
 
 :::
