@@ -79,14 +79,29 @@ the appropriate name. For more details about this, refer to the references secti
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: What's wrong with this code?
+## Challenge 1: Add a figure, then reference it.
 
-Here's a section from a larger document. Why might the references not be working as expected? (This
-is a tiny but common issue!)
+In your LaTeX document, include the image `example-image.PNG` and cross-reference it in the text. Make sure the figure has a caption and is labeled and centered properly.
+Use the `\includegraphics` command to add the image and wrap it in a `figure` environment.
+Then, refer to it in the text using the `\ref` command.
+
+You may find the following LaTeX template helpful.
 
 ```latex
-\section{Findings}
-\label{sec:findings}
+\documentclass{article}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section{Cross-referencing Figures}
+
+
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::: solution
 
 \begin{table}[ht]
   \centering
@@ -105,15 +120,28 @@ is a tiny but common issue!)
 
 As shown in \ref{tab:findings} post-treatment values are higher...
 
+```latex
+\documentclass{article}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\section{Cross-referencing Figures}
+
+Here is an example of a figure in the document. We will refer to it later in the text.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=4cm]{example-image.PNG}
+  \caption{This is an example figure.}
+  \label{fig:example-image}
+\end{figure}
+
+In the text, we can refer to the figure using its label: Figure \ref{fig:example-image}.
+
+\end{document}
 ```
-
-The document compiles without error, but the reference text has an issue. What is it?
-
-:::::::::::::::::::::::: solution
-
-The `\ref{}` command is correctly written, but the `\ref{}` command only returns the number of the
-label it is referring to. In this case, it will return the number of the table, not the name of the
-table. To fix this, you can write "As shown in Table \ref{tab:findings}..."
 
 :::::::::::::::::::::::::::::::::
 
@@ -159,6 +187,46 @@ in Section ???", but it actually returns "As indicated in Section 1, ...". This 
 `\label{}` command is placed before the `\section{Methodology}` command, so it marks the section
 number of the previous section, which is the `Introduction` section. The fact that the
 `Introduction` section already has a label does not matter.
+
+:::::::::::::::::::::::::::::::::
+
+
+## Challenge 3: What's wrong with this code?
+
+Here's a section from a larger document. Why might the references not be working as expected? (This
+is a tiny but common issue!)
+
+```latex
+\section{Findings}
+\label{sec:findings}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    Color & Pre-treatment & Post-treatment \\
+    \midrule
+    Blue  & 30\% & 35\% \\
+    Green & 15\% & 55\% \\
+    Red   & 10\% & 12\% \\
+    \bottomrule
+  \end{tabular}
+  \caption{Findings from the survey.}
+  \label{tab:findings}
+\end{table}
+
+As shown in \ref{tab:findings} post-treatment values are higher...
+
+```
+
+The document compiles without error, but the reference text has an issue. What is it? Why does this
+happen?
+
+:::::::::::::::::::::::: solution
+
+The `\ref{}` command is correctly written, but the `\ref{}` command only returns the number of the
+label it is referring to. In this case, it will return the number of the table, not the name of the
+table. To fix this, you can write "As shown in Table \ref{tab:findings}..."
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::

@@ -211,6 +211,59 @@ The code is missing the `\frac` command to create a fraction. The correct code s
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: The `amsmath` package and referencing equations
+
+
+Add the following equation to your document: E = mc^2.
+For this, use the `amsmath` package and a numbered `align` environment.
+Label the equation using `\label`. Then, use the `\ref` command to refer to the equation in the text.
+You may find the following LaTeX template helpful: 
+
+```latex
+\documentclass{article}
+\usepackage{amsmath} % For better equation formatting
+
+\begin{document}
+
+\section{Referencing Equations}
+
+
+
+
+
+
+\end{document}
+```
+
+
+:::::::::::::::::::::::: solution
+
+```latex
+\documentclass{article}
+\usepackage{amsmath} % For better equation formatting
+
+\begin{document}
+
+\section{Referencing Equations}
+
+We can include a numbered equation as follows:
+
+\begin{equation}
+  E = mc^2
+  \label{eq:energy}
+\end{equation}
+
+Now, we refer to the equation in the text. The famous equation is \ref{eq:energy}.
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Inline math mode is marked with `$ ... $` or `\(...\)`

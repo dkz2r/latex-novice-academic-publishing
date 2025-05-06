@@ -543,7 +543,115 @@ document starts.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Can you do it?
+## Challenge 1: Refactor Your Document with Multiple Files
+
+Refactor the following LaTeX document to use multiple files.
+
+```latex
+% This is the main document: main.tex
+
+\documentclass{article}
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \huge
+    \textbf{My Custom LaTeX Title Page}
+
+    \vspace{1cm} % Space between title and subtitle
+    \normalsize
+    \textit{A Sample Document with Custom Formatting}
+
+    \vfill % Fill remaining space
+    \large
+    January 1, 2025
+\end{titlepage}
+
+
+\section{Tables}
+
+\begin{tabular}{lll}
+  Fruit  & Quantity & Price \\
+  Apple  & 5        & 1.50  \\
+  Banana & 6        & 2.00  \\
+  Orange & 4        & 1.20  \\
+\end{tabular}
+
+\section{Graphics}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=2cm]{example-image.PNG}
+  \caption{This is a caption for our image.}
+\end{figure}
+
+
+\end{document}
+```
+
+- Separate the content into different files for the sections by `tables.tex` and `graphics.tex`.
+- Organize the file for the titlepage in a folder named "includes" and name the file `titlepage.tex`.
+- Organize the files for tables and graphics in a folder named "content".
+- Use the `\input` command to include the titlepage and the content in your `main.tex` document.
+
+
+:::::::::::::::::::::::: solution
+
+## Output
+
+```latex
+% This is the main document: main.tex
+
+\documentclass{article}
+
+
+\begin{document}
+
+% Include title page
+\input{includes/titlepage}
+
+% Include content from different files in the "content" folder
+\input{content/sections}
+\input{content/lists}
+\input{content/graphics}
+\input{content/tables}
+\input{content/cross-references}
+\input{content/math}
+\input{content/text-and-spacing}
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 2: Why did we do this?
+
+In our `content/tables.tex` file, we have a bunch of `\input{}` commands for the tables instead of
+writing the tables directly in the file. Why did we do this? What is the benefit of doing this?
+
+:::::::::::::::::::::::: solution
+
+Using an `\input` command inserts the table contents directly into the document as though it was
+typed, which means that we can reuse the same table in multiple documents without having to copy
+paste it. For example, if we were making a presentation in LaTeX, we could use the same table
+in our presentation. This means that if we make a change to the table, it will be reflected in
+all of the documents in which we use it.
+
+(This reflects the programming principle of "Don't Repeat Yourself" (DRY)!)
+
+:::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Restructuring a larger document?
 
 Let's make a new project called "structuring-sources". Add the following files to your project:
 
@@ -571,27 +679,6 @@ looks like this:
 ├── tables/
     └── model_results.tex
 ```
-
-:::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 2: Why did we do this?
-
-In our `content/tables.tex` file, we have a bunch of `\input{}` commands for the tables instead of
-writing the tables directly in the file. Why did we do this? What is the benefit of doing this?
-
-:::::::::::::::::::::::: solution
-
-Using an `\input` command inserts the table contents directly into the document as though it was
-typed, which means that we can reuse the same table in multiple documents without having to copy
-paste it. For example, if we were making a presentation in LaTeX, we could use the same table
-in our presentation. This means that if we make a change to the table, it will be reflected in
-all of the documents in which we use it.
-
-(This reflects the programming principle of "Don't Repeat Yourself" (DRY)!)
 
 :::::::::::::::::::::::::::::::::
 
