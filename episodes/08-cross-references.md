@@ -46,7 +46,7 @@ In this section, we introduce two new concepts:
      \bottomrule
   \end{tabular}
   \caption{This is needed for the label to work.}
-  \label{tab:cross-reference-command} % the lable refers to the caption
+  \label{tab:cross-reference-commands} % the lable refers to the caption
 \end{table}
 
 We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
