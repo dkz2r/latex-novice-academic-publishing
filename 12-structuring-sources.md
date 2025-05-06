@@ -122,18 +122,255 @@ of this project, we'll create a folder called "content" and put our section file
 
 Let's make files in our "content" directory for each of our sections:
 
-- `sections.tex`
-- `lists.tex`
-- `graphics.tex`
-- `tables.tex`
-- `cross-references.tex`
-- `math.tex`
-- `text-and-spacing.tex`
+- `content/sections.tex`
+- `content/lists.tex`
+- `content/graphics.tex`
+- `content/tables.tex`
+- `content/cross-references.tex`
+- `content/mathematics.tex`
+- `content/fonts-and-spacing.tex`
+- `content/reference-databases.tex`
 
 We'll move the content from each section into the corresponding file.
 
 ::: spoiler
-`sections.tex`
+`content/sections.tex`
+
+```latex
+\section{Sections}
+
+I can add content to my first \kw{section}!
+
+% The subsection command does the same thing, but for sections within sections.
+\subsection{Subsection}
+
+I can put a \kw{subsection} inside my first section.
+```
+:::
+
+::: spoiler
+`content/lists.tex`
+
+```latex
+\section{Lists}
+
+There are two types of lists: ordered and unordered.
+
+\subsection{Ordered}
+
+Ordered lists do not have numbers associated with each item.
+
+\begin{enumerate}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{enumerate}
+
+\subsection{Unordered}
+
+Unordered lists are just a series of items preceded by a marker.
+
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+  \item Item 3
+\end{itemize}
+
+\end{document}
+```
+:::
+
+::: spoiler
+`content/graphics.tex`
+
+```latex
+\section{Graphics}
+
+We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
+\cmd{includegraphics} command.
+
+\includegraphics{figures/example-image.png}
+
+\subsection{Small Image}
+
+We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
+
+\includegraphics[height=2cm]{figures/example-image.png}
+
+Other possible options include:
+
+\begin{itemize}
+  \item width: the width of the image
+  \item scale: the scaling factor of the image
+  \item angle: the angle of rotation of the image
+  \item clip: whether to clip the image to its bounding box
+  \item trim: trim the image by a specified amount
+  \item draft: display a box instead of the image
+\end{itemize}
+
+\subsection{Centered Image}
+
+By placing the \cmd{includegraphics} command inside a center environment, we can center the
+image on the page.
+
+\begin{center}
+  \includegraphics[height=2cm]{figures/example-image.png}
+\end{center}
+
+\subsection{Floating Image}
+
+\kw{Floating images} can move around the page as text is added or removed. We can use the
+\cmd{figure}environment to create a floating image.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=2cm]{figures/example-image.png}
+\end{figure}
+
+Control the position of a floating image by passing paratmeters to the \cmd{figure} environment:
+
+\begin{itemize}
+  \item h: Place the float "here" (where it appears in the code)
+  \item t: Place the float at the "top" of the page
+  \item b: Place the float at the "bottom" of the page
+  \item p: Place the float on a "page" by itself
+\end{itemize}
+
+\subsection{Caption}
+
+We can add a \kw{caption} to our floating image by using the \cmd{caption} command inside of the
+\cmd{figure} environment.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[height=2cm]{figures/example-image.png}
+  \caption{This is a caption for our image.}
+\end{figure}
+```
+:::
+
+::: spoiler
+`content/tables.tex`
+
+```latex
+\section{Tables}
+
+\kw{Tables} are defined using the \cmd{tabular} environment.
+
+\input{tables/basic-table}
+
+\subsection{Tables with Horizontal Lines}
+
+We can use the \cmd{\textbackslash toprule}, \cmd{\textbackslash midrule}, and
+\cmd{\textbackslash bottomrule} commands from the \cmd{booktabs} package to create horizontal
+lines in our table.
+
+\input{tables/table-with-horizontal-lines}
+
+\subsection{Partial Horizontal Lines}
+
+The \cmd{\textbackslash cmidrule} command can be used to create partial horizontal lines in a
+table. The command accepts the arguments {number-number}, where the first number is the column to
+start the line and last number is the column to end the line.
+
+\input{tables/table-with-partial-horizontal-lines}
+
+\subsection{Merging Cells}
+
+Merge cells horizontally using the \cmd{\textbackslash multicolumn} command. This command takes
+three arguments:
+
+\begin{itemize}
+  \item The number of cells which should be merged
+  \item The alignment of the merged cell (l, c, or r)
+  \item The contents of the merged cell
+\end{itemize}
+
+\input{tables/table-with-merged-cells}
+```
+:::
+
+::: spoiler
+`content/cross-references.tex`
+
+```latex
+\section{Cross References}
+\label{sec:cross-references}
+
+\subsection{Material for the Introduction}
+
+In this section, we introduce two new concepts:
+
+\begin{tabular}{cp{9cm}}
+  Command & Description \\
+  \toprule
+  \kw{label} & Marks a spot in the document \\
+  \kw{ref} & Refers to a marked spot in the document \\
+  \bottomrule
+\label{tab:cross-reference-commands}
+\end{tabular}
+
+We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
+We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
+```
+:::
+
+::: spoiler
+`content/mathematics.tex`
+
+```latex
+\section{Mathematics}
+
+There are two kinds of math mode in LaTeX: inline and display. Inline math mode is marked with
+a pair of dollar signs, whereas display math mode is marked with a pair of square brackets.
+
+\subsection{Inline Math Mode}
+
+The Pythagorean theorem is $a^2 + b^2 = c^2$.
+
+\subsection{Display Math Mode}
+
+The Fourier Transform is defined as:
+
+\[
+\hat{f}(\xi) = \int_{-\infty}^\infty f(x) e^{-2\pi i \xi x} \, dx
+\]
+
+Where:
+\begin{itemize}
+  \item \( f(x) \) is the function we are transforming,
+  \item \( \hat{f}(\xi) \) is the Fourier Transform of \( f(x) \),
+  \item \( \xi \) is the frequency variable,
+  \item \( i \) is the imaginary unit.
+\end{itemize}
+
+\subsection{Math in Environments}
+
+The quadratic formula is:
+
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\label{eq:quadratic}
+\end{equation}
+
+This will allow us to refer to the equation later in the document with \cmd{ref} like this:
+Refer to Equation \ref{eq:quadratic}.
+
+\subsection{The `amsmath` Package}
+
+Solve the following recurrence for $ n,k\geq 0 $:
+\[
+Q_{n,0} = 1   \quad Q_{0,k} = [k=0];
+\]
+
+\[
+Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{for $n$, $k>0$.}
+\]
+```
+:::
+
+::: spoiler
+`content/fonts-and-spacing.tex`
 
 ```latex
 TO BE ADDED LATER
@@ -141,69 +378,60 @@ TO BE ADDED LATER
 :::
 
 ::: spoiler
-`lists.tex`
+`content/reference-databases.tex`
 
 ```latex
-TO BE ADDED LATER
-```
-:::
+\section{Reference Databases}
 
-::: spoiler
-`graphics.tex`
+One of the best features of LaTeX when writing academic documents is the ability to easily and
+confidently \kw{cite references}.
 
-```latex
-TO BE ADDED LATER
-```
-:::
+We can cite the article by Thomas (e.g. with `\textbackslash autocite\{Thomas2008\}`) and it will show up in the references.
 
-::: spoiler
-`tables.tex`
+You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference
+now appears at the end of the document. \cmd{\textbackslash autocite} is a command that automatically chooses the
+citation style for you.
 
-```latex
-TO BE ADDED LATER
-```
-:::
+Some additional commands that are available in  `biblatex`:
 
-::: spoiler
-`cross-references.tex`
+\begin{itemize}
+    \item `\textbackslash cite\{key\}` or `\textbackslash cite\{key1, key2\}`: Cite the reference with the given key
+    \item `\textbackslash cites\{key1\}\{key2\}\{key-n\}`: Cite multiple references.
+    \item `\textbackslash usepackage\{\}\textbackslash parentcite\{key\}`: Cite the parent reference of the given key.
+    \item `\textbackslash autocite\{key\}`: Automatically choose the citation style.
+    \item `\textbackslash smartcite\{key\}`: Automatically choose the citation style, but with more control.
+    \item `\textbackslash footcite\{key\}`: Cite the reference in a footnote.
+\end{itemize}
 
-```latex
-TO BE ADDED LATER
-```
-:::
-
-::: spoiler
-`math.tex`
-
-```latex
-TO BE ADDED LATER
-```
-:::
-
-::: spoiler
-`text-and-spacing.tex`
-
-```latex
-TO BE ADDED LATER
+A plain citation looks like this \cite{Graham1995}, while multiple citations look like this
+\cites{Graham1995}[see][p. 42]{Thomas2008}. We already used autocite, but we can also use the
+similar smartcite \smartcite{Graham1995}. The benefit with smartcite is that you
+can setup that e.g. all references should go into a footnote. You can continue
+using smartcite when you are *in* a footnote and it will then detect that there
+is no need for creating another footnote but behaving like autocite.
 ```
 :::
 
 Then, in our `main.tex` document, we'll include each of these files using the `\input{filename}`:
 
 ```latex
-\input{content/sections}
-\input{content/lists}
-\input{content/graphics}
-\input{content/tables}
-\input{content/cross-references}
-\input{content/math}
-\input{content/text-and-spacing}
+\include{content/sections}
+\include{content/lists}
+\include{content/graphics}
+\include{content/tables}
+\include{content/cross-references}
+\include{content/mathematics}
+\include{content/fonts-and-spacing}
+\include{content/reference-databases}
 ```
 
 ::: callout
 
-Note that the `\input{filename}` command does not require the `.tex` extension. LaTeX will assume
+Note that the `\include{filename}` command does not require the `.tex` extension. LaTeX will assume
 that the file is a `.tex` file if no extension is provided.
+
+This is also true for someof the other commands we've seen, such as `\includegraphics{}`. It is
+personal preference whether you include the extension or not.
 
 :::
 
@@ -213,33 +441,56 @@ in our content files, and the changes will be reflected in our main document.
 ### Other Files
 
 While we're at it, let's also create files for our packages, commands, and title page. We'll also
-put these into their own directory called "includes":
+put these into their own directory called "preamble":
 
-- `packages.tex`
-- `custom-commands.tex`
-- `titlepage.tex`
+- `preamble/packages.tex`
+- `preamble/custom-commands.tex`
+- `preamble/titlepage.tex`
 
 ::: spoiler
-`packages.tex`
+`preamble/packages.tex`
 
 ```latex
-TO BE ADDED LATER
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[style=authoryear]{biblatex}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
 ```
 :::
 
 ::: spoiler
-`custom-commands.tex`
+`preamble/custom-commands.tex`
 
 ```latex
-TO BE ADDED LATER
+% Highlight Keywords using the \kw{} command
+\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}
+% Italicise LaTeX commands
+\newcommand{\cmd}[1]{\textit{#1}}
 ```
 :::
 
 ::: spoiler
-`titlepage.tex`
+`preamble/titlepage.tex`
 
 ```latex
-TO BE ADDED LATER
+\begin{titlepage}
+    \centering
+
+    \huge
+    \textbf{My Example Document}
+
+    \vspace{1cm}
+    \normalsize
+    \textit{An example of a LaTeX document}
+
+    \vfill
+    January 1, 2000
+\end{titlepage}
 ```
 :::
 
@@ -251,26 +502,31 @@ Our `main.tex` document should now look like this:
 % This command tells LaTeX what kind of document we are creating (article).
 \documentclass{article}
 
-\input{includes/packages}
+\input{preamble/packages}
 
-\input{includes/custom-commands}
+\input{preamble/custom-commands}
+
+\addbibresource{sample-references.bib}
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here
 
-\input{includes/titlepage}
+\include{content/titlepage}
 
 Hello World!
 
 This is my first \kw{LaTeX} document.
 
-\input{content/sections}
-\input{content/lists}
-\input{content/graphics}
-\input{content/tables}
-\input{content/cross-references}
-\input{content/math}
-\input{content/text-and-spacing}
+\include{content/sections}
+\include{content/lists}
+\include{content/graphics}
+\include{content/tables}
+\include{content/cross-references}
+\include{content/mathematics}
+\include{content/fonts-and-spacing}
+\include{content/reference-databases}
+
+\printbibliography
 
 \end{document}
 ```
@@ -427,6 +683,7 @@ looks like this:
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
