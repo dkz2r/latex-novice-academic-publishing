@@ -324,7 +324,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#fonts-and-encoding">Fonts and Encoding</a></li>
+        <ul><li><a href="#documentclass-parameters">documentclass Parameters</a></li>
+<li><a href="#fonts">Fonts</a></li>
 <li><a href="#challenges">Challenges</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -417,7 +418,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Fonts and Encodings</h1>
-        <p>Last updated on 2025-04-23 |
+        <p>Last updated on 2025-05-06 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/13-font-and-encoding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -455,25 +456,113 @@ challenge blocks</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="fonts-and-encoding">Fonts and Encoding<a class="anchor" aria-label="anchor" href="#fonts-and-encoding"></a></h2>
-<hr class="half-width"><p>When LaTeX was first developed, it was designed to work with a
-limited set of fonts and encodings. Accented letters required the use of
-special commands, such as <code>\c{c}</code> for “ç” or
-<code>\~{n}</code> for “ñ”.</p>
+<section><h2 class="section-heading" id="documentclass-parameters">documentclass Parameters<a class="anchor" aria-label="anchor" href="#documentclass-parameters"></a></h2>
+<hr class="half-width"><p>In an earlier episode we learned that we can change the font size of
+the entire document by changing the <code>\documentclass</code> command.
+For example, we can change the font size to 12pt by using:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>[12pt]{<span class="ex">article</span>}</span></code></pre>
+</div>
+<p>But we can add other parameters to this command to change the overall
+layout of the document. For example, we can set the size of the document
+to A4 paper by using:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper]{<span class="ex">article</span>}</span></code></pre>
+</div>
+<p>We can also change the entire document to a two-column layout by
+using:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>[twocolumn]{<span class="ex">article</span>}</span></code></pre>
+</div>
+<p>And we can of course combine these options:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt,twocolumn]{<span class="ex">article</span>}</span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a></h2>
+<hr class="half-width"><p>We saw earlier that we can create commands of our own in LaTeX, but
+there is also a <code>renewcommand</code> command that let’s us change
+the definition of an existing command. This might be useful if you want
+the definition of a command to change throughout the document, however
+there are also some commands that are pre-defined that we can modify
+with this command.</p>
+<p>For Example, we can change the font of the entire document by adding
+the following line to the <code>preamble/custom-commands.tex</code>
+file:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">% Change the font of the entire document to a monospace font</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\ttdefault</span>}</span></code></pre>
+</div>
+<p>When you compile the document you should see something like this:</p>
+<p>IMAGE GOES HERE</p>
+<div class="section level3">
+<h3 id="more-fonts">More Fonts<a class="anchor" aria-label="anchor" href="#more-fonts"></a></h3>
+<p>Unfortunately, the default LaTeX installation does not come with many
+fonts. However, there are additional packages that you can include if
+you are looking for a specific font. Let’s try making our document look
+like it’s using the <code>Times New Roman</code> font. To do this, all
+we need to do is add the following import to the
+<code>preamble/packages.tex</code> file:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}</span></code></pre>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>You can find a large selection of fonts at <a href="https://www.tug.org/FontCatalogue/" class="external-link">The LaTeX Font Catalogue</a>,
+complete with examples of how to use them in your document.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
-<hr class="half-width"><div id="challenge-1-can-you-do-it" class="callout challenge">
+<hr class="half-width"><div id="challenge-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?</h3>
+<div id="challenge-1" class="callout-inner">
+<h3 class="callout-title">Challenge 1:</h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<p>We saw how to change the font of the entire document using the
+<code>\renewcommand</code> command. But what if only want a specific
+section of the document to be in a different font? What would we have to
+modify in the following code to make the text in the first
+<code>\section{}</code> command use a different font?</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="fu">\texttt</span>{</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="kw">\section</span>{My Section}</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">\lipsum</span>[1]</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>}</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="kw">\section</span>{My Other Section}</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="fu">\lipsum</span>[2]</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -481,25 +570,40 @@ special commands, such as <code>\c{c}</code> for “ç” or
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Output </h4>
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>[1] "This new lesson looks good"</code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="kw">\section</span>{My Section}</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\ttdefault</span>}</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="fu">\lipsum</span>[1]</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="kw">\section</span>{My Other Section}</span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\rmdefault</span>}</span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="fu">\lipsum</span>[2]</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout challenge">
+<div id="challenge-2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-2-how-do-you-nest-solutions-within-challenge-blocks" class="callout-inner">
-<h3 class="callout-title">Challenge 2: how do you nest solutions within challenge blocks?</h3>
+<div id="challenge-2" class="callout-inner">
+<h3 class="callout-title">Challenge 2:</h3>
 <div class="callout-content">
 
 </div>
@@ -510,10 +614,9 @@ special commands, such as <code>\c{c}</code> for “ç” or
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>You can add a line with at least three colons and a
-<code>solution</code> tag.</p>
+
 </div>
 </div>
 </div>
@@ -598,7 +701,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/13-font-and-encoding.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/13-font-and-encoding.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-23",
+  "dateModified": "2025-05-06",
   "datePublished": "2025-05-06"
 }
 
