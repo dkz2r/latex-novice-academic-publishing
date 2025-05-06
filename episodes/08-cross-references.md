@@ -49,6 +49,7 @@ In this section, we introduce two new concepts:
   \label{tab:cross-reference-commands} % the lable refers to the caption
 \end{table}
 
+
 We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
 We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
 ```
