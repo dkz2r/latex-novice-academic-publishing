@@ -1,13 +1,13 @@
 ---
-title: "Introduction to LaTeX and Overleaf"
+title: "Introduction to the LaTeX Workflow"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- How can I write and render a LaTeX document?
-- How can I use Overleaf to write and render a LaTeX document?
+- What do I need to do to write and edit a LaTeX document?
+- How can I render a LaTeX document?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -125,7 +125,7 @@ and reopen the "LaTeX Workshop" project. Finally, delete the "A test project" pr
 Creating a copy project:
 
 - Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- For the "LaTeX Workshop" project, navigate to the right column "Actions". 
+- For the "LaTeX Workshop" project, navigate to the right column "Actions".
 - Click on the first button, the "copy" button, in the "Actions" column for the "LaTeX Workshop" project.
 - Enter in "A copy project" as the project name.
 - Click "Copy".
@@ -148,36 +148,36 @@ Deleting the "A copy project" project:
 
 ## Challenge 3: Three ways to download your project as pdf
 
-See if you can download your new project "LaTeX Workshop" in Overleaf as a pdf file. 
-In your current project "LaTeX Workshop", navigate to the *Preview Pane* on the right. 
-At the panel bar for the *Preview Pane*, find the button to download a pdf. 
-If you have figured out the described way for downloading the pdf, try to find two alternative options on how to save your project as a pdf. 
+See if you can download your new project "LaTeX Workshop" in Overleaf as a pdf file.
+In your current project "LaTeX Workshop", navigate to the *Preview Pane* on the right.
+At the panel bar for the *Preview Pane*, find the button to download a pdf.
+If you have figured out the described way for downloading the pdf, try to find two alternative options on how to save your project as a pdf.
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
 
-Option A as described in the task: 
+Option A as described in the task:
 
-- In "LaTeX Workshop", navigate to the *Preview Pane* on the right. 
-- At the panel bar for the *Preview Pane*, there is a button with an arrow pointing downwards. 
-- If you hover over this button, it displays "Download PDF". 
+- In "LaTeX Workshop", navigate to the *Preview Pane* on the right.
+- At the panel bar for the *Preview Pane*, there is a button with an arrow pointing downwards.
+- If you hover over this button, it displays "Download PDF".
 - Click on that button and a pdf of your current project "LaTeX Workshop" will be downloaded.
 
-Option B: 
+Option B:
 
-- In "LaTeX Workshop", click on the top left icon which contains the Overleaf symbol with the word "Menu". 
-- The Menu sidebar will open on the left. 
+- In "LaTeX Workshop", click on the top left icon which contains the Overleaf symbol with the word "Menu".
+- The Menu sidebar will open on the left.
 - In the first paragraph "Downloads", click on the "pdf" button on the right to download your current project "LaTeX Workshop".
 
-Option C: 
+Option C:
 
 - Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- In "All projects", you can find your project "LaTeX Workshop". 
+- In "All projects", you can find your project "LaTeX Workshop".
 - Navigate to the column "Actions" on the right side.
-- If you hover over the third button, it says "Download PDF". 
-- Click on this button to download your current project "LaTeX Workshop". 
+- If you hover over the third button, it says "Download PDF".
+- Click on this button to download your current project "LaTeX Workshop".
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
