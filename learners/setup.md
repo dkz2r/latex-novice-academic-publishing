@@ -2,27 +2,19 @@
 title: Setup
 ---
 
-This workshop will demonstrate how to use [Overleaf](https://www.overleaf.com/) in order to write
-and render LaTeX documents. Overleaf is a cloud-based LaTeX editor, meaning that you can access it
-from any computer with an internet connection, without the need to install any additional software.
-As part of the preparation for workshop, you should register for an account on Overleaf.
+This workshop will demonstrate how to use [TeX Live](https://tug.org/texlive/) in order to write
+and render LaTeX documents. TeX Live is a comprehensive TeX system that includes all of the
+necessary tools to compile and render LaTeX documents. It is available for Windows, macOS, and
+Linux, and can be installed on your local machine.
 
 ## Software Setup
 
-Optionally, it is possible to write and render LaTeX documents on your local machine. You will
-need both a TeX system and an text editor installed. The TeX system is responsible for compiling
-and rendering the LaTeX document, while the text editor is where you will write the LaTeX code.
-
-There are two popular TeX systems: [TeX Live](https://tug.org/texlive/) and
-[MiKTeX](https://miktex.org/). Each of these has it's own advantages and disadvantages. A detailed
-comparison can be found on [The LaTeX Project Website](https://www.latex-project.org/get/).
+You can find installation instructions for TeX Live on the
+[TeX Live website](https://tug.org/texlive/).
 
 
-::::::::::::::::::::::::::::::::::::::: discussion
+### Windows Installation
 
-### Using a Local Setup
-
-If you would like to use a local setup you are welcome to do so, however be aware that our live
-demonstations and all images in this lesson are based on the Overleaf Interface.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+1. Download the TeX Live installer from the [TeX Live website](https://tug.org/texlive/windows.html).
+2. Run the installer and follow the instructions.
+3.
