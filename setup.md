@@ -2,27 +2,49 @@
 title: Setup
 ---
 
-This workshop will demonstrate how to use [Overleaf](https://www.overleaf.com/) in order to write
-and render LaTeX documents. Overleaf is a cloud-based LaTeX editor, meaning that you can access it
-from any computer with an internet connection, without the need to install any additional software.
-As part of the preparation for workshop, you should register for an account on Overleaf.
+This workshop will demonstrate how to use [TeX Live](https://tug.org/texlive/) in order to write
+and render LaTeX documents. TeX Live is a comprehensive TeX system that includes all of the
+necessary tools to compile and render LaTeX documents. It is available for Windows, macOS, and
+Linux, and can be installed on your local machine.
 
 ## Software Setup
 
-Optionally, it is possible to write and render LaTeX documents on your local machine. You will
-need both a TeX system and an text editor installed. The TeX system is responsible for compiling
-and rendering the LaTeX document, while the text editor is where you will write the LaTeX code.
-
-There are two popular TeX systems: [TeX Live](https://tug.org/texlive/) and
-[MiKTeX](https://miktex.org/). Each of these has it's own advantages and disadvantages. A detailed
-comparison can be found on [The LaTeX Project Website](https://www.latex-project.org/get/).
+You can find installation instructions for TeX Live on the
+[TeX Live website](https://tug.org/texlive/).
 
 
-::::::::::::::::::::::::::::::::::::::: discussion
+### Windows Installation
 
-### Using a Local Setup
-
-If you would like to use a local setup you are welcome to do so, however be aware that our live
-demonstations and all images in this lesson are based on the Overleaf Interface.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+1. Download the TeX Live installer from the [TeX Live website](https://tug.org/texlive/windows.html).
+2. Run the installer and select "Install" from the dialog that appears, then click "Next".
+3. Click "Install" to begin the installation process. This will unpack some files, before opening
+   a new window called the "Tex Live Installer".
+   a. If desired, you can change the installation directory by clicking on the "Change" button.
+   b. The default installer will install the full TeX Live distribution, which is recommended for
+      most users, however this can take a long time and requires a lot of disk space. If you would
+      like to install a smaller subset of TeX Live, you can select "Advanced" to bring up the
+      custom installation options. For this workshop, you can customize the Collections to include
+      only the "US and UK English" collections, then ensure that the "Install TeXworks front end"
+      option is selected.
+4. When the installation is complete, you can close the installer windows.
+5. Open a command prompt and type `tex --version` to verify that TeX Live is installed correctly.
+   You should see the version number of TeX Live printed to the console.
+   a. If you did a mimumum installation, you may need to install additional packages. Run
+      `tlmgr info latex` to check if the `latex` package is installed. If you see "installed: no",
+      you should install it now by running the following command:
+      `tlmgr install latex scheme-small collection-latex collection-latexrecommended`.
+6. Ensure that everything is working:
+   a. Open a command prompt and enter `pdflatex --version` to check that the PDFLaTeX
+      compiler is installed correctly. You should see the version number of PDFLaTeX printed to the
+      console.
+   b. Open TeXworks, which is a simple LaTeX editor that comes with TeX Live and paste the following
+      code into a new document:
+      ```latex
+      \documentclass{article}
+      \begin{document}
+      Hello, \LaTeX!
+      \end{document}
+      ```
+      Then click on the green "Typeset" button (or press `Ctrl+T`) to compile the document. If you
+      see a PDF preview of the document with the text "Hello, LaTeX!" then everything is working
+      correctly.
