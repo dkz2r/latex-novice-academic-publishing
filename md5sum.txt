@@ -22,5 +22,5 @@
 "episodes/16-loading-and-manipulating-data.md" "6340f0763f8720b6bb1686f94e03763e" "site/built/16-loading-and-manipulating-data.md" "2025-05-05"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2023-03-16"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2023-03-16"
-"learners/setup.md" "9ecefe8621400f1b9324f983f041bc9b" "site/built/setup.md" "2025-06-02"
+"learners/setup.md" "f8f1adc61b6deae39314708cfbe0665d" "site/built/setup.md" "2025-06-02"
 "profiles/learner-profiles.md" "68ade42462b70ee3ce0a93f2fcfd0d36" "site/built/learner-profiles.md" "2025-04-23"
