@@ -210,7 +210,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-introduction.html">1. Introduction to LaTeX and Overleaf</a>
+        <a href="01-introduction.html">1. Introduction to the LaTeX Workflow</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -397,7 +397,7 @@
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/01-introduction.html" rel="next">Next: Introduction to... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-introduction.html" rel="next">Next: Introduction to the... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
@@ -415,12 +415,12 @@ any links that you are not going to use.
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
- 1. <a href="01-introduction.html">Introduction to LaTeX and
-Overleaf</a>
+ 1. <a href="01-introduction.html">Introduction to the LaTeX
+Workflow</a>
 </td>
 <td>
-How can I write and render a LaTeX document?<br>How can I use Overleaf
-to write and render a LaTeX document?
+What do I need to do to write and edit a LaTeX document?<br>How can I
+render a LaTeX document?
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>00h 12m
@@ -585,44 +585,72 @@ any links that you are not going to use.
  --></tbody></table><p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
-      </section><section id="setup"><p>This workshop will demonstrate how to use <a href="https://www.overleaf.com/" class="external-link">Overleaf</a> in order to write and
-render LaTeX documents. Overleaf is a cloud-based LaTeX editor, meaning
-that you can access it from any computer with an internet connection,
-without the need to install any additional software. As part of the
-preparation for workshop, you should register for an account on
-Overleaf.</p>
+      </section><section id="setup"><p>This workshop will demonstrate how to use <a href="https://tug.org/texlive/" class="external-link">TeX Live</a> in order to write and
+render LaTeX documents. TeX Live is a comprehensive TeX system that
+includes all of the necessary tools to compile and render LaTeX
+documents. It is available for Windows, macOS, and Linux, and can be
+installed on your local machine.</p>
 <section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
-<hr class="half-width"><p>Optionally, it is possible to write and render LaTeX documents on
-your local machine. You will need both a TeX system and an text editor
-installed. The TeX system is responsible for compiling and rendering the
-LaTeX document, while the text editor is where you will write the LaTeX
-code.</p>
-<p>There are two popular TeX systems: <a href="https://tug.org/texlive/" class="external-link">TeX Live</a> and <a href="https://miktex.org/" class="external-link">MiKTeX</a>. Each of these has it’s own
-advantages and disadvantages. A detailed comparison can be found on <a href="https://www.latex-project.org/get/" class="external-link">The LaTeX Project
-Website</a>.</p>
-<div id="using-a-local-setup" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<hr class="half-width"><p>You can find installation instructions for TeX Live on the <a href="https://tug.org/texlive/" class="external-link">TeX Live website</a>.</p>
+<div class="section level3">
+<h3 id="windows-installation">Windows Installation<a class="anchor" aria-label="anchor" href="#windows-installation"></a></h3>
+<ol style="list-style-type: decimal"><li>Download the TeX Live installer from the <a href="https://tug.org/texlive/windows.html" class="external-link">TeX Live website</a>.</li>
+<li>Run the installer and select “Install” from the dialog that appears,
+then click “Next”.</li>
+<li>Click “Install” to begin the installation process. This will unpack
+some files, before opening a new window called the “Tex Live Installer”.
+<ol style="list-style-type: lower-alpha"><li>If desired, you can change the installation directory by clicking on
+the “Change” button.</li>
+<li>The default installer will install the full TeX Live distribution,
+which is recommended for most users, however this can take a long time
+and requires a lot of disk space. If you would like to install a smaller
+subset of TeX Live, you can select “Advanced” to bring up the custom
+installation options. For this workshop, you can customize the
+Collections to include only the “US and UK English” collections, then
+ensure that the “Install TeXworks front end” option is selected.</li>
+</ol></li>
+<li>When the installation is complete, you can close the installer
+windows.</li>
+<li>Open a command prompt and type <code>tex --version</code> to verify
+that TeX Live is installed correctly. You should see the version number
+of TeX Live printed to the console.
+<ol style="list-style-type: lower-alpha"><li>If you did a mimumum installation, you may need to install
+additional packages. Run <code>tlmgr info latex</code> to check if the
+<code>latex</code> package is installed. If you see “installed: no”, you
+should install it now by running the following command:
+<code>tlmgr install latex scheme-small collection-latex collection-latexrecommended</code>.</li>
+</ol></li>
+<li>Ensure that everything is working:
+<ol style="list-style-type: lower-alpha"><li><p>Open a command prompt and enter <code>pdflatex --version</code>
+to check that the PDFLaTeX compiler is installed correctly. You should
+see the version number of PDFLaTeX printed to the console.</p></li>
+<li>
+<p>Open TeXworks, which is a simple LaTeX editor that comes with TeX
+Live and paste the following code into a new document:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>Hello, <span class="fu">\LaTeX</span>!</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<div id="using-a-local-setup" class="callout-inner">
-<h3 class="callout-title">Using a Local Setup</h3>
-<div class="callout-content">
-<p>If you would like to use a local setup you are welcome to do so,
-however be aware that our live demonstations and all images in this
-lesson are based on the Overleaf Interface.</p>
-</div>
-</div>
-</div>
-<!--
+<p>Then click on the green “Typeset” button (or press
+<code>Ctrl+T</code>) to compile the document. If you see a PDF preview
+of the document with the text “Hello, LaTeX!” then everything is working
+correctly. <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
+ --></p>
+</li>
+</ol></li>
+</ol></div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/01-introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="../instructor/01-introduction.html" rel="next">Next: Introduction to... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/01-introduction.html" rel="next">Next: Introduction to the... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->
@@ -666,8 +694,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/index.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/index.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-05-27",
-  "datePublished": "2025-05-27"
+  "dateModified": "2025-06-02",
+  "datePublished": "2025-06-02"
 }
 
   </script><script>
