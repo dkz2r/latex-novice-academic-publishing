@@ -405,7 +405,6 @@ Hello World! This is my first LaTeX document. \par Now, I know how to initiate p
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- We can use Overleaf to edit and render LaTeX documents.
 - The `%` character is used to add comments to a LaTeX document.
 - LaTeX documents are a mixture of text and commands.
 - Commands start with a backslash `\` and sometimes have arguments in curly braces `{}`.
