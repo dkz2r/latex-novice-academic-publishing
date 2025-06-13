@@ -14,7 +14,7 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Become familiar with the basic structure of a LaTeX document.
-- Use Overleaf to render a LaTeX document into a PDF.
+- Use TeXworks to render a LaTeX document into a PDF.
 - Identify how to add special characters to a LaTeX document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -278,7 +278,7 @@ often resolve subsequent errors.
 
 There is an error in the following LaTeX document. Can you find it?
 
-(Feel to make a new project in Overleaf to test this out!)
+(Feel to make a main.tex file in a new project folder to test this out!)
 
 ```latex
 \documentclass{article}
@@ -336,7 +336,7 @@ the text correctly:
 In the section about Paragraphs from above we learned that empty lines are important to create paragraphs.
 However, there is also a LaTeX command called `\par` which might be of help for us.
 Consider the LaTeX code below. Can you already guess which of these options prints *Hello World!* and *This is my first LaTeX document.* in two separate lines?
-(Feel to make a new project in Overleaf to test this out!)
+(Feel to make a main.tex file in a new project folder to test this out!)
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).

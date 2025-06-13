@@ -47,30 +47,12 @@ the name of your image in the following examples.
 
 :::
 
-### Uploading Images to Overleaf
-
-In order to incorporate an image into our document, we'll need to upload it to Overleaf. We can do
-this by clicking on the "Upload" icon on the upper left corner of the Overleaf editor:
-
-![](fig/06-using-graphics/overleaf-upload.PNG){alt='The upload icon in Overleaf.'}
-
-We can then either drag and drop the image into the upload window or click on the "Select files"
-button to choose the image from our computer.
-
-Once you have uploaded the image, you should see it in the "Files" section of the Overleaf editor:
-
-![](fig/06-using-graphics/overleaf-uploaded-image.PNG){alt='The uploaded image in Overleaf.'}
-
-::: spoiler
-
-You can also use the "From external URL" option to add an image directly from a URL, which would
-let you use an image from a website directly without having to download it first.
-
-:::
+Place the image in the same directory as your LaTeX document so that LaTeX can find it when we
+compile the document.
 
 ## Including an Image in a LaTeX Document
 
-Now that we have our image uploaded, we can include it in our document using the `\includegraphics`
+Now that we have our image, we can include it in our document using the `\includegraphics`
 command:
 
 ```latex

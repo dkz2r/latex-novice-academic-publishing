@@ -82,9 +82,8 @@ tab below.
 
 ### biblatex
 
-When using Overleaf, we just need to make sure that the bibliography file is present in the project
-and properly referenced in our document. Check to make sure that your `main.tex` file is in the
-same directory as your `sample-references.bib` file.
+Check to make sure that your `main.tex` file is in the same directory as your
+`sample-references.bib` file.
 
 At the top of our `main.tex` file, we'll add a line to import biblatex:
 
@@ -163,11 +162,9 @@ With this command you will delete the content of the fields in the bibliography.
 Note, that there is `\clear*field*`, `\clear*name*` and `\clear*list*`.
 
 
-
-
 ### natbib
 
-When using Overleaf, we just need to make sure that the bibliography file is present in the project
+We just need to make sure that the bibliography file is present in the project
 and properly referenced in our document. Check to make sure that your `main.tex` file is in the
 same directory as your `sample-references.bib` file.
 
