@@ -46,7 +46,7 @@ Click "Install" to begin the installation process. This will unpack some files, 
 
 Select "Advanced" to bring up the custom installation options.
 
-Under "Selection", select "Scheme: small" to install a minimal set of packages.
+Under "Selection", select "Change" next "Scheme" and choose "basic scheme (plain ad latex)" to install a minimal set of packages.
 
 Ensure that the "Install TeXworks front end" option is selected.
 

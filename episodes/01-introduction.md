@@ -59,6 +59,8 @@ the rendered output. Next to the "Typeset" button is a drop-down menu that allow
 the typesetting engine you wish to use. For this workshop, we will use the default engine,
 PDFLaTeX.
 
+![TeXworks Interface](fig/01-introduction/TexWorksEditor.PNG)
+
 ## Compiling a LaTeX Document
 
 Type the following code into the editor:
@@ -82,6 +84,8 @@ contains the output of the compiler, including any warnings or errors that may h
 during the compilation process. We will talk about this in more detail in a later episode.
 
 :::
+
+![TeXworks Preview Pane](fig/01-introduction/TexWorksEditor_preview-document.PNG)
 
 ## Compiling a LaTeX Document from the Command Line
 
@@ -140,42 +144,31 @@ In the directory where you ran the command, you should now see a new file called
 as some other files that were created during the compilation process. The `main.pdf` file is the
 rendered output of your LaTeX document, and you can open it with any PDF viewer to see the result.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+::: callout
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+When you looked in your directory, you may have noticed that several other files were created in
+addition to the `main.pdf` file. These files are:
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+- `main.aux`: This file contains auxiliary information used by LaTeX during the compilation
+  process, such as cross-references and citations.
+- `main.log`: This file contains the log output of the LaTeX compiler, including any warnings or
+  errors that occurred during the compilation process.
+
+The `main.aux` file is not something we really need to worry about at this point, but the
+`main.log` file can be useful for debugging if you encounter any issues with your LaTeX document.
+We'll take a closer look at the log file in a later episode.
+
+:::
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Create a new project, then delete it
-
-See if you can create a new project in Overleaf. Name it "A test project". Then close the project
-and reopen the "LaTeX Workshop" project. Finally, delete the "A test project" project.
+## Challenge 1: NEED A NEW CHALLENGE
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
-Creating a new project:
-
-- Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- Click the "New Project" button.
-- Select "Blank Project" from the drop-down menu.
-- Enter in "A test project" as the project name.
-- Click "Create".
-
-Closing and reopening the "LaTeX Workshop" project:
-
-- Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- Click on the "LaTeX Workshop" project to reopen it.
-
-Deleting the "A test project" project:
-
-- Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- Click the "trash can" icon next to the "A test project" project.
-- Confirm that you want to delete the project.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -183,79 +176,33 @@ Deleting the "A test project" project:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: Copy your current project, then delete it
+## Challenge 2: NEED A NEW CHALLENGE
 
-See if you can create a copy of your current project "LaTeX Workshop" in Overleaf. Name it "A copy project". Then close the project
-and reopen the "LaTeX Workshop" project. Finally, delete the "A test project" project.
-
-:::::::::::::::::::::::: solution
+:::::::::::::::::::::::: soluti
 
 ## Answer
-
-Creating a copy project:
-
-- Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- For the "LaTeX Workshop" project, navigate to the right column "Actions".
-- Click on the first button, the "copy" button, in the "Actions" column for the "LaTeX Workshop" project.
-- Enter in "A copy project" as the project name.
-- Click "Copy".
-
-Closing and reopening the "LaTeX Workshop" project:
-
-- Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- Click on the "LaTeX Workshop" project to reopen it.
-
-Deleting the "A copy project" project:
-
-- Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- Click the "trash can" icon next to the "A copy project" project.
-- Confirm that you want to delete the project.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 3: Three ways to download your project as pdf
-
-See if you can download your new project "LaTeX Workshop" in Overleaf as a pdf file.
-In your current project "LaTeX Workshop", navigate to the *Preview Pane* on the right.
-At the panel bar for the *Preview Pane*, find the button to download a pdf.
-If you have figured out the described way for downloading the pdf, try to find two alternative options on how to save your project as a pdf.
+## Challenge 3: NEED A NEW CHALLENGE
 
 :::::::::::::::::::::::: solution
 
 ## Answer
 
-
-Option A as described in the task:
-
-- In "LaTeX Workshop", navigate to the *Preview Pane* on the right.
-- At the panel bar for the *Preview Pane*, there is a button with an arrow pointing downwards.
-- If you hover over this button, it displays "Download PDF".
-- Click on that button and a pdf of your current project "LaTeX Workshop" will be downloaded.
-
-Option B:
-
-- In "LaTeX Workshop", click on the top left icon which contains the Overleaf symbol with the word "Menu".
-- The Menu sidebar will open on the left.
-- In the first paragraph "Downloads", click on the "pdf" button on the right to download your current project "LaTeX Workshop".
-
-Option C:
-
-- Click the "house" icon on the top menu bar to return to the main Overleaf page.
-- In "All projects", you can find your project "LaTeX Workshop".
-- Navigate to the column "Actions" on the right side.
-- If you hover over the third button, it says "Download PDF".
-- Click on this button to download your current project "LaTeX Workshop".
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- We can use Overleaf to edit and render LaTeX documents.
-- An Overleaf project can contain many files.
+- We can use the TeXworks editor to write and compile LaTeX documents.
+- The TeXworks interface is divided into three main sections: the editor, the preview pane, and the menu bar.
+- We can compile a LaTeX document by clicking the "Typeset" button in the TeXworks editor.
+- We can also compile a LaTeX document from the command line using the `pdflatex` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
