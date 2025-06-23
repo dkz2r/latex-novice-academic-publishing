@@ -70,7 +70,7 @@ Your document should now look like this:
 
 ::: callout
 
-If you just want to see how an image might look in your document without having to upload one, you
+If you just want to see how an image might look in your document without having to find one, you
 can use the filepath `example-image` in the `\includegraphics` command. This will display a
 placeholder image in your document that you can replace later.
 
