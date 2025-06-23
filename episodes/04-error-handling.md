@@ -25,7 +25,7 @@ techniques we can use to debug our documents based on the error messages we rece
 
 ## Anatomy of an Error Message
 
-Way back in [Episode 2 - Document Structure](02-document-structure.html), we saw some error
+In [Episode 2 - Document Structure](02-document-structure.html), we saw some error
 messages - let's take a closer look at one of them and see what it tells us.
 
 Let's re-introduce the issue: we'll change the `\documentclass` command in `main.tex` to
