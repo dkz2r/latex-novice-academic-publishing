@@ -23,42 +23,129 @@ Error messages in LaTeX can often be difficult to understand, especially if you'
 language. However there are a few common errors that we can learn to recognize and fix, and a few
 techniques we can use to debug our documents based on the error messages we receive.
 
-## Anatomy of an Error Message
+Inevitably, everyone makes mistakes when writing LaTeX documents. When you recompile your document,
+you might not see any changes in the preview pane. This could be because there is an error in your
+document. If there is an error, you will see a red number next to  the "Recompile" button over the
+"Logs and output files" button. You will also see certain lines highlighted in red in the text
+editor, along with a suggestion of what the error might be.
 
-In [Episode 2 - Document Structure](02-document-structure.html), we saw some error
-messages - let's take a closer look at one of them and see what it tells us.
+Let's introduce an error into our project to see what this might look like. Let's introduce a typo
+into the `documentclass` command by changing it to `documnetclass`. When we recompile the document,
+we can see our errors:
 
-Let's re-introduce the issue: we'll change the `\documentclass` command in `main.tex` to
-`\documnetclass`...
+```latex
+% This command is misspelled on purpose to generate an error
+\documnetclass{article}
 
-![](/fig/14-error-handling/so-many-errors.PNG){alt='A whole bunch of errors.'}
+\begin{document}
+Hello World!
 
-Ok, that's a lot of errors! Let's look at the very first one in the list:
-
-![](/fig/14-error-handling/error-unidentified-control-sequence.PNG){alt='Error: Unidentified control sequence.'}
-
-In the red bar at the top, we have both the name of the error message ("Unidentified control
-sequence") and the file and line number where the error occurred (`main.tex, 2`). This gives us a
-great starting point to identify the issue. Now let's look at the contents of the message:
-
-```
-The compiler is having trouble understanding a command you have used. Check that the command is
-spelled correctly. If the command is part of a package, make sure you have included the package in
-your preamble using \usepackage{...}.
+This is my first LaTeX document.
+\end{document}
 ```
 
-This is Overleaf's way of trying to make a more helpful version of the error message than LaTeX
-itself. We can see the actual error message from LaTeX just below:
+::: tab
+
+### Errors in the TeXworks Editor
+
+![Error in the LaTeX document](fig/03-error-handling/document-errors.png){alt='Error in the LaTeX document.'}
+
+The greens triangle we clicked on is now a red octagon, indicating that there is an error. There's
+also now a second tab that we can see in the editor pane now, called "Errors, warnings, badboxes".
+Clicking on this tab shows us something like this:
+
+![Error in the LaTeX document](fig/03-error-handling/document-errors-error-tab.png)
 
 ```
+! Undefined control sequence.
 l.2 \documnetclass
                   {article}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 ```
+
+Back in the "Console Output" tab, there's a "?", indicating that the console is waiting for us to
+give it some input.
+
+::: callout
+
+Commands in the Console Output tab:
+- Type <return> to proceed,
+- S to scroll future error messages,
+- R to run without stopping
+- Q to run quietly,
+- I to insert something
+- E to edit your file
+- 1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+- H for help
+-	X to quit
+
+:::
+
+Let's type <return> in the input box to proceed. You should see the follow message in the console
+output:
+
+```
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...
+
+l.2 \documentclass{article}
+```
+
+Keep hitting <return> to proceed through the error messages. You will see a series of error
+messages as a result of our initial error.
+
+### Errors in the Terminal
+
+If we run the command `pdflatex main.tex` in the terminal, we will see an error message:
+
+![Error in the terminal](fig/03-error-handling/document-errors-terminal.png){alt='Error in the terminal.'}
+
+The text in the terminal tells us that there is an error in the `main.tex` file on line 2, and that
+the command `\documnetclass` is undefined.
+
+Keep hitting <return> to proceed through the error messages. You will see a series of error
+messages as a result of our initial error.
+
+Once we reach the end of the error messages, we can also open the `main.log` file in the project
+to see a full log of the errors and warnings that were generated during the compilation.
+
+:::
+
+### Fixing Errors
+
+In general, the first error message you see is the most important one to fix. In this case, all of
+the subsequent errors are related to the initial error, which is that the `\documentclass` command
+is undefined. Once we fix the typo in the `\documentclass` command, the document will compile
+successfully.
+
+::: callout
+
+The subsequent errors, talking about "missing begin document", and "font size command not defined"
+are all cascading errors from the initial error. When LaTeX encounters an error, it can't continue
+to compile the document, so it stops and reports the error it found. This can sometimes lead to
+multiple error messages, but generally it's important to fix the first error first, as this will
+often resolve subsequent errors.
+
+:::
+
+## Anatomy of an Error Message
+
+Let's take a closer look at one of them and see what it tells us.
+
+```
+! Undefined control sequence.
+l.2 \documnetclass
+                  {article}
+```
+
+This message tells us a few things:
+  1. `! Undefined control sequence.`: This indicates that LaTeX encountered a command that it
+     doesn't recognize. In this case, it's the misspelled `\documnetclass` command.
+  2. `l.2`: This tells us that the error occurred on line 2 of the document.
+  3. `\documnetclass`: This is the command that caused the error. LaTeX doesn't recognize this
+     command because it is misspelled.
 
 Of course, we know what the error was, so we can just fix it by changing `\documnetclass` back to
 `\documentclass`.
@@ -71,76 +158,17 @@ one will often fix the rest of them too.
 
 :::
 
-## Errors vs Warnings vs Information
+## Common Errors
 
-Not all messages are equal! LaTeX has three different types of messages:
+Let's take a look at some common errors you might encounter when working with LaTeX.
 
-- `Error`: This is a serious issue that will prevent your document from compiling. You need to fix
-  this before you can continue.
-- `Warning`: This is a less serious issue that may not prevent your document from compiling, but it
-  may cause issues with the output. You should still try to fix this, but it may not be critical.
-- `Information`: This is just a message that provides additional information about the document. You
-  can usually ignore this.
+### Unidentified Control Sequence
 
-In Overleaf, error messages are shown in red, warnings are shown in yellow, and information
-messages in blue.
+We saw this one in our first example, but it can happen any where there is a command that LaTeX
+doesn't recognize. This can happen if you misspell a command, or if you forget to include a package
+that defines the command, of if you try to use an incorrect command.
 
-## Fixing a Common Error
-
-This time, instead of introducing an error into our document, let's create a new file called
-`my-error-example.tex` and add the following code:
-
-```latex
-\documentclass{article}
-
-\begin{document}
-
-\section{Introduction}
-\label{sec:intro}
-
-Hello there!
-
-This document intentionally contains a very common latex error in the following section. Use the
-error message to try to identify and fix the error.
-
-\section{A section with an error}
-\label{sec:error}
-
-As mentioned in section \ref{sec:intro}, this document contains an error.
-
-We have a list of items in our store:
-
-\begin{itemize}
-  \item Camera
-  \item Printer (out of stock)
-  \item Cellphone
-\end
-
-Our Current Inventory:
-
-\begin{tabular}{|l|l|}
-  \hline
-  Item & Quantity \\
-  \hline
-  Camera & 5 \\
-  Printer & 0 \\
-  Cellphone & 10 \\
-  \hline
-\end{tabular}
-
-\end{document}
-```
-
-
-
-
-## Challenges
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 1: Identify the error
-
-Take a look at the following LaTeX excerpt:
+Here's a quick example of this error:
 
 ```latex
 \documentclass{article}
@@ -156,26 +184,14 @@ Attempting to compile this document results in the following error message:
 
 ```
 ! Undefined control sequence.
-l.4 $\alpha = \fraction
-                       {1}{(1 - \beta)^2}$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+l.5 My Amazing Content: $\alpha = \fraction
+                                           {1}{(1 - \beta)^2}$
 ```
 
-Without running the code, can you identify the issue?
+So, again, we see that the error is an "Undefined control sequence", and it tells us that something
+in line 5 is not defined. In this case, the command `\fraction` is not a valid LaTeX command.
 
-:::::::::::::::::::::::: solution
-
-The error message indicates that the command `\fraction` is not defined. The correct command
-should be `\frac`.
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: Identify the error
+### File Not Found
 
 Here's another LaTeX excerpt:
 
@@ -195,21 +211,12 @@ The following error message appears when you try to compile this document:
 
 ```
 ! LaTeX Error: File `booktab.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
 ```
 
-Why is this error occurring? What is the solution?
+This error indicates that LaTeX is unable to find the `booktab` package. The correct package name
+should be `booktabs`.
 
-:::::::::::::::::::::::: solution
-
-The error message indicates that the package `booktab` is not found. The correct package name
-should be `booktabs`
-
-:::::::::::::::::::::::::::::::::
-
-# Challenge 3: Why do I get this warning?
+### Overfull Boxes
 
 The following code generates a warning message:
 
@@ -223,34 +230,62 @@ The following code generates a warning message:
 
 We can rotate an image by setting the "angle" parameter:
 
-\includegraphics[scale=2, angle=45]{figures/example-image.png}
+\includegraphics[scale=2, angle=45]{example-image}
 \end{document}
 ```
 
-The text of the warning message is:
+The document compiles successfully, but there was some text that briefly appeared in the console
+output. Let's look at the .log file to see what it says:
 
 ```
 Overfull \hbox (390.7431pt too wide) in paragraph at lines 10--11
 [][]
  []
 
+
+
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \vbox (170.7431pt too high) has occurred while \output is active []
 
-[2 <./figures/example-image.png>] (./output.aux)
+
+
+[2 <./example-image.png>] (./main.aux)
 ```
 
-The document compiles successfully, but the warning message won't go away. Why is this
-happening? How can you fix it?
+This message indicates that there is an "overfull hbox" and "overfull vbox". This means that the
+text or image is too wide or too tall for the page, and it is overflowing into the margins. This
+is a common issue when including images in LaTeX.
+
+
+## Errors vs Warnings vs Information
+
+Not all messages are equal! LaTeX has three different types of messages:
+
+- `Error`: This is a serious issue that will prevent your document from compiling. You need to fix
+  this before you can continue.
+- `Warning`: This is a less serious issue that may not prevent your document from compiling, but it
+  may cause issues with the output. You should still try to fix this, but it may not be critical.
+- `Information`: This is just a message that provides additional information about the document. You
+  can usually ignore this.
+
+In Overleaf, error messages are shown in red, warnings are shown in yellow, and information
+messages in blue.
+
+
+## Challenges
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+# Challenge 1: Why do I get this warning?
+
+PLACEHOLDER
 
 :::::::::::::::::::::::: solution
 
-The message is indicating that the image is too wide for the page, which is causing an "overfull
-hbox" (overfull horizontal box) error. This is a common issue when including images in LaTeX.
-The warning will not prevent the document from compiling, but it may point to something we should
-take a look at, in this case, an image that flows off the page.
+PLACEHOLDER
 
 :::::::::::::::::::::::::::::::::
 
@@ -259,10 +294,9 @@ take a look at, in this case, an image that flows off the page.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Errors are common! Don't be discouraged by them.
+- The first error message is usually the most important one to fix.
+- Read the error messages carefully, they often tell you exactly what the problem is.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
