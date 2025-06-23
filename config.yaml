@@ -67,8 +67,8 @@ contact: 'hartman@itc.rwth-aachen.de'
 episodes:
 - 01-introduction.md
 - 02-document-structure.md
-- 03-logical-structure.md
-- 04-error-handling.md
+- 03-error-handling.md
+- 04-logical-structure.md
 - 05-document-classes.md
 - 06-extending-latex.md
 - 07-using-graphics.md
