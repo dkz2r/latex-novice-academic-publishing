@@ -14,15 +14,14 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Become familiar with the basic structure of a LaTeX document.
-- Use Overleaf to render a LaTeX document into a PDF.
+- Use TeXworks to render a LaTeX document into a PDF.
 - Identify how to add special characters to a LaTeX document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Editing the Document
-We can edit the `main.tex` file by clicking on it in the *File Navigator*. This will open the file
-in the text editor. Let's edit some of the provided code to create our first LaTeX document.
-
+We can edit the `main.tex` file with TeXworks (or any text editor of your choice). Let's start by
+creating a simple LaTeX document:
 
 ```latex
 \documentclass{article}
@@ -33,6 +32,8 @@ Hello World!
 This is my first LaTeX document.
 \end{document}
 ```
+
+![Starting Document](fig/02-document-structure/document-getting-started.PNG)
 
 ::: callout
 
@@ -92,19 +93,29 @@ This is my first LaTeX document.
 \end{document}
 ```
 
+![Document with Comments](fig/02-document-structure/document-comments.PNG)
+
+::: callout
+
+Note that the comments are displayed in a different color in the text editor. This is called
+"syntax highlighting". Not all text editors will do this by default, but you can often add syntax
+highlighting to your text editor of choice.
+
+:::
+
 Going forward, the examples we provide will not always include comments, but you should add them
 to your document as you see fit.
 
 ## Rendering the Document
 
-In your Overleaf project, click the green *Recompile* button to render the document. This will
-generate a preview of the document in the right-hand pane.
+As with our example from the previous episode, we can render our document by clicking on the
+large green "Typeset" button in TeXworks, or by running the command `pdflatex main.tex` in
+our terminal/consoloe.
 
 ::: callout
 
-There are many shortcut keyboard commands that you can use to speed up your work in Overleaf. When
-we want to render the document, we can use `Ctrl + S` or `Ctrl + Enter` (Windows) or `Cmd + S` or
-`Cmd + Enter` (Mac). This will save the document and render it in one step.
+When running the command in the terminal, make sure you have saved your document first, as the
+command will only render the last saved version of the document.
 
 :::
 
@@ -145,8 +156,8 @@ in the same way. Instead, you can use `\textbackslash` to produce a backslash in
 
 ::: callout
 
-Sometimes, special characters can, unintentionally, conflate with characters that are used after that special character.
-You can prevent that by typing `{}` directly behind your special character.
+Sometimes, special characters can, unintentionally, conflate with characters that are used after
+that special character. You can prevent that by typing `{}` directly behind your special character.
 The following LaTeX code gives you an example:
 
 ```latex
@@ -177,39 +188,75 @@ Let's introduce an error into our project to see what this might look like. Let'
 into the `documentclass` command by changing it to `documnetclass`. When we recompile the document,
 we can see our errors:
 
+### Errors in THe TeXworks Editor
+
 ![Error in the LaTeX document](fig/02-document-structure/document-errors.png){alt='Error in the LaTeX document.'}
 
-And if we click on the "Logs and output files" button, we can see a more detailed error message:
+The greens triangle we clicked on is now a red octagon, indicating that there is an error. There's
+also now a second tab that we can see in the editor pane now, called "Errors, warnings, badboxes".
+Clicking on this tab shows us something like this:
 
-![Error message in the LaTeX document](fig/02-document-structure/document-error-message.png){alt='Error message in the LaTeX document.'}
+![Error in the LaTeX document](fig/02-document-structure/document-errors-error-tab.png)
 
-We can see similar messages when hovering over the small red circle next to the error in the text
-editor:
+This error makes sense, given the typo we introduced. LaTeX is telling us that it has encountered
+a command that it doesn't recognize, which is the `documnetclass` command. The error message
+also tells us that the error is on line 2 (`l.2`) of the `main.tex` file, which is where we made
+our typo.
 
-![Error message on Hover](fig/02-document-structure/document-error-hover.png){alt='Error message on Hover.'}
+Back in the "Console Output" tab, there's a "?", indicating that the console is waiting for us to
+give it some input.
 
-We'll look more into how we can read and fix errors [in a later episode](/14-error-handling.html).
+::: callout
+
+Commands in the Console Output tab:
+- Type <return> to proceed,
+- S to scroll future error messages,
+- R to run without stopping
+- Q to run quietly,
+- I to insert something
+- E to edit your file
+- 1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+- H for help
+-	X to quit
+
+:::
+
+Let's type <return> to proceed. You should see the follow message in the console output:
+
+```
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...
+
+l.2 \documentclass{article}
+```
+
+Keep hitting <return> to proceed through the error messages. You will see a series of error
+messages as a result of our initial error.
+
+### Errors in the Terminal
+
+If we run the command `pdflatex main.tex` in the terminal, we will see an error message:
+
+![Error in the terminal](fig/02-document-structure/document-errors-terminal.png){alt='Error in the terminal.'}
+
+The text in the terminal tells us that there is an error in the `main.tex` file on line 2, and that
+the command `\documnetclass` is undefined.
+
+Keep hitting <return> to proceed through the error messages. You will see a series of error
+messages as a result of our initial error.
+
+Once we reach the end of the error messages, we can also open the `main.log` file in the project
+to see a full log of the errors and warnings that were generated during the compilation.
 
 ### Fixing Errors
 
-Our tiny typo seems to have caused quite a number of issues! This can happen, the important thing
-is to read the error message and try to understand what it's telling you. In this case it says:
-
-```
-Undefined control sequence. ./main.tex, 2
-
-The compiler is having trouble understanding a command you have used. Check that the command is
-spelled correctly. If the command is part of a package, make sure you have included the package
-in your preamble using \usepackage{...}.
-```
-
-In order to diagnose the issue, we can first look at the name of the message. In this case, it's
-`Undefined control sequence`. This means that LaTeX doesn't recognize the command we've used.
-Specifically, it says, this undefined sequence is on line 2 of the `main.tex` file. We can then
-look at the line and see that we've made a typo in the `\documentclass` command.
-
-As soon as we fix this typo and recompile our document, we should see the preview pane update and
-all of the remaining errors disappear.
+In general, the first error message you see is the most important one to fix. In this case, all of
+the subsequent errors are related to the initial error, which is that the `\documentclass` command
+is undefined. Once we fix the typo in the `\documentclass` command, the document will compile
+successfully.
 
 ::: callout
 
@@ -229,7 +276,7 @@ often resolve subsequent errors.
 
 There is an error in the following LaTeX document. Can you find it?
 
-(Feel to make a new project in Overleaf to test this out!)
+(Feel to make a main.tex file in a new project folder to test this out!)
 
 ```latex
 \documentclass{article}
@@ -287,7 +334,7 @@ the text correctly:
 In the section about Paragraphs from above we learned that empty lines are important to create paragraphs.
 However, there is also a LaTeX command called `\par` which might be of help for us.
 Consider the LaTeX code below. Can you already guess which of these options prints *Hello World!* and *This is my first LaTeX document.* in two separate lines?
-(Feel to make a new project in Overleaf to test this out!)
+(Feel to make a main.tex file in a new project folder to test this out!)
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
@@ -356,7 +403,6 @@ Hello World! This is my first LaTeX document. \par Now, I know how to initiate p
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- We can use Overleaf to edit and render LaTeX documents.
 - The `%` character is used to add comments to a LaTeX document.
 - LaTeX documents are a mixture of text and commands.
 - Commands start with a backslash `\` and sometimes have arguments in curly braces `{}`.
