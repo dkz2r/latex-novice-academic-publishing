@@ -204,6 +204,8 @@ tlmgr update --self --all # Optional: update all packages
 tlmgr install xcolor
 ```
 
+:::
+
 ## Defining Multiple Commands
 
 We can define as many commands as we like in the preamble of our document. Let's add another one

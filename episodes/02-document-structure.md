@@ -188,8 +188,6 @@ Let's introduce an error into our project to see what this might look like. Let'
 into the `documentclass` command by changing it to `documnetclass`. When we recompile the document,
 we can see our errors:
 
-::: tab
-
 ### Errors in THe TeXworks Editor
 
 ![Error in the LaTeX document](fig/02-document-structure/document-errors.png){alt='Error in the LaTeX document.'}
