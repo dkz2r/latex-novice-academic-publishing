@@ -244,7 +244,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-introduction.html">1. Introduction to LaTeX and Overleaf</a>
+        <a href="01-introduction.html">1. Introduction to the LaTeX Workflow</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -488,9 +488,9 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Introduction to LaTeX and Overleaf</a></p>
+<section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Introduction to the LaTeX Workflow</a></p>
 <hr>
-<p>Last updated on 2025-06-03 |
+<p>Last updated on 2025-06-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -505,8 +505,8 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How can I write and render a LaTeX document?</li>
-<li>How can I use Overleaf to write and render a LaTeX document?</li>
+<li>What do I need to do to write and edit a LaTeX document?</li>
+<li>How can I render a LaTeX document?</li>
 </ul>
 </div>
 </div>
@@ -516,8 +516,10 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Demonstrate how to create a new project in Overleaf.</li>
-<li>Become familiar with the Overleaf interface.</li>
+<li>Demonstrate how to create a new LaTeX Document.</li>
+<li>Become familiar with the TeXworks interface.</li>
+<li>Compile a LaTeX document with the TeXworks editor.</li>
+<li>Compile a LaTeX document with the command line.</li>
 </ul>
 </div>
 </div>
@@ -539,84 +541,163 @@ indicated by the use of commands, special characters, or
 <em>compiled</em>. Errors in the mark-up can either be non-fatal,
 meaning the document will compile with some warnings; or fatal, meaning
 the document will fail to compile.</p>
-</section><section><h2 class="section-heading" id="our-first-overleaf-project">Our first Overleaf Project<a class="anchor" aria-label="anchor" href="#our-first-overleaf-project"></a>
+</section><section><h2 class="section-heading" id="our-first-latex-document">Our First LaTeX Document<a class="anchor" aria-label="anchor" href="#our-first-latex-document"></a>
 </h2>
 <hr class="half-width">
-<p>There are several ways to write LaTeX documents, but we’ll be using
-Overleaf, a cloud-based LaTeX editor. This has the advantage of being
-accessible from any computer with an internet connection, without the
-need to install any additional software. As part of the preparation for
-this workshop, you should have registered for an account on
-Overleaf.</p>
-<p>We’ll start by creating a new, ‘Blank’, project in Overleaf by
-clicking on the large green button that says ‘New Project’ in the top
-left corner of the screen. This will open a drop-down menu with a number
-of options. We’ll select ‘Blank Project’ from this menu. Name the
-project ‘LaTeX Workshop’ and click ‘Create’.</p>
-<figure><img src="../fig/01-introduction/overleaf-main-page.PNG" alt="The Overleaf main page." class="figure mx-auto d-block"><div class="figcaption">The Overleaf Main Page</div>
-</figure></section><section><h2 class="section-heading" id="the-overleaf-interface">The Overleaf Interface<a class="anchor" aria-label="anchor" href="#the-overleaf-interface"></a>
+<p>To begin with, we will create a new directory to hold our files for
+this workshop. Call it <code>latex-workshop</code>, and make a note of
+the path to this directory.</p>
+<p>Start the TeXworks editor and immediately “save” the file. This will
+prompt you for a location to save the file, so navigate to the
+<code>latex-workshop</code> directory you just created, and save the
+file as <code>main.tex</code>.</p>
+</section><section><h2 class="section-heading" id="the-texworks-interface">The TeXworks Interface<a class="anchor" aria-label="anchor" href="#the-texworks-interface"></a>
 </h2>
 <hr class="half-width">
-<p>Once the project is created, you’ll see that it isn’t quite blank.
-There are four main panels when you open a new project in Overleaf:</p>
-<ul>
-<li><ol style="list-style-type: decimal">
-<li>The <em>File Navigator</em> on the top left, which shows all of the
-files in your project.</li>
-</ol></li>
-<li><ol start="2" style="list-style-type: decimal">
-<li>The <em>File Outline</em> on the bottom left, which shows the
-structure of the current file.</li>
-</ol></li>
-<li><ol start="3" style="list-style-type: decimal">
-<li>The <em>Text Editor</em> in the middle, where you can write your
-LaTeX code.</li>
-</ol></li>
-<li><ol start="4" style="list-style-type: decimal">
-<li>The <em>Preview Pane</em> on the right, which shows a preview of the
-compiled document.</li>
-</ol></li>
-</ul>
-<figure><img src="../fig/01-introduction/overleaf-interface.PNG" alt="The Overleaf interface." class="figure mx-auto d-block"><div class="figcaption">The Overleaf Interface</div>
-</figure><p>You’ll notice that our project isn’t quite blank, as we have a file
-called <code>main.tex</code> open in the text editor with some LaTeX
-code already written. This is a basic LaTeX document, with some of the
-minimum requirements for a LaTeX document.</p>
-</section><section><h2 class="section-heading" id="the-main-menu">The Main Menu<a class="anchor" aria-label="anchor" href="#the-main-menu"></a>
+<p>The TeXworks interface is divided into three main sections: - The
+<strong>Editor</strong>: This is where you write your LaTeX code. It
+supports syntax highlighting and basic code completion. - The
+<strong>Preview Pane</strong>: This shows the compiled output of your
+LaTeX code. This window will appear whenever we compile the document. -
+The <strong>Menu Bar</strong>: This contains various options for
+managing your document, such as saving, compiling, and printing. You can
+also access the preferences and settings from here.</p>
+<p>The overall interface is designed to be simple and intuitive,
+focusing on the essential features of a LaTeX editor. Note the large
+green triangle button in the top left corner of the interface. This is
+the “Typeset” button, which compiles your LaTeX document and updates the
+preview pane with the rendered output. Next to the “Typeset” button is a
+drop-down menu that allows you to select the typesetting engine you wish
+to use. For this workshop, we will use the default engine, PDFLaTeX.</p>
+<figure><img src="../fig/01-introduction/TexWorksEditor.PNG" alt="TeXworks Interface" class="figure mx-auto d-block"><div class="figcaption">TeXworks Interface</div>
+</figure></section><section><h2 class="section-heading" id="compiling-a-latex-document">Compiling a LaTeX Document<a class="anchor" aria-label="anchor" href="#compiling-a-latex-document"></a>
 </h2>
 <hr class="half-width">
-<p>When we want to switch projects or create a new one, we can use the
-main menu at the top of the screen, which is indicated by a small
-“house” icon. Clicking on this icon will take us back to the main
-landing page for overleaf, where we initially created our project.</p>
-<p>We can see now in the section “All Projects” that our new project,
-“LaTeX Workshop”, is listed there, that we are the owner, and that it
-was just recently modified. We can click on the project name to open it
-again.</p>
-<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<p>Type the following code into the editor:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>Hello, <span class="fu">\LaTeX</span>!</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>Now click the green “Typeset” button in the top left corner of the
+interface. This will compile the document and update the preview pane
+with the rendered output. You should see a PDF preview of the document
+with the text “Hello, LaTeX!”.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>When you click the “Typeset” button, TeXworks will run the PDFLaTeX
+compiler on your document. You will see a window appear on the bottom of
+the interface called “Console output”. This window contains the output
+of the compiler, including any warnings or errors that may have occurred
+during the compilation process. We will talk about this in more detail
+in a later episode.</p>
+</div>
+</div>
+</div>
+<figure><img src="../fig/01-introduction/TexWorksEditor_preview-document.PNG" alt="TeXworks Preview Pane" class="figure mx-auto d-block"><div class="figcaption">TeXworks Preview Pane</div>
+</figure></section><section><h2 class="section-heading" id="compiling-a-latex-document-from-the-command-line">Compiling a LaTeX Document from the Command Line<a class="anchor" aria-label="anchor" href="#compiling-a-latex-document-from-the-command-line"></a>
+</h2>
+<hr class="half-width">
+<p>The TeXworks editor is a convenient way to write and compile LaTeX
+documents, but you are not limited to using it. Any program that can
+edit text files can be used to write LaTeX, which we can then compile
+from the command line.</p>
+<p>You can use any text editor to write your LaTeX code. Some popular
+text editors for LaTeX include: - <a href="https://code.visualstudio.com/" class="external-link">Visual Studio Code</a> - <a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a> - <a href="https://www.vim.org/" class="external-link">Vim</a> - Notepad++ (Windows only)</p>
+<p>We will continue to demonstrate with TeXworks, but you can use any
+text editor you prefer.</p>
+<p>To compile a LaTeX document from the command line, you can use the
+<code>pdflatex</code> command. Open a console or terminal window, then
+navigate to the directory where you saved your <code>main.tex</code>
+file.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
-<p>Inline instructor notes can help inform instructors of timing
-challenges associated with the lessons. They appear in the “Instructor
-View”</p>
+<p>Useful commands for navigating the command line: -
+<code>cd &lt;directory&gt;</code>: Change directory to
+<code>&lt;directory&gt;</code>. - <code>ls</code> (Linux/macOS) or
+<code>dir</code> (Windows): List the files in the current directory. -
+<code>pwd</code> (Linux/macOS): Print the current working directory.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-1-create-a-new-project-then-delete-it" class="callout challenge">
+<p>Once you are in the correct directory, run the following command:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">pdflatex</span> main.tex</span></code></pre>
+</div>
+<p>You should see output similar to the following:</p>
+<pre><code>This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e &lt;2024-11-01&gt; patch level 2
+L3 programming layer &lt;2025-04-29&gt;
+(e:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(e:/texlive/2025/texmf-dist/tex/latex/base/size10.clo))
+(e:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./main.aux)
+[1{e:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux)
+)&lt;e:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb&gt;&lt;e:/texli
+ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb&gt;
+Output written on main.pdf (1 page, 21048 bytes).
+Transcript written on main.log.</code></pre>
+<p>In the directory where you ran the command, you should now see a new
+file called <code>main.pdf</code>, as well as some other files that were
+created during the compilation process. The <code>main.pdf</code> file
+is the rendered output of your LaTeX document, and you can open it with
+any PDF viewer to see the result.</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>When you looked in your directory, you may have noticed that several
+other files were created in addition to the <code>main.pdf</code> file.
+These files are:</p>
+<ul>
+<li>
+<code>main.aux</code>: This file contains auxiliary information used
+by LaTeX during the compilation process, such as cross-references and
+citations.</li>
+<li>
+<code>main.log</code>: This file contains the log output of the
+LaTeX compiler, including any warnings or errors that occurred during
+the compilation process.</li>
+</ul>
+<p>The <code>main.aux</code> file is not something we really need to
+worry about at this point, but the <code>main.log</code> file can be
+useful for debugging if you encounter any issues with your LaTeX
+document. We’ll take a closer look at the log file in a later
+episode.</p>
+</div>
+</div>
+</div>
+<div id="challenge-1-need-a-new-challenge" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-1-create-a-new-project-then-delete-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Create a new project, then delete it</h3>
+<div id="challenge-1-need-a-new-challenge" class="callout-inner">
+<h3 class="callout-title">Challenge 1: NEED A NEW CHALLENGE</h3>
 <div class="callout-content">
-<p>See if you can create a new project in Overleaf. Name it “A test
-project”. Then close the project and reopen the “LaTeX Workshop”
-project. Finally, delete the “A test project” project.</p>
+
 </div>
 </div>
 </div>
@@ -625,46 +706,38 @@ project. Finally, delete the “A test project” project.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>Creating a new project:</p>
-<ul>
-<li>Click the “house” icon on the top menu bar to return to the main
-Overleaf page.</li>
-<li>Click the “New Project” button.</li>
-<li>Select “Blank Project” from the drop-down menu.</li>
-<li>Enter in “A test project” as the project name.</li>
-<li>Click “Create”.</li>
-</ul>
-<p>Closing and reopening the “LaTeX Workshop” project:</p>
-<ul>
-<li>Click the “house” icon on the top menu bar to return to the main
-Overleaf page.</li>
-<li>Click on the “LaTeX Workshop” project to reopen it.</li>
-</ul>
-<p>Deleting the “A test project” project:</p>
-<ul>
-<li>Click the “house” icon on the top menu bar to return to the main
-Overleaf page.</li>
-<li>Click the “trash can” icon next to the “A test project”
-project.</li>
-<li>Confirm that you want to delete the project.</li>
-</ul>
+
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-2-copy-your-current-project-then-delete-it" class="callout challenge">
+<div id="challenge-3-need-a-new-challenge" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<div class="section level3 callout-title">
+<h3 class="callout-title" id="challenge-2-need-a-new-challenge">Challenge 2: NEED A NEW CHALLENGE<a class="anchor" aria-label="anchor" href="#challenge-2-need-a-new-challenge"></a>
+</h3>
+</div>
+<div class="callout-content">
+<div class="section level2 soluti">
+<h2 id="answer-1">Answer<a class="anchor" aria-label="anchor" href="#answer-1"></a>
+</h2>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge2" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-2-copy-your-current-project-then-delete-it" class="callout-inner">
-<h3 class="callout-title">Challenge 2: Copy your current project, then delete it</h3>
+<div id="challenge-3-need-a-new-challenge" class="callout-inner">
+<h3 class="callout-title">Challenge 3: NEED A NEW CHALLENGE</h3>
 <div class="callout-content">
-<p>See if you can create a copy of your current project “LaTeX Workshop”
-in Overleaf. Name it “A copy project”. Then close the project and reopen
-the “LaTeX Workshop” project. Finally, delete the “A test project”
-project.</p>
+
 </div>
 </div>
 </div>
@@ -673,93 +746,14 @@ project.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>Creating a copy project:</p>
-<ul>
-<li>Click the “house” icon on the top menu bar to return to the main
-Overleaf page.</li>
-<li>For the “LaTeX Workshop” project, navigate to the right column
-“Actions”.</li>
-<li>Click on the first button, the “copy” button, in the “Actions”
-column for the “LaTeX Workshop” project.</li>
-<li>Enter in “A copy project” as the project name.</li>
-<li>Click “Copy”.</li>
-</ul>
-<p>Closing and reopening the “LaTeX Workshop” project:</p>
-<ul>
-<li>Click the “house” icon on the top menu bar to return to the main
-Overleaf page.</li>
-<li>Click on the “LaTeX Workshop” project to reopen it.</li>
-</ul>
-<p>Deleting the “A copy project” project:</p>
-<ul>
-<li>Click the “house” icon on the top menu bar to return to the main
-Overleaf page.</li>
-<li>Click the “trash can” icon next to the “A copy project”
-project.</li>
-<li>Confirm that you want to delete the project.</li>
-</ul>
+
 </div>
 </div>
 </div>
 </div>
-<div id="challenge-3-three-ways-to-download-your-project-as-pdf" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-3-three-ways-to-download-your-project-as-pdf" class="callout-inner">
-<h3 class="callout-title">Challenge 3: Three ways to download your project as pdf</h3>
-<div class="callout-content">
-<p>See if you can download your new project “LaTeX Workshop” in Overleaf
-as a pdf file. In your current project “LaTeX Workshop”, navigate to the
-<em>Preview Pane</em> on the right. At the panel bar for the <em>Preview
-Pane</em>, find the button to download a pdf. If you have figured out
-the described way for downloading the pdf, try to find two alternative
-options on how to save your project as a pdf.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
-<div class="accordion-body">
-<p>Option A as described in the task:</p>
-<ul>
-<li>In “LaTeX Workshop”, navigate to the <em>Preview Pane</em> on the
-right.</li>
-<li>At the panel bar for the <em>Preview Pane</em>, there is a button
-with an arrow pointing downwards.</li>
-<li>If you hover over this button, it displays “Download PDF”.</li>
-<li>Click on that button and a pdf of your current project “LaTeX
-Workshop” will be downloaded.</li>
-</ul>
-<p>Option B:</p>
-<ul>
-<li>In “LaTeX Workshop”, click on the top left icon which contains the
-Overleaf symbol with the word “Menu”.</li>
-<li>The Menu sidebar will open on the left.</li>
-<li>In the first paragraph “Downloads”, click on the “pdf” button on the
-right to download your current project “LaTeX Workshop”.</li>
-</ul>
-<p>Option C:</p>
-<ul>
-<li>Click the “house” icon on the top menu bar to return to the main
-Overleaf page.</li>
-<li>In “All projects”, you can find your project “LaTeX Workshop”.</li>
-<li>Navigate to the column “Actions” on the right side.</li>
-<li>If you hover over the third button, it says “Download PDF”.</li>
-<li>Click on this button to download your current project “LaTeX
-Workshop”.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id="keypoints1" class="callout keypoints">
+<div id="callout1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -767,8 +761,14 @@ Workshop”.</li>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>We can use Overleaf to edit and render LaTeX documents.</li>
-<li>An Overleaf project can contain many files.</li>
+<li>We can use the TeXworks editor to write and compile LaTeX
+documents.</li>
+<li>The TeXworks interface is divided into three main sections: the
+editor, the preview pane, and the menu bar.</li>
+<li>We can compile a LaTeX document by clicking the “Typeset” button in
+the TeXworks editor.</li>
+<li>We can also compile a LaTeX document from the command line using the
+<code>pdflatex</code> command.</li>
 </ul>
 </div>
 </div>
@@ -779,7 +779,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-document-structure"><p>Content from <a href="02-document-structure.html">File Structure</a></p>
 <hr>
-<p>Last updated on 2025-04-30 |
+<p>Last updated on 2025-06-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/02-document-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -807,7 +807,7 @@ rendered?</li>
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Become familiar with the basic structure of a LaTeX document.</li>
-<li>Use Overleaf to render a LaTeX document into a PDF.</li>
+<li>Use TeXworks to render a LaTeX document into a PDF.</li>
 <li>Identify how to add special characters to a LaTeX document.</li>
 </ul>
 </div>
@@ -818,10 +818,9 @@ rendered?</li>
 <section><h2 class="section-heading" id="editing-the-document">Editing the Document<a class="anchor" aria-label="anchor" href="#editing-the-document"></a>
 </h2>
 <hr class="half-width">
-<p>We can edit the <code>main.tex</code> file by clicking on it in the
-<em>File Navigator</em>. This will open the file in the text editor.
-Let’s edit some of the provided code to create our first LaTeX
-document.</p>
+<p>We can edit the <code>main.tex</code> file with TeXworks (or any text
+editor of your choice). Let’s start by creating a simple LaTeX
+document:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -833,7 +832,8 @@ document.</p>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>This is my first LaTeX document.</span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<div id="callout1" class="callout">
+<figure><img src="../fig/02-document-structure/document-getting-started.PNG" alt="Starting Document" class="figure mx-auto d-block"><div class="figcaption">Starting Document</div>
+</figure><div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -917,26 +917,40 @@ a reference for yourself in the future!</p>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>This is my first LaTeX document.</span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<p>Going forward, the examples we provide will not always include
-comments, but you should add them to your document as you see fit.</p>
-</section><section><h2 class="section-heading" id="rendering-the-document">Rendering the Document<a class="anchor" aria-label="anchor" href="#rendering-the-document"></a>
-</h2>
-<hr class="half-width">
-<p>In your Overleaf project, click the green <em>Recompile</em> button
-to render the document. This will generate a preview of the document in
-the right-hand pane.</p>
-<div id="callout3" class="callout">
+<figure><img src="../fig/02-document-structure/document-comments.PNG" alt="Document with Comments" class="figure mx-auto d-block"><div class="figcaption">Document with Comments</div>
+</figure><div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div class="callout-inner">
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
-<p>There are many shortcut keyboard commands that you can use to speed
-up your work in Overleaf. When we want to render the document, we can
-use <code>Ctrl + S</code> or <code>Ctrl + Enter</code> (Windows) or
-<code>Cmd + S</code> or <code>Cmd + Enter</code> (Mac). This will save
-the document and render it in one step.</p>
+<p>Note that the comments are displayed in a different color in the text
+editor. This is called “syntax highlighting”. Not all text editors will
+do this by default, but you can often add syntax highlighting to your
+text editor of choice.</p>
+</div>
+</div>
+</div>
+<p>Going forward, the examples we provide will not always include
+comments, but you should add them to your document as you see fit.</p>
+</section><section><h2 class="section-heading" id="rendering-the-document">Rendering the Document<a class="anchor" aria-label="anchor" href="#rendering-the-document"></a>
+</h2>
+<hr class="half-width">
+<p>As with our example from the previous episode, we can render our
+document by clicking on the large green “Typeset” button in TeXworks, or
+by running the command <code>pdflatex main.tex</code> in our
+terminal/consoloe.</p>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>When running the command in the terminal, make sure you have saved
+your document first, as the command will only render the last saved
+version of the document.</p>
 </div>
 </div>
 </div>
@@ -983,7 +997,7 @@ them with a backslash. For example,</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>What about the <code>\</code> character?</p>
 <p>The <code>\</code> character is used to escape other characters in
@@ -994,7 +1008,7 @@ document.</p>
 </div>
 </div>
 </div>
-<div id="callout4" class="callout">
+<div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1035,34 +1049,72 @@ suggestion of what the error might be.</p>
 like. Let’s introduce a typo into the <code>documentclass</code> command
 by changing it to <code>documnetclass</code>. When we recompile the
 document, we can see our errors:</p>
+<div class="section level3">
+<h3 id="errors-in-the-texworks-editor">Errors in THe TeXworks Editor<a class="anchor" aria-label="anchor" href="#errors-in-the-texworks-editor"></a>
+</h3>
 <figure><img src="../fig/02-document-structure/document-errors.png" alt="Error in the LaTeX document." class="figure mx-auto d-block"><div class="figcaption">Error in the LaTeX document</div>
-</figure><p>And if we click on the “Logs and output files” button, we can see a
-more detailed error message:</p>
-<figure><img src="../fig/02-document-structure/document-error-message.png" alt="Error message in the LaTeX document." class="figure mx-auto d-block"><div class="figcaption">Error message in the LaTeX document</div>
-</figure><p>We can see similar messages when hovering over the small red circle
-next to the error in the text editor:</p>
-<figure><img src="../fig/02-document-structure/document-error-hover.png" alt="Error message on Hover." class="figure mx-auto d-block"><div class="figcaption">Error message on Hover</div>
-</figure><p>We’ll look more into how we can read and fix errors <a href="../14-error-handling.html">in a later episode</a>.</p>
+</figure><p>The greens triangle we clicked on is now a red octagon, indicating
+that there is an error. There’s also now a second tab that we can see in
+the editor pane now, called “Errors, warnings, badboxes”. Clicking on
+this tab shows us something like this:</p>
+<figure><img src="../fig/02-document-structure/document-errors-error-tab.png" alt="Error in the LaTeX document" class="figure mx-auto d-block"><div class="figcaption">Error in the LaTeX document</div>
+</figure><p>This error makes sense, given the typo we introduced. LaTeX is
+telling us that it has encountered a command that it doesn’t recognize,
+which is the <code>documnetclass</code> command. The error message also
+tells us that the error is on line 2 (<code>l.2</code>) of the
+<code>main.tex</code> file, which is where we made our typo.</p>
+<p>Back in the “Console Output” tab, there’s a “?”, indicating that the
+console is waiting for us to give it some input.</p>
+<div id="callout6" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Commands in the Console Output tab: - Type <return> to proceed, - S
+to scroll future error messages, - R to run without stopping - Q to run
+quietly, - I to insert something - E to edit your file - 1 or … or 9 to
+ignore the next 1 to 9 tokens of input, - H for help - X to quit</return></p>
+</div>
+</div>
+</div>
+<p>Let’s type <return> to proceed. You should see the follow message in
+the console output:</return></p>
+<pre><code>! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H &lt;return&gt;  for immediate help.
+ ...
+
+l.2 \documentclass{article}</code></pre>
+<p>Keep hitting <return> to proceed through the error messages. You will
+see a series of error messages as a result of our initial error.</return></p>
+</div>
+<div class="section level3">
+<h3 id="errors-in-the-terminal">Errors in the Terminal<a class="anchor" aria-label="anchor" href="#errors-in-the-terminal"></a>
+</h3>
+<p>If we run the command <code>pdflatex main.tex</code> in the terminal,
+we will see an error message:</p>
+<figure><img src="../fig/02-document-structure/document-errors-terminal.png" alt="Error in the terminal." class="figure mx-auto d-block"><div class="figcaption">Error in the terminal</div>
+</figure><p>The text in the terminal tells us that there is an error in the
+<code>main.tex</code> file on line 2, and that the command
+<code>\documnetclass</code> is undefined.</p>
+<p>Keep hitting <return> to proceed through the error messages. You will
+see a series of error messages as a result of our initial error.</return></p>
+<p>Once we reach the end of the error messages, we can also open the
+<code>main.log</code> file in the project to see a full log of the
+errors and warnings that were generated during the compilation.</p>
+</div>
 <div class="section level3">
 <h3 id="fixing-errors">Fixing Errors<a class="anchor" aria-label="anchor" href="#fixing-errors"></a>
 </h3>
-<p>Our tiny typo seems to have caused quite a number of issues! This can
-happen, the important thing is to read the error message and try to
-understand what it’s telling you. In this case it says:</p>
-<pre><code>Undefined control sequence. ./main.tex, 2
-
-The compiler is having trouble understanding a command you have used. Check that the command is
-spelled correctly. If the command is part of a package, make sure you have included the package
-in your preamble using \usepackage{...}.</code></pre>
-<p>In order to diagnose the issue, we can first look at the name of the
-message. In this case, it’s <code>Undefined control sequence</code>.
-This means that LaTeX doesn’t recognize the command we’ve used.
-Specifically, it says, this undefined sequence is on line 2 of the
-<code>main.tex</code> file. We can then look at the line and see that
-we’ve made a typo in the <code>\documentclass</code> command.</p>
-<p>As soon as we fix this typo and recompile our document, we should see
-the preview pane update and all of the remaining errors disappear.</p>
-<div id="callout5" class="callout">
+<p>In general, the first error message you see is the most important one
+to fix. In this case, all of the subsequent errors are related to the
+initial error, which is that the <code>\documentclass</code> command is
+undefined. Once we fix the typo in the <code>\documentclass</code>
+command, the document will compile successfully.</p>
+<div id="callout7" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1092,7 +1144,8 @@ subsequent errors.</p>
 <div class="callout-content">
 <p>There is an error in the following LaTeX document. Can you find
 it?</p>
-<p>(Feel to make a new project in Overleaf to test this out!)</p>
+<p>(Feel to make a main.tex file in a new project folder to test this
+out!)</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1116,7 +1169,7 @@ it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Each section of a LaTeX document must be enclosed in a pair of
 <code>\begin{...}</code> and <code>\end{...}</code>. This document is
@@ -1142,7 +1195,7 @@ missing the <code>\begin{document}</code> command.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>We need to use escapes before each of the special characters. The
 following LaTeX code will display the text correctly:</p>
@@ -1168,8 +1221,8 @@ lines are important to create paragraphs. However, there is also a LaTeX
 command called <code>\par</code> which might be of help for us. Consider
 the LaTeX code below. Can you already guess which of these options
 prints <em>Hello World!</em> and <em>This is my first LaTeX
-document.</em> in two separate lines? (Feel to make a new project in
-Overleaf to test this out!)</p>
+document.</em> in two separate lines? (Feel to make a main.tex file in a
+new project folder to test this out!)</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1203,7 +1256,7 @@ Overleaf to test this out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The command <code>\par</code> initiates a new paragraph for us even
 if we write text in just one line (see Option C). Solely, Option B out
@@ -1235,7 +1288,7 @@ Even more, I can write # and ^ correctly using LaTeX.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Answer </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We need to use <code>\par</code> to initiate a new paragraph without
 using a new line of code. Moreover, we need to use escapes before each
@@ -1258,7 +1311,6 @@ text correctly:</p>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>We can use Overleaf to edit and render LaTeX documents.</li>
 <li>The <code>%</code> character is used to add comments to a LaTeX
 document.</li>
 <li>LaTeX documents are a mixture of text and commands.</li>
@@ -1275,7 +1327,7 @@ or hovering over the red circle in the text editor.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
 <div class="codewrapper sourceCode" id="cb11">
@@ -1728,7 +1780,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-document-classes"><p>Content from <a href="04-document-classes.html">Using Document Classes</a></p>
 <hr>
-<p>Last updated on 2025-04-30 |
+<p>Last updated on 2025-06-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/04-document-classes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -2051,7 +2103,7 @@ maintain the structure of the document:</p>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">\title</span>{Sample title}</span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">\author</span>{Anonymous}</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">\institute</span>{Overleaf}</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">\institute</span>{My Institution}</span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="fu">\date</span>{2021}</span>
 <span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
 <span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
@@ -2162,7 +2214,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-extending-latex"><p>Content from <a href="05-extending-latex.html">Extending LaTeX</a></p>
 <hr>
-<p>Last updated on 2025-04-30 |
+<p>Last updated on 2025-06-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/05-extending-latex.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -2359,7 +2411,7 @@ command to all the keywords in our document.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Related to the <code>\newcommand</code> command, we can also use the
 <code>\renewcommand</code> command to change the definition of an
@@ -2406,7 +2458,25 @@ document:</p>
 <code>\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}</code></p>
 <p>When we recompile the document we should see that the formatting of
 our keywords has changed all at once:</p>
-<figure><img src="../fig/05-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure>
+<figure><img src="../fig/05-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure><div id="callout5" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>If the <code>xcolor</code> package is not installed, you can install
+it using your LaTeX package manager. For Tex Live, you can use the
+<code>tlmgr</code> command to install the package:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">tlmgr</span> update <span class="at">--self</span> <span class="at">--all</span> <span class="co"># Optional: update all packages</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="ex">tlmgr</span> install xcolor</span></code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="defining-multiple-commands">Defining Multiple Commands<a class="anchor" aria-label="anchor" href="#defining-multiple-commands"></a>
 </h2>
@@ -2414,11 +2484,11 @@ our keywords has changed all at once:</p>
 <p>We can define as many commands as we like in the preamble of our
 document. Let’s add another one that we can use to highlight commands in
 the document:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co">% Italicise LaTeX commands</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co">% Italicise LaTeX commands</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span></code></pre>
 </div>
 <p>We’ll use this command in later sections.</p>
 </section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
@@ -2444,7 +2514,7 @@ document?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Add the line <code>\usepackage{lipsum}</code> to the preamble of your
 document.</p>
@@ -2463,17 +2533,17 @@ document to add some dummy text.</p>
 <div class="callout-content">
 <p>The definition of a new command in LaTeX is done with the
 <code>\newcommand</code> command. The syntax for this command is:</p>
-<div class="codewrapper sourceCode" id="cb12">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
-</div>
-<p>So if we modify the <code>\kw</code> command we defined above to look
-like this:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
+</div>
+<p>So if we modify the <code>\kw</code> command we defined above to look
+like this:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
 </div>
 <p>What would the new <code>\kw</code> command do? and how would we use
 it?</p>
@@ -2485,16 +2555,16 @@ it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Output </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The new <code>\kw</code> command would take two arguments: the first
 argument would be the color we want to use to highlight the word, and
 the second argument would be the word we want to highlight. We would use
 it like this:</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2526,7 +2596,7 @@ sentence into your LaTeX document using your new command
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Output </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The new <code>\boit</code> command would take two arguments: the
 first argument would be used with <code>\tetxbf{#1}</code> to make the
@@ -2535,18 +2605,18 @@ be used with <code>\tetxit{#2}</code> to make the first word appear
 <em>italic</em>. Between <code>\tetxbf{#1}</code> and
 <code>\tetxit{#2}</code>, we would write <code>,</code> to separate both
 words. We would use the new command like this:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\boit</span>}[2]{<span class="fu">\textbf</span>{#1}, <span class="fu">\textit</span>{#2}}</span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>This newly defined command highlights these two words: <span class="fu">\boit</span>{Apple}{Banana}.</span>
-<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\boit</span>}[2]{<span class="fu">\textbf</span>{#1}, <span class="fu">\textit</span>{#2}}</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>This newly defined command highlights these two words: <span class="fu">\boit</span>{Apple}{Banana}.</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2562,20 +2632,20 @@ words. We would use the new command like this:</p>
 <p>New commands can be made even more flexible by defining commands that
 take an optional argument. Then the general LaTeX code for this looks
 like this:</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments][default value for the first argument]{definition}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments][default value for the first argument]{definition}</span></code></pre>
 </div>
 <p>The optional argument can be accessed and changed by writing square
 brackets <code>[]</code> directly after the <code>\commandname</code> in
 the body of your document.</p>
 <p>Consider the following, modified example of our <code>\kw</code> from
 before where we now use an optional argument.</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
 </div>
 <p>In your LaTeX file, use the new <code>\kw</code> command to write
 down the words “Banana” in yellow, “Apple” in red, and “Blueberry” in
@@ -2588,30 +2658,30 @@ blue. Each word should be written in a separate line.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Output </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can exploit the optional argument in <code>\kw</code> to write
 down the given words very efficiently. For the first word, we change the
 optional argument to “yellow”. For the second word, we stick with the
 default value of “red”. For the third word, we change the optional
 argument to “blue”.</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a><span class="fu">\kw</span>[yellow]{Banana}</span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a></span>
-<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="fu">\kw</span>{Apple}</span>
-<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a></span>
-<span id="cb18-11"><a href="#cb18-11" tabindex="-1"></a><span class="fu">\kw</span>[blue]{Blueberry}</span>
-<span id="cb18-12"><a href="#cb18-12" tabindex="-1"></a></span>
-<span id="cb18-13"><a href="#cb18-13" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="#cb18-14" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a><span class="fu">\kw</span>[yellow]{Banana}</span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a><span class="fu">\kw</span>{Apple}</span>
+<span id="cb19-10"><a href="#cb19-10" tabindex="-1"></a></span>
+<span id="cb19-11"><a href="#cb19-11" tabindex="-1"></a><span class="fu">\kw</span>[blue]{Blueberry}</span>
+<span id="cb19-12"><a href="#cb19-12" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" tabindex="-1"></a></span>
+<span id="cb19-14"><a href="#cb19-14" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2638,7 +2708,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-05.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -2652,7 +2722,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-06-using-graphics"><p>Content from <a href="06-using-graphics.html">Using Graphics</a></p>
 <hr>
-<p>Last updated on 2025-04-30 |
+<p>Last updated on 2025-06-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/06-using-graphics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -2723,37 +2793,13 @@ the following examples.</p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="uploading-images-to-overleaf">Uploading Images to Overleaf<a class="anchor" aria-label="anchor" href="#uploading-images-to-overleaf"></a>
-</h3>
-<p>In order to incorporate an image into our document, we’ll need to
-upload it to Overleaf. We can do this by clicking on the “Upload” icon
-on the upper left corner of the Overleaf editor:</p>
-<figure><img src="../fig/06-using-graphics/overleaf-upload.PNG" alt="The upload icon in Overleaf." class="figure mx-auto d-block"></figure><p>We can then either drag and drop the image into the upload window or
-click on the “Select files” button to choose the image from our
-computer.</p>
-<p>Once you have uploaded the image, you should see it in the “Files”
-section of the Overleaf editor:</p>
-<figure><img src="../fig/06-using-graphics/overleaf-uploaded-image.PNG" alt="The uploaded image in Overleaf." class="figure mx-auto d-block"></figure><div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
-<div class="accordion-body">
-<p>You can also use the “From external URL” option to add an image
-directly from a URL, which would let you use an image from a website
-directly without having to download it first.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p>Place the image in the same directory as your LaTeX document so that
+LaTeX can find it when we compile the document.</p>
 </section><section><h2 class="section-heading" id="including-an-image-in-a-latex-document">Including an Image in a LaTeX Document<a class="anchor" aria-label="anchor" href="#including-an-image-in-a-latex-document"></a>
 </h2>
 <hr class="half-width">
-<p>Now that we have our image uploaded, we can include it in our
-document using the <code>\includegraphics</code> command:</p>
+<p>Now that we have our image, we can include it in our document using
+the <code>\includegraphics</code> command:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2773,7 +2819,7 @@ document using the <code>\includegraphics</code> command:</p>
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>If you just want to see how an image might look in your document
-without having to upload one, you can use the filepath
+without having to find one, you can use the filepath
 <code>example-image</code> in the <code>\includegraphics</code> command.
 This will display a placeholder image in your document that you can
 replace later.</p>
@@ -3001,12 +3047,12 @@ in a later episode.</p>
 </div>
 </div>
 </div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Another package that we can use to work with images in LaTeX is the
 <code>hvfloat</code> package. This package is an alterantive way of
@@ -3293,12 +3339,12 @@ the <code>figure</code> environment.</li>
 </div>
 </div>
 </div>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-06.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -3719,7 +3765,7 @@ the value in the last column is italicized.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3796,7 +3842,7 @@ columns combined?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The table will have 4 columns where the first column does not have a
 column name. The table will have 6 rows. The first row is the column
@@ -3836,7 +3882,7 @@ category “Bread”.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3905,7 +3951,7 @@ what you can do.</a></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3976,7 +4022,7 @@ package can be used to merge rows in a table.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-07.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4138,7 +4184,7 @@ using the <code>\ref</code> command.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>As shown in <span class="math inline">\(\ref{tab:findings}\)</span>
 post-treatment values are higher…</p>
@@ -4217,7 +4263,7 @@ correct. Why or why not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You might have expected the output to be either “As indicated in
 Section 2, …” or “As indicated in Section ???”, but it actually returns
@@ -4275,7 +4321,7 @@ issue. What is it? Why does this happen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The <code>\ref{}</code> command is correctly written, but the
 <code>\ref{}</code> command only returns the number of the label it is
@@ -4306,7 +4352,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-08.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4453,7 +4499,7 @@ backslash(<code>\</code>) here.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Math Mode in LaTeX is not just for LaTeX users! It is also used other
 tools like Jupyter Notebooks, R Markdown and many markdown processors.
@@ -4567,7 +4613,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4601,7 +4647,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
@@ -4652,7 +4698,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4701,7 +4747,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-09.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4944,7 +4990,7 @@ the rest of the document.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -4999,7 +5045,7 @@ LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5051,7 +5097,7 @@ indentation).</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5103,7 +5149,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-11-citations-and-references"><p>Content from <a href="11-citations-and-references.html">Citations and References</a></p>
 <hr>
-<p>Last updated on 2025-05-05 |
+<p>Last updated on 2025-06-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/11-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -5224,10 +5270,8 @@ on your own - an identical example is provided in the
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
 <div id="nav-tabpanel-1-biblatex" class="tab-pane show active" aria-labelledby="nav-tab-1-biblatex" role="tabpanel">
-<p>When using Overleaf, we just need to make sure that the bibliography
-file is present in the project and properly referenced in our document.
-Check to make sure that your <code>main.tex</code> file is in the same
-directory as your <code>sample-references.bib</code> file.</p>
+<p>Check to make sure that your <code>main.tex</code> file is in the
+same directory as your <code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
 import biblatex:</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -5305,10 +5349,10 @@ bibliography. Note, that there is <code>\clear*field*</code>,
 <code>\clear*name*</code> and <code>\clear*list*</code>.</p>
 </div>
 <div id="nav-tabpanel-1-natbib" class="tab-pane" aria-labelledby="nav-tab-1-natbib" role="tabpanel">
-<p>When using Overleaf, we just need to make sure that the bibliography
-file is present in the project and properly referenced in our document.
-Check to make sure that your <code>main.tex</code> file is in the same
-directory as your <code>sample-references.bib</code> file.</p>
+<p>We just need to make sure that the bibliography file is present in
+the project and properly referenced in our document. Check to make sure
+that your <code>main.tex</code> file is in the same directory as your
+<code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
 import natbib:</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -5733,7 +5777,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p><code>content/sections.tex</code></p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -5757,7 +5801,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p><code>content/lists.tex</code></p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -5798,7 +5842,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p><code>content/graphics.tex</code></p>
 <div class="codewrapper sourceCode" id="cb7">
@@ -5876,7 +5920,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
   <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p><code>content/tables.tex</code></p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -5926,7 +5970,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
   <h3 class="accordion-header" id="headingSpoiler5">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <p><code>content/cross-references.tex</code></p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -5960,7 +6004,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler6" aria-expanded="false" aria-controls="collapseSpoiler6">
   <h3 class="accordion-header" id="headingSpoiler6">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
 <div class="accordion-body">
 <p><code>content/mathematics.tex</code></p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -6023,7 +6067,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler7" aria-expanded="false" aria-controls="collapseSpoiler7">
   <h3 class="accordion-header" id="headingSpoiler7">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler7" class="accordion-collapse collapse" aria-labelledby="headingSpoiler7" data-bs-parent="#accordionSpoiler7">
+<div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
 <div class="accordion-body">
 <p><code>content/fonts-and-spacing.tex</code></p>
 <div class="codewrapper sourceCode" id="cb11">
@@ -6040,7 +6084,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler8" aria-expanded="false" aria-controls="collapseSpoiler8">
   <h3 class="accordion-header" id="headingSpoiler8">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler8" class="accordion-collapse collapse" aria-labelledby="headingSpoiler8" data-bs-parent="#accordionSpoiler8">
+<div id="collapseSpoiler8" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler8" aria-labelledby="headingSpoiler8">
 <div class="accordion-body">
 <p><code>content/reference-databases.tex</code></p>
 <div class="codewrapper sourceCode" id="cb12">
@@ -6129,7 +6173,7 @@ called “preamble”:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler9" aria-expanded="false" aria-controls="collapseSpoiler9">
   <h3 class="accordion-header" id="headingSpoiler9">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler9" class="accordion-collapse collapse" aria-labelledby="headingSpoiler9" data-bs-parent="#accordionSpoiler9">
+<div id="collapseSpoiler9" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler9" aria-labelledby="headingSpoiler9">
 <div class="accordion-body">
 <p><code>preamble/packages.tex</code></p>
 <div class="codewrapper sourceCode" id="cb14">
@@ -6154,7 +6198,7 @@ called “preamble”:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler10" aria-expanded="false" aria-controls="collapseSpoiler10">
   <h3 class="accordion-header" id="headingSpoiler10">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler10" class="accordion-collapse collapse" aria-labelledby="headingSpoiler10" data-bs-parent="#accordionSpoiler10">
+<div id="collapseSpoiler10" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler10" aria-labelledby="headingSpoiler10">
 <div class="accordion-body">
 <p><code>preamble/custom-commands.tex</code></p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -6174,7 +6218,7 @@ called “preamble”:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler11" aria-expanded="false" aria-controls="collapseSpoiler11">
   <h3 class="accordion-header" id="headingSpoiler11">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler11" class="accordion-collapse collapse" aria-labelledby="headingSpoiler11" data-bs-parent="#accordionSpoiler11">
+<div id="collapseSpoiler11" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler11" aria-labelledby="headingSpoiler11">
 <div class="accordion-body">
 <p><code>preamble/titlepage.tex</code></p>
 <div class="codewrapper sourceCode" id="cb16">
@@ -6326,7 +6370,7 @@ content in your <code>main.tex</code> document.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6375,7 +6419,7 @@ doing this?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Using an <code>\input</code> command inserts the table contents
 directly into the document as though it was typed, which means that we
@@ -6415,7 +6459,7 @@ break our project up into smaller files?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Output </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>There isn’t a specific correct answer for this challenge, but one
 idea might be something that looks like this:</p>
@@ -6889,7 +6933,7 @@ and I'll forget about whatever was undefined.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The error message indicates that the command <code>\fraction</code>
 is not defined. The correct command should be <code>\frac</code>.</p>
@@ -6933,7 +6977,7 @@ or enter new name. (Default extension: sty)</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The error message indicates that the package <code>booktab</code> is
 not found. The correct package name should be <code>booktabs</code></p>
@@ -6985,7 +7029,7 @@ away. Why is this happening? How can you fix it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The message is indicating that the image is too wide for the page,
 which is causing an “overfull hbox” (overfull horizontal box) error.
@@ -7115,7 +7159,7 @@ the command and see how to do this?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Section 5.1 describes how to set the page size, and section 5.4
 describes how to set the margins.</p>
@@ -7155,7 +7199,7 @@ this? Can you make a simple chess board using this package?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Searching either CTAN or Texdoc for “chess” will return a number of
 packages. We’ll use the <code>chessboard</code> package for our example.
@@ -7414,8 +7458,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/aio.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/aio.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-06-17",
-  "datePublished": "2025-06-17"
+  "dateModified": "2025-06-23",
+  "datePublished": "2025-06-23"
 }
 
   </script><script>

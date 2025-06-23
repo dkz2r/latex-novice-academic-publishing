@@ -206,7 +206,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-introduction.html">1. Introduction to LaTeX and Overleaf</a>
+        <a href="01-introduction.html">1. Introduction to the LaTeX Workflow</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -419,7 +419,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Using Graphics</h1>
-        <p>Last updated on 2025-04-30 |
+        <p>Last updated on 2025-06-23 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/06-using-graphics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -487,34 +487,11 @@ the following examples.</p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="uploading-images-to-overleaf">Uploading Images to Overleaf<a class="anchor" aria-label="anchor" href="#uploading-images-to-overleaf"></a></h3>
-<p>In order to incorporate an image into our document, we’ll need to
-upload it to Overleaf. We can do this by clicking on the “Upload” icon
-on the upper left corner of the Overleaf editor:</p>
-<figure><img src="fig/06-using-graphics/overleaf-upload.PNG" alt="The upload icon in Overleaf." class="figure mx-auto d-block"></figure><p>We can then either drag and drop the image into the upload window or
-click on the “Select files” button to choose the image from our
-computer.</p>
-<p>Once you have uploaded the image, you should see it in the “Files”
-section of the Overleaf editor:</p>
-<figure><img src="fig/06-using-graphics/overleaf-uploaded-image.PNG" alt="The uploaded image in Overleaf." class="figure mx-auto d-block"></figure><div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
-<div class="accordion-body">
-<p>You can also use the “From external URL” option to add an image
-directly from a URL, which would let you use an image from a website
-directly without having to download it first.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p>Place the image in the same directory as your LaTeX document so that
+LaTeX can find it when we compile the document.</p>
 </section><section><h2 class="section-heading" id="including-an-image-in-a-latex-document">Including an Image in a LaTeX Document<a class="anchor" aria-label="anchor" href="#including-an-image-in-a-latex-document"></a></h2>
-<hr class="half-width"><p>Now that we have our image uploaded, we can include it in our
-document using the <code>\includegraphics</code> command:</p>
+<hr class="half-width"><p>Now that we have our image, we can include it in our document using
+the <code>\includegraphics</code> command:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -534,7 +511,7 @@ document using the <code>\includegraphics</code> command:</p>
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>If you just want to see how an image might look in your document
-without having to upload one, you can use the filepath
+without having to find one, you can use the filepath
 <code>example-image</code> in the <code>\includegraphics</code> command.
 This will display a placeholder image in your document that you can
 replace later.</p>
@@ -751,12 +728,12 @@ in a later episode.</p>
 </div>
 </div>
 </div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Another package that we can use to work with images in LaTeX is the
 <code>hvfloat</code> package. This package is an alterantive way of
@@ -1039,12 +1016,12 @@ the <code>figure</code> environment.</li>
 </ul></div>
 </div>
 </div>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="files/document_state/ep-06.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -1114,8 +1091,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/06-using-graphics.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/06-using-graphics.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-04-30",
-  "datePublished": "2025-06-17"
+  "dateModified": "2025-06-23",
+  "datePublished": "2025-06-23"
 }
 
   </script><script>

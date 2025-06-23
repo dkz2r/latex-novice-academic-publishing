@@ -208,6 +208,10 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#software-setup">Software Setup</a></li>
+<li><a href="#windows-installation">Windows Installation</a></li>
+<li><a href="#macos-installation">macOS Installation</a></li>
+<li><a href="#unixlinux-installation">Unix/Linux Installation</a></li>
+<li><a href="#verify-installation">Verify Installation</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -217,7 +221,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-introduction.html">1. Introduction to LaTeX and Overleaf</a>
+        <a href="01-introduction.html">1. Introduction to the LaTeX Workflow</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -404,7 +408,7 @@
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="01-introduction.html" rel="next">Next: Introduction to... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="01-introduction.html" rel="next">Next: Introduction to the... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
@@ -417,31 +421,136 @@ any links that you are not going to use.
  -->
 
 
-      <section id="setup"><p>This workshop will demonstrate how to use <a href="https://www.overleaf.com/" class="external-link">Overleaf</a> in order to write and
-render LaTeX documents. Overleaf is a cloud-based LaTeX editor, meaning
-that you can access it from any computer with an internet connection,
-without the need to install any additional software. As part of the
-preparation for workshop, you should register for an account on
-Overleaf.</p>
+      <section id="setup"><p>This workshop will demonstrate how to use <a href="https://tug.org/texlive/" class="external-link">TeX Live</a> in order to write and
+render LaTeX documents. TeX Live is a comprehensive TeX system that
+includes all of the necessary tools to compile and render LaTeX
+documents. It is available for Windows, macOS, and Linux, and can be
+installed on your local machine.</p>
 <section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
-<hr class="half-width"><p>Optionally, it is possible to write and render LaTeX documents on
-your local machine. You will need both a TeX system and an text editor
-installed. The TeX system is responsible for compiling and rendering the
-LaTeX document, while the text editor is where you will write the LaTeX
-code.</p>
-<p>There are two popular TeX systems: <a href="https://tug.org/texlive/" class="external-link">TeX Live</a> and <a href="https://miktex.org/" class="external-link">MiKTeX</a>. Each of these has it’s own
-advantages and disadvantages. A detailed comparison can be found on <a href="https://www.latex-project.org/get/" class="external-link">The LaTeX Project
-Website</a>.</p>
-<div id="using-a-local-setup" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<hr class="half-width"><p>You can find installation instructions for TeX Live on the <a href="https://tug.org/texlive/" class="external-link">TeX Live website</a>. We include a brief
+overview of the installation on this page for convenience, but we
+recommend that you refer to the official documentation for the most
+up-to-date instructions.</p>
+</section><section><h2 class="section-heading" id="windows-installation">Windows Installation<a class="anchor" aria-label="anchor" href="#windows-installation"></a></h2>
+<hr class="half-width"><p>Visit the <a href="https://tug.org/texlive/windows.html" class="external-link">TeX Live
+website</a> for the latest version of the TeX Live installer for
+Windows. Click the link to “install-tl-windows.exe.”</p>
+<p>The full TeX Live installation is recommended for most users, as it
+includes all of the necessary packages and tools to compile and render
+LaTeX documents. However, if you have limited disk space or a slow
+internet connection, you can install a minimal version of TeX Live that
+includes only the commonly used packages.</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-1">
+  Windows Installation (Full)
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-2">
+  Windows Installation (Minimal)
+  </h3>
+</button>
 </div>
-<div id="using-a-local-setup" class="callout-inner">
-<h3 class="callout-title">Using a Local Setup</h3>
-<div class="callout-content">
-<p>If you would like to use a local setup you are welcome to do so,
-however be aware that our live demonstations and all images in this
-lesson are based on the Overleaf Interface.</p>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-1">
+<p>Run the installer and select “Install” from the dialog that appears,
+then click “Next”.</p>
+<p>Click “Install” to begin the installation process. This will unpack
+some files, before opening a new window called the “Tex Live
+Installer”.</p>
+<p><em>If desired, you can change the installation directory by clicking
+on the “Change” button.</em></p>
+<p>When the installation is complete, you can close the installer
+windows.</p>
+</div>
+<div id="nav-tabpanel-1-2" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-2">
+<p>Run the installer and select “Install” from the dialog that appears,
+then click “Next”.</p>
+<p>Click “Install” to begin the installation process. This will unpack
+some files, before opening a new window called the “Tex Live
+Installer”.</p>
+<p><em>If desired, you can change the installation directory by clicking
+on the “Change” button.</em></p>
+<p>Select “Advanced” to bring up the custom installation options.</p>
+<p>Under “Selection”, select “Change” next “Scheme” and choose “basic
+scheme (plain ad latex)” to install a minimal set of packages.</p>
+<p>Ensure that the “Install TeXworks front end” option is selected.</p>
+<p>When the installation is complete, you can close the installer
+windows.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="macos-installation">macOS Installation<a class="anchor" aria-label="anchor" href="#macos-installation"></a></h2>
+<hr class="half-width"><p>Visit the <a href="https://tug.org/mactex/mactex-download.html" class="external-link">MaxTeX Download
+Page</a> for the latest version of the MacTeX installer for macOS. Click
+the link to download the “MacTeX.pkg” file.</p>
+<p>Double click the downloaded “MacTeX.pkg” file to start the
+installation process. Follow the prompts to complete the installation.
+The default installation options are recommended for most users.</p>
+<p>Open a terminal and type <code>tex --version</code> to verify that
+TeX Live is installed correctly. You should see the version number of
+TeX Live printed to the console.</p>
+<p>Open a terminal and enter <code>pdflatex --version</code> to check
+that the PDFLaTeX compiler is installed correctly. You should see the
+version number of PDFLaTeX printed to the console.</p>
+</section><section><h2 class="section-heading" id="unixlinux-installation">Unix/Linux Installation<a class="anchor" aria-label="anchor" href="#unixlinux-installation"></a></h2>
+<hr class="half-width"><div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">cd</span> /tmp</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">wget</span> https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">zcat</span> <span class="op">&lt;</span> install-tl-unx.tar.gz <span class="kw">|</span> <span class="fu">tar</span> xf <span class="at">-</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="bu">cd</span> install-tl-2<span class="pp">*</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">perl</span> ./install-tl <span class="at">--no-interaction</span> <span class="at">--scheme</span><span class="op">=</span>small</span></code></pre>
+</div>
+<p>This process will download and install TeX Live in the
+<code>/usr/local/texlive</code> directory by default. Note that the
+download may take several hours.</p>
+<p>Finally, prepend
+<code>/usr/local/texlive/2023/bin/x86_64-linux</code> to your
+<code>PATH</code> environment variable in order to use the TeX Live
+binaries from the command line. You can do this by adding the following
+line to your <code>~/.bashrc</code> or <code>~/.bash_profile</code>
+file:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"/usr/local/texlive/2023/bin/x86_64-linux:</span><span class="va">$PATH</span><span class="st">"</span></span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="verify-installation">Verify Installation<a class="anchor" aria-label="anchor" href="#verify-installation"></a></h2>
+<hr class="half-width"><p>Open a command prompt or terminal and type <code>tex --version</code>
+to verify that TeX Live is installed correctly. You should see the
+version number of TeX Live printed to the console.</p>
+<p>Open a command prompt or terminal and enter
+<code>pdflatex --version</code> to check that the PDFLaTeX compiler is
+installed correctly. You should see the version number of PDFLaTeX
+printed to the console.</p>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-1">
+  TeXworks
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-1">
+<p>Open TeXworks, which is a simple LaTeX editor that comes with TeX
+Live and paste the following code into a new document:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>Hello, <span class="fu">\LaTeX</span>!</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>Then click on the green “Typeset” button (or press
+<code>Ctrl+T</code>) to compile the document. If you see a PDF preview
+of the document with the text “Hello, LaTeX!” then everything is working
+correctly.</p>
 </div>
 </div>
 </div>
@@ -454,7 +563,7 @@ any links that you are not going to use.
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="01-introduction.html" rel="next">Next: Introduction to... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="01-introduction.html" rel="next">Next: Introduction to the... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->
@@ -498,8 +607,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/index.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/index.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-06-17",
-  "datePublished": "2025-06-17"
+  "dateModified": "2025-06-23",
+  "datePublished": "2025-06-23"
 }
 
   </script><script>
