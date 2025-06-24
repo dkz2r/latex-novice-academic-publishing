@@ -206,7 +206,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01-introduction.html">1. Introduction to the LaTeX Workflow</a>
+        <a href="01-introduction.html">1. Introduction to LaTeX and Overleaf</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -414,7 +414,7 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/01-introduction.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Introduction to the
+          Previous: Introduction to
         </a>
         <a class="chapter-link float-end" href="../instructor/03-logical-structure.html" rel="next">
           Next: The Structure of a...
@@ -423,7 +423,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>File Structure</h1>
-        <p>Last updated on 2025-06-23 |
+        <p>Last updated on 2025-06-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/02-document-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -455,7 +455,7 @@ rendered?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Become familiar with the basic structure of a LaTeX document.</li>
-<li>Use TeXworks to render a LaTeX document into a PDF.</li>
+<li>Use Overleaf to render a LaTeX document into a PDF.</li>
 <li>Identify how to add special characters to a LaTeX document.</li>
 </ul></div>
 </div>
@@ -463,9 +463,10 @@ rendered?</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="editing-the-document">Editing the Document<a class="anchor" aria-label="anchor" href="#editing-the-document"></a></h2>
-<hr class="half-width"><p>We can edit the <code>main.tex</code> file with TeXworks (or any text
-editor of your choice). Let’s start by creating a simple LaTeX
-document:</p>
+<hr class="half-width"><p>We can edit the <code>main.tex</code> file by clicking on it in the
+<em>File Navigator</em>. This will open the file in the text editor.
+Let’s edit some of the provided code to create our first LaTeX
+document.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -477,8 +478,7 @@ document:</p>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>This is my first LaTeX document.</span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<figure><img src="../fig/02-document-structure/document-getting-started.PNG" alt="Starting Document" class="figure mx-auto d-block"><div class="figcaption">Starting Document</div>
-</figure><div id="callout1" class="callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -554,38 +554,24 @@ a reference for yourself in the future!</p>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>This is my first LaTeX document.</span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<figure><img src="../fig/02-document-structure/document-comments.PNG" alt="Document with Comments" class="figure mx-auto d-block"><div class="figcaption">Document with Comments</div>
-</figure><div id="callout3" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
-<div class="callout-content">
-<p>Note that the comments are displayed in a different color in the text
-editor. This is called “syntax highlighting”. Not all text editors will
-do this by default, but you can often add syntax highlighting to your
-text editor of choice.</p>
-</div>
-</div>
-</div>
 <p>Going forward, the examples we provide will not always include
 comments, but you should add them to your document as you see fit.</p>
 </section><section><h2 class="section-heading" id="rendering-the-document">Rendering the Document<a class="anchor" aria-label="anchor" href="#rendering-the-document"></a></h2>
-<hr class="half-width"><p>As with our example from the previous episode, we can render our
-document by clicking on the large green “Typeset” button in TeXworks, or
-by running the command <code>pdflatex main.tex</code> in our
-terminal/consoloe.</p>
-<div id="callout4" class="callout">
+<hr class="half-width"><p>In your Overleaf project, click the green <em>Recompile</em> button
+to render the document. This will generate a preview of the document in
+the right-hand pane.</p>
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div class="callout-inner">
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
-<p>When running the command in the terminal, make sure you have saved
-your document first, as the command will only render the last saved
-version of the document.</p>
+<p>There are many shortcut keyboard commands that you can use to speed
+up your work in Overleaf. When we want to render the document, we can
+use <code>Ctrl + S</code> or <code>Ctrl + Enter</code> (Windows) or
+<code>Cmd + S</code> or <code>Cmd + Enter</code> (Mac). This will save
+the document and render it in one step.</p>
 </div>
 </div>
 </div>
@@ -626,7 +612,7 @@ them with a backslash. For example,</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>What about the <code>\</code> character?</p>
 <p>The <code>\</code> character is used to escape other characters in
@@ -637,7 +623,7 @@ document.</p>
 </div>
 </div>
 </div>
-<div id="callout5" class="callout">
+<div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -676,69 +662,33 @@ suggestion of what the error might be.</p>
 like. Let’s introduce a typo into the <code>documentclass</code> command
 by changing it to <code>documnetclass</code>. When we recompile the
 document, we can see our errors:</p>
-<div class="section level3">
-<h3 id="errors-in-the-texworks-editor">Errors in THe TeXworks Editor<a class="anchor" aria-label="anchor" href="#errors-in-the-texworks-editor"></a></h3>
 <figure><img src="../fig/02-document-structure/document-errors.png" alt="Error in the LaTeX document." class="figure mx-auto d-block"><div class="figcaption">Error in the LaTeX document</div>
-</figure><p>The greens triangle we clicked on is now a red octagon, indicating
-that there is an error. There’s also now a second tab that we can see in
-the editor pane now, called “Errors, warnings, badboxes”. Clicking on
-this tab shows us something like this:</p>
-<figure><img src="../fig/02-document-structure/document-errors-error-tab.png" alt="Error in the LaTeX document" class="figure mx-auto d-block"><div class="figcaption">Error in the LaTeX document</div>
-</figure><p>This error makes sense, given the typo we introduced. LaTeX is
-telling us that it has encountered a command that it doesn’t recognize,
-which is the <code>documnetclass</code> command. The error message also
-tells us that the error is on line 2 (<code>l.2</code>) of the
-<code>main.tex</code> file, which is where we made our typo.</p>
-<p>Back in the “Console Output” tab, there’s a “?”, indicating that the
-console is waiting for us to give it some input.</p>
-<div id="callout6" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
-<div class="callout-content">
-<p>Commands in the Console Output tab: - Type <return> to proceed, - S
-to scroll future error messages, - R to run without stopping - Q to run
-quietly, - I to insert something - E to edit your file - 1 or … or 9 to
-ignore the next 1 to 9 tokens of input, - H for help - X to quit</return></p>
-</div>
-</div>
-</div>
-<p>Let’s type <return> to proceed. You should see the follow message in
-the console output:</return></p>
-<pre><code>! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H &lt;return&gt;  for immediate help.
- ...
-
-l.2 \documentclass{article}</code></pre>
-<p>Keep hitting <return> to proceed through the error messages. You will
-see a series of error messages as a result of our initial error.</return></p>
-</div>
-<div class="section level3">
-<h3 id="errors-in-the-terminal">Errors in the Terminal<a class="anchor" aria-label="anchor" href="#errors-in-the-terminal"></a></h3>
-<p>If we run the command <code>pdflatex main.tex</code> in the terminal,
-we will see an error message:</p>
-<figure><img src="../fig/02-document-structure/document-errors-terminal.png" alt="Error in the terminal." class="figure mx-auto d-block"><div class="figcaption">Error in the terminal</div>
-</figure><p>The text in the terminal tells us that there is an error in the
-<code>main.tex</code> file on line 2, and that the command
-<code>\documnetclass</code> is undefined.</p>
-<p>Keep hitting <return> to proceed through the error messages. You will
-see a series of error messages as a result of our initial error.</return></p>
-<p>Once we reach the end of the error messages, we can also open the
-<code>main.log</code> file in the project to see a full log of the
-errors and warnings that were generated during the compilation.</p>
-</div>
+</figure><p>And if we click on the “Logs and output files” button, we can see a
+more detailed error message:</p>
+<figure><img src="../fig/02-document-structure/document-error-message.png" alt="Error message in the LaTeX document." class="figure mx-auto d-block"><div class="figcaption">Error message in the LaTeX document</div>
+</figure><p>We can see similar messages when hovering over the small red circle
+next to the error in the text editor:</p>
+<figure><img src="../fig/02-document-structure/document-error-hover.png" alt="Error message on Hover." class="figure mx-auto d-block"><div class="figcaption">Error message on Hover</div>
+</figure><p>We’ll look more into how we can read and fix errors <a href="../14-error-handling.html">in a later episode</a>.</p>
 <div class="section level3">
 <h3 id="fixing-errors">Fixing Errors<a class="anchor" aria-label="anchor" href="#fixing-errors"></a></h3>
-<p>In general, the first error message you see is the most important one
-to fix. In this case, all of the subsequent errors are related to the
-initial error, which is that the <code>\documentclass</code> command is
-undefined. Once we fix the typo in the <code>\documentclass</code>
-command, the document will compile successfully.</p>
-<div id="callout7" class="callout">
+<p>Our tiny typo seems to have caused quite a number of issues! This can
+happen, the important thing is to read the error message and try to
+understand what it’s telling you. In this case it says:</p>
+<pre><code>Undefined control sequence. ./main.tex, 2
+
+The compiler is having trouble understanding a command you have used. Check that the command is
+spelled correctly. If the command is part of a package, make sure you have included the package
+in your preamble using \usepackage{...}.</code></pre>
+<p>In order to diagnose the issue, we can first look at the name of the
+message. In this case, it’s <code>Undefined control sequence</code>.
+This means that LaTeX doesn’t recognize the command we’ve used.
+Specifically, it says, this undefined sequence is on line 2 of the
+<code>main.tex</code> file. We can then look at the line and see that
+we’ve made a typo in the <code>\documentclass</code> command.</p>
+<p>As soon as we fix this typo and recompile our document, we should see
+the preview pane update and all of the remaining errors disappear.</p>
+<div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -766,8 +716,7 @@ subsequent errors.</p>
 <div class="callout-content">
 <p>There is an error in the following LaTeX document. Can you find
 it?</p>
-<p>(Feel to make a main.tex file in a new project folder to test this
-out!)</p>
+<p>(Feel to make a new project in Overleaf to test this out!)</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -791,7 +740,7 @@ out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Each section of a LaTeX document must be enclosed in a pair of
 <code>\begin{...}</code> and <code>\end{...}</code>. This document is
@@ -817,7 +766,7 @@ missing the <code>\begin{document}</code> command.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>We need to use escapes before each of the special characters. The
 following LaTeX code will display the text correctly:</p>
@@ -843,8 +792,8 @@ lines are important to create paragraphs. However, there is also a LaTeX
 command called <code>\par</code> which might be of help for us. Consider
 the LaTeX code below. Can you already guess which of these options
 prints <em>Hello World!</em> and <em>This is my first LaTeX
-document.</em> in two separate lines? (Feel to make a main.tex file in a
-new project folder to test this out!)</p>
+document.</em> in two separate lines? (Feel to make a new project in
+Overleaf to test this out!)</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -878,7 +827,7 @@ new project folder to test this out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The command <code>\par</code> initiates a new paragraph for us even
 if we write text in just one line (see Option C). Solely, Option B out
@@ -910,7 +859,7 @@ Even more, I can write # and ^ correctly using LaTeX.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Answer </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>We need to use <code>\par</code> to initiate a new paragraph without
 using a new line of code. Moreover, we need to use escapes before each
@@ -932,7 +881,8 @@ text correctly:</p>
 <div class="callout-inner">
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>The <code>%</code> character is used to add comments to a LaTeX
+<ul><li>We can use Overleaf to edit and render LaTeX documents.</li>
+<li>The <code>%</code> character is used to add comments to a LaTeX
 document.</li>
 <li>LaTeX documents are a mixture of text and commands.</li>
 <li>Commands start with a backslash <code>\</code> and sometimes have
@@ -947,7 +897,7 @@ or hovering over the red circle in the text editor.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
 <div class="codewrapper sourceCode" id="cb11">
@@ -981,7 +931,7 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/01-introduction.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Introduction to the
+          Previous: Introduction to
         </a>
         <a class="chapter-link float-end" href="../instructor/03-logical-structure.html" rel="next">
           Next: The Structure of a...
@@ -1030,8 +980,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/02-document-structure.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/02-document-structure.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-06-23",
-  "datePublished": "2025-06-23"
+  "dateModified": "2025-06-24",
+  "datePublished": "2025-06-24"
 }
 
   </script><script>
