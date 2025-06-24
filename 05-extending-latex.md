@@ -194,18 +194,6 @@ once:
 ![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in
 blue.'}
 
-::: callout
-
-If the `xcolor` package is not installed, you can install it using your LaTeX package manager. For
-Tex Live, you can use the `tlmgr` command to install the package:
-
-```bash
-tlmgr update --self --all # Optional: update all packages
-tlmgr install xcolor
-```
-
-:::
-
 ## Defining Multiple Commands
 
 We can define as many commands as we like in the preamble of our document. Let's add another one
