@@ -244,6 +244,8 @@ Now that we have our filtered data, we can also plot it!. We'll need a new packa
 Now we can use the `\DTLBarChart` command to create a bar chart from our data:
 
 ```latex
+\subsection{Plotting Data}
+
 \DTLbarchart
 {
   variable=\datavalue,
@@ -253,8 +255,23 @@ Now we can use the `\DTLBarChart` command to create a bar chart from our data:
 }
 ```
 
-Ok, but that's missing a fair bit of information. We can add some options to the command to make
-it look better:
+::: callout
+
+If you get an error about `LaTeX Error: File `tikz.sty' not found.`, you'll need to install an
+additional package. You can do this with the following command:
+
+```bash
+tlmgr install pgf
+```
+
+:::
+
+Your document should now look something like this:
+
+![](fig/16-loading-and-manipulating-data/plain-bars.PNG
+
+Ok, not very exciting. And that's missing a fair bit of information. We can add some options to
+the command to make it look better:
 
 ```latex
 \DTLbarchart
@@ -268,6 +285,10 @@ it look better:
   \country=country
 }
 ```
+
+It should now look something like this:
+
+![](fig/16-loading-and-manipulating-data/bars-with-annotations.PNG)
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -315,10 +336,13 @@ command like this:
 
 How might you display the results in a table? See if you can get the output to look like this:
 
-IMAGE HERE
+![](fig/16-loading-and-manipulating-data/challenge-tabular-from-database.PNG)
 
 Refer back to the [Episode on Tables](/08-tables.md) to review the
 syntax for creating tables in LaTeX.
+
+NOTE: There is an issue with `datatool` and `/bottomrule` in tables - for now, skip the
+`bottomrule` command in your table. (You'll get an error about "misplaced \noalign".)
 
 :::::::::::::::::::::::: solution
 
@@ -339,7 +363,6 @@ syntax for creating tables in LaTeX.
 }{
   \country & \year & \datavalue\\
 }%
-\bottomrule
 \end{tabular}
 ```
 
