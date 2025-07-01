@@ -89,7 +89,7 @@ the database as an argument and displays the data in a table.
 
 Your document should now look something like this:
 
-![Displaying the database](fig/16-loading-and-manipulating-data/displaying-database.PNG)
+![](fig/16-loading-and-manipulating-data/displaying-database.PNG)
 
 We can see the data now, but we have way too much data to show in a single table. Let's filter
 the data to only show the GDP per capita data.
@@ -136,7 +136,7 @@ variable.
 
 Your filtered data should look something like this:
 
-![Filtered data](fig/16-loading-and-manipulating-data/filtering-database.PNG)
+![](fig/16-loading-and-manipulating-data/filtering-database.PNG)
 
 ## Data Aggregation
 
@@ -230,7 +230,7 @@ We can now display the new database using the `\DTLdisplaydb` command:
 
 Your document should now look something like this:
 
-![Filtered database](fig/16-loading-and-manipulating-data/new-filtered-database.PNG)
+![](fig/16-loading-and-manipulating-data/new-filtered-database.PNG)
 
 ## Plotting Data
 
