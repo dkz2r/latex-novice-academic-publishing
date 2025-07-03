@@ -92,28 +92,30 @@ Note the `\\` used to create line breaks in the address - we'll get back to line
 
 ## Creating a Presentation
 
-The `slides` document class was developed for making physical slides in the mid-1980s, and so
+The `beamer` document class was developed for making physical slides in the mid-1980s, and so
 doesn't have any of the features we might use in modern presentations. Let's create a simple
-presentation using the `slides` document class. Start another new document called "slides.tex".
+presentation using the `beamer` document class. Start another new document called "slides.tex".
 
 ```latex
-\documentclass{slides}
+\documentclass{beamer}
 
 \begin{document}
 
-\begin{slide}
-The slides document class is a good starting point for creating a presentation.
-\end{slide}
+\begin{frame}
+The beamer document class is a good starting point for creating a presentation.
+\end{frame}
 
-\begin{slide}
+\begin{frame}
 Being entirely text-based, it's not as powerful or user-friendly as modern presentation software.
-\end{slide}
+\end{frame}
 
 \end{document}
 ```
 
 When you compile this document, you should end up with a document that has two pages, each with the
 text of each slide centered in the middle of the page.
+
+![](fig/05-document-classes/beamer_example.PNG)
 
 ## Function-rich Classes
 
