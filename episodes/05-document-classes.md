@@ -92,9 +92,17 @@ Note the `\\` used to create line breaks in the address - we'll get back to line
 
 ## Creating a Presentation
 
-The `beamer` document class was developed for making physical slides in the mid-1980s, and so
-doesn't have any of the features we might use in modern presentations. Let's create a simple
-presentation using the `beamer` document class. Start another new document called "slides.tex".
+Base LaTeX comes with the `slides` document class, which is a very simple class for creating
+slide presentations. This class is very basic and doesn't have many features, but a more modern
+implementation of a presentation class is `beamer`.
+
+The `beamer` document class is text based, and so doesn't have the same level of interactivity
+as modern presentation software like PowerPoint or Google Slides. However, being text-based
+does allow the usage of version control systems like Git to track changes in the
+presentation, and it can be compiled to PDF for easy sharing.
+
+Let's create a simple presentation using the `beamer` document class. Start another new document
+called "slides.tex".
 
 ```latex
 \documentclass{beamer}
