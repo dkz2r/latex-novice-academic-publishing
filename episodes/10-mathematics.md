@@ -1,7 +1,7 @@
 ---
 title: 'Mathematics'
-teaching: 10
-exercises: 2
+teaching: 15
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -219,7 +219,7 @@ The code is missing the `\frac` command to create a fraction. The correct code s
 Add the following equation to your document: E = mc^2.
 For this, use the `amsmath` package and a numbered `align` environment.
 Label the equation using `\label`. Then, use the `\ref` command to refer to the equation in the text.
-You may find the following LaTeX template helpful: 
+You may find the following LaTeX template helpful:
 
 ```latex
 \documentclass{article}

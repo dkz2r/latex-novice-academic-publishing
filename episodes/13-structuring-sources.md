@@ -1,7 +1,7 @@
 ---
 title: 'Structuring Sources'
-teaching: 10
-exercises: 2
+teaching: 20
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

@@ -1,7 +1,7 @@
 ---
 title: 'Tables'
-teaching: 10
-exercises: 2
+teaching: 20
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

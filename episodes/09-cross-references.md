@@ -1,7 +1,7 @@
 ---
 title: 'Adding Cross References'
 teaching: 10
-exercises: 2
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
