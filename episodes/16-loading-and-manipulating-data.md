@@ -151,7 +151,7 @@ summary statistic. For this, `datatool` provides some usefule commands:
 We can use these commands to calculate the sum, maximum, mean, and standard deviation of a variable
 for a specific set of keys. The syntax is (Almost!) identical to the `\DTLforeach` command.
 
-::: callout
+::: caution
 
 Note that compared to the `\DTLforeach` command, the second and third arguments are switched. In
 this command, the second argument is the list of variables and the third argument is the database
