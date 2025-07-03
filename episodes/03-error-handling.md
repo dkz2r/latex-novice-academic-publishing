@@ -100,7 +100,7 @@ to see a full log of the errors and warnings that were generated during the comp
 
 ::: callout
 
-Commands in the Console Output tab:
+Commands in the console:
 
 - Type <return> to proceed,
 - S to scroll future error messages,
