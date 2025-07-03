@@ -232,7 +232,7 @@ called "beamer.tex" and copy the following code as a template into it:
 %Information to be included in the title page:
 \title{Sample title}
 \author{Anonymous}
-\institute{Overleaf}
+\institute{My Institution}
 \date{2021}
 
 \begin{document}
