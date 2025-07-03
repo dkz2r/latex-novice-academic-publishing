@@ -1,7 +1,7 @@
 ---
 title: 'Using Graphics'
-teaching: 10
-exercises: 2
+teaching: 30
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

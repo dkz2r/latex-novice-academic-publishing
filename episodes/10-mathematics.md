@@ -1,7 +1,7 @@
 ---
 title: 'Mathematics'
-teaching: 10
-exercises: 2
+teaching: 15
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -54,6 +54,13 @@ There are a lot of symbols and specialist math mode commands available in LaTeX:
 - Sums and integrals: `\sum`, `\int`, `\oint`, etc.
 - Brackets: `()`, `[]`, `{}`, `\langle`, `\rangle`, etc.
 
+::: callout
+
+You can also enter inline math mode using the `\(...\)` notation, which is equivalent to using
+the dollar sign notation.
+
+:::
+
 ### Display Math Mode
 
 Display math mode uses the exact same commands as inline math mode, but it is centered by default
@@ -70,20 +77,11 @@ a backslash(`\`) here.
 ```latex
 \subsection{Display Math Mode}
 
-The Fourier Transform is defined as:
+Einstein's famous equation is:
 
 \[
-\hat{f}(\xi) = \int_{-\infty}^\infty f(x) e^{-2\pi i \xi x} \, dx
+E = mc^2
 \]
-
-Where:
-
-\begin{itemize}
-  \item \( f(x) \) is the function we are transforming,
-  \item \( \hat{f}(\xi) \) is the Fourier Transform of \( f(x) \),
-  \item \( \xi \) is the frequency variable,
-  \item \( i \) is the imaginary unit.
-\end{itemize}
 ```
 
 ::: spoiler
@@ -119,7 +117,25 @@ section:
 The quadratic formula is given in Equation~\ref{eq:quadratic}.
 ```
 
-## The `amsmath` Package
+### Captions for Equations
+
+We can also add captions to equations, just like we do for figures and tables. This is done by
+wrapping the equation in a `figure` environment and using the `\caption{}` command:
+
+```latex
+\subsection{Captions for Equations}
+
+\begin{figure}[h]
+\centering
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\label{eq:quadratic}
+\end{equation}
+\caption{The quadratic equation}
+\end{figure}
+```
+
+## The `amsmath` Package (Optional)
 
 Mathematical notation is very rich, and the tools in the LaTeX kernel are sometimes not enough to
 cover everything. The `amsmath` package extends the capabilities of LaTeX for more complex
@@ -219,7 +235,7 @@ The code is missing the `\frac` command to create a fraction. The correct code s
 Add the following equation to your document: E = mc^2.
 For this, use the `amsmath` package and a numbered `align` environment.
 Label the equation using `\label`. Then, use the `\ref` command to refer to the equation in the text.
-You may find the following LaTeX template helpful: 
+You may find the following LaTeX template helpful:
 
 ```latex
 \documentclass{article}

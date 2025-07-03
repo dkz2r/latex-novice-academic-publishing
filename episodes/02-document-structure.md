@@ -1,7 +1,7 @@
 ---
 title: 'File Structure'
 teaching: 10
-exercises: 2
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

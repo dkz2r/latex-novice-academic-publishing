@@ -1,7 +1,7 @@
 ---
 title: 'Tables'
-teaching: 10
-exercises: 2
+teaching: 20
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -361,7 +361,7 @@ environment.*
 
 ## Challenge 3: Adding merged rows to your table.
 
-Consider again the LaTeX code for the table in challenge 3.
+Consider again the LaTeX code for the table in challenge 2.
 Add four more rows to this table that contain information about the following four sorts of bread:
 
 - Brioche, 3, 3.00
@@ -414,6 +414,7 @@ What about changing the color of the text in the summary row? Can we make the ro
 alternate colors?
 
 A few things that will help you:
+
 - We need to import the `xcolor` package in the preamble of our document.
 - The `xcolor` package doesn't automatically support coloring tables, so we need to add the `table`
   option to the package import.

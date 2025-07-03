@@ -1,7 +1,7 @@
 ---
 title: 'Fonts and Spacing'
-teaching: 10
-exercises: 2
+teaching: 25
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -193,7 +193,7 @@ You can use the commands `\vspace` and `\vfill` to make fill blank space between
 \begin{document}
 
 \begin{titlepage}
-    
+
 
 
 

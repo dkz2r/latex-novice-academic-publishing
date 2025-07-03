@@ -1,7 +1,7 @@
 ---
 title: 'Adding Cross References'
 teaching: 10
-exercises: 2
+exercises: 15
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -38,8 +38,9 @@ mark it, and the `\ref{}` command to refer to it. For example:
 In this section, we introduce two new concepts:
 
 \begin{tabular}{cp{9cm}}
-  Command & Description \\
   \toprule
+  Command & Description \\
+  \midrule
   \kw{label} & Marks a spot in the document \\
   \kw{ref} & Refers to a marked spot in the document \\
   \bottomrule
@@ -55,6 +56,15 @@ We can likewise refer to the table like this: \ref{tab:cross-reference-commands}
 The `sec` and `tab` prefixes in the `\label{}` command are not required, but they help to identify
 the type of element being labeled. This is especially useful when you have many labels in your
 document.
+
+:::
+
+::: caution
+
+When you hit compile, you may notice that the `\ref{}` command does not return the correct
+references and instead shows question marks (??). This is because LaTeX needs to compile the
+document twice. Once to gather all the labels and references, and a second time to resolve them.
+If you see question marks, just compile the document again, and it should work correctly.
 
 :::
 
@@ -75,14 +85,29 @@ the appropriate name. For more details about this, refer to the references secti
 
 :::
 
+::: callout
+
+If you want the references to be clickable in the PDF, you can use the `hyperref` package:
+
+```latex
+\usepackage{hyperref}
+```
+
+This package automatically makes all references clickable, allowing you to jump to the referenced
+element in the PDF document. However be aware that this can sometimes cause issues with other
+packages, so it's best to load it last in your preamble.
+
+:::
+
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: Add a figure, then reference it.
 
-In your LaTeX document, include the image `example-image.PNG` and cross-reference it in the text. Make sure the figure has a caption and is labeled and centered properly.
-Use the `\includegraphics` command to add the image and wrap it in a `figure` environment.
+In your LaTeX document, include the image `example-image.PNG` and cross-reference it in the text.
+Make sure the figure has a caption and is labeled and centered properly. Use the
+`\includegraphics` command to add the image and wrap it in a `figure` environment.
 Then, refer to it in the text using the `\ref` command.
 
 You may find the following LaTeX template helpful.

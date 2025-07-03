@@ -1,7 +1,7 @@
 ---
 title: 'The Structure of a Document'
-teaching: 10
-exercises: 2
+teaching: 15
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -144,6 +144,28 @@ you can use the following LaTeX code:
   \item[(c)] Item 3
 \end{itemize}
 
+\end{document}
+```
+
+:::
+
+::: callout
+
+It's also possible to create a list with roman numerals automatically with the `enumitem` package:
+```latex
+\documentclass{article}
+\usepackage{enumitem} %<-- package for lists https://texdoc.org/serve/enumitem/
+% \setlist{label=\Roman*} %<-- globally defining the enumeration system
+\begin{document}
+\begin{enumerate}[
+  label=\emph{\roman*}), %<-- change labeling system locally (or \Roman)
+  leftmargin=5cm, %<-- change indent on the left
+]
+  \item First
+  \item Second
+  \item Third
+  \item Fourth
+\end{enumerate}
 \end{document}
 ```
 
