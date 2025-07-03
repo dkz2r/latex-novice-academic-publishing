@@ -1,7 +1,7 @@
 ---
 title: 'Error Handling'
-teaching: 10
-exercises: 2
+teaching: 15
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -65,21 +65,6 @@ l.2 \documnetclass
 Back in the "Console Output" tab, there's a "?", indicating that the console is waiting for us to
 give it some input.
 
-::: callout
-
-Commands in the Console Output tab:
-- Type <return> to proceed,
-- S to scroll future error messages,
-- R to run without stopping
-- Q to run quietly,
-- I to insert something
-- E to edit your file
-- 1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-- H for help
--	X to quit
-
-:::
-
 Let's type <return> in the input box to proceed. You should see the follow message in the console
 output:
 
@@ -110,6 +95,22 @@ messages as a result of our initial error.
 
 Once we reach the end of the error messages, we can also open the `main.log` file in the project
 to see a full log of the errors and warnings that were generated during the compilation.
+
+:::
+
+::: callout
+
+Commands in the console:
+
+- Type <return> to proceed,
+- S to scroll future error messages,
+- R to run without stopping
+- Q to run quietly,
+- I to insert something
+- E to edit your file
+- 1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+- H for help
+-	X to quit
 
 :::
 

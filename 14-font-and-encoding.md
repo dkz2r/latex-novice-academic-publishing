@@ -1,7 +1,7 @@
 ---
 title: 'Fonts and Encodings'
-teaching: 10
-exercises: 2
+teaching: 5
+exercises: 5
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions

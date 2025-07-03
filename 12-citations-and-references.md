@@ -1,7 +1,7 @@
 ---
 title: 'Citations and References'
-teaching: 10
-exercises: 2
+teaching: 20
+exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -104,10 +104,11 @@ And... nothing? Right, because we haven’t cited anything in our document yet. 
 ```latex
 \section{Reference Databases}
 
-One of the best features of LaTeX when writing academic documents is the ability to easily and
-confidently \kw{cite references}.
+We can \kw{cite references} from our bibliography.
 
-We can cite the article by Thomas (e.g. with `\textbackslash autocite\{Thomas2008\}`) and it will show up in the references.
+We can cite the article by Thomas (e.g. with `\textbackslash autocite\{Thomas2008\}`).
+
+```
 
 You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference
 now appears at the end of the document. \cmd{\textbackslash autocite} is a command that automatically chooses the
@@ -115,14 +116,11 @@ citation style for you.
 
 Some additional commands that are available in  `biblatex`:
 
-\begin{itemize}
-    \item `\textbackslash cite\{key\}` or `\textbackslash cite\{key1, key2\}`: Cite the reference with the given key
-    \item `\textbackslash cites\{key1\}\{key2\}\{key-n\}`: Cite multiple references.
-    \item `\textbackslash usepackage\{\}\textbackslash parentcite\{key\}`: Cite the parent reference of the given key.
-    \item `\textbackslash autocite\{key\}`: Automatically choose the citation style.
-    \item `\textbackslash smartcite\{key\}`: Automatically choose the citation style, but with more control.
-    \item `\textbackslash footcite\{key\}`: Cite the reference in a footnote.
-\end{itemize}
+- `\cite{key}` or `\cite{key1, key2}`: Cite the reference with the given key
+- `\usepackage{}\parentcite{key}`: Cite the parent reference of the given key.
+- `\autocite{key}`: Automatically choose the citation style.
+- `\smartcite{key}`: Automatically choose the citation style, but with more control.
+- `\footcite{key}`: Cite the reference in a footnote.
 
 A plain citation looks like this \cite{Graham1995}, while multiple citations look like this
 \cites{Graham1995}[see][p. 42]{Thomas2008}. We already used autocite, but we can also use the
@@ -186,10 +184,9 @@ And... nothing? Right, because we haven't cited anything in our document yet. Le
 ```latex
 \section{Reference Databases}
 
-One of the best features of LaTeX when writing academic documents is the ability to easily and
-confidently \kw{cite references}.
+We can \kw{cite references} from our bibliography.
 
-We can cite the article by Thomas \citep{Thomas2008} and it will show up in the references.
+We can cite the article by Thomas \citep{Thomas2008}.
 ```
 
 You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference
