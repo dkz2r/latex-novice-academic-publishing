@@ -120,6 +120,13 @@ of this project, we'll create a folder called "content" and put our section file
 
 ### Separating Our Sections
 
+::: instructor
+
+You'll only need to demonstrate a couple of these files, as the procedure is the same. The first
+challenge in this section is for the attendees to restructure the files you don't in the demo.
+
+:::
+
 Let's make files in our "content" directory for each of our sections:
 
 - `content/sections.tex`
@@ -175,8 +182,6 @@ Unordered lists are just a series of items preceded by a marker.
   \item Item 2
   \item Item 3
 \end{itemize}
-
-\end{document}
 ```
 :::
 
@@ -543,7 +548,17 @@ document starts.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Refactor Your Document with Multiple Files
+## Challenge 1: Refactor the rest of the document
+
+We started with a couple of files, but see if you can refactor the rest of the document.
+
+::: solution
+
+The soultion to this challenge is in the section above.
+
+:::
+
+## Challenge 2: Refactor Your Document with Multiple Files
 
 Refactor the following LaTeX document to use multiple files.
 
@@ -629,7 +644,7 @@ Refactor the following LaTeX document to use multiple files.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: Why did we do this?
+## Challenge 3: Why did we do this?
 
 In our `content/tables.tex` file, we have a bunch of `\input{}` commands for the tables instead of
 writing the tables directly in the file. Why did we do this? What is the benefit of doing this?
@@ -651,7 +666,7 @@ all of the documents in which we use it.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 3: Restructuring a larger document?
+## Challenge 4: Restructuring a larger document?
 
 Let's make a new project called "structuring-sources". Add the following files to your project:
 
