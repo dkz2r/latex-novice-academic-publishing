@@ -32,8 +32,10 @@ the author(s) and ratings from other users.
 
 ## Texdoc
 
-[Texdoc](texdoc.org) provides a modern interface for looking up package documentation. Much like
+[Texdoc](https://texdoc.org) provides a modern interface for looking up package documentation. Much like
 CTAN, you can search for packages and view their documentation.
+
+![](fig/15-documentation-and-help/texdoc-screenshot.PNG){alt='Texdoc landing page.'}
 
 ::: callout
 
