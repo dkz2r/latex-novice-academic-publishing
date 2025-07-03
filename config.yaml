@@ -67,18 +67,18 @@ contact: 'hartman@itc.rwth-aachen.de'
 episodes:
 - 01-introduction.md
 - 02-document-structure.md
-- 03-logical-structure.md
-- 04-document-classes.md
-- 05-extending-latex.md
-- 06-using-graphics.md
-- 07-tables.md
-- 08-cross-references.md
-- 09-mathematics.md
-- 10-text-and-spacing.md
-- 11-citations-and-references.md
-- 12-structuring-sources.md
-- 13-font-and-encoding.md
-- 14-error-handling.md
+- 03-error-handling.md
+- 04-logical-structure.md
+- 05-document-classes.md
+- 06-extending-latex.md
+- 07-using-graphics.md
+- 08-tables.md
+- 09-cross-references.md
+- 10-mathematics.md
+- 11-text-and-spacing.md
+- 12-citations-and-references.md
+- 13-structuring-sources.md
+- 14-font-and-encoding.md
 - 15-documentation-and-finding-help.md
 - 16-loading-and-manipulating-data.md
 
