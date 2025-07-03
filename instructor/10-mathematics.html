@@ -118,11 +118,11 @@
   An Introduction to Using LaTeX for Academic Publishing
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 56%" class="percentage">
-    56%
+<aside class="col-md-12 lesson-progress"><div style="width: 59%" class="percentage">
+    59%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 56%" aria-valuenow="56" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 59%" aria-valuenow="59" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -298,7 +298,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#math-mode">Math Mode</a></li>
-<li><a href="#the-amsmath-package">The <code>amsmath</code> Package</a></li>
+<li><a href="#the-amsmath-package-optional">The <code>amsmath</code> Package (Optional)</a></li>
 <li><a href="#challenges">Challenges</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -424,7 +424,7 @@
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -501,14 +501,26 @@ available in LaTeX:</p>
 <code>\oint</code>, etc.</li>
 <li>Brackets: <code>()</code>, <code>[]</code>, <code>{}</code>,
 <code>\langle</code>, <code>\rangle</code>, etc.</li>
-</ul></div>
+</ul><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>You can also enter inline math mode using the <code>\(...\)</code>
+notation, which is equivalent to using the dollar sign notation.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="display-math-mode">Display Math Mode<a class="anchor" aria-label="anchor" href="#display-math-mode"></a></h3>
 <p>Display math mode uses the exact same commands as inline math mode,
 but it is centered by default and is intended for larger equations that
 are “part of a paragraph”. It is also started and ended with a pair of
 square brackets (<code>\[ ... \]</code>).</p>
-<div id="callout1" class="callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -526,20 +538,11 @@ backslash(<code>\</code>) here.</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\subsection</span>{Display Math Mode}</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>The Fourier Transform is defined as:</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>Einstein's famous equation is:</span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="sc">\hat</span><span class="ss">{f}(</span><span class="sc">\xi</span><span class="ss">) = </span><span class="sc">\int</span><span class="ss">_{-</span><span class="sc">\infty</span><span class="ss">}^</span><span class="sc">\infty</span><span class="ss"> f(x) e^{-2</span><span class="sc">\pi</span><span class="ss"> i </span><span class="sc">\xi</span><span class="ss"> x} </span><span class="sc">\,</span><span class="ss"> dx</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="ss">\]</span></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>Where:</span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( f(x) \)</span> is the function we are transforming,</span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( </span><span class="sc">\hat</span><span class="ss">{f}(</span><span class="sc">\xi</span><span class="ss">) \)</span> is the Fourier Transform of <span class="ss">\( f(x) \)</span>,</span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( </span><span class="sc">\xi</span><span class="ss"> \)</span> is the frequency variable,</span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>  <span class="fu">\item</span> <span class="ss">\( i \)</span> is the imaginary unit.</span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="ss">E = mc^2</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
 </div>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
@@ -584,51 +587,72 @@ command, just like we did in the previous section:</p>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>The quadratic formula is given in Equation~<span class="kw">\ref</span>{<span class="ex">eq:quadratic</span>}.</span></code></pre>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="the-amsmath-package">The <code>amsmath</code> Package<a class="anchor" aria-label="anchor" href="#the-amsmath-package"></a></h2>
+<div class="section level3">
+<h3 id="captions-for-equations">Captions for Equations<a class="anchor" aria-label="anchor" href="#captions-for-equations"></a></h3>
+<p>We can also add captions to equations, just like we do for figures
+and tables. This is done by wrapping the equation in a
+<code>figure</code> environment and using the <code>\caption{}</code>
+command:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\subsection</span>{Captions for Equations}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}[h]</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="fu">\centering</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="ss">x = </span><span class="sc">\frac</span><span class="ss">{-b </span><span class="sc">\pm</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{b^2 - 4ac}}{2a}</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="sc">\label</span><span class="ss">{eq:quadratic}</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="fu">\caption</span>{The quadratic equation}</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="the-amsmath-package-optional">The <code>amsmath</code> Package (Optional)<a class="anchor" aria-label="anchor" href="#the-amsmath-package-optional"></a></h2>
 <hr class="half-width"><p>Mathematical notation is very rich, and the tools in the LaTeX kernel
 are sometimes not enough to cover everything. The <code>amsmath</code>
 package extends the capabilities of LaTeX for more complex mathematical
 typesetting. Let’s try it out:</p>
 <p>Add the following to your document:</p>
 <p>(In the preamble)</p>
-<div class="codewrapper sourceCode" id="cb5">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre>
-</div>
-<p>(In the body)</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="ss">Q_{n,0} = 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];</span></span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="ss">\]</span></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="ss">Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for $n$, $k&gt;0$.}</span></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre>
+</div>
+<p>(In the body)</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="ss">Q_{n,0} = 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="ss">\]</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="ss">Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for $n$, $k&gt;0$.}</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
 </div>
 <p>That look ok, but we really want the equations to be aligned
 vertically, not centered on the page. We can use the <code>align</code>
 environment from the <code>amsmath</code> package to do this:</p>
-<div class="codewrapper sourceCode" id="cb7">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre>
-</div>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align*</span>}</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="ss">  Q_{n,0} &amp;= 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];  </span><span class="sc">\\</span></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="ss">  Q_{n,k} &amp;= Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for </span><span class="er">$</span><span class="ss">n</span><span class="er">$</span><span class="ss">, </span><span class="er">$</span><span class="ss">k&gt;0</span><span class="er">$</span><span class="ss">.}</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align*</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="kw">\subsection</span>{The `amsmath` Package}</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>Solve the following recurrence for <span class="ss">$ n,k</span><span class="sc">\geq</span><span class="ss"> 0 $</span>:</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align*</span>}</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="ss">  Q_{n,0} &amp;= 1   </span><span class="sc">\quad</span><span class="ss"> Q_{0,k} = [k=0];  </span><span class="sc">\\</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="ss">  Q_{n,k} &amp;= Q_{n-1,k}+Q_{n-1,k-1}+</span><span class="sc">\binom</span><span class="ss">{n}{k}, </span><span class="sc">\quad\text</span><span class="ss">{for </span><span class="er">$</span><span class="ss">n</span><span class="er">$</span><span class="ss">, </span><span class="er">$</span><span class="ss">k&gt;0</span><span class="er">$</span><span class="ss">.}</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align*</span>}</span></code></pre>
 </div>
 <p>The <code>align*</code> environment makes the equations line up on
 the amperstand (<code>&amp;</code>)</p>
@@ -655,12 +679,12 @@ LaTeX:</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="ss">t' = </span><span class="sc">\frac</span><span class="ss">{t}{</span><span class="sc">\sqrt</span><span class="ss">{1 - </span><span class="sc">\frac</span><span class="ss">{v^2}{c^2}}}</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="ss">t' = </span><span class="sc">\frac</span><span class="ss">{t}{</span><span class="sc">\sqrt</span><span class="ss">{1 - </span><span class="sc">\frac</span><span class="ss">{v^2}{c^2}}}</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="ss">\]</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -674,10 +698,10 @@ LaTeX:</p>
 <h3 class="callout-title">Challenge 2: What’s wrong with this?</h3>
 <div class="callout-content">
 <p>What’s wrong with the following LaTeX code?</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ss">\(F = G * (m_1 m_2) / r^2 \)</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ss">\(F = G * (m_1 m_2) / r^2 \)</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -691,10 +715,10 @@ LaTeX:</p>
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ss">\(F = G </span><span class="sc">\frac</span><span class="ss">{m_1 m_2}{r^2} \)</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ss">\(F = G </span><span class="sc">\frac</span><span class="ss">{m_1 m_2}{r^2} \)</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -713,22 +737,22 @@ the <code>amsmath</code> package and a numbered <code>align</code>
 environment. Label the equation using <code>\label</code>. Then, use the
 <code>\ref</code> command to refer to the equation in the text. You may
 find the following LaTeX template helpful:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>} <span class="co">% For better equation formatting</span></span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="kw">\section</span>{Referencing Equations}</span>
-<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
-<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a></span>
-<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a></span>
-<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>} <span class="co">% For better equation formatting</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="kw">\section</span>{Referencing Equations}</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -740,26 +764,26 @@ find the following LaTeX template helpful:</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>} <span class="co">% For better equation formatting</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="kw">\section</span>{Referencing Equations}</span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a></span>
-<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>We can include a numbered equation as follows:</span>
-<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
-<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="ss">  E = mc^2</span></span>
-<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a><span class="ss">  </span><span class="sc">\label</span><span class="ss">{eq:energy}</span></span>
-<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
-<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a></span>
-<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a>Now, we refer to the equation in the text. The famous equation is <span class="kw">\ref</span>{<span class="ex">eq:energy</span>}.</span>
-<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a></span>
-<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>} <span class="co">% For better equation formatting</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="kw">\section</span>{Referencing Equations}</span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>We can include a numbered equation as follows:</span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a><span class="ss">  E = mc^2</span></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a><span class="ss">  </span><span class="sc">\label</span><span class="ss">{eq:energy}</span></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a>Now, we refer to the equation in the text. The famous equation is <span class="kw">\ref</span>{<span class="ex">eq:energy</span>}.</span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>

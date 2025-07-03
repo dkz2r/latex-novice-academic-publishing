@@ -118,11 +118,11 @@
   An Introduction to Using LaTeX for Academic Publishing
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 94%" class="percentage">
-    94%
+<aside class="col-md-12 lesson-progress"><div style="width: 97%" class="percentage">
+    97%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 94%" aria-valuenow="94" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 97%" aria-valuenow="97" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -588,11 +588,19 @@ and calculate some sort of summary statistic. For this,
 </ul><p>We can use these commands to calculate the sum, maximum, mean, and
 standard deviation of a variable for a specific set of keys. The syntax
 is (Almost!) identical to the <code>\DTLforeach</code> command.</p>
-<div class="important">
+<div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Caution</h3>
+<div class="callout-content">
 <p>Note that compared to the <code>\DTLforeach</code> command, the
 second and third arguments are switched. In this command, the second
 argument is the list of variables and the third argument is the database
 name.</p>
+</div>
+</div>
 </div>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -751,7 +759,7 @@ of the other files and see if this code still works.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>If you used one of the other files, you might have noticed that the
 time it took create the pdf was much longer. This is because the other
@@ -806,7 +814,7 @@ about “misplaced ”.)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <pre><code>\begin{tabular}{rlr}
 \toprule

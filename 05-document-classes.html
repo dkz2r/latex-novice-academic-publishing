@@ -118,11 +118,11 @@
   An Introduction to Using LaTeX for Academic Publishing
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 25%" class="percentage">
-    25%
+<aside class="col-md-12 lesson-progress"><div style="width: 19%" class="percentage">
+    19%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 25%" aria-valuenow="25" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 19%" aria-valuenow="19" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -553,32 +553,38 @@ we’ll get back to line breaking in a bit.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="creating-a-presentation">Creating a Presentation<a class="anchor" aria-label="anchor" href="#creating-a-presentation"></a></h2>
-<hr class="half-width"><p>The <code>slides</code> document class was developed for making
-physical slides in the mid-1980s, and so doesn’t have any of the
-features we might use in modern presentations. Let’s create a simple
-presentation using the <code>slides</code> document class. Start another
-new document called “slides.tex”.</p>
+<hr class="half-width"><p>Base LaTeX comes with the <code>slides</code> document class, which
+is a very simple class for creating slide presentations. This class is
+very basic and doesn’t have many features, but a more modern
+implementation of a presentation class is <code>beamer</code>.</p>
+<p>The <code>beamer</code> document class is text based, and so doesn’t
+have the same level of interactivity as modern presentation software
+like PowerPoint or Google Slides. However, being text-based does allow
+the usage of version control systems like Git to track changes in the
+presentation, and it can be compiled to PDF for easy sharing.</p>
+<p>Let’s create a simple presentation using the <code>beamer</code>
+document class. Start another new document called “slides.tex”.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">slides</span>}</span>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">slide</span>}</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>The slides document class is a good starting point for creating a presentation.</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">slide</span>}</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>The beamer document class is a good starting point for creating a presentation.</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">slide</span>}</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
 <span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>Being entirely text-based, it's not as powerful or user-friendly as modern presentation software.</span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">slide</span>}</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
 <span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a></span>
 <span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <p>When you compile this document, you should end up with a document
 that has two pages, each with the text of each slide centered in the
 middle of the page.</p>
-</section><section><h2 class="section-heading" id="function-rich-classes">Function-rich Classes<a class="anchor" aria-label="anchor" href="#function-rich-classes"></a></h2>
+<figure><img src="fig/05-document-classes/beamer_example.PNG" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="function-rich-classes">Function-rich Classes<a class="anchor" aria-label="anchor" href="#function-rich-classes"></a></h2>
 <hr class="half-width"><p>The core classes included with base LaTeX are very stable, but this
 means they are also somewhat conservative in terms of features. Over
 time, third parties have developed a number of more powerful classes

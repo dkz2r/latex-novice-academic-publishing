@@ -118,11 +118,11 @@
   An Introduction to Using LaTeX for Academic Publishing
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 69%" class="percentage">
-    69%
+<aside class="col-md-12 lesson-progress"><div style="width: 72%" class="percentage">
+    72%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 69%" aria-valuenow="69" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 72%" aria-valuenow="72" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -561,54 +561,62 @@ document yet. Let’s add a citation:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">\section</span>{Reference Databases}</span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>One of the best features of LaTeX when writing academic documents is the ability to easily and</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>confidently <span class="fu">\kw</span>{cite references}.</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>We can cite the article by Thomas (e.g. with `<span class="fu">\textbackslash</span> autocite<span class="fu">\{</span>Thomas2008<span class="fu">\}</span>`) and it will show up in the references.</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference</span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>now appears at the end of the document. <span class="fu">\cmd</span>{<span class="fu">\textbackslash</span> autocite} is a command that automatically chooses the</span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>citation style for you.</span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>Some additional commands that are available in  `biblatex`:</span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> cite<span class="fu">\{</span>key<span class="fu">\}</span>` or `<span class="fu">\textbackslash</span> cite<span class="fu">\{</span>key1, key2<span class="fu">\}</span>`: Cite the reference with the given key</span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> cites<span class="fu">\{</span>key1<span class="fu">\}\{</span>key2<span class="fu">\}\{</span>key-n<span class="fu">\}</span>`: Cite multiple references.</span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> usepackage<span class="fu">\{\}\textbackslash</span> parentcite<span class="fu">\{</span>key<span class="fu">\}</span>`: Cite the parent reference of the given key.</span>
-<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> autocite<span class="fu">\{</span>key<span class="fu">\}</span>`: Automatically choose the citation style.</span>
-<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> smartcite<span class="fu">\{</span>key<span class="fu">\}</span>`: Automatically choose the citation style, but with more control.</span>
-<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a>    <span class="fu">\item</span> `<span class="fu">\textbackslash</span> footcite<span class="fu">\{</span>key<span class="fu">\}</span>`: Cite the reference in a footnote.</span>
-<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a>A plain citation looks like this <span class="kw">\cite</span>{<span class="ex">Graham1995</span>}, while multiple citations look like this</span>
-<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a><span class="kw">\cites</span>{<span class="ex">Graham1995</span>}[see][p. 42]{<span class="ex">Thomas2008</span>}. We already used autocite, but we can also use the</span>
-<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>similar smartcite <span class="fu">\smartcite</span>{Graham1995}. The benefit with smartcite is that you</span>
-<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a>can setup that e.g. all references should go into a footnote. You can continue</span>
-<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a>using smartcite when you are *in* a footnote and it will then detect that there</span>
-<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a>is no need for creating another footnote but behaving like autocite.</span></code></pre>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>We can <span class="fu">\kw</span>{cite references} from our bibliography.</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>We can cite the article by Thomas (e.g. with `<span class="fu">\textbackslash</span> autocite<span class="fu">\{</span>Thomas2008<span class="fu">\}</span>`).</span></code></pre>
 </div>
-<p>If you want to have all entries of your referencing file in your
-bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
-for all entries or you type <code>\cite{*}</code>. This will print all
-entries first in your text section and puts them into the bibliography.
-You can also go with <code>\nocite{*}</code> then the reference is only
-internally called and put into the bibliography.</p>
-<p>It is always good to tidy up your <code>.bib</code>-file and use the
-fields accordingly. In case you want to omit certain fields in your
-bibliography you can do so on the fly:</p>
-<div class="codewrapper sourceCode" id="cb5">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">\AtEveryBibitem</span>{</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">\clearfield</span>{url}</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">\clearfield</span>{month}</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">\clearfield</span>{note}</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  <span class="fu">\clearfield</span>{isbn}</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">\clearname</span>{translator}</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">\clearlist</span>{language}</span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>}</span></code></pre>
-</div>
+<p>You should see that the citation appears in the text
+(<code>(Thomas et al. 2008)</code>), and the reference now appears at
+the end of the document. is a command that automatically chooses the
+citation style for you.</p>
+<p>Some additional commands that are available in
+<code>biblatex</code>:</p>
+<ul><li>
+<code>\cite{key}</code> or <code>\cite{key1, key2}</code>: Cite the
+reference with the given key</li>
+<li>
+<code>\usepackage{}\parentcite{key}</code>: Cite the parent
+reference of the given key.</li>
+<li>
+<code>\autocite{key}</code>: Automatically choose the citation
+style.</li>
+<li>
+<code>\smartcite{key}</code>: Automatically choose the citation
+style, but with more control.</li>
+<li>
+<code>\footcite{key}</code>: Cite the reference in a footnote.</li>
+</ul><p>A plain citation looks like this , while multiple citations look like
+this . We already used autocite, but we can also use the similar
+smartcite . The benefit with smartcite is that you can setup that
+e.g. all references should go into a footnote. You can continue using
+smartcite when you are <em>in</em> a footnote and it will then detect
+that there is no need for creating another footnote but behaving like
+autocite.</p>
+<pre><code>
+
+#### Good to know
+
+If you want to have all entries of your referencing file in your bibliography,
+you can either go with `\cite{key1,key2,.....}` for all entries or you type
+`\cite{*}`.
+This will print all entries first in your text section and puts them into the
+bibliography. You can also go with `\nocite{*}` then the reference is only
+internally called and put into the bibliography.
+
+
+
+It is always good to tidy up your `.bib`-file and use the fields accordingly. In
+case you want to omit certain fields in your bibliography you can do so on the
+fly:
+```latex
+\AtEveryBibitem{
+  \clearfield{url}
+  \clearfield{month}
+  \clearfield{note}
+  \clearfield{isbn}
+  \clearname{translator}
+  \clearlist{language}
+}</code></pre>
 <p>With this command you will delete the content of the fields in the
 bibliography. Note, that there is <code>\clear*field*</code>,
 <code>\clear*name*</code> and <code>\clear*list*</code>.</p>
@@ -640,10 +648,9 @@ document yet. Let’s add a citation:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">\section</span>{Reference Databases}</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>One of the best features of LaTeX when writing academic documents is the ability to easily and</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>confidently <span class="fu">\kw</span>{cite references}.</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>We can cite the article by Thomas <span class="kw">\citep</span>{<span class="ex">Thomas2008</span>} and it will show up in the references.</span></code></pre>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>We can <span class="fu">\kw</span>{cite references} from our bibliography.</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>We can cite the article by Thomas <span class="kw">\citep</span>{<span class="ex">Thomas2008</span>}.</span></code></pre>
 </div>
 <p>You should see that the citation appears in the text
 (<code>(Thomas et al. 2008)</code>), and the reference now appears at

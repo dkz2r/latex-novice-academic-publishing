@@ -118,11 +118,11 @@
   An Introduction to Using LaTeX for Academic Publishing
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 44%" class="percentage">
-    44%
+<aside class="col-md-12 lesson-progress"><div style="width: 43%" class="percentage">
+    43%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 44%" aria-valuenow="44" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 43%" aria-valuenow="43" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -427,7 +427,7 @@
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -769,7 +769,7 @@ the value in the last column is italicized.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -846,7 +846,7 @@ columns combined?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The table will have 4 columns where the first column does not have a
 column name. The table will have 6 rows. The first row is the column
@@ -867,7 +867,7 @@ environment.</em></p>
 <div id="challenge-3-adding-merged-rows-to-your-table." class="callout-inner">
 <h3 class="callout-title">Challenge 3: Adding merged rows to your table.</h3>
 <div class="callout-content">
-<p>Consider again the LaTeX code for the table in challenge 3. Add four
+<p>Consider again the LaTeX code for the table in challenge 2. Add four
 more rows to this table that contain information about the following
 four sorts of bread:</p>
 <ul><li>Brioche, 3, 3.00</li>
@@ -884,7 +884,7 @@ category “Bread”.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -932,17 +932,19 @@ an earlier episode. Can you use the <code>xcolor</code> package to make
 the header and summary rows of the table in Challenge 1 a different
 color? What about changing the color of the text in the summary row? Can
 we make the rows of the table alternate colors?</p>
-<p>A few things that will help you: - We need to import the
-<code>xcolor</code> package in the preamble of our document. - The
-<code>xcolor</code> package doesn’t automatically support coloring
-tables, so we need to add the <code>table</code> option to the package
-import. - <code>\rowcolor{(&lt;color&gt;}</code> -
-<code>\rowcolors{&lt;starting row number&gt;}{&lt;color1&gt;}{&lt;color2&gt;}</code>
-- You can make lighter versions of colors by adding
+<p>A few things that will help you:</p>
+<ul><li>We need to import the <code>xcolor</code> package in the preamble of
+our document.</li>
+<li>The <code>xcolor</code> package doesn’t automatically support
+coloring tables, so we need to add the <code>table</code> option to the
+package import.</li>
+<li><code>\rowcolor{(&lt;color&gt;}</code></li>
+<li><code>\rowcolors{&lt;starting row number&gt;}{&lt;color1&gt;}{&lt;color2&gt;}</code></li>
+<li>You can make lighter versions of colors by adding
 <code>!&lt;percentage&gt;</code> to the color name. For example,
 <code>red!10</code> is a light red color, while <code>red!90</code> is a
-darker red color.</p>
-<p>There’s no right answer to this challenge, so feel free to experiment
+darker red color.</li>
+</ul><p>There’s no right answer to this challenge, so feel free to experiment
 with different colors! <a href="../fig/07-tables/challenge-colorful-table.PNG">Here’s an example of
 what you can do.</a></p>
 </div>
@@ -953,7 +955,7 @@ what you can do.</a></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1022,7 +1024,7 @@ package can be used to merge rows in a table.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-07.tex">here is
 what our LaTeX document looks like</a>.</p>
