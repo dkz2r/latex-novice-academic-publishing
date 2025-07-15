@@ -1,5 +1,5 @@
 ---
-title: 'Fonts and Spacing'
+title: 'Fonts, Formatting and Spacing'
 teaching: 25
 exercises: 0
 ---
@@ -18,6 +18,59 @@ exercises: 0
 - Create a title page with custom text formatting.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Fonts
+
+We saw earlier that we can create commands of our own in LaTeX, but there is also a `renewcommand`
+command that let's us change the definition of an existing command. This might be useful if you
+want the definition of a command to change throughout the document, however there are also some
+commands that are pre-defined that we can modify with this command.
+
+For Example, we can change the font of the entire document by adding the following line to the
+`preamble/custom-commands.tex` file:
+
+```latex
+% Change the font of the entire document to a monospace font
+\renewcommand{\familydefault}{\ttdefault}
+```
+
+When you compile the document you should see something like this:
+
+IMAGE GOES HERE
+
+### More Fonts
+
+Unfortunately, the default LaTeX installation does not come with many fonts. However, there are
+additional packages that you can include if you are looking for a specific font. Let's try making
+our document look like it's using the `Times New Roman` font. To do this, all we need to do is add
+the following line to the preamble:
+
+```latex
+\usepackage{tgtermes}
+```
+
+::: callout
+
+You can find a large selection of fonts at [The LaTeX Font Catalogue](https://www.tug.org/FontCatalogue/),
+complete with examples of how to use them in your document.
+
+:::
+
+When you are using `lualatex` (or `xelatex`) for compiling you can easily use
+all the fonts that are installed locally on your computer:
+
+```latex
+\usepackage{fontspec}
+
+% Set the main (serif) font:
+\setmainfont{Times New Roman}
+
+% Set the sans-serif and monospace fonts too, if you like:
+\setsansfont{Arial}
+\setmonofont{Courier New}
+```
+
+
 
 ## Paragraph Spacing
 
@@ -45,7 +98,7 @@ Tullius Cicero.
 In our document, we can now use a blank line to separate paragraphs:
 
 ```latex
-\section{Fonts and Spacing}
+\section{Formatting and Spacing}
 
 % Generate some "Lorem Ipsum" text
 % The parameters mean "include paragraphs 1 thru 2" from the "Lorem Ipsum" text
@@ -65,6 +118,14 @@ Now let's add our package:
 Keep an eye on the preview pane as you compile the document. You should see that the first
 paragraph now has a blank line between it and the second paragraph, and there is no indent on the
 first line of the second paragraph.
+
+
+When you use a KOMA-Script documentclass you get the same result using a global
+option:
+
+```latex
+\documentclass[parskip=full]{scrbook}
+```
 
 ## Forcing a New Line
 
@@ -124,6 +185,20 @@ We can set the font size in the same way. All sizes are relative to the base fon
 - `\normalsize` for normal text
 - `\small` for small text
 - `\footnotesize` for footnote text
+
+
+You can further customize your font size
+
+```
+{\fontsize{14}{16}\selectfont This text is 14pt with 16pt leading.}
+```
+
+If you want it really big:
+
+```latex
+{\fontsize{10em}{4em}\selectfont This text is very heigh now with some leading.}
+```
+
 
 ## Text Alignment
 
