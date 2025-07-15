@@ -52,15 +52,24 @@ and that your document preamble loads it (ideally after the package `biblatex`):
 ## Inline Quotes
 
 Instead of typing this by hand:
-
+```latex
+“She said, ‘Hello.’”
+```
 you write:
+
+```latex
+\enquote{She said, \enquote*{Hello}.}
+```
 
 - `\enquote{…}` uses the main quote style.
 - `\enquote*{…}` (star form) forces the inner quote style, even if not
   nested.
 
+Here is a full example.
 ```latex
-According to Smith, \enquote{the population has doubled since 2000 \enquote*{remarkably fast}}.
+According to Charles Hoare, \enquote{Documentation must be regarded 
+as \enquote*{an integral part} of the process of design and coding.}
+(1973, p. 195)
 ```
 
 
@@ -69,14 +78,14 @@ According to Smith, \enquote{the population has doubled since 2000 \enquote*{rem
 For longer quotations you can use:
 
 ```latex
-\blockquote[see][45]{%
-  This is a long quotation that spans
-  multiple lines and even paragraphs...
+\blockquote[see Hoare 1973, p. 195]{%
+ Documentation must be regarded as an integral part of the process of design and coding. 
+ A good programming language will encourage and assist the programmer to write clear, 
+ self-documenting code, and even perhaps to develop and display a pleasant style of writing.%
 }
 ```
 
-- The first optional bracket is a prenote (e.g. “see”).
-- The second is a postnote (e.g. source or page number).
+- The optional bracket is a postnote (e.g. source or page number).
 
 It will produce an indented block and automatically insert quotation
 marks (or omit them, depending on style). There is also the `\textquote`-command
@@ -87,15 +96,33 @@ but this is ommitted since `\blockquote` has the greater flexibility.
 
 One of the biggest advantages of using `csquotes` is its interplay with
 `biblatex` as a way of referencing sources.
+To use this kind of quotes you also need to have the package `biblatex` loaded
+in your preamble.
 
+
+```bibtex
+@InCollection{Hoare1973,
+  author    = {Charles Antony Richard Hoare},
+  title     = {Hints on programming language design},
+  editor    = {C. Bunyan},
+  booktitle = {Computer Systems Reliability},
+  series    = {State of the Art Report},
+  number    = {20},
+  pages     = {193--216},
+  year      = {1973},
+  url       = {http://flint.cs.yale.edu/cs428/documentation/HintsPL.pdf},
+  urlyear   = {2018},
+  comment   = {Documentation must be regarded as an integral part of the process of design and coding. A good programming language will encourage and assist the programmer to write clear, self-documenting code, and even perhaps to develop and display a pleasant style of writing.}
+}
+```
 
 ```latex
 \blockcquote[⟨prenote⟩][⟨postnote⟩]{⟨key⟩}[⟨punct⟩]{⟨text⟩}⟨tpunct⟩
 ```
 
 - **⟨prenote⟩**: optional text before the citation (e.g. “see”, “cf.”).
-- **⟨postnote⟩**: optional locator such as a page number (e.g. “45–47”).
-- **⟨key⟩**: the BibLaTeX entry key (e.g. `doe2020`).
+- **⟨postnote⟩**: optional locator such as a page number (e.g. “193–216”).
+- **⟨key⟩**: the BibLaTeX entry key (e.g. `Hoare1973`).
 - **⟨punct⟩**: punctuation inserted *inside* the closing quote (e.g. a comma or period).
 - **⟨text⟩**: the quoted passage itself.
 - **⟨tpunct⟩**: punctuation inserted *after* the closing quote (e.g. a period or question mark).
@@ -104,18 +131,19 @@ Here is an example:
 
 
 ```latex
-\blockcquote[see][12]{smith2024}{%
-  The rapid growth observed over the past decade
-  challenges our previous assumptions about population dynamics.%
-}
+\blockcquote[see][195]{Hoare1973}{Documentation must be regarded as an integral part of the process of design and coding. A good programming language will encourage and assist the programmer to write clear, self-documenting code, and even perhaps to develop and display a pleasant style of writing.}
 ```
 
-This will produce:
+This will produce (with default settings for `biblatex`):
 
-> “The rapid growth observed over the past decade
-> challenges our previous assumptions about population dynamics.” — see Smith 2024, 12
 
-and automatically add the `smith2024` entry to your bibliography when you run
+> Documentation must be regarded as an integral part of the process
+> of design and coding. A good programming language will encourage
+> and assist the programmer to write clear, self-documenting code,
+> and even perhaps to develop and display a pleasant style of writing.
+> [see 1, p. 195]
+
+and automatically add the `Hoare1973` entry to your bibliography when you run
 `\printbibliography`.
 
 
@@ -124,13 +152,17 @@ and automatically add the `smith2024` entry to your bibliography when you run
 ## Challenge 1: Referencing Sources
 
 - Add a new entry to your `references.bib` for a short article.
-- Use `\blockcquote` to insert a two sentence quote with a pre- and
+- Use `\textcquote` and `\blockcquote` to insert a two sentence quote with a pre- and
     postnote pointing to the entry you just created.
+Do you see a difference when you use `\textcquote` or `\blockcquote`?
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
+With default settings, quotes written with `\blockcquote` will be displayed in
+the same way as `\textcquote`. As soon as the text is longer than three complete
+lines of text, then the whole quote is indented and set as a block.
 
 
 :::::::::::::::::::::::::::::::::
@@ -143,10 +175,10 @@ and automatically add the `smith2024` entry to your bibliography when you run
 
 ```latex
 \usepackage[ngerman,english]{babel}
-\usepackage{csquotes}
+\usepackage[autostyle]{csquotes}
 
 % In your document:
-\foreignquote{ngerman}{Er ist der Beste.}
+\foreignquote{german}{Er ist der Beste.}
 ```
 
 This switches to German quotes („…“) only for that passage, then returns
@@ -157,16 +189,15 @@ You can also nest foreign quotes:
 ```latex
 \enquote{He said, \foreignquote{french}{Je ne sais quoi}, before leaving.}
 ```
-…which might render as: 
-> “He said, ‹Je ne sais quoi›, before leaving.”
+…which might render as (setting in your preamble `\usepackage[autostyle,french=guillemets]{csquotes}`):
+> “He said, « Je ne sais quoi », before leaving.”
 
 There is also the command `\foreignblockcquote` that first needs the language as
 mandatory argument, for a concrete example:
 
 ```latex
-\foreignblockcquote{english}[see][11]{smith2024-german}{%
-  Das in den letzten zehn Jahren beobachtete rasche Wachstum
-  stellt unsere bisherigen Annahmen über die Bevölkerungsdynamik in Frage.%
+\foreignblockcquote{german}[vgl.][195 (eigene Übersetzung)]{Hoare1973}{%
+Die Dokumentation muss als integraler Bestandteil des Entwurfs- und Kodierungsprozesses betrachtet werden. Eine gute Programmiersprache wird den Programmierer ermutigen und unterstützen, klaren, selbstdokumentierenden Code zu schreiben und vielleicht sogar einen angenehmen Schreibstil zu entwickeln und zu pflegen.%
 }
 ```
 
@@ -211,40 +242,33 @@ Insersion: “The quick \textins{brown} fox.”
 
 # Adjust Default Settings
 
-If you prefer guillemets for English, or want space‑padded French
-guillemets, configure:
+Change the amount of lines you want to have for a block quote:
 
 ```latex
-\SetQuoteStyle{guillemets}
-\DeclareQuoteAlias{french}{guillemets}
-\MakeOuterQuote{"}  % allow ASCII "…"
+\SetBlockThreshold{0} % number of full ines for blockquote, 0= all quotes are like blockquote
 ```
-You can also customize the nesting levels:
+
+Adjust the appearance of a deleted word.
+```latex
+\renewcommand{\mktextdel}[1]{[\textellipsis]}
+```
+
+Define the way of a source is displayed after the blockquote:
 
 ```latex
-\DeclareQuoteAlias{ngerman}{\glqq}{\grqq}  % primary German quotes
-\DeclareQuoteAlias{ngerman*}{\guqq}{\gdqq} % secondary German quotes
+\renewcommand{\mkcitation}[1]{\footnote{#1}}
+\renewcommand{\mkccitation}[1]{\footnote{#1}}
 ```
-
-
-…and fine-tune spacing:
-
-```latex
-\SetBlockThreshold{1} % number of full ines for blockquote
-```
-
-
-
+This will put the references in a footnote.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `\enquote{…}` for semantic, language-aware inline quotes.
-- Use `\blockquote[prenote][postnote]{…}` for automatic block formatting
+- Use `\blockquote{…}` for automatic block formatting
   and citation.
-- Integrate with `biblatex` via `\autocite` inside quotes for full
+- Integrate with `biblatex` inside quotes for full
   bibliographic support.
-- Switch quote styles per language with `\foreignquote` or global
-  `\SetQuoteStyle`.
+- Switch quote styles per language with `\foreign(c)quote`.
 - Customize nesting, spacing, and thresholds to match publisher or
   style-guide requirements.
 
