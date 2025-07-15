@@ -39,12 +39,13 @@ Create a new file in your project called `sample-references.bib` and add the fol
   author  = {Thomas, Christine M.},
   title   = {The Fascinating World of Penguins},
   journal = {Penguin Chronicles},
-  year    = {2008},
+  date    = {2008},
   pages   = {7009-7024},
 }
 @book{Graham1995,
   author    = {Richard L. Graham and Lisa A. Harris},
-  title     = {The Humble Paperclip: Master of the Modern Office},
+  title     = {The Humble Paperclip},
+  subtitle  = {Master of the Modern Office},
   publisher = {Scranton Press},
   year      = {1995},
 }
@@ -61,7 +62,9 @@ the type of entry.
 ::: callout
 
 You might notice that in the `author` field, each entry is separated by the word `and`. This is
-essential: the format of the output needs to know which author is which.
+essential: the format of the output needs to know which author is which. When
+using `biblatex` this applies also to the fields `publisher` and `location`, in
+which you can also have many values.
 
 You might also notice that in the article title, some entries are in an extra set of braces. This
 is to prevent any case-changing that might be applied to the title.
@@ -107,8 +110,8 @@ And... nothing? Right, because we haven’t cited anything in our document yet. 
 We can \kw{cite references} from our bibliography.
 
 We can cite the article by Thomas (e.g. with `\textbackslash autocite\{Thomas2008\}`).
-
 ```
+
 
 You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference
 now appears at the end of the document. \cmd{\textbackslash autocite} is a command that automatically chooses the
@@ -122,13 +125,21 @@ Some additional commands that are available in  `biblatex`:
 - `\smartcite{key}`: Automatically choose the citation style, but with more control.
 - `\footcite{key}`: Cite the reference in a footnote.
 
-A plain citation looks like this \cite{Graham1995}, while multiple citations look like this
-\cites{Graham1995}[see][p. 42]{Thomas2008}. We already used autocite, but we can also use the
-similar smartcite \smartcite{Graham1995}. The benefit with smartcite is that you
+A plain citation looks like this `\cite{Graham1995}`, while multiple citations look like this
+`\cites{Graham1995}[see][p. 42]{Thomas2008}`. We already used autocite, but we can also use the
+similar smartcite `\smartcite{Graham1995}`. The benefit with smartcite is that you
 can setup that e.g. all references should go into a footnote. You can continue
 using smartcite when you are *in* a footnote and it will then detect that there
 is no need for creating another footnote but behaving like autocite.
-```
+
+Furthermore you can use more commands to get the author, title or the date of
+the publication directly into your document:
+
+- `\citeauthor{Graham1995}`: Graham and Harris   
+- `\citetitle{Graham1995}`: "The Humble Paperclip"  
+- `\citeyear{Graham1995}`: 1995  
+
+The outcome and display depends on your style.
 
 
 #### Good to know
@@ -279,13 +290,13 @@ We have the following reference in our document:
 
 ```bibtex
 @misc{mikolov2013,
-      title={Efficient Estimation of Word Representations in Vector Space},
-      author={Tomas Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},
-      year={2013},
-      eprint={1301.3781},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/1301.3781},
+      title         ={Efficient Estimation of Word Representations in Vector Space},
+      author        ={Tomas Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},
+      year          ={2013},
+      eprint        ={1301.3781},
+      archivePrefix ={arXiv},
+      primaryClass  ={cs.CL},
+      url           ={https://arxiv.org/abs/1301.3781},
 }
 ```
 We are using biblatex to manage our references, and we identify this reference in the text like
