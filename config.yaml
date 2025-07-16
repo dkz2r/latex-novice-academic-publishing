@@ -23,11 +23,11 @@ title: 'An Introduction to Using LaTeX for Academic Publishing'
 created: '2024-12-09'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'markdown, software, latex'
+keywords: 'publishing, academic, latex, writing'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha'
+life_cycle: 'alpha'
 
 # License of the lesson materials (recommended CC-BY 4.0)
 license: 'CC-BY 4.0'
@@ -74,13 +74,13 @@ episodes:
 - 07-using-graphics.md
 - 08-tables.md
 - 09-cross-references.md
-- 10-mathematics.md
-- 11-text-and-spacing.md
+- 10-mathematics-and-scientific-units.md
+- 11-font-format-and-spacing.md
 - 12-citations-and-references.md
-- 13-structuring-sources.md
-- 14-font-and-encoding.md
-- 15-documentation-and-finding-help.md
-- 16-loading-and-manipulating-data.md
+- 13-context-sensitive-quotation.md
+- 14-structuring-sources.md
+- 15-loading-and-manipulating-data.md
+- 16-documentation-and-finding-help.md
 
 # Information for Learners
 learners:

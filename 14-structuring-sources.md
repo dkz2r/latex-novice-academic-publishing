@@ -53,6 +53,17 @@ When you use `\include{filename}` you can also use
 the file mentioned but respect all other files regarding e.g. pagenumber,
 references etc.
 
+::: caution
+
+Note that in case you have deleted all your `*.aux`-files and want to compile
+from scratch, make sure you have disabled the `\includeonly{}`-command. At least
+for the first run. Otherwise the other files that are included will not be known
+to the compiler and therefor omitted. This has consequences for references, page
+numbers etc.
+
+:::
+
+
 ### Input Example
 
 Let's try out using the `\input{filename}` command. We'll create a new file called
@@ -135,7 +146,7 @@ Let's make files in our "content" directory for each of our sections:
 - `content/tables.tex`
 - `content/cross-references.tex`
 - `content/mathematics.tex`
-- `content/fonts-and-spacing.tex`
+- `content/fonts-formatting-and-spacing.tex`
 - `content/reference-databases.tex`
 
 We'll move the content from each section into the corresponding file.
@@ -375,7 +386,7 @@ Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{for $n$, $k>0$.}
 :::
 
 ::: spoiler
-`content/fonts-and-spacing.tex`
+`content/fonts-formatting-and-spacing.tex`
 
 ```latex
 TO BE ADDED LATER
@@ -426,7 +437,7 @@ Then, in our `main.tex` document, we'll include each of these files using the `\
 \include{content/tables}
 \include{content/cross-references}
 \include{content/mathematics}
-\include{content/fonts-and-spacing}
+\include{content/fonts-formatting-and-spacing}
 \include{content/reference-databases}
 ```
 
@@ -459,6 +470,7 @@ put these into their own directory called "preamble":
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage[style=authoryear]{biblatex}
+\usepackage{csquotes}
 \usepackage{booktabs}
 \usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
@@ -528,7 +540,7 @@ This is my first \kw{LaTeX} document.
 \include{content/tables}
 \include{content/cross-references}
 \include{content/mathematics}
-\include{content/fonts-and-spacing}
+\include{content/fonts-formatting-and-spacing}
 \include{content/reference-databases}
 
 \printbibliography

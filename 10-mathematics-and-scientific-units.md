@@ -279,12 +279,106 @@ Now, we refer to the equation in the text. The famous equation is \ref{eq:energy
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Scientific Units
+
+To write numbers with their scientific unit you can use the package `\siunitx`.
+This provides various commands, so that instead of writing
+
+```latex
+The road is about 934.54 m long.
+```
+
+you write
+
+```latex
+The road is about \qty{934.54}{\m} long.
+```
+
+You load the package in your preamble
+
+```latex
+\usepackage{siunitx}
+```
+
+Using the specifically provided macros of the package has several benefits.
+
+- **Consistent formatting**  
+  All numbers and units are printed with the correct spacing and font shape.
+
+- **Locale and digit grouping**  
+  You can automatically switch decimal markers (comma vs. point, depending on
+  your current language/locale of the section) and group digits:
+
+ ```latex
+  \num{12345.678}      % prints “12 345.678” or “12 345,678” depending on locale
+  \numlist{11;33;55;77}
+  \numproduct{11 x 33}
+  \numrange{11}{33}
+ ```
+
+- **Unit parsing**  
+  Composite units are built from predefined macros:
+
+ ```latex
+  \qty{9.81}{\metre\per\second\squared}
+  \qty{1}{\kilo\gram\metre\per\second\squared}
+  \qty[per-mode = symbol]{1}{\kilo\gram\metre\per\second\squared}
+```
+
+- **Uncertainties, lists and ranges**  
+  Express measurement errors and intervals:
+
+  ```latex
+  \qty{1.23(4)}{\metre} 
+  \qtylist{0.13;0.67;0.80}{\milli\metre} 
+  \qtyrange{20}{25}{\celsius} 
+  ``` 
+
+
+- **Tables with aligned numbers**  
+  Use the `S` column specifier in `tabular` environments to align on decimal
+ markers:
+ 
+ ```latex
+  \begin{tabular}{S[table-format=3.2] c}
+  \toprule
+  {Distance} & {Time} \\
+  \midrule
+  123.45 & \unit{\second} \\
+  7.8    & \unit{\minute} \\
+  \bottomrule
+  \end{tabular}
+```
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+- Write the following quantities using ``\qty` or `\num=` and `\ang``:
+  1. Speed of light: \(c = 2.99792458 x 10^8\)\,m/s  
+  2. Standard atmospheric pressure: 1013.25 hPa  
+  3. A right angle is 90° but navigating is done in the direction 1°2′3″ SSW.
+
+
+:::::::::::::::::::::::: solution
+% 1. Speed of light
+\qty{2.99792458e8}{\metre\per\second}
+
+% 2. Standard atmospheric pressure
+\qty{1013.25}{\hecto\pascal}
+
+% 3. A right angle
+\ang{90}; \ang{1;2;3} SSW
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Inline math mode is marked with `$ ... $` or `\(...\)`
 - Display math mode is marked with `\[ ... \]`
-
+- Use `\qty{}{}` or `\unit{}` for properly writing numbers with their scientific unit.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::: spoiler
