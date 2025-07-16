@@ -632,7 +632,7 @@ just created. Do you see a difference when you use
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>With default settings, quotes written with <code>\blockcquote</code>
 will be displayed in the same way as <code>\textcquote</code>. As soon
@@ -642,13 +642,9 @@ quote is indented and set as a block.</p>
 </div>
 </div>
 </div>
-<div id="foreign-language-quotes" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="foreign-language-quotes" class="callout-inner">
-<h3 class="callout-title">Foreign Language Quotes</h3>
-<div class="callout-content">
+<div class="section level1">
+<h1 id="foreign-language-quotes">Foreign Language Quotes<a class="anchor" aria-label="anchor" href="#foreign-language-quotes"></a></h1>
 <p><code>csquotes</code> can detect and adjust for foreign passages if
 you load <code>polyglossia</code> or <code>babel</code>. For
 example:</p>
@@ -681,6 +677,7 @@ needs the language as mandatory argument, for a concrete example:</p>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>Die Dokumentation muss als integraler Bestandteil des Entwurfs- und Kodierungsprozesses betrachtet werden. Eine gute Programmiersprache wird den Programmierer ermutigen und unterstützen, klaren, selbstdokumentierenden Code zu schreiben und vielleicht sogar einen angenehmen Schreibstil zu entwickeln und zu pflegen.<span class="co">%</span></span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>}</span></code></pre>
 </div>
+</div>
 <div class="section level1">
 <h1 id="auxiliary-commands">Auxiliary Commands<a class="anchor" aria-label="anchor" href="#auxiliary-commands"></a></h1>
 <p>When quoting text in a formal way, any changes applied to the quoted
@@ -707,8 +704,13 @@ brackets; the omitted text itself is not displayed.</li>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>Old form: “colour” → “colou<span class="fu">\textdel</span>{r}”</span>
 <span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>Insersion: “The quick <span class="fu">\textins</span>{brown} fox.”</span></code></pre>
 </div>
-<div class="section level2">
-<h2 id="challenge-2-auxiliary-commands">Challenge 2: Auxiliary Commands<a class="anchor" aria-label="anchor" href="#challenge-2-auxiliary-commands"></a></h2>
+<div id="challenge-2-auxiliary-commands" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-2-auxiliary-commands" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Auxiliary Commands</h3>
+<div class="callout-content">
 <ul><li>Take the sentence: “The quick brown fox jumps over the lazy
 dog.”</li>
 <li>Omit the word “brown” using <code>\textelp{}</code> and show the
@@ -719,8 +721,6 @@ result.</li>
 </ul></div>
 </div>
 </div>
-</div>
-</div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
@@ -728,20 +728,16 @@ result.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 
 </div>
 </div>
 </div>
 </div>
-<div id="adjust-default-settings" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="adjust-default-settings" class="callout-inner">
-<h3 class="callout-title">Adjust Default Settings</h3>
-<div class="callout-content">
+<div class="section level1">
+<h1 id="adjust-default-settings">Adjust Default Settings<a class="anchor" aria-label="anchor" href="#adjust-default-settings"></a></h1>
 <p>Change the amount of lines you want to have for a block quote:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -762,9 +758,6 @@ result.</li>
 <span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\mkccitation</span>}[1]{<span class="fu">\footnote</span>{#1}}</span></code></pre>
 </div>
 <p>This will put the references in a footnote.</p>
-</div>
-</div>
-</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
