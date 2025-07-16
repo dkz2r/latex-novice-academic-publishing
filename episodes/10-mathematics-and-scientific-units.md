@@ -1,5 +1,5 @@
 ---
-title: 'Mathematics'
+title: 'Mathematics and Scientific Units'
 teaching: 15
 exercises: 10
 ---
@@ -352,21 +352,27 @@ Using the specifically provided macros of the package has several benefits.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-- Write the following quantities using ``\qty` or `\num=` and `\ang``:
-  1. Speed of light: \(c = 2.99792458 x 10^8\)\,m/s  
+- Write the following quantities using `\qty` or `\num=` and `\ang`:
+  1. Speed of light: \(c = 2.99792458 x 10^8 m/s\)  
   2. Standard atmospheric pressure: 1013.25 hPa  
   3. A right angle is 90° but navigating is done in the direction 1°2′3″ SSW.
 
 
 :::::::::::::::::::::::: solution
-% 1. Speed of light
+1. Speed of light
+```latex 
 \qty{2.99792458e8}{\metre\per\second}
+```
 
-% 2. Standard atmospheric pressure
+2. Standard atmospheric pressure
+```latex 
 \qty{1013.25}{\hecto\pascal}
+``` 
 
-% 3. A right angle
+3. A right angle
+```latex
 \ang{90}; \ang{1;2;3} SSW
+```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -378,7 +384,7 @@ Using the specifically provided macros of the package has several benefits.
 
 - Inline math mode is marked with `$ ... $` or `\(...\)`
 - Display math mode is marked with `\[ ... \]`
-- Use `\qty{}{}` or `\unit{}` for properly writing numbers with their scientific unit.
+- Use `\qty{}{}`, `\num{}` or `\unit{}` for properly writing numbers and any scientific unit.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::: spoiler
