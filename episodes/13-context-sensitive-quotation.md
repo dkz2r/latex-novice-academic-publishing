@@ -221,9 +221,6 @@ Old form: “colour” → “colou\textdel{r}”
 Insersion: “The quick \textins{brown} fox.”
 ```
 
-
-::::::::::::::::::::::::::::::::::::: challenge
-
 ## Challenge 2: Auxiliary Commands
 
 - Take the sentence: “The quick brown fox jumps over the lazy dog.”
@@ -260,6 +257,8 @@ Define the way of a source is displayed after the blockquote:
 \renewcommand{\mkccitation}[1]{\footnote{#1}}
 ```
 This will put the references in a footnote.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
