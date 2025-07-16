@@ -5,6 +5,7 @@ exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
+
 - How can I semantically markup quotes so they adapt to language and style?
 - What is the benefit of letting `csquotes` integrate with `biblatex` for quoting?
 - How do I switch between different quotation styles (e.g. English “…” vs. German „…“)?
@@ -13,6 +14,7 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
+
 By the end of this lesson, learners will be able to:
 
 1. Explain the difference between inline quotes, block quotes, and semantic quoting.
@@ -67,7 +69,7 @@ you write:
 
 Here is a full example.
 ```latex
-According to Charles Hoare, \enquote{Documentation must be regarded 
+According to Charles Hoare, \enquote{Documentation must be regarded
 as \enquote*{an integral part} of the process of design and coding.}
 (1973, p. 195)
 ```
@@ -79,8 +81,8 @@ For longer quotations you can use:
 
 ```latex
 \blockquote[see Hoare 1973, p. 195]{%
- Documentation must be regarded as an integral part of the process of design and coding. 
- A good programming language will encourage and assist the programmer to write clear, 
+ Documentation must be regarded as an integral part of the process of design and coding.
+ A good programming language will encourage and assist the programmer to write clear,
  self-documenting code, and even perhaps to develop and display a pleasant style of writing.%
 }
 ```
@@ -206,12 +208,12 @@ Die Dokumentation muss als integraler Bestandteil des Entwurfs- und Kodierungspr
 
 When quoting text in a formal way, any changes applied to the quoted material—such as omissions, insertions, or deletions—should be explicitly marked. The `csquotes` package provides three auxiliary commands for this purpose:
 
-- `\textelp{}` / `\textelp{⟨text⟩}` / `\textelp*{⟨text⟩}`  
-  Prints an ellipsis to indicate omitted material. With an argument, it also shows inserted text in brackets. The starred form reverses insertion order. 
-- `\textins{⟨text⟩}` / `\textins*{⟨text⟩}`  
-  Marks added text in square brackets. The starred variant is intended for small modifications (e.g. capitalization). 
-- `\textdel{⟨text⟩}`  
-  Indicates deletion by printing empty brackets; the omitted text itself is not displayed. 
+- `\textelp{}` / `\textelp{⟨text⟩}` / `\textelp*{⟨text⟩}`
+  Prints an ellipsis to indicate omitted material. With an argument, it also shows inserted text in brackets. The starred form reverses insertion order.
+- `\textins{⟨text⟩}` / `\textins*{⟨text⟩}`
+  Marks added text in square brackets. The starred variant is intended for small modifications (e.g. capitalization).
+- `\textdel{⟨text⟩}`
+  Indicates deletion by printing empty brackets; the omitted text itself is not displayed.
 
 
 ```latex
