@@ -34,13 +34,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An Introduction to Using LaTeX for Academic Publishing" src="../assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An Introduction to Using LaTeX for Academic Publishing" src="../assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -352,7 +352,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-mathematics.html">10. Mathematics</a>
+        <a href="10-mathematics-and-scientific-units.html">10. Mathematics</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -364,7 +364,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="11-text-and-spacing.html">11. Fonts and Spacing</a>
+        <a href="11-font-format-and-spacing.html">11. Fonts, Formatting and Spacing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -388,7 +388,7 @@
 <div class="accordion accordion-flush" id="accordionFlush14">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading14">
-        <a href="13-structuring-sources.html">13. Structuring Sources</a>
+        <a href="13-context-sensitive-quotation.html">13. Context Sensitive Quotations</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -400,7 +400,7 @@
 <div class="accordion accordion-flush" id="accordionFlush15">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading15">
-        <a href="14-font-and-encoding.html">14. Fonts and Encodings</a>
+        <a href="14-structuring-sources.html">14. Structuring Sources</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -412,7 +412,7 @@
 <div class="accordion accordion-flush" id="accordionFlush16">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading16">
-        <a href="15-documentation-and-finding-help.html">15. Documentation and Finding Help</a>
+        <a href="15-loading-and-manipulating-data.html">15. Loading and Manipulating Data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -424,7 +424,7 @@
 <div class="accordion accordion-flush" id="accordionFlush17">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading17">
-        <a href="16-loading-and-manipulating-data.html">16. Loading and Manipulating Data</a>
+        <a href="16-documentation-and-finding-help.html">16. Documentation and Finding Help</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -490,7 +490,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Introduction to the LaTeX Workflow</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2025-07-16 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -611,7 +611,20 @@ documents, but you are not limited to using it. Any program that can
 edit text files can be used to write LaTeX, which we can then compile
 from the command line.</p>
 <p>You can use any text editor to write your LaTeX code. Some popular
-text editors for LaTeX include: - <a href="https://code.visualstudio.com/" class="external-link">Visual Studio Code</a> - <a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a> - <a href="https://www.vim.org/" class="external-link">Vim</a> - Notepad++ (Windows only)</p>
+text editors for LaTeX include:</p>
+<ul>
+<li>
+<a href="https://code.visualstudio.com/" class="external-link">Visual Studio
+Code</a><br>
+</li>
+<li>
+<a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a><br>
+</li>
+<li>
+<a href="https://www.vim.org/" class="external-link">Vim</a><br>
+</li>
+<li>Notepad++ (Windows only)</li>
+</ul>
 <p>We will continue to demonstrate with TeXworks, but you can use any
 text editor you prefer.</p>
 <p>To compile a LaTeX document from the command line, you can use the
@@ -623,13 +636,22 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
-<p>Useful commands for navigating the command line: -
+<p>Useful commands for navigating the command line:</p>
+<ul>
+<li>
 <code>cd &lt;directory&gt;</code>: Change directory to
-<code>&lt;directory&gt;</code>. - <code>ls</code> (Linux/macOS) or
-<code>dir</code> (Windows): List the files in the current directory. -
-<code>pwd</code> (Linux/macOS): Print the current working directory.</p>
+<code>&lt;directory&gt;</code>.<br>
+</li>
+<li>
+<code>ls</code> (Linux/macOS) or <code>dir</code> (Windows): List
+the files in the current directory.<br>
+</li>
+<li>
+<code>pwd</code> (Linux/macOS): Print the current working
+directory.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -657,6 +679,38 @@ Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb&gt;
 Output written on main.pdf (1 page, 21048 bytes).
 Transcript written on main.log.</code></pre>
+<p>You can also use the compiler LuaLaTeX which is more powerful but
+might take a little bit longer to generate the pdf.</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">lualatex</span> main.tex</span></code></pre>
+</div>
+<p>The output is this:</p>
+<pre><code>This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)
+ restricted system commands enabled.
+(./main.tex
+LaTeX2e &lt;2025-06-01&gt; patch level 1
+L3 programming layer &lt;2025-07-11&gt;
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)
+No file main.aux.
+
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./main.aux))
+ 406 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 4 attribute, 48 glue_spec
+, 4 attribute_list, 1 write nodes
+   avail lists: 2:38,3:4,4:1,5:26,6:2,7:56,9:24
+&lt;/usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.o
+tf&gt;&lt;/usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regul
+ar.otf&gt;
+Output written on main.pdf (1 page, 4850 bytes).
+Transcript written on main.log.</code></pre>
+<p>Notice how the size of the pdf is about one forth when compiling with
+LuaLaTeX compared to pdflatex.</p>
 <p>In the directory where you ran the command, you should now see a new
 file called <code>main.pdf</code>, as well as some other files that were
 created during the compilation process. The <code>main.pdf</code> file
@@ -706,7 +760,7 @@ episode.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 
 </div>
@@ -746,7 +800,7 @@ episode.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 
 </div>
@@ -768,7 +822,7 @@ editor, the preview pane, and the menu bar.</li>
 <li>We can compile a LaTeX document by clicking the “Typeset” button in
 the TeXworks editor.</li>
 <li>We can also compile a LaTeX document from the command line using the
-<code>pdflatex</code> command.</li>
+<code>pdflatex</code> or <code>lualatex</code> command.</li>
 </ul>
 </div>
 </div>
@@ -997,7 +1051,7 @@ them with a backslash. For example,</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>What about the <code>\</code> character?</p>
 <p>The <code>\</code> character is used to escape other characters in
@@ -1072,7 +1126,7 @@ out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Each section of a LaTeX document must be enclosed in a pair of
 <code>\begin{...}</code> and <code>\end{...}</code>. This document is
@@ -1098,7 +1152,7 @@ missing the <code>\begin{document}</code> command.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>We need to use escapes before each of the special characters. The
 following LaTeX code will display the text correctly:</p>
@@ -1159,7 +1213,7 @@ new project folder to test this out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The command <code>\par</code> initiates a new paragraph for us even
 if we write text in just one line (see Option C). Solely, Option B out
@@ -1191,7 +1245,7 @@ Even more, I can write # and ^ correctly using LaTeX.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Answer </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>We need to use <code>\par</code> to initiate a new paragraph without
 using a new line of code. Moreover, we need to use escapes before each
@@ -1230,7 +1284,7 @@ or hovering over the red circle in the text editor.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -1920,7 +1974,7 @@ list?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You would need to change the <code>enumerate</code> environment to
 <code>itemize</code>:</p>
@@ -1971,7 +2025,7 @@ list?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2021,7 +2075,7 @@ list?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2065,7 +2119,7 @@ list?</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-03.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -2079,7 +2133,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-document-classes"><p>Content from <a href="05-document-classes.html">Using Document Classes</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2025-07-16 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/05-document-classes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -2143,6 +2197,27 @@ name, for example:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>[12pt]{<span class="ex">article</span>}</span></code></pre>
 </div>
+<p>But we can add other parameters to this command to change the overall
+layout of the document. For example, we can set the size of the document
+to A4 paper by using:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper]{<span class="ex">article</span>}</span></code></pre>
+</div>
+<p>We can also change the entire document to a two-column layout by
+using:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>[twocolumn]{<span class="ex">article</span>}</span></code></pre>
+</div>
+<p>And we can of course combine these options:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt,twocolumn]{<span class="ex">article</span>}</span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2187,24 +2262,24 @@ files in this project as we want. Let’s create a new file called
 </div>
 </div>
 </div>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">letter</span>}</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">letter</span>}{Some Address<span class="fu">\\</span>Some Street<span class="fu">\\</span>Some City}</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="fu">\opening</span>{Dear Sir or Madam,}</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>The text goes Here</span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="fu">\closing</span>{Yours,}</span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">letter</span>}</span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">letter</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">letter</span>}{Some Address<span class="fu">\\</span>Some Street<span class="fu">\\</span>Some City}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="fu">\opening</span>{Dear Sir or Madam,}</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>The text goes Here</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="fu">\closing</span>{Yours,}</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">letter</span>}</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <div id="callout3" class="callout">
 <div class="callout-square">
@@ -2233,22 +2308,22 @@ the usage of version control systems like Git to track changes in the
 presentation, and it can be compiled to PDF for easy sharing.</p>
 <p>Let’s create a simple presentation using the <code>beamer</code>
 document class. Start another new document called “slides.tex”.</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>The beamer document class is a good starting point for creating a presentation.</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>Being entirely text-based, it's not as powerful or user-friendly as modern presentation software.</span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>The beamer document class is a good starting point for creating a presentation.</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>Being entirely text-based, it's not as powerful or user-friendly as modern presentation software.</span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <p>When you compile this document, you should end up with a document
 that has two pages, each with the text of each slide centered in the
@@ -2271,7 +2346,7 @@ style</li>
 <li>
 <code>KOMA-Script</code>: a set of classes that provide a more
 modern look and feel to LaTeX documents by providing parallel classes to
-the base classes</li>
+the base classes (<code>scrbook</code>, <code>scrartcl</code>).</li>
 <li>
 <code>memoir</code>: a class that provides a lot of functionality
 for creating books, reports, and articles</li>
@@ -2307,7 +2382,7 @@ episode.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><code>presentation</code> is not a standard LaTeX document class -
 the correct class is <code>slides</code>. Also <code>memoir</code> is
@@ -2326,28 +2401,28 @@ not a standard LaTeX document class, but a third-party class.</p>
 <p>Suppose we have the following LaTeX slide presentation, but we want
 to turn it into an article. We can change the document class from
 “slides” to “article”, but what happens? And why?</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">slides</span>}</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">slide</span>}</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>Apples are an edible fruit produced by an apple tree. The tree originated in Central Asia, but</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>has since been introduced to many other regions.</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">slide</span>}</span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">slide</span>}</span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>Some popular apple varieties include:</span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>  <span class="fu">\item</span> Gala</span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>  <span class="fu">\item</span> Fuji</span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>  <span class="fu">\item</span> Golden Delicious</span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">slide</span>}</span>
-<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">slides</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">slide</span>}</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>Apples are an edible fruit produced by an apple tree. The tree originated in Central Asia, but</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>has since been introduced to many other regions.</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">slide</span>}</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">slide</span>}</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>Some popular apple varieties include:</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>  <span class="fu">\item</span> Gala</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>  <span class="fu">\item</span> Fuji</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>  <span class="fu">\item</span> Golden Delicious</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">slide</span>}</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2357,7 +2432,7 @@ to turn it into an article. We can change the document class from
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>We can change the document class from “slides” to “article”, but the
 <code>slide</code> environment does not exist in the
@@ -2366,26 +2441,26 @@ to compile the document, complaining that the <code>slide</code>
 environment is not defined. We need to change the <code>slide</code>
 environments to <code>sections</code> or <code>subsections</code> to
 maintain the structure of the document:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">\section</span>{Apples}</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>Apples are an edible fruit produced by an apple tree. The tree originated in Central Asia, but</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>has since been introduced to many other regions.</span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="kw">\subsection</span>{Popular Apple Varieties}</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>Some popular apple varieties include:</span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>  <span class="fu">\item</span> Gala</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>  <span class="fu">\item</span> Fuji</span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>  <span class="fu">\item</span> Golden Delicious</span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="kw">\section</span>{Apples}</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>Apples are an edible fruit produced by an apple tree. The tree originated in Central Asia, but</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>has since been introduced to many other regions.</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="kw">\subsection</span>{Popular Apple Varieties}</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>Some popular apple varieties include:</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>  <span class="fu">\item</span> Gala</span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>  <span class="fu">\item</span> Fuji</span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>  <span class="fu">\item</span> Golden Delicious</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2401,27 +2476,27 @@ maintain the structure of the document:</p>
 <p>Consider the following minimal example of an initial
 <code>beamer</code> presentation. Let’s create a new file called
 “beamer.tex” and copy the following code as a template into it:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">\title</span>{Sample title}</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="fu">\author</span>{Anonymous}</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">\institute</span>{My Institution}</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="fu">\date</span>{2021}</span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
-<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a><span class="fu">\frametitle</span>{Sample frame title}</span>
-<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>This is some text in the first frame. This is some text in the first frame. This is some text in</span>
-<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>the first frame.</span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
-<span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">\title</span>{Sample title}</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="fu">\author</span>{Anonymous}</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="fu">\institute</span>{My Institution}</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="fu">\date</span>{2021}</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="fu">\frametitle</span>{Sample frame title}</span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a>This is some text in the first frame. This is some text in the first frame. This is some text in</span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>the first frame.</span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <p>Adapt these slides in the following way:</p>
 <ol style="list-style-type: decimal">
@@ -2446,37 +2521,37 @@ bullet points your key takeaways from the previous episodes.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="fu">\title</span>{LaTeX Workshop}</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="fu">\author</span>{My Name}</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="fu">\institute</span>{ABCD Project Group}</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="fu">\date</span>{2025}</span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="fu">\frametitle</span>{What I have learned in this episode}</span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>My key takeaway from this episode.</span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="fu">\frametitle</span>{What I learned in the previous episodes}</span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 1</span>
-<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 2</span>
-<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 3</span>
-<span id="cb7-23"><a href="#cb7-23" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
-<span id="cb7-24"><a href="#cb7-24" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
-<span id="cb7-25"><a href="#cb7-25" tabindex="-1"></a></span>
-<span id="cb7-26"><a href="#cb7-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">beamer</span>}</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="co">%Information to be included in the title page:</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="fu">\title</span>{LaTeX Workshop}</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="fu">\author</span>{My Name}</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="fu">\institute</span>{ABCD Project Group}</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="fu">\date</span>{2025}</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="fu">\frame</span>{<span class="fu">\titlepage</span>}</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="fu">\frametitle</span>{What I have learned in this episode}</span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>My key takeaway from this episode.</span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">frame</span>}</span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a><span class="fu">\frametitle</span>{What I learned in the previous episodes}</span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 1</span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 2</span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>  <span class="fu">\item</span> Key learning 3</span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">frame</span>}</span>
+<span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a></span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2505,7 +2580,7 @@ bullet points your key takeaways from the previous episodes.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-04.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4711,11 +4786,11 @@ what our LaTeX document looks like</a>.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-10-mathematics"><p>Content from <a href="10-mathematics.html">Mathematics</a></p>
+</section></section><section id="aio-10-mathematics-and-scientific-units"><p>Content from <a href="10-mathematics-and-scientific-units.html">Mathematics</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2025-07-16 |
 
-        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/10-mathematics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/10-mathematics-and-scientific-units.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -4849,7 +4924,7 @@ backslash(<code>\</code>) here.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Math Mode in LaTeX is not just for LaTeX users! It is also used other
 tools like Jupyter Notebooks, R Markdown and many markdown processors.
@@ -4985,7 +5060,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5019,7 +5094,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
@@ -5070,7 +5145,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5097,6 +5172,126 @@ find the following LaTeX template helpful:</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="scientific-units">Scientific Units<a class="anchor" aria-label="anchor" href="#scientific-units"></a>
+</h2>
+<hr class="half-width">
+<p>To write numbers with their scientific unit you can use the package
+<code>\siunitx</code>. This provides various commands, so that instead
+of writing</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>The road is about 934.54 m long.</span></code></pre>
+</div>
+<p>you write</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>The road is about <span class="fu">\qty</span>{934.54}{<span class="fu">\m</span>} long.</span></code></pre>
+</div>
+<p>You load the package in your preamble</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">siunitx</span>}</span></code></pre>
+</div>
+<p>Using the specifically provided macros of the package has several
+benefits.</p>
+<ul>
+<li><p><strong>Consistent formatting</strong><br>
+All numbers and units are printed with the correct spacing and font
+shape.</p></li>
+<li><p><strong>Locale and digit grouping</strong><br>
+You can automatically switch decimal markers (comma vs. point, depending
+on your current language/locale of the section) and group
+digits:</p></li>
+</ul>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a> <span class="fu">\num</span>{12345.678}      <span class="co">% prints “12 345.678” or “12 345,678” depending on locale</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a> <span class="fu">\numlist</span>{11;33;55;77}</span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a> <span class="fu">\numproduct</span>{11 x 33}</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a> <span class="fu">\numrange</span>{11}{33}</span></code></pre>
+</div>
+<ul>
+<li>
+<strong>Unit parsing</strong><br>
+Composite units are built from predefined macros:</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a> <span class="fu">\qty</span>{9.81}{<span class="fu">\metre\per\second\squared</span>}</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a> <span class="fu">\qty</span>{1}{<span class="fu">\kilo\gram\metre\per\second\squared</span>}</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a> <span class="fu">\qty</span>[per-mode = symbol]{1}{<span class="fu">\kilo\gram\metre\per\second\squared</span>}</span></code></pre>
+</div>
+<ul>
+<li>
+<p><strong>Uncertainties, lists and ranges</strong><br>
+Express measurement errors and intervals:</p>
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">\qty</span>{1.23(4)}{<span class="fu">\metre</span>} </span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="fu">\qtylist</span>{0.13;0.67;0.80}{<span class="fu">\milli\metre</span>} </span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="fu">\qtyrange</span>{20}{25}{<span class="fu">\celsius</span>} </span></code></pre>
+</div>
+</li>
+<li><p><strong>Tables with aligned numbers</strong><br>
+Use the <code>S</code> column specifier in <code>tabular</code>
+environments to align on decimal markers:</p></li>
+</ul>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a> <span class="kw">\begin</span>{<span class="ex">tabular</span>}{S[table-format=3.2] c}</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a> <span class="fu">\toprule</span></span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a> {Distance} <span class="op">&amp;</span> {Time} <span class="fu">\\</span></span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a> <span class="fu">\midrule</span></span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a> 123.45 <span class="op">&amp;</span> <span class="fu">\unit</span>{<span class="fu">\second</span>} <span class="fu">\\</span></span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a> 7.8    <span class="op">&amp;</span> <span class="fu">\unit</span>{<span class="fu">\minute</span>} <span class="fu">\\</span></span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a> <span class="fu">\bottomrule</span></span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a> <span class="kw">\end</span>{<span class="ex">tabular</span>}</span></code></pre>
+</div>
+<div id="challenge4" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<ul>
+<li>Write the following quantities using
+<code>\qty` or `\num=` and `\ang</code>:
+<ol style="list-style-type: decimal">
+<li>Speed of light: <span class="math inline">\(c = 2.99792458 x
+10^8\)</span>,m/s<br>
+</li>
+<li>Standard atmospheric pressure: 1013.25 hPa<br>
+</li>
+<li>A right angle is 90° but navigating is done in the direction 1°2′3″
+SSW.</li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div class="accordion-body">
+<p>% 1. Speed of light </p>
+<p>% 2. Standard atmospheric pressure </p>
+<p>% 3. A right angle ; SSW</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -5110,6 +5305,8 @@ find the following LaTeX template helpful:</p>
 </li>
 <li>Display math mode is marked with <code>\[ ... \]</code>
 </li>
+<li>Use <code>\qty{}{}</code> or <code>\unit{}</code> for properly
+writing numbers with their scientific unit.</li>
 </ul>
 </div>
 </div>
@@ -5119,7 +5316,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-09.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -5131,11 +5328,11 @@ what our LaTeX document looks like</a>.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-11-text-and-spacing"><p>Content from <a href="11-text-and-spacing.html">Fonts and Spacing</a></p>
+</section></section><section id="aio-11-font-format-and-spacing"><p>Content from <a href="11-font-format-and-spacing.html">Fonts, Formatting and Spacing</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2025-07-16 |
 
-        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/11-text-and-spacing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/11-font-format-and-spacing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -5168,7 +5365,68 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="paragraph-spacing">Paragraph Spacing<a class="anchor" aria-label="anchor" href="#paragraph-spacing"></a>
+<section><h2 class="section-heading" id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
+</h2>
+<hr class="half-width">
+<p>We saw earlier that we can create commands of our own in LaTeX, but
+there is also a <code>renewcommand</code> command that let’s us change
+the definition of an existing command. This might be useful if you want
+the definition of a command to change throughout the document, however
+there are also some commands that are pre-defined that we can modify
+with this command.</p>
+<p>For Example, we can change the font of the entire document by adding
+the following line to the <code>preamble/custom-commands.tex</code>
+file:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co">% Change the font of the entire document to a monospace font</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\ttdefault</span>}</span></code></pre>
+</div>
+<p>When you compile the document you should see something like this:</p>
+<p>IMAGE GOES HERE</p>
+<div class="section level3">
+<h3 id="more-fonts">More Fonts<a class="anchor" aria-label="anchor" href="#more-fonts"></a>
+</h3>
+<p>Unfortunately, the default LaTeX installation does not come with many
+fonts. However, there are additional packages that you can include if
+you are looking for a specific font. Let’s try making our document look
+like it’s using the <code>Times New Roman</code> font. To do this, all
+we need to do is add the following line to the preamble:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}</span></code></pre>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>You can find a large selection of fonts at <a href="https://www.tug.org/FontCatalogue/" class="external-link">The LaTeX Font Catalogue</a>,
+complete with examples of how to use them in your document.</p>
+</div>
+</div>
+</div>
+<p>When you are using <code>lualatex</code> (or <code>xelatex</code>)
+for compiling you can easily use all the fonts that are installed
+locally on your computer:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">fontspec</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">% Set the main (serif) font:</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="fu">\setmainfont</span>{Times New Roman}</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">% Set the sans-serif and monospace fonts too, if you like:</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="fu">\setsansfont</span>{Arial}</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="fu">\setmonofont</span>{Courier New}</span></code></pre>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="paragraph-spacing">Paragraph Spacing<a class="anchor" aria-label="anchor" href="#paragraph-spacing"></a>
 </h2>
 <hr class="half-width">
 <p>A common style in LaTeX is to have no indents for paragraphs, but to
@@ -5178,12 +5436,12 @@ incorporate a blank line between them. We can achieve this using the
 commands without having to write a lot of text: the <code>lipsum</code>
 package. This package provides the <code>\lipsum</code> command, which
 generates “Lorem Ipsum” text.</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span></code></pre>
 </div>
-<div id="callout1" class="callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -5200,29 +5458,36 @@ bonorum et malorum</em> by Marcus Tullius Cicero.</p>
 </div>
 <p>In our document, we can now use a blank line to separate
 paragraphs:</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">\section</span>{Fonts and Spacing}</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">% Generate some "Lorem Ipsum" text</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">% The parameters mean "include paragraphs 1 thru 2" from the "Lorem Ipsum" text</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">\lipsum</span>[1-2]</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\section</span>{Formatting and Spacing}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">% Generate some "Lorem Ipsum" text</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">% The parameters mean "include paragraphs 1 thru 2" from the "Lorem Ipsum" text</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="fu">\lipsum</span>[1-2]</span></code></pre>
 </div>
 <p>Compile the document and take a look at our section. You should see
 that our first paragraph has no indent, and there is no blank line
 between it and the following paragraph. The second paragraph does have
 an indent. This is the default behavior in LaTeX.</p>
 <p>Now let’s add our package:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}</span></code></pre>
 </div>
 <p>Keep an eye on the preview pane as you compile the document. You
 should see that the first paragraph now has a blank line between it and
 the second paragraph, and there is no indent on the first line of the
 second paragraph.</p>
+<p>When you use a KOMA-Script documentclass you get the same result
+using a global option:</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>[parskip=full]{<span class="ex">scrbook</span>}</span></code></pre>
+</div>
 </section><section><h2 class="section-heading" id="forcing-a-new-line">Forcing a New Line<a class="anchor" aria-label="anchor" href="#forcing-a-new-line"></a>
 </h2>
 <hr class="half-width">
@@ -5241,7 +5506,7 @@ to force a new line:</p>
 <hr class="half-width">
 <p>We can insert a thin space (about half the normal thickness) use the
 <code>\,</code> command.</p>
-<div id="callout2" class="callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -5267,11 +5532,11 @@ to force a new line:</p>
 <p>Very rarely, for example when creating a title page, you might want
 to add explicit horizontal or vertical space. We can do this using the
 <code>\hspace</code> and <code>\vspace</code> commands:</p>
-<div class="codewrapper sourceCode" id="cb4">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">\hspace</span>{1cm} <span class="co">% 1cm of horizontal space</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">\vspace</span>{1cm} <span class="co">% 1cm of vertical space</span></span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">\hspace</span>{1cm} <span class="co">% 1cm of horizontal space</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">\vspace</span>{1cm} <span class="co">% 1cm of vertical space</span></span></code></pre>
 </div>
 <p>We can also use the <code>\vfill</code> command to fill the remaining
 space on a page. This is useful for centering content vertically on a
@@ -5308,7 +5573,16 @@ the base font size:</p>
 <code>\small</code> for small text</li>
 <li>
 <code>\footnotesize</code> for footnote text</li>
-</ul></section><section><h2 class="section-heading" id="text-alignment">Text Alignment<a class="anchor" aria-label="anchor" href="#text-alignment"></a>
+</ul>
+<p>You can further customize your font size</p>
+<pre><code>{\fontsize{14}{16}\selectfont This text is 14pt with 16pt leading.}</code></pre>
+<p>If you want it really big:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>{<span class="fu">\fontsize</span>{10em}{4em}<span class="fu">\selectfont</span> This text is very heigh now with some leading.}</span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="text-alignment">Text Alignment<a class="anchor" aria-label="anchor" href="#text-alignment"></a>
 </h2>
 <hr class="half-width">
 <p>We can align text using the following commands:</p>
@@ -5325,24 +5599,24 @@ the base font size:</p>
 <p>Using all of this, let’s create a simple title page for our document.
 We’ll put this just after the <code>\begin{document}</code> command, and
 enclose everything in a <code>titlepage</code> environment:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">titlepage</span>}</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="fu">\centering</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>    <span class="fu">\huge</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    <span class="fu">\textbf</span>{My Example Document}</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>    <span class="fu">\vspace</span>{1cm}</span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    <span class="fu">\normalsize</span></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    <span class="fu">\textit</span>{An example of a LaTeX document}</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>    <span class="fu">\vfill</span></span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>    January 1, 2000</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">titlepage</span>}</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>    <span class="fu">\centering</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    <span class="fu">\huge</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>    <span class="fu">\textbf</span>{My Example Document}</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    <span class="fu">\vspace</span>{1cm}</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>    <span class="fu">\normalsize</span></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    <span class="fu">\textit</span>{An example of a LaTeX document}</span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    <span class="fu">\vfill</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>    January 1, 2000</span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span></code></pre>
 </div>
-<div id="callout3" class="callout">
+<div id="callout4" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -5393,21 +5667,21 @@ italic text, smaller than the title.</li>
 <p>You can use the commands <code>\vspace</code> and <code>\vfill</code>
 to make fill blank space between the items and may find the following
 LaTeX template helpful:</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">titlepage</span>}</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span>
-<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">titlepage</span>}</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -5419,28 +5693,28 @@ LaTeX template helpful:</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">titlepage</span>}</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="fu">\centering</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    <span class="fu">\huge</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>    <span class="fu">\textbf</span>{My Custom LaTeX Title Page}</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>    <span class="fu">\vspace</span>{1cm} <span class="co">% Space between title and subtitle</span></span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>    <span class="fu">\normalsize</span></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>    <span class="fu">\textit</span>{A Sample Document with Custom Formatting}</span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>    <span class="fu">\vfill</span> <span class="co">% Fill remaining space</span></span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>    <span class="fu">\large</span></span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a>    January 1, 2025</span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">titlepage</span>}</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>    <span class="fu">\centering</span></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>    <span class="fu">\huge</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>    <span class="fu">\textbf</span>{My Custom LaTeX Title Page}</span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a>    <span class="fu">\vspace</span>{1cm} <span class="co">% Space between title and subtitle</span></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a>    <span class="fu">\normalsize</span></span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a>    <span class="fu">\textit</span>{A Sample Document with Custom Formatting}</span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a>    <span class="fu">\vfill</span> <span class="co">% Fill remaining space</span></span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a>    <span class="fu">\large</span></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a>    January 1, 2025</span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -5471,21 +5745,21 @@ indentation).</li>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}  <span class="co">% To generate sample text</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}  <span class="co">% Adds space between paragraphs without indentation</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="kw">\section</span>{Paragraph Spacing Example}</span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="co">% Generating Lorem Ipsum text with the lipsum package</span></span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="fu">\lipsum</span>[1-2]</span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}  <span class="co">% To generate sample text</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}  <span class="co">% Adds space between paragraphs without indentation</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a><span class="kw">\section</span>{Paragraph Spacing Example}</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a><span class="co">% Generating Lorem Ipsum text with the lipsum package</span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a><span class="fu">\lipsum</span>[1-2]</span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -5521,7 +5795,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-12-citations-and-references"><p>Content from <a href="12-citations-and-references.html">Citations and References</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2025-07-16 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -5582,15 +5856,16 @@ fields.</p>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="dt">author</span>  = {Thomas, Christine M.},</span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="dt">title</span>   = {The Fascinating World of Penguins},</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>  <span class="dt">journal</span> = {Penguin Chronicles},</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="dt">year</span>    = {2008},</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>  <span class="dt">date</span>    = {2008},</span>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>  <span class="dt">pages</span>   = {7009-7024},</span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>}</span>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="va">@book</span>{<span class="ot">Graham1995</span>,</span>
 <span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>  <span class="dt">author</span>    = {Richard L. Graham and Lisa A. Harris},</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>  <span class="dt">title</span>     = {The Humble Paperclip: Master of the Modern Office},</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>  <span class="dt">publisher</span> = {Scranton Press},</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>  <span class="dt">year</span>      = {1995},</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>}</span></code></pre>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>  <span class="dt">title</span>     = {The Humble Paperclip},</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>  <span class="dt">subtitle</span>  = {Master of the Modern Office},</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>  <span class="dt">publisher</span> = {Scranton Press},</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>  <span class="dt">year</span>      = {1995},</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>}</span></code></pre>
 </div>
 <p>This is an example of a BiBTeX file that contains a reference for an
 article and another for a book. Each entry type starts with a the
@@ -5608,7 +5883,10 @@ fields you need to give depends on the type of entry.</p>
 <div class="callout-content">
 <p>You might notice that in the <code>author</code> field, each entry is
 separated by the word <code>and</code>. This is essential: the format of
-the output needs to know which author is which.</p>
+the output needs to know which author is which. When using
+<code>biblatex</code> this applies also to the fields
+<code>publisher</code> and <code>location</code>, in which you can also
+have many values.</p>
 <p>You might also notice that in the article title, some entries are in
 an extra set of braces. This is to prevent any case-changing that might
 be applied to the title.</p>
@@ -5641,7 +5919,7 @@ on your own - an identical example is provided in the
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" aria-labelledby="nav-tab-1-biblatex" role="tabpanel">
+<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-biblatex">
 <p>Check to make sure that your <code>main.tex</code> file is in the
 same directory as your <code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
@@ -5694,43 +5972,54 @@ style, but with more control.</li>
 <li>
 <code>\footcite{key}</code>: Cite the reference in a footnote.</li>
 </ul>
-<p>A plain citation looks like this , while multiple citations look like
-this . We already used autocite, but we can also use the similar
-smartcite . The benefit with smartcite is that you can setup that
-e.g. all references should go into a footnote. You can continue using
-smartcite when you are <em>in</em> a footnote and it will then detect
-that there is no need for creating another footnote but behaving like
-autocite.</p>
-<pre><code>
-
-#### Good to know
-
-If you want to have all entries of your referencing file in your bibliography,
-you can either go with `\cite{key1,key2,.....}` for all entries or you type
-`\cite{*}`.
-This will print all entries first in your text section and puts them into the
-bibliography. You can also go with `\nocite{*}` then the reference is only
-internally called and put into the bibliography.
-
-
-
-It is always good to tidy up your `.bib`-file and use the fields accordingly. In
-case you want to omit certain fields in your bibliography you can do so on the
-fly:
-```latex
-\AtEveryBibitem{
-  \clearfield{url}
-  \clearfield{month}
-  \clearfield{note}
-  \clearfield{isbn}
-  \clearname{translator}
-  \clearlist{language}
-}</code></pre>
+<p>A plain citation looks like this <code>\cite{Graham1995}</code>,
+while multiple citations look like this
+<code>\cites{Graham1995}[see][p. 42]{Thomas2008}</code>. We already used
+autocite, but we can also use the similar smartcite
+<code>\smartcite{Graham1995}</code>. The benefit with smartcite is that
+you can setup that e.g. all references should go into a footnote. You
+can continue using smartcite when you are <em>in</em> a footnote and it
+will then detect that there is no need for creating another footnote but
+behaving like autocite.</p>
+<p>Furthermore you can use more commands to get the author, title or the
+date of the publication directly into your document:</p>
+<ul>
+<li>
+<code>\citeauthor{Graham1995}</code>: Graham and Harris<br>
+</li>
+<li>
+<code>\citetitle{Graham1995}</code>: “The Humble Paperclip”<br>
+</li>
+<li>
+<code>\citeyear{Graham1995}</code>: 1995</li>
+</ul>
+<p>The outcome and display depends on your style.</p>
+<p>If you want to have all entries of your referencing file in your
+bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
+for all entries or you type <code>\cite{*}</code>. This will print all
+entries first in your text section and puts them into the bibliography.
+You can also go with <code>\nocite{*}</code> then the reference is only
+internally called and put into the bibliography.</p>
+<p>It is always good to tidy up your <code>.bib</code>-file and use the
+fields accordingly. In case you want to omit certain fields in your
+bibliography you can do so on the fly:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">\AtEveryBibitem</span>{</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">\clearfield</span>{url}</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">\clearfield</span>{month}</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">\clearfield</span>{note}</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  <span class="fu">\clearfield</span>{isbn}</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">\clearname</span>{translator}</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  <span class="fu">\clearlist</span>{language}</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>}</span></code></pre>
+</div>
 <p>With this command you will delete the content of the fields in the
 bibliography. Note, that there is <code>\clear*field*</code>,
 <code>\clear*name*</code> and <code>\clear*list*</code>.</p>
 </div>
-<div id="nav-tabpanel-1-natbib" class="tab-pane" aria-labelledby="nav-tab-1-natbib" role="tabpanel">
+<div id="nav-tabpanel-1-natbib" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-natbib">
 <p>We just need to make sure that the bibliography file is present in
 the project and properly referenced in our document. Check to make sure
 that your <code>main.tex</code> file is in the same directory as your
@@ -5908,13 +6197,13 @@ probably fix it.</p>
 <h3 class="code-label">BIBTEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bibtex" tabindex="0"><code class="sourceCode bibtex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="va">@misc</span>{<span class="ot">mikolov2013</span>,</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>      <span class="dt">title</span>={Efficient Estimation of Word Representations in Vector Space},</span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>      <span class="dt">author</span>={Tomas Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>      <span class="dt">year</span>={2013},</span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>      <span class="dt">eprint</span>={1301.3781},</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>      <span class="dt">archivePrefix</span>={arXiv},</span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>      <span class="dt">primaryClass</span>={cs.CL},</span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>      <span class="dt">url</span>={https://arxiv.org/abs/1301.3781},</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>      <span class="dt">title</span>         ={Efficient Estimation of Word Representations in Vector Space},</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>      <span class="dt">author</span>        ={Tomas Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>      <span class="dt">year</span>          ={2013},</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>      <span class="dt">eprint</span>        ={1301.3781},</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>      <span class="dt">archivePrefix</span> ={arXiv},</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>      <span class="dt">primaryClass</span>  ={cs.CL},</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>      <span class="dt">url</span>           ={https://arxiv.org/abs/1301.3781},</span>
 <span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>}</span></code></pre>
 </div>
 <p>We are using biblatex to manage our references, and we identify this
@@ -5977,11 +6266,409 @@ cite references in our document.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-13-structuring-sources"><p>Content from <a href="13-structuring-sources.html">Structuring Sources</a></p>
+</section></section><section id="aio-13-context-sensitive-quotation"><p>Content from <a href="13-context-sensitive-quotation.html">Context Sensitive Quotations</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2025-07-16 |
 
-        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/13-structuring-sources.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/13-context-sensitive-quotation.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can I semantically markup quotes so they adapt to language and
+style?</li>
+<li>What is the benefit of letting <code>csquotes</code> integrate with
+<code>biblatex</code> for quoting?</li>
+<li>How do I switch between different quotation styles (e.g. English “…”
+vs. German „…“)?</li>
+<li>How can I automatically hyphenate and nest quotations correctly in
+another language?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<p>By the end of this lesson, learners will be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Explain the difference between inline quotes, block quotes, and
+semantic quoting.</li>
+<li>Use <code>\enquote{…}</code> (and its variants) to produce
+context‑sensitive quotation marks.</li>
+<li>Reference a quoted passage with a citation that feeds into the
+bibliographic list.</li>
+<li>Switch quote styles to match locale conventions (e.g. German
+vs. English).</li>
+<li>Configure <code>csquotes</code> to handle nested quotes,
+foreign‑language quotes, and hyphenation.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Quotations play an essential role in scholarly writing, allowing you
+to bring in authoritative voices or preserve precise wording. But “dumb”
+straight ASCII quotes (<code>"like this"</code>) don’t adapt to language
+conventions, and block quotes can be cumbersome to format manually.</p>
+<p>The <strong><code>csquotes</code></strong> package makes all of this
+automatic:</p>
+<ul>
+<li>It defines semantic commands like <code>\enquote{…}</code>, which
+insert the right opening/closing marks based on the current language
+(e.g. “English style,” ‹French guillemets›, or „German quotes“).</li>
+<li>It integrates smoothly with <code>biblatex</code>, so you can attach
+a citation to a quote with
+<code>\blockquote[prenote][postnote]{…}</code> and have the entry appear
+in your bibliography.</li>
+<li>It handles nested quotations, switching automatically to secondary
+marks (e.g. single quotes) when you nest quotes.</li>
+<li>It can load language-specific hyphenation patterns so that breaking
+long quoted passages doesn’t lead to poorly shaped lines.</li>
+</ul>
+<p>Before we begin, make sure you’ve installed
+<code>csquotes</code>:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">tlmgr</span> install csquotes</span></code></pre>
+</div>
+<p>and that your document preamble loads it (ideally after the package
+<code>biblatex</code>):</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">csquotes</span>}</span></code></pre>
+</div>
+</section><div class="section level1">
+<h1 id="various-types-of-quotation">Various Types of Quotation<a class="anchor" aria-label="anchor" href="#various-types-of-quotation"></a>
+</h1>
+<div class="section level2">
+<h2 id="inline-quotes">Inline Quotes<a class="anchor" aria-label="anchor" href="#inline-quotes"></a>
+</h2>
+<p>Instead of typing this by hand:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>“She said, ‘Hello.’”</span></code></pre>
+</div>
+<p>you write:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">\enquote</span>{She said, <span class="fu">\enquote*</span>{Hello}.}</span></code></pre>
+</div>
+<ul>
+<li>
+<code>\enquote{…}</code> uses the main quote style.</li>
+<li>
+<code>\enquote*{…}</code> (star form) forces the inner quote style,
+even if not nested.</li>
+</ul>
+<p>Here is a full example.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>According to Charles Hoare, <span class="fu">\enquote</span>{Documentation must be regarded</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>as <span class="fu">\enquote*</span>{an integral part} of the process of design and coding.}</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>(1973, p. 195)</span></code></pre>
+</div>
+</div>
+<div class="section level2">
+<h2 id="text-or-block-quotes">Text or Block Quotes<a class="anchor" aria-label="anchor" href="#text-or-block-quotes"></a>
+</h2>
+<p>For longer quotations you can use:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">\blockquote</span>[see Hoare 1973, p. 195]{<span class="co">%</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a> Documentation must be regarded as an integral part of the process of design and coding.</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a> A good programming language will encourage and assist the programmer to write clear,</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a> self-documenting code, and even perhaps to develop and display a pleasant style of writing.<span class="co">%</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>}</span></code></pre>
+</div>
+<ul>
+<li>The optional bracket is a postnote (e.g. source or page
+number).</li>
+</ul>
+<p>It will produce an indented block and automatically insert quotation
+marks (or omit them, depending on style). There is also the
+<code>\textquote</code>-command but this is ommitted since
+<code>\blockquote</code> has the greater flexibility.</p>
+</div>
+</div>
+<div class="section level1">
+<h1 id="referencing-source-of-quote-to-biblatex-entry">Referencing Source of Quote to BibLaTeX-Entry<a class="anchor" aria-label="anchor" href="#referencing-source-of-quote-to-biblatex-entry"></a>
+</h1>
+<p>One of the biggest advantages of using <code>csquotes</code> is its
+interplay with <code>biblatex</code> as a way of referencing sources. To
+use this kind of quotes you also need to have the package
+<code>biblatex</code> loaded in your preamble.</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BIBTEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bibtex" tabindex="0"><code class="sourceCode bibtex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="va">@InCollection</span>{<span class="ot">Hoare1973</span>,</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="dt">author</span>    = {Charles Antony Richard Hoare},</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>  <span class="dt">title</span>     = {Hints on programming language design},</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  <span class="dt">editor</span>    = {C. Bunyan},</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  <span class="dt">booktitle</span> = {Computer Systems Reliability},</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>  <span class="dt">series</span>    = {State of the Art Report},</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>  <span class="dt">number</span>    = {20},</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>  <span class="dt">pages</span>     = {193--216},</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>  <span class="dt">year</span>      = {1973},</span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>  <span class="dt">url</span>       = {http://flint.cs.yale.edu/cs428/documentation/HintsPL.pdf},</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  <span class="dt">urlyear</span>   = {2018},</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>  <span class="dt">comment</span>   = {Documentation must be regarded as an integral part of the process of design and coding. A good programming language will encourage and assist the programmer to write clear, self-documenting code, and even perhaps to develop and display a pleasant style of writing.}</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>}</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">\blockcquote</span>[⟨prenote⟩][⟨postnote⟩]{⟨key⟩}[⟨punct⟩]{⟨text⟩}⟨tpunct⟩</span></code></pre>
+</div>
+<ul>
+<li>
+<strong>⟨prenote⟩</strong>: optional text before the citation
+(e.g. “see”, “cf.”).</li>
+<li>
+<strong>⟨postnote⟩</strong>: optional locator such as a page number
+(e.g. “193–216”).</li>
+<li>
+<strong>⟨key⟩</strong>: the BibLaTeX entry key
+(e.g. <code>Hoare1973</code>).</li>
+<li>
+<strong>⟨punct⟩</strong>: punctuation inserted <em>inside</em> the
+closing quote (e.g. a comma or period).</li>
+<li>
+<strong>⟨text⟩</strong>: the quoted passage itself.</li>
+<li>
+<strong>⟨tpunct⟩</strong>: punctuation inserted <em>after</em> the
+closing quote (e.g. a period or question mark).</li>
+</ul>
+<p>Here is an example:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">\blockcquote</span>[see][195]{Hoare1973}{Documentation must be regarded as an integral part of the process of design and coding. A good programming language will encourage and assist the programmer to write clear, self-documenting code, and even perhaps to develop and display a pleasant style of writing.}</span></code></pre>
+</div>
+<p>This will produce (with default settings for
+<code>biblatex</code>):</p>
+<blockquote>
+<p>Documentation must be regarded as an integral part of the process of
+design and coding. A good programming language will encourage and assist
+the programmer to write clear, self-documenting code, and even perhaps
+to develop and display a pleasant style of writing. [see 1, p. 195]</p>
+</blockquote>
+<p>and automatically add the <code>Hoare1973</code> entry to your
+bibliography when you run <code>\printbibliography</code>.</p>
+<div id="challenge-1-referencing-sources" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-1-referencing-sources" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Referencing Sources</h3>
+<div class="callout-content">
+<ul>
+<li>Add a new entry to your <code>references.bib</code> for a short
+article.</li>
+<li>Use <code>\textcquote</code> and <code>\blockcquote</code> to insert
+a two sentence quote with a pre- and postnote pointing to the entry you
+just created. Do you see a difference when you use
+<code>\textcquote</code> or <code>\blockcquote</code>?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>With default settings, quotes written with <code>\blockcquote</code>
+will be displayed in the same way as <code>\textcquote</code>. As soon
+as the text is longer than three complete lines of text, then the whole
+quote is indented and set as a block.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="foreign-language-quotes" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="foreign-language-quotes" class="callout-inner">
+<h3 class="callout-title">Foreign Language Quotes</h3>
+<div class="callout-content">
+<p><code>csquotes</code> can detect and adjust for foreign passages if
+you load <code>polyglossia</code> or <code>babel</code>. For
+example:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="bu">\usepackage</span>[ngerman,english]{<span class="ex">babel</span>}</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="bu">\usepackage</span>[autostyle]{<span class="ex">csquotes</span>}</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co">% In your document:</span></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="fu">\foreignquote</span>{german}{Er ist der Beste.}</span></code></pre>
+</div>
+<p>This switches to German quotes („…“) only for that passage, then
+returns to the main language.</p>
+<p>You can also nest foreign quotes:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">\enquote</span>{He said, <span class="fu">\foreignquote</span>{french}{Je ne sais quoi}, before leaving.}</span></code></pre>
+</div>
+<p>…which might render as (setting in your preamble
+<code>\usepackage[autostyle,french=guillemets]{csquotes}</code>): &gt;
+“He said, « Je ne sais quoi », before leaving.”</p>
+<p>There is also the command <code>\foreignblockcquote</code> that first
+needs the language as mandatory argument, for a concrete example:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">\foreignblockcquote</span>{german}[vgl.][195 (eigene Übersetzung)]{Hoare1973}{<span class="co">%</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>Die Dokumentation muss als integraler Bestandteil des Entwurfs- und Kodierungsprozesses betrachtet werden. Eine gute Programmiersprache wird den Programmierer ermutigen und unterstützen, klaren, selbstdokumentierenden Code zu schreiben und vielleicht sogar einen angenehmen Schreibstil zu entwickeln und zu pflegen.<span class="co">%</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>}</span></code></pre>
+</div>
+<div class="section level1">
+<h1 id="auxiliary-commands">Auxiliary Commands<a class="anchor" aria-label="anchor" href="#auxiliary-commands"></a>
+</h1>
+<p>When quoting text in a formal way, any changes applied to the quoted
+material—such as omissions, insertions, or deletions—should be
+explicitly marked. The <code>csquotes</code> package provides three
+auxiliary commands for this purpose:</p>
+<ul>
+<li>
+<code>\textelp{}</code> / <code>\textelp{⟨text⟩}</code> /
+<code>\textelp*{⟨text⟩}</code> Prints an ellipsis to indicate omitted
+material. With an argument, it also shows inserted text in brackets. The
+starred form reverses insertion order.</li>
+<li>
+<code>\textins{⟨text⟩}</code> / <code>\textins*{⟨text⟩}</code> Marks
+added text in square brackets. The starred variant is intended for small
+modifications (e.g. capitalization).</li>
+<li>
+<code>\textdel{⟨text⟩}</code> Indicates deletion by printing empty
+brackets; the omitted text itself is not displayed.</li>
+</ul>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>She said, “To be, or not to be<span class="fu">\textelp</span>{} that is the question.”</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>He corrected it to “To be, or not to be<span class="fu">\textelp</span>{ indeed}<span class="fu">\textelp*</span>{ indeed}.”</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>Old form: “colour” → “colou<span class="fu">\textdel</span>{r}”</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>Insersion: “The quick <span class="fu">\textins</span>{brown} fox.”</span></code></pre>
+</div>
+<div class="section level2">
+<h2 id="challenge-2-auxiliary-commands">Challenge 2: Auxiliary Commands<a class="anchor" aria-label="anchor" href="#challenge-2-auxiliary-commands"></a>
+</h2>
+<ul>
+<li>Take the sentence: “The quick brown fox jumps over the lazy
+dog.”</li>
+<li>Omit the word “brown” using <code>\textelp{}</code> and show the
+result.</li>
+<li>Insert the word “agile” before “fox” using
+<code>\textins{}</code>.</li>
+<li>Delete the “s” in “jumps” using <code>\textdel{}</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+
+</div>
+</div>
+</div>
+</div>
+<div id="adjust-default-settings" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="adjust-default-settings" class="callout-inner">
+<h3 class="callout-title">Adjust Default Settings</h3>
+<div class="callout-content">
+<p>Change the amount of lines you want to have for a block quote:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">\SetBlockThreshold</span>{0} <span class="co">% number of full ines for blockquote, 0= all quotes are like blockquote</span></span></code></pre>
+</div>
+<p>Adjust the appearance of a deleted word.</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\mktextdel</span>}[1]{[<span class="fu">\textellipsis</span>]}</span></code></pre>
+</div>
+<p>Define the way of a source is displayed after the blockquote:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\mkcitation</span>}[1]{<span class="fu">\footnote</span>{#1}}</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\mkccitation</span>}[1]{<span class="fu">\footnote</span>{#1}}</span></code></pre>
+</div>
+<p>This will put the references in a footnote.</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>Use <code>\enquote{…}</code> for semantic, language-aware inline
+quotes.</li>
+<li>Use <code>\blockquote{…}</code> for automatic block formatting and
+citation.</li>
+<li>Integrate with <code>biblatex</code> inside quotes for full
+bibliographic support.</li>
+<li>Switch quote styles per language with
+<code>\foreign(c)quote</code>.</li>
+<li>Customize nesting, spacing, and thresholds to match publisher or
+style-guide requirements.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div></section><section id="aio-14-structuring-sources"><p>Content from <a href="14-structuring-sources.html">Structuring Sources</a></p>
+<hr>
+<p>Last updated on 2025-07-16 |
+
+        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/14-structuring-sources.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -6055,6 +6742,22 @@ When you use <code>\include{filename}</code> you can also use
 <code>\includeonly{filename1,filename2}</code> in your preamble. This
 will then only insert the file mentioned but respect all other files
 regarding e.g. pagenumber, references etc.</p>
+<div id="caution1" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Caution</h3>
+<div class="callout-content">
+<p>Note that in case you have deleted all your <code>*.aux</code>-files
+and want to compile from scratch, make sure you have disabled the
+<code>\includeonly{}</code>-command. At least for the first run.
+Otherwise the other files that are included will not be known to the
+compiler and therefor omitted. This has consequences for references,
+page numbers etc.</p>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="input-example">Input Example<a class="anchor" aria-label="anchor" href="#input-example"></a>
 </h3>
@@ -6162,7 +6865,7 @@ sections:</p>
 <li><code>content/tables.tex</code></li>
 <li><code>content/cross-references.tex</code></li>
 <li><code>content/mathematics.tex</code></li>
-<li><code>content/fonts-and-spacing.tex</code></li>
+<li><code>content/fonts-formatting-and-spacing.tex</code></li>
 <li><code>content/reference-databases.tex</code></li>
 </ul>
 <p>We’ll move the content from each section into the corresponding
@@ -6462,7 +7165,7 @@ file.</p>
 </button>
 <div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
 <div class="accordion-body">
-<p><code>content/fonts-and-spacing.tex</code></p>
+<p><code>content/fonts-formatting-and-spacing.tex</code></p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -6527,7 +7230,7 @@ these files using the <code>\input{filename}</code>:</p>
 <span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/tables</span>}</span>
 <span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/cross-references</span>}</span>
 <span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/mathematics</span>}</span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/fonts-and-spacing</span>}</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/fonts-formatting-and-spacing</span>}</span>
 <span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/reference-databases</span>}</span></code></pre>
 </div>
 <div id="callout2" class="callout">
@@ -6575,12 +7278,13 @@ called “preamble”:</p>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}</span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}</span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="bu">\usepackage</span>[style=authoryear]{<span class="ex">biblatex</span>}</span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">graphicx</span>}</span>
-<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span>
-<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}</span>
-<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code></pre>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">csquotes</span>}</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}</span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">graphicx</span>}</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}</span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -6667,7 +7371,7 @@ called “preamble”:</p>
 <span id="cb17-22"><a href="#cb17-22" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/tables</span>}</span>
 <span id="cb17-23"><a href="#cb17-23" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/cross-references</span>}</span>
 <span id="cb17-24"><a href="#cb17-24" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/mathematics</span>}</span>
-<span id="cb17-25"><a href="#cb17-25" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/fonts-and-spacing</span>}</span>
+<span id="cb17-25"><a href="#cb17-25" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/fonts-formatting-and-spacing</span>}</span>
 <span id="cb17-26"><a href="#cb17-26" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">content/reference-databases</span>}</span>
 <span id="cb17-27"><a href="#cb17-27" tabindex="-1"></a></span>
 <span id="cb17-28"><a href="#cb17-28" tabindex="-1"></a><span class="fu">\printbibliography</span></span>
@@ -6917,420 +7621,11 @@ structure your document</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-14-font-and-encoding"><p>Content from <a href="14-font-and-encoding.html">Fonts and Encodings</a></p>
+</section></section><section id="aio-15-loading-and-manipulating-data"><p>Content from <a href="15-loading-and-manipulating-data.html">Loading and Manipulating Data</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2025-07-16 |
 
-        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/14-font-and-encoding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 10 minutes</p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>How do you write a lesson using R Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain how to use markdown with the new lesson template</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="documentclass-parameters">documentclass Parameters<a class="anchor" aria-label="anchor" href="#documentclass-parameters"></a>
-</h2>
-<hr class="half-width">
-<p>In an earlier episode we learned that we can change the font size of
-the entire document by changing the <code>\documentclass</code> command.
-For example, we can change the font size to 12pt by using:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>[12pt]{<span class="ex">article</span>}</span></code></pre>
-</div>
-<p>But we can add other parameters to this command to change the overall
-layout of the document. For example, we can set the size of the document
-to A4 paper by using:</p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper]{<span class="ex">article</span>}</span></code></pre>
-</div>
-<p>We can also change the entire document to a two-column layout by
-using:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>[twocolumn]{<span class="ex">article</span>}</span></code></pre>
-</div>
-<p>And we can of course combine these options:</p>
-<div class="codewrapper sourceCode" id="cb4">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt,twocolumn]{<span class="ex">article</span>}</span></code></pre>
-</div>
-</section><section><h2 class="section-heading" id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
-</h2>
-<hr class="half-width">
-<p>We saw earlier that we can create commands of our own in LaTeX, but
-there is also a <code>renewcommand</code> command that let’s us change
-the definition of an existing command. This might be useful if you want
-the definition of a command to change throughout the document, however
-there are also some commands that are pre-defined that we can modify
-with this command.</p>
-<p>For Example, we can change the font of the entire document by adding
-the following line to the <code>preamble/custom-commands.tex</code>
-file:</p>
-<div class="codewrapper sourceCode" id="cb5">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">% Change the font of the entire document to a monospace font</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\ttdefault</span>}</span></code></pre>
-</div>
-<p>When you compile the document you should see something like this:</p>
-<p>IMAGE GOES HERE</p>
-<div class="section level3">
-<h3 id="more-fonts">More Fonts<a class="anchor" aria-label="anchor" href="#more-fonts"></a>
-</h3>
-<p>Unfortunately, the default LaTeX installation does not come with many
-fonts. However, there are additional packages that you can include if
-you are looking for a specific font. Let’s try making our document look
-like it’s using the <code>Times New Roman</code> font. To do this, all
-we need to do is add the following import to the
-<code>preamble/packages.tex</code> file:</p>
-<div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}</span></code></pre>
-</div>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
-<div class="callout-content">
-<p>You can find a large selection of fonts at <a href="https://www.tug.org/FontCatalogue/" class="external-link">The LaTeX Font Catalogue</a>,
-complete with examples of how to use them in your document.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
-</h2>
-<hr class="half-width">
-<div id="challenge-1" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-1" class="callout-inner">
-<h3 class="callout-title">Challenge 1:</h3>
-<div class="callout-content">
-<p>We saw how to change the font of the entire document using the
-<code>\renewcommand</code> command. But what if only want a specific
-section of the document to be in a different font? What would we have to
-modify in the following code to make the text in the first
-<code>\section{}</code> command use a different font?</p>
-<div class="codewrapper sourceCode" id="cb7">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="fu">\texttt</span>{</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="kw">\section</span>{My Section}</span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="fu">\lipsum</span>[1]</span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>}</span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="kw">\section</span>{My Other Section}</span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="fu">\lipsum</span>[2]</span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a></span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb8">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="kw">\section</span>{My Section}</span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\ttdefault</span>}</span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="fu">\lipsum</span>[1]</span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a></span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="kw">\section</span>{My Other Section}</span>
-<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\rmdefault</span>}</span>
-<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="fu">\lipsum</span>[2]</span>
-<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a></span>
-<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-2" class="callout-inner">
-<h3 class="callout-title">Challenge 2:</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-
-</div>
-</div>
-</div>
-</div>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
-<div class="callout-content">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-15-documentation-and-finding-help"><p>Content from <a href="15-documentation-and-finding-help.html">Documentation and Finding Help</a></p>
-<hr>
-<p>Last updated on 2025-07-03 |
-
-        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/15-documentation-and-finding-help.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>Where can I find help for writing LaTeX documents?</li>
-<li>How do I find out what commands a package provides?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Learn how to find help for LaTeX documents</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="ctan-the-comprehensive-tex-archive-network">CTAN (The Comprehensive TeX Archive Network)<a class="anchor" aria-label="anchor" href="#ctan-the-comprehensive-tex-archive-network"></a>
-</h2>
-<hr class="half-width">
-<p>A large number of LaTeX packages are available on <a href="https://ctan.org/" class="external-link">CTAN</a>. CTAN contains packages and related
-documentation for many widely used LaTeX packages. You can search the
-archive for specific strings, or browse by category.</p>
-<p><img src="../fig/15-documentation-and-help/ctan-screenshot.PNG" alt="CTAN page for the geometry package." class="figure"> Project pages</p>
-<p>Individual package pages often contain links to detailed
-documentation, including PDF manuals and example files. Additional you
-can find links to the package’s source code, and information about the
-author(s) and ratings from other users.</p>
-</section><section><h2 class="section-heading" id="texdoc">Texdoc<a class="anchor" aria-label="anchor" href="#texdoc"></a>
-</h2>
-<hr class="half-width">
-<p><a href="https://texdoc.org" class="external-link">Texdoc</a> provides a modern interface
-for looking up package documentation. Much like CTAN, you can search for
-packages and view their documentation.</p>
-<figure><img src="../fig/15-documentation-and-help/texdoc-screenshot.PNG" alt="Texdoc landing page." class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
-<div class="callout-content">
-<p>Texdoc is also available as a command line tool, which queries the
-same database of information, but allows you to search for packages and
-documentation from the command line.</p>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="other-resources">Other Resources<a class="anchor" aria-label="anchor" href="#other-resources"></a>
-</h2>
-<hr class="half-width">
-<p>As with any language there are many other resources that you can make
-use of. The Stack Exchange for LaTeX is a great place to ask questions
-and find answers to common problems.</p>
-</section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
-</h2>
-<hr class="half-width">
-<div id="challenge-1-find-it-in-the-documentation" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-1-find-it-in-the-documentation" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Find it in the documentation!</h3>
-<div class="callout-content">
-<p>We have the geometry package loaded in our document, and we know we
-want to use to to set the margins of the document, but we want to set
-them to 2cm on the left and right, and 4cm on the top and bottom. We
-also want to set the per size to A4. Can you find the documentation for
-the command and see how to do this?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<p>Section 5.1 describes how to set the page size, and section 5.4
-describes how to set the margins.</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper, left=2cm, right=2cm, top=4cm, bottom=4cm]{<span class="ex">geometry</span>}</span></code></pre>
-</div>
-<p>or</p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="bu">\usepackage</span>[a4paper, left=2cm, right=2cm, top=4cm, bottom=4cm]{<span class="ex">geometry</span>}</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="challenge-2-find-a-specific-package." class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="challenge-2-find-a-specific-package." class="callout-inner">
-<h3 class="callout-title">Challenge 2: Find a specific package.</h3>
-<div class="callout-content">
-<p>We have a very particular document we want to create - we are talking
-about specific positions on a chess board and we want to render these
-directly in the document. Can you find a package that will help us do
-this? Can you make a simple chess board using this package?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>Searching either CTAN or Texdoc for “chess” will return a number of
-packages. We’ll use the <code>chessboard</code> package for our example.
-To make a simple chess board, we can use the <code>chessboard</code>
-command:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">chessboard</span>}</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="fu">\chessboard</span>[setpieces={Kd1, Qd8}]</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
-<div class="callout-content">
-<ul>
-<li>CTAN is a large archive of LaTeX packages and documentation</li>
-<li>Texdoc is a website &amp; command line tool for searching LaTeX
-documentation</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-16-loading-and-manipulating-data"><p>Content from <a href="16-loading-and-manipulating-data.html">Loading and Manipulating Data</a></p>
-<hr>
-<p>Last updated on 2025-07-03 |
-
-        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/16-loading-and-manipulating-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/15-loading-and-manipulating-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -7385,8 +7680,9 @@ following command:</p>
 </div>
 <p>We’ll also need some data to work with. We’ll use some simple CSVs
 that contain data about GDP per capita and life expectancy from the past
-50 years. You can download the data from <a href="../files/gapminder_data_tidy.zip">here</a>. Unzip the file and place
-the contents in you project directory.</p>
+50 years. You can <a href="../files/gapminder_data_tidy.zip">download the
+data</a> from this website. Unzip the file and place the contents in you
+project directory.</p>
 <p>Your directory should look like this:</p>
 <pre><code>project/
 ├── data
@@ -7568,7 +7864,7 @@ contains the data we want to work with:</p>
 <span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>  <span class="fu">\datavalue</span>=value</span>
 <span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a>}{</span>
 <span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a>  <span class="fu">\DTLnewrow</span>{filteredgapminder}</span>
-<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a>   <span class="fu">\dtlexpandnewvalue</span><span class="co">% https://tex.stackexchange.com/a/375856/98739</span></span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a>  <span class="fu">\dtlexpandnewvalue</span><span class="co">% https://tex.stackexchange.com/a/375856/98739</span></span>
 <span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a>  <span class="fu">\DTLnewdbentry</span>{filteredgapminder}{country}{<span class="fu">\country</span>}</span>
 <span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a>  <span class="fu">\DTLnewdbentry</span>{filteredgapminder}{value}{<span class="fu">\datavalue</span>}</span>
 <span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a>}</span></code></pre>
@@ -7577,9 +7873,11 @@ contains the data we want to work with:</p>
 <ul>
 <li>We first create a new database with the <code>\DTLnewdb</code>
 command. This creates a new database in memory we can add rows to
-later.</li>
+later.<br>
+</li>
 <li>We then use the <code>\DTLnewrow</code> command to create a new row
-in the database.</li>
+in the database.<br>
+</li>
 <li>We use the <code>\DTLnewdbentry</code> command to add a new entry to
 the row. The first argument is the name of the database, the second
 argument is the name of the column, and the third argument is the value
@@ -7592,7 +7890,9 @@ to add to that column.</li>
 <div class="callout-inner">
 <h3 class="callout-title">Callout</h3>
 <div class="callout-content">
-<p>We need to use the <code>\dtlexpandnewvalue</code> command WHY</p>
+<p>We need to use the <code>\dtlexpandnewvalue</code> command otherwise
+the data will not be expanded, meaning the compiler cannot read the
+content of the variable used.</p>
 </div>
 </div>
 </div>
@@ -7656,14 +7956,14 @@ We can add some options to the command to make it look better:</p>
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">\DTLbarchart</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>{</span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>  variable=<span class="fu">\datavalue</span>,</span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>  horizontal, <span class="co">% Use horizontal bars</span></span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>  bar-label=<span class="fu">\country</span>, <span class="co">% Use the country as the label for the bars</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>{<span class="co">%</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>  variable=<span class="fu">\datavalue</span>,        <span class="co">% State where the numeric data is stored</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>  horizontal,                 <span class="co">% Use horizontal bars</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>  bar-label=<span class="fu">\country</span>,         <span class="co">% Use the country as the label for the bars</span></span>
 <span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>  upper-bar-label=<span class="fu">\datavalue</span>, <span class="co">% Use the value as the label for the upper end of the bars</span></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>}{filteredgapminder}{</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>}{filteredgapminder}{<span class="co">%</span></span>
 <span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>  <span class="fu">\datavalue</span>=value,</span>
-<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a>  <span class="fu">\country</span>=country</span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a>  <span class="fu">\country</span>=country<span class="co">%</span></span>
 <span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a>}</span></code></pre>
 </div>
 <p>It should now look something like this:</p>
@@ -7686,7 +7986,7 @@ of the other files and see if this code still works.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If you used one of the other files, you might have noticed that the
 time it took create the pdf was much longer. This is because the other
@@ -7712,11 +8012,11 @@ using the <code>\DTLforeach</code> command like this:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">\DTLforeach</span>[</span>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">\DTLforeach</span>[<span class="co">%</span></span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>  <span class="fu">\DTLisieq</span>{<span class="fu">\year</span>}{2002}</span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>  <span class="fu">\and</span></span>
 <span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>  <span class="fu">\DTLisieq</span>{<span class="fu">\metric</span>}{gdpPercap}</span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>]{gapminder}{</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>]{gapminder}{<span class="co">%</span></span>
 <span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a>  <span class="fu">\country</span>=country,</span>
 <span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a>  <span class="fu">\year</span>=year,</span>
 <span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>  <span class="fu">\metric</span>=metric,</span>
@@ -7730,8 +8030,8 @@ output to look like this:</p>
 <figure><img src="../fig/16-loading-and-manipulating-data/challenge-tabular-from-database.PNG" class="figure mx-auto d-block"></figure><p>Refer back to the <a href="../08-tables.html">Episode on Tables</a> to
 review the syntax for creating tables in LaTeX.</p>
 <p>NOTE: There is an issue with <code>datatool</code> and
-<code>/bottomrule</code> in tables - for now, skip the
-<code>bottomrule</code> command in your table. (You’ll get an error
+<code>\bottomrule</code> in tables - for now, skip the
+<code>\bottomrule</code> command in your table. (You’ll get an error
 about “misplaced ”.)</p>
 </div>
 </div>
@@ -7741,7 +8041,7 @@ about “misplaced ”.)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <pre><code>\begin{tabular}{rlr}
 \toprule
@@ -7751,7 +8051,7 @@ about “misplaced ”.)</p>
   \DTLisieq{\year}{2002}
   \and
   \DTLisieq{\metric}{gdpPercap}
-]{gapminder}{
+]{gapminder}{%
   \country=country,
   \year=year,
   \metric=metric,
@@ -7782,6 +8082,182 @@ command.</li>
 conditions.</li>
 <li>We can aggregate data using commands like
 <code>\DTLmeanforkeys</code>, <code>\DTLsumforkeys</code>, etc.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-16-documentation-and-finding-help"><p>Content from <a href="16-documentation-and-finding-help.html">Documentation and Finding Help</a></p>
+<hr>
+<p>Last updated on 2025-07-16 |
+
+        <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/16-documentation-and-finding-help.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>Where can I find help for writing LaTeX documents?</li>
+<li>How do I find out what commands a package provides?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Learn how to find help for LaTeX documents</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="ctan-the-comprehensive-tex-archive-network">CTAN (The Comprehensive TeX Archive Network)<a class="anchor" aria-label="anchor" href="#ctan-the-comprehensive-tex-archive-network"></a>
+</h2>
+<hr class="half-width">
+<p>A large number of LaTeX packages are available on <a href="https://ctan.org/" class="external-link">CTAN</a>. CTAN contains packages and related
+documentation for many widely used LaTeX packages. You can search the
+archive for specific strings, or browse by category.</p>
+<p><img src="../fig/15-documentation-and-help/ctan-screenshot.PNG" alt="CTAN page for the geometry package." class="figure"> Project pages</p>
+<p>Individual package pages often contain links to detailed
+documentation, including PDF manuals and example files. Additional you
+can find links to the package’s source code, and information about the
+author(s) and ratings from other users.</p>
+</section><section><h2 class="section-heading" id="texdoc">Texdoc<a class="anchor" aria-label="anchor" href="#texdoc"></a>
+</h2>
+<hr class="half-width">
+<p><a href="https://texdoc.org" class="external-link">Texdoc</a> provides a modern interface
+for looking up package documentation. Much like CTAN, you can search for
+packages and view their documentation.</p>
+<figure><img src="../fig/15-documentation-and-help/texdoc-screenshot.PNG" alt="Texdoc landing page." class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout</h3>
+<div class="callout-content">
+<p>Texdoc is also available as a command line tool, which queries the
+same database of information, but allows you to search for packages and
+documentation from the command line.</p>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="other-resources">Other Resources<a class="anchor" aria-label="anchor" href="#other-resources"></a>
+</h2>
+<hr class="half-width">
+<p>As with any language there are many other resources that you can make
+use of. The Stack Exchange for LaTeX is a great place to ask questions
+and find answers to common problems.</p>
+</section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
+</h2>
+<hr class="half-width">
+<div id="challenge-1-find-it-in-the-documentation" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-1-find-it-in-the-documentation" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Find it in the documentation!</h3>
+<div class="callout-content">
+<p>We have the geometry package loaded in our document, and we know we
+want to use to to set the margins of the document, but we want to set
+them to 2cm on the left and right, and 4cm on the top and bottom. We
+also want to set the per size to A4. Can you find the documentation for
+the command and see how to do this?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Section 5.1 describes how to set the page size, and section 5.4
+describes how to set the margins.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper, left=2cm, right=2cm, top=4cm, bottom=4cm]{<span class="ex">geometry</span>}</span></code></pre>
+</div>
+<p>or</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="bu">\usepackage</span>[a4paper, left=2cm, right=2cm, top=4cm, bottom=4cm]{<span class="ex">geometry</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-find-a-specific-package." class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-2-find-a-specific-package." class="callout-inner">
+<h3 class="callout-title">Challenge 2: Find a specific package.</h3>
+<div class="callout-content">
+<p>We have a very particular document we want to create - we are talking
+about specific positions on a chess board and we want to render these
+directly in the document. Can you find a package that will help us do
+this? Can you make a simple chess board using this package?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>Searching either CTAN or Texdoc for “chess” will return a number of
+packages. We’ll use the <code>chessboard</code> package for our example.
+To make a simple chess board, we can use the <code>chessboard</code>
+command:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">chessboard</span>}</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="fu">\chessboard</span>[setpieces={Kd1, Qd8}]</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>CTAN is a large archive of LaTeX packages and documentation</li>
+<li>Texdoc is a website &amp; command line tool for searching LaTeX
+documentation</li>
 </ul>
 </div>
 </div>
@@ -7832,14 +8308,14 @@ any links that you are not going to use.
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "markdown, software, latex",
+  "keywords": "publishing, academic, latex, writing",
   "name": "All in One View",
   "creativeWorkStatus": "active",
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/aio.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/aio.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-07-15",
-  "datePublished": "2025-07-15"
+  "dateModified": "2025-07-16",
+  "datePublished": "2025-07-16"
 }
 
   </script><script>

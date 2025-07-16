@@ -34,13 +34,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="incubator-logo" alt="An Introduction to Using LaTeX for Academic Publishing" src="assets/images/incubator-logo.svg"><span class="badge text-bg-danger">
-          <abbr title="This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.">
+        <img id="incubator-logo" alt="An Introduction to Using LaTeX for Academic Publishing" src="assets/images/incubator-logo.svg"><span class="badge text-bg-warning">
+          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
             <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-octagon" style="border-radius: 5px"></i>
-              Pre-Alpha
+              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
+              Alpha
             </a>
-            <span class="visually-hidden">This lesson is in the pre-alpha phase, which means that it is in early development, but has not yet been taught.</span>
+            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
           </abbr>
         </span>
 
@@ -351,7 +351,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-mathematics.html">10. Mathematics</a>
+        <a href="10-mathematics-and-scientific-units.html">10. Mathematics</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -363,7 +363,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="11-text-and-spacing.html">11. Fonts and Spacing</a>
+        <a href="11-font-format-and-spacing.html">11. Fonts, Formatting and Spacing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -387,7 +387,7 @@
 <div class="accordion accordion-flush" id="accordionFlush14">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading14">
-        <a href="13-structuring-sources.html">13. Structuring Sources</a>
+        <a href="13-context-sensitive-quotation.html">13. Context Sensitive Quotations</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -399,7 +399,7 @@
 <div class="accordion accordion-flush" id="accordionFlush15">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading15">
-        <a href="14-font-and-encoding.html">14. Fonts and Encodings</a>
+        <a href="14-structuring-sources.html">14. Structuring Sources</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -411,7 +411,7 @@
 <div class="accordion accordion-flush" id="accordionFlush16">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading16">
-        <a href="15-documentation-and-finding-help.html">15. Documentation and Finding Help</a>
+        <a href="15-loading-and-manipulating-data.html">15. Loading and Manipulating Data</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -423,7 +423,7 @@
 <div class="accordion accordion-flush" id="accordionFlush17">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading17">
-        <a href="16-loading-and-manipulating-data.html">16. Loading and Manipulating Data</a>
+        <a href="16-documentation-and-finding-help.html">16. Documentation and Finding Help</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -564,7 +564,7 @@ package can be used to merge rows in a table.</li>
 <li>The <code>\label{}</code> command marks a spot in the document.</li>
 <li>The <code>\ref{}</code> command refers to a marked spot in the
 document.</li>
-</ul></section><section id="10-mathematics"><h2 class="section-heading"><a href="10-mathematics.html">Mathematics</a></h2>
+</ul></section><section id="10-mathematics-and-scientific-units"><h2 class="section-heading"><a href="10-mathematics-and-scientific-units.html">Mathematics</a></h2>
 <hr class="half-width">
 <ul>
 <li>Inline math mode is marked with <code>$ ... $</code> or
@@ -572,7 +572,9 @@ document.</li>
 </li>
 <li>Display math mode is marked with <code>\[ ... \]</code>
 </li>
-</ul></section><section id="11-text-and-spacing"><h2 class="section-heading"><a href="11-text-and-spacing.html">Fonts and Spacing</a></h2>
+<li>Use <code>\qty{}{}</code> or <code>\unit{}</code> for properly
+writing numbers with their scientific unit.</li>
+</ul></section><section id="11-font-format-and-spacing"><h2 class="section-heading"><a href="11-font-format-and-spacing.html">Fonts, Formatting and Spacing</a></h2>
 <hr class="half-width">
 <ul>
 <li>Use the <code>parskip</code> package to add space between
@@ -598,7 +600,20 @@ format and have the extension <code>.bib</code>.</li>
 documents, including <code>natbib</code> and <code>biblatex</code>.</li>
 <li>We can use the <code>\cite</code> command or one of its variants to
 cite references in our document.</li>
-</ul></section><section id="13-structuring-sources"><h2 class="section-heading"><a href="13-structuring-sources.html">Structuring Sources</a></h2>
+</ul></section><section id="13-context-sensitive-quotation"><h2 class="section-heading"><a href="13-context-sensitive-quotation.html">Context Sensitive QuotationsVarious Types of Quotation<a class="anchor" aria-label="anchor" href="#various-types-of-quotation"></a>Referencing Source of Quote to BibLaTeX-Entry<a class="anchor" aria-label="anchor" href="#referencing-source-of-quote-to-biblatex-entry"></a>Auxiliary Commands<a class="anchor" aria-label="anchor" href="#auxiliary-commands"></a></a></h2>
+<hr class="half-width">
+<ul>
+<li>Use <code>\enquote{…}</code> for semantic, language-aware inline
+quotes.</li>
+<li>Use <code>\blockquote{…}</code> for automatic block formatting and
+citation.</li>
+<li>Integrate with <code>biblatex</code> inside quotes for full
+bibliographic support.</li>
+<li>Switch quote styles per language with
+<code>\foreign(c)quote</code>.</li>
+<li>Customize nesting, spacing, and thresholds to match publisher or
+style-guide requirements.</li>
+</ul></section><section id="14-structuring-sources"><h2 class="section-heading"><a href="14-structuring-sources.html">Structuring Sources</a></h2>
 <hr class="half-width">
 <ul>
 <li>LaTeX projects can contain many files that reference each other</li>
@@ -608,24 +623,7 @@ contents of other files in your document</li>
 <li>The <code>\frontmatter</code>, <code>\mainmatter</code>,
 <code>\backmatter</code>, and <code>\appendix</code> commands help
 structure your document</li>
-</ul></section><section id="14-font-and-encoding"><h2 class="section-heading"><a href="14-font-and-encoding.html">Fonts and Encodings</a></h2>
-<hr class="half-width">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul></section><section id="15-documentation-and-finding-help"><h2 class="section-heading"><a href="15-documentation-and-finding-help.html">Documentation and Finding Help</a></h2>
-<hr class="half-width">
-<ul>
-<li>CTAN is a large archive of LaTeX packages and documentation</li>
-<li>Texdoc is a website &amp; command line tool for searching LaTeX
-documentation</li>
-</ul></section><section id="16-loading-and-manipulating-data"><h2 class="section-heading"><a href="16-loading-and-manipulating-data.html">Loading and Manipulating Data</a></h2>
+</ul></section><section id="15-loading-and-manipulating-data"><h2 class="section-heading"><a href="15-loading-and-manipulating-data.html">Loading and Manipulating Data</a></h2>
 <hr class="half-width">
 <ul>
 <li>The <code>datatool</code> package allows us to load and manipulate
@@ -638,6 +636,12 @@ command.</li>
 conditions.</li>
 <li>We can aggregate data using commands like
 <code>\DTLmeanforkeys</code>, <code>\DTLsumforkeys</code>, etc.</li>
+</ul></section><section id="16-documentation-and-finding-help"><h2 class="section-heading"><a href="16-documentation-and-finding-help.html">Documentation and Finding Help</a></h2>
+<hr class="half-width">
+<ul>
+<li>CTAN is a large archive of LaTeX packages and documentation</li>
+<li>Texdoc is a website &amp; command line tool for searching LaTeX
+documentation</li>
 </ul></section>
 </div>
     </main>
@@ -680,14 +684,14 @@ conditions.</li>
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "markdown, software, latex",
+  "keywords": "publishing, academic, latex, writing",
   "name": "Key Points",
   "creativeWorkStatus": "active",
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/key-points.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/key-points.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-07-15",
-  "datePublished": "2025-07-15"
+  "dateModified": "2025-07-16",
+  "datePublished": "2025-07-16"
 }
 
   </script><script>
