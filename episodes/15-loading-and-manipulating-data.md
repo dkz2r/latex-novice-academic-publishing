@@ -37,8 +37,8 @@ We can then load the package in our LaTeX document using the following command:
 ```
 
 We'll also need some data to work with. We'll use some simple CSVs that contain data about GDP
-per capita and life expectancy from the past 50 years. You can download the data from
-[here](/files/gapminder_data_tidy.zip). Unzip the file and place the contents in you project directory.
+per capita and life expectancy from the past 50 years. You can [download the
+data](/files/gapminder_data_tidy.zip) from this website. Unzip the file and place the contents in you project directory.
 
 Your directory should look like this:
 
@@ -201,7 +201,7 @@ to work with:
   \datavalue=value
 }{
   \DTLnewrow{filteredgapminder}
-   \dtlexpandnewvalue% https://tex.stackexchange.com/a/375856/98739
+  \dtlexpandnewvalue% https://tex.stackexchange.com/a/375856/98739
   \DTLnewdbentry{filteredgapminder}{country}{\country}
   \DTLnewdbentry{filteredgapminder}{value}{\datavalue}
 }
@@ -210,15 +210,16 @@ to work with:
 Some things to point out here:
 
 - We first create a new database with the `\DTLnewdb` command. This creates a new database in
-    memory we can add rows to later.
-- We then use the `\DTLnewrow` command to create a new row in the database.
+    memory we can add rows to later.  
+- We then use the `\DTLnewrow` command to create a new row in the database.  
 - We use the `\DTLnewdbentry` command to add a new entry to the row. The first argument is the
     name of the database, the second argument is the name of the column, and the third argument is
-    the value to add to that column.
+    the value to add to that column.  
 
 ::: callout
 
-We need to use the `\dtlexpandnewvalue` command WHY
+We need to use the `\dtlexpandnewvalue` command otherwise the data will not be
+expanded, meaning the compiler cannot read the content of the variable used.
 
 :::
 
@@ -275,14 +276,14 @@ the command to make it look better:
 
 ```latex
 \DTLbarchart
-{
-  variable=\datavalue,
-  horizontal, % Use horizontal bars
-  bar-label=\country, % Use the country as the label for the bars
+{%
+  variable=\datavalue,        % State where the numeric data is stored
+  horizontal,                 % Use horizontal bars
+  bar-label=\country,         % Use the country as the label for the bars
   upper-bar-label=\datavalue, % Use the value as the label for the upper end of the bars
-}{filteredgapminder}{
+}{filteredgapminder}{%
   \datavalue=value,
-  \country=country
+  \country=country%
 }
 ```
 
@@ -320,11 +321,11 @@ In the "Data Filtering" section above, we displayed the filtered data using the 
 command like this:
 
 ```latex
-\DTLforeach[
+\DTLforeach[%
   \DTLisieq{\year}{2002}
   \and
   \DTLisieq{\metric}{gdpPercap}
-]{gapminder}{
+]{gapminder}{%
   \country=country,
   \year=year,
   \metric=metric,
@@ -341,8 +342,8 @@ How might you display the results in a table? See if you can get the output to l
 Refer back to the [Episode on Tables](/08-tables.md) to review the
 syntax for creating tables in LaTeX.
 
-NOTE: There is an issue with `datatool` and `/bottomrule` in tables - for now, skip the
-`bottomrule` command in your table. (You'll get an error about "misplaced \noalign".)
+NOTE: There is an issue with `datatool` and `\bottomrule` in tables - for now, skip the
+`\bottomrule` command in your table. (You'll get an error about "misplaced \noalign".)
 
 :::::::::::::::::::::::: solution
 
@@ -355,7 +356,7 @@ NOTE: There is an issue with `datatool` and `/bottomrule` in tables - for now, s
   \DTLisieq{\year}{2002}
   \and
   \DTLisieq{\metric}{gdpPercap}
-]{gapminder}{
+]{gapminder}{%
   \country=country,
   \year=year,
   \metric=metric,
