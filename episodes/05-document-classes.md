@@ -38,6 +38,25 @@ These options are set in square brackets after the document class name, for exam
 \documentclass[12pt]{article}
 ```
 
+But we can add other parameters to this command to change the overall layout of the document.
+For example, we can set the size of the document to A4 paper by using:
+
+```latex
+\documentclass[a4paper]{article}
+```
+
+We can also change the entire document to a two-column layout by using:
+
+```latex
+\documentclass[twocolumn]{article}
+```
+
+And we can of course combine these options:
+
+```latex
+\documentclass[a4paper,12pt,twocolumn]{article}
+```
+
 :::
 
 ## The Base Document Classes
@@ -137,7 +156,7 @@ These include:
   Society's style
 - `beamer`: a class for creating slide presentations
 - `KOMA-Script`: a set of classes that provide a more modern look and feel to LaTeX documents by
-                 providing parallel classes to the base classes
+                 providing parallel classes to the base classes (`scrbook`, `scrartcl`).
 - `memoir`: a class that provides a lot of functionality for creating books, reports, and articles
 
 These classes have a lot of customization options that can be used to alter the appearance of the

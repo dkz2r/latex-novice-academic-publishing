@@ -94,10 +94,11 @@ limited to using it. Any program that can edit text files can be used to write L
 then compile from the command line.
 
 You can use any text editor to write your LaTeX code. Some popular text editors for LaTeX include:
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Emacs](https://www.gnu.org/software/emacs/)
-- [Vim](https://www.vim.org/)
-- Notepad++ (Windows only)
+
+- [Visual Studio Code](https://code.visualstudio.com/)  
+- [Emacs](https://www.gnu.org/software/emacs/)  
+- [Vim](https://www.vim.org/)  
+- Notepad++ (Windows only)  
 
 We will continue to demonstrate with TeXworks, but you can use any text editor you prefer.
 
@@ -107,8 +108,10 @@ console or terminal window, then navigate to the directory where you saved your 
 ::: spoiler
 
 Useful commands for navigating the command line:
-- `cd <directory>`: Change directory to `<directory>`.
-- `ls` (Linux/macOS) or `dir` (Windows): List the files in the current directory.
+
+- `cd <directory>`: Change directory to `<directory>`.  
+- `ls` (Linux/macOS) or `dir` (Windows): List the files in the current
+  directory.  
 - `pwd` (Linux/macOS): Print the current working directory.
 
 :::
@@ -139,6 +142,43 @@ ve/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 Output written on main.pdf (1 page, 21048 bytes).
 Transcript written on main.log.
 ```
+
+You can also use the compiler LuaLaTeX which is more powerful but might take a
+little bit longer to generate the pdf.
+
+```bash
+lualatex main.tex
+```
+
+The output is this:
+
+```
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+ restricted system commands enabled.
+(./main.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-07-11>
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)
+No file main.aux.
+
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./main.aux))
+ 406 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 4 attribute, 48 glue_spec
+, 4 attribute_list, 1 write nodes
+   avail lists: 2:38,3:4,4:1,5:26,6:2,7:56,9:24
+</usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.o
+tf></usr/local/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regul
+ar.otf>
+Output written on main.pdf (1 page, 4850 bytes).
+Transcript written on main.log.
+```
+
+Notice how the size of the pdf is about one forth when compiling with LuaLaTeX
+compared to pdflatex.
 
 In the directory where you ran the command, you should now see a new file called `main.pdf`, as well
 as some other files that were created during the compilation process. The `main.pdf` file is the
@@ -202,7 +242,8 @@ We'll take a closer look at the log file in a later episode.
 - We can use the TeXworks editor to write and compile LaTeX documents.
 - The TeXworks interface is divided into three main sections: the editor, the preview pane, and the menu bar.
 - We can compile a LaTeX document by clicking the "Typeset" button in the TeXworks editor.
-- We can also compile a LaTeX document from the command line using the `pdflatex` command.
+- We can also compile a LaTeX document from the command line using the
+  `pdflatex` or `lualatex` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
