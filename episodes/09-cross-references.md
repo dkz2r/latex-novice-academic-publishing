@@ -83,6 +83,10 @@ There are packages that can provide more advanced cross-referencing capabilities
 `cleveref` package, which can automatically detect the type of element being referenced and insert
 the appropriate name. For more details about this, refer to the references section.
 
+`cleveref` allows the format of cross-references to be formatted automatically, so that the "type"
+of the referenced element (e.g., figure, table, section) is included in the reference text. The
+`\cref` command is used to create these references.
+
 :::
 
 ::: callout
