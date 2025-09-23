@@ -538,7 +538,7 @@ on your own - an identical example is provided in the
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-biblatex">
+<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" aria-labelledby="nav-tab-1-biblatex" role="tabpanel">
 <p>Check to make sure that your <code>main.tex</code> file is in the
 same directory as your <code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
@@ -632,7 +632,7 @@ bibliography you can do so on the fly:</p>
 bibliography. Note, that there is <code>\clear*field*</code>,
 <code>\clear*name*</code> and <code>\clear*list*</code>.</p>
 </div>
-<div id="nav-tabpanel-1-natbib" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-natbib">
+<div id="nav-tabpanel-1-natbib" class="tab-pane" aria-labelledby="nav-tab-1-natbib" role="tabpanel">
 <p>We just need to make sure that the bibliography file is present in
 the project and properly referenced in our document. Check to make sure
 that your <code>main.tex</code> file is in the same directory as your
@@ -729,7 +729,7 @@ there. What differences do you notice?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The <code>natbib</code> package is a bit more manual than
 <code>biblatex</code>. You have to specify the bibliography style and
@@ -773,7 +773,7 @@ delete the reference and re-compile your document. What happens?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You might expect removing the reference to either error or remove the
 citation from the text, but it doesn’t - instead we get a placeholder in
@@ -828,7 +828,7 @@ reference in the text like this:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We are referencing the key <code>mikolov</code> in our document, but
 the key in our BiBTeX file is <code>mikolov2013</code>. We need to
@@ -923,7 +923,7 @@ any links that you are not going to use.
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/12-citations-and-references.html",
   "dateCreated": "2024-12-09",
   "dateModified": "2025-07-16",
-  "datePublished": "2025-09-16"
+  "datePublished": "2025-09-23"
 }
 
   </script><script>
