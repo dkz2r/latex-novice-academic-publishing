@@ -158,7 +158,7 @@ It's also possible to create a list with roman numerals automatically with the `
 % \setlist{label=\Roman*} %<-- globally defining the enumeration system
 \begin{document}
 \begin{enumerate}[
-  label=\emph{\roman*}), %<-- change labeling system locally (or \Roman)
+  label=\emph{\roman*}, %<-- change labeling system locally (or \Roman)
   leftmargin=5cm, %<-- change indent on the left
 ]
   \item First

@@ -285,8 +285,8 @@ Suppose you want to define a new command that takes as input two words as argume
 This first word shall be written **bold** while the second word shall be written *italic*.
 Moreover, the first and the second word are separated by a comma followed by a whitespace.
 
-Use `\newcommand` to define this command that takes two arguments as inputs and name it `\bo_it`.
-Write the following sentence into your LaTeX document using your new command `\bo_it`:
+Use `\newcommand` to define this command that takes two arguments as inputs and name it `\boit`.
+Write the following sentence into your LaTeX document using your new command `\boit`:
 
 This newly defined command highlights these two words: **Apple**, *Banana*.
 
