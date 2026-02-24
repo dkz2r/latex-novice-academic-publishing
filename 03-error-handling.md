@@ -280,13 +280,74 @@ messages in blue.
 ::::::::::::::::::::::::::::::::::::: challenge
 
 
-# Challenge 1: Why do I get this warning?
+# Challenge 1: Identify and fix the error?
 
-PLACEHOLDER
+The following document contains an error. Can you identify it?
+
+```latex
+\documentclass{article}
+
+\begin{document}
+
+The area of a circle is given by $A = \pi r^2$, and the circumference is $C = 2\pi r$.
+
+To find the roots of a quadratic equation, we use the formula:
+$x = \frac{-b \pm \squareroot{b^2 - 4ac}}{2a}$
+
+\end{document}
+```
+
+::: hint
+
+The error suggests there is something wrong with line 8.
+
+:::
+
 
 :::::::::::::::::::::::: solution
 
-PLACEHOLDER
+The full error message is:
+
+```
+! Undefined control sequence.
+<argument> -b \pm \squareroot
+                              {b^2 - 4ac}
+l.8 $x = \frac{-b \pm \squareroot{b^2 - 4ac}}{2a}
+                                                 $
+```
+
+The error indicates that the command `\squareroot` is not defined. We haven't covered mathematical
+commands yet, but the correct command for the square root symbol is `\sqrt`.
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+
+# Challenge 2: Fix the errors
+
+The following document contains several errors. Can you identify and fix them?
+
+```latex
+\documentclass{article}
+
+\Section{Introduction}
+
+This document discusses the work of \textbf{Smith et al (2020).
+
+\end{document}
+```
+
+:::::::::::::::::::::::: solution
+
+There are three errors in total:
+
+- The document is missing the `\begin{document}` command at the beginning.
+- The `\Section` command is not defined. The correct command for a section heading is `\section`.
+- The `\textbf` command is not properly closed. It should be `\textbf{Smith et al (2020)}`.
 
 :::::::::::::::::::::::::::::::::
 

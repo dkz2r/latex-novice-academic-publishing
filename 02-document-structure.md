@@ -183,7 +183,7 @@ To prevent that, type \^{} a.
 
 There is an error in the following LaTeX document. Can you find it?
 
-(Feel to make a main.tex file in a new project folder to test this out!)
+(Feel to make a new .tex file in a new project folder to test this out!)
 
 ```latex
 \documentclass{article}
