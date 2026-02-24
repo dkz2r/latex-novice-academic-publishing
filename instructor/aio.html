@@ -637,7 +637,7 @@ file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Useful commands for navigating the command line:</p>
 <ul>
@@ -762,7 +762,7 @@ episode.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 
 </div>
@@ -804,7 +804,7 @@ episode.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 
 </div>
@@ -837,7 +837,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-document-structure"><p>Content from <a href="02-document-structure.html">File Structure</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/02-document-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -1055,7 +1055,7 @@ them with a backslash. For example,</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>What about the <code>\</code> character?</p>
 <p>The <code>\</code> character is used to escape other characters in
@@ -1107,7 +1107,7 @@ document?</h3>
 <div class="callout-content">
 <p>There is an error in the following LaTeX document. Can you find
 it?</p>
-<p>(Feel to make a main.tex file in a new project folder to test this
+<p>(Feel to make a new .tex file in a new project folder to test this
 out!)</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1132,7 +1132,7 @@ out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Each section of a LaTeX document must be enclosed in a pair of
 <code>\begin{...}</code> and <code>\end{...}</code>. This document is
@@ -1160,7 +1160,7 @@ characters.</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>We need to use escapes before each of the special characters. The
 following LaTeX code will display the text correctly:</p>
@@ -1222,7 +1222,7 @@ new project folder to test this out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The command <code>\par</code> initiates a new paragraph for us even
 if we write text in just one line (see Option C). Solely, Option B out
@@ -1256,7 +1256,7 @@ Even more, I can write # and ^ correctly using LaTeX.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Answer </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We need to use <code>\par</code> to initiate a new paragraph without
 using a new line of code. Moreover, we need to use escapes before each
@@ -1295,7 +1295,7 @@ or hovering over the red circle in the text editor.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -1322,7 +1322,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-error-handling"><p>Content from <a href="03-error-handling.html">Error Handling</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/03-error-handling.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -1642,15 +1642,41 @@ yellow, and information messages in blue.</p>
 </section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
 </h2>
 <hr class="half-width">
-<div id="challenge-1-why-do-i-get-this-warning" class="callout challenge">
+<div id="challenge-1-identify-and-fix-the-error" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-1-why-do-i-get-this-warning" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Why do I get this warning?</h3>
+<div id="challenge-1-identify-and-fix-the-error" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Identify and fix the error?</h3>
 <div class="callout-content">
-<p>PLACEHOLDER</p>
+<p>The following document contains an error. Can you identify it?</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>The area of a circle is given by <span class="ss">$A = </span><span class="sc">\pi</span><span class="ss"> r^2$</span>, and the circumference is <span class="ss">$C = 2</span><span class="sc">\pi</span><span class="ss"> r$</span>.</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>To find the roots of a quadratic equation, we use the formula:</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="ss">$x = </span><span class="sc">\frac</span><span class="ss">{-b </span><span class="sc">\pm</span><span class="ss"> </span><span class="sc">\squareroot</span><span class="ss">{b^2 - 4ac}}{2a}$</span></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div class="accordion-body">
+<p>The error suggests there is something wrong with line 8.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1659,9 +1685,61 @@ yellow, and information messages in blue.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>PLACEHOLDER</p>
+<p>The full error message is:</p>
+<pre><code>! Undefined control sequence.
+&lt;argument&gt; -b \pm \squareroot
+                              {b^2 - 4ac}
+l.8 $x = \frac{-b \pm \squareroot{b^2 - 4ac}}{2a}
+                                                 $</code></pre>
+<p>The error indicates that the command <code>\squareroot</code> is not
+defined. We haven’t covered mathematical commands yet, but the correct
+command for the square root symbol is <code>\sqrt</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-fix-the-errors" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-fix-the-errors" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Fix the errors</h3>
+<div class="callout-content">
+<p>The following document contains several errors. Can you identify and
+fix them?</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="fu">\Section</span>{Introduction}</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>This document discusses the work of <span class="fu">\textbf</span>{Smith et al (2020).</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>There are three errors in total:</p>
+<ul>
+<li>The document is missing the <code>\begin{document}</code> command at
+the beginning.</li>
+<li>The <code>\Section</code> command is not defined. The correct
+command for a section heading is <code>\section</code>.</li>
+<li>The <code>\textbf</code> command is not properly closed. It should
+be <code>\textbf{Smith et al (2020)}</code>.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1689,7 +1767,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-logical-structure"><p>Content from <a href="04-logical-structure.html">The Structure of a Document</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/04-logical-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -1885,7 +1963,7 @@ with the <code>enumitem</code> package:</p>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">% \setlist{label=\Roman*} %&lt;-- globally defining the enumeration system</span></span>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}[</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  label=<span class="fu">\emph</span>{<span class="fu">\roman*</span>}), <span class="co">%&lt;-- change labeling system locally (or \Roman)</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>  label=<span class="fu">\emph</span>{<span class="fu">\roman*</span>}, <span class="co">%&lt;-- change labeling system locally (or \Roman)</span></span>
 <span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>  leftmargin=5cm, <span class="co">%&lt;-- change indent on the left</span></span>
 <span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>]</span>
 <span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>  <span class="fu">\item</span> First</span>
@@ -2612,7 +2690,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-06-extending-latex"><p>Content from <a href="06-extending-latex.html">Extending LaTeX</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/06-extending-latex.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
@@ -2809,7 +2887,7 @@ command to all the keywords in our document.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>Related to the <code>\newcommand</code> command, we can also use the
 <code>\renewcommand</code> command to change the definition of an
@@ -2913,7 +2991,7 @@ document?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Add the line <code>\usepackage{lipsum}</code> to the preamble of your
 document.</p>
@@ -2955,7 +3033,7 @@ it?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Output </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The new <code>\kw</code> command would take two arguments: the first
 argument would be the color we want to use to highlight the word, and
@@ -2985,9 +3063,9 @@ words as arguments. This first word shall be written
 <em>italic</em>. Moreover, the first and the second word are separated
 by a comma followed by a whitespace.</p>
 <p>Use <code>\newcommand</code> to define this command that takes two
-arguments as inputs and name it <code>\bo_it</code>. Write the following
+arguments as inputs and name it <code>\boit</code>. Write the following
 sentence into your LaTeX document using your new command
-<code>\bo_it</code>:</p>
+<code>\boit</code>:</p>
 <p>This newly defined command highlights these two words:
 <strong>Apple</strong>, <em>Banana</em>.</p>
 </div>
@@ -2998,7 +3076,7 @@ sentence into your LaTeX document using your new command
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Output </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The new <code>\boit</code> command would take two arguments: the
 first argument would be used with <code>\tetxbf{#1}</code> to make the
@@ -3061,7 +3139,7 @@ blue. Each word should be written in a separate line.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Output </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can exploit the optional argument in <code>\kw</code> to write
 down the given words very efficiently. For the first word, we change the
@@ -3111,7 +3189,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-05.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -3455,7 +3533,7 @@ in a later episode.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Another package that we can use to work with images in LaTeX is the
 <code>hvfloat</code> package. This package is an alterantive way of
@@ -3493,7 +3571,7 @@ would your LaTeX look like?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>We use the <code>\centering</code> command in the <code>figure</code>
 environment and specify <code>angle=45</code> to rotate the image.</p>
@@ -3553,7 +3631,7 @@ centered.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>First, the command <code>\usepackage{graphicx}</code> is missing in
 the preamble. Second, the <code>\centering</code> command has to be
@@ -3631,7 +3709,7 @@ this</a>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -3709,7 +3787,7 @@ images will be displayed in your document?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>The first image will be placed at the right of the following
 paragraph of text as <code>{r}</code> is specified as an argument within
@@ -3751,7 +3829,7 @@ the <code>figure</code> environment.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-06.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -3765,7 +3843,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-08-tables"><p>Content from <a href="08-tables.html">Tables</a></p>
 <hr>
-<p>Last updated on 2025-07-03 |
+<p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/08-tables.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -4160,8 +4238,8 @@ command equipped with it. It is similarly structured as
 </tr>
 </tbody>
 </table>
-<p>Your LaTaX version should look something like <a href="../fig/07-tables/challenge-make-a-table.PNG">this</a>.</p>
-<p>Note that the last row is a bit different from the others. The first
+<p>Your LaTeX version should look something like this:</p>
+<figure><img src="../fig/07-tables/challenge-make-a-table.PNG" alt="Example output of a table for challenge 1" class="figure mx-auto d-block"></figure><p>Note that the last row is a bit different from the others. The first
 two columns re merged, the text “Total” is right-aligned and bold, and
 the value in the last column is italicized.</p>
 <p>(Data for this challenge is from <a href="https://www.statista.com/statistics/1546704/monthly-best-selling-car-models-in-germany/" class="external-link">Statista</a>)</p>
@@ -4173,7 +4251,7 @@ the value in the last column is italicized.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4251,16 +4329,17 @@ columns combined?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<p>The table will have 4 columns where the first column does not have a
-column name. The table will have 6 rows. The first row is the column
-name row. Rows 2 to 4 are merged for “Fruit”. Rows 5 and 6 are merged
-for “Cheese”.</p>
-<p><em>Hint: We want to make sure the caption stays with the table, so
-we should put the table inside an environment. For images we use the
-“figure” environment, but for tables we can use the “table”
-environment.</em></p>
+<p>The <code>multirow</code> command is used here to merge rows
+together. In the case here, we have two <code>multirow</code> commands,
+one for the “Fruit” category and one for the “Cheese” category. The
+first argument of the <code>multirow</code> command specifies how many
+rows should be merged together, the second argument specifies the width
+of the merged cell, and the third argument specifies the contents of the
+merged cell.</p>
+<p>The table created by this code will look like this:</p>
+<figure><img src="../fig/07-tables/challenge-merged-rows.PNG" alt="Example output of a table with merged rows" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -4293,7 +4372,7 @@ category “Bread”.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4357,8 +4436,9 @@ package import.</li>
 darker red color.</li>
 </ul>
 <p>There’s no right answer to this challenge, so feel free to experiment
-with different colors! <a href="../fig/07-tables/challenge-colorful-table.PNG">Here’s an example of
-what you can do.</a></p>
+with different colors!</p>
+<p>Here’s an example of what you can do:</p>
+<figure><img src="../fig/07-tables/challenge-colorful-table.PNG" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -4367,7 +4447,7 @@ what you can do.</a></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4438,7 +4518,7 @@ package can be used to merge rows in a table.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-07.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4644,7 +4724,7 @@ using the <code>\ref</code> command.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>As shown in <span class="math inline">\(\ref{tab:findings}\)</span>
 post-treatment values are higher…</p>
@@ -4724,7 +4804,7 @@ correct. Why or why not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You might have expected the output to be either “As indicated in
 Section 2, …” or “As indicated in Section ???”, but it actually returns
@@ -4783,7 +4863,7 @@ issue. What is it? Why does this happen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The <code>\ref{}</code> command is correctly written, but the
 <code>\ref{}</code> command only returns the number of the label it is
@@ -4814,7 +4894,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-08.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -4964,7 +5044,7 @@ backslash(<code>\</code>) here.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Math Mode in LaTeX is not just for LaTeX users! It is also used other
 tools like Jupyter Notebooks, R Markdown and many markdown processors.
@@ -5101,7 +5181,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5136,7 +5216,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
@@ -5188,7 +5268,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5327,7 +5407,7 @@ SSW.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>% 1. Speed of light </p>
 <p>% 2. Standard atmospheric pressure </p>
@@ -5360,7 +5440,7 @@ writing numbers with their scientific unit.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="../files/document_state/ep-09.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -5680,7 +5760,7 @@ the rest of the document.</p>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -5737,7 +5817,7 @@ LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5791,7 +5871,7 @@ indentation).</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -8042,7 +8122,7 @@ of the other files and see if this code still works.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>If you used one of the other files, you might have noticed that the
 time it took create the pdf was much longer. This is because the other
@@ -8099,7 +8179,7 @@ about “misplaced ”.)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <pre><code>\begin{tabular}{rlr}
 \toprule
