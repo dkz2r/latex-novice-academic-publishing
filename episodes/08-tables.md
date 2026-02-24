@@ -269,7 +269,9 @@ Try to replicate the following table in LaTeX:
 | Mercedes    | GLK,GLC   | 3,143    |
 |             | **Total** | *22,606* |
 
-Your LaTaX version should look something like [this](fig/07-tables/challenge-make-a-table.PNG ).
+Your LaTeX version should look something like this:
+
+![](fig/07-tables/challenge-make-a-table.PNG){alt='Example output of a table for challenge 1'}
 
 Note that the last row is a bit different from the others. The first two columns re merged, the
 text "Total" is right-aligned and bold, and the value in the last column is italicized.
@@ -344,17 +346,14 @@ Are any rows or columns combined?
 
 :::::::::::::::::::::::: solution
 
-The table will have 4 columns where the first column does not have a column name.
-The table will have 6 rows.
-The first row is the column name row.
-Rows 2 to 4 are merged for "Fruit".
-Rows 5 and 6 are merged for "Cheese".
+The `multirow` command is used here to merge rows together. In the case here, we have two `multirow`
+commands, one for the "Fruit" category and one for the "Cheese" category. The first argument of the
+`multirow` command specifies how many rows should be merged together, the second argument specifies
+the width of the merged cell, and the third argument specifies the contents of the merged cell.
 
+The table created by this code will look like this:
 
-
-*Hint: We want to make sure the caption stays with the table, so we should put the table inside an
-environment. For images we use the "figure" environment, but for tables we can use the "table"
-environment.*
+![](fig/07-tables/challenge-merged-rows.PNG){alt='Example output of a table with merged rows'}
 
 :::::::::::::::::::::::::::::::::
 
@@ -424,7 +423,10 @@ A few things that will help you:
   `red!10` is a light red color, while `red!90` is a darker red color.
 
 There's no right answer to this challenge, so feel free to experiment with different colors!
-[Here's an example of what you can do.](fig/07-tables/challenge-colorful-table.PNG)
+
+Here's an example of what you can do:
+
+![](fig/07-tables/challenge-colorful-table.PNG)
 
 
 :::::::::::::::::::::::: solution
