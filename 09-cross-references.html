@@ -418,7 +418,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Adding Cross References</h1>
-        <p>Last updated on 2025-08-18 |
+        <p>Last updated on 2026-02-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/09-cross-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -594,9 +594,43 @@ using the <code>\ref</code> command.</p>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="kw">\section</span>{Cross-referencing Figures}</span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>Here is an example of a figure in the document. We will refer to it later in the text.</span>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">% Figure goes here</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>In the text, we can refer to the figure using its label: <span class="co">% Something goes here</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>The goal will be to have something that looks like this:</p>
+<figure><img src="fig/09-cross-references/challenge-reference-image.PNG" alt="Example output of a figure for challenge 1" class="figure mx-auto d-block"></figure></div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div class="accordion-body">
+<p>Use the <code>figure</code> environment to wrap the image, and use
+the <code>\includegraphics</code> command to add the image. In order to
+center the image, you can use the <code>\centering</code> command inside
+the <code>figure</code> environment.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
+  <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
+</button>
+<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div class="accordion-body">
+<p>Make sure that the <code>\label{}</code> command comes after the
+<code>\caption{}</code> command, and that the <code>\ref{}</code>
+command refers to the correct label.</p>
 </div>
 </div>
 </div>
@@ -608,8 +642,6 @@ using the <code>\ref</code> command.</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>As shown in <span class="math inline">\(\ref{tab:findings}\)</span>
-post-treatment values are higher…</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -846,7 +878,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/09-cross-references.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/09-cross-references.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-08-18",
+  "dateModified": "2026-02-24",
   "datePublished": "2026-02-24"
 }
 
