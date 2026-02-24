@@ -124,30 +124,35 @@ You may find the following LaTeX template helpful.
 
 \section{Cross-referencing Figures}
 
+Here is an example of a figure in the document. We will refer to it later in the text.
 
+% Figure goes here
+
+In the text, we can refer to the figure using its label: % Something goes here
 
 \end{document}
 ```
 
+The goal will be to have something that looks like this:
+
+![](fig/09-cross-references/challenge-reference-image.PNG){alt='Example output of a figure for challenge 1'}
+
+::: hint
+
+Use the `figure` environment to wrap the image, and use the `\includegraphics` command to add the
+image. In order to center the image, you can use the `\centering` command inside the `figure`
+environment.
+
+:::
+
+::: hint
+
+Make sure that the `\label{}` command comes after the `\caption{}` command, and that the `\ref{}`
+command refers to the correct label.
+
+:::
 
 :::::::::::::::::::::::: solution
-
-\begin{table}[ht]
-  \centering
-  \begin{tabular}{lll}
-    \toprule
-    Color & Pre-treatment & Post-treatment \\
-    \midrule
-    Blue  & 30\% & 35\% \\
-    Green & 15\% & 55\% \\
-    Red   & 10\% & 12\% \\
-    \bottomrule
-  \end{tabular}
-  \caption{Findings from the survey.}
-  \label{tab:findings}
-\end{table}
-
-As shown in \ref{tab:findings} post-treatment values are higher...
 
 ```latex
 \documentclass{article}
