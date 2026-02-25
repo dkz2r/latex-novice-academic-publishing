@@ -26,17 +26,21 @@ command that let's us change the definition of an existing command. This might b
 want the definition of a command to change throughout the document, however there are also some
 commands that are pre-defined that we can modify with this command.
 
-For Example, we can change the font of the entire document by adding the following line to the
-`preamble/custom-commands.tex` file:
+For Example, we can change the font of the entire document by adding the following line to our
+preamble:
 
 ```latex
 % Change the font of the entire document to a monospace font
 \renewcommand{\familydefault}{\ttdefault}
 ```
 
-When you compile the document you should see something like this:
+When you compile the document you should see that it has changed from this:
 
-IMAGE GOES HERE
+![](fig/11-font-format-and-spacing/before-default-font-change.PNG){alt="Our document with the default font"}
+
+To this:
+
+![](fig/11-font-format-and-spacing/after-default-font-change.PNG){alt="Our document with the default font changed to a monospace font"}
 
 ### More Fonts
 
@@ -187,10 +191,12 @@ We can set the font size in the same way. All sizes are relative to the base fon
 - `\footnotesize` for footnote text
 
 
-You can further customize your font size
+You can further customize your font size by setting the font size explicitly with the `\fontsize`
+command. The first parameter is the font size, and the second parameter is the "leading", which is
+the distance between the base lines of each line of text.
 
 ```
-{\fontsize{14}{16}\selectfont This text is 14pt with 16pt leading.}
+{\fontsize{14}{16}\selectfont \lipsum}
 ```
 
 If you want it really big:
@@ -219,12 +225,7 @@ the `\begin{document}` command, and enclose everything in a `titlepage` environm
 \begin{titlepage}
     \centering
 
-    \huge
     \textbf{My Example Document}
-
-    \vspace{1cm}
-    \normalsize
-    \textit{An example of a LaTeX document}
 
     \vfill
     January 1, 2000
@@ -257,37 +258,40 @@ associated with the lessons. They appear in the "Instructor View"
 Using the content covered, create a title page with custom formatting. Your title page should have:
 
 - A centered title "My Custom LaTeX Title Page" in large, bold text.
-- A centered subtitle "A Sample Document with Custom Formatting" in italic text, smaller than the title.
+- A centered subtitle in italic text, smaller than the title.
 - The date centered at the bottom of the page.
 
-You can use the commands `\vspace` and `\vfill` to make fill blank space between the items and may find the following LaTeX template helpful:
+You can use the commands `\vspace` and `\vfill` to make fill blank space between the items.
+
+Here's an example of what your title page could look like:
+
+![](fig/11-font-format-and-spacing/challenge-title-page-example.PNG){alt="Example of a custom title page"}
+
+::: hint
+
+Use a `titlepage` environment to create the title page, and use the `\centering` command to center
+center all of the text inside the environment.
 
 ```latex
-\documentclass{article}
-
-\begin{document}
-
 \begin{titlepage}
+  \centering
 
+  % Title
 
+  % Subtitle
 
+  % Date
 
 \end{titlepage}
-
-\end{document}
 ```
 
-
+:::
 
 :::::::::::::::::::::::: solution
 
 ## Output
 
 ```latex
-\documentclass{article}
-
-\begin{document}
-
 \begin{titlepage}
     \centering
     \huge
@@ -301,8 +305,6 @@ You can use the commands `\vspace` and `\vfill` to make fill blank space between
     \large
     January 1, 2025
 \end{titlepage}
-
-\end{document}
 ```
 
 :::::::::::::::::::::::::::::::::
@@ -311,30 +313,110 @@ You can use the commands `\vspace` and `\vfill` to make fill blank space between
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 2: Adjust Paragraph Spacing in Your Document
+## Challenge 2: Adjust Paragraph Spacing
 
-Create a LaTeX document with the following:
+Consider the following document:
 
-- Use the `parskip` package to adjust the paragraph spacing.
-- Generate some text using the `lipsum` package.
-- Ensure that paragraphs are separated by a blank line (without indentation).
+```latex
+\documentclass{article}
+\usepackage{lipsum}
+
+\begin{document}
+
+\section{My Report}
+
+\lipsum[1]
+\lipsum[2]
+\lipsum[3]
+
+\end{document}
+```
+
+We want our document to have no indents for paragraphs, but to have a single blank line between
+them. What do we need to change in the document to achieve this?
+
+:::::::::::::::::::::::: solution
+
+We need to add the `parskip` package to the preamble of our document. This will add a blank line
+between paragraphs and remove the indent from the first line of each paragraph.
+
+We also need to add a blank line between each `\lipsum` command in order to create a new paragraph
+for each block of text.
+
+```latex
+\documentclass{article}
+\usepackage{lipsum}
+\usepackage[parfill]{parskip}
+
+\begin{document}
+
+\section{My Report}
+
+\lipsum[1]
+
+\lipsum[2]
+
+\lipsum[3]
+
+\end{document}
+```
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3: Making a custom quote block
+
+Create a customg quote block using a `center` environment and `\vspace` commands. See if you can
+make it look something like this:
+
+![](fig/11-font-format-and-spacing/challenge-quote-example.PNG){alt="Example of a custom quote block"}
+
+Note that there is some vertical space above and below the quote, and the text is formatted with
+different font sizes and styles. The quote itself is in italics, and the attribution is in small
+caps.
+
+Bonus! Make a `\newcommand` to create a custom quote block that you can reuse throughout your
+document.
+
+::: hint
+
+Use a `center` environment to center the text, and use `\vspace` to add space above and below the
+quote. Format the text using explicit formatting options.
+
+:::
 
 :::::::::::::::::::::::: solution
 
 ```latex
-\documentclass{article}
-\usepackage{lipsum}  % To generate sample text
-\usepackage[parfill]{parskip}  % Adds space between paragraphs without indentation
+\begin{center}
+    \large\textbf{Words of Wisdom}
 
-\begin{document}
+    \vspace{0.25cm}
+    \small\textit{``Computers are good at following instructions, but not at reading your mind.''}
 
-\section{Paragraph Spacing Example}
+    \vspace{0.25cm}
+    \textsc{--- Donald Knuth, 1986}
+\end{center}
+```
 
-% Generating Lorem Ipsum text with the lipsum package
-\lipsum[1-2]
+Bonus:
 
-\end{document}
-````
+```latex
+\newcommand{\customquote}[2]{
+    \begin{center}
+        \large\textbf{Words of Wisdom}
+
+        \vspace{0.25cm}
+        \small\textit{``#1''}
+
+        \vspace{0.25cm}
+        \textsc{--- #2}
+    \end{center}
+}
+
+```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
