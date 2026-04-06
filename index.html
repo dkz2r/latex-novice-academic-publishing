@@ -212,7 +212,9 @@
 <li><a href="#windows-installation">Windows Installation</a></li>
 <li><a href="#macos-installation">macOS Installation</a></li>
 <li><a href="#unixlinux-installation">Unix/Linux Installation</a></li>
+<li><a href="#configure-the-default-compiler">Configure the Default Compiler</a></li>
 <li><a href="#verify-installation">Verify Installation</a></li>
+<li><a href="#backup-option-overleaf">Backup Option: Overleaf</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -422,136 +424,289 @@ any links that you are not going to use.
  -->
 
 
-      <section id="setup"><p>This workshop will demonstrate how to use <a href="https://tug.org/texlive/" class="external-link">TeX Live</a> in order to write and
-render LaTeX documents. TeX Live is a comprehensive TeX system that
-includes all of the necessary tools to compile and render LaTeX
-documents. It is available for Windows, macOS, and Linux, and can be
-installed on your local machine.</p>
+      <section id="setup"><p>This workshop will be demonstrated using <a href="https://www.texstudio.org/" class="external-link">TeXStudio</a> to write and render
+LaTeX documents. TeXStudio is a feature-rich, integrated LaTeX writing
+environment with syntax highlighting, an integrated PDF viewer, and
+inline error checking. It is available for Windows, macOS, and
+Linux.</p>
+<p>Because TeXStudio is an <em>editor</em>, it needs a separate LaTeX
+<em>distribution</em> to compile documents. The distribution provides
+the compilers and various packages which we will use throughout this
+workshop.</p>
 <section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
-<hr class="half-width"><p>You can find installation instructions for TeX Live on the <a href="https://tug.org/texlive/" class="external-link">TeX Live website</a>. We include a brief
-overview of the installation on this page for convenience, but we
+<hr class="half-width"><p>You can find installation instructions for TeXStudio on the TeXStudio
+website (<a href="https://www.texstudio.org/" class="external-link uri">https://www.texstudio.org/</a>). We include a brief overview
+of the installation process on this page for convenience, but we
 recommend that you refer to the official documentation for the most
-up-to-date instructions.</p>
+up-to-date instructions, and defer to the official documentation if you
+encounter any issues during installation.</p>
 </section><section><h2 class="section-heading" id="windows-installation">Windows Installation<a class="anchor" aria-label="anchor" href="#windows-installation"></a></h2>
-<hr class="half-width"><p>Visit the <a href="https://tug.org/texlive/windows.html" class="external-link">TeX Live
-website</a> for the latest version of the TeX Live installer for
-Windows. Click the link to “install-tl-windows.exe.”</p>
-<p>The full TeX Live installation is recommended for most users, as it
-includes all of the necessary packages and tools to compile and render
-LaTeX documents. However, if you have limited disk space or a slow
-internet connection, you can install a minimal version of TeX Live that
-includes only the commonly used packages.</p>
+<hr class="half-width"><p>Windows users need to install two pieces of software: a LaTeX
+distribution and TeXStudio.</p>
+<div class="section level3">
+<h3 id="step-1-install-a-latex-distribution">Step 1 — Install a LaTeX Distribution<a class="anchor" aria-label="anchor" href="#step-1-install-a-latex-distribution"></a></h3>
+<p>A LaTeX distribution provides the compilers and packages needed to
+build your documents. Two popular options are TeX Live and MiKTeX. You
+are welcome to choose either distribution, but our demonstration will
+use TeX Live.</p>
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
   <h3 class="tab-header" id="nav-tab-heading-1-1">
-  Windows Installation (Full)
+  TeX Live
   </h3>
 </button>
 <button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
   <h3 class="tab-header" id="nav-tab-heading-1-2">
-  Windows Installation (Minimal)
+  MiKTeX
   </h3>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
 <div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
-<p>Run the installer and select “Install” from the dialog that appears,
-then click “Next”.</p>
+<p>Visit the TeX Live website (<a href="https://www.tug.org/texlive/windows.html" class="external-link uri">https://www.tug.org/texlive/windows.html</a>) and download
+the “install-tl-windows.exe” installer.</p>
+<figure><img src="./fig/tex_live_download_page.png" alt="The TeX Live website download page showing the link to install-tl-windows.exe" class="figure mx-auto d-block"></figure><p>Run the installer. When the dialog appears, select “Install” and
+click “Next”.</p>
 <p>Click “Install” to begin the installation process. This will unpack
-some files, before opening a new window called the “Tex Live
+some files before opening a new window called the “TeX Live
 Installer”.</p>
-<p><em>If desired, you can change the installation directory by clicking
+<figure><img src="./fig/tex_live_installer.png" alt="The TeX Live Installer window showing progress" class="figure mx-auto d-block"></figure><p><em>If desired, you can change the installation directory by clicking
 on the “Change” button.</em></p>
+<p>Note that the full TeX Live installation is large (over 5 GB) and may
+take some time to download and install, depending on your internet
+connection and computer speed.</p>
 <p>When the installation is complete, you can close the installer
 windows.</p>
 </div>
 <div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
-<p>Run the installer and select “Install” from the dialog that appears,
-then click “Next”.</p>
-<p>Click “Install” to begin the installation process. This will unpack
-some files, before opening a new window called the “Tex Live
-Installer”.</p>
-<p><em>If desired, you can change the installation directory by clicking
-on the “Change” button.</em></p>
-<p>Select “Advanced” to bring up the custom installation options.</p>
-<p>Under “Selection”, select “Change” next “Scheme” and choose “basic
-scheme (plain ad latex)” to install a minimal set of packages.</p>
-<p>Ensure that the “Install TeXworks front end” option is selected.</p>
-<p>When the installation is complete, you can close the installer
-windows.</p>
+<p>Visit the MiKTeX website (<a href="https://miktex.org/download" class="external-link uri">https://miktex.org/download</a>) and download the Windows
+installer.</p>
+<figure><img src="./fig/mik_tex_download_page.png" alt="The MiKTeX download page showing the Windows installer option" class="figure mx-auto d-block"></figure><p>Run the installer and follow the prompts. Installing for all users
+(rather than just the current user) is recommended if you have
+administrator rights on your machine. Keep the remaining default
+options.</p>
+<p>When the installation is complete, you can close the installer.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="section level3">
+<h3 id="step-2-install-texstudio">Step 2 — Install TeXStudio<a class="anchor" aria-label="anchor" href="#step-2-install-texstudio"></a></h3>
+<p>Visit the TeXStudio website (!!! link to the TeXStudio download page)
+to download the latest installer for Windows. For most machines,
+download the 64-bit Windows installer (<code>x86_64</code>).</p>
+<figure><img src="./fig/texstudio_download_page.png" alt="The TeXStudio download page showing the Windows installer options" class="figure mx-auto d-block"></figure><p>Run the downloaded <code>.exe</code> file. Click “Next” through the
+prompts, then click “Install”. When the installation is complete, click
+“Finish”.</p>
+<figure><img src="./fig/tex_studio_progress.png" alt="The TeXStudio installer on Windows showing the installation progress" class="figure mx-auto d-block"></figure></div>
 </section><section><h2 class="section-heading" id="macos-installation">macOS Installation<a class="anchor" aria-label="anchor" href="#macos-installation"></a></h2>
-<hr class="half-width"><p>Visit the <a href="https://tug.org/mactex/mactex-download.html" class="external-link">MaxTeX Download
-Page</a> for the latest version of the MacTeX installer for macOS. Click
-the link to download the “MacTeX.pkg” file.</p>
-<p>Double click the downloaded “MacTeX.pkg” file to start the
+<hr class="half-width"><p>macOS users need to install two pieces of software: MacTeX (the LaTeX
+distribution) and TeXStudio.</p>
+<div class="section level3">
+<h3 id="step-1-install-mactex">Step 1 — Install MacTeX<a class="anchor" aria-label="anchor" href="#step-1-install-mactex"></a></h3>
+<p>Visit the MacTeX download page (!!! link to the MacTeX download page
+at tug.org/mactex) and download the “MacTeX.pkg” file.</p>
+<figure><img src="" alt="The MacTeX download page showing the MacTeX.pkg download link" class="figure mx-auto d-block"></figure><p>Double-click the downloaded “MacTeX.pkg” file to start the
 installation process. Follow the prompts to complete the installation.
 The default installation options are recommended for most users.</p>
-<p>Open a terminal and type <code>tex --version</code> to verify that
-TeX Live is installed correctly. You should see the version number of
-TeX Live printed to the console.</p>
-<p>Open a terminal and enter <code>pdflatex --version</code> to check
-that the PDFLaTeX compiler is installed correctly. You should see the
-version number of PDFLaTeX printed to the console.</p>
+<figure><img src="" alt="The MacTeX installer on macOS showing the default installation options" class="figure mx-auto d-block"></figure></div>
+<div class="section level3">
+<h3 id="step-2-install-texstudioa">Step 2 — Install TeXStudioa<a class="anchor" aria-label="anchor" href="#step-2-install-texstudioa"></a></h3>
+<p>Visit the TeXStudio download page (!!! link to the TeXStudio download
+page) and download the macOS version. Two builds are available: one for
+Intel Macs and one for Apple Silicon (M1/M2/M3) Macs. Download the
+version that matches your hardware.</p>
+<figure><img src="" alt="The TeXStudio download page showing the macOS zip file options for Intel and Apple Silicon" class="figure mx-auto d-block"></figure><p>Unzip the downloaded file and drag the TeXStudio application into
+your “Applications” folder.</p>
+<p><strong>Note:</strong> Because TeXStudio is distributed without an
+Apple Developer signature, macOS may display a warning that it cannot
+verify the developer. If this happens, do not double-click the icon.
+Instead, hold <strong>Control</strong>, click the TeXStudio icon, and
+select “Open” from the context menu. A dialog will appear asking you to
+confirm that you want to open the application; click “Open”.</p>
+<figure><img src="" alt="The macOS security dialog warning about an unidentified developer, with the Open button highlighted" class="figure mx-auto d-block"></figure></div>
 </section><section><h2 class="section-heading" id="unixlinux-installation">Unix/Linux Installation<a class="anchor" aria-label="anchor" href="#unixlinux-installation"></a></h2>
-<hr class="half-width"><div class="codewrapper sourceCode" id="cb1">
+<hr class="half-width"><p>Linux users need to install two pieces of software: TeX Live (the
+LaTeX distribution) and TeXStudio.</p>
+<div class="section level3">
+<h3 id="step-1-install-tex-live">Step 1 — Install TeX Live<a class="anchor" aria-label="anchor" href="#step-1-install-tex-live"></a></h3>
+<p>Install TeX Live using your distribution’s package manager. The
+<code>texlive-full</code> package is recommended for this workshop, as
+it includes all of the packages used in the exercises.</p>
+<p><strong>Debian/Ubuntu:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="bu">cd</span> /tmp</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">wget</span> https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz</span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">zcat</span> <span class="op">&lt;</span> install-tl-unx.tar.gz <span class="kw">|</span> <span class="fu">tar</span> xf <span class="at">-</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="bu">cd</span> install-tl-2<span class="pp">*</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">perl</span> ./install-tl <span class="at">--no-interaction</span> <span class="at">--scheme</span><span class="op">=</span>small</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">sudo</span> apt install texlive-full</span></code></pre>
 </div>
-<p>This process will download and install TeX Live in the
-<code>/usr/local/texlive</code> directory by default. Note that the
-download may take several hours.</p>
-<p>Finally, prepend
-<code>/usr/local/texlive/2023/bin/x86_64-linux</code> to your
-<code>PATH</code> environment variable in order to use the TeX Live
-binaries from the command line. You can do this by adding the following
-line to your <code>~/.bashrc</code> or <code>~/.bash_profile</code>
-file:</p>
+<p><strong>Fedora/RHEL:</strong></p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"/usr/local/texlive/2023/bin/x86_64-linux:</span><span class="va">$PATH</span><span class="st">"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">sudo</span> dnf install texlive-scheme-full</span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="verify-installation">Verify Installation<a class="anchor" aria-label="anchor" href="#verify-installation"></a></h2>
-<hr class="half-width"><p>Open a command prompt or terminal and type <code>tex --version</code>
-to verify that TeX Live is installed correctly. You should see the
-version number of TeX Live printed to the console.</p>
-<p>Open a command prompt or terminal and enter
-<code>pdflatex --version</code> to check that the PDFLaTeX compiler is
-installed correctly. You should see the version number of PDFLaTeX
-printed to the console.</p>
+<p>Note that the full TeX Live installation is large and the download
+may take some time.</p>
+</div>
+<div class="section level3">
+<h3 id="step-2-install-texstudio-1">Step 2 — Install TeXStudio<a class="anchor" aria-label="anchor" href="#step-2-install-texstudio-1"></a></h3>
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
   <h3 class="tab-header" id="nav-tab-heading-2-1">
-  TeXworks
+  Package Manager (Recommended)
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-2" type="button" role="tab" aria-controls="nav-tabpanel-2-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-2">
+  AppImage
   </h3>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
 <div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
-<p>Open TeXworks, which is a simple LaTeX editor that comes with TeX
-Live and paste the following code into a new document:</p>
+<p>TeXStudio is available in the package repositories for most major
+Linux distributions. Install it using your package manager:</p>
 <div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">sudo</span> apt install texstudio</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
+<p>NOTE: Need someone to verify these instructions.</p>
+<p>If you prefer not to use your package manager, a self-contained
+AppImage is available from the TeXStudio GitHub releases page.</p>
+<p>Download the file ending in <code>-x86_64.AppImage</code>. Then open
+a terminal in the directory where you saved it and run:</p>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">chmod</span> +x texstudio-<span class="pp">*</span>-x86_64.AppImage</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">./texstudio-*-x86_64.AppImage</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="configure-the-default-compiler">Configure the Default Compiler<a class="anchor" aria-label="anchor" href="#configure-the-default-compiler"></a></h2>
+<hr class="half-width"><p>TeXStudio defaults to pdfLaTeX as its compiler. This workshop uses
+<strong>LuaLaTeX</strong>, which supports modern font handling
+(including the <code>fontspec</code> package) and is required for some
+exercises. You should change the default compiler before you begin.</p>
+<p>Open TeXStudio and go to <strong>Options</strong> &gt;
+<strong>Configure TeXstudio…</strong> (on macOS:
+<strong>TeXstudio</strong> &gt; <strong>Preferences…</strong>).</p>
+<figure><img src="./fig/tex_studio_config.png" alt="The TeXStudio menu bar with Options highlighted and Configure TeXstudio selected from the drop-down" class="figure mx-auto d-block"></figure><p>In the configuration dialog, select <strong>Build</strong> from the
+left-hand panel. Under <strong>Default Compiler</strong>, open the
+drop-down menu and select <strong>LuaLaTeX</strong>.</p>
+<figure><img src="./fig/tex_live_set_compiler.png" alt="The TeXStudio Build configuration panel showing the Default Compiler drop-down set to LuaLaTeX" class="figure mx-auto d-block"></figure><p>Click <strong>OK</strong> to save the change.</p>
+</section><section><h2 class="section-heading" id="verify-installation">Verify Installation<a class="anchor" aria-label="anchor" href="#verify-installation"></a></h2>
+<hr class="half-width"><p>Open TeXStudio. You should see the main editor window with an empty
+document area.</p>
+<figure><img src="" alt="The TeXStudio main window showing the editor panel, structure panel on the left, and messages panel at the bottom" class="figure mx-auto d-block"></figure><p>Create a new file by selecting “File” &gt; “New” (or pressing
+<code>Ctrl+N</code>) and paste the following code into the editor. This
+document loads all of the packages used throughout the workshop, so
+compiling it successfully confirms that your installation is
+complete.</p>
+<div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>Hello, <span class="fu">\LaTeX</span>!</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath</span>}                     <span class="co">% mathematics formatting</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">array</span>}                       <span class="co">% extended table column types</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="bu">\usepackage</span>[ngerman,english]{<span class="ex">babel</span>}      <span class="co">% multilingual support</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="bu">\usepackage</span>[style=authoryear]{<span class="ex">biblatex</span>}  <span class="co">% bibliography management</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktabs</span>}                    <span class="co">% professional table rules</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="bu">\usepackage</span>[autostyle]{<span class="ex">csquotes</span>}         <span class="co">% context-sensitive quotation</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">enumitem</span>}                    <span class="co">% customisable lists</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="bu">\usepackage</span>[margin=1in]{<span class="ex">geometry</span>}        <span class="co">% page layout</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">graphicx</span>}                    <span class="co">% including graphics</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">hyperref</span>}                    <span class="co">% hyperlinks and cross-references</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">lipsum</span>}                      <span class="co">% placeholder text</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multirow</span>}                    <span class="co">% multi-row table cells</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="bu">\usepackage</span>[parfill]{<span class="ex">parskip</span>}            <span class="co">% paragraph spacing</span></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">siunitx</span>}                     <span class="co">% scientific units</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">tgtermes</span>}                    <span class="co">% TeX Gyre Termes font</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">wrapfig</span>}                     <span class="co">% text-wrapped figures</span></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="bu">\usepackage</span>[table]{<span class="ex">xcolor</span>}               <span class="co">% colour support</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>Hello, <span class="fu">\LaTeX</span>!</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<p>Then click on the green “Typeset” button (or press
-<code>Ctrl+T</code>) to compile the document. If you see a PDF preview
-of the document with the text “Hello, LaTeX!” then everything is working
-correctly.</p>
+<p>Press <strong>F6</strong> (or select “Tools” &gt; “Build &amp; View”)
+to compile the document. TeXStudio will run the LaTeX compiler and, if
+successful, display the resulting PDF in the panel to the right of the
+editor.</p>
+<figure><img src="" alt="The TeXStudio editor with the Hello LaTeX code on the left and the compiled PDF showing 'Hello, LaTeX!' on the right" class="figure mx-auto d-block"></figure><p>If you see the text “Hello, LaTeX!” in the PDF panel, your
+installation is working correctly.</p>
+<div class="section level3">
+<h3 id="troubleshooting">Troubleshooting<a class="anchor" aria-label="anchor" href="#troubleshooting"></a></h3>
+<p>If you encounter an error during compilation like
+“texstudio_iubQaA.tex: error: 6: File
+<code>biblatex.sty' not found. \usepackage</code>”, this indicates that
+you are missing some of the required LaTeX packages and will need to
+install them in your distribution. This will depend on the distribution
+you chose earlier.</p>
+<div class="tabs">
+<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-3-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-1" type="button" role="tab" aria-controls="nav-tabpanel-3-1" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-3-1">
+  TeX Live
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-3-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-2" type="button" role="tab" aria-controls="nav-tabpanel-3-2" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-3-2">
+  MiKTeX
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-3" class="tab-content">
+<div id="nav-tabpanel-3-1" class="tab-pane show active" aria-labelledby="nav-tab-3-1" role="tabpanel">
+<p>If you installed TeX Live using the full installation option, you
+should have all of the required packages. If you chose a custom
+installation, you may need to install additional packages using the TeX
+Live Manager. Open the TeX Live Manager application and search for the
+missing package (for example, “biblatex”). Select the package from the
+search results and click “Install” to add it to your distribution.</p>
+<p>You may also install missing packages using the command line. Open a
+terminal and run the following command, replacing
+<code>&lt;package-name&gt;</code> with the name of the missing
+package:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">tlmgr</span> install <span class="op">&lt;</span>package-name<span class="op">&gt;</span></span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-3-2" class="tab-pane" aria-labelledby="nav-tab-3-2" role="tabpanel">
+<p>TODO: Add instructions for installing missing packages in MiKTeX.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="backup-option-overleaf">Backup Option: Overleaf<a class="anchor" aria-label="anchor" href="#backup-option-overleaf"></a></h2>
+<hr class="half-width"><p>If you are unable to install software on your device (for example,
+because it is a managed or corporate machine), you can use
+<strong>Overleaf</strong> as a browser-based alternative. Overleaf is a
+free, online LaTeX editor — no installation is required, and it works in
+any modern web browser.</p>
+<div id="using-overleaf-instead-of-a-local-installation" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="using-overleaf-instead-of-a-local-installation" class="callout-inner">
+<h3 class="callout-title">Using Overleaf Instead of a Local
+Installation</h3>
+<div class="callout-content">
+<p>Please note that local installation of TeXStudio is strongly
+preferred for this workshop, as some exercises may rely on features or
+file access that are not available in the browser-based environment. Use
+Overleaf only if you cannot install software on your machine.</p>
 </div>
 </div>
 </div>
@@ -610,8 +765,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/index.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/index.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-03-31",
-  "datePublished": "2026-03-31"
+  "dateModified": "2026-04-06",
+  "datePublished": "2026-04-06"
 }
 
   </script><script>

@@ -22,5 +22,5 @@
 "episodes/16-documentation-and-finding-help.md" "776bd4a1498a6b7cabdd621a0d7d7bba" "site/built/16-documentation-and-finding-help.md" "2025-07-16"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2023-03-16"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2023-03-16"
-"learners/setup.md" "73fdec9f724c8b637890588bba18e4e5" "site/built/setup.md" "2025-07-03"
+"learners/setup.md" "b191d9460eaa1a9d7a5c0a53b40d76f4" "site/built/setup.md" "2026-04-06"
 "profiles/learner-profiles.md" "68ade42462b70ee3ce0a93f2fcfd0d36" "site/built/learner-profiles.md" "2025-04-23"
