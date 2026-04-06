@@ -2,113 +2,277 @@
 title: Setup
 ---
 
-This workshop will demonstrate how to use [TeX Live](https://tug.org/texlive/) in order to write
-and render LaTeX documents. TeX Live is a comprehensive TeX system that includes all of the
-necessary tools to compile and render LaTeX documents. It is available for Windows, macOS, and
-Linux, and can be installed on your local machine.
+This workshop will be demonstrated using [TeXStudio](https://www.texstudio.org/) to write and
+render LaTeX documents. TeXStudio is a feature-rich, integrated LaTeX writing environment with
+syntax highlighting, an integrated PDF viewer, and inline error checking. It is available for
+Windows, macOS, and Linux.
+
+Because TeXStudio is an *editor*, it needs a separate LaTeX *distribution* to compile documents.
+The distribution provides the compilers and various packages which we will use throughout this
+workshop.
 
 ## Software Setup
 
-You can find installation instructions for TeX Live on the
-[TeX Live website](https://tug.org/texlive/). We include a brief overview of the installation
-on this page for convenience, but we recommend that you refer to the official documentation for
-the most up-to-date instructions.
+You can find installation instructions for TeXStudio on the TeXStudio website
+(https://www.texstudio.org/). We include a brief overview of the installation process on this page
+for convenience, but we recommend that you refer to the official documentation for the most
+up-to-date instructions, and defer to the official documentation if you encounter any issues
+during installation.
 
 ## Windows Installation
 
-Visit the [TeX Live website](https://tug.org/texlive/windows.html) for the latest version of the
-TeX Live installer for Windows. Click the link to "install-tl-windows.exe."
+Windows users need to install two pieces of software: a LaTeX distribution and TeXStudio.
 
-The full TeX Live installation is recommended for most users, as it includes all of the necessary
-packages and tools to compile and render LaTeX documents. However, if you have limited disk space
-or a slow internet connection, you can install a minimal version of TeX Live that includes only the
-commonly used packages.
+### Step 1 — Install a LaTeX Distribution
+
+A LaTeX distribution provides the compilers and packages needed to build your documents. Two
+popular options are TeX Live and MiKTeX. You are welcome to choose either distribution, but our
+demonstration will use TeX Live.
 
 ::: tab
 
-### Windows Installation (Full)
+### TeX Live
 
-Run the installer and select "Install" from the dialog that appears, then click "Next".
+Visit the TeX Live website (https://www.tug.org/texlive/windows.html) and download the
+"install-tl-windows.exe" installer.
 
-Click "Install" to begin the installation process. This will unpack some files, before opening a new window called the "Tex Live Installer".
+![](./fig/tex_live_download_page.png){alt="The TeX Live website download page showing the link to install-tl-windows.exe"}
 
-*If desired, you can change the installation directory by clicking on the "Change" button.*
+Run the installer. When the dialog appears, select "Install" and click "Next".
 
-When the installation is complete, you can close the installer windows.
+Click "Install" to begin the installation process. This will unpack some files before opening a
+new window called the "TeX Live Installer".
 
-### Windows Installation (Minimal)
-
-Run the installer and select "Install" from the dialog that appears, then click "Next".
-
-Click "Install" to begin the installation process. This will unpack some files, before opening a new window called the "Tex Live Installer".
+![](./fig/tex_live_installer.png){alt="The TeX Live Installer window showing progress"}
 
 *If desired, you can change the installation directory by clicking on the "Change" button.*
 
-Select "Advanced" to bring up the custom installation options.
-
-Under "Selection", select "Change" next "Scheme" and choose "basic scheme (plain ad latex)" to install a minimal set of packages.
-
-Ensure that the "Install TeXworks front end" option is selected.
+Note that the full TeX Live installation is large (over 5 GB) and may take some time to download
+and install, depending on your internet connection and computer speed.
 
 When the installation is complete, you can close the installer windows.
+
+### MiKTeX
+
+Visit the MiKTeX website (https://miktex.org/download) and download the Windows installer.
+
+![](./fig/mik_tex_download_page.png){alt="The MiKTeX download page showing the Windows installer option"}
+
+Run the installer and follow the prompts. Installing for all users (rather than just the current
+user) is recommended if you have administrator rights on your machine. Keep the remaining default
+options.
+
+When the installation is complete, you can close the installer.
 
 :::
 
+### Step 2 — Install TeXStudio
+
+Visit the TeXStudio website (!!!  link to the TeXStudio download page) to download the latest
+installer for Windows. For most machines, download the 64-bit Windows installer (`x86_64`).
+
+![](./fig/texstudio_download_page.png){alt="The TeXStudio download page showing the Windows installer options"}
+
+Run the downloaded `.exe` file. Click "Next" through the prompts, then click "Install". When the
+installation is complete, click "Finish".
+
+![](./fig/tex_studio_progress.png){alt="The TeXStudio installer on Windows showing the installation progress"}
+
 ## macOS Installation
 
-Visit the [MaxTeX Download Page](https://tug.org/mactex/mactex-download.html) for the latest
-version of the MacTeX installer for macOS. Click the link to download the "MacTeX.pkg" file.
+macOS users need to install two pieces of software: MacTeX (the LaTeX distribution) and
+TeXStudio.
 
-Double click the downloaded "MacTeX.pkg" file to start the installation process. Follow the
+### Step 1 — Install MacTeX
+
+Visit the MacTeX download page (!!!  link to the MacTeX download page at tug.org/mactex) and
+download the "MacTeX.pkg" file.
+
+![](){alt="The MacTeX download page showing the MacTeX.pkg download link"}
+
+Double-click the downloaded "MacTeX.pkg" file to start the installation process. Follow the
 prompts to complete the installation. The default installation options are recommended for most
 users.
 
-Open a terminal and type `tex --version` to verify that TeX Live is installed correctly. You
-should see the version number of TeX Live printed to the console.
+![](){alt="The MacTeX installer on macOS showing the default installation options"}
 
-Open a terminal and enter `pdflatex --version` to check that the PDFLaTeX compiler is installed
-correctly. You should see the version number of PDFLaTeX printed to the console.
+### Step 2 — Install TeXStudioa
+
+Visit the TeXStudio download page (!!!  link to the TeXStudio download page) and download the
+macOS version. Two builds are available: one for Intel Macs and one for Apple Silicon (M1/M2/M3)
+Macs. Download the version that matches your hardware.
+
+![](){alt="The TeXStudio download page showing the macOS zip file options for Intel and Apple Silicon"}
+
+Unzip the downloaded file and drag the TeXStudio application into your "Applications" folder.
+
+**Note:** Because TeXStudio is distributed without an Apple Developer signature, macOS may
+display a warning that it cannot verify the developer. If this happens, do not double-click the
+icon. Instead, hold **Control**, click the TeXStudio icon, and select "Open" from the
+context menu. A dialog will appear asking you to confirm that you want to open the application;
+click "Open".
+
+![](){alt="The macOS security dialog warning about an unidentified developer, with the Open button highlighted"}
 
 ## Unix/Linux Installation
 
-```bash
-cd /tmp
-wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-zcat < install-tl-unx.tar.gz | tar xf -
-cd install-tl-2*
-perl ./install-tl --no-interaction --scheme=small
-```
+Linux users need to install two pieces of software: TeX Live (the LaTeX distribution) and
+TeXStudio.
 
-This process will download and install TeX Live in the `/usr/local/texlive` directory by default.
-Note that the download may take several hours.
+### Step 1 — Install TeX Live
 
-Finally, prepend `/usr/local/texlive/2023/bin/x86_64-linux` to your `PATH` environment variable in
-order to use the TeX Live binaries from the command line. You can do this by adding the following
-line to your `~/.bashrc` or `~/.bash_profile` file:
+Install TeX Live using your distribution's package manager. The `texlive-full` package is
+recommended for this workshop, as it includes all of the packages used in the exercises.
+
+**Debian/Ubuntu:**
 
 ```bash
-export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
+sudo apt update
+sudo apt install texlive-full
 ```
 
-## Verify Installation
+**Fedora/RHEL:**
 
-Open a command prompt or terminal and type `tex --version` to verify that TeX Live is installed correctly.  You should see the version number of TeX Live printed to the console.
+```bash
+sudo dnf install texlive-scheme-full
+```
 
-Open a command prompt or terminal and enter `pdflatex --version` to check that the PDFLaTeX compiler is installed correctly. You should see the version number of PDFLaTeX printed to the console.
+Note that the full TeX Live installation is large and the download may take some time.
+
+### Step 2 — Install TeXStudio
 
 ::: tab
 
-### TeXworks
+### Package Manager (Recommended)
 
-Open TeXworks, which is a simple LaTeX editor that comes with TeX Live and paste the following code into a new document:
+TeXStudio is available in the package repositories for most major Linux distributions. Install it
+using your package manager:
+
+```bash
+sudo apt install texstudio
+```
+
+### AppImage
+
+NOTE: Need someone to verify these instructions.
+
+If you prefer not to use your package manager, a self-contained AppImage is available from the
+TeXStudio GitHub releases page.
+
+Download the file ending in `-x86_64.AppImage`. Then open a terminal in the directory where you
+saved it and run:
+
+```bash
+chmod +x texstudio-*-x86_64.AppImage
+./texstudio-*-x86_64.AppImage
+```
+
+:::
+
+## Configure the Default Compiler
+
+TeXStudio defaults to pdfLaTeX as its compiler. This workshop uses **LuaLaTeX**, which supports
+modern font handling (including the `fontspec` package) and is required for some exercises. You
+should change the default compiler before you begin.
+
+Open TeXStudio and go to **Options** > **Configure TeXstudio…** (on macOS: **TeXstudio** >
+**Preferences…**).
+
+![](./fig/tex_studio_config.png){alt="The TeXStudio menu bar with Options highlighted and Configure TeXstudio selected from the drop-down"}
+
+In the configuration dialog, select **Build** from the left-hand panel. Under **Default Compiler**,
+open the drop-down menu and select **LuaLaTeX**.
+
+![](./fig/tex_live_set_compiler.png){alt="The TeXStudio Build configuration panel showing the Default Compiler drop-down set to LuaLaTeX"}
+
+Click **OK** to save the change.
+
+## Verify Installation
+
+Open TeXStudio. You should see the main editor window with an empty document area.
+
+![](){alt="The TeXStudio main window showing the editor panel, structure panel on the left, and messages panel at the bottom"}
+
+Create a new file by selecting "File" > "New" (or pressing `Ctrl+N`) and paste the following
+code into the editor. This document loads all of the packages used throughout the workshop, so
+compiling it successfully confirms that your installation is complete.
 
 ```latex
 \documentclass{article}
+\usepackage{amsmath}                     % mathematics formatting
+\usepackage{array}                       % extended table column types
+\usepackage[ngerman,english]{babel}      % multilingual support
+\usepackage[style=authoryear]{biblatex}  % bibliography management
+\usepackage{booktabs}                    % professional table rules
+\usepackage[autostyle]{csquotes}         % context-sensitive quotation
+\usepackage{enumitem}                    % customisable lists
+\usepackage[margin=1in]{geometry}        % page layout
+\usepackage{graphicx}                    % including graphics
+\usepackage{hyperref}                    % hyperlinks and cross-references
+\usepackage{lipsum}                      % placeholder text
+\usepackage{multirow}                    % multi-row table cells
+\usepackage[parfill]{parskip}            % paragraph spacing
+\usepackage{siunitx}                     % scientific units
+\usepackage{tgtermes}                    % TeX Gyre Termes font
+\usepackage{wrapfig}                     % text-wrapped figures
+\usepackage[table]{xcolor}               % colour support
+
 \begin{document}
 Hello, \LaTeX!
 \end{document}
 ```
 
-Then click on the green "Typeset" button (or press `Ctrl+T`) to compile the document. If you see a PDF preview of the document with the text "Hello, LaTeX!" then everything is working correctly.
+Press **F6** (or select "Tools" > "Build & View") to compile the document. TeXStudio will run
+the LaTeX compiler and, if successful, display the resulting PDF in the panel to the right of the
+editor.
+
+![](){alt="The TeXStudio editor with the Hello LaTeX code on the left and the compiled PDF showing 'Hello, LaTeX!' on the right"}
+
+If you see the text "Hello, LaTeX!" in the PDF panel, your installation is working correctly.
+
+### Troubleshooting
+
+If you encounter an error during compilation like
+"texstudio_iubQaA.tex: error: 6: File `biblatex.sty' not found. \usepackage`", this indicates that
+you are missing some of the required LaTeX packages and will need to install them in your
+distribution. This will depend on the distribution you chose earlier.
+
+::: tab
+
+### TeX Live
+
+If you installed TeX Live using the full installation option, you should have all of the
+required packages. If you chose a custom installation, you may need to install additional packages
+using the TeX Live Manager. Open the TeX Live Manager application and search for the missing
+package (for example, "biblatex"). Select the package from the search results and click "Install"
+to add it to your distribution.
+
+You may also install missing packages using the command line. Open a terminal and run the following
+command, replacing `<package-name>` with the name of the missing package:
+
+```bash
+tlmgr install <package-name>
+```
+
+### MiKTeX
+
+TODO: Add instructions for installing missing packages in MiKTeX.
 
 :::
+
+## Backup Option: Overleaf
+
+If you are unable to install software on your device (for example, because it is a
+managed or corporate machine), you can use **Overleaf** as a browser-based alternative.
+Overleaf is a free, online LaTeX editor — no installation is required, and it works in any
+modern web browser.
+
+::::::::::::::::::::::::::::::::::::::::: callout
+
+### Using Overleaf Instead of a Local Installation
+
+Please note that local installation of TeXStudio is strongly preferred for this workshop, as some
+exercises may rely on features or file access that are not available in the browser-based
+environment. Use Overleaf only if you cannot install software on your machine.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
