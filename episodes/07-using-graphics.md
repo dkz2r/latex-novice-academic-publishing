@@ -341,8 +341,7 @@ Change the code such that the image is displayed with a height of 3cm, width of 
 
 1. the command `\usepackage{graphicx}` is missing in the preamble.
 2. the `\centering` command has to be placed into the `figure` environment.
-3. the `draft` argument has to be removed from and `width=4cm` added to the `\includegraphics`
-command.
+3. the `draft` argument has to be removed from the `\includegraphics` command and `width=4cm` added.
 
 The corrected LaTeX code looks like this:
 
