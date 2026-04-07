@@ -30,8 +30,18 @@ We can now include several types of images in our document, including:
 
 - JPEG
 - PNG
+- SVG
 - PDF
 - EPS
+
+::: callout
+
+Although LaTeX can handle several commonly used image formats, there are a few which are currently
+incompatible with LaTeX. For example, the `webp` and `tiff` formats. If you have an image in one
+of these formats, you will need to convert it to a compatible format before including it in your
+document.
+
+:::
 
 For the purposes of this lesson, we'll use the following image:
 
