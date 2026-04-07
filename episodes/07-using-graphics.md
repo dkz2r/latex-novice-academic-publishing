@@ -35,14 +35,14 @@ We can now include several types of images in our document, including:
 
 For the purposes of this lesson, we'll use the following image:
 
-![](fig/06-using-graphics/example-image.png){alt='Our example image.'}
+![](fig/06-using-graphics/my-awesome-image.png){alt='Our example image.'}
 
 ::: callout
 
 Download this image to your computer either be right-clicking on the image and selecting "Save
 Image As..." or by clicking on the image and saving it from the browser.
 
-You can use any image you like for this lesson. Just make sure to replace `example-image.PNG` with
+You can use any image you like for this lesson. Just make sure to replace `my-awesome-image.png` with
 the name of your image in the following examples.
 
 :::
@@ -61,7 +61,7 @@ command:
 We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
-\includegraphics{example-image.PNG}
+\includegraphics{my-awesome-image.png}
 ```
 
 Your document should now look like this:
@@ -291,7 +291,7 @@ image.
 
 \begin{figure}
   \centering
-  \includegraphics[angle=45]{example-image.PNG}
+  \includegraphics[angle=45]{my-awesome-image.png}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -316,7 +316,7 @@ Have a look at the following LaTeX code:
 
 \centering
 \begin{figure}
-  \includegraphics[height=3cm, draft]{example-image.PNG}
+  \includegraphics[height=3cm, draft]{my-awesome-image.png}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -327,12 +327,11 @@ Can you spot all the errors in this LaTeX code?
 Change the code such that the image is displayed with a height of 3cm, width of 4cm and centered.
 
 
-
 :::::::::::::::::::::::: solution
 
-First, the command `\usepackage{graphicx}` is missing in the preamble.
-Second, the `\centering` command has to be placed into the `figure` environment.
-Third, the `draft` argument has to be removed from and `width=4cm` added to the `\includegraphics`
+1. the command `\usepackage{graphicx}` is missing in the preamble.
+2. the `\centering` command has to be placed into the `figure` environment.
+3. the `draft` argument has to be removed from and `width=4cm` added to the `\includegraphics`
 command.
 
 The corrected LaTeX code looks like this:
