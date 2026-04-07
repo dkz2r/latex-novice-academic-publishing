@@ -71,7 +71,7 @@ command:
 We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
-\includegraphics{my-awesome-image.png}
+\includegraphics{my-awesome-image}
 ```
 
 Your document should now look like this:
@@ -101,7 +101,7 @@ image:
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=2cm]{example-image.PNG}
+\includegraphics[height=2cm]{my-awesome-image}
 
 Other possible options include:
 
@@ -142,7 +142,7 @@ By placing the \cmd{includegraphics} command inside a center environment, we can
 image on the page.
 
 \begin{center}
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
 \end{center}
 ```
 
@@ -166,7 +166,7 @@ To make an image float, we can use the `figure` environment:
 
 \begin{figure}
   \centering
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
 \end{figure}
 ```
 
@@ -200,7 +200,7 @@ to use the `ht` option:
 ```latex
 \begin{figure}[ht]
   \centering
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
 \end{figure}
 
 Control the position of a floating image by passing parameters to the \cmd{figure} environment:
@@ -245,7 +245,7 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 
 \begin{figure}
   \centering
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
   \caption{This is a caption for our image.}
 \end{figure}
 ```
@@ -301,7 +301,7 @@ image.
 
 \begin{figure}
   \centering
-  \includegraphics[angle=45]{my-awesome-image.png}
+  \includegraphics[angle=45]{my-awesome-image}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -326,7 +326,7 @@ Have a look at the following LaTeX code:
 
 \centering
 \begin{figure}
-  \includegraphics[height=3cm, draft]{my-awesome-image.png}
+  \includegraphics[height=3cm, draft]{my-awesome-image}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -355,7 +355,7 @@ The corrected LaTeX code looks like this:
 
 \begin{figure}
   \centering
-  \includegraphics[height=3cm, width=4cm]{example-image.PNG}
+  \includegraphics[height=3cm, width=4cm]{my-awesome-image}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -419,8 +419,8 @@ Reminder: The syntax for creating a new command is:
 
 \begin{document}
 
-\centeredimage{example-image.png}{"My Image"}
-\centeredimage{example-image.png}{"My Other Image"}
+\centeredimage{my-awesome-image}{"My Image"}
+\centeredimage{my-awesome-image}{"My Other Image"}
 
 \end{document}
 ```
@@ -448,7 +448,7 @@ Can you already guess how the images will be displayed in your document?
 
 \begin{wrapfigure}{r}{0.1\textwidth}
     \centering
-    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
+    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{my-awesome-image}
 \end{wrapfigure}
 
 The package wrapfigure lets you position images around your text.
