@@ -72,6 +72,14 @@ documentation for the class you are using.
 
 :::
 
+::: callout
+
+There's also an alternative way to create sections in LaTeX using the `\section*{...}` command.
+This command will create a section heading without numbering it. This can be useful for creating
+unnumbered sections, such as an introduction or conclusion.
+
+:::
+
 ## Table of Contents
 
 We've seen how to make sections and how LaTeX will automatically number them for us. But we can
