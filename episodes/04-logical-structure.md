@@ -35,12 +35,13 @@ keep these elements consistent throughout your document. Let's add sections to o
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here
-Hello World!
-
-This is my first LaTeX document.
 
 % The section command automatically numbers and formats the section heading.
 \section{Sections}
+
+Hello World!
+
+This is my first LaTeX document.
 
 I can add content to my first section!
 
@@ -71,6 +72,46 @@ documentation for the class you are using.
 
 :::
 
+## Table of Contents
+
+We've seen how to make sections and how LaTeX will automatically number them for us. But we can
+also use this feature to automatically generate a table of contents for our document! We can do
+this by adding the `\tableofcontents` command to our document body. This will create a table of
+contents at the location where the command is placed.
+
+```latex
+% This command tells LaTeX what kind of document we are creating (article).
+\documentclass{article}
+
+
+% Everything before the \begin{document} command is called the preamble.
+\begin{document} % The document body starts here
+
+\tableofcontents
+
+% The section command automatically numbers and formats the section heading.
+\section{Sections}
+
+Hello World!
+
+This is my first LaTeX document.
+
+I can add content to my first section!
+
+% The subsection command does the same thing, but for sections within sections.
+\subsection{Subsection}
+
+I can put a subsection inside my first section.
+
+\section{Second Section}
+
+And this text will go into another section.
+
+\end{document}
+```
+
+![](fig/03-logical-structure/document-with-toc.png){alt='Our document with a table of contents.'}
+
 ## Lists
 
 In LaTeX, as in markdown, there are two types of lists: ordered and unordered. They are both
@@ -86,12 +127,15 @@ We'll replace our "Second Section" with one for "Lists" and add an ordered list:
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here
-Hello World!
 
-This is my first LaTeX document.
+\tableofcontents
 
 % The section command automatically numbers and formats the section heading.
 \section{Sections}
+
+Hello World!
+
+This is my first LaTeX document.
 
 I can add content to my first section!
 
@@ -181,12 +225,15 @@ Adding an unordered list is just as easy. We can use the exact same syntax, but 
 
 % Everything before the \begin{document} command is called the preamble.
 \begin{document} % The document body starts here
-Hello World!
 
-This is my first LaTeX document.
+\tableofcontents
 
 % The section command automatically numbers and formats the section heading.
 \section{Sections}
+
+Hello World!
+
+This is my first LaTeX document.
 
 I can add content to my first section!
 
@@ -223,6 +270,7 @@ Unordered lists are just a series of items preceded by a marker.
 ```
 
 ![](fig/03-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'}
+
 
 ## Challenges
 
