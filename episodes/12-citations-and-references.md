@@ -19,6 +19,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
 ## Citations and References
 
 For bibliographic citations, while you can include references sources directly in our document,
@@ -26,6 +27,14 @@ usually you will get that information from one or more external files. Such a fi
 of references, containing the information in a processing-friendly format (which
 is called `BibTeX`). Using one or more
 reference databases lets you re-use information and avoid manual formatting.
+
+## Settings
+
+TeXstudio offers several backend options for handling `BibTeX` files. For the purposes of this workshop, we’ll use `Biber`. 
+Open TeXstudio and go to **Options** > **Configure TeXstudio**. 
+In the configuration dialog, select **Build** from the left-hand panel. Under **Default Bibliography Tool**, open the drop-down menu and select `Biber`.
+
+![](fig/12-citations/settings_biber.PNG)
 
 ## Reference Databases (BiBTeX)
 
@@ -36,18 +45,19 @@ Create a new file in your project called `sample-references.bib` and add the fol
 
 ```bibtex
 @article{Thomas2008,
-  author  = {Thomas, Christine M.},
-  title   = {The Fascinating World of Penguins},
-  journal = {Penguin Chronicles},
-  date    = {2008},
-  pages   = {7009-7024},
+	author  = {Thomas, Christine M.},
+	title   = {The Fascinating World of Penguins},
+	journal = {Penguin Chronicles},
+	date    = {2008},
+	pages   = {7009-7024},
 }
+
 @book{Graham1995,
-  author    = {Richard L. Graham and Lisa A. Harris},
-  title     = {The Humble Paperclip},
-  subtitle  = {Master of the Modern Office},
-  publisher = {Scranton Press},
-  year      = {1995},
+	author    = {Graham, Richard L. and Harris, Lisa A.},
+	title     = {The Humble Paperclip},
+	subtitle  = {Master of the Modern Office},
+	publisher = {Scranton Press},
+	year      = {1995},
 }
 ```
 
@@ -61,7 +71,7 @@ the type of entry.
 
 ::: callout
 
-You might notice that in the `author` field, each entry is separated by the word `and`. This is
+You might notice that in the `author` field, surname and givenname and each entry (author) is separated by the word `and`. This is
 essential: the format of the output needs to know which author is which. When
 using `biblatex` this applies also to the fields `publisher` and `location`, in
 which you can also have many values.
@@ -76,10 +86,7 @@ is to prevent any case-changing that might be applied to the title.
 Editing BiBTeX files by hand can be difficult and tedious. A number of tools exist to help you
 manage your reference files. You can find a list of sugggested tools in the references section.
 
-We're going to cover two different ways to include references in our document: using the `natbib`
-package and using the `biblatex` package. For the purposes of this workshop, we'll use `biblatex`,
-but feel free to explore `natbib` on your own - an identical example is provided in the `natbib`
-tab below.
+For the purposes of this workshop, we'll use `biblatex`, but feel free to explore other options (e.g. `natbib`) on your own. 
 
 ::: group-tab
 
@@ -170,56 +177,6 @@ fly:
 With this command you will delete the content of the fields in the bibliography.
 Note, that there is `\clear*field*`, `\clear*name*` and `\clear*list*`.
 
-
-### natbib
-
-We just need to make sure that the bibliography file is present in the project
-and properly referenced in our document. Check to make sure that your `main.tex` file is in the
-same directory as your `sample-references.bib` file.
-
-At the top of our `main.tex` file, we'll add a line to import natbib:
-
-```latex
-\usepackage{natbib}
-\bibliographystyle{plainnat}
-```
-
-Then, at the bottom of your `main.tex` file, add the following lines:
-
-```latex
-\bibliography{sample-references}
-```
-
-And... nothing? Right, because we haven't cited anything in our document yet. Let's add a citation:
-
-```latex
-\section{Reference Databases}
-
-We can \kw{cite references} from our bibliography.
-
-We can cite the article by Thomas \citep{Thomas2008}.
-```
-
-You should see that the citation appears in the text (`(Thomas et al. 2008)`), and the reference
-now appears at the end of the document. `\citep` is a command that automatically chooses the
-citation style for you.
-
-Let's explore some of the other citation commands available in `natbib`:
-
-- `\citet{key}`: Cite the reference with the given key in a textual context.
-- `\citep{key}`: Cite the reference with the given key in a parenthetical context.
-- `\citealt{key}`: Cite the reference with the given key without any parentheses.
-- `\citeauthor{key}`: Cite the author of the reference.
-- `\citeyear{key}`: Cite the year of the reference.
-
-```latex
-A plain citation looks like this \citep{Graham1995}, while multiple citations look like this
-\citep{Graham1995,Thomas2008}. We already used \citep, but we can also use \citet{Graham1995}, which
-gives us a textual citation, or \citealt{Thomas2008}, which gives us a citation without parentheses.
-```
-
-
-
 :::
 
 
@@ -243,23 +200,7 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: Try out the other example?
-
-Go back up to the `natbib` tab and try out the example there. What differences do you notice?
-
-:::::::::::::::::::::::: solution
-
-## Answer
-
-The `natbib` package is a bit more manual than `biblatex`. You have to specify the bibliography
-style and the bibliography file separately, and the citation commands are a bit more manual.
-This isn't necessarily a bad thing, as it gives you more control over the output. There's no wrong
-answer, just personal preference.
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: Add another reference, then delete it.
+## Challenge 1: Add another reference, then delete it.
 
 Try adding the following reference to your `sample-references.bib` file:
 
@@ -284,22 +225,22 @@ is not so critical an error that we can't render the document, but we should pro
 
 :::::::::::::::::::::::::::::::::
 
-## Challenge 3: What's wrong with this?
+## Challenge 2: What's wrong with this?
 
 We have the following reference in our document:
 
 ```bibtex
 @misc{mikolov2013,
-      title         ={Efficient Estimation of Word Representations in Vector Space},
-      author        ={Tomas Mikolov and Kai Chen and Greg Corrado and Jeffrey Dean},
-      year          ={2013},
-      eprint        ={1301.3781},
-      archivePrefix ={arXiv},
-      primaryClass  ={cs.CL},
-      url           ={https://arxiv.org/abs/1301.3781},
+	title         ={Efficient Estimation of Word Representations in Vector Space},
+	author        ={Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
+	year          ={2013},
+	eprint        ={1301.3781},
+	archivePrefix ={arXiv},
+	primaryClass  ={cs.CL},
+	url           ={https://arxiv.org/abs/1301.3781},
 }
 ```
-We are using biblatex to manage our references, and we identify this reference in the text like
+We are using `biblatex` to manage our references, and we identify this reference in the text like
 this:
 
 ```latex
@@ -322,6 +263,59 @@ still compiles the document, but it gives us a warning that the reference is mis
 key as a placeholder. You might use this to temporarily mark a reference that you haven't added yet,
 just be sure to clear all of your warnings before finializing your document.
 
+:::::::::::::::::::::::::::::::::
+
+## Challenge 3: What's problem with this?
+
+We inculde the following reference in our document:
+
+```bibtex
+@article{bentham2011,
+	author = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},
+	title = {20 Years of Lipid Nanoparticles (SLN & NLC): Present State of Development & Industrial Applications}, 
+	journal= {Current Drug Discovery Technologies},
+	year = {2011},
+	volume = {8},
+	number = {3},
+	pages = {207--227},
+	doi = {https://doi.org/10.2174/157016311796799062},
+	publisher = {Bentham Science Publishers},
+}
+```
+
+We are using `biblatex` and cite this reference in the text as follows:
+
+```latex
+\autocite{bentham2011} provied a good overview over nanoparticles over the last 20 years.
+```
+
+What happens when compiling this document? What is wrong with the reference, and how can it be fixed?
+
+:::::::::::::::::::::::: solution
+
+The issue in this reference is cause by a sepcial character (`&` in the title field). 
+In LaTeX the ampersand `&` is reserved for alignment, so it must be escaped (`\&`)in normal text. 
+
+
+If special characters are not escaped properly, LaTeX produce unexpected output or may fail to compile. 
+In some cases, this can also corrupt auxiliary files (such as `.aux` or `.bbl`), preventing the document from rendering as expected.
+If problems persist after correcting the reference, a common solution is to delete all intermediate files and recompile the document from scratch. Deleting them forces a clean rebuild. 
+
+Corrected bib entry:
+
+```bibtex
+@article{bentham2011,
+	author = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},
+	title = {20 Years of Lipid Nanoparticles (SLN \& NLC): Present State of Development \& Industrial Applications}, 
+	journal= {Current Drug Discovery Technologies},
+	year = {2011},
+	volume = {8},
+	number = {3},
+	pages = {207--227},
+	doi = {https://doi.org/10.2174/157016311796799062},
+	publisher = {Bentham Science Publishers},
+}
+```
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
