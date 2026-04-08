@@ -159,9 +159,12 @@ one will often fix the rest of them too.
 
 :::
 
-## Common Errors
+## Fixing Errors
 
-Let's take a look at some common errors you might encounter when working with LaTeX.
+As we progress through this workshop, we will point out places where we get new error messages, and
+discuss how to interpret and fix them.
+
+::: caution
 
 ### Unidentified Control Sequence
 
@@ -176,7 +179,13 @@ Here's a quick example of this error:
 
 \begin{document}
 
-My Amazing Content: $\alpha = \fraction{1}{(1 - \beta)^2}$
+\section{My Amazing Content}
+
+  My Amazing Content: $\alpha = \fraction{1}{(1 - \beta)^2}$
+
+\seciton{More Amazing Content}
+
+  Even more amazing content!
 
 \end{document}
 ```
@@ -185,79 +194,13 @@ Attempting to compile this document results in the following error message:
 
 ```
 ! Undefined control sequence.
-l.5 My Amazing Content: $\alpha = \fraction
-                                           {1}{(1 - \beta)^2}$
+l.9 \seciton{More Amazing Content}
 ```
 
 So, again, we see that the error is an "Undefined control sequence", and it tells us that something
-in line 5 is not defined. In this case, the command `\fraction` is not a valid LaTeX command.
+in line 9 is not defined. In this case, the command `\seciton` is not a valid LaTeX command.
 
-### File Not Found
-
-Here's another LaTeX excerpt:
-
-```latex
-\documentclass{article}
-
-\usepackage{booktab}
-
-\begin{document}
-
-More Amazing Content!
-
-\end{document}
-```
-
-The following error message appears when you try to compile this document:
-
-```
-! LaTeX Error: File `booktab.sty' not found.
-```
-
-This error indicates that LaTeX is unable to find the `booktab` package. The correct package name
-should be `booktabs`.
-
-### Overfull Boxes
-
-The following code generates a warning message:
-
-```latex
-\documentclass{article}
-
-\usepackage{graphicx}
-\begin{document}
-
-\section{Adding a rotated image}
-
-We can rotate an image by setting the "angle" parameter:
-
-\includegraphics[scale=2, angle=45]{example-image}
-\end{document}
-```
-
-The document compiles successfully, but there was some text that briefly appeared in the console
-output. Let's look at the .log file to see what it says:
-
-```
-Overfull \hbox (390.7431pt too wide) in paragraph at lines 10--11
-[][]
- []
-
-
-
-[1
-
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (170.7431pt too high) has occurred while \output is active []
-
-
-
-[2 <./example-image.png>] (./main.aux)
-```
-
-This message indicates that there is an "overfull hbox" and "overfull vbox". This means that the
-text or image is too wide or too tall for the page, and it is overflowing into the margins. This
-is a common issue when including images in LaTeX.
+:::
 
 
 ## Errors vs Warnings vs Information

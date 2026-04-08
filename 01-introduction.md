@@ -42,7 +42,28 @@ Start the TeXworks editor and immediately "save" the file. This will prompt you 
 save the file, so navigate to the `latex-workshop` directory you just created, and save the file
 as `main.tex`.
 
-## The TeXworks Interface
+## The Interface
+
+::: tab
+
+## TeXStudio
+
+The TeXStudio interface is divided into several sections:
+- The **Editor**: This is where you write your LaTeX code. It supports syntax highlighting and
+  basic code completion.
+- The **Preview Pane**: This shows the compiled output of your LaTeX code. This window will appear
+  whenever we compile the document.
+- The **Menu Bar**: This contains various options for managing your document, such as saving,
+  compiling, and printing. You can also access the preferences and settings from here.
+- The **Toolbar**: This contains buttons for common actions, such as saving, compiling, and
+  inserting common LaTeX commands.
+- The **Status Bar**: This shows information about the current document, such as the line and
+  column number, the current compiler, and any warnings or errors that may have occurred during
+  compilation.
+
+![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.PNG)
+
+## TeXworks
 
 The TeXworks interface is divided into three main sections:
 - The **Editor**: This is where you write your LaTeX code. It supports syntax highlighting and
@@ -61,6 +82,8 @@ PDFLaTeX.
 
 ![TeXworks Interface](fig/01-introduction/TexWorksEditor.PNG)
 
+:::
+
 ## Compiling a LaTeX Document
 
 Type the following code into the editor:
@@ -72,33 +95,44 @@ Hello, \LaTeX!
 \end{document}
 ```
 
+
+::: tab
+
+## Compiling with TeXStudio
+
+Now click the green double arrow icon on the toolbar (or press "F5" on your keyboard). This will
+compile the document and update the preview pane with the rendered output. You should see a PDF
+preview of the document with the text "Hello, LaTeX!".
+
+## Compiling with TeXworks
+
 Now click the green "Typeset" button in the top left corner of the interface. This will compile
 the document and update the preview pane with the rendered output. You should see a PDF preview
 of the document with the text "Hello, LaTeX!".
 
-::: callout
+![TeXworks Preview Pane](fig/01-introduction/TexWorksEditor_preview-document.PNG)
 
-When you click the "Typeset" button, TeXworks will run the PDFLaTeX compiler on your document. You
+:::
+
+
+When you click the "Typeset" button, the editor will run the LaTeX compiler on your document. You
 will see a window appear on the bottom of the interface called "Console output". This window
 contains the output of the compiler, including any warnings or errors that may have occurred
 during the compilation process. We will talk about this in more detail in a later episode.
 
-:::
-
-![TeXworks Preview Pane](fig/01-introduction/TexWorksEditor_preview-document.PNG)
 
 ## Compiling a LaTeX Document from the Command Line
 
-The TeXworks editor is a convenient way to write and compile LaTeX documents, but you are not
-limited to using it. Any program that can edit text files can be used to write LaTeX, which we can
-then compile from the command line.
+Using an IDE like TeXStudio or TeXworks is a convenient way to write and compile LaTeX documents,
+but you are not limited to using it. Any program that can edit text files can be used to write
+LaTeX, which we can then compile from the command line.
 
 You can use any text editor to write your LaTeX code. Some popular text editors for LaTeX include:
 
-- [Visual Studio Code](https://code.visualstudio.com/)  
-- [Emacs](https://www.gnu.org/software/emacs/)  
-- [Vim](https://www.vim.org/)  
-- Notepad++ (Windows only)  
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Emacs](https://www.gnu.org/software/emacs/)
+- [Vim](https://www.vim.org/)
+- Notepad++ (Windows only)
 
 We will continue to demonstrate with TeXworks, but you can use any text editor you prefer.
 
@@ -109,9 +143,9 @@ console or terminal window, then navigate to the directory where you saved your 
 
 Useful commands for navigating the command line:
 
-- `cd <directory>`: Change directory to `<directory>`.  
+- `cd <directory>`: Change directory to `<directory>`.
 - `ls` (Linux/macOS) or `dir` (Windows): List the files in the current
-  directory.  
+  directory.
 - `pwd` (Linux/macOS): Print the current working directory.
 
 :::
@@ -153,7 +187,7 @@ lualatex main.tex
 The output is this:
 
 ```
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025) 
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)
  restricted system commands enabled.
 (./main.tex
 LaTeX2e <2025-06-01> patch level 1

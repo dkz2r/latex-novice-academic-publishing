@@ -97,7 +97,7 @@ This will create a table with three columns, all left-aligned. The values of eac
 by `&` and the rows are separated by `\\`. We do not yet have any horizontal lines in the table, so
 it will look like this:
 
-![](fig/07-tables/simple-table.PNG){alt='Example output of a simple table'}
+![](fig/09-tables/simple-table.PNG){alt='Example output of a simple table'}
 
 ::: callout
 
@@ -156,7 +156,7 @@ lines in our table.
 
 Your table should look something like this:
 
-![](fig/07-tables/table-with-horizontal-lines.PNG){alt='Example output of a table with horizontal
+![](fig/09-tables/table-with-horizontal-lines.PNG){alt='Example output of a table with horizontal
 lines'}
 
 ::: callout
@@ -195,7 +195,7 @@ start the line and last number is the column to end the line.
 
 This table should come out looking something like this:
 
-![](fig/07-tables/table-with-partial-lines.PNG){alt='Example output of a table with partial
+![](fig/09-tables/table-with-partial-lines.PNG){alt='Example output of a table with partial
 lines'}
 
 
@@ -250,7 +250,35 @@ You can find an example in the challenges below.
 
 This will create a table that looks like this:
 
-![](fig/07-tables/table-with-merged-cell.PNG){alt='Example output of a table with merged cells'}
+![](fig/09-tables/table-with-merged-cell.PNG){alt='Example output of a table with merged cells'}
+
+## Positioning Tables
+
+By default, tables will be placed exactly where they are defined in the LaTeX document. We saw in
+the earlier section on graphics that we can use the `figure` environment to create floating
+figures, which gives us a lot of flexability where exactly the figure will be placed in the
+document.
+
+We can do the same thing with tables by using the `table` environment. This will allow us to use
+the same placement specifiers that we used for figures (h, t, b, p, and !). We can also add a
+caption to our table using the `\caption` command:
+
+```latex
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{*{3}{l}}
+    \toprule
+    Fruit  & Quantity & Price \\
+    \midrule
+    Apple  & 5        & 1.50  \\
+    Banana & 6        & 2.00  \\
+    Orange & 4        & 1.20  \\
+    \bottomrule
+  \end{tabular}
+
+  \caption{Inventory of Fruits} % Add a caption to the table
+\end{table}
+```
 
 ## Challenges
 
@@ -271,13 +299,42 @@ Try to replicate the following table in LaTeX:
 
 Your LaTeX version should look something like this:
 
-![](fig/07-tables/challenge-make-a-table.PNG){alt='Example output of a table for challenge 1'}
+![](fig/09-tables/challenge-make-a-table.PNG){alt='Example output of a table for challenge 1'}
 
 Note that the last row is a bit different from the others. The first two columns re merged, the
 text "Total" is right-aligned and bold, and the value in the last column is italicized.
 
 (Data for this challenge is from
 [Statista](https://www.statista.com/statistics/1546704/monthly-best-selling-car-models-in-germany/))
+
+::: hint
+
+Here's some code to get you started:
+
+```latex
+\begin{tabular}{Something goes here...}
+  Something goes here...
+  Make        & Model   & Sold   \\
+  Something goes here...
+  Volkswagen  & Golf    & 7,687 \\
+  Skoda       & Octavia & 4,078 \\
+  Seat        & Leon    & 3,922 \\
+  Volkswagen  & Passat  & 3,776 \\
+  Mercedes    & GLK,GLC & 3,143 \\
+  Something goes here...
+  How do we get the only two cells here? And then they need to be right-aligned and bolded...
+  Something goes here...
+\end{tabular}
+```
+
+:::
+
+::: hint
+
+For the last row, we need to merge the first two cells together. We can do this using the
+`\multicolumn` command. If we then merge these two cells, then right aligning the text...
+
+:::
 
 :::::::::::::::::::::::: solution
 
@@ -353,7 +410,7 @@ the width of the merged cell, and the third argument specifies the contents of t
 
 The table created by this code will look like this:
 
-![](fig/07-tables/challenge-merged-rows.PNG){alt='Example output of a table with merged rows'}
+![](fig/09-tables/challenge-merged-rows.PNG){alt='Example output of a table with merged rows'}
 
 :::::::::::::::::::::::::::::::::
 
@@ -426,8 +483,7 @@ There's no right answer to this challenge, so feel free to experiment with diffe
 
 Here's an example of what you can do:
 
-![](fig/07-tables/challenge-colorful-table.PNG)
-
+![](fig/09-tables/challenge-colorful-table.PNG){alt='Example output of a colorful table'}
 
 :::::::::::::::::::::::: solution
 

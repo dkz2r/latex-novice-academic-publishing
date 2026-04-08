@@ -23,7 +23,7 @@ A large number of LaTeX packages are available on [CTAN](https://ctan.org/). CTA
 packages and related documentation for many widely used LaTeX packages. You can search the archive
 for specific strings, or browse by category.
 
-![](fig/15-documentation-and-help/ctan-screenshot.PNG){alt='CTAN page for the geometry package.'}
+![](fig/16-documentation-and-finding-help/ctan-screenshot.PNG){alt='CTAN page for the geometry package.'}
 Project pages
 
 Individual package pages often contain links to detailed documentation, including PDF manuals and
@@ -35,7 +35,7 @@ the author(s) and ratings from other users.
 [Texdoc](https://texdoc.org) provides a modern interface for looking up package documentation. Much like
 CTAN, you can search for packages and view their documentation.
 
-![](fig/15-documentation-and-help/texdoc-screenshot.PNG){alt='Texdoc landing page.'}
+![](fig/16-documentation-and-finding-help/texdoc-screenshot.PNG){alt='Texdoc landing page.'}
 
 ::: callout
 

@@ -101,6 +101,10 @@ This package automatically makes all references clickable, allowing you to jump 
 element in the PDF document. However be aware that this can sometimes cause issues with other
 packages, so it's best to load it last in your preamble.
 
+Note that in order to avoid compilation issues, the `hyperref` package should be loaded after all
+other packages in your preamble, except for packages that are specifically designed to work with
+`hyperref`, like `cleveref`.
+
 :::
 
 ## Challenges
@@ -135,7 +139,7 @@ In the text, we can refer to the figure using its label: % Something goes here
 
 The goal will be to have something that looks like this:
 
-![](fig/09-cross-references/challenge-reference-image.PNG){alt='Example output of a figure for challenge 1'}
+![](fig/10-cross-references/challenge-reference-image.PNG){alt='Example output of a figure for challenge 1'}
 
 ::: hint
 
@@ -179,6 +183,10 @@ In the text, we can refer to the figure using its label: Figure \ref{fig:example
 
 :::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 2: Where does the reference go?
 
@@ -224,8 +232,11 @@ number of the previous section, which is the `Introduction` section. The fact th
 
 :::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Challenge 3: What's wrong with this code?
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3a: What's wrong with this code?
 
 Here's a section from a larger document. Why might the references not be working as expected? (This
 is a tiny but common issue!)
@@ -261,6 +272,53 @@ happen?
 The `\ref{}` command is correctly written, but the `\ref{}` command only returns the number of the
 label it is referring to. In this case, it will return the number of the table, not the name of the
 table. To fix this, you can write "As shown in Table \ref{tab:findings}..."
+
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Challenge 3b: Make it easier with \cleverref!
+
+In the previous challenge, we had to write "As shown in Table \ref{tab:findings}..." to get the
+correct reference text. This is because the `\ref{}` command only returns the number of the label
+it is referring to, and does not include the type of element (e.g., table, figure, section).
+
+`cleverref` is a package that can automatically detect the type of element being referenced and
+insert the appropriate name. Try to update this example to use the `cleverref` package and the
+`\cref{}` command to make the reference text more automatic.
+
+:::::::::::::::::::::::: solution
+
+```latex
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{cleveref}
+
+\begin{document}
+
+\section{Findings}
+\label{sec:findings}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    Color & Pre-treatment & Post-treatment \\
+    \midrule
+    Blue  & 30\% & 35\% \\
+    Green & 15\% & 55\% \\
+    Red   & 10\% & 12\% \\
+    \bottomrule
+  \end{tabular}
+  \caption{Findings from the survey.}
+  \label{tab:findings}
+\end{table}
+
+As shown in \cref{tab:findings} post-treatment values are higher...
+
+\end{document}
+```
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::

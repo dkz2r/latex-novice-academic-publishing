@@ -30,25 +30,50 @@ We can now include several types of images in our document, including:
 
 - JPEG
 - PNG
+- SVG
 - PDF
 - EPS
 
+::: callout
+
+Although LaTeX can handle several commonly used image formats, there are a few which are currently
+incompatible with LaTeX. For example, the `webp` and `tiff` formats. If you have an image in one
+of these formats, you will need to convert it to a compatible format before including it in your
+document.
+
+:::
+
 For the purposes of this lesson, we'll use the following image:
 
-![](fig/06-using-graphics/example-image.png){alt='Our example image.'}
+![](fig/08-using-graphics/my-awesome-image.png){alt='Our example image.'}
 
 ::: callout
 
 Download this image to your computer either be right-clicking on the image and selecting "Save
 Image As..." or by clicking on the image and saving it from the browser.
 
-You can use any image you like for this lesson. Just make sure to replace `example-image.PNG` with
+You can use any image you like for this lesson. Just make sure to replace `my-awesome-image.png` with
 the name of your image in the following examples.
 
 :::
 
 Place the image in the same directory as your LaTeX document so that LaTeX can find it when we
 compile the document.
+
+::: callout
+
+There is a command called `\graphicspath` that allows you to specify a directory where LaTeX
+should look for images. This can be useful if you have a dedicated folder for your images. For
+example, if you have a folder called `images` in the same directory as your LaTeX document, you can
+add the following line to your preamble:
+
+```latex
+\graphicspath{{images/}}
+```
+This tells LaTeX to look for images in the `images` folder when you use the `\includegraphics`
+command.
+
+:::
 
 ## Including an Image in a LaTeX Document
 
@@ -61,12 +86,12 @@ command:
 We can include \kw{images} in our document using the \cmd{graphicx} package, which lets us use the
 \cmd{includegraphics} command.
 
-\includegraphics{example-image.PNG}
+\includegraphics{my-awesome-image}
 ```
 
 Your document should now look like this:
 
-![](fig/06-using-graphics/document-with-image.PNG){alt='Our document with an included image.'}
+![](fig/08-using-graphics/document-with-image.PNG){alt='Our document with an included image.'}
 
 ::: callout
 
@@ -91,21 +116,10 @@ image:
 
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
-\includegraphics[height=2cm]{example-image.PNG}
-
-Other possible options include:
-
-\begin{itemize}
-  \item width: the width of the image
-  \item scale: the scaling factor of the image
-  \item angle: the angle of rotation of the image
-  \item clip: whether to clip the image to its bounding box
-  \item trim: trim the image by a specified amount
-  \item draft: display a box instead of the image
-\end{itemize}
+\includegraphics[height=2cm]{my-awesome-image}
 ```
 
-![](fig/06-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
+![](fig/08-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
 
 ::: callout
 
@@ -117,6 +131,73 @@ Some other possible options from the `graphicx` package include:
 - `clip`: whether to clip the image to its bounding box
 - `trim`: trim the image by a specified amount
 - `draft`: display a box instead of the image
+
+:::
+
+::: callout
+
+The `\linewidth` command can be used to specify the width of the image relative to the width of
+the text. For example, `width=0.5\linewidth` would make the image half the width of the text,
+rather than having to specify exact values.
+
+This is particuarly useful in multi-column layouts, where the width of the text may vary depending
+on the number of columns.
+
+:::
+
+::: caution
+
+### Overfull Boxes
+
+Now that we have included an image in our document, we have another kind of error we might
+encounter - "overfull boxes". This happens when the content of a box (like an image or a paragraph
+of text) is too large to fit within the specified dimensions of the box, and it overflows into the
+margins.
+
+The following code generates this warning message:
+
+```latex
+\documentclass{article}
+
+\usepackage{graphicx}
+\begin{document}
+
+\section{Adding a rotated image}
+
+We can rotate an image by setting the "angle" parameter:
+
+\includegraphics[scale=2, angle=45]{example-image}
+\end{document}
+```
+
+The document compiles successfully, but there was some text that briefly appeared in the console
+output. Let's look at the .log file to see what it says:
+
+```
+Overfull \hbox (390.7431pt too wide) in paragraph at lines 10--11
+[][]
+ []
+
+
+
+[1
+
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \vbox (170.7431pt too high) has occurred while \output is active []
+
+
+
+[2 <./example-image.png>] (./main.aux)
+```
+
+This means that the text or image is too wide or too tall for the page, and it is overflowing into
+the margins. To fix this, we can adjust the size of the image or the layout of the page to ensure
+that everything fits within the specified dimensions.
+
+Note that there may be times when we actually want the image to overflow into the margins, for
+example if we want to include an image that extends to the edges of the page. In this case, we can
+ignore the warning message and proceed with our document - this warning will not prevent our
+document from compiling successfully.
 
 :::
 
@@ -132,13 +213,13 @@ By placing the \cmd{includegraphics} command inside a center environment, we can
 image on the page.
 
 \begin{center}
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
 \end{center}
 ```
 
 You should see that the image is now centered on the page:
 
-![](fig/06-using-graphics/document-with-centered-image.PNG){alt='Our document with a centered image.'}
+![](fig/08-using-graphics/document-with-centered-image.PNG){alt='Our document with a centered image.'}
 
 ## "Floating" Images
 
@@ -156,14 +237,14 @@ To make an image float, we can use the `figure` environment:
 
 \begin{figure}
   \centering
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
 \end{figure}
 ```
 
 When we render the document, we can see that, even though we placed the image at the end of the
 document, it appears at the top of the page:
 
-![](fig/06-using-graphics/document-with-floating-image.PNG){alt='Our document with a floating image.'}
+![](fig/08-using-graphics/document-with-floating-image.PNG){alt='Our document with a floating image.'}
 
 ::: callout
 
@@ -190,16 +271,16 @@ to use the `ht` option:
 ```latex
 \begin{figure}[ht]
   \centering
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
 \end{figure}
 
 Control the position of a floating image by passing parameters to the \cmd{figure} environment:
 
 \begin{itemize}
-  \item h: Place the float "here" (where it appears in the code)
-  \item t: Place the float at the "top" of the page
-  \item b: Place the float at the "bottom" of the page
-  \item p: Place the float on a "page" by itself
+  \item h: "here"
+  \item t: "top"
+  \item b: "bottom"
+  \item p: "page"
 \end{itemize}
 
 ```
@@ -235,14 +316,14 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 
 \begin{figure}
   \centering
-  \includegraphics[height=2cm]{example-image.PNG}
+  \includegraphics[height=2cm]{my-awesome-image}
   \caption{This is a caption for our image.}
 \end{figure}
 ```
 
 When we render the document, we can see that the caption appears below the image:
 
-![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
+![](fig/08-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
 
 ::: callout
 
@@ -254,9 +335,17 @@ automatically reference figures and tables in a later episode.
 ::: spoiler
 
 Another package that we can use to work with images in LaTeX is the `hvfloat` package. This package
-is an alterantive way of controlling the position of floating elemnents in LaTeX, like images
+is an alterantive way of controlling the position of floating elements in LaTeX, like images
 and tables. It provides a more flexible way of positioning floats allowing us to, for example,
 place a float at the bottom of the page, even if there is not enough space for it to fit.
+
+:::
+
+::: callout
+
+There's a command called `\listoffigures` that will generate a list of all of the figures in your
+document. This will only list the figures that have a caption, so make sure to add a caption to
+any figure you want to be included in the list.
 
 :::
 
@@ -291,7 +380,7 @@ image.
 
 \begin{figure}
   \centering
-  \includegraphics[angle=45]{example-image.PNG}
+  \includegraphics[angle=45]{my-awesome-image}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -316,7 +405,7 @@ Have a look at the following LaTeX code:
 
 \centering
 \begin{figure}
-  \includegraphics[height=3cm, draft]{example-image.PNG}
+  \includegraphics[height=3cm, draft]{my-awesome-image}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -327,13 +416,11 @@ Can you spot all the errors in this LaTeX code?
 Change the code such that the image is displayed with a height of 3cm, width of 4cm and centered.
 
 
-
 :::::::::::::::::::::::: solution
 
-First, the command `\usepackage{graphicx}` is missing in the preamble.
-Second, the `\centering` command has to be placed into the `figure` environment.
-Third, the `draft` argument has to be removed from and `width=4cm` added to the `\includegraphics`
-command.
+1. the command `\usepackage{graphicx}` is missing in the preamble.
+2. the `\centering` command has to be placed into the `figure` environment.
+3. the `draft` argument has to be removed from the `\includegraphics` command and `width=4cm` added.
 
 The corrected LaTeX code looks like this:
 
@@ -346,7 +433,7 @@ The corrected LaTeX code looks like this:
 
 \begin{figure}
   \centering
-  \includegraphics[height=3cm, width=4cm]{example-image.PNG}
+  \includegraphics[height=3cm, width=4cm]{my-awesome-image}
   \caption{This caption has a \textbf{bold} word included.}
 \end{figure}
 
@@ -385,7 +472,7 @@ Your file should look like this:
 \end{document}
 ```
 
-And your output should look [like this](fig/06-using-graphics/challenge-image-command-output.PNG).
+And your output should look [like this](fig/08-using-graphics/challenge-image-command-output.PNG).
 
 Reminder: The syntax for creating a new command is:
 
@@ -410,8 +497,8 @@ Reminder: The syntax for creating a new command is:
 
 \begin{document}
 
-\centeredimage{example-image.png}{"My Image"}
-\centeredimage{example-image.png}{"My Other Image"}
+\centeredimage{my-awesome-image}{"My Image"}
+\centeredimage{my-awesome-image}{"My Other Image"}
 
 \end{document}
 ```
@@ -439,7 +526,7 @@ Can you already guess how the images will be displayed in your document?
 
 \begin{wrapfigure}{r}{0.1\textwidth}
     \centering
-    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
+    \includegraphics[width=0.1\textwidth, height=0.1\textwidth]{my-awesome-image}
 \end{wrapfigure}
 
 The package wrapfigure lets you position images around your text.
