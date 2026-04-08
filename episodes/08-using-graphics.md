@@ -145,6 +145,62 @@ on the number of columns.
 
 :::
 
+::: caution
+
+### Overfull Boxes
+
+Now that we have included an image in our document, we have another kind of error we might
+encounter - "overfull boxes". This happens when the content of a box (like an image or a paragraph
+of text) is too large to fit within the specified dimensions of the box, and it overflows into the
+margins.
+
+The following code generates this warning message:
+
+```latex
+\documentclass{article}
+
+\usepackage{graphicx}
+\begin{document}
+
+\section{Adding a rotated image}
+
+We can rotate an image by setting the "angle" parameter:
+
+\includegraphics[scale=2, angle=45]{example-image}
+\end{document}
+```
+
+The document compiles successfully, but there was some text that briefly appeared in the console
+output. Let's look at the .log file to see what it says:
+
+```
+Overfull \hbox (390.7431pt too wide) in paragraph at lines 10--11
+[][]
+ []
+
+
+
+[1
+
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \vbox (170.7431pt too high) has occurred while \output is active []
+
+
+
+[2 <./example-image.png>] (./main.aux)
+```
+
+This means that the text or image is too wide or too tall for the page, and it is overflowing into
+the margins. To fix this, we can adjust the size of the image or the layout of the page to ensure
+that everything fits within the specified dimensions.
+
+Note that there may be times when we actually want the image to overflow into the margins, for
+example if we want to include an image that extends to the edges of the page. In this case, we can
+ignore the warning message and proceed with our document - this warning will not prevent our
+document from compiling successfully.
+
+:::
+
 ### Positioning the image
 
 We can place the image inside of an environment to help position it in the document. Let's try

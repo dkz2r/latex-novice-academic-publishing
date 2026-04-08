@@ -60,6 +60,37 @@ user, but applied while loading `\usepackage{...}` in your preamble.
 
 :::
 
+## Fixing Errors
+
+::: caution
+
+### File Not Found
+
+Here's another LaTeX excerpt that contains an error:
+
+```latex
+\documentclass{article}
+
+\usepackage{booktab}
+
+\begin{document}
+
+More Amazing Content!
+
+\end{document}
+```
+
+The following error message appears when you try to compile this document:
+
+```
+! LaTeX Error: File `booktab.sty' not found.
+```
+
+This error indicates that LaTeX is unable to find the `booktab` package. The correct package name
+should be `booktabs`.
+
+:::
+
 ## Changing the Design
 
 It's useful to be able to adjust some aspects of the design independent of the document class, for
