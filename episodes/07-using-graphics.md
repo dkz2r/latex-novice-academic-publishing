@@ -279,7 +279,7 @@ automatically reference figures and tables in a later episode.
 ::: spoiler
 
 Another package that we can use to work with images in LaTeX is the `hvfloat` package. This package
-is an alterantive way of controlling the position of floating elemnents in LaTeX, like images
+is an alterantive way of controlling the position of floating elements in LaTeX, like images
 and tables. It provides a more flexible way of positioning floats allowing us to, for example,
 place a float at the bottom of the page, even if there is not enough space for it to fit.
 
