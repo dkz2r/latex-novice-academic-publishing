@@ -102,17 +102,6 @@ image:
 We can pass parameters to the \cmd{includegraphics} command to adjust the appearance of the image.
 
 \includegraphics[height=2cm]{my-awesome-image}
-
-Other possible options include:
-
-\begin{itemize}
-  \item width: the width of the image
-  \item scale: the scaling factor of the image
-  \item angle: the angle of rotation of the image
-  \item clip: whether to clip the image to its bounding box
-  \item trim: trim the image by a specified amount
-  \item draft: display a box instead of the image
-\end{itemize}
 ```
 
 ![](fig/06-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
@@ -206,10 +195,10 @@ to use the `ht` option:
 Control the position of a floating image by passing parameters to the \cmd{figure} environment:
 
 \begin{itemize}
-  \item h: Place the float "here" (where it appears in the code)
-  \item t: Place the float at the "top" of the page
-  \item b: Place the float at the "bottom" of the page
-  \item p: Place the float on a "page" by itself
+  \item h: "here"
+  \item t: "top"
+  \item b: "bottom"
+  \item p: "page"
 \end{itemize}
 
 ```
