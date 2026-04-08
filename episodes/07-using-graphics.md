@@ -60,6 +60,21 @@ the name of your image in the following examples.
 Place the image in the same directory as your LaTeX document so that LaTeX can find it when we
 compile the document.
 
+::: callout
+
+There is a command called `\graphicspath` that allows you to specify a directory where LaTeX
+should look for images. This can be useful if you have a dedicated folder for your images. For
+example, if you have a folder called `images` in the same directory as your LaTeX document, you can
+add the following line to your preamble:
+
+```latex
+\graphicspath{{images/}}
+```
+This tells LaTeX to look for images in the `images` folder when you use the `\includegraphics`
+command.
+
+:::
+
 ## Including an Image in a LaTeX Document
 
 Now that we have our image, we can include it in our document using the `\includegraphics`
@@ -116,6 +131,17 @@ Some other possible options from the `graphicx` package include:
 - `clip`: whether to clip the image to its bounding box
 - `trim`: trim the image by a specified amount
 - `draft`: display a box instead of the image
+
+:::
+
+::: callout
+
+The `\linewidth` command can be used to specify the width of the image relative to the width of
+the text. For example, `width=0.5\linewidth` would make the image half the width of the text,
+rather than having to specify exact values.
+
+This is particuarly useful in multi-column layouts, where the width of the text may vary depending
+on the number of columns.
 
 :::
 
@@ -256,6 +282,14 @@ Another package that we can use to work with images in LaTeX is the `hvfloat` pa
 is an alterantive way of controlling the position of floating elemnents in LaTeX, like images
 and tables. It provides a more flexible way of positioning floats allowing us to, for example,
 place a float at the bottom of the page, even if there is not enough space for it to fit.
+
+:::
+
+::: callout
+
+There's a command called `\listoffigures` that will generate a list of all of the figures in your
+document. This will only list the figures that have a caption, so make sure to add a caption to
+any figure you want to be included in the list.
 
 :::
 
