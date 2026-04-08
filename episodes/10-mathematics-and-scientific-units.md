@@ -26,6 +26,18 @@ There are two kinds of math mode in LaTeX:
 - **Inline math mode**: for typesetting math within a line of text
 - **Display math mode**: for typesetting math on its own line
 
+### AMS Math Package
+
+We can use the base LaTeX math mode commands to create mathematical expressions, but in practice,
+the `amsmath` package is frequently used, as it provides several additional features and
+environments for typesetting complex mathematical expressions.
+
+We will add the `amsmath` package to our document in the preamble:
+
+```latex
+\usepackage{amsmath}
+```
+
 ### Inline Math Mode
 
 Inline math mode is marked using a pair of dollar sign symbols (`$ ... $`). It is also possible to
@@ -135,7 +147,7 @@ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{figure}
 ```
 
-## The `amsmath` Package (Optional)
+## `amsmath` Options
 
 Mathematical notation is very rich, and the tools in the LaTeX kernel are sometimes not enough to
 cover everything. The `amsmath` package extends the capabilities of LaTeX for more complex
@@ -152,14 +164,10 @@ Add the following to your document:
 ```latex
 \subsection{The `amsmath` Package}
 
-Solve the following recurrence for $ n,k\geq 0 $:
-\[
-Q_{n,0} = 1   \quad Q_{0,k} = [k=0];
-\]
-
-\[
-Q_{n,k} = Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{for $n$, $k>0$.}
-\]
+\begin{align*}
+  x + y  &= 5 \\
+  2x - y &= 1
+\end{align*}
 ```
 
 That look ok, but we really want the equations to be aligned vertically, not centered on the page.
@@ -302,10 +310,10 @@ You load the package in your preamble
 
 Using the specifically provided macros of the package has several benefits.
 
-- **Consistent formatting**  
+- **Consistent formatting**
   All numbers and units are printed with the correct spacing and font shape.
 
-- **Locale and digit grouping**  
+- **Locale and digit grouping**
   You can automatically switch decimal markers (comma vs. point, depending on
   your current language/locale of the section) and group digits:
 
@@ -316,7 +324,7 @@ Using the specifically provided macros of the package has several benefits.
   \numrange{11}{33}
  ```
 
-- **Unit parsing**  
+- **Unit parsing**
   Composite units are built from predefined macros:
 
  ```latex
@@ -325,20 +333,20 @@ Using the specifically provided macros of the package has several benefits.
   \qty[per-mode = symbol]{1}{\kilo\gram\metre\per\second\squared}
 ```
 
-- **Uncertainties, lists and ranges**  
+- **Uncertainties, lists and ranges**
   Express measurement errors and intervals:
 
   ```latex
-  \qty{1.23(4)}{\metre} 
-  \qtylist{0.13;0.67;0.80}{\milli\metre} 
-  \qtyrange{20}{25}{\celsius} 
-  ``` 
+  \qty{1.23(4)}{\metre}
+  \qtylist{0.13;0.67;0.80}{\milli\metre}
+  \qtyrange{20}{25}{\celsius}
+  ```
 
 
-- **Tables with aligned numbers**  
+- **Tables with aligned numbers**
   Use the `S` column specifier in `tabular` environments to align on decimal
  markers:
- 
+
  ```latex
   \begin{tabular}{S[table-format=3.2] c}
   \toprule
@@ -353,8 +361,8 @@ Using the specifically provided macros of the package has several benefits.
 ::::::::::::::::::::::::::::::::::::: challenge
 
 - Write the following quantities using ``\qty` or `\num=` and `\ang``:
-  1. Speed of light: \(c = 2.99792458 x 10^8\)\,m/s  
-  2. Standard atmospheric pressure: 1013.25 hPa  
+  1. Speed of light: \(c = 2.99792458 x 10^8\)\,m/s
+  2. Standard atmospheric pressure: 1013.25 hPa
   3. A right angle is 90° but navigating is done in the direction 1°2′3″ SSW.
 
 
