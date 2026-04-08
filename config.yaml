@@ -71,11 +71,11 @@ episodes:
 - 04-logical-structure.md
 - 05-document-classes.md
 - 06-extending-latex.md
-- 07-using-graphics.md
-- 08-tables.md
-- 09-cross-references.md
-- 10-mathematics-and-scientific-units.md
-- 11-font-format-and-spacing.md
+- 07-font-format-and-spacing.md
+- 08-using-graphics.md
+- 09-tables.md
+- 10-cross-references.md
+- 11-mathematics-and-scientific-units.md
 - 12-citations-and-references.md
 - 13-context-sensitive-quotation.md
 - 14-structuring-sources.md

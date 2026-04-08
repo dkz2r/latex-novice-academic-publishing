@@ -139,7 +139,7 @@ In the text, we can refer to the figure using its label: % Something goes here
 
 The goal will be to have something that looks like this:
 
-![](fig/09-cross-references/challenge-reference-image.PNG){alt='Example output of a figure for challenge 1'}
+![](fig/10-cross-references/challenge-reference-image.PNG){alt='Example output of a figure for challenge 1'}
 
 ::: hint
 

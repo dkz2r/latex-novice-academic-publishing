@@ -97,7 +97,7 @@ This will create a table with three columns, all left-aligned. The values of eac
 by `&` and the rows are separated by `\\`. We do not yet have any horizontal lines in the table, so
 it will look like this:
 
-![](fig/07-tables/simple-table.PNG){alt='Example output of a simple table'}
+![](fig/09-tables/simple-table.PNG){alt='Example output of a simple table'}
 
 ::: callout
 
@@ -156,7 +156,7 @@ lines in our table.
 
 Your table should look something like this:
 
-![](fig/07-tables/table-with-horizontal-lines.PNG){alt='Example output of a table with horizontal
+![](fig/09-tables/table-with-horizontal-lines.PNG){alt='Example output of a table with horizontal
 lines'}
 
 ::: callout
@@ -195,7 +195,7 @@ start the line and last number is the column to end the line.
 
 This table should come out looking something like this:
 
-![](fig/07-tables/table-with-partial-lines.PNG){alt='Example output of a table with partial
+![](fig/09-tables/table-with-partial-lines.PNG){alt='Example output of a table with partial
 lines'}
 
 
@@ -250,7 +250,7 @@ You can find an example in the challenges below.
 
 This will create a table that looks like this:
 
-![](fig/07-tables/table-with-merged-cell.PNG){alt='Example output of a table with merged cells'}
+![](fig/09-tables/table-with-merged-cell.PNG){alt='Example output of a table with merged cells'}
 
 ## Positioning Tables
 
@@ -299,7 +299,7 @@ Try to replicate the following table in LaTeX:
 
 Your LaTeX version should look something like this:
 
-![](fig/07-tables/challenge-make-a-table.PNG){alt='Example output of a table for challenge 1'}
+![](fig/09-tables/challenge-make-a-table.PNG){alt='Example output of a table for challenge 1'}
 
 Note that the last row is a bit different from the others. The first two columns re merged, the
 text "Total" is right-aligned and bold, and the value in the last column is italicized.
@@ -410,7 +410,7 @@ the width of the merged cell, and the third argument specifies the contents of t
 
 The table created by this code will look like this:
 
-![](fig/07-tables/challenge-merged-rows.PNG){alt='Example output of a table with merged rows'}
+![](fig/09-tables/challenge-merged-rows.PNG){alt='Example output of a table with merged rows'}
 
 :::::::::::::::::::::::::::::::::
 
@@ -483,7 +483,7 @@ There's no right answer to this challenge, so feel free to experiment with diffe
 
 Here's an example of what you can do:
 
-![](fig/07-tables/challenge-colorful-table.PNG){alt='Example output of a colorful table'}
+![](fig/09-tables/challenge-colorful-table.PNG){alt='Example output of a colorful table'}
 
 :::::::::::::::::::::::: solution
 

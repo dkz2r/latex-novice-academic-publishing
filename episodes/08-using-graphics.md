@@ -45,7 +45,7 @@ document.
 
 For the purposes of this lesson, we'll use the following image:
 
-![](fig/06-using-graphics/my-awesome-image.png){alt='Our example image.'}
+![](fig/08-using-graphics/my-awesome-image.png){alt='Our example image.'}
 
 ::: callout
 
@@ -91,7 +91,7 @@ We can include \kw{images} in our document using the \cmd{graphicx} package, whi
 
 Your document should now look like this:
 
-![](fig/06-using-graphics/document-with-image.PNG){alt='Our document with an included image.'}
+![](fig/08-using-graphics/document-with-image.PNG){alt='Our document with an included image.'}
 
 ::: callout
 
@@ -119,7 +119,7 @@ We can pass parameters to the \cmd{includegraphics} command to adjust the appear
 \includegraphics[height=2cm]{my-awesome-image}
 ```
 
-![](fig/06-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
+![](fig/08-using-graphics/document-with-small-image.PNG){alt='Our document with a smaller image.'}
 
 ::: callout
 
@@ -163,7 +163,7 @@ image on the page.
 
 You should see that the image is now centered on the page:
 
-![](fig/06-using-graphics/document-with-centered-image.PNG){alt='Our document with a centered image.'}
+![](fig/08-using-graphics/document-with-centered-image.PNG){alt='Our document with a centered image.'}
 
 ## "Floating" Images
 
@@ -188,7 +188,7 @@ To make an image float, we can use the `figure` environment:
 When we render the document, we can see that, even though we placed the image at the end of the
 document, it appears at the top of the page:
 
-![](fig/06-using-graphics/document-with-floating-image.PNG){alt='Our document with a floating image.'}
+![](fig/08-using-graphics/document-with-floating-image.PNG){alt='Our document with a floating image.'}
 
 ::: callout
 
@@ -267,7 +267,7 @@ We can add a \kw{caption} to our floating image by using the \cmd{caption} comma
 
 When we render the document, we can see that the caption appears below the image:
 
-![](fig/06-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
+![](fig/08-using-graphics/document-with-floating-image-caption.PNG){alt='Our document with a floating image.'}
 
 ::: callout
 
@@ -416,7 +416,7 @@ Your file should look like this:
 \end{document}
 ```
 
-And your output should look [like this](fig/06-using-graphics/challenge-image-command-output.PNG).
+And your output should look [like this](fig/08-using-graphics/challenge-image-command-output.PNG).
 
 Reminder: The syntax for creating a new command is:
 

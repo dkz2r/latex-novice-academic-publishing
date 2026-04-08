@@ -59,7 +59,7 @@ And this text will go into another section.
 
 You should have something that looks like this:
 
-![](fig/03-logical-structure/sections.PNG){alt='Our document with sections added.'}
+![](fig/04-logical-structure/sections.PNG){alt='Our document with sections added.'}
 
 ::: callout
 
@@ -118,7 +118,7 @@ And this text will go into another section.
 \end{document}
 ```
 
-![](fig/03-logical-structure/document-with-toc.png){alt='Our document with a table of contents.'}
+![](fig/04-logical-structure/document-with-toc.png){alt='Our document with a table of contents.'}
 
 ## Lists
 
@@ -171,7 +171,7 @@ Ordered lists have a number or letter associated with each item.
 
 When you compile this document, you should see something like this in the preview pane:
 
-![](fig/03-logical-structure/enumerated-list.PNG){alt='Our document with an enumerated list.'}
+![](fig/04-logical-structure/enumerated-list.PNG){alt='Our document with an enumerated list.'}
 
 ::: callout
 
@@ -277,7 +277,7 @@ Unordered lists are just a series of items preceded by a marker.
 \end{document}
 ```
 
-![](fig/03-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'}
+![](fig/04-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'}
 
 
 ## Challenges
