@@ -252,6 +252,34 @@ This will create a table that looks like this:
 
 ![](fig/07-tables/table-with-merged-cell.PNG){alt='Example output of a table with merged cells'}
 
+## Positioning Tables
+
+By default, tables will be placed exactly where they are defined in the LaTeX document. We saw in
+the earlier section on graphics that we can use the `figure` environment to create floating
+figures, which gives us a lot of flexability where exactly the figure will be placed in the
+document.
+
+We can do the same thing with tables by using the `table` environment. This will allow us to use
+the same placement specifiers that we used for figures (h, t, b, p, and !). We can also add a
+caption to our table using the `\caption` command:
+
+```latex
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{*{3}{l}}
+    \toprule
+    Fruit  & Quantity & Price \\
+    \midrule
+    Apple  & 5        & 1.50  \\
+    Banana & 6        & 2.00  \\
+    Orange & 4        & 1.20  \\
+    \bottomrule
+  \end{tabular}
+
+  \caption{Inventory of Fruits} % Add a caption to the table
+\end{table}
+```
+
 ## Challenges
 
 ::::::::::::::::::::::::::::::::::::: challenge
