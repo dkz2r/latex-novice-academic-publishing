@@ -51,6 +51,15 @@ should see something like this:
 
 However this isn't what we really want, so we'll remove this line from our document.
 
+::: callout
+
+When is a package actually used in the document? As soon as you write `\usepackage{....}` the
+package is loaded and considered for the next compilation run. You do not need to have to use a
+command in your document. Some packages are not meant to be used activly in your document by the
+user, but applied while loading `\usepackage{...}` in your preamble.
+
+:::
+
 ## Changing the Design
 
 It's useful to be able to adjust some aspects of the design independent of the document class, for
