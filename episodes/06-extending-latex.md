@@ -47,9 +47,49 @@ text block in our document to 6cm, we would update this line to look like this:
 Give this a try in our `main.tex` document to see what happens. When you render the document, you
 should see something like this:
 
-![](fig/05-extending-latex/geometry-set-width.PNG){alt='A document with a narrow text block.'}
+![](fig/06-extending-latex/geometry-set-width.PNG){alt='A document with a narrow text block.'}
 
 However this isn't what we really want, so we'll remove this line from our document.
+
+::: callout
+
+When is a package actually used in the document? As soon as you write `\usepackage{....}` the
+package is loaded and considered for the next compilation run. You do not need to have to use a
+command in your document. Some packages are not meant to be used activly in your document by the
+user, but applied while loading `\usepackage{...}` in your preamble.
+
+:::
+
+## Fixing Errors
+
+::: caution
+
+### File Not Found
+
+Here's another LaTeX excerpt that contains an error:
+
+```latex
+\documentclass{article}
+
+\usepackage{booktab}
+
+\begin{document}
+
+More Amazing Content!
+
+\end{document}
+```
+
+The following error message appears when you try to compile this document:
+
+```
+! LaTeX Error: File `booktab.sty' not found.
+```
+
+This error indicates that LaTeX is unable to find the `booktab` package. The correct package name
+should be `booktabs`.
+
+:::
 
 ## Changing the Design
 
@@ -117,7 +157,7 @@ I can add content to my first \textbf{\underline{section}}!
 
 We can add this to each of our important terms in our document - maybe it looks something like this:
 
-![](fig/05-extending-latex/kw-highlight-underline.PNG){alt='Our document with keywords highlighted
+![](fig/06-extending-latex/kw-highlight-underline.PNG){alt='Our document with keywords highlighted
 in bold and underlined.'}
 
 
@@ -191,7 +231,7 @@ Let's replace our `\kw` command with this new definition:
 When we recompile the document we should see that the formatting of our keywords has changed all at
 once:
 
-![](fig/05-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in
+![](fig/06-extending-latex/kw-highlight-blue.PNG){alt='Our document with keywords highlighted in
 blue.'}
 
 ::: callout

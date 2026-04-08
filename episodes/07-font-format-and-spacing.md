@@ -36,11 +36,11 @@ preamble:
 
 When you compile the document you should see that it has changed from this:
 
-![](fig/11-font-format-and-spacing/before-default-font-change.PNG){alt="Our document with the default font"}
+![](fig/07-font-format-and-spacing/before-default-font-change.PNG){alt="Our document with the default font"}
 
 To this:
 
-![](fig/11-font-format-and-spacing/after-default-font-change.PNG){alt="Our document with the default font changed to a monospace font"}
+![](fig/07-font-format-and-spacing/after-default-font-change.PNG){alt="Our document with the default font changed to a monospace font"}
 
 ### More Fonts
 
@@ -265,7 +265,7 @@ You can use the commands `\vspace` and `\vfill` to make fill blank space between
 
 Here's an example of what your title page could look like:
 
-![](fig/11-font-format-and-spacing/challenge-title-page-example.PNG){alt="Example of a custom title page"}
+![](fig/07-font-format-and-spacing/challenge-title-page-example.PNG){alt="Example of a custom title page"}
 
 ::: hint
 
@@ -335,6 +335,9 @@ Consider the following document:
 We want our document to have no indents for paragraphs, but to have a single blank line between
 them. What do we need to change in the document to achieve this?
 
+If you want to try this out, you can copy and paste the code into a new `.tex` file and compile it
+to see the result.
+
 :::::::::::::::::::::::: solution
 
 We need to add the `parskip` package to the preamble of our document. This will add a blank line
@@ -371,7 +374,7 @@ for each block of text.
 Create a customg quote block using a `center` environment and `\vspace` commands. See if you can
 make it look something like this:
 
-![](fig/11-font-format-and-spacing/challenge-quote-example.PNG){alt="Example of a custom quote block"}
+![](fig/07-font-format-and-spacing/challenge-quote-example.PNG){alt="Example of a custom quote block"}
 
 Note that there is some vertical space above and below the quote, and the text is formatted with
 different font sizes and styles. The quote itself is in italics, and the attribution is in small

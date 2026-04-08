@@ -1,5 +1,5 @@
 ---
-title: 'File Structure'
+title: 'Basic LaTeX Document Components'
 teaching: 10
 exercises: 10
 ---

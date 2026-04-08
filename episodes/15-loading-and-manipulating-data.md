@@ -89,7 +89,7 @@ the database as an argument and displays the data in a table.
 
 Your document should now look something like this:
 
-![](fig/16-loading-and-manipulating-data/displaying-database.PNG)
+![](fig/15-loading-and-manipulating-data/displaying-database.PNG)
 
 We can see the data now, but we have way too much data to show in a single table. Let's filter
 the data to only show the GDP per capita data.
@@ -136,7 +136,7 @@ variable.
 
 Your filtered data should look something like this:
 
-![](fig/16-loading-and-manipulating-data/filtering-database.PNG)
+![](fig/15-loading-and-manipulating-data/filtering-database.PNG)
 
 ## Data Aggregation
 
@@ -231,7 +231,7 @@ We can now display the new database using the `\DTLdisplaydb` command:
 
 Your document should now look something like this:
 
-![](fig/16-loading-and-manipulating-data/new-filtered-database.PNG)
+![](fig/15-loading-and-manipulating-data/new-filtered-database.PNG)
 
 ## Plotting Data
 
@@ -269,7 +269,7 @@ tlmgr install pgf
 
 Your document should now look something like this:
 
-![](fig/16-loading-and-manipulating-data/plain-bars.PNG
+![](fig/15-loading-and-manipulating-data/plain-bars.PNG
 
 Ok, not very exciting. And that's missing a fair bit of information. We can add some options to
 the command to make it look better:
@@ -289,7 +289,7 @@ the command to make it look better:
 
 It should now look something like this:
 
-![](fig/16-loading-and-manipulating-data/bars-with-annotations.PNG)
+![](fig/15-loading-and-manipulating-data/bars-with-annotations.PNG)
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -337,7 +337,7 @@ command like this:
 
 How might you display the results in a table? See if you can get the output to look like this:
 
-![](fig/16-loading-and-manipulating-data/challenge-tabular-from-database.PNG)
+![](fig/15-loading-and-manipulating-data/challenge-tabular-from-database.PNG)
 
 Refer back to the [Episode on Tables](/08-tables.md) to review the
 syntax for creating tables in LaTeX.
