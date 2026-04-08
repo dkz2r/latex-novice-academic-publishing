@@ -279,6 +279,35 @@ text "Total" is right-aligned and bold, and the value in the last column is ital
 (Data for this challenge is from
 [Statista](https://www.statista.com/statistics/1546704/monthly-best-selling-car-models-in-germany/))
 
+::: hint
+
+Here's some code to get you started:
+
+```latex
+\begin{tabular}{Something goes here...}
+  Something goes here...
+  Make        & Model   & Sold   \\
+  Something goes here...
+  Volkswagen  & Golf    & 7,687 \\
+  Skoda       & Octavia & 4,078 \\
+  Seat        & Leon    & 3,922 \\
+  Volkswagen  & Passat  & 3,776 \\
+  Mercedes    & GLK,GLC & 3,143 \\
+  Something goes here...
+  How do we get the only two cells here? And then they need to be right-aligned and bolded...
+  Something goes here...
+\end{tabular}
+```
+
+:::
+
+::: hint
+
+For the last row, we need to merge the first two cells together. We can do this using the
+`\multicolumn` command. If we then merge these two cells, then right aligning the text...
+
+:::
+
 :::::::::::::::::::::::: solution
 
 ## Answer
@@ -426,8 +455,7 @@ There's no right answer to this challenge, so feel free to experiment with diffe
 
 Here's an example of what you can do:
 
-![](fig/07-tables/challenge-colorful-table.PNG)
-
+![](fig/07-tables/challenge-colorful-table.PNG){alt='Example output of a colorful table'}
 
 :::::::::::::::::::::::: solution
 
