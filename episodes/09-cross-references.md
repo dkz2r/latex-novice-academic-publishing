@@ -101,6 +101,10 @@ This package automatically makes all references clickable, allowing you to jump 
 element in the PDF document. However be aware that this can sometimes cause issues with other
 packages, so it's best to load it last in your preamble.
 
+Note that in order to avoid compilation issues, the `hyperref` package should be loaded after all
+other packages in your preamble, except for packages that are specifically designed to work with
+`hyperref`, like `cleveref`.
+
 :::
 
 ## Challenges
