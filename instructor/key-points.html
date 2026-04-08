@@ -257,7 +257,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-document-structure.html">2. File Structure</a>
+        <a href="02-document-structure.html">2. Basic LaTeX Document Components</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -317,7 +317,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-using-graphics.html">7. Using Graphics</a>
+        <a href="07-font-format-and-spacing.html">7. Fonts, Formatting and Spacing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -329,7 +329,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-tables.html">8. Tables</a>
+        <a href="08-using-graphics.html">8. Using Graphics</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -341,7 +341,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="09-cross-references.html">9. Adding Cross References</a>
+        <a href="09-tables.html">9. Tables</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -353,7 +353,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-mathematics-and-scientific-units.html">10. Mathematics</a>
+        <a href="10-cross-references.html">10. Adding Cross References</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -365,7 +365,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="11-font-format-and-spacing.html">11. Fonts, Formatting and Spacing</a>
+        <a href="11-mathematics-and-scientific-units.html">11. Mathematics</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -500,7 +500,7 @@ editor, the preview pane, and the menu bar.</li>
 the TeXworks editor.</li>
 <li>We can also compile a LaTeX document from the command line using the
 <code>pdflatex</code> or <code>lualatex</code> command.</li>
-</ul></section><section id="02-document-structure"><h2 class="section-heading"><a href="02-document-structure.html">File Structure</a></h2>
+</ul></section><section id="02-document-structure"><h2 class="section-heading"><a href="02-document-structure.html">Basic LaTeX Document Components</a></h2>
 <hr class="half-width">
 <ul>
 <li>The <code>%</code> character is used to add comments to a LaTeX
@@ -543,51 +543,7 @@ the problem is.</li>
 document.</li>
 <li>We can define custom commands in LaTeX using the
 <code>\newcommand</code> command.</li>
-</ul></section><section id="07-using-graphics"><h2 class="section-heading"><a href="07-using-graphics.html">Using Graphics</a></h2>
-<hr class="half-width">
-<ul>
-<li>The <code>graphicx</code> package allows us to include images in our
-LaTeX document.</li>
-<li>We can adjust the appearance of images using options in the
-<code>\includegraphics</code> command.</li>
-<li>We can position images manually or automatically using environments
-like <code>center</code> and <code>figure</code>.</li>
-<li>Floating images can move around the page as text is added or
-removed.</li>
-<li>We can control the position of floating images using parameters in
-the <code>figure</code> environment.</li>
-<li>We can add captions to floating images using the
-<code>\caption</code> command.</li>
-</ul></section><section id="08-tables"><h2 class="section-heading"><a href="08-tables.html">Tables</a></h2>
-<hr class="half-width">
-<ul>
-<li>Tables in LaTeX are created using the <code>tabular</code>
-environment.</li>
-<li>The <code>array</code> package provides additional functionality for
-creating tables.</li>
-<li>The <code>booktabs</code> package provides commands for creating
-horizontal lines in tables.</li>
-<li>The <code>\multicolumn</code> command can be used to merge cells in
-a table.</li>
-<li>The <code>\multirow</code> command in the <code>multirow</code>
-package can be used to merge rows in a table.</li>
-</ul></section><section id="09-cross-references"><h2 class="section-heading"><a href="09-cross-references.html">Adding Cross References</a></h2>
-<hr class="half-width">
-<ul>
-<li>The <code>\label{}</code> command marks a spot in the document.</li>
-<li>The <code>\ref{}</code> command refers to a marked spot in the
-document.</li>
-</ul></section><section id="10-mathematics-and-scientific-units"><h2 class="section-heading"><a href="10-mathematics-and-scientific-units.html">Mathematics</a></h2>
-<hr class="half-width">
-<ul>
-<li>Inline math mode is marked with <code>$ ... $</code> or
-<code>\(...\)</code>
-</li>
-<li>Display math mode is marked with <code>\[ ... \]</code>
-</li>
-<li>Use <code>\qty{}{}</code> or <code>\unit{}</code> for properly
-writing numbers with their scientific unit.</li>
-</ul></section><section id="11-font-format-and-spacing"><h2 class="section-heading"><a href="11-font-format-and-spacing.html">Fonts, Formatting and Spacing</a></h2>
+</ul></section><section id="07-font-format-and-spacing"><h2 class="section-heading"><a href="07-font-format-and-spacing.html">Fonts, Formatting and Spacing</a></h2>
 <hr class="half-width">
 <ul>
 <li>Use the <code>parskip</code> package to add space between
@@ -602,6 +558,50 @@ paragraphs</li>
 <li>Align text with <code>\centering</code>, <code>\raggedright</code>,
 and <code>\raggedleft</code>
 </li>
+</ul></section><section id="08-using-graphics"><h2 class="section-heading"><a href="08-using-graphics.html">Using Graphics</a></h2>
+<hr class="half-width">
+<ul>
+<li>The <code>graphicx</code> package allows us to include images in our
+LaTeX document.</li>
+<li>We can adjust the appearance of images using options in the
+<code>\includegraphics</code> command.</li>
+<li>We can position images manually or automatically using environments
+like <code>center</code> and <code>figure</code>.</li>
+<li>Floating images can move around the page as text is added or
+removed.</li>
+<li>We can control the position of floating images using parameters in
+the <code>figure</code> environment.</li>
+<li>We can add captions to floating images using the
+<code>\caption</code> command.</li>
+</ul></section><section id="09-tables"><h2 class="section-heading"><a href="09-tables.html">Tables</a></h2>
+<hr class="half-width">
+<ul>
+<li>Tables in LaTeX are created using the <code>tabular</code>
+environment.</li>
+<li>The <code>array</code> package provides additional functionality for
+creating tables.</li>
+<li>The <code>booktabs</code> package provides commands for creating
+horizontal lines in tables.</li>
+<li>The <code>\multicolumn</code> command can be used to merge cells in
+a table.</li>
+<li>The <code>\multirow</code> command in the <code>multirow</code>
+package can be used to merge rows in a table.</li>
+</ul></section><section id="10-cross-references"><h2 class="section-heading"><a href="10-cross-references.html">Adding Cross References</a></h2>
+<hr class="half-width">
+<ul>
+<li>The <code>\label{}</code> command marks a spot in the document.</li>
+<li>The <code>\ref{}</code> command refers to a marked spot in the
+document.</li>
+</ul></section><section id="11-mathematics-and-scientific-units"><h2 class="section-heading"><a href="11-mathematics-and-scientific-units.html">Mathematics</a></h2>
+<hr class="half-width">
+<ul>
+<li>Inline math mode is marked with <code>$ ... $</code> or
+<code>\(...\)</code>
+</li>
+<li>Display math mode is marked with <code>\[ ... \]</code>
+</li>
+<li>Use <code>\qty{}{}</code> or <code>\unit{}</code> for properly
+writing numbers with their scientific unit.</li>
 </ul></section><section id="12-citations-and-references"><h2 class="section-heading"><a href="12-citations-and-references.html">Citations and References</a></h2>
 <hr class="half-width">
 <ul>

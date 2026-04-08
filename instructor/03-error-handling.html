@@ -216,7 +216,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-document-structure.html">2. File Structure</a>
+        <a href="02-document-structure.html">2. Basic LaTeX Document Components</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -237,7 +237,7 @@
       <div class="accordion-body">
         <ul><li><a href="#error-handling">Error Handling</a></li>
 <li><a href="#anatomy-of-an-error-message">Anatomy of an Error Message</a></li>
-<li><a href="#common-errors">Common Errors</a></li>
+<li><a href="#fixing-errors-1">Fixing Errors</a></li>
 <li><a href="#errors-vs-warnings-vs-information">Errors vs Warnings vs Information</a></li>
 <li><a href="#challenges">Challenges</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -276,7 +276,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-using-graphics.html">7. Using Graphics</a>
+        <a href="07-font-format-and-spacing.html">7. Fonts, Formatting and Spacing</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -285,7 +285,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-tables.html">8. Tables</a>
+        <a href="08-using-graphics.html">8. Using Graphics</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -294,7 +294,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="09-cross-references.html">9. Adding Cross References</a>
+        <a href="09-tables.html">9. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -303,7 +303,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-mathematics-and-scientific-units.html">10. Mathematics</a>
+        <a href="10-cross-references.html">10. Adding Cross References</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -312,7 +312,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="11-font-format-and-spacing.html">11. Fonts, Formatting and Spacing</a>
+        <a href="11-mathematics-and-scientific-units.html">11. Mathematics</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -412,7 +412,7 @@
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/02-document-structure.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: File Structure
+          Previous: Basic LaTeX Document
         </a>
         <a class="chapter-link float-end" href="../instructor/04-logical-structure.html" rel="next">
           Next: The Structure of a...
@@ -421,7 +421,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Error Handling</h1>
-        <p>Last updated on 2026-02-24 |
+        <p>Last updated on 2026-04-08 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/03-error-handling.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -613,11 +613,18 @@ often fix the rest of them too.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="common-errors">Common Errors<a class="anchor" aria-label="anchor" href="#common-errors"></a></h2>
-<hr class="half-width"><p>Let’s take a look at some common errors you might encounter when
-working with LaTeX.</p>
-<div class="section level3">
-<h3 id="unidentified-control-sequence">Unidentified Control Sequence<a class="anchor" aria-label="anchor" href="#unidentified-control-sequence"></a></h3>
+</section><section><h2 class="section-heading" id="fixing-errors-1">Fixing Errors<a class="anchor" aria-label="anchor" href="#fixing-errors-1"></a></h2>
+<hr class="half-width"><p>As we progress through this workshop, we will point out places where
+we get new error messages, and discuss how to interpret and fix
+them.</p>
+<div id="unidentified-control-sequence" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="unidentified-control-sequence" class="callout-inner">
+<h3 class="callout-title">Unidentified Control Sequence</h3>
+<div class="callout-content">
 <p>We saw this one in our first example, but it can happen any where
 there is a command that LaTeX doesn’t recognize. This can happen if you
 misspell a command, or if you forget to include a package that defines
@@ -630,81 +637,25 @@ the command, of if you try to use an incorrect command.</p>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>My Amazing Content: <span class="ss">$</span><span class="sc">\alpha</span><span class="ss"> = </span><span class="sc">\fraction</span><span class="ss">{1}{(1 - </span><span class="sc">\beta</span><span class="ss">)^2}$</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="kw">\section</span>{My Amazing Content}</span>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  My Amazing Content: <span class="ss">$</span><span class="sc">\alpha</span><span class="ss"> = </span><span class="sc">\fraction</span><span class="ss">{1}{(1 - </span><span class="sc">\beta</span><span class="ss">)^2}$</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="fu">\seciton</span>{More Amazing Content}</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>  Even more amazing content!</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 <p>Attempting to compile this document results in the following error
 message:</p>
 <pre><code>! Undefined control sequence.
-l.5 My Amazing Content: $\alpha = \fraction
-                                           {1}{(1 - \beta)^2}$</code></pre>
+l.9 \seciton{More Amazing Content}</code></pre>
 <p>So, again, we see that the error is an “Undefined control sequence”,
-and it tells us that something in line 5 is not defined. In this case,
-the command <code>\fraction</code> is not a valid LaTeX command.</p>
+and it tells us that something in line 9 is not defined. In this case,
+the command <code>\seciton</code> is not a valid LaTeX command.</p>
 </div>
-<div class="section level3">
-<h3 id="file-not-found">File Not Found<a class="anchor" aria-label="anchor" href="#file-not-found"></a></h3>
-<p>Here’s another LaTeX excerpt:</p>
-<div class="codewrapper sourceCode" id="cb7">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">booktab</span>}</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>More Amazing Content!</span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
-<p>The following error message appears when you try to compile this
-document:</p>
-<pre><code>! LaTeX Error: File `booktab.sty' not found.</code></pre>
-<p>This error indicates that LaTeX is unable to find the
-<code>booktab</code> package. The correct package name should be
-<code>booktabs</code>.</p>
-</div>
-<div class="section level3">
-<h3 id="overfull-boxes">Overfull Boxes<a class="anchor" aria-label="anchor" href="#overfull-boxes"></a></h3>
-<p>The following code generates a warning message:</p>
-<div class="codewrapper sourceCode" id="cb9">
-<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">graphicx</span>}</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="kw">\section</span>{Adding a rotated image}</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>We can rotate an image by setting the "angle" parameter:</span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="bu">\includegraphics</span>[scale=2, angle=45]{<span class="ex">example-image</span>}</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
-</div>
-<p>The document compiles successfully, but there was some text that
-briefly appeared in the console output. Let’s look at the .log file to
-see what it says:</p>
-<pre><code>Overfull \hbox (390.7431pt too wide) in paragraph at lines 10--11
-[][]
- []
-
-
-
-[1
-
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (170.7431pt too high) has occurred while \output is active []
-
-
-
-[2 &lt;./example-image.png&gt;] (./main.aux)</code></pre>
-<p>This message indicates that there is an “overfull hbox” and “overfull
-vbox”. This means that the text or image is too wide or too tall for the
-page, and it is overflowing into the margins. This is a common issue
-when including images in LaTeX.</p>
 </div>
 </section><section><h2 class="section-heading" id="errors-vs-warnings-vs-information">Errors vs Warnings vs Information<a class="anchor" aria-label="anchor" href="#errors-vs-warnings-vs-information"></a></h2>
 <hr class="half-width"><p>Not all messages are equal! LaTeX has three different types of
@@ -734,19 +685,19 @@ yellow, and information messages in blue.</p>
 <h3 class="callout-title">Challenge 1: Identify and fix the error?</h3>
 <div class="callout-content">
 <p>The following document contains an error. Can you identify it?</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>The area of a circle is given by <span class="ss">$A = </span><span class="sc">\pi</span><span class="ss"> r^2$</span>, and the circumference is <span class="ss">$C = 2</span><span class="sc">\pi</span><span class="ss"> r$</span>.</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>To find the roots of a quadratic equation, we use the formula:</span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="ss">$x = </span><span class="sc">\frac</span><span class="ss">{-b </span><span class="sc">\pm</span><span class="ss"> </span><span class="sc">\squareroot</span><span class="ss">{b^2 - 4ac}}{2a}$</span></span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>The area of a circle is given by <span class="ss">$A = </span><span class="sc">\pi</span><span class="ss"> r^2$</span>, and the circumference is <span class="ss">$C = 2</span><span class="sc">\pi</span><span class="ss"> r$</span>.</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>To find the roots of a quadratic equation, we use the formula:</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="ss">$x = </span><span class="sc">\frac</span><span class="ss">{-b </span><span class="sc">\pm</span><span class="ss"> </span><span class="sc">\squareroot</span><span class="ss">{b^2 - 4ac}}{2a}$</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -756,7 +707,7 @@ yellow, and information messages in blue.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>The error suggests there is something wrong with line 8.</p>
 </div>
@@ -768,7 +719,7 @@ yellow, and information messages in blue.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The full error message is:</p>
 <pre><code>! Undefined control sequence.
@@ -793,16 +744,16 @@ command for the square root symbol is <code>\sqrt</code>.</p>
 <div class="callout-content">
 <p>The following document contains several errors. Can you identify and
 fix them?</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="fu">\Section</span>{Introduction}</span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>This document discusses the work of <span class="fu">\textbf</span>{Smith et al (2020).</span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">\Section</span>{Introduction}</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>This document discusses the work of <span class="fu">\textbf</span>{Smith et al (2020).</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -812,7 +763,7 @@ fix them?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>There are three errors in total:</p>
 <ul><li>The document is missing the <code>\begin{document}</code> command at
@@ -853,7 +804,7 @@ any links that you are not going to use.
       <div class="d-none d-sm-none d-md-block">
         <a class="chapter-link" href="../instructor/02-document-structure.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: File Structure
+          Previous: Basic LaTeX Document
         </a>
         <a class="chapter-link float-end" href="../instructor/04-logical-structure.html" rel="next">
           Next: The Structure of a...
@@ -904,7 +855,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/03-error-handling.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/03-error-handling.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-02-24",
+  "dateModified": "2026-04-08",
   "datePublished": "2026-04-08"
 }
 

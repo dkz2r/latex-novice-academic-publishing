@@ -219,7 +219,7 @@
       <div class="accordion-body">
         <ul><li><a href="#what-is-latex">What is LaTeX</a></li>
 <li><a href="#our-first-latex-document">Our First LaTeX Document</a></li>
-<li><a href="#the-texworks-interface">The TeXworks Interface</a></li>
+<li><a href="#the-interface">The Interface</a></li>
 <li><a href="#compiling-a-latex-document">Compiling a LaTeX Document</a></li>
 <li><a href="#compiling-a-latex-document-from-the-command-line">Compiling a LaTeX Document from the Command Line</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -231,7 +231,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02-document-structure.html">2. File Structure</a>
+        <a href="02-document-structure.html">2. Basic LaTeX Document Components</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -276,7 +276,7 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="07-using-graphics.html">7. Using Graphics</a>
+        <a href="07-font-format-and-spacing.html">7. Fonts, Formatting and Spacing</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -285,7 +285,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-tables.html">8. Tables</a>
+        <a href="08-using-graphics.html">8. Using Graphics</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -294,7 +294,7 @@
 <div class="accordion accordion-flush" id="accordionFlush10">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading10">
-        <a href="09-cross-references.html">9. Adding Cross References</a>
+        <a href="09-tables.html">9. Tables</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -303,7 +303,7 @@
 <div class="accordion accordion-flush" id="accordionFlush11">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading11">
-        <a href="10-mathematics-and-scientific-units.html">10. Mathematics</a>
+        <a href="10-cross-references.html">10. Adding Cross References</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -312,7 +312,7 @@
 <div class="accordion accordion-flush" id="accordionFlush12">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading12">
-        <a href="11-font-format-and-spacing.html">11. Fonts, Formatting and Spacing</a>
+        <a href="11-mathematics-and-scientific-units.html">11. Mathematics</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -415,13 +415,13 @@
           Home
         </a>
         <a class="chapter-link float-end" href="02-document-structure.html" rel="next">
-          Next: File Structure...
+          Next: Basic LaTeX Document...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction to the LaTeX Workflow</h1>
-        <p>Last updated on 2025-07-16 |
+        <p>Last updated on 2026-04-08 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -479,8 +479,39 @@ the path to this directory.</p>
 prompt you for a location to save the file, so navigate to the
 <code>latex-workshop</code> directory you just created, and save the
 file as <code>main.tex</code>.</p>
-</section><section><h2 class="section-heading" id="the-texworks-interface">The TeXworks Interface<a class="anchor" aria-label="anchor" href="#the-texworks-interface"></a></h2>
-<hr class="half-width"><p>The TeXworks interface is divided into three main sections: - The
+</section><section><h2 class="section-heading" id="the-interface">The Interface<a class="anchor" aria-label="anchor" href="#the-interface"></a></h2>
+<hr class="half-width"><div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
+  <h2 class="tab-header" id="nav-tab-heading-1-1">
+  TeXStudio
+  </h2>
+</button>
+<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
+  <h2 class="tab-header" id="nav-tab-heading-1-2">
+  TeXworks
+  </h2>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<p>The TeXStudio interface is divided into several sections: - The
+<strong>Editor</strong>: This is where you write your LaTeX code. It
+supports syntax highlighting and basic code completion. - The
+<strong>Preview Pane</strong>: This shows the compiled output of your
+LaTeX code. This window will appear whenever we compile the document. -
+The <strong>Menu Bar</strong>: This contains various options for
+managing your document, such as saving, compiling, and printing. You can
+also access the preferences and settings from here. - The
+<strong>Toolbar</strong>: This contains buttons for common actions, such
+as saving, compiling, and inserting common LaTeX commands. - The
+<strong>Status Bar</strong>: This shows information about the current
+document, such as the line and column number, the current compiler, and
+any warnings or errors that may have occurred during compilation.</p>
+<figure><img src="fig/01-introduction/TeXStudioEditor.PNG" alt="TeXStudio Interface" class="figure mx-auto d-block"><div class="figcaption">TeXStudio Interface</div>
+</figure></div>
+<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<p>The TeXworks interface is divided into three main sections: - The
 <strong>Editor</strong>: This is where you write your LaTeX code. It
 supports syntax highlighting and basic code completion. - The
 <strong>Preview Pane</strong>: This shows the compiled output of your
@@ -496,7 +527,10 @@ preview pane with the rendered output. Next to the “Typeset” button is a
 drop-down menu that allows you to select the typesetting engine you wish
 to use. For this workshop, we will use the default engine, PDFLaTeX.</p>
 <figure><img src="fig/01-introduction/TexWorksEditor.PNG" alt="TeXworks Interface" class="figure mx-auto d-block"><div class="figcaption">TeXworks Interface</div>
-</figure></section><section><h2 class="section-heading" id="compiling-a-latex-document">Compiling a LaTeX Document<a class="anchor" aria-label="anchor" href="#compiling-a-latex-document"></a></h2>
+</figure></div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="compiling-a-latex-document">Compiling a LaTeX Document<a class="anchor" aria-label="anchor" href="#compiling-a-latex-document"></a></h2>
 <hr class="half-width"><p>Type the following code into the editor:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -506,41 +540,51 @@ to use. For this workshop, we will use the default engine, PDFLaTeX.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>Hello, <span class="fu">\LaTeX</span>!</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-1" type="button" role="tab" aria-controls="nav-tabpanel-2-1" aria-selected="true">
+  <h2 class="tab-header" id="nav-tab-heading-2-1">
+  Compiling with TeXStudio
+  </h2>
+</button>
+<button class="nav-link" id="nav-tab-2-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-2" type="button" role="tab" aria-controls="nav-tabpanel-2-2" aria-selected="false">
+  <h2 class="tab-header" id="nav-tab-heading-2-2">
+  Compiling with TeXworks
+  </h2>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-1" class="tab-pane show active" aria-labelledby="nav-tab-2-1" role="tabpanel">
+<p>Now click the green double arrow icon on the toolbar (or press “F5”
+on your keyboard). This will compile the document and update the preview
+pane with the rendered output. You should see a PDF preview of the
+document with the text “Hello, LaTeX!”.</p>
+</div>
+<div id="nav-tabpanel-2-2" class="tab-pane" aria-labelledby="nav-tab-2-2" role="tabpanel">
 <p>Now click the green “Typeset” button in the top left corner of the
 interface. This will compile the document and update the preview pane
 with the rendered output. You should see a PDF preview of the document
 with the text “Hello, LaTeX!”.</p>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
+<figure><img src="fig/01-introduction/TexWorksEditor_preview-document.PNG" alt="TeXworks Preview Pane" class="figure mx-auto d-block"><div class="figcaption">TeXworks Preview Pane</div>
+</figure></div>
 </div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>When you click the “Typeset” button, TeXworks will run the PDFLaTeX
+</div>
+<p>When you click the “Typeset” button, the editor will run the LaTeX
 compiler on your document. You will see a window appear on the bottom of
 the interface called “Console output”. This window contains the output
 of the compiler, including any warnings or errors that may have occurred
 during the compilation process. We will talk about this in more detail
 in a later episode.</p>
-</div>
-</div>
-</div>
-<figure><img src="fig/01-introduction/TexWorksEditor_preview-document.PNG" alt="TeXworks Preview Pane" class="figure mx-auto d-block"><div class="figcaption">TeXworks Preview Pane</div>
-</figure></section><section><h2 class="section-heading" id="compiling-a-latex-document-from-the-command-line">Compiling a LaTeX Document from the Command Line<a class="anchor" aria-label="anchor" href="#compiling-a-latex-document-from-the-command-line"></a></h2>
-<hr class="half-width"><p>The TeXworks editor is a convenient way to write and compile LaTeX
-documents, but you are not limited to using it. Any program that can
-edit text files can be used to write LaTeX, which we can then compile
-from the command line.</p>
+</section><section><h2 class="section-heading" id="compiling-a-latex-document-from-the-command-line">Compiling a LaTeX Document from the Command Line<a class="anchor" aria-label="anchor" href="#compiling-a-latex-document-from-the-command-line"></a></h2>
+<hr class="half-width"><p>Using an IDE like TeXStudio or TeXworks is a convenient way to write
+and compile LaTeX documents, but you are not limited to using it. Any
+program that can edit text files can be used to write LaTeX, which we
+can then compile from the command line.</p>
 <p>You can use any text editor to write your LaTeX code. Some popular
 text editors for LaTeX include:</p>
-<ul><li>
-<a href="https://code.visualstudio.com/" class="external-link">Visual Studio
-Code</a><br></li>
-<li>
-<a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a><br></li>
-<li>
-<a href="https://www.vim.org/" class="external-link">Vim</a><br></li>
+<ul><li><a href="https://code.visualstudio.com/" class="external-link">Visual Studio Code</a></li>
+<li><a href="https://www.gnu.org/software/emacs/" class="external-link">Emacs</a></li>
+<li><a href="https://www.vim.org/" class="external-link">Vim</a></li>
 <li>Notepad++ (Windows only)</li>
 </ul><p>We will continue to demonstrate with TeXworks, but you can use any
 text editor you prefer.</p>
@@ -558,10 +602,10 @@ file.</p>
 <p>Useful commands for navigating the command line:</p>
 <ul><li>
 <code>cd &lt;directory&gt;</code>: Change directory to
-<code>&lt;directory&gt;</code>.<br></li>
+<code>&lt;directory&gt;</code>.</li>
 <li>
 <code>ls</code> (Linux/macOS) or <code>dir</code> (Windows): List
-the files in the current directory.<br></li>
+the files in the current directory.</li>
 <li>
 <code>pwd</code> (Linux/macOS): Print the current working
 directory.</li>
@@ -629,7 +673,7 @@ file called <code>main.pdf</code>, as well as some other files that were
 created during the compilation process. The <code>main.pdf</code> file
 is the rendered output of your LaTeX document, and you can open it with
 any PDF viewer to see the result.</p>
-<div id="callout2" class="callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -753,7 +797,7 @@ any links that you are not going to use.
           Home
         </a>
         <a class="chapter-link float-end" href="02-document-structure.html" rel="next">
-          Next: File Structure...
+          Next: Basic LaTeX Document...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -801,7 +845,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/01-introduction.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/01-introduction.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2025-07-16",
+  "dateModified": "2026-04-08",
   "datePublished": "2026-04-08"
 }
 
