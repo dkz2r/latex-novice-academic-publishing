@@ -200,7 +200,6 @@ associated with the lessons. They appear in the "Instructor View"
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-
 ## Challenge 1: Add another reference, then delete it.
 
 Try adding the following reference to your `sample-references.bib` file:
@@ -241,7 +240,7 @@ We have the following reference in our document:
 	url           ={https://arxiv.org/abs/1301.3781},
 }
 ```
-We are using biblatex to manage our references, and we identify this reference in the text like
+We are using `biblatex` to manage our references, and we identify this reference in the text like
 this:
 
 ```latex
@@ -264,6 +263,59 @@ still compiles the document, but it gives us a warning that the reference is mis
 key as a placeholder. You might use this to temporarily mark a reference that you haven't added yet,
 just be sure to clear all of your warnings before finializing your document.
 
+:::::::::::::::::::::::::::::::::
+
+## Challenge 3: What's problem with this?
+
+We inculde the following reference in our document:
+
+```bibtex
+@article{bentham2011,
+	author = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},
+	title = {20 Years of Lipid Nanoparticles (SLN & NLC): Present State of Development & Industrial Applications}, 
+	journal= {Current Drug Discovery Technologies},
+	year = {2011},
+	volume = {8},
+	number = {3},
+	pages = {207--227},
+	doi = {https://doi.org/10.2174/157016311796799062},
+	publisher = {Bentham Science Publishers},
+}
+```
+
+We are using `biblatex` and cite this reference in the text as follows:
+
+```latex
+\autocite{bentham2011} provied a good overview over nanoparticles over the last 20 years.
+```
+
+What happens when compiling this document? What is wrong with the reference, and how can it be fixed?
+
+:::::::::::::::::::::::: solution
+
+The issue in this reference is cause by a sepcial character (`&` in the title field). 
+In LaTeX the ampersand `&` is reserved for alignment, so it must be escaped (`\&`)in normal text. 
+
+
+If special characters are not escaped properly, LaTeX produce unexpected output or may fail to compile. 
+In some cases, this can also corrupt auxiliary files (such as `.aux` or `.bbl`), preventing the document from rendering as expected.
+If problems persist after correcting the reference, a common solution is to delete all intermediate files and recompile the document from scratch. Deleting them forces a clean rebuild. 
+
+Corrected bib entry:
+
+```bibtex
+@article{bentham2011,
+	author = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},
+	title = {20 Years of Lipid Nanoparticles (SLN \& NLC): Present State of Development \& Industrial Applications}, 
+	journal= {Current Drug Discovery Technologies},
+	year = {2011},
+	volume = {8},
+	number = {3},
+	pages = {207--227},
+	doi = {https://doi.org/10.2174/157016311796799062},
+	publisher = {Bentham Science Publishers},
+}
+```
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
