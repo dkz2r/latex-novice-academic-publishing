@@ -57,7 +57,7 @@ for LaTeX is a great place to ask questions and find answers to common problems.
 
 We have the geometry package loaded in our document, and we know we want to use to to set the
 margins of the document, but we want to set them to 2cm on the left and right, and 4cm on the top
-and bottom. We also want to set the per size to A4. Can you find the documentation for the command
+and bottom. We also want to set the page size to A4. Can you find the documentation for the command
 and see how to do this?
 
 :::::::::::::::::::::::: solution
@@ -65,7 +65,7 @@ and see how to do this?
 Section 5.1 describes how to set the page size, and section 5.4 describes how to set the margins.
 
 ```latex
-\documentclass[a4paper, left=2cm, right=2cm, top=4cm, bottom=4cm]{geometry}
+\documentclass[a4paper, left=2cm, right=2cm, top=4cm, bottom=4cm]{article}
 ```
 
 or
