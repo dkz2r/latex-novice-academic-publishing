@@ -78,7 +78,7 @@ refer to.
 ::: callout
 
 Note that the `ref` command does not insert the section or table name, but rather the number
-associated with it. We would still write "Refer to Table \ref{tab:cross-reference-commands}", but
+associated with it. We would still write "Refer to Table &#92;ref&lcub;tab:cross-reference-commands&rcub;", but
 the benefit is that if the table number changes because we've added or removed sections before it,
 the reference will update automatically.
 
@@ -274,7 +274,7 @@ happen?
 
 The `\ref{}` command is correctly written, but the `\ref{}` command only returns the number of the
 label it is referring to. In this case, it will return the number of the table, not the name of the
-table. To fix this, you can write "As shown in Table \ref{tab:findings}..."
+table. To fix this, you can write "As shown in Table &#92;ref&lcub;tab:findings&rcub;..."
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -283,7 +283,7 @@ table. To fix this, you can write "As shown in Table \ref{tab:findings}..."
 
 ## Challenge 3b: Make it easier with \cleverref!
 
-In the previous challenge, we had to write "As shown in Table \ref{tab:findings}..." to get the
+In the previous challenge, we had to write "As shown in Table &#92;ref&lcub;tab:findings&rcub;..." to get the
 correct reference text. This is because the `\ref{}` command only returns the number of the label
 it is referring to, and does not include the type of element (e.g., table, figure, section).
 
