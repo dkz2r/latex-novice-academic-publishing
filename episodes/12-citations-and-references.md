@@ -34,7 +34,7 @@ TeXstudio offers several backend options for handling `BibTeX` files. For the pu
 Open TeXstudio and go to **Options** > **Configure TeXstudio**. 
 In the configuration dialog, select **Build** from the left-hand panel. Under **Default Bibliography Tool**, open the drop-down menu and select `Biber`.
 
-![](fig/12-citations-and-references/settings_biber.PNG)
+![](fig/12-citations-and-references/settings_biber.png)
 
 ## Reference Databases (BiBTeX)
 
