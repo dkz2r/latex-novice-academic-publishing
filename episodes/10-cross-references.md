@@ -37,15 +37,18 @@ mark it, and the `\ref{}` command to refer to it. For example:
 
 In this section, we introduce two new concepts:
 
-\begin{tabular}{cp{9cm}}
-  \toprule
-  Command & Description \\
-  \midrule
-  \kw{label} & Marks a spot in the document \\
-  \kw{ref} & Refers to a marked spot in the document \\
-  \bottomrule
-\label{tab:cross-reference-commands}
-\end{tabular}
+\begin{table}
+	\begin{tabular}{cp{9cm}}
+		\toprule
+		Command & Description \\
+		\midrule
+		\kw{label} & Marks a spot in the document \\
+		\kw{ref} & Refers to a marked spot in the document \\
+		\bottomrule
+	\end{tabular}
+	\caption{Main commands for referencing in \LaTeX.}
+	\label{tab:cross-reference-commands}
+\end{table}
 
 We can \kw{refer} to the section with the \cmd{ref} command, like this: \ref{sec:cross-references}.
 We can likewise refer to the table like this: \ref{tab:cross-reference-commands}.
