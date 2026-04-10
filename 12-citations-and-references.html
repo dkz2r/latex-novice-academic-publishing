@@ -420,7 +420,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Citations and References</h1>
-        <p>Last updated on 2026-04-08 |
+        <p>Last updated on 2026-04-10 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -472,7 +472,7 @@ you re-use information and avoid manual formatting.</p>
 select <strong>Build</strong> from the left-hand panel. Under
 <strong>Default Bibliography Tool</strong>, open the drop-down menu and
 select <code>Biber</code>.</p>
-<figure><img src="fig/12-citations-and-references/settings_biber.PNG" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a></h2>
+<figure><img src="fig/12-citations-and-references/settings_biber.png" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a></h2>
 <hr class="half-width"><p>Reference databases are normally referred to as <em>BiBTeX</em>
 files, and have the extension <code>.bib</code>. They contain one or
 more entries, one for each reference, and within each are a series of
@@ -546,7 +546,7 @@ your own.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" aria-labelledby="nav-tab-1-biblatex" role="tabpanel">
+<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-biblatex">
 <p>Check to make sure that your <code>main.tex</code> file is in the
 same directory as your <code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
@@ -616,7 +616,7 @@ date of the publication directly into your document:</p>
 <code>\citeyear{Graham1995}</code>: 1995</li>
 </ul><p>The outcome and display depends on your style.</p>
 </div>
-<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" aria-labelledby="nav-tab-1-Goodtoknow" role="tabpanel">
+<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Goodtoknow">
 <p>If you want to have all entries of your referencing file in your
 bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
 for all entries or you type <code>\cite{*}</code>. This will print all
@@ -694,7 +694,7 @@ delete the reference and re-compile your document. What happens?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You might expect removing the reference to either error or remove the
 citation from the text, but it doesn’t - instead we get a placeholder in
@@ -749,7 +749,7 @@ identify this reference in the text like this:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>We are referencing the key <code>mikolov</code> in our document, but
 the key in our BiBTeX file is <code>mikolov2013</code>. We need to
@@ -804,7 +804,7 @@ reference, and how can it be fixed?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The issue in this reference is cause by a sepcial character
 (<code>&amp;</code> in the title field). In LaTeX the ampersand
@@ -919,8 +919,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/12-citations-and-references.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/12-citations-and-references.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-04-08",
-  "datePublished": "2026-04-09"
+  "dateModified": "2026-04-10",
+  "datePublished": "2026-04-10"
 }
 
   </script><script>
