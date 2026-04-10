@@ -75,7 +75,7 @@ refer to.
 ::: callout
 
 Note that the `ref` command does not insert the section or table name, but rather the number
-associated with it. We would still write "Refer to Table \ref{tab:cross-reference-commands}", but
+associated with it. We would still write "Refer to Table &#92;ref&lcub;tab:cross-reference-commands&rcub;", but
 the benefit is that if the table number changes because we've added or removed sections before it,
 the reference will update automatically.
 
