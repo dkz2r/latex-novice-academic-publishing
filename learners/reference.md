@@ -85,14 +85,15 @@ title: 'Reference'
 
 ### [Fonts, Formatting and Spacing](episodes/07-fonts,-formatting-and-spacing.md)
 
-- Change fonts with the `\renewcommand{}{}`.
-- For fonts use the packages `tgtermes` and `fontspec`. Second requires XeLaTeX or LuaLaTeX.
-- Second one can use the calls `\setmainfont{Arial}`, `\setsansfont{}` and `\setmonofont`.
-- Write dummy-text ("lorem lpsum" text) with `\lipsum` (`\usepackage{lipsum}`).
-- `\usepackage[parfill]{parskip}` can be used to add no indent and a space between paragraphs.
+- To change the font for the entire document use `\renewcommand{\familydefautl}{<font>}`
+- The packages `tgtermes` or `fontspec` can be used for font management. Note that `fontspec` requires `LuaLaTeX` or `XeLaTeX`.
+  - With `fontspec`, you can set fonts using `\setmainfont{...}`, `\setsansfont{...}` and `\setmonofont{...}`.
+- With `\lipsum` from the `lipsum` package placeholder text can be generated. 
+- The package `parskip` helps controlling spaces between paragraphs. `\usepackage[parfill]{parskip}` removes the indentation and adds spacing between paragraphs.
+  - With KOMA-Scripts this option is also available in the class options, e.g.  `\documentclass[parskip=full]{scrbook}` 
 - A global option can also be change in the document class `\documentclass[parskip=full]{scrbook}`.
-- To force a new line use `\\`.
-- Spacing can be changed the following ways:
+- `\\` forces a new line. 
+- Explicit spacing commands:
   - `\.` for a "dot" space.
   - `\:` for a "colon" space.
   - `\;` for a "thick" space.
@@ -101,34 +102,31 @@ title: 'Reference'
   - `\hspace{1cm}` for a horizontal space.
   - `\vspace{1cm}` for a vertical space.
   - `\vfill` for fill the remaining space on a page.
-  
-- Some text formatting commands:
+- Explicit text formatting commands:
   - Bold: `\textbf{...}`,  italic `\textit{...}`, roman text `\textrm{...}`, san serif text `\textsf{...}`, typewriter text `\texttt{...}`, small caps text `\textsc{...}`.
-  
 - Font sizes are: `\huge`, `\large`, `\normalsize`, `\small` and `\footnotesize`.
-  - Customize with: `{\fontsize{14}{16}\selectfont text}`.
-  
+  - For custom sizes, use: `{\fontsize{14}{16}\selectfont <text>}`, where $14$ is the font size and $16$ the line spacing.
 - Text alignment: `\centering`, `\raggedright` and `\raggedleft`.
 
-- Create a title page with `\begin{titlepage} \centering ... \vfill \end{titlepage}`.
+- Create a title page using the `titlepage` environment: `\begin{titlepage} \centering ... \vfill \end{titlepage}`.
 
 ### [Using Graphics](episodes/08-using-graphics.md)
 
-- With the package `graphicx` we can add jpeg, png, svg, pdf and eps.
-- Use `\graphicspath{{folder1/folder2}}` to tell LaTeX to search in folder1 for folder2 and for images.
-- With `\includegraphics[options]{name}` you can add the graphic. Possible options are height, width, scale, angle, clip, trim, draft.
-  - The width can be handled with `\linewidth`, `width=0.5\linewidth`.
-- Centered environment `\begin{center}...\end{center}`.
-- Figure environment `\begin{figure}...\end{figure}` combined with `\centering`.
+- The `graphicx` package enables working with `jpeg`, `png`, `svg`, `pdf` and `eps` file formats.
+- Use `\graphicspath{{<folder>/}}` to specify a default folder where LaTeX will search for images.
+- Use `\includegraphics[<options>]{<file_name>}` to include graphics in your document. Available options include `height`, `width`, `scale`, `angle`, `clip`, `trim` and `draft` among others.
+  - The width can be set relative to the line width using `\linewidth`, e.g. ``\includegraphics[width=0.5\linewidth]{<file_name>}`.
+- Centering environment `\begin{center}...\end{center}`.
+- Floating figure environment `\begin{figure}...\end{figure}`.
   - Control position:
     - `h`: "here".
     - `t`: top of the page.
     - `b`: bottom of the page.
     - `p`: on an own page.
     - `ht`: combination of the first two.
-- Wrapfigure environment `\begin{wrapfigure}[lineheight]{position}{width}...\end{wrapfigure}`.
-- Caption for graphic `\caption{...}`, after including it.
-- All figures/graphics with a caption can be listed with `\listoffigures`.
+  - `\centering` to center the image inside the environment.
+- Add a caption below an image with `\caption{...}`.
+- A list of all Graphics can be generated with `\listoffigures`, if they have a caption.
 
 ### [Tables](episodes/09-tables.md)
 
@@ -136,53 +134,66 @@ title: 'Reference'
 
 ### [Adding Cross References](episodes/10-adding-cross-references.md)
 
-- Label with `\label{text}` and the reference it with `\ref{text}`. For identification you can use `fig:`, `tab:` or `sec:` before the text to make clear that you reference a figure or table.
-- For advanced cross-referencing capabilities use the package `cleveref`, then `\cref` adds the reference text like figure or table.
+- Use `\label{<label_name>}` to mark an element and reference it with `\ref{<label_name>}`. 
+  - To keep references organized, use the following prefixes `before the`for the label names: `fig:` (figures), `tab:`  (tables) and `sec:` (Section).
+- `cleveref` provides advanced cross-referencing capabilities. Use `\cref{<label_name>}` instead of `\ref{<label_name>}` to automatically add the reference type before the number in the text. 
 - With the `hyperref` package you can make the references linked by clicking.
+  - Recommendation: load `hyperref` last in your preamble as it could lead to issues with other packages. But `cleveref` should be loaded after hyperref.
 
 ### [Mathematics](episodes/11-mathematics.md)
 
-- Use the `amsmath` package to create mathematical expressions.
-- Use pairs `$...$` or `\(...\)` to mark inline math mode.
-- Use `$$...$$` or `\[...\]` for display math mode (own paragraph that is centered).
-- Some special math symbols:
-  - Superscript and subscript: `x^{expression}`, `x_{expression}` .
+
+- The `amsmath` package extends the mathematical expression support.
+- Inline math mode with `$...$` or `\(...\)`.
+- Display math mode, rebders centered on own line, with `$$...$$` or `\[...\]`.
+- Math symbols & expressions:
+  - Superscript and subscript: `x^{<expression>}`, `x_{<expression>}` .
   - Greek letters: `\alpha`, `\beta`, ...
   - Operators: `\times`, `\sin`, `\log`, `\sum`, `\int`, `\sqrt{expression} ...
   - Fractions: `\frac{numerator}{denominator}`.
   - Brackets: `()`, `\{ \}` (need backslash since else used as LaTeX-Operator), `[]`, `\big`, `\left(... \right)`, `\langle`, ...
-- Numbered math environment `\begin{equation} ... \end{equation}`, refered by `\ref{eq:...}` ("eq" not obligatory again).
-  - Add figure environment around it to add a caption.
-- Aligned math environment `\begin{align} ... \end{align}`, lines up similar to table by using "`&`".
+- Math environment with numbered equations `\begin{equation} ... \end{equation}`, refereed by `\ref{eq:...}` (`eq` not obligated). Wrap in a `figure` environment to add a caption.
+- Aligned math environment `\begin{align} ... \end{align}`, `&` as an anchor point for alignement.
   - Writing `align*` ignores numbering.
-- Use the `siunitx` package to write scientific numbers.
-- Write scientific with units: `\qty{934.54}{\m}`.
-- Locale and digit grouping:
-  - `\num{...}`, `\numlist{...}`, `\numproduct{...}`, ...
+
+- The `siunitx` package provides consistent formatting of numbers and units.
+- Write scientific with units, e.g. `\qty{934.54}{\m}`.
+- Number formatting:
+  - `\num{...}` (a numbers), `\numlist{...}` (list of numbers), `\numproduct{...}` (product of numbers).
 - Unit parsing:
   - `\qty{9.81}{\metre\per\second\squared}`, `\qty[per-mode = symbol]{1}{kilo\gram\metre\per\second\squared}`, ...
 - Uncertainties, lists and ranges:
   - `\qty{1.23(4)}{\metre}`, `\qtylist{0.13;0.67;0.80}{\milli\metre}`, `\qtyrange{20}{25}{\celsius}`, ...
-- Algin numbers by decimal marker in tables:
+- Decimal-aligned columns in tables:
   - `\begin{tabular}{S[table-format=3.2] c}`
 
 ### [Citations and References](episodes/12-citations-and-references.md)
 
-- Label with `\label{text}` and the reference it with `\ref{text}`. For identification you can use `fig:`, `tab:` or `sec:` before the text to make clear that you reference a figure or table.
-- For advanced cross-referencing capabilities use the package `cleveref`, then `\cref` adds the reference text like figure or table.
-- With the `hyperref` package you can make the references linked by clicking.
+- Use the `biblatex` package for citation and reference management: `\usepackage[<option>]{biblatex}`.
+  - Common options include the citation style and sorting method, e.g.: `\usepackage[style=authoryear, sorting=nyt, backend=biber]{biblatex}`
+- `biblatex` requires a bibliography backend to process and sort entries. The recommended backend is `Biber`. You may need to configure your LaTeX editor.
+- References are usually stored in a BibTeX file (`.bib`). Each entry follows this format: `@<type>{<cite_key>, <key> = {<value>}, ...}`
+  - Common entry types: `article`, `book`, `online`, `misc`, `manual`, `proceedings`, ...
+  - Common fields: `author`, `title`, `journal`, `date`, `pages`, `publisher`, ...
+- Link your `.bib` file in the preamble with `\addbibresource{<file_name>.bib}`.
+- Citing a reference with `\cite{<cite_key>}`
+  - Granular citation commands allow you to reference specific parts of a citation: `\citeauthor{<cite_key>}`, `citetitle{<cite_key>}` and `\citeyear{<cite_key>}` we can control apparence in the document
+- Smart citation commands automatically adapt the citation style: `\autocite{}` and `\smartcite{}`.
+
 
 ### [Context Sensitive Quotations](episodes/13-context-sensitive-quotations.md)
 
-- 
+- New content coming up soon!
 
 ### [Structuring Sources](episodes/14-structuring-sources.md)
 
-- 
+- Use `\input{<filename>}` or `\include{<filename>}` to insert content from external `.tex` files into your main document. `input` includes your content directly, while `include` start a new page before inserting the content.
+- Use  `\includeonly{<filename>}` in the preamble  to restrict which files are compiled.  
+- The following commands help organize the structure of a document and automatically adjust formatting such as page numbering: `\frontmatter`, `\mainmatter`, `\backmatter`, and `\appendix`.
 
 ### [Loading and Manipulating Data](episodes/15-loading-and-manipulation-data.md)
 
-- 
+- New content coming up soon!
 
 ### [Documentation and Finding Help](episodes/16-documentation-and-finding-help.md)
 
