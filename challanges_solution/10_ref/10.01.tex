@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\section{Cross-referencing Figures}
+
+Here is an example of a figure in the document. We will refer to it later in the text.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[height=4cm]{my-awesome-image.png}
+  \caption{This is an example figure.}
+  \label{fig:example-image}
+\end{figure}
+
+In the text, we can refer to the figure using its label: Figure \ref{fig:example-image}.
+
+\end{document}
