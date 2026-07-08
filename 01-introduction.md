@@ -61,7 +61,7 @@ The TeXStudio interface is divided into several sections:
   column number, the current compiler, and any warnings or errors that may have occurred during
   compilation.
 
-![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.PNG)
+![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.png)
 
 ## TeXworks
 
