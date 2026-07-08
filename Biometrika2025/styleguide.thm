@@ -1,0 +1,22 @@
+\contentsline {definition}{{Definition}{{1}}{Optional argument}}{6}
+\contentsline {assumption}{{Assumption}{{1}}{Another optional argument}}{6}
+\contentsline {proposition}{{Proposition}{{1}}{}}{6}
+\contentsline {lemma}{{Lemma}{{1}}{}}{6}
+\contentsline {proof}{{Proof}{{1}}{}}{6}
+\contentsline {theorem}{{Theorem}{{1}}{}}{6}
+\contentsline {proof}{{Proof}{{2}}{of Theorem~\ref {theorem1}}}{6}
+\contentsline {example}{{Example}{{1}}{}}{6}
+\contentsline {theorem}{{Theorem}{{2}}{Optional argument}}{6}
+\contentsline {corollary}{{Corollary}{{1}}{}}{6}
+\contentsline {remark}{{Remark}{{1}}{}}{6}
+\contentsline {step}{{Step}{{1}}{}}{6}
+\contentsline {condition}{{Condition}{{1}}{}}{6}
+\contentsline {property}{{Property}{{1}}{}}{6}
+\contentsline {restrictions}{{Restriction}{{1}}{}}{6}
+\contentsline {algo}{{Algorithm}{{1}}{}}{6}
+\contentsline {theorem}{{Theorem}{\unhbox \voidb@x \hbox {A}{1}}{}}{7}
+\contentsline {lemma}{{Lemma}{\unhbox \voidb@x \hbox {A}{1}}{}}{7}
+\contentsline {theorem}{{Theorem}{\unhbox \voidb@x \hbox {B}{1}}{}}{7}
+\contentsline {lemma}{{Lemma}{\unhbox \voidb@x \hbox {B}{1}}{}}{7}
+\contentsline {remark}{{Remark}{\unhbox \voidb@x \hbox {C}{1}}{}}{8}
+\contentsline {lemma}{{Lemma}{\unhbox \voidb@x \hbox {C}{1}}{}}{8}
