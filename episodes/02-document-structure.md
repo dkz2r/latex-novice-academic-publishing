@@ -70,6 +70,63 @@ Everything before the `\begin{document}` command is called the *preamble*. The p
 you set up the document, including the document class, title, author, and any other settings you
 want to apply to the entire document.
 
+### What is a Document Class?
+
+A document class sets up the general layout of the document, including (but not limited to):
+
+- design (margins, fonts, spacing, etc)
+- availability of chapters
+- title page layout
+
+Document classes can also add new commands and environments to the document. For example, the
+`letter` class adds commands like `\opening{...}`, `\closing{...}` and `\signature{...}` to create
+a letter.
+
+::: callout
+
+Document classes can also set global options that apply to the document as a whole.
+
+These options are set in square brackets after the document class name, for example:
+
+```latex
+\documentclass[12pt]{article}
+```
+
+But we can add other parameters to this command to change the overall layout of the document.
+For example, we can set the size of the document to A4 paper by using:
+
+```latex
+\documentclass[a4paper]{article}
+```
+
+We can also change the entire document to a two-column layout by using:
+
+```latex
+\documentclass[twocolumn]{article}
+```
+
+And we can of course combine these options:
+
+```latex
+\documentclass[a4paper,12pt,twocolumn]{article}
+```
+
+:::
+
+### The Base Document Classes
+
+LaTeX comes with a set of standard document classes:
+
+- `article`: a short document without chapters
+- `report`: a longer document with chapters, intended for single sided printing
+- `book`: a longer document with chapters, intended for double sided printing, as well as other
+   features like front and back matter
+- `letter`: a short document with no sections
+- `slides`: a document for creating slide presentations
+
+Some of these are older and have been replaced by more modern document classes, but they are still
+available in most distributions of LaTeX.
+
 ## Comments
 
 We can add comments to our document by using the `%` character. Anything after the `%` on a line is
@@ -150,6 +207,10 @@ What about the `\` character?
 
 The `\` character is used to escape other characters in latex, so it's not possible to escape it
 in the same way. Instead, you can use `\textbackslash` to produce a backslash in your document.
+
+`\\` does have a use however, by creating line breaks in our document. Generally you want to avoid
+using this command (except in very specific cases, which we will talk about later) as it can lead
+to formatting issues in your document. Better to use paragraphs and line breaks.
 
 :::
 
