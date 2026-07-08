@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+\begin{document}
+	
+	\begin{wrapfigure}{r}{0.1\textwidth}
+		\centering
+		\includegraphics[width=0.1\textwidth, height=0.1\textwidth]{my-awesome-image}
+	\end{wrapfigure}
+	
+	The package wrapfigure lets you position images around your text.
+	That comes in handy if you want to integrate images seamlessly into your written sentences.
+	Therefore, I add a few more sentences here to showcase this integration to you.
+	
+	\begin{wrapfigure}{l}{0.1\textwidth}
+		\centering
+		\includegraphics[width=0.1\textwidth, height=0.1\textwidth]{example-image.PNG}
+	\end{wrapfigure}
+	
+	Be careful, you need both packages, wrapfig and graphicx, in your preamble to display your images
+	and wrap them accordingly. There are several ways to display images, depending on the arguments you
+	specify. For instance, you can scale the image width according to the width of the text.
+	
+\end{document}
+
+%The first image will be placed at the right of the following paragraph of text as {r} is specified as an argument within the first wrapfigure environment. The second image will be placed at the left of its following paragraph of text as {l} is specified as an argument within the second wrapfigure environment. Moreover, both images are scaled by being 0.1 of the width of the text in your document.

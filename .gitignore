@@ -49,3 +49,11 @@ docs/
 # translation temp files
 po/*~
 
+# challanges Latex 
+challanges_solution/**/*.pdf
+challanges_solution/**/*.aux
+challanges_solution/**/*.fdb_latexmk
+challanges_solution/**/*.fls 
+challanges_solution/**/*.log
+challanges_solution/**/*.synctex.gz
+challanges_solution/**/*.nav
