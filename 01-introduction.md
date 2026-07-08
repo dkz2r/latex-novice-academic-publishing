@@ -61,7 +61,7 @@ The TeXStudio interface is divided into several sections:
   column number, the current compiler, and any warnings or errors that may have occurred during
   compilation.
 
-![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.png)
+![TeXStudio Interface](fig/01-introduction/TeXStudioEditor.png){alt='TeXStudio interface with the editor, preview pane, menu bar, toolbar, and status bar labeled.'}
 
 ## TeXworks
 
@@ -80,7 +80,7 @@ the rendered output. Next to the "Typeset" button is a drop-down menu that allow
 the typesetting engine you wish to use. For this workshop, we will use the default engine,
 PDFLaTeX.
 
-![TeXworks Interface](fig/01-introduction/TexWorksEditor.PNG)
+![TeXworks Interface](fig/01-introduction/TexWorksEditor.PNG){alt='TeXworks interface with the editor, preview pane, and menu bar labeled.'}
 
 :::
 
@@ -110,7 +110,7 @@ Now click the green "Typeset" button in the top left corner of the interface. Th
 the document and update the preview pane with the rendered output. You should see a PDF preview
 of the document with the text "Hello, LaTeX!".
 
-![TeXworks Preview Pane](fig/01-introduction/TexWorksEditor_preview-document.PNG)
+![TeXworks Preview Pane](fig/01-introduction/TexWorksEditor_preview-document.PNG){alt='TeXworks interface with the preview pane showing the rendered output of the document.'}
 
 :::
 
