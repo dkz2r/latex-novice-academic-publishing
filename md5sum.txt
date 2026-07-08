@@ -4,6 +4,7 @@
 "config.yaml" "7c87263b5a3e6975394f713e03df88c8" "site/built/config.yaml" "2026-04-08"
 "index.md" "a02c9c785ed98ddd84fe3d34ddb12fcd" "site/built/index.md" "2022-04-22"
 "links.md" "8184cf4149eafbf03ce8da8ff0778c14" "site/built/links.md" "2022-04-22"
+"challanges_solution/notes.md" "036c83f0c3f268de76d5ac07a86fb303" "site/built/notes.md" "2026-07-08"
 "episodes/01-introduction.md" "c5862860e174219e373081b8cf27b4ee" "site/built/01-introduction.md" "2026-04-08"
 "episodes/02-document-structure.md" "96380fe01b44900ca410acb3d5cac789" "site/built/02-document-structure.md" "2026-04-08"
 "episodes/03-error-handling.md" "ae7c40217525e050d41c80d9e7dc9194" "site/built/03-error-handling.md" "2026-04-08"
