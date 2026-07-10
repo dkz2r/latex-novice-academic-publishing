@@ -89,9 +89,9 @@ you can use the following LaTeX code:
 
 % List with custom bullet point symbols
 \begin{itemize}
-  \item[(a)] Item 1
-  \item[(b)] Item 2
-  \item[(c)] Item 3
+  \item[a)] Item 1
+  \item[b)] Item 2
+  \item[c)] Item 3
 \end{itemize}
 
 \end{document}
@@ -104,18 +104,22 @@ you can use the following LaTeX code:
 It's also possible to create a list with roman numerals automatically with the `enumitem` package:
 ```latex
 \documentclass{article}
-\usepackage{enumitem} %<-- package for lists https://texdoc.org/serve/enumitem/
-% \setlist{label=\Roman*} %<-- globally defining the enumeration system
+
+\usepackage{enumitem} % package for lists
+% \setlist{label=\Roman*} % globally defining the enumeration system
+
 \begin{document}
+
 \begin{enumerate}[
-  label=\emph{\roman*}, %<-- change labeling system locally (or \Roman)
-  leftmargin=5cm, %<-- change indent on the left
+  label=\emph{\roman*}, % change labeling system locally (or \Roman)
+  leftmargin=5cm, % change indent on the left
 ]
   \item First
   \item Second
   \item Third
   \item Fourth
 \end{enumerate}
+
 \end{document}
 ```
 
@@ -266,17 +270,24 @@ How would you write this in LaTeX?
 ::::::::::::::::::::::::::::::::::::: challenge
 
 
-## Challenge 3: Enumerate your list manually
+## Challenge 3: Nested enumerate your list
 
 We would like to have the following appear in our LaTeX document:
 
 
-1. Gala
-2. Fuji
-3. Granny Smith
+<ol>
+  <li>Introduction</li>
+  <li>Main
+    <ol style="list-style-type: none;">
+      <li>2.1 Theory</li>
+      <li>2.2 Empirics</li>
+    </ol>
+  </li>
+  <li>Discussion</li>
+</ol>
 
 
-How would you write this in LaTeX **without** using `enumerate` but `itemize` with `\item[]`?
+How would you write this in LaTeX?
 
 :::::::::::::::::::::::: solution
 
@@ -285,16 +296,23 @@ How would you write this in LaTeX **without** using `enumerate` but `itemize` wi
 ```latex
 \documentclass{article}
 
+\usepackage{enumitem} % package for lists
+
 \begin{document}
 
-\begin{itemize}
-  \item[1.] Gala
-  \item[2.] Fuji
-  \item[3.] Granny Smith
-\end{itemize}
+\begin{enumerate}
+  \item Introduction
+  \item Main
+    \begin{enumerate}[label=\theenumi.\arabic*]
+      \item Theory
+      \item Empirics
+    \end{enumerate}
+  \item Discussion
+\end{enumerate}
 
 \end{document}
 ```
+In this case we customized the second level list locally, meaning the changes only apply to this specific list. `\theenumi` retrieves the current parent number, the `.` adds the dot between the two numbers and `\arabic*` adds the sub item number in arabic format, where `*` serves as a placeholder for the current list level's counter. 
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -302,6 +320,7 @@ How would you write this in LaTeX **without** using `enumerate` but `itemize` wi
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Lists in LaTeX are created using the `enumerate` and `itemize` environments.
+- Using the `enumitem` package to custom ordered lists. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
