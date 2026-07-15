@@ -34,7 +34,7 @@ TeXstudio offers several backend options for handling `BibTeX` files. For the pu
 Open TeXstudio and go to **Options** > **Configure TeXstudio**. 
 In the configuration dialog, select **Build** from the left-hand panel. Under **Default Bibliography Tool**, open the drop-down menu and select `Biber`.
 
-![](fig/12-citations-and-references/settings_biber.png)
+![](fig/12-citations-and-references/settings_biber.png){alt='TeXstudio settings for BibTeX files.'}
 
 ## Reference Databases (BiBTeX)
 
@@ -62,16 +62,23 @@ Create a new file in your project called `sample-references.bib` and add the fol
 ```
 
 This is an example of a BiBTeX file that contains a reference for an article and another for a
-book. Each entry type starts with a the `@` symbol, followed by the type of the
-referencing item (e.g. `article`) and all information appears within a pair of
-curly braces `{}`.
+book. Each entry type begins with the `@` symbol, followed by the entry type (e.g. `article`), 
+with all information enclosed in curly braces `{}`. 
+The first element (e.g. `Thomas2008`) inside the curly braces is the reference key, 
+which is used to cite the entry in the document.
 
-The various fields are given in key-value format. Exactly which fields you need to give depends on
-the type of entry.
+Beyond the types already mentioned, other commonly supported types include 
+`manual`, `conference`, `proceedings`, and `techreport`. If none of the available
+types are suitable, `misc` can be used as a fallback, however this may lead to 
+incomplete references and formatting inconsistencies.
+
+The various fields are given in key-value format. Which fields are required 
+depends on the entry type and bibliography style. Common fields are `author`,
+`title`, `publisher`, `year`, `edition`, `journal`, `volume`,  and `pages`, among many others. 
 
 ::: callout
 
-You might notice that in the `author` field, surname and givenname and each entry (author) is separated by the word `and`. This is
+You might notice that in the `author` field, surname and given name and each entry (author) is separated by the word `and`. This is
 essential: the format of the output needs to know which author is which. When
 using `biblatex` this applies also to the fields `publisher` and `location`, in
 which you can also have many values.
@@ -84,7 +91,7 @@ is to prevent any case-changing that might be applied to the title.
 ### The BibTeX Format
 
 Editing BiBTeX files by hand can be difficult and tedious. A number of tools exist to help you
-manage your reference files. You can find a list of sugggested tools in the references section.
+manage your reference files. You can find a list of suggested tools in the references section.
 
 For the purposes of this workshop, we'll use `biblatex`, but feel free to explore other options (e.g. `natbib`) on your own. 
 
@@ -127,7 +134,8 @@ citation style for you.
 Some additional commands that are available in  `biblatex`:
 
 - `\cite{key}` or `\cite{key1, key2}`: Cite the reference with the given key
-- `\usepackage{}\parentcite{key}`: Cite the parent reference of the given key.
+- `\parencite{key}`:  Cite the reference with parentheses around it, e.g. `(Author, Year)`.
+- `\textcite{key}`: Cite the reference as part of the text, e.g. `Author (Year)`
 - `\autocite{key}`: Automatically choose the citation style.
 - `\smartcite{key}`: Automatically choose the citation style, but with more control.
 - `\footcite{key}`: Cite the reference in a footnote.
@@ -184,7 +192,7 @@ Note, that there is `\clear*field*`, `\clear*name*` and `\clear*list*`.
 
 There are many different bibliography styles available, and you can find a list of them at
 [CTAN](https://ctan.org/topic/biblio).
-Check if one of those bibligraphy and citation styles meets your requirements.
+Check if one of those bibliography and citation styles meets your requirements.
 If you want to finetune an existing one we suggest to take a look at [biblatex-ext](https://texdoc.org/serve/biblatex-ext/0).
 
 :::
@@ -244,30 +252,32 @@ We are using `biblatex` to manage our references, and we identify this reference
 this:
 
 ```latex
-The Word2Vec algorithm \autocite{mikolov} is a popular method for generating word embeddings.
+The Word2Vec algorithm \autocite{mikolov} is a popular method
+for generating word embeddings.
 ```
 
 When we compile our document, we see the following error:
 
 ```output
-The Word2Vec algorithm (mikolov) is a popular method for generating word embeddings.
+The Word2Vec algorithm (mikolov) is a popular
+method for generating word embeddings.
 ```
 
 What's wrong with this reference? How can we fix it?
 
 :::::::::::::::::::::::: solution
 
-We are referencing the key `mikolov` in our document, but the key in our BiBTeX file is
+We are referencing the key `mikolov` in our document, but the key in our BibTeX file is
 `mikolov2013`. We need to update our citation command to `\autocite{mikolov2013}`. Note that LaTeX
 still compiles the document, but it gives us a warning that the reference is missing and uses the
 key as a placeholder. You might use this to temporarily mark a reference that you haven't added yet,
-just be sure to clear all of your warnings before finializing your document.
+just be sure to clear all of your warnings before finalizing your document.
 
 :::::::::::::::::::::::::::::::::
 
 ## Challenge 3: What's problem with this?
 
-We inculde the following reference in our document:
+We include the following reference in our document:
 
 ```bibtex
 @article{bentham2011,
@@ -286,14 +296,15 @@ We inculde the following reference in our document:
 We are using `biblatex` and cite this reference in the text as follows:
 
 ```latex
-\autocite{bentham2011} provied a good overview over nanoparticles over the last 20 years.
+\autocite{bentham2011} provide a good overview over
+nanoparticles over the last 20 years.
 ```
 
 What happens when compiling this document? What is wrong with the reference, and how can it be fixed?
 
 :::::::::::::::::::::::: solution
 
-The issue in this reference is cause by a sepcial character (`&` in the title field). 
+The issue in this reference is caused by a special character (`&` in the title field). 
 In LaTeX the ampersand `&` is reserved for alignment, so it must be escaped (`\&`)in normal text. 
 
 
@@ -318,15 +329,69 @@ Corrected bib entry:
 ```
 :::::::::::::::::::::::::::::::::
 
+## Challenge 4: APA Style and coloring.
+
+Again we have the example:
+
+```latex
+The Word2Vec algorithm by \textcite{mikolov2013} is a popular
+method for generating word embeddings.
+```
+
+Change the bibliography style to the American Psychological Association (APA) style 
+by replacing the default style option. What differences do you notice?  
+
+
+As a bonus challenge, try to colorize your citation links in blue.
+
+::: hint
+
+The `hyperref` package is used to manage links in LaTeX. 
+To colorize links, you first need to enable colored links and then set the desired color using the `\hypersetup{}` command.
+:::
+
+
+:::::::::::::::::::::::: solution
+
+```latex
+\documentclass{article}
+
+\usepackage[style=apa]{biblatex} % APA style
+\addbibresource{sample-references.bib}
+\usepackage{hyperref}
+
+\hypersetup{
+	colorlinks = true, % enable coloring
+	citecolor = blue,  % change color 
+}
+
+
+\begin{document}
+
+The Word2Vec algorithm by \textcite{mikolov2013} is a popular
+method for generating word embeddings.
+
+
+\printbibliography
+
+\end{document}
+```
+
+The bibliography style also influences which information is printed. 
+Due to the change to the APA style, the values of the fields `archivePrefix`, 
+`primaryClass`, and `eprint` are no longer printed.
+
+
+:::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- References are stored in a reference database, seperate from the LaTeX document.
-- BiBTeX files are used to store references in a processing-friendly format and have the extension
+- References are stored in a reference database, separate from the LaTeX document.
+- BibTeX files are used to store references in a processing-friendly format and have the extension
   `.bib`.
-- There are multiple libraries available to manage references in LaTeX documents, including
-  `natbib` and `biblatex`.
+- There are multiple libraries available to manage references in LaTeX documents, including `biblatex`.
 - We can use the `\cite` command or one of its variants to cite references in our document.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
