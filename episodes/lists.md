@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Lists'
 teaching: 10
 exercises: 2
 ---
@@ -27,11 +27,11 @@ an ordered list to our document.
 We'll replace our "Second Section" with one for "Lists" and add an ordered list:
 
 ```latex
-% This command tells LaTeX what kind of document we are creating (article).
+% This command defines the kind of document we are creating (article).
 \documentclass{article}
 
 
-% Everything before the \begin{document} command is called the preamble.
+% Everything before \begin{document} is called preamble.
 \begin{document} % The document body starts here
 
 \tableofcontents
@@ -76,8 +76,8 @@ When you compile this document, you should see something like this in the previe
 Note that the `\item` commands do not need to be enclosed in braces. These commands do not take
 any arguments, so they can be used as standalone commands. The text that follows the `\item`
 command will be treated as the content of the list item. However, you are able to specify your own
-bullet point symbols with `\item[]` manually. For instance, if you want a list with small letters in brackets
-you can use the following LaTeX code:
+bullet point symbols with `\item[]` manually. For instance, you can use `>` if 
+you want a list with this symbol you can use the following LaTeX code:
 
 ```latex
 % This command tells LaTeX what kind of document we are creating (article).
@@ -89,9 +89,9 @@ you can use the following LaTeX code:
 
 % List with custom bullet point symbols
 \begin{itemize}
-  \item[a)] Item 1
-  \item[b)] Item 2
-  \item[c)] Item 3
+  \item[>] Item 1
+  \item[>] Item 2
+  \item[>] Item 3
 \end{itemize}
 
 \end{document}
@@ -101,76 +101,36 @@ you can use the following LaTeX code:
 
 ::: callout
 
-It's also possible to create a list with roman numerals automatically with the `enumitem` package:
+The `enumitem` package enables us to customize bullet-points globally or for a specific list:
 ```latex
 \documentclass{article}
 
 \usepackage{enumitem} % package for lists
-% \setlist{label=\Roman*} % globally defining the enumeration system
+\setlist{label=\Roman*} % globally defining enumeration
 
 \begin{document}
 
-\begin{enumerate}[
-  label=\emph{\roman*}, % change labeling system locally (or \Roman)
-  leftmargin=5cm, % change indent on the left
-]
+% ordered list with capitalize roman numbering
+\begin{enumerate}
   \item First
   \item Second
   \item Third
   \item Fourth
 \end{enumerate}
 
-\end{document}
-```
-
-:::
-
-Adding an unordered list is just as easy. We can use the exact same syntax, but replace the
-`enumerate` environment with `itemize`.
-
-```latex
-% This command tells LaTeX what kind of document we are creating (article).
-\documentclass{article}
-
-
-% Everything before the \begin{document} command is called the preamble.
-\begin{document} % The document body starts here
-
-\tableofcontents
-
-% The section command automatically numbers and formats the section heading.
-\section{Sections}
-
-Hello World!
-
-This is my first LaTeX document.
-
-I can add content to my first section!
-
-% The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
-
-I can put a subsection inside my first section.
-
-\section{Lists}
-
-There are two types of lists: ordered and unordered.
-
-\subsection{Ordered}
-
-Ordered lists do not have numbers or letters associated with each item.
-
-\begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
+% ordered list with local changes
+\begin{enumerate}[
+  label=\emph{\roman*}, % local change of labeling system
+  leftmargin=5cm, % change indent on the left
+]
+  \item First
+  \item Seconds
+  \item Third
+  \item Fourth
 \end{enumerate}
 
-\subsection{Unordered}
-
-Unordered lists are just a series of items preceded by a marker.
-
-\begin{itemize}
+% unordered list
+\begin{itemize}[label=>]
   \item Item 1
   \item Item 2
   \item Item 3
@@ -179,8 +139,65 @@ Unordered lists are just a series of items preceded by a marker.
 \end{document}
 ```
 
-![](fig/04-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'}
+Notice also that an unordered list is just as easy. We can use the exact same syntax, but replace the
+`enumerate` environment with `itemize`.
 
+:::
+
+
+<!-- ```latex -->
+<!-- % This command tells LaTeX what kind of document we are creating (article). -->
+<!-- \documentclass{article} -->
+<!-- -->
+<!-- -->
+<!-- % Everything before the \begin{document} command is called the preamble. -->
+<!-- \begin{document} % The document body starts here -->
+<!-- -->
+<!-- \tableofcontents -->
+<!--  -->
+<!-- % The section command automatically numbers and formats the section heading. -->
+<!-- \section{Sections} -->
+<!-- -->
+<!-- Hello World! -->
+<!--  -->
+<!-- This is my first LaTeX document. -->
+<!-- -->
+<!-- I can add content to my first section! -->
+<!-- -->
+<!-- % The subsection command does the same thing, but for sections within sections. -->
+<!-- \subsection{Subsection} -->
+<!--  -->
+<!-- I can put a subsection inside my first section. -->
+<!--  -->
+<!-- \section{Lists} -->
+<!--  -->
+<!-- There are two types of lists: ordered and unordered. -->
+<!-- -->
+<!-- \subsection{Ordered} -->
+<!-- -->
+<!-- Ordered lists do not have numbers or letters associated with each item. -->
+<!-- -->
+<!-- \begin{enumerate} -->
+<!--   \item Item 1 -->
+<!--   \item Item 2 -->
+<!--   \item Item 3 -->
+<!-- \end{enumerate} -->
+<!-- 
+<!-- \subsection{Unordered} -->
+<!-- 
+<!-- Unordered lists are just a series of items preceded by a marker. -->
+<!-- -->
+<!-- \begin{itemize} -->
+<!--   \item Item 1 -->
+<!--   \item Item 2 -->
+<!--   \item Item 3 -->
+<!-- \end{itemize} -->
+<!-- 
+<!-- \end{document} -->
+<!-- ```  -->
+<!--  -->
+<!-- ![](fig/04-logical-structure/itemized-list.PNG){alt='Our document with an unordered list.'} -->
+<!--  -->
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: What needs to change?
@@ -270,7 +287,7 @@ How would you write this in LaTeX?
 ::::::::::::::::::::::::::::::::::::: challenge
 
 
-## Challenge 3: Nested enumerate your list
+## Challenge 3: Can you nest your list counter?
 
 We would like to have the following appear in our LaTeX document:
 
@@ -280,7 +297,7 @@ We would like to have the following appear in our LaTeX document:
   <li>Main
     <ol style="list-style-type: none;">
       <li>2.1 Theory</li>
-      <li>2.2 Empirics</li>
+      <li>2.2 Real World</li>
     </ol>
   </li>
   <li>Discussion</li>
@@ -288,6 +305,15 @@ We would like to have the following appear in our LaTeX document:
 
 
 How would you write this in LaTeX?
+
+::: hint
+
+The `enumitem` package provides commands to reference counters at different nesting levels of a list. 
+To refer to the counter at the first level, use `\theenumi`, where the trailing `i` indicates the first level. 
+The levels are denoted using Roman numerals, so the second level uses `\theenumii`,
+the third `\theenumiii`, and the fourth `\theenumiv`.
+
+:::
 
 :::::::::::::::::::::::: solution
 
@@ -305,7 +331,7 @@ How would you write this in LaTeX?
   \item Main
     \begin{enumerate}[label=\theenumi.\arabic*]
       \item Theory
-      \item Empirics
+      \item Real World
     \end{enumerate}
   \item Discussion
 \end{enumerate}
@@ -320,7 +346,7 @@ In this case we customized the second level list locally, meaning the changes on
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Lists in LaTeX are created using the `enumerate` and `itemize` environments.
-- Using the `enumitem` package to custom ordered lists. 
+- Using the `enumitem` package to customize bullet points. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
