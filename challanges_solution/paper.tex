@@ -2,47 +2,19 @@
 
 \usepackage{lipsum}        % lorem ipsum text
 \usepackage{graphicx}      % include graphics
-\usepackage{booktabs}      % nice tables
+\usepackage{booktabs}      % table style
 \usepackage{enumitem}      % lists
+\usepackage{xcolor}
 
 
 \title{My Paper}
-\author{DKZ.2R}
+\author{First Author\\ Second Author}
 \date{\today}
 
 \usepackage[style=apa]{biblatex}
 \addbibresource{sample-references.bib}
 
 \usepackage{hyperref}
-
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
-
-% define styles
-\tikzset{
-	process/.style={
-		rectangle,
-		rounded corners,
-		draw=black,
-		fill=blue!20,
-		text width=3cm,
-		align=center,
-		minimum height=1cm
-	},
-	file/.style={
-		rectangle,
-		draw=black,
-		fill=orange!20,
-		text width=3cm,
-		align=center,
-		minimum height=1cm
-	},
-	arrow/.style={
-		->,
-		>=Stealth,
-		thick
-	}
-}
 
 
 \hypersetup{
@@ -54,8 +26,6 @@
 
 \begin{document}
 
-\pagenumbering{Roman} 
-
 \maketitle
 
 \newpage
@@ -66,8 +36,6 @@
 \listoffigures
 \newpage
 
-\pagenumbering{arabic}
-
 \section{Introduction}
 
 \lipsum[1-2]
@@ -76,51 +44,6 @@
 \section{Methods}
 
 \lipsum[3]
-
-\subsection{Figures with tikzpicture}
-
-
-\begin{figure}[http]
-	\centering
-	\begin{tikzpicture}[node distance=.25cm]
-		
-		% nodes
-		\node (tex)     [file]                              {\texttt{.tex} File};
-		\node (bib)     [file, right=4cm of tex]            {\texttt{.bib} File};
-		\node (latex1)  [process, below=1.5cm of tex]       {1. \LaTeX\ Run};
-		\node (aux)     [file, below=1.5cm of latex1]       {\texttt{.aux} File};
-		\node (biber)   [process, below=1.5cm of aux]       {Biber Run};
-		\node (bbl)     [file, below=1.5cm of biber]        {\texttt{.bbl} File};
-		\node (latex2)  [process, below=1.5cm of bbl]       {2. \LaTeX\ Run};
-		\node (latex3)  [process, below=1.5cm of latex2]    {3. \LaTeX\ Run};
-		\node (pdf)     [file, below=1.5cm of latex3]       {\texttt{.pdf} File};
-		
-		% .tex feeds into all latex runs
-		\draw [arrow] (tex) -- (latex1);
-		\draw [arrow] (tex.south) to [out=270, in=180] (latex2.west);
-		\draw [arrow] (tex.south) to [out=270, in=180] (latex3.west);
-		
-		% .bib feeds into biber
-		\draw [arrow] (bib.south) to [out=270, in=0] (biber.east);
-		
-		% main flow
-		\draw [arrow] (latex1) -- (aux);
-		\draw [arrow] (aux)    -- (biber);
-		\draw [arrow] (biber)  -- (bbl);
-		\draw [arrow] (bbl)    -- (latex2);
-		\draw [arrow] (latex2) -- (latex3);
-		\draw [arrow] (latex3) -- (pdf);
-		
-		% annotations
-		\node [right=0.2cm of latex1] {\small generates citation keys};
-		\node [right=0.2cm of biber]  {\small processes references};
-		\node [right=0.2cm of latex2] {\small incorporates bibliography};
-		\node [right=0.2cm of latex3] {\small resolves cross-references};
-		
-	\end{tikzpicture}
-	\caption{The LaTeX compilation process with citations using Biber}
-	\label{fig:compilation}
-\end{figure}
 
 
 \subsection{Model}
@@ -161,15 +84,11 @@ The data collection followed these steps:
 	\item Fourth step
 \end{enumerate}
 
-
 \subsection{Data Analysis}
-
-
 
 \lipsum[5]
 
 \section{Results}
-
 
 \lipsum[6]
 
@@ -233,12 +152,9 @@ transparent reporting of results \autocite{Graham1995, Huff1954}.
 
 \newpage 
 
-\setcounter{page}{1}
-\pagenumbering{roman}
-
 
 \section{Appendix}
 
-More information
+Additional information and graphics.
 
 \end{document}
