@@ -390,7 +390,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2023-03-16 |
+        <p>Last updated on 2026-07-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -402,11 +402,399 @@
 
         
 <section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
-<hr class="half-width"><p>This is a placeholder file. Please add content here.</p>
-<!--
+<hr class="half-width"><div class="section level3">
+<h3 id="introduction-to-the-latex-workflow"><a href="01-introduction-to-the-latex-workflow.html">Introduction to
+the LaTeX Workflow</a><a class="anchor" aria-label="anchor" href="#introduction-to-the-latex-workflow"></a></h3>
+<ul><li>LaTeX source files use the <code>.tex</code> extension.</li>
+<li>Documents are compiled (e.g., with <code>LuaLaTeX</code>) to produce
+output such as PDFs.</li>
+<li>You can write LaTeX in editors like <a href="https://www.texstudio.org" class="external-link">TeXstudio</a> or online platforms,
+e.g., <a href="https://www.overleaf.com" class="external-link">Overleaf</a>.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="basic-latex-document-components"><a href="02-basic-latex-document-components.html">Basic LaTeX
+Document Components</a><a class="anchor" aria-label="anchor" href="#basic-latex-document-components"></a></h3>
+<ul><li>LaTeX commands begin with a backslash <code>\</code>.<br></li>
+<li>Every document must declare a document class using
+<code>\documentclass{...}</code> (common options: <code>article</code>,
+<code>report</code>, <code>book</code>).<br></li>
+<li>Environments are defined using <code>\begin{...}</code> and
+<code>\end{...}</code> and must always be properly paired.<br></li>
+<li>The <strong>body</strong> of the document is enclosed between:
+<code>\begin{document}</code> and <code>\end{document}</code>.</li>
+<li>Everything before <code>\begin{document}</code> is called the
+<strong>preamble</strong>.</li>
+<li>Comments are created using <code>%</code>, everything following this
+symbol on the same line is ignored by the compiler.</li>
+<li>A new paragraph is created by leaving a blank line or by using
+<code>\par</code>.</li>
+<li>Special characters in LaTeX include: <code>\</code>, <code>{</code>,
+<code>}</code>, <code>$</code>, <code>%</code>, <code>&amp;</code>,
+<code>#</code>, <code>^</code>.
+<ul><li>To display these characters in text, escape them with a backslash
+(e.g. <code>\#</code>). he exception is <code>\</code> itself, which can
+be produced using <code>\textbackslash</code>.</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="error-handling"><a href="03-error-handling.html">Error Handling</a><a class="anchor" aria-label="anchor" href="#error-handling"></a></h3>
+<ul><li>Errors are often cascading, one initial error can trigger many
+others. Always fix the first error first.</li>
+<li>The error <code>! Undefined control sequence</code> indicates an
+unknown or misspelled command.</li>
+<li>Messages like <code>l.2</code> indicate the line number where LaTeX
+detected the error.</li>
+<li>Types of messages:
+<ul><li>
+<code>Error</code>: prevents the document from compiling</li>
+<li>
+<code>Warning</code>: may affect output but compilation
+continues</li>
+<li>
+<code>Information</code>: additional helpful details</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="the-structure-of-a-document"><a href="04-the-structure-of-a-document.html">The Structure of a
+Document</a><a class="anchor" aria-label="anchor" href="#the-structure-of-a-document"></a></h3>
+<ul><li>
+<p><code>\section{...}</code> &amp; <code>\subsection{...}</code>
+create a new (sub-) section, which is automatically numbered.</p>
+<ul><li>The starred variants <code>\section*{...}</code> &amp;
+<code>\subsection*{...}</code> is used for unnumbered headings, which
+are also excluded from the table of content.</li>
+</ul></li>
+<li><p>Similarly, <code>\paragraph{...}</code>,
+<code>\chapter{...}</code>, and other sectioning commands work like
+<code>\section{...}</code>. Which commands are available typically
+depends on the document class.</p></li>
+<li><p>A table of contents can be generated with
+<code>\tableofcontents</code>, placed wherever you want it to appear in
+the document.</p></li>
+<li><p>Unordered list (<code>itemize</code>):</p></li>
+</ul><div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>  <span class="fu">\item</span> ...</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>  <span class="fu">\item</span> ...</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre>
+</div>
+<ul><li>Ordered list (<code>enumerate</code>):</li>
+</ul><div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>  <span class="fu">\item</span> ...</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>  <span class="fu">\item</span> ...</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code></pre>
+</div>
+<ul><li>Custom bullet symbols can be specified using the optional argument
+<code>\item[...]</code> (e.g., <code>\item[(a)]</code> to label an item
+with <code>(a)</code>).</li>
+</ul></div>
+<div class="section level3">
+<h3 id="using-document-classes"><a href="05-using-document-classes.html">Using Document
+Classes</a><a class="anchor" aria-label="anchor" href="#using-document-classes"></a></h3>
+<ul><li>
+<p>Document classes set global options
+<code>\documentclass[&lt;options&gt;]{&lt;class&gt;}</code></p>
+<ul><li>e.g.<code>\documentclass[12pt]{article}</code>,
+<code>\documentclass[a4paper]{article}</code>,
+<code>\documentclass[a4paper,12pt,twocolumn]{article}</code>.</li>
+</ul></li>
+<li><p>Standard classes are: <code>article</code>, <code>report</code>,
+<code>book</code>, <code>letter</code> and <code>slides</code>.</p></li>
+<li>
+<p>Modern (function-rich) classes:</p>
+<ul><li>AMS classes: <code>amsbook</code>, <code>amsart</code> and
+<code>amsproc</code>.</li>
+<li>
+<code>beamer</code> for creating (modern) presentations with support
+for themes, overlays, and animations.</li>
+<li>
+<code>KOMA-Script</code> (<code>scrartcl</code>,
+<code>scrreprt</code>, <code>scrbook</code>, <code>scrlttr2</code>)
+modern, highly customizable replacements for standard classes.</li>
+<li>
+<code>memoir</code> a flexible class for books, reports, and
+articles, with many built-in formatting tools.</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="extending-latex"><a href="06-extending-latex.html">Extending LaTeX</a><a class="anchor" aria-label="anchor" href="#extending-latex"></a></h3>
+<ul><li>New packages are loaded in the <strong>preamble</strong> using
+<code>\usepackage{&lt;package_name&gt;}</code>,
+e.g. <code>geometry</code>, <code>booktabs</code> or
+<code>xcolor</code>. The package is applied during the next compilation.
+<ul><li>If a package is not installed, use
+<code>tlmgr install &lt;package_name&gt;</code> in the terminal to
+install it.</li>
+<li>All installed packages can be updated at once with
+<code>tlmgr update --self --all</code>.</li>
+</ul></li>
+<li>Many packages accept additional options inside square brackets:
+<code>\usepackage[&lt;options&gt;]{&lt;package_name&gt;}</code>.
+<ul><li>For example, <code>\usepackage[width = 6cm]{geometry}</code> sets
+the text block width to six cm.</li>
+</ul></li>
+<li>Custom commands can be defined using:
+<code>\newcommand{&lt;\command_name&gt;}[&lt;number_of_arguments&gt;][&lt;default_value_first_argument&gt;]{&lt;definition&gt;}</code>.
+<ul><li>If a command with this name already exists, use
+<code>\renewcommand</code> instead, which has the same syntax.</li>
+<li>This allows document-wide formatting changes from a single
+definition.</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="fonts-formatting-and-spacing"><a href="07-fonts,-formatting-and-spacing.html">Fonts, Formatting
+and Spacing</a><a class="anchor" aria-label="anchor" href="#fonts-formatting-and-spacing"></a></h3>
+<ul><li><p>To change the font for the entire document use
+<code>\renewcommand{\familydefautl}{&lt;font&gt;}</code></p></li>
+<li>
+<p>The packages <code>tgtermes</code> or <code>fontspec</code> can
+be used for font management. Note that <code>fontspec</code> requires
+<code>LuaLaTeX</code> or <code>XeLaTeX</code>.</p>
+<ul><li>With <code>fontspec</code>, you can set fonts using
+<code>\setmainfont{...}</code>, <code>\setsansfont{...}</code> and
+<code>\setmonofont{...}</code>.</li>
+</ul></li>
+<li><p>With <code>\lipsum</code> from the <code>lipsum</code> package
+placeholder text can be generated.</p></li>
+<li>
+<p>The package <code>parskip</code> helps controlling spaces between
+paragraphs. <code>\usepackage[parfill]{parskip}</code> removes the
+indentation and adds spacing between paragraphs.</p>
+<ul><li>With KOMA-Scripts this option is also available in the class
+options, e.g. <code>\documentclass[parskip=full]{scrbook}</code>
+</li>
+</ul></li>
+<li><p>A global option can also be change in the document class
+<code>\documentclass[parskip=full]{scrbook}</code>.</p></li>
+<li><p><code>\\</code> forces a new line.</p></li>
+<li>
+<p>Explicit spacing commands:</p>
+<ul><li>
+<code>\.</code> for a “dot” space.</li>
+<li>
+<code>\:</code> for a “colon” space.</li>
+<li>
+<code>\;</code> for a “thick” space.</li>
+<li>
+<code>\!</code> for a “negative” space.</li>
+<li>
+<code>\,</code> for a “thin” space.</li>
+<li>
+<code>\hspace{1cm}</code> for a horizontal space.</li>
+<li>
+<code>\vspace{1cm}</code> for a vertical space.</li>
+<li>
+<code>\vfill</code> for fill the remaining space on a page.</li>
+</ul></li>
+<li>
+<p>Explicit text formatting commands:</p>
+<ul><li>Bold: <code>\textbf{...}</code>, italic <code>\textit{...}</code>,
+roman text <code>\textrm{...}</code>, san serif text
+<code>\textsf{...}</code>, typewriter text <code>\texttt{...}</code>,
+small caps text <code>\textsc{...}</code>.</li>
+</ul></li>
+<li>
+<p>Font sizes are: <code>\huge</code>, <code>\large</code>,
+<code>\normalsize</code>, <code>\small</code> and
+<code>\footnotesize</code>.</p>
+<ul><li>For custom sizes, use:
+<code>{\fontsize{14}{16}\selectfont &lt;text&gt;}</code>, where <span class="math inline">\(14\)</span> is the font size and <span class="math inline">\(16\)</span> the line spacing.</li>
+</ul></li>
+<li><p>Text alignment: <code>\centering</code>,
+<code>\raggedright</code> and <code>\raggedleft</code>.</p></li>
+<li><p>Create a title page using the <code>titlepage</code> environment:
+<code>\begin{titlepage} \centering ... \vfill \end{titlepage}</code>.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="using-graphics"><a href="08-using-graphics.html">Using Graphics</a><a class="anchor" aria-label="anchor" href="#using-graphics"></a></h3>
+<ul><li>The <code>graphicx</code> package enables working with
+<code>jpeg</code>, <code>png</code>, <code>svg</code>, <code>pdf</code>
+and <code>eps</code> file formats.</li>
+<li>Use <code>\graphicspath{{&lt;folder&gt;/}}</code> to specify a
+default folder where LaTeX will search for images.</li>
+<li>Use
+<code>\includegraphics[&lt;options&gt;]{&lt;file_name&gt;}</code> to
+include graphics in your document. Available options include
+<code>height</code>, <code>width</code>, <code>scale</code>,
+<code>angle</code>, <code>clip</code>, <code>trim</code> and
+<code>draft</code> among others.
+<ul><li>The width can be set relative to the line width using
+<code>\linewidth</code>,
+e.g. `<code>\includegraphics[width=0.5\linewidth]{&lt;file_name&gt;}</code>.</li>
+</ul></li>
+<li>Centering environment
+<code>\begin{center}...\end{center}</code>.</li>
+<li>Floating figure environment
+<code>\begin{figure}...\end{figure}</code>.
+<ul><li>Control position:
+<ul><li>
+<code>h</code>: “here”.</li>
+<li>
+<code>t</code>: top of the page.</li>
+<li>
+<code>b</code>: bottom of the page.</li>
+<li>
+<code>p</code>: on an own page.</li>
+<li>
+<code>ht</code>: combination of the first two.</li>
+</ul></li>
+<li>
+<code>\centering</code> to center the image inside the
+environment.</li>
+</ul></li>
+<li>Add a caption below an image with <code>\caption{...}</code>.</li>
+<li>A list of all Graphics can be generated with
+<code>\listoffigures</code>, if they have a caption.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="tables"><a href="09-tables.html">Tables</a><a class="anchor" aria-label="anchor" href="#tables"></a></h3>
+<ul><li>New content coming up soon!</li>
+</ul></div>
+<div class="section level3">
+<h3 id="adding-cross-references"><a href="10-adding-cross-references.html">Adding Cross
+References</a><a class="anchor" aria-label="anchor" href="#adding-cross-references"></a></h3>
+<ul><li>Use <code>\label{&lt;label_name&gt;}</code> to mark an element and
+reference it with <code>\ref{&lt;label_name&gt;}</code>.
+<ul><li>To keep references organized, use the following prefixes
+<code>before the</code>for the label names: <code>fig:</code> (figures),
+<code>tab:</code> (tables) and <code>sec:</code> (Section).</li>
+</ul></li>
+<li>
+<code>cleveref</code> provides advanced cross-referencing
+capabilities. Use <code>\cref{&lt;label_name&gt;}</code> instead of
+<code>\ref{&lt;label_name&gt;}</code> to automatically add the reference
+type before the number in the text.</li>
+<li>With the <code>hyperref</code> package you can make the references
+linked by clicking.
+<ul><li>Recommendation: load <code>hyperref</code> last in your preamble as
+it could lead to issues with other packages. But <code>cleveref</code>
+should be loaded after hyperref.</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="mathematics"><a href="11-mathematics.html">Mathematics</a><a class="anchor" aria-label="anchor" href="#mathematics"></a></h3>
+<ul><li>The <code>amsmath</code> package extends the mathematical expression
+support.</li>
+<li>Inline math mode with <code>$...$</code> or
+<code>\(...\)</code>.</li>
+<li>Display math mode, rebders centered on own line, with
+<code>$$...$$</code> or <code>\[...\]</code>.</li>
+<li>Math symbols &amp; expressions:
+<ul><li>Superscript and subscript: <code>x^{&lt;expression&gt;}</code>,
+<code>x_{&lt;expression&gt;}</code> .</li>
+<li>Greek letters: <code>\alpha</code>, <code>\beta</code>, …</li>
+<li>Operators: <code>\times</code>, <code>\sin</code>,
+<code>\log</code>, <code>\sum</code>, <code>\int</code>, ` …</li>
+<li>Fractions: <code>\frac{numerator}{denominator}</code>.</li>
+<li>Brackets: <code>()</code>, <code>\{ \}</code> (need backslash since
+else used as LaTeX-Operator), <code>[]</code>, <code>\big</code>,
+<code>\left(... \right)</code>, <code>\langle</code>, …</li>
+</ul></li>
+<li>Math environment with numbered equations
+<code>\begin{equation} ... \end{equation}</code>, refereed by
+<code>\ref{eq:...}</code> (<code>eq</code> not obligated). Wrap in a
+<code>figure</code> environment to add a caption.</li>
+<li>Aligned math environment <code>\begin{align} ... \end{align}</code>,
+<code>&amp;</code> as an anchor point for alignement.
+<ul><li>Writing <code>align*</code> ignores numbering.</li>
+</ul></li>
+<li>The <code>siunitx</code> package provides consistent formatting of
+numbers and units.</li>
+<li>Write scientific with units,
+e.g. <code>\qty{934.54}{\m}</code>.</li>
+<li>Number formatting:
+<ul><li>
+<code>\num{...}</code> (a numbers), <code>\numlist{...}</code> (list
+of numbers), <code>\numproduct{...}</code> (product of numbers).</li>
+</ul></li>
+<li>Unit parsing:
+<ul><li>
+<code>\qty{9.81}{\metre\per\second\squared}</code>,
+<code>\qty[per-mode = symbol]{1}{kilo\gram\metre\per\second\squared}</code>,
+…</li>
+</ul></li>
+<li>Uncertainties, lists and ranges:
+<ul><li>
+<code>\qty{1.23(4)}{\metre}</code>,
+<code>\qtylist{0.13;0.67;0.80}{\milli\metre}</code>,
+<code>\qtyrange{20}{25}{\celsius}</code>, …</li>
+</ul></li>
+<li>Decimal-aligned columns in tables:
+<ul><li><code>\begin{tabular}{S[table-format=3.2] c}</code></li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="citations-and-references"><a href="12-citations-and-references.html">Citations and
+References</a><a class="anchor" aria-label="anchor" href="#citations-and-references"></a></h3>
+<ul><li>Use the <code>biblatex</code> package for citation and reference
+management: <code>\usepackage[&lt;option&gt;]{biblatex}</code>.
+<ul><li>Common options include the citation style and sorting method, e.g.:
+<code>\usepackage[style=authoryear, sorting=nyt, backend=biber]{biblatex}</code>
+</li>
+</ul></li>
+<li>
+<code>biblatex</code> requires a bibliography backend to process and
+sort entries. The recommended backend is <code>Biber</code>. You may
+need to configure your LaTeX editor.</li>
+<li>References are usually stored in a BibTeX file (<code>.bib</code>).
+Each entry follows this format:
+<code>@&lt;type&gt;{&lt;cite_key&gt;, &lt;key&gt; = {&lt;value&gt;}, ...}</code>
+<ul><li>Common entry types: <code>article</code>, <code>book</code>,
+<code>online</code>, <code>misc</code>, <code>manual</code>,
+<code>proceedings</code>, …</li>
+<li>Common fields: <code>author</code>, <code>title</code>,
+<code>journal</code>, <code>date</code>, <code>pages</code>,
+<code>publisher</code>, …</li>
+</ul></li>
+<li>Link your <code>.bib</code> file in the preamble with
+<code>\addbibresource{&lt;file_name&gt;.bib}</code>.</li>
+<li>Citing a reference with <code>\cite{&lt;cite_key&gt;}</code>
+<ul><li>Granular citation commands allow you to reference specific parts of
+a citation: <code>\citeauthor{&lt;cite_key&gt;}</code>,
+<code>citetitle{&lt;cite_key&gt;}</code> and
+<code>\citeyear{&lt;cite_key&gt;}</code> we can control apparence in the
+document</li>
+</ul></li>
+<li>Smart citation commands automatically adapt the citation style:
+<code>\autocite{}</code> and <code>\smartcite{}</code>.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="context-sensitive-quotations"><a href="13-context-sensitive-quotations.html">Context Sensitive
+Quotations</a><a class="anchor" aria-label="anchor" href="#context-sensitive-quotations"></a></h3>
+<ul><li>New content coming up soon!</li>
+</ul></div>
+<div class="section level3">
+<h3 id="structuring-sources"><a href="14-structuring-sources.html">Structuring Sources</a><a class="anchor" aria-label="anchor" href="#structuring-sources"></a></h3>
+<ul><li>Use <code>\input{&lt;filename&gt;}</code> or
+<code>\include{&lt;filename&gt;}</code> to insert content from external
+<code>.tex</code> files into your main document. <code>input</code>
+includes your content directly, while <code>include</code> start a new
+page before inserting the content.</li>
+<li>Use <code>\includeonly{&lt;filename&gt;}</code> in the preamble to
+restrict which files are compiled.<br></li>
+<li>The following commands help organize the structure of a document and
+automatically adjust formatting such as page numbering:
+<code>\frontmatter</code>, <code>\mainmatter</code>,
+<code>\backmatter</code>, and <code>\appendix</code>.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="loading-and-manipulating-data"><a href="15-loading-and-manipulation-data.html">Loading and
+Manipulating Data</a><a class="anchor" aria-label="anchor" href="#loading-and-manipulating-data"></a></h3>
+<ul><li>New content coming up soon!</li>
+</ul></div>
+<div class="section level3">
+<h3 id="documentation-and-finding-help"><a href="16-documentation-and-finding-help.html">Documentation and
+Finding Help</a><a class="anchor" aria-label="anchor" href="#documentation-and-finding-help"></a></h3>
+<ul><li>
+</li></ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
+ --></div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -462,8 +850,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/reference.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/reference.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2023-03-16",
-  "datePublished": "2026-07-21"
+  "dateModified": "2026-07-24",
+  "datePublished": "2026-07-24"
 }
 
   </script><script>
