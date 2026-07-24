@@ -252,7 +252,7 @@ We'll take a closer look at the log file in a later episode.
 
 ## Challenge 2: NEED A NEW CHALLENGE
 
-:::::::::::::::::::::::: soluti
+:::::::::::::::::::::::: solution
 
 ## Answer
 
