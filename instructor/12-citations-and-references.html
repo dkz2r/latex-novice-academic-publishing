@@ -412,7 +412,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Citations and References</h1>
-        <p>Last updated on 2026-04-10 |
+        <p>Last updated on 2026-07-24 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -466,7 +466,7 @@ you re-use information and avoid manual formatting.</p>
 select <strong>Build</strong> from the left-hand panel. Under
 <strong>Default Bibliography Tool</strong>, open the drop-down menu and
 select <code>Biber</code>.</p>
-<figure><img src="../fig/12-citations-and-references/settings_biber.png" class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a></h2>
+<figure><img src="../fig/12-citations-and-references/settings_biber.png" alt="TeXstudio settings for BibTeX files." class="figure mx-auto d-block"></figure></section><section><h2 class="section-heading" id="reference-databases-bibtex">Reference Databases (BiBTeX)<a class="anchor" aria-label="anchor" href="#reference-databases-bibtex"></a></h2>
 <hr class="half-width"><p>Reference databases are normally referred to as <em>BiBTeX</em>
 files, and have the extension <code>.bib</code>. They contain one or
 more entries, one for each reference, and within each are a series of
@@ -493,12 +493,23 @@ fields.</p>
 <span id="cb1-15"><a href="#cb1-15" tabindex="-1" aria-label="code-block-1-15"></a>}</span></code></pre>
 </div>
 <p>This is an example of a BiBTeX file that contains a reference for an
-article and another for a book. Each entry type starts with a the
-<code>@</code> symbol, followed by the type of the referencing item
-(e.g. <code>article</code>) and all information appears within a pair of
-curly braces <code>{}</code>.</p>
-<p>The various fields are given in key-value format. Exactly which
-fields you need to give depends on the type of entry.</p>
+article and another for a book. Each entry type begins with the
+<code>@</code> symbol, followed by the entry type
+(e.g. <code>article</code>), with all information enclosed in curly
+braces <code>{}</code>. The first element (e.g. <code>Thomas2008</code>)
+inside the curly braces is the reference key, which is used to cite the
+entry in the document.</p>
+<p>Beyond the types already mentioned, other commonly supported types
+include <code>manual</code>, <code>conference</code>,
+<code>proceedings</code>, and <code>techreport</code>. If none of the
+available types are suitable, <code>misc</code> can be used as a
+fallback, however this may lead to incomplete references and formatting
+inconsistencies.</p>
+<p>The various fields are given in key-value format. Which fields are
+required depends on the entry type and bibliography style. Common fields
+are <code>author</code>, <code>title</code>, <code>publisher</code>,
+<code>year</code>, <code>edition</code>, <code>journal</code>,
+<code>volume</code>, and <code>pages</code>, among many others.</p>
 <div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -507,7 +518,7 @@ fields you need to give depends on the type of entry.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <p>You might notice that in the <code>author</code> field, surname and
-givenname and each entry (author) is separated by the word
+given name and each entry (author) is separated by the word
 <code>and</code>. This is essential: the format of the output needs to
 know which author is which. When using <code>biblatex</code> this
 applies also to the fields <code>publisher</code> and
@@ -522,7 +533,7 @@ be applied to the title.</p>
 <h3 id="the-bibtex-format">The BibTeX Format<a class="anchor" aria-label="anchor" href="#the-bibtex-format"></a></h3>
 <p>Editing BiBTeX files by hand can be difficult and tedious. A number
 of tools exist to help you manage your reference files. You can find a
-list of sugggested tools in the references section.</p>
+list of suggested tools in the references section.</p>
 <p>For the purposes of this workshop, we’ll use <code>biblatex</code>,
 but feel free to explore other options (e.g. <code>natbib</code>) on
 your own.</p>
@@ -540,7 +551,7 @@ your own.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-biblatex">
+<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" aria-labelledby="nav-tab-1-biblatex" role="tabpanel">
 <p>Check to make sure that your <code>main.tex</code> file is in the
 same directory as your <code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
@@ -581,8 +592,12 @@ citation style for you.</p>
 <code>\cite{key}</code> or <code>\cite{key1, key2}</code>: Cite the
 reference with the given key</li>
 <li>
-<code>\usepackage{}\parentcite{key}</code>: Cite the parent
-reference of the given key.</li>
+<code>\parencite{key}</code>: Cite the reference with parentheses
+around it, e.g. <code>(Author, Year)</code>.</li>
+<li>
+<code>\textcite{key}</code>: Cite the reference as part of the text,
+e.g. <code>Author (Year)</code>
+</li>
 <li>
 <code>\autocite{key}</code>: Automatically choose the citation
 style.</li>
@@ -610,7 +625,7 @@ date of the publication directly into your document:</p>
 <code>\citeyear{Graham1995}</code>: 1995</li>
 </ul><p>The outcome and display depends on your style.</p>
 </div>
-<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Goodtoknow">
+<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" aria-labelledby="nav-tab-1-Goodtoknow" role="tabpanel">
 <p>If you want to have all entries of your referencing file in your
 bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
 for all entries or you type <code>\cite{*}</code>. This will print all
@@ -647,7 +662,7 @@ bibliography. Note, that there is <code>\clear*field*</code>,
 <div class="callout-content">
 <p>There are many different bibliography styles available, and you can
 find a list of them at <a href="https://ctan.org/topic/biblio" class="external-link">CTAN</a>.
-Check if one of those bibligraphy and citation styles meets your
+Check if one of those bibliography and citation styles meets your
 requirements. If you want to finetune an existing one we suggest to take
 a look at <a href="https://texdoc.org/serve/biblatex-ext/0" class="external-link">biblatex-ext</a>.</p>
 </div>
@@ -739,13 +754,15 @@ identify this reference in the text like this:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>The Word2Vec algorithm <span class="kw">\autocite</span>{<span class="ex">mikolov</span>} is a popular method for generating word embeddings.</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>The Word2Vec algorithm <span class="kw">\autocite</span>{<span class="ex">mikolov</span>} is a popular method</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>for generating word embeddings.</span></code></pre>
 </div>
 <p>When we compile our document, we see the following error:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>The Word2Vec algorithm (mikolov) is a popular method for generating word embeddings.</code></pre>
+<pre class="output" tabindex="0"><code>The Word2Vec algorithm (mikolov) is a popular
+method for generating word embeddings.</code></pre>
 </div>
 <p>What’s wrong with this reference? How can we fix it?</p>
 </div>
@@ -759,12 +776,12 @@ identify this reference in the text like this:</p>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>We are referencing the key <code>mikolov</code> in our document, but
-the key in our BiBTeX file is <code>mikolov2013</code>. We need to
+the key in our BibTeX file is <code>mikolov2013</code>. We need to
 update our citation command to <code>\autocite{mikolov2013}</code>. Note
 that LaTeX still compiles the document, but it gives us a warning that
 the reference is missing and uses the key as a placeholder. You might
 use this to temporarily mark a reference that you haven’t added yet,
-just be sure to clear all of your warnings before finializing your
+just be sure to clear all of your warnings before finalizing your
 document.</p>
 </div>
 </div>
@@ -778,7 +795,7 @@ document.</p>
 <div id="challenge-3-whats-problem-with-this" class="callout-inner">
 <h3 class="callout-title">Challenge 3: What’s problem with this?</h3>
 <div class="callout-content">
-<p>We inculde the following reference in our document:</p>
+<p>We include the following reference in our document:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BIBTEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -799,7 +816,8 @@ text as follows:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="kw">\autocite</span>{<span class="ex">bentham2011</span>} provied a good overview over nanoparticles over the last 20 years.</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="kw">\autocite</span>{<span class="ex">bentham2011</span>} provide a good overview over</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a>nanoparticles over the last 20 years.</span></code></pre>
 </div>
 <p>What happens when compiling this document? What is wrong with the
 reference, and how can it be fixed?</p>
@@ -813,7 +831,7 @@ reference, and how can it be fixed?</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
-<p>The issue in this reference is cause by a sepcial character
+<p>The issue in this reference is caused by a special character
 (<code>&amp;</code> in the title field). In LaTeX the ampersand
 <code>&amp;</code> is reserved for alignment, so it must be escaped
 (<code>\&amp;</code>)in normal text.</p>
@@ -844,6 +862,83 @@ scratch. Deleting them forces a clean rebuild.</p>
 </div>
 </div>
 </div>
+<div id="challenge-4-apa-style-and-coloring." class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-4-apa-style-and-coloring." class="callout-inner">
+<h3 class="callout-title">Challenge 4: APA Style and coloring.</h3>
+<div class="callout-content">
+<p>Again we have the example:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a>The Word2Vec algorithm by <span class="kw">\textcite</span>{<span class="ex">mikolov2013</span>} is a popular</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a>method for generating word embeddings.</span></code></pre>
+</div>
+<p>Change the bibliography style to the American Psychological
+Association (APA) style by replacing the default style option. What
+differences do you notice?</p>
+<p>As a bonus challenge, try to colorize your citation links in
+blue.</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>The <code>hyperref</code> package is used to manage links in LaTeX.
+To colorize links, you first need to enable colored links and then set
+the desired color using the <code>\hypersetup{}</code> command.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="bu">\usepackage</span>[style=apa]{<span class="ex">biblatex</span>} <span class="co">% APA style</span></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a><span class="fu">\addbibresource</span>{sample-references.bib}</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a><span class="bu">\usepackage</span>{<span class="ex">hyperref</span>}</span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="fu">\hypersetup</span>{</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a>	colorlinks = true, <span class="co">% enable coloring</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a>	citecolor = blue,  <span class="co">% change color </span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a>}</span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1" aria-label="code-block-14-11"></a></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1" aria-label="code-block-14-12"></a></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1" aria-label="code-block-14-13"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1" aria-label="code-block-14-14"></a></span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1" aria-label="code-block-14-15"></a>The Word2Vec algorithm by <span class="kw">\textcite</span>{<span class="ex">mikolov2013</span>} is a popular</span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1" aria-label="code-block-14-16"></a>method for generating word embeddings.</span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1" aria-label="code-block-14-17"></a></span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1" aria-label="code-block-14-18"></a></span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1" aria-label="code-block-14-19"></a><span class="fu">\printbibliography</span></span>
+<span id="cb14-20"><a href="#cb14-20" tabindex="-1" aria-label="code-block-14-20"></a></span>
+<span id="cb14-21"><a href="#cb14-21" tabindex="-1" aria-label="code-block-14-21"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+</div>
+<p>The bibliography style also influences which information is printed.
+Due to the change to the APA style, the values of the fields
+<code>archivePrefix</code>, <code>primaryClass</code>, and
+<code>eprint</code> are no longer printed.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -851,12 +946,12 @@ scratch. Deleting them forces a clean rebuild.</p>
 <span class="callout-header">Key Points</span>
 <div class="callout-inner">
 <div class="callout-content">
-<ul><li>References are stored in a reference database, seperate from the
+<ul><li>References are stored in a reference database, separate from the
 LaTeX document.</li>
-<li>BiBTeX files are used to store references in a processing-friendly
+<li>BibTeX files are used to store references in a processing-friendly
 format and have the extension <code>.bib</code>.</li>
 <li>There are multiple libraries available to manage references in LaTeX
-documents, including <code>natbib</code> and <code>biblatex</code>.</li>
+documents, including <code>biblatex</code>.</li>
 <li>We can use the <code>\cite</code> command or one of its variants to
 cite references in our document.</li>
 </ul></div>
@@ -926,7 +1021,7 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/12-citations-and-references.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/12-citations-and-references.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-04-10",
+  "dateModified": "2026-07-24",
   "datePublished": "2026-07-24"
 }
 
