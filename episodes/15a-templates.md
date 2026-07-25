@@ -20,17 +20,17 @@ exercises: 2
 
 ## Introduction
 
-In many scientific fields, LaTeX is the default system for writing and submitting papers to journals. Journals commonly develop their own template to ensure a consistent style across all submitted articles. Templates can look a little overwhelming at first, since the folder usually contains several files. Typically the folder contains a PDF, which serves as an author guide. A quick read of this PDF goes a long way toward understanding how the template expects your document to be structured.
+In many scientific fields, LaTeX is the default system for writing and submitting papers to journals. Journals commonly develop their own template to ensure a consistent style across all submitted articles. Templates can look a little overwhelming at first, since the folder usually contains several files. Typically the folder contains a PDF, which serves as an authors guide. A quick read of this PDF goes a long way toward understanding how the template expects your document to be structured.
 
 
-In this chapter, we will use the Biometrika template as a running example. We will see what is inside a typical template, how it changes commands you already know, and how to migrate a document you've written into that template.
+In this chapter, we will use the Biometrika template as a running example. We will see what is inside a typical template, how it changes commands you already know, and how to migrate a document you have written into that template.
 
 ## Workflow
 
 In general, it is advisable to start by exploring the downloaded template folder 
 and reading the journal's author guide. 
 Many journals include a PDF inside the folder that is typeset using the template itself.
-This guide explains the technical requirements, formatting rules, and which packages are allowed or discouraged.
+This guide explains the technical requirements, formatting rules, and which packages are allowed or not allowed.
 
 
 Never edit the template's core files (`*.cls`, `*.sty`, `*.bst`). 
@@ -72,13 +72,13 @@ We provide a basic example which you can [download](/latex-novice-academic-publi
 
 ::: hint
 
-The Biometrika template uses `BibTeX` instead of `Biber` for the references. You have to change your editor settings (e.g. `Options --> Configure TeXstudio --> Build --> Default Bibliography Tool`) and have to use the `BibTeX` citation commands (`\citet{}`, `\citep{}`).
+The Biometrika template uses `BibTeX` instead of `Biber` for the references. You have to change your editor settings (e.g. `Options --> Configure TeXstudio --> Build --> Default Bibliography Tool`) and must use the `BibTeX` citation commands (`\citet{}`, `\citep{}`).
 
 :::
 
 ::: hint
 
-You have to remove comment in front of the `graphics` package to use it. Also make sure that you place your pictures inside the `art` folder.
+You have to remove the comment in front of the `graphics` package to use it. Also make sure that you place your pictures inside the `art` folder.
 
 :::
 
@@ -93,7 +93,7 @@ The final main `.tex` file can be downloaded [here](/latex-novice-academic-publi
 
 :::::::::::::::::::::::: solution
 
-The `lineno` class option enables line numbering in the document. 
+The `lineno` class option enables the line numbering in the document. 
 Line numbers are useful during the submission and peer-review process because reviewers can refer to specific lines. 
 
 For the camera-ready (final) version of the manuscript, the `lineno` option is typically disabled so that line numbers do not appear in the published document.
