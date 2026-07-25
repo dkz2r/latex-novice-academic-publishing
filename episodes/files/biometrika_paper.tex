@@ -1,0 +1,210 @@
+\documentclass[lineno]{biometrika}
+
+\usepackage{amsmath}
+	\usepackage{graphics}
+
+%% Please use the following statements for
+%% managing the text and math fonts for your papers:
+%\usepackage{times}
+%\usepackage[cmbold]{mathtime}
+%\usepackage{bm}
+\usepackage{lipsum}        % lorem ipsum text
+\usepackage{booktabs}      % nice tables
+
+\usepackage{newtxtext}
+\usepackage[subscriptcorrection]{newtxmath}
+
+%\usepackage{natbib}
+
+\graphicspath{{./art/}}
+
+\usepackage[plain,noend]{algorithm2e}
+
+\makeatletter
+\renewcommand{\algocf@captiontext}[2]{#1\algocf@typo. \AlCapFnt{}#2} % text of caption
+\renewcommand{\AlTitleFnt}[1]{#1\unskip}% default definition
+\def\@algocf@capt@plain{top}
+\renewcommand{\algocf@makecaption}[2]{%
+  \addtolength{\hsize}{\algomargin}%
+  \sbox\@tempboxa{\algocf@captiontext{#1}{#2}}%
+  \ifdim\wd\@tempboxa >\hsize%     % if caption is longer than a line
+    \hskip .5\algomargin%
+    \parbox[t]{\hsize}{\algocf@captiontext{#1}{#2}}% then caption is not centered
+  \else%
+    \global\@minipagefalse%
+    \hbox to\hsize{\box\@tempboxa}% else caption is centered
+  \fi%
+  \addtolength{\hsize}{-\algomargin}%
+}
+\makeatother
+
+%%% User-defined macros should be placed here, but keep them to a minimum.
+\def\Bka{{\it Biometrika}}
+
+\def\AIC{\textsc{aic}}
+\def\T{{ \mathrm{\scriptscriptstyle T} }}
+\def\v{{\varepsilon}}
+
+%\addtolength\topmargin{35pt}
+\DeclareMathOperator{\Thetabb}{\mathcal{C}}
+
+%\usepackage{hyperref}
+
+\begin{document}
+
+\jname{Biometrika}
+%% The year, volume, and number are determined on publication
+\jyear{2025}
+\jvol{112}
+\jnum{1}
+\cyear{2025}
+%% The \doi{...} and \accessdate commands are used by the production team
+%\doi{10.1093/biomet/asm023}
+\accessdate{Advance Access publication on 14 February 2025}
+
+%% These dates are usually set by the production team
+\received{2 January 2024}
+\revised{3 February 2025}
+
+%% The left and right page headers are defined here:
+\markboth{DKZ.2R et~al.}{Biometrika style}
+
+%% Here are the title, author names and addresses
+\title{Some notes on \textit{Biometrika} style}
+
+\author{First Author}
+\affil{DKZ.2R\\ Aachen, Germany
+\email{info@dkr2r.de}}
+
+\author{Second Author}
+\affil{University,\\ City, Germany\email{givenname.name@university.de}}
+
+
+%\author{\and D. M. TITTERINGTON}
+%\affil{Department of Statistics, University of Glasgow, Glasgow G12 8QQ, U.K. \email{mike@stats.gla.ac.uk}}
+
+\maketitle
+
+\begin{abstract}
+Our paper does not have an abstract. 
+\end{abstract}
+
+\begin{keywords}
+Address; Appendix; Figure; Length; Reference; Style; Summary; Table.
+\end{keywords}
+
+\section{Introduction}
+
+\lipsum[1-2]
+
+
+\section{Methods}
+
+\lipsum[3]
+
+
+\subsection{Model}
+
+\lipsum[10-11]
+
+\subsection{Data Collection}
+
+\lipsum[4]
+
+The following items were collected:
+
+\begin{itemize}
+	\item First item
+	\item Second item
+	\item Third item
+	\begin{itemize}
+		\item Nested item 1
+		\item Nested item 2
+	\end{itemize}
+	\item Fourth item
+\end{itemize}
+
+The data collection followed these steps:
+
+\begin{enumerate}
+	\item First step
+	\item Second step
+	\item Third step
+	\begin{enumerate}
+		\item Nested step 1
+		\item Nested step 2
+	\end{enumerate}
+	\item Fourth step
+\end{enumerate}
+
+\subsection{Data Analysis}
+
+\lipsum[5]
+
+\section{Results}
+
+\lipsum[6]
+
+\subsection{Table Example}
+
+\begin{table}[h]
+	\centering
+	\caption{Main table}
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Product} & \textbf{Value} & \textbf{Unit} \\
+		\midrule
+		Product A & 1.00 & kg \\
+		Product B & 4.20 & kg \\
+		Product C & 3.00 & kg \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:sample}
+\end{table}
+
+As shown in Table \ref{tab:sample}, the values increase linearly.
+
+\subsection{Figure Example}
+
+\begin{figure}[h]
+	\centering
+	% replace with your image
+	\includegraphics[width=0.5\textwidth]{my-awesome-image.png}
+	\caption{Our main image.}
+	\label{fig:sample}
+\end{figure}
+
+As shown in Figure \ref{fig:sample}, \lipsum[7]
+
+
+
+\section{Conclusion}
+
+\lipsum[10]	
+
+We used several references in earlier chapters like: \citet{Graham1995, Huff1954}.
+
+
+\newpage
+
+\newpage
+
+
+%Further instructions will be given when a paper is accepted.
+%\vspace*{-10pt}
+
+\appendix
+
+\appendixone
+\section*{Appendix 1}
+\subsection*{General}
+
+Additional information and graphics.
+
+\bibliographystyle{biometrika}
+\bibliography{paper-ref}
+
+ 
+
+
+\end{document}\vspace{0.4cm} 

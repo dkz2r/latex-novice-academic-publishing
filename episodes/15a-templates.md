@@ -68,12 +68,23 @@ journal_template/
 
 ## Challenge 1: Migrate your Paper to the Biometrika Template
 
-We provide a basic paper which you can [download](/files/paper.zip) and then migrate into the [Biometrika](/files/Biometrika.zip) template. 
+We provide a basic paper which you can [download](/files/paper.zip) and then use for migrating it into the [Biometrika](/files/Biometrika.zip) template. 
 
+::: hint
+
+The Biometrika template uses `BibTeX` instead of `Biber` for the references. You have to change your editor settings (e.g. `Options --> Configure TeXstudio --> Build --> Default Bibliography Tool`) and have to use the `BibTeX` citation commands (`\citet{}`, `\citep{}`).
+
+:::
+
+::: hint
+
+You have to remove comment in front of the `graphics` package to use it. Also make sure that you place your pictures inside the `art` folder.
+
+:::
 
 :::::::::::::::::::::::: solution
 
-styleguide upload? 
+The final main `.tex` file can be downloaded [here](/files/biometrika_paper.tex). Please ensure that you place the file in the template folder so that the links to the associated files work correctly.
 
 :::::::::::::::::::::::::::::::::
 
