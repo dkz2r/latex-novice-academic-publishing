@@ -12,7 +12,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Get a journal-specific LaTeX class file (using Biometrika as an example).
+- Get a journal-specific LaTeX template.
 - Identify the special commands a journal template provides. 
 - Migrate content into the template.
 
@@ -68,7 +68,7 @@ journal_template/
 
 ## Challenge 1: Migrate your Paper to the Biometrika Template
 
-We provide a basic paper which you can [download](/files/paper.zip) and then use for migrating it into the [Biometrika](/files/Biometrika.zip) template. 
+We provide a basic example which you can [download](/latex-novice-academic-publishing/files/paper.zip) and then use for migrating it into the [Biometrika](/latex-novice-academic-publishing/files/Biometrika.zip) template. 
 
 ::: hint
 
@@ -84,7 +84,7 @@ You have to remove comment in front of the `graphics` package to use it. Also ma
 
 :::::::::::::::::::::::: solution
 
-The final main `.tex` file can be downloaded [here](/files/biometrika_paper.tex). Please ensure that you place the file in the template folder so that the links to the associated files work correctly.
+The final main `.tex` file can be downloaded [here](/latex-novice-academic-publishing/files/biometrika_paper.tex). Please ensure that you place the file in the template folder so that the links to the associated files work correctly.
 
 :::::::::::::::::::::::::::::::::
 
