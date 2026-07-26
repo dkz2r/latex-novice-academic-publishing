@@ -30,8 +30,8 @@ reference databases lets you re-use information and avoid manual formatting.
 
 ## Settings
 
-TeXstudio offers several backend options for handling `BibTeX` files. For the purposes of this workshop, we’ll use `Biber`. 
-Open TeXstudio and go to **Options** > **Configure TeXstudio**. 
+TeXstudio offers several backend options for handling `BibTeX` files. For the purposes of this workshop, we’ll use `Biber`.
+Open TeXstudio and go to **Options** > **Configure TeXstudio**.
 In the configuration dialog, select **Build** from the left-hand panel. Under **Default Bibliography Tool**, open the drop-down menu and select `Biber`.
 
 ![](fig/12-citations-and-references/settings_biber.png){alt='TeXstudio settings for BibTeX files.'}
@@ -62,19 +62,19 @@ Create a new file in your project called `sample-references.bib` and add the fol
 ```
 
 This is an example of a BiBTeX file that contains a reference for an article and another for a
-book. Each entry type begins with the `@` symbol, followed by the entry type (e.g. `article`), 
-with all information enclosed in curly braces `{}`. 
-The first element (e.g. `Thomas2008`) inside the curly braces is the reference key, 
+book. Each entry type begins with the `@` symbol, followed by the entry type (e.g. `article`),
+with all information enclosed in curly braces `{}`.
+The first element (e.g. `Thomas2008`) inside the curly braces is the reference key,
 which is used to cite the entry in the document.
 
-Beyond the types already mentioned, other commonly supported types include 
+Beyond the types already mentioned, other commonly supported types include
 `manual`, `conference`, `proceedings`, and `techreport`. If none of the available
-types are suitable, `misc` can be used as a fallback, however this may lead to 
+types are suitable, `misc` can be used as a fallback, however this may lead to
 incomplete references and formatting inconsistencies.
 
-The various fields are given in key-value format. Which fields are required 
+The various fields are given in key-value format. Which fields are required
 depends on the entry type and bibliography style. Common fields are `author`,
-`title`, `publisher`, `year`, `edition`, `journal`, `volume`,  and `pages`, among many others. 
+`title`, `publisher`, `year`, `edition`, `journal`, `volume`,  and `pages`, among many others.
 
 ::: callout
 
@@ -93,7 +93,7 @@ is to prevent any case-changing that might be applied to the title.
 Editing BiBTeX files by hand can be difficult and tedious. A number of tools exist to help you
 manage your reference files. You can find a list of suggested tools in the references section.
 
-For the purposes of this workshop, we'll use `biblatex`, but feel free to explore other options (e.g. `natbib`) on your own. 
+For the purposes of this workshop, we'll use `biblatex`, but feel free to explore other options (e.g. `natbib`) on your own.
 
 ::: group-tab
 
@@ -150,9 +150,9 @@ is no need for creating another footnote but behaving like autocite.
 Furthermore you can use more commands to get the author, title or the date of
 the publication directly into your document:
 
-- `\citeauthor{Graham1995}`: Graham and Harris   
-- `\citetitle{Graham1995}`: "The Humble Paperclip"  
-- `\citeyear{Graham1995}`: 1995  
+- `\citeauthor{Graham1995}`: Graham and Harris
+- `\citetitle{Graham1995}`: "The Humble Paperclip"
+- `\citeyear{Graham1995}`: 1995
 
 The outcome and display depends on your style.
 
@@ -282,7 +282,7 @@ We include the following reference in our document:
 ```bibtex
 @article{bentham2011,
 	author = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},
-	title = {20 Years of Lipid Nanoparticles (SLN & NLC): Present State of Development & Industrial Applications}, 
+	title = {20 Years of Lipid Nanoparticles (SLN & NLC): Present State of Development & Industrial Applications},
 	journal= {Current Drug Discovery Technologies},
 	year = {2011},
 	volume = {8},
@@ -304,20 +304,20 @@ What happens when compiling this document? What is wrong with the reference, and
 
 :::::::::::::::::::::::: solution
 
-The issue in this reference is caused by a special character (`&` in the title field). 
-In LaTeX the ampersand `&` is reserved for alignment, so it must be escaped (`\&`)in normal text. 
+The issue in this reference is caused by a special character (`&` in the title field).
+In LaTeX the ampersand `&` is reserved for alignment, so it must be escaped (`\&`)in normal text.
 
 
-If special characters are not escaped properly, LaTeX produce unexpected output or may fail to compile. 
+If special characters are not escaped properly, LaTeX produce unexpected output or may fail to compile.
 In some cases, this can also corrupt auxiliary files (such as `.aux` or `.bbl`), preventing the document from rendering as expected.
-If problems persist after correcting the reference, a common solution is to delete all intermediate files and recompile the document from scratch. Deleting them forces a clean rebuild. 
+If problems persist after correcting the reference, a common solution is to delete all intermediate files and recompile the document from scratch. Deleting them forces a clean rebuild.
 
 Corrected bib entry:
 
 ```bibtex
 @article{bentham2011,
 	author = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},
-	title = {20 Years of Lipid Nanoparticles (SLN \& NLC): Present State of Development \& Industrial Applications}, 
+	title = {20 Years of Lipid Nanoparticles (SLN \& NLC): Present State of Development \& Industrial Applications},
 	journal= {Current Drug Discovery Technologies},
 	year = {2011},
 	volume = {8},
@@ -338,15 +338,15 @@ The Word2Vec algorithm by \textcite{mikolov2013} is a popular
 method for generating word embeddings.
 ```
 
-Change the bibliography style to the American Psychological Association (APA) style 
-by replacing the default style option. What differences do you notice?  
+Change the bibliography style to the American Psychological Association (APA) style
+by replacing the default style option. What differences do you notice?
 
 
 As a bonus challenge, try to colorize your citation links in blue.
 
 ::: hint
 
-The `hyperref` package is used to manage links in LaTeX. 
+The `hyperref` package is used to manage links in LaTeX.
 To colorize links, you first need to enable colored links and then set the desired color using the `\hypersetup{}` command.
 :::
 
@@ -362,7 +362,7 @@ To colorize links, you first need to enable colored links and then set the desir
 
 \hypersetup{
 	colorlinks = true, % enable coloring
-	citecolor = blue,  % change color 
+	citecolor = blue,  % change color
 }
 
 
@@ -377,8 +377,8 @@ method for generating word embeddings.
 \end{document}
 ```
 
-The bibliography style also influences which information is printed. 
-Due to the change to the APA style, the values of the fields `archivePrefix`, 
+The bibliography style also influences which information is printed.
+Due to the change to the APA style, the values of the fields `archivePrefix`,
 `primaryClass`, and `eprint` are no longer printed.
 
 
