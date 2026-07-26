@@ -355,14 +355,14 @@ any figure you want to be included in the list.
 
 ## Challenge 1: Can you do it?
 
-Consider again our running example of `example-image.PNG`.
-Include this image into your LaTeX document by using the `figure` environment.
-Make sure that your image is centered and rotate the image by 45 degree.
-Add the following caption to your image: "This caption has a **bold** word included."
-How would your LaTeX look like?
+Consider again our running example of `my-awesome-image.PNG`.
+Try the following:
 
+1. Include this image into your LaTeX document by using the `figure` environment.
+2. Make sure that your image is centered and rotate the image by 45 degree.
+3. Add the following caption to your image: "This caption has a **bold** word included."
 
-
+What would your final LaTeX look like?
 
 :::::::::::::::::::::::: solution
 
@@ -370,6 +370,7 @@ How would your LaTeX look like?
 
 We use the `\centering` command in the `figure` environment and specify `angle=45` to rotate the
 image.
+Below the graphics, *but still within the `figure` environment*, we use the `\caption` command to add a caption to our image.
 
 ```latex
 \documentclass{article}

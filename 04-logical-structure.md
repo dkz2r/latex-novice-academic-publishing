@@ -37,7 +37,7 @@ keep these elements consistent throughout your document. Let's add sections to o
 \begin{document} % The document body starts here
 
 % The section command automatically numbers and formats the section heading.
-\section{Sections}
+\section{My First Section}
 
 Hello World!
 
@@ -46,11 +46,11 @@ This is my first LaTeX document.
 I can add content to my first section!
 
 % The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
+\subsection{This is a Subsection of my First Section}
 
 I can put a subsection inside my first section.
 
-\section{Second Section}
+\section{This is a Second Section}
 
 And this text will go into another section.
 
@@ -98,7 +98,7 @@ contents at the location where the command is placed.
 \tableofcontents
 
 % The section command automatically numbers and formats the section heading.
-\section{Sections}
+\section{My First Section}
 
 Hello World!
 
@@ -107,11 +107,11 @@ This is my first LaTeX document.
 I can add content to my first section!
 
 % The subsection command does the same thing, but for sections within sections.
-\subsection{Subsection}
+\subsection{This is a Subsection of my First Section}
 
 I can put a subsection inside my first section.
 
-\section{Second Section}
+\section{This is a Second Section}
 
 And this text will go into another section.
 
