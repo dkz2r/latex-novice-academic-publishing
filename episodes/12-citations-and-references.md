@@ -275,7 +275,7 @@ just be sure to clear all of your warnings before finalizing your document.
 
 :::::::::::::::::::::::::::::::::
 
-## Challenge 3: What's problem with this?
+## Challenge 3: What's the problem with this?
 
 We include the following reference in our document:
 
