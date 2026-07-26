@@ -371,7 +371,7 @@ for each block of text.
 
 ## Challenge 3: Making a custom quote block
 
-Create a customg quote block using a `center` environment and `\vspace` commands. See if you can
+Create a custom quote block using a `center` environment and `\vspace` commands. See if you can
 make it look something like this:
 
 ![](fig/07-font-format-and-spacing/challenge-quote-example.PNG){alt="Example of a custom quote block"}
