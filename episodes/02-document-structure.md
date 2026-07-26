@@ -175,7 +175,7 @@ to your document as you see fit.
 
 As with our example from the previous episode, we can render our document by clicking on the
 large green "Typeset" button in TeXworks, or by running the command `pdflatex main.tex` in
-our terminal/consoloe.
+our terminal/console.
 
 ::: callout
 
