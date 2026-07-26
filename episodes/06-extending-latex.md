@@ -251,10 +251,14 @@ that we can use to highlight commands in the document:
 
 ```latex
 % Italicise LaTeX commands
-\newcommand{\cmd}[1]{\textbackslash\textit{#1}}
+\newcommand{\latexcmd}[1]{\textbackslash\textit{#1}}
 ```
 
-We'll use this command in later sections.
+We can use this new command to highlight LaTeX commands in our document:
+
+```latex
+We can use the \latexcmd{section} command to create a new section in our document.
+```
 
 ## Challenges
 
@@ -274,6 +278,9 @@ How would you add the lipsum package to the preamble of your document?
 Add the line `\usepackage{lipsum}` to the preamble of your document.
 
 You can then use the `\lipsum` command in the body of your document to add some dummy text.
+
+**Bonus**: The `\lipsum` command works by itself, but can also take arguments to specify which paragraphs of the dummy text to include.
+Try adding `\lipsum[3-4]` to your document to include only paragraphs 3 and 4 of the dummy text.
 
 :::::::::::::::::::::::::::::::::
 
@@ -319,7 +326,7 @@ use it like this:
 
 ## Challenge 3: Can you write your own command with two arguments?
 
-Suppose you want to define a new command that takes as input two words as arguments.
+Suppose you want to define a new command that takes two words as input.
 This first word shall be written **bold** while the second word shall be written *italic*.
 Moreover, the first and the second word are separated by a comma followed by a whitespace.
 
@@ -334,9 +341,9 @@ This newly defined command highlights these two words: **Apple**, *Banana*.
 ## Output
 
 The new `\boit` command would take two arguments: the first argument would be used with
-`\tetxbf{#1}` to make the first word appear **bold**, and the second argument would be used with
-`\tetxit{#2}` to make the first word appear *italic*.
-Between `\tetxbf{#1}` and `\tetxit{#2}`, we would write `, ` to separate both words.
+`\textbf{#1}` to make the first word appear **bold**, and the second argument would be used with
+`\textit{#2}` to make the first word appear *italic*.
+Between `\textbf{#1}` and `\textit{#2}`, we would write `, ` to separate both words.
 We would use the new command like this:
 
 ```latex
