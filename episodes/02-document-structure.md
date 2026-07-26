@@ -249,7 +249,7 @@ There is an error in the following LaTeX document. Can you find it?
 ```latex
 \documentclass{article}
 
-\title{My First LaTeX Document}
+\section{My First LaTeX Document}
 
 I've created a new LaTeX document.
 
