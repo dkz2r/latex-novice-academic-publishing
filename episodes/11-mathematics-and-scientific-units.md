@@ -200,7 +200,13 @@ examples.
 
 See if you can write the following mathematical expression in LaTeX:
 
-- Special Relativity: t' = t / sqrt(1 - v^2 / c^2)
+![](./fig/11-mathematics-and-scientific-units/special-relativity-formula.jpg){alt="LaTeX output of the special relativity formula."}
+
+::: hint
+
+You will need the `\frac` and `\sqrt` commands to create the fraction and square root, respectively.
+
+:::
 
 :::::::::::::::::::::::: solution
 
