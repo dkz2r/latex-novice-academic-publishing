@@ -59,9 +59,9 @@ There are two types of lists: ordered and unordered.
 Ordered lists have a number or letter associated with each item.
 
 \begin{enumerate}
-  \item Item 1
-  \item Item 2
-  \item Item 3
+  \item Steps of Knowledge
+  \item The Temple Games
+  \item The Temple Run
 \end{enumerate}
 
 \end{document}
@@ -89,9 +89,9 @@ you want a list with this symbol you can use the following LaTeX code:
 
 % List with custom bullet point symbols
 \begin{itemize}
-  \item[>] Item 1
-  \item[>] Item 2
-  \item[>] Item 3
+  \item[>] Purple Parrots
+  \item[>] Blue Barracudas
+  \item[>] Silver Snakes
 \end{itemize}
 
 \end{document}
