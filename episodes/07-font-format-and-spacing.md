@@ -131,6 +131,14 @@ option:
 \documentclass[parskip=full]{scrbook}
 ```
 
+::: spoiler
+
+What does `parskip=full` do?
+
+This is related to the documentclass - the example here is using "scrbook", which is a different document class than we are using (article). The example is explaining that the parskip option when using "scrbook" or "scrartcl" doesn't necessarily need to be imported via a usepackage command, but can be specified in the parameters of the document class directly.
+
+:::
+
 ## Forcing a New Line
 
 Most of the time, you should not force a new line in your document; you almost certainly want to
@@ -166,6 +174,13 @@ vertical space. We can do this using the `\hspace` and `\vspace` commands:
 \hspace{1cm} % 1cm of horizontal space
 \vspace{1cm} % 1cm of vertical space
 ```
+
+::: callout
+
+Note that the some commands, like `\vspace`, don't work outside of certain environments.
+For example, if you try to use `\vspace` in a section in your document, it will have no effect.
+
+:::
 
 We can also use the `\vfill` command to fill the remaining space on a page. This is useful for
 centering content vertically on a page.
