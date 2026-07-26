@@ -47,7 +47,7 @@ text block in our document to 6cm, we would update this line to look like this:
 Give this a try in our `main.tex` document to see what happens. When you render the document, you
 should see something like this:
 
-![](fig/06-extending-latex/geometry-set-width.PNG){alt='A document with a narrow text block.'}
+![](fig/06-extending-latex/geometry-set-width.png){alt='A document with a narrow text block.'}
 
 However this isn't what we really want, so we'll remove this line from our document.
 
@@ -150,8 +150,6 @@ around each word we want to highlight:
 ```latex
 This is my first \textbf{\underline{LaTeX}} document.
 
-\section{Sections}
-
 I can add content to my first \textbf{\underline{section}}!
 ```
 
@@ -193,13 +191,20 @@ Let's take a minute to go through and add the `\kw` command to all the keywords 
 
 :::
 
-::: spoiler
+::: callout
 
-Related to the `\newcommand` command, we can also use the `\renewcommand` command to change the
-definition of an existing command. This is useful, for example, if we want to change the
-effect of a command partway through a document, or if we want to change the definition of a
-command that is already defined in a package. It has an identical syntax to the `\newcommand`
-command:
+What happens when we try to define the same command twice in the same document?
+You'll get an error message that looks something like this:
+
+```
+! LaTeX Error: Command `\kw' already defined.
+               Or name `\end...` illegal, see p.192 of the manual.
+```
+
+In order to define the same command twice, we have to use the `\renewcommand` command instead of `\newcommand`.
+This is useful, for example, if we want to change the effect of a command partway through a document, or if we want to change the definition of a command that is already defined in a package.
+
+It has an identical syntax to the `\newcommand` command:
 
 ```latex
 \renewcommand{\commandname}[number of arguments]{definition}
@@ -253,10 +258,14 @@ that we can use to highlight commands in the document:
 
 ```latex
 % Italicise LaTeX commands
-\newcommand{\cmd}[1]{\textit{#1}}
+\newcommand{\latexcmd}[1]{\textbackslash\textit{#1}}
 ```
 
-We'll use this command in later sections.
+We can use this new command to highlight LaTeX commands in our document:
+
+```latex
+We can use the \latexcmd{section} command to create a new section in our document.
+```
 
 ## Challenges
 
@@ -276,6 +285,9 @@ How would you add the lipsum package to the preamble of your document?
 Add the line `\usepackage{lipsum}` to the preamble of your document.
 
 You can then use the `\lipsum` command in the body of your document to add some dummy text.
+
+**Bonus**: The `\lipsum` command works by itself, but can also take arguments to specify which paragraphs of the dummy text to include.
+Try adding `\lipsum[3-4]` to your document to include only paragraphs 3 and 4 of the dummy text.
 
 :::::::::::::::::::::::::::::::::
 
@@ -321,7 +333,7 @@ use it like this:
 
 ## Challenge 3: Can you write your own command with two arguments?
 
-Suppose you want to define a new command that takes as input two words as arguments.
+Suppose you want to define a new command that takes two words as input.
 This first word shall be written **bold** while the second word shall be written *italic*.
 Moreover, the first and the second word are separated by a comma followed by a whitespace.
 
@@ -336,9 +348,9 @@ This newly defined command highlights these two words: **Apple**, *Banana*.
 ## Output
 
 The new `\boit` command would take two arguments: the first argument would be used with
-`\tetxbf{#1}` to make the first word appear **bold**, and the second argument would be used with
-`\tetxit{#2}` to make the first word appear *italic*.
-Between `\tetxbf{#1}` and `\tetxit{#2}`, we would write `, ` to separate both words.
+`\textbf{#1}` to make the first word appear **bold**, and the second argument would be used with
+`\textit{#2}` to make the first word appear *italic*.
+Between `\textbf{#1}` and `\textit{#2}`, we would write `, ` to separate both words.
 We would use the new command like this:
 
 ```latex

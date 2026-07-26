@@ -160,6 +160,14 @@ highlighting to your text editor of choice.
 
 :::
 
+::: callout
+
+Does LaTeX have multiline comments?
+
+In base LaTeX, no - you have to put a "%" in front of each of the lines you want to comment out. There are workarounds that people have developed ([see this StackOverflow discussion](https://tex.stackexchange.com/questions/87303/multi-line-block-comments-in-latex)), or you can use the `verbatim` package, that defines a "comment" environment - any text within this environment will not be included in the final document.
+
+:::
+
 Going forward, the examples we provide will not always include comments, but you should add them
 to your document as you see fit.
 
@@ -167,7 +175,7 @@ to your document as you see fit.
 
 As with our example from the previous episode, we can render our document by clicking on the
 large green "Typeset" button in TeXworks, or by running the command `pdflatex main.tex` in
-our terminal/consoloe.
+our terminal/console.
 
 ::: callout
 
@@ -249,7 +257,7 @@ There is an error in the following LaTeX document. Can you find it?
 ```latex
 \documentclass{article}
 
-\title{My First LaTeX Document}
+\section{My First LaTeX Document}
 
 I've created a new LaTeX document.
 

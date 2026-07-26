@@ -200,7 +200,13 @@ examples.
 
 See if you can write the following mathematical expression in LaTeX:
 
-- Special Relativity: t' = t / sqrt(1 - v^2 / c^2)
+![](./fig/11-mathematics-and-scientific-units/special-relativity-formula.jpg){alt="LaTeX output of the special relativity formula."}
+
+::: hint
+
+You will need the `\frac` and `\sqrt` commands to create the fraction and square root, respectively.
+
+:::
 
 :::::::::::::::::::::::: solution
 
@@ -223,6 +229,9 @@ What's wrong with the following LaTeX code?
 \(F = G * (m_1 m_2) / r^2 \)
 ```
 
+We are trying to display something that looks like this:
+
+![](./fig/11-mathematics-and-scientific-units/gravitational-force-formula.jpg){alt="LaTeX output of the gravitational force formula."}
 
 :::::::::::::::::::::::: solution
 
