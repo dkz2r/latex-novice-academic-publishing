@@ -191,13 +191,20 @@ Let's take a minute to go through and add the `\kw` command to all the keywords 
 
 :::
 
-::: spoiler
+::: callout
 
-Related to the `\newcommand` command, we can also use the `\renewcommand` command to change the
-definition of an existing command. This is useful, for example, if we want to change the
-effect of a command partway through a document, or if we want to change the definition of a
-command that is already defined in a package. It has an identical syntax to the `\newcommand`
-command:
+What happens when we try to define the same command twice in the same document?
+You'll get an error message that looks something like this:
+
+```
+! LaTeX Error: Command `\kw' already defined.
+               Or name `\end...` illegal, see p.192 of the manual.
+```
+
+In order to define the same command twice, we have to use the `\renewcommand` command instead of `\newcommand`.
+This is useful, for example, if we want to change the effect of a command partway through a document, or if we want to change the definition of a command that is already defined in a package.
+
+It has an identical syntax to the `\newcommand` command:
 
 ```latex
 \renewcommand{\commandname}[number of arguments]{definition}
