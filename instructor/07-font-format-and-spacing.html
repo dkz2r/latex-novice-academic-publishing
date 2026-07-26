@@ -416,7 +416,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Fonts, Formatting and Spacing</h1>
-        <p>Last updated on 2026-04-08 |
+        <p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/07-font-format-and-spacing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -572,6 +572,24 @@ using a global option:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="bu">\documentclass</span>[parskip=full]{<span class="ex">scrbook</span>}</span></code></pre>
 </div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>What does <code>parskip=full</code> do?</p>
+<p>This is related to the documentclass - the example here is using
+“scrbook”, which is a different document class than we are using
+(article). The example is explaining that the parskip option when using
+“scrbook” or “scrartcl” doesn’t necessarily need to be imported via a
+usepackage command, but can be specified in the parameters of the
+document class directly.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="forcing-a-new-line">Forcing a New Line<a class="anchor" aria-label="anchor" href="#forcing-a-new-line"></a></h2>
 <hr class="half-width"><p>Most of the time, you should not force a new line in your document;
 you almost certainly want to use a new paragraph or <code>parskip</code>
@@ -613,6 +631,20 @@ to add explicit horizontal or vertical space. We can do this using the
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="fu">\hspace</span>{1cm} <span class="co">% 1cm of horizontal space</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="fu">\vspace</span>{1cm} <span class="co">% 1cm of vertical space</span></span></code></pre>
+</div>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Note that the some commands, like <code>\vspace</code>, don’t work
+outside of certain environments. For example, if you try to use
+<code>\vspace</code> in a section in your document, it will have no
+effect.</p>
+</div>
+</div>
 </div>
 <p>We can also use the <code>\vfill</code> command to fill the remaining
 space on a page. This is useful for centering content vertically on a
@@ -679,7 +711,7 @@ enclose everything in a <code>titlepage</code> environment:</p>
 <span id="cb11-7"><a href="#cb11-7" tabindex="-1" aria-label="code-block-11-7"></a>    January 1, 2000</span>
 <span id="cb11-8"><a href="#cb11-8" tabindex="-1" aria-label="code-block-11-8"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span></code></pre>
 </div>
-<div id="callout4" class="callout">
+<div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -862,7 +894,7 @@ command in order to create a new paragraph for each block of text.</p>
 <div id="challenge-3-making-a-custom-quote-block" class="callout-inner">
 <h3 class="callout-title">Challenge 3: Making a custom quote block</h3>
 <div class="callout-content">
-<p>Create a customg quote block using a <code>center</code> environment
+<p>Create a custom quote block using a <code>center</code> environment
 and <code>\vspace</code> commands. See if you can make it look something
 like this:</p>
 <figure><img src="../fig/07-font-format-and-spacing/challenge-quote-example.PNG" alt="Example of a custom quote block" class="figure mx-auto d-block"></figure><p>Note that there is some vertical space above and below the quote, and
@@ -1013,8 +1045,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/07-font-format-and-spacing.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/07-font-format-and-spacing.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-04-08",
-  "datePublished": "2026-07-24"
+  "dateModified": "2026-07-26",
+  "datePublished": "2026-07-26"
 }
 
   </script><script>

@@ -874,7 +874,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-document-structure"><p>Content from <a href="02-document-structure.html">Basic LaTeX Document Components</a></p>
 <hr>
-<p>Last updated on 2026-07-08 |
+<p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/02-document-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1105,6 +1105,24 @@ text editor of choice.</p>
 </div>
 </div>
 </div>
+<div id="callout5" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Does LaTeX have multiline comments?</p>
+<p>In base LaTeX, no - you have to put a “%” in front of each of the
+lines you want to comment out. There are workarounds that people have
+developed (<a href="https://tex.stackexchange.com/questions/87303/multi-line-block-comments-in-latex" class="external-link">see
+this StackOverflow discussion</a>), or you can use the
+<code>verbatim</code> package, that defines a “comment” environment -
+any text within this environment will not be included in the final
+document.</p>
+</div>
+</div>
+</div>
 <p>Going forward, the examples we provide will not always include
 comments, but you should add them to your document as you see fit.</p>
 </section><section><h2 class="section-heading" id="rendering-the-document">Rendering the Document<a class="anchor" aria-label="anchor" href="#rendering-the-document"></a>
@@ -1113,8 +1131,8 @@ comments, but you should add them to your document as you see fit.</p>
 <p>As with our example from the previous episode, we can render our
 document by clicking on the large green “Typeset” button in TeXworks, or
 by running the command <code>pdflatex main.tex</code> in our
-terminal/consoloe.</p>
-<div id="callout5" class="callout">
+terminal/console.</p>
+<div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1170,7 +1188,7 @@ them with a backslash. For example,</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>What about the <code>\</code> character?</p>
 <p>The <code>\</code> character is used to escape other characters in
@@ -1186,7 +1204,7 @@ breaks.</p>
 </div>
 </div>
 </div>
-<div id="callout6" class="callout">
+<div id="callout7" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1234,7 +1252,7 @@ out!)</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="fu">\title</span>{My First LaTeX Document}</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="kw">\section</span>{My First LaTeX Document}</span>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a></span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>I've created a new LaTeX document.</span>
 <span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a></span>
@@ -1252,7 +1270,7 @@ out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Each section of a LaTeX document must be enclosed in a pair of
 <code>\begin{...}</code> and <code>\end{...}</code>. This document is
@@ -1280,7 +1298,7 @@ characters.</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Answer </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>We need to use escapes before each of the special characters. The
 following LaTeX code will display the text correctly:</p>
@@ -1342,7 +1360,7 @@ new project folder to test this out!)</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Answer </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The command <code>\par</code> initiates a new paragraph for us even
 if we write text in just one line (see Option C). Solely, Option B out
@@ -1376,7 +1394,7 @@ Even more, I can write # and ^ correctly using LaTeX.</code></pre>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Answer </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>We need to use <code>\par</code> to initiate a new paragraph without
 using a new line of code. Moreover, we need to use escapes before each
@@ -1415,7 +1433,7 @@ or hovering over the red circle in the text editor.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, here is what our LaTeX document looks like:</p>
 <div class="codewrapper sourceCode" id="cb14">
@@ -1834,7 +1852,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-04-logical-structure"><p>Content from <a href="04-logical-structure.html">The Structure of a Document</a></p>
 <hr>
-<p>Last updated on 2026-07-08 |
+<p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/04-logical-structure.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1888,7 +1906,7 @@ your document. Let’s add sections to our document.</p>
 <span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="kw">\begin</span>{<span class="ex">document</span>} <span class="co">% The document body starts here</span></span>
 <span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a></span>
 <span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a><span class="kw">\section</span>{My First Section}</span>
 <span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a></span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a>Hello World!</span>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a></span>
@@ -1897,11 +1915,11 @@ your document. Let’s add sections to our document.</p>
 <span id="cb1-15"><a href="#cb1-15" tabindex="-1" aria-label="code-block-1-15"></a>I can add content to my first section!</span>
 <span id="cb1-16"><a href="#cb1-16" tabindex="-1" aria-label="code-block-1-16"></a></span>
 <span id="cb1-17"><a href="#cb1-17" tabindex="-1" aria-label="code-block-1-17"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1" aria-label="code-block-1-18"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1" aria-label="code-block-1-18"></a><span class="kw">\subsection</span>{This is a Subsection of my First Section}</span>
 <span id="cb1-19"><a href="#cb1-19" tabindex="-1" aria-label="code-block-1-19"></a></span>
 <span id="cb1-20"><a href="#cb1-20" tabindex="-1" aria-label="code-block-1-20"></a>I can put a subsection inside my first section.</span>
 <span id="cb1-21"><a href="#cb1-21" tabindex="-1" aria-label="code-block-1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22" tabindex="-1" aria-label="code-block-1-22"></a><span class="kw">\section</span>{Second Section}</span>
+<span id="cb1-22"><a href="#cb1-22" tabindex="-1" aria-label="code-block-1-22"></a><span class="kw">\section</span>{This is a Second Section}</span>
 <span id="cb1-23"><a href="#cb1-23" tabindex="-1" aria-label="code-block-1-23"></a></span>
 <span id="cb1-24"><a href="#cb1-24" tabindex="-1" aria-label="code-block-1-24"></a>And this text will go into another section.</span>
 <span id="cb1-25"><a href="#cb1-25" tabindex="-1" aria-label="code-block-1-25"></a></span>
@@ -1962,7 +1980,7 @@ placed.</p>
 <span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="fu">\tableofcontents</span></span>
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a></span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1" aria-label="code-block-2-10"></a><span class="co">% The section command automatically numbers and formats the section heading.</span></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a><span class="kw">\section</span>{Sections}</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a><span class="kw">\section</span>{My First Section}</span>
 <span id="cb2-12"><a href="#cb2-12" tabindex="-1" aria-label="code-block-2-12"></a></span>
 <span id="cb2-13"><a href="#cb2-13" tabindex="-1" aria-label="code-block-2-13"></a>Hello World!</span>
 <span id="cb2-14"><a href="#cb2-14" tabindex="-1" aria-label="code-block-2-14"></a></span>
@@ -1971,11 +1989,11 @@ placed.</p>
 <span id="cb2-17"><a href="#cb2-17" tabindex="-1" aria-label="code-block-2-17"></a>I can add content to my first section!</span>
 <span id="cb2-18"><a href="#cb2-18" tabindex="-1" aria-label="code-block-2-18"></a></span>
 <span id="cb2-19"><a href="#cb2-19" tabindex="-1" aria-label="code-block-2-19"></a><span class="co">% The subsection command does the same thing, but for sections within sections.</span></span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1" aria-label="code-block-2-20"></a><span class="kw">\subsection</span>{Subsection}</span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1" aria-label="code-block-2-20"></a><span class="kw">\subsection</span>{This is a Subsection of my First Section}</span>
 <span id="cb2-21"><a href="#cb2-21" tabindex="-1" aria-label="code-block-2-21"></a></span>
 <span id="cb2-22"><a href="#cb2-22" tabindex="-1" aria-label="code-block-2-22"></a>I can put a subsection inside my first section.</span>
 <span id="cb2-23"><a href="#cb2-23" tabindex="-1" aria-label="code-block-2-23"></a></span>
-<span id="cb2-24"><a href="#cb2-24" tabindex="-1" aria-label="code-block-2-24"></a><span class="kw">\section</span>{Second Section}</span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1" aria-label="code-block-2-24"></a><span class="kw">\section</span>{This is a Second Section}</span>
 <span id="cb2-25"><a href="#cb2-25" tabindex="-1" aria-label="code-block-2-25"></a></span>
 <span id="cb2-26"><a href="#cb2-26" tabindex="-1" aria-label="code-block-2-26"></a>And this text will go into another section.</span>
 <span id="cb2-27"><a href="#cb2-27" tabindex="-1" aria-label="code-block-2-27"></a></span>
@@ -2001,7 +2019,7 @@ placed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 
 </div>
@@ -2029,7 +2047,7 @@ placed.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="files/document_state/ep-03.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -2043,7 +2061,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-06-extending-latex"><p>Content from <a href="06-extending-latex.html">Extending LaTeX</a></p>
 <hr>
-<p>Last updated on 2026-04-08 |
+<p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/06-extending-latex.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2109,7 +2127,7 @@ document to 6cm, we would update this line to look like this:</p>
 <p>Give this a try in our <code>main.tex</code> document to see what
 happens. When you render the document, you should see something like
 this:</p>
-<figure><img src="fig/06-extending-latex/geometry-set-width.PNG" alt="A document with a narrow text block." class="figure mx-auto d-block"></figure><p>However this isn’t what we really want, so we’ll remove this line
+<figure><img src="fig/06-extending-latex/geometry-set-width.png" alt="A document with a narrow text block." class="figure mx-auto d-block"></figure><p>However this isn’t what we really want, so we’ll remove this line
 from our document.</p>
 <div id="callout1" class="callout">
 <div class="callout-square">
@@ -2237,9 +2255,7 @@ around each word we want to highlight:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>This is my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{LaTeX}} document.</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>I can add content to my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{section}}!</span></code></pre>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a>I can add content to my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{section}}!</span></code></pre>
 </div>
 <p>We can add this to each of our important terms in our document -
 maybe it looks something like this:</p>
@@ -2284,24 +2300,29 @@ command to all the keywords in our document.</p>
 </div>
 </div>
 </div>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
-<div class="accordion-body">
-<p>Related to the <code>\newcommand</code> command, we can also use the
-<code>\renewcommand</code> command to change the definition of an
-existing command. This is useful, for example, if we want to change the
-effect of a command partway through a document, or if we want to change
-the definition of a command that is already defined in a package. It has
-an identical syntax to the <code>\newcommand</code> command:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div id="callout5" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>What happens when we try to define the same command twice in the same
+document? You’ll get an error message that looks something like
+this:</p>
+<pre><code>! LaTeX Error: Command `\kw' already defined.
+               Or name `\end...` illegal, see p.192 of the manual.</code></pre>
+<p>In order to define the same command twice, we have to use the
+<code>\renewcommand</code> command instead of <code>\newcommand</code>.
+This is useful, for example, if we want to change the effect of a
+command partway through a document, or if we want to change the
+definition of a command that is already defined in a package.</p>
+<p>It has an identical syntax to the <code>\newcommand</code>
+command:</p>
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
-</div>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2313,7 +2334,7 @@ an identical syntax to the <code>\newcommand</code> command:</p>
 words we’ve highlighted by updating the definition of the
 <code>\kw</code> command. Let’s say we wanted to change the formatting
 to bold and change the color to blue:</p>
-<div id="callout5" class="callout">
+<div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -2324,10 +2345,10 @@ to bold and change the color to blue:</p>
 text, but we can use the <code>xcolor</code> package to do this by
 adding the <code>\usepackage{xcolor}</code> line to the preamble of our
 document:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2336,7 +2357,7 @@ document:</p>
 <code>\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}</code></p>
 <p>When we recompile the document we should see that the formatting of
 our keywords has changed all at once:</p>
-<figure><img src="fig/06-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure><div id="callout6" class="callout">
+<figure><img src="fig/06-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure><div id="callout7" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -2346,11 +2367,11 @@ our keywords has changed all at once:</p>
 <p>If the <code>xcolor</code> package is not installed, you can install
 it using your LaTeX package manager. For Tex Live, you can use the
 <code>tlmgr</code> command to install the package:</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">tlmgr</span> update <span class="at">--self</span> <span class="at">--all</span> <span class="co"># Optional: update all packages</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a><span class="ex">tlmgr</span> install xcolor</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">tlmgr</span> update <span class="at">--self</span> <span class="at">--all</span> <span class="co"># Optional: update all packages</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="ex">tlmgr</span> install xcolor</span></code></pre>
 </div>
 </div>
 </div>
@@ -2362,13 +2383,19 @@ it using your LaTeX package manager. For Tex Live, you can use the
 <p>We can define as many commands as we like in the preamble of our
 document. Let’s add another one that we can use to highlight commands in
 the document:</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co">% Italicise LaTeX commands</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="co">% Italicise LaTeX commands</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="fu">\newcommand</span>{<span class="ex">\latexcmd</span>}[1]{<span class="fu">\textbackslash\textit</span>{#1}}</span></code></pre>
 </div>
-<p>We’ll use this command in later sections.</p>
+<p>We can use this new command to highlight LaTeX commands in our
+document:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a>We can use the <span class="fu">\latexcmd</span>{section} command to create a new section in our document.</span></code></pre>
+</div>
 </section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
 </h2>
 <hr class="half-width">
@@ -2399,6 +2426,10 @@ document?</p>
 document.</p>
 <p>You can then use the <code>\lipsum</code> command in the body of your
 document to add some dummy text.</p>
+<p><strong>Bonus</strong>: The <code>\lipsum</code> command works by
+itself, but can also take arguments to specify which paragraphs of the
+dummy text to include. Try adding <code>\lipsum[3-4]</code> to your
+document to include only paragraphs 3 and 4 of the dummy text.</p>
 </div>
 </div>
 </div>
@@ -2413,17 +2444,17 @@ document to add some dummy text.</p>
 <div class="callout-content">
 <p>The definition of a new command in LaTeX is done with the
 <code>\newcommand</code> command. The syntax for this command is:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
 </div>
 <p>So if we modify the <code>\kw</code> command we defined above to look
 like this:</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
 </div>
 <p>What would the new <code>\kw</code> command do? and how would we use
 it?</p>
@@ -2441,10 +2472,10 @@ it?</p>
 argument would be the color we want to use to highlight the word, and
 the second argument would be the word we want to highlight. We would use
 it like this:</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2459,11 +2490,10 @@ it like this:</p>
 <h3 class="callout-title">Challenge 3: Can you write your own command
 with two arguments?</h3>
 <div class="callout-content">
-<p>Suppose you want to define a new command that takes as input two
-words as arguments. This first word shall be written
-<strong>bold</strong> while the second word shall be written
-<em>italic</em>. Moreover, the first and the second word are separated
-by a comma followed by a whitespace.</p>
+<p>Suppose you want to define a new command that takes two words as
+input. This first word shall be written <strong>bold</strong> while the
+second word shall be written <em>italic</em>. Moreover, the first and
+the second word are separated by a comma followed by a whitespace.</p>
 <p>Use <code>\newcommand</code> to define this command that takes two
 arguments as inputs and name it <code>\boit</code>. Write the following
 sentence into your LaTeX document using your new command
@@ -2481,24 +2511,24 @@ sentence into your LaTeX document using your new command
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The new <code>\boit</code> command would take two arguments: the
-first argument would be used with <code>\tetxbf{#1}</code> to make the
+first argument would be used with <code>\textbf{#1}</code> to make the
 first word appear <strong>bold</strong>, and the second argument would
-be used with <code>\tetxit{#2}</code> to make the first word appear
-<em>italic</em>. Between <code>\tetxbf{#1}</code> and
-<code>\tetxit{#2}</code>, we would write <code>,</code> to separate both
+be used with <code>\textit{#2}</code> to make the first word appear
+<em>italic</em>. Between <code>\textbf{#1}</code> and
+<code>\textit{#2}</code>, we would write <code>,</code> to separate both
 words. We would use the new command like this:</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="fu">\newcommand</span>{<span class="ex">\boit</span>}[2]{<span class="fu">\textbf</span>{#1}, <span class="fu">\textit</span>{#2}}</span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a></span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a>This newly defined command highlights these two words: <span class="fu">\boit</span>{Apple}{Banana}.</span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a></span>
-<span id="cb18-9"><a href="#cb18-9" tabindex="-1" aria-label="code-block-18-9"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a><span class="fu">\newcommand</span>{<span class="ex">\boit</span>}[2]{<span class="fu">\textbf</span>{#1}, <span class="fu">\textit</span>{#2}}</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1" aria-label="code-block-20-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1" aria-label="code-block-20-6"></a></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1" aria-label="code-block-20-7"></a>This newly defined command highlights these two words: <span class="fu">\boit</span>{Apple}{Banana}.</span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1" aria-label="code-block-20-8"></a></span>
+<span id="cb20-9"><a href="#cb20-9" tabindex="-1" aria-label="code-block-20-9"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2515,20 +2545,20 @@ words. We would use the new command like this:</p>
 <p>New commands can be made even more flexible by defining commands that
 take an optional argument. Then the general LaTeX code for this looks
 like this:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments][default value for the first argument]{definition}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments][default value for the first argument]{definition}</span></code></pre>
 </div>
 <p>The optional argument can be accessed and changed by writing square
 brackets <code>[]</code> directly after the <code>\commandname</code> in
 the body of your document.</p>
 <p>Consider the following, modified example of our <code>\kw</code> from
 before where we now use an optional argument.</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
 </div>
 <p>In your LaTeX file, use the new <code>\kw</code> command to write
 down the words “Banana” in yellow, “Apple” in red, and “Blueberry” in
@@ -2548,23 +2578,23 @@ down the given words very efficiently. For the first word, we change the
 optional argument to “yellow”. For the second word, we stick with the
 default value of “red”. For the third word, we change the optional
 argument to “blue”.</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1" aria-label="code-block-21-4"></a></span>
-<span id="cb21-5"><a href="#cb21-5" tabindex="-1" aria-label="code-block-21-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb21-6"><a href="#cb21-6" tabindex="-1" aria-label="code-block-21-6"></a></span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1" aria-label="code-block-21-7"></a><span class="fu">\kw</span>[yellow]{Banana}</span>
-<span id="cb21-8"><a href="#cb21-8" tabindex="-1" aria-label="code-block-21-8"></a></span>
-<span id="cb21-9"><a href="#cb21-9" tabindex="-1" aria-label="code-block-21-9"></a><span class="fu">\kw</span>{Apple}</span>
-<span id="cb21-10"><a href="#cb21-10" tabindex="-1" aria-label="code-block-21-10"></a></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1" aria-label="code-block-21-11"></a><span class="fu">\kw</span>[blue]{Blueberry}</span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1" aria-label="code-block-21-12"></a></span>
-<span id="cb21-13"><a href="#cb21-13" tabindex="-1" aria-label="code-block-21-13"></a></span>
-<span id="cb21-14"><a href="#cb21-14" tabindex="-1" aria-label="code-block-21-14"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1" aria-label="code-block-23-7"></a><span class="fu">\kw</span>[yellow]{Banana}</span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1" aria-label="code-block-23-8"></a></span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1" aria-label="code-block-23-9"></a><span class="fu">\kw</span>{Apple}</span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1" aria-label="code-block-23-10"></a></span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1" aria-label="code-block-23-11"></a><span class="fu">\kw</span>[blue]{Blueberry}</span>
+<span id="cb23-12"><a href="#cb23-12" tabindex="-1" aria-label="code-block-23-12"></a></span>
+<span id="cb23-13"><a href="#cb23-13" tabindex="-1" aria-label="code-block-23-13"></a></span>
+<span id="cb23-14"><a href="#cb23-14" tabindex="-1" aria-label="code-block-23-14"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -2586,12 +2616,12 @@ document.</li>
 </div>
 </div>
 </div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="files/document_state/ep-05.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -3057,7 +3087,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-07-font-format-and-spacing"><p>Content from <a href="07-font-format-and-spacing.html">Fonts, Formatting and Spacing</a></p>
 <hr>
-<p>Last updated on 2026-04-08 |
+<p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/07-font-format-and-spacing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3214,6 +3244,24 @@ using a global option:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="bu">\documentclass</span>[parskip=full]{<span class="ex">scrbook</span>}</span></code></pre>
 </div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>What does <code>parskip=full</code> do?</p>
+<p>This is related to the documentclass - the example here is using
+“scrbook”, which is a different document class than we are using
+(article). The example is explaining that the parskip option when using
+“scrbook” or “scrartcl” doesn’t necessarily need to be imported via a
+usepackage command, but can be specified in the parameters of the
+document class directly.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="forcing-a-new-line">Forcing a New Line<a class="anchor" aria-label="anchor" href="#forcing-a-new-line"></a>
 </h2>
 <hr class="half-width">
@@ -3263,6 +3311,20 @@ to add explicit horizontal or vertical space. We can do this using the
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="fu">\hspace</span>{1cm} <span class="co">% 1cm of horizontal space</span></span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="fu">\vspace</span>{1cm} <span class="co">% 1cm of vertical space</span></span></code></pre>
+</div>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Note that the some commands, like <code>\vspace</code>, don’t work
+outside of certain environments. For example, if you try to use
+<code>\vspace</code> in a section in your document, it will have no
+effect.</p>
+</div>
+</div>
 </div>
 <p>We can also use the <code>\vfill</code> command to fill the remaining
 space on a page. This is useful for centering content vertically on a
@@ -3340,7 +3402,7 @@ enclose everything in a <code>titlepage</code> environment:</p>
 <span id="cb11-7"><a href="#cb11-7" tabindex="-1" aria-label="code-block-11-7"></a>    January 1, 2000</span>
 <span id="cb11-8"><a href="#cb11-8" tabindex="-1" aria-label="code-block-11-8"></a><span class="kw">\end</span>{<span class="ex">titlepage</span>}</span></code></pre>
 </div>
-<div id="callout4" class="callout">
+<div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -3515,7 +3577,7 @@ command in order to create a new paragraph for each block of text.</p>
 <div id="challenge-3-making-a-custom-quote-block" class="callout-inner">
 <h3 class="callout-title">Challenge 3: Making a custom quote block</h3>
 <div class="callout-content">
-<p>Create a customg quote block using a <code>center</code> environment
+<p>Create a custom quote block using a <code>center</code> environment
 and <code>\vspace</code> commands. See if you can make it look something
 like this:</p>
 <figure><img src="fig/07-font-format-and-spacing/challenge-quote-example.PNG" alt="Example of a custom quote block" class="figure mx-auto d-block"></figure><p>Note that there is some vertical space above and below the quote, and
@@ -3610,7 +3672,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-08-using-graphics"><p>Content from <a href="08-using-graphics.html">Using Graphics</a></p>
 <hr>
-<p>Last updated on 2026-04-08 |
+<p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/08-using-graphics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4079,12 +4141,17 @@ any figure you want to be included in the list.</p>
 <div id="challenge-1-can-you-do-it" class="callout-inner">
 <h3 class="callout-title">Challenge 1: Can you do it?</h3>
 <div class="callout-content">
-<p>Consider again our running example of <code>example-image.PNG</code>.
-Include this image into your LaTeX document by using the
-<code>figure</code> environment. Make sure that your image is centered
-and rotate the image by 45 degree. Add the following caption to your
-image: “This caption has a <strong>bold</strong> word included.” How
-would your LaTeX look like?</p>
+<p>Consider again our running example of
+<code>my-awesome-image.PNG</code>. Try the following:</p>
+<ol style="list-style-type: decimal">
+<li>Include this image into your LaTeX document by using the
+<code>figure</code> environment.</li>
+<li>Make sure that your image is centered and rotate the image by 45
+degree.</li>
+<li>Add the following caption to your image: “This caption has a
+<strong>bold</strong> word included.”</li>
+</ol>
+<p>What would your final LaTeX look like?</p>
 </div>
 </div>
 </div>
@@ -4096,7 +4163,10 @@ would your LaTeX look like?</p>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>We use the <code>\centering</code> command in the <code>figure</code>
-environment and specify <code>angle=45</code> to rotate the image.</p>
+environment and specify <code>angle=45</code> to rotate the image. Below
+the graphics, <em>but still within the <code>figure</code>
+environment</em>, we use the <code>\caption</code> command to add a
+caption to our image.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -4805,7 +4875,7 @@ the value in the last column is italicized.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>Here’s some code to get you started:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -4834,7 +4904,7 @@ the value in the last column is italicized.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
 <div class="accordion-body">
 <p>For the last row, we need to merge the first two cells together. We
 can do this using the <code>\multicolumn</code> command. If we then
@@ -4848,7 +4918,7 @@ merge these two cells, then right aligning the text…</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answer </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -4926,7 +4996,7 @@ columns combined?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>The <code>multirow</code> command is used here to merge rows
 together. In the case here, we have two <code>multirow</code> commands,
@@ -4969,7 +5039,7 @@ category “Bread”.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5044,7 +5114,7 @@ with different colors!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5115,7 +5185,7 @@ package can be used to merge rows in a table.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="files/document_state/ep-07.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -5333,7 +5403,7 @@ using the <code>\ref</code> command.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>Use the <code>figure</code> environment to wrap the image, and use
 the <code>\includegraphics</code> command to add the image. In order to
@@ -5348,7 +5418,7 @@ the <code>figure</code> environment.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
 <div class="accordion-body">
 <p>Make sure that the <code>\label{}</code> command comes after the
 <code>\caption{}</code> command, and that the <code>\ref{}</code>
@@ -5362,7 +5432,7 @@ command refers to the correct label.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5440,7 +5510,7 @@ correct. Why or why not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You might have expected the output to be either “As indicated in
 Section 2, …” or “As indicated in Section ???”, but it actually returns
@@ -5500,7 +5570,7 @@ issue. What is it? Why does this happen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The <code>\ref{}</code> command is correctly written, but the
 <code>\ref{}</code> command only returns the number of the label it is
@@ -5537,7 +5607,7 @@ automatic.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5594,7 +5664,7 @@ document.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="files/document_state/ep-08.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -5608,7 +5678,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-11-mathematics-and-scientific-units"><p>Content from <a href="11-mathematics-and-scientific-units.html">Mathematics</a></p>
 <hr>
-<p>Last updated on 2026-04-08 |
+<p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/11-mathematics-and-scientific-units.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -5758,7 +5828,7 @@ backslash(<code>\</code>) here.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Math Mode in LaTeX is not just for LaTeX users! It is also used other
 tools like Jupyter Notebooks, R Markdown and many markdown processors.
@@ -5881,9 +5951,20 @@ the amperstand (<code>&amp;</code>)</p>
 <div class="callout-content">
 <p>See if you can write the following mathematical expression in
 LaTeX:</p>
-<ul>
-<li>Special Relativity: t’ = t / sqrt(1 - v^2 / c^2)</li>
-</ul>
+<figure><img src="./fig/11-mathematics-and-scientific-units/special-relativity-formula.jpg" alt="LaTeX output of the special relativity formula." class="figure mx-auto d-block"></figure>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>You will need the <code>\frac</code> and <code>\sqrt</code> commands
+to create the fraction and square root, respectively.</p>
+</div>
 </div>
 </div>
 </div>
@@ -5892,7 +5973,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -5919,6 +6000,8 @@ LaTeX:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ss">\(F = G * (m_1 m_2) / r^2 \)</span></span></code></pre>
 </div>
+<p>We are trying to display something that looks like this:</p>
+<figure><img src="./fig/11-mathematics-and-scientific-units/gravitational-force-formula.jpg" alt="LaTeX output of the gravitational force formula." class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -5927,7 +6010,7 @@ LaTeX:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The code is missing the <code>\frac</code> command to create a
 fraction. The correct code should be:</p>
@@ -5979,7 +6062,7 @@ find the following LaTeX template helpful:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -6114,7 +6197,7 @@ SSW.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>% 1. Speed of light </p>
 <p>% 2. Standard atmospheric pressure </p>
@@ -6147,7 +6230,7 @@ writing numbers with their scientific unit.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>After this episode, <a href="files/document_state/ep-09.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -6161,7 +6244,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-12-citations-and-references"><p>Content from <a href="12-citations-and-references.html">Citations and References</a></p>
 <hr>
-<p>Last updated on 2026-07-24 |
+<p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -6303,7 +6386,7 @@ your own.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-biblatex">
+<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" aria-labelledby="nav-tab-1-biblatex" role="tabpanel">
 <p>Check to make sure that your <code>main.tex</code> file is in the
 same directory as your <code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
@@ -6373,17 +6456,15 @@ behaving like autocite.</p>
 date of the publication directly into your document:</p>
 <ul>
 <li>
-<code>\citeauthor{Graham1995}</code>: Graham and Harris<br>
-</li>
+<code>\citeauthor{Graham1995}</code>: Graham and Harris</li>
 <li>
-<code>\citetitle{Graham1995}</code>: “The Humble Paperclip”<br>
-</li>
+<code>\citetitle{Graham1995}</code>: “The Humble Paperclip”</li>
 <li>
 <code>\citeyear{Graham1995}</code>: 1995</li>
 </ul>
 <p>The outcome and display depends on your style.</p>
 </div>
-<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Goodtoknow">
+<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" aria-labelledby="nav-tab-1-Goodtoknow" role="tabpanel">
 <p>If you want to have all entries of your referencing file in your
 bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
 for all entries or you type <code>\cite{*}</code>. This will print all
@@ -6534,13 +6615,14 @@ document.</p>
 </div>
 </div>
 </div>
-<div id="challenge-3-whats-problem-with-this" class="callout challenge">
+<div id="challenge-3-whats-the-problem-with-this" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-3-whats-problem-with-this" class="callout-inner">
-<h3 class="callout-title">Challenge 3: What’s problem with this?</h3>
+<div id="challenge-3-whats-the-problem-with-this" class="callout-inner">
+<h3 class="callout-title">Challenge 3: What’s the problem with
+this?</h3>
 <div class="callout-content">
 <p>We include the following reference in our document:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -6548,7 +6630,7 @@ document.</p>
 </h3>
 <pre class="sourceCode bibtex" tabindex="0"><code class="sourceCode bibtex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="va">@article</span>{<span class="ot">bentham2011</span>,</span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a>	<span class="dt">author</span> = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN &amp; NLC): Present State of Development &amp; Industrial Applications}, </span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN &amp; NLC): Present State of Development &amp; Industrial Applications},</span>
 <span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a>	<span class="dt">journal</span>= {Current Drug Discovery Technologies},</span>
 <span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>	<span class="dt">year</span> = {2011},</span>
 <span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a>	<span class="dt">volume</span> = {8},</span>
@@ -6595,7 +6677,7 @@ scratch. Deleting them forces a clean rebuild.</p>
 </h3>
 <pre class="sourceCode bibtex" tabindex="0"><code class="sourceCode bibtex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="va">@article</span>{<span class="ot">bentham2011</span>,</span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a>	<span class="dt">author</span> = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},</span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN <span class="ch">\&amp;</span> NLC): Present State of Development <span class="ch">\&amp;</span> Industrial Applications}, </span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN <span class="ch">\&amp;</span> NLC): Present State of Development <span class="ch">\&amp;</span> Industrial Applications},</span>
 <span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a>	<span class="dt">journal</span>= {Current Drug Discovery Technologies},</span>
 <span id="cb12-5"><a href="#cb12-5" tabindex="-1" aria-label="code-block-12-5"></a>	<span class="dt">year</span> = {2011},</span>
 <span id="cb12-6"><a href="#cb12-6" tabindex="-1" aria-label="code-block-12-6"></a>	<span class="dt">volume</span> = {8},</span>
@@ -6664,7 +6746,7 @@ the desired color using the <code>\hypersetup{}</code> command.</p>
 <span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a></span>
 <span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="fu">\hypersetup</span>{</span>
 <span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a>	colorlinks = true, <span class="co">% enable coloring</span></span>
-<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a>	citecolor = blue,  <span class="co">% change color </span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a>	citecolor = blue,  <span class="co">% change color</span></span>
 <span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a>}</span>
 <span id="cb14-11"><a href="#cb14-11" tabindex="-1" aria-label="code-block-14-11"></a></span>
 <span id="cb14-12"><a href="#cb14-12" tabindex="-1" aria-label="code-block-14-12"></a></span>
@@ -6943,7 +7025,7 @@ just created. Do you see a difference when you use
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>With default settings, quotes written with <code>\blockcquote</code>
 will be displayed in the same way as <code>\textcquote</code>. As soon
@@ -7046,7 +7128,7 @@ result.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 
 </div>
@@ -8752,8 +8834,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/aio.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/aio.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-07-24",
-  "datePublished": "2026-07-24"
+  "dateModified": "2026-07-26",
+  "datePublished": "2026-07-26"
 }
 
   </script><script>

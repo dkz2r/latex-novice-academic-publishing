@@ -412,7 +412,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Citations and References</h1>
-        <p>Last updated on 2026-07-24 |
+        <p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/12-citations-and-references.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -551,7 +551,7 @@ your own.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-biblatex">
+<div id="nav-tabpanel-1-biblatex" class="tab-pane show active" aria-labelledby="nav-tab-1-biblatex" role="tabpanel">
 <p>Check to make sure that your <code>main.tex</code> file is in the
 same directory as your <code>sample-references.bib</code> file.</p>
 <p>At the top of our <code>main.tex</code> file, we’ll add a line to
@@ -618,14 +618,14 @@ behaving like autocite.</p>
 <p>Furthermore you can use more commands to get the author, title or the
 date of the publication directly into your document:</p>
 <ul><li>
-<code>\citeauthor{Graham1995}</code>: Graham and Harris<br></li>
+<code>\citeauthor{Graham1995}</code>: Graham and Harris</li>
 <li>
-<code>\citetitle{Graham1995}</code>: “The Humble Paperclip”<br></li>
+<code>\citetitle{Graham1995}</code>: “The Humble Paperclip”</li>
 <li>
 <code>\citeyear{Graham1995}</code>: 1995</li>
 </ul><p>The outcome and display depends on your style.</p>
 </div>
-<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Goodtoknow">
+<div id="nav-tabpanel-1-Goodtoknow" class="tab-pane" aria-labelledby="nav-tab-1-Goodtoknow" role="tabpanel">
 <p>If you want to have all entries of your referencing file in your
 bibliography, you can either go with <code>\cite{key1,key2,.....}</code>
 for all entries or you type <code>\cite{*}</code>. This will print all
@@ -787,13 +787,14 @@ document.</p>
 </div>
 </div>
 </div>
-<div id="challenge-3-whats-problem-with-this" class="callout challenge">
+<div id="challenge-3-whats-the-problem-with-this" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="challenge-3-whats-problem-with-this" class="callout-inner">
-<h3 class="callout-title">Challenge 3: What’s problem with this?</h3>
+<div id="challenge-3-whats-the-problem-with-this" class="callout-inner">
+<h3 class="callout-title">Challenge 3: What’s the problem with
+this?</h3>
 <div class="callout-content">
 <p>We include the following reference in our document:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -801,7 +802,7 @@ document.</p>
 </h3>
 <pre class="sourceCode bibtex" tabindex="0"><code class="sourceCode bibtex"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="va">@article</span>{<span class="ot">bentham2011</span>,</span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a>	<span class="dt">author</span> = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN &amp; NLC): Present State of Development &amp; Industrial Applications}, </span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN &amp; NLC): Present State of Development &amp; Industrial Applications},</span>
 <span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a>	<span class="dt">journal</span>= {Current Drug Discovery Technologies},</span>
 <span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a>	<span class="dt">year</span> = {2011},</span>
 <span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a>	<span class="dt">volume</span> = {8},</span>
@@ -848,7 +849,7 @@ scratch. Deleting them forces a clean rebuild.</p>
 </h3>
 <pre class="sourceCode bibtex" tabindex="0"><code class="sourceCode bibtex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="va">@article</span>{<span class="ot">bentham2011</span>,</span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a>	<span class="dt">author</span> = {H. Muller, Rainer and Shegokar, Ranjita and M. Keck, Cornelia},</span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN <span class="ch">\&amp;</span> NLC): Present State of Development <span class="ch">\&amp;</span> Industrial Applications}, </span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a>	<span class="dt">title</span> = {20 Years of Lipid Nanoparticles (SLN <span class="ch">\&amp;</span> NLC): Present State of Development <span class="ch">\&amp;</span> Industrial Applications},</span>
 <span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a>	<span class="dt">journal</span>= {Current Drug Discovery Technologies},</span>
 <span id="cb12-5"><a href="#cb12-5" tabindex="-1" aria-label="code-block-12-5"></a>	<span class="dt">year</span> = {2011},</span>
 <span id="cb12-6"><a href="#cb12-6" tabindex="-1" aria-label="code-block-12-6"></a>	<span class="dt">volume</span> = {8},</span>
@@ -917,7 +918,7 @@ the desired color using the <code>\hypersetup{}</code> command.</p>
 <span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a></span>
 <span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="fu">\hypersetup</span>{</span>
 <span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a>	colorlinks = true, <span class="co">% enable coloring</span></span>
-<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a>	citecolor = blue,  <span class="co">% change color </span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a>	citecolor = blue,  <span class="co">% change color</span></span>
 <span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a>}</span>
 <span id="cb14-11"><a href="#cb14-11" tabindex="-1" aria-label="code-block-14-11"></a></span>
 <span id="cb14-12"><a href="#cb14-12" tabindex="-1" aria-label="code-block-14-12"></a></span>
@@ -1021,8 +1022,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/12-citations-and-references.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/instructor/12-citations-and-references.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-07-24",
-  "datePublished": "2026-07-24"
+  "dateModified": "2026-07-26",
+  "datePublished": "2026-07-26"
 }
 
   </script><script>

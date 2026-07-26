@@ -414,7 +414,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Extending LaTeX</h1>
-        <p>Last updated on 2026-04-08 |
+        <p>Last updated on 2026-07-26 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/06-extending-latex.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -478,7 +478,7 @@ document to 6cm, we would update this line to look like this:</p>
 <p>Give this a try in our <code>main.tex</code> document to see what
 happens. When you render the document, you should see something like
 this:</p>
-<figure><img src="fig/06-extending-latex/geometry-set-width.PNG" alt="A document with a narrow text block." class="figure mx-auto d-block"></figure><p>However this isn’t what we really want, so we’ll remove this line
+<figure><img src="fig/06-extending-latex/geometry-set-width.png" alt="A document with a narrow text block." class="figure mx-auto d-block"></figure><p>However this isn’t what we really want, so we’ll remove this line
 from our document.</p>
 <div id="callout1" class="callout">
 <div class="callout-square">
@@ -600,9 +600,7 @@ around each word we want to highlight:</p>
 </h3>
 <pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a>This is my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{LaTeX}} document.</span>
 <span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="kw">\section</span>{Sections}</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>I can add content to my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{section}}!</span></code></pre>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a>I can add content to my first <span class="fu">\textbf</span>{<span class="fu">\underline</span>{section}}!</span></code></pre>
 </div>
 <p>We can add this to each of our important terms in our document -
 maybe it looks something like this:</p>
@@ -645,24 +643,29 @@ command to all the keywords in our document.</p>
 </ul></div>
 </div>
 </div>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
-<div class="accordion-body">
-<p>Related to the <code>\newcommand</code> command, we can also use the
-<code>\renewcommand</code> command to change the definition of an
-existing command. This is useful, for example, if we want to change the
-effect of a command partway through a document, or if we want to change
-the definition of a command that is already defined in a package. It has
-an identical syntax to the <code>\newcommand</code> command:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div id="callout5" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>What happens when we try to define the same command twice in the same
+document? You’ll get an error message that looks something like
+this:</p>
+<pre><code>! LaTeX Error: Command `\kw' already defined.
+               Or name `\end...` illegal, see p.192 of the manual.</code></pre>
+<p>In order to define the same command twice, we have to use the
+<code>\renewcommand</code> command instead of <code>\newcommand</code>.
+This is useful, for example, if we want to change the effect of a
+command partway through a document, or if we want to change the
+definition of a command that is already defined in a package.</p>
+<p>It has an identical syntax to the <code>\newcommand</code>
+command:</p>
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
-</div>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
 </div>
 </div>
 </div>
@@ -673,7 +676,7 @@ an identical syntax to the <code>\newcommand</code> command:</p>
 words we’ve highlighted by updating the definition of the
 <code>\kw</code> command. Let’s say we wanted to change the formatting
 to bold and change the color to blue:</p>
-<div id="callout5" class="callout">
+<div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -684,10 +687,10 @@ to bold and change the color to blue:</p>
 text, but we can use the <code>xcolor</code> package to do this by
 adding the <code>\usepackage{xcolor}</code> line to the preamble of our
 document:</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -696,7 +699,7 @@ document:</p>
 <code>\newcommand{\kw}[1]{\textcolor{blue}{\textbf{#1}}}</code></p>
 <p>When we recompile the document we should see that the formatting of
 our keywords has changed all at once:</p>
-<figure><img src="fig/06-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure><div id="callout6" class="callout">
+<figure><img src="fig/06-extending-latex/kw-highlight-blue.PNG" alt="Our document with keywords highlighted in blue." class="figure mx-auto d-block"></figure><div id="callout7" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -706,11 +709,11 @@ our keywords has changed all at once:</p>
 <p>If the <code>xcolor</code> package is not installed, you can install
 it using your LaTeX package manager. For Tex Live, you can use the
 <code>tlmgr</code> command to install the package:</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">tlmgr</span> update <span class="at">--self</span> <span class="at">--all</span> <span class="co"># Optional: update all packages</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a><span class="ex">tlmgr</span> install xcolor</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">tlmgr</span> update <span class="at">--self</span> <span class="at">--all</span> <span class="co"># Optional: update all packages</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="ex">tlmgr</span> install xcolor</span></code></pre>
 </div>
 </div>
 </div>
@@ -720,13 +723,19 @@ it using your LaTeX package manager. For Tex Live, you can use the
 <hr class="half-width"><p>We can define as many commands as we like in the preamble of our
 document. Let’s add another one that we can use to highlight commands in
 the document:</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co">% Italicise LaTeX commands</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="fu">\newcommand</span>{<span class="ex">\cmd</span>}[1]{<span class="fu">\textit</span>{#1}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="co">% Italicise LaTeX commands</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="fu">\newcommand</span>{<span class="ex">\latexcmd</span>}[1]{<span class="fu">\textbackslash\textit</span>{#1}}</span></code></pre>
 </div>
-<p>We’ll use this command in later sections.</p>
+<p>We can use this new command to highlight LaTeX commands in our
+document:</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a>We can use the <span class="fu">\latexcmd</span>{section} command to create a new section in our document.</span></code></pre>
+</div>
 </section><section><h2 class="section-heading" id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h2>
 <hr class="half-width"><div id="challenge-1-importing-a-new-package" class="callout challenge">
 <div class="callout-square">
@@ -755,6 +764,10 @@ document?</p>
 document.</p>
 <p>You can then use the <code>\lipsum</code> command in the body of your
 document to add some dummy text.</p>
+<p><strong>Bonus</strong>: The <code>\lipsum</code> command works by
+itself, but can also take arguments to specify which paragraphs of the
+dummy text to include. Try adding <code>\lipsum[3-4]</code> to your
+document to include only paragraphs 3 and 4 of the dummy text.</p>
 </div>
 </div>
 </div>
@@ -769,17 +782,17 @@ document to add some dummy text.</p>
 <div class="callout-content">
 <p>The definition of a new command in LaTeX is done with the
 <code>\newcommand</code> command. The syntax for this command is:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments]{definition}</span></code></pre>
 </div>
 <p>So if we modify the <code>\kw</code> command we defined above to look
 like this:</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
 </div>
 <p>What would the new <code>\kw</code> command do? and how would we use
 it?</p>
@@ -797,10 +810,10 @@ it?</p>
 argument would be the color we want to use to highlight the word, and
 the second argument would be the word we want to highlight. We would use
 it like this:</p>
-<div class="codewrapper sourceCode" id="cb17">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="fu">\kw</span>{red}{my keyword}</span></code></pre>
 </div>
 </div>
 </div>
@@ -815,11 +828,10 @@ it like this:</p>
 <h3 class="callout-title">Challenge 3: Can you write your own command
 with two arguments?</h3>
 <div class="callout-content">
-<p>Suppose you want to define a new command that takes as input two
-words as arguments. This first word shall be written
-<strong>bold</strong> while the second word shall be written
-<em>italic</em>. Moreover, the first and the second word are separated
-by a comma followed by a whitespace.</p>
+<p>Suppose you want to define a new command that takes two words as
+input. This first word shall be written <strong>bold</strong> while the
+second word shall be written <em>italic</em>. Moreover, the first and
+the second word are separated by a comma followed by a whitespace.</p>
 <p>Use <code>\newcommand</code> to define this command that takes two
 arguments as inputs and name it <code>\boit</code>. Write the following
 sentence into your LaTeX document using your new command
@@ -837,24 +849,24 @@ sentence into your LaTeX document using your new command
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The new <code>\boit</code> command would take two arguments: the
-first argument would be used with <code>\tetxbf{#1}</code> to make the
+first argument would be used with <code>\textbf{#1}</code> to make the
 first word appear <strong>bold</strong>, and the second argument would
-be used with <code>\tetxit{#2}</code> to make the first word appear
-<em>italic</em>. Between <code>\tetxbf{#1}</code> and
-<code>\tetxit{#2}</code>, we would write <code>,</code> to separate both
+be used with <code>\textit{#2}</code> to make the first word appear
+<em>italic</em>. Between <code>\textbf{#1}</code> and
+<code>\textit{#2}</code>, we would write <code>,</code> to separate both
 words. We would use the new command like this:</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a><span class="fu">\newcommand</span>{<span class="ex">\boit</span>}[2]{<span class="fu">\textbf</span>{#1}, <span class="fu">\textit</span>{#2}}</span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a></span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a>This newly defined command highlights these two words: <span class="fu">\boit</span>{Apple}{Banana}.</span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a></span>
-<span id="cb18-9"><a href="#cb18-9" tabindex="-1" aria-label="code-block-18-9"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a><span class="fu">\newcommand</span>{<span class="ex">\boit</span>}[2]{<span class="fu">\textbf</span>{#1}, <span class="fu">\textit</span>{#2}}</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1" aria-label="code-block-20-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1" aria-label="code-block-20-6"></a></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1" aria-label="code-block-20-7"></a>This newly defined command highlights these two words: <span class="fu">\boit</span>{Apple}{Banana}.</span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1" aria-label="code-block-20-8"></a></span>
+<span id="cb20-9"><a href="#cb20-9" tabindex="-1" aria-label="code-block-20-9"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -871,20 +883,20 @@ words. We would use the new command like this:</p>
 <p>New commands can be made even more flexible by defining commands that
 take an optional argument. Then the general LaTeX code for this looks
 like this:</p>
-<div class="codewrapper sourceCode" id="cb19">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments][default value for the first argument]{definition}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="fu">\newcommand</span>{<span class="ex">\commandname</span>}[number of arguments][default value for the first argument]{definition}</span></code></pre>
 </div>
 <p>The optional argument can be accessed and changed by writing square
 brackets <code>[]</code> directly after the <code>\commandname</code> in
 the body of your document.</p>
 <p>Consider the following, modified example of our <code>\kw</code> from
 before where we now use an optional argument.</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span></code></pre>
 </div>
 <p>In your LaTeX file, use the new <code>\kw</code> command to write
 down the words “Banana” in yellow, “Apple” in red, and “Blueberry” in
@@ -904,23 +916,23 @@ down the given words very efficiently. For the first word, we change the
 optional argument to “yellow”. For the second word, we stick with the
 default value of “red”. For the third word, we change the optional
 argument to “blue”.</p>
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">LATEX<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1" aria-label="code-block-21-4"></a></span>
-<span id="cb21-5"><a href="#cb21-5" tabindex="-1" aria-label="code-block-21-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb21-6"><a href="#cb21-6" tabindex="-1" aria-label="code-block-21-6"></a></span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1" aria-label="code-block-21-7"></a><span class="fu">\kw</span>[yellow]{Banana}</span>
-<span id="cb21-8"><a href="#cb21-8" tabindex="-1" aria-label="code-block-21-8"></a></span>
-<span id="cb21-9"><a href="#cb21-9" tabindex="-1" aria-label="code-block-21-9"></a><span class="fu">\kw</span>{Apple}</span>
-<span id="cb21-10"><a href="#cb21-10" tabindex="-1" aria-label="code-block-21-10"></a></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1" aria-label="code-block-21-11"></a><span class="fu">\kw</span>[blue]{Blueberry}</span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1" aria-label="code-block-21-12"></a></span>
-<span id="cb21-13"><a href="#cb21-13" tabindex="-1" aria-label="code-block-21-13"></a></span>
-<span id="cb21-14"><a href="#cb21-14" tabindex="-1" aria-label="code-block-21-14"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
+<pre class="sourceCode latex" tabindex="0"><code class="sourceCode latex"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a></span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a><span class="fu">\newcommand</span>{<span class="ex">\kw</span>}[2][red]{<span class="fu">\textcolor</span>{#1}{<span class="fu">\textbf</span>{#2}}}</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1" aria-label="code-block-23-7"></a><span class="fu">\kw</span>[yellow]{Banana}</span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1" aria-label="code-block-23-8"></a></span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1" aria-label="code-block-23-9"></a><span class="fu">\kw</span>{Apple}</span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1" aria-label="code-block-23-10"></a></span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1" aria-label="code-block-23-11"></a><span class="fu">\kw</span>[blue]{Blueberry}</span>
+<span id="cb23-12"><a href="#cb23-12" tabindex="-1" aria-label="code-block-23-12"></a></span>
+<span id="cb23-13"><a href="#cb23-13" tabindex="-1" aria-label="code-block-23-13"></a></span>
+<span id="cb23-14"><a href="#cb23-14" tabindex="-1" aria-label="code-block-23-14"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -940,12 +952,12 @@ document.</li>
 </ul></div>
 </div>
 </div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Show details </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>After this episode, <a href="files/document_state/ep-05.tex">here is
 what our LaTeX document looks like</a>.</p>
@@ -1017,8 +1029,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/06-extending-latex.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/06-extending-latex.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-04-08",
-  "datePublished": "2026-07-24"
+  "dateModified": "2026-07-26",
+  "datePublished": "2026-07-26"
 }
 
   </script><script>
