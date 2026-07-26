@@ -150,8 +150,6 @@ around each word we want to highlight:
 ```latex
 This is my first \textbf{\underline{LaTeX}} document.
 
-\section{Sections}
-
 I can add content to my first \textbf{\underline{section}}!
 ```
 
@@ -253,7 +251,7 @@ that we can use to highlight commands in the document:
 
 ```latex
 % Italicise LaTeX commands
-\newcommand{\cmd}[1]{\textit{#1}}
+\newcommand{\cmd}[1]{\textbackslash\textit{#1}}
 ```
 
 We'll use this command in later sections.
