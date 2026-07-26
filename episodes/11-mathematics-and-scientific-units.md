@@ -229,6 +229,9 @@ What's wrong with the following LaTeX code?
 \(F = G * (m_1 m_2) / r^2 \)
 ```
 
+We are trying to display something that looks like this:
+
+![](./fig/11-mathematics-and-scientific-units/gravitational-force-formula.jpg){alt="LaTeX output of the gravitational force formula."}
 
 :::::::::::::::::::::::: solution
 
