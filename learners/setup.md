@@ -222,7 +222,7 @@ Hello, \LaTeX!
 \end{document}
 ```
 
-Press **F6** (or select "Tools" > "Build & View") to compile the document. TeXStudio will run
+Press **F5** (or select "Tools" > "Build & View") to compile the document. TeXStudio will run
 the LaTeX compiler and, if successful, display the resulting PDF in the panel to the right of the
 editor.
 
