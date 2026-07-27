@@ -2,7 +2,7 @@
 
 \usepackage{amsmath}
 \usepackage{enumitem}
-\usepackage{graphics}
+\usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage{booktabs}
 \usepackage{newtxtext}
@@ -19,14 +19,21 @@
 
 
 \begin{titlepage}
-
-\begin{Huge}
+\centering
+\begin{huge}
     An Example Article Used To Demonstrate
-\end{Huge}
+\end{huge}
 
-\textit{Using input and include to create a clean file structure}
+\vspace{1cm}
+
+\begin{large}
+	\textit{Using input and include to create a clean file structure}
+\end{large}
+
 
 \vfill
+
+\raggedright
 
 \authorinfo{First Author}{DKZ.2R, Aachen, Germany}{info@dkr2r.de}
 
@@ -38,6 +45,14 @@
 This document is a general example document used to demonstrate how to use multiple files in LaTeX.
 The final document should be made up of a collection of linked files, which are included or input into one final main document.
 This will demonstrate how a LaTeX document can be split into multiple files, facilitating collaboration and portability.
+
+\newpage
+
+\tableofcontents
+
+\listoffigures
+
+\newpage
 
 \section{Introduction}
 
@@ -92,8 +107,7 @@ As shown in Table \ref{tab:sample}, the temperature and pH values were consisten
 
 \begin{figure}[h]
 	\centering
-	% replace with your image
-	\includegraphics[width=0.5\textwidth]{example-image}
+	\includegraphics[width=0.5\textwidth]{my-awesome-image}
 	\caption{Our main image.}
 	\label{fig:sample}
 \end{figure}
@@ -104,6 +118,6 @@ As shown in Figure \ref{fig:sample}, \lipsum[7]
 
 \lipsum[10]
 
-We used several references in earlier chapters like: \citet{Graham1995, Huff1954}.
+We used several references in earlier chapters like: \cite{Graham1995, Huff1954}.
 
 \end{document}
