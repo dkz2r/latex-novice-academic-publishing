@@ -106,7 +106,7 @@ The `enumitem` package enables us to customize bullet-points globally or for a s
 \documentclass{article}
 
 \usepackage{enumitem} % package for lists
-\setlist{label=\Roman*} % globally defining enumeration
+\setlist[enumerate]{label=\Roman*} % globally defining enumeration
 
 \begin{document}
 
