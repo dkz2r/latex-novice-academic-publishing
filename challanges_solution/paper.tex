@@ -1,0 +1,160 @@
+\documentclass{article}
+
+\usepackage{lipsum}        % lorem ipsum text
+\usepackage{graphicx}      % include graphics
+\usepackage{booktabs}      % table style
+\usepackage{enumitem}      % lists
+\usepackage{xcolor}
+
+
+\title{My Paper}
+\author{First Author\\ Second Author}
+\date{\today}
+
+\usepackage[style=apa]{biblatex}
+\addbibresource{sample-references.bib}
+
+\usepackage{hyperref}
+
+
+\hypersetup{
+	colorlinks = true, 
+	citecolor = blue,    % color for citations
+	urlcolor = black,
+}
+
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+\listoftables
+\newpage
+\listoffigures
+\newpage
+
+\section{Introduction}
+
+\lipsum[1-2]
+
+
+\section{Methods}
+
+\lipsum[3]
+
+
+\subsection{Model}
+
+\lipsum[10-11]
+
+\subsection{Data Collection}
+
+\lipsum[4]
+
+\subsubsection{Unordered List}
+
+The following items were collected:
+
+\begin{itemize}
+	\item First item
+	\item Second item
+	\item Third item
+	\begin{itemize}
+		\item Nested item 1
+		\item Nested item 2
+	\end{itemize}
+	\item Fourth item
+\end{itemize}
+
+\subsubsection{Ordered List}
+
+The data collection followed these steps:
+
+\begin{enumerate}
+	\item First step
+	\item Second step
+	\item Third step
+	\begin{enumerate}
+		\item Nested step 1
+		\item Nested step 2
+	\end{enumerate}
+	\item Fourth step
+\end{enumerate}
+
+\subsection{Data Analysis}
+
+\lipsum[5]
+
+\section{Results}
+
+\lipsum[6]
+
+\subsection{Table Example}
+
+\begin{table}[h]
+	\centering
+	\caption{Main table}
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Product} & \textbf{Value} & \textbf{Unit} \\
+		\midrule
+		Product A & 1.00 & kg \\
+		Product B & 4.20 & kg \\
+		Product C & 3.00 & kg \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:sample}
+\end{table}
+
+As shown in Table \ref{tab:sample}, the values increase linearly.
+
+\subsection{Figure Example}
+
+\begin{figure}[h]
+	\centering
+	% replace with your image
+	\includegraphics[width=0.5\textwidth]{my-awesome-image.png}
+	\caption{Our main image.}
+	\label{fig:sample}
+\end{figure}
+
+As shown in Figure \ref{fig:sample}, \lipsum[7]
+
+
+
+\section{Conclusion}
+
+
+\lipsum[10]	
+
+The following conclusions can be drawn:
+
+\begin{enumerate}
+	\item Main conclusion
+	\item Second conclusion
+	\item Maybe we should not use list in the conclusion. 
+\end{enumerate}
+
+The importance of clear and effective communication in research cannot be
+overstated. As noted by \textcite{Graham1995}, even everyday objects such
+as the paperclip can serve as a metaphor for the complexity of modern
+office life. This insight, combined with the statistical considerations
+outlined by \textcite{Huff1954}, underlines the need for careful and
+transparent reporting of results \autocite{Graham1995, Huff1954}.
+
+
+\newpage
+
+\printbibliography
+
+\newpage 
+
+
+\section{Appendix}
+
+Additional information and graphics.
+
+\end{document}
