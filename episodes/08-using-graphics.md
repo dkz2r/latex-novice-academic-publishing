@@ -166,7 +166,7 @@ The following code generates this warning message:
 
 We can rotate an image by setting the "angle" parameter:
 
-\includegraphics[scale=2, angle=45]{example-image}
+\includegraphics[scale=2, angle=45]{my-awesome-image.png}
 \end{document}
 ```
 
