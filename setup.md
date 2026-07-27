@@ -85,7 +85,7 @@ TeXStudio.
 
 ### Step 1 — Install MacTeX
 
-Visit the MacTeX download page (!!!  link to the MacTeX download page at tug.org/mactex) and
+Visit the MacTeX [download page](https://tug.org/mactex/mactex-download.html) and
 download the "MacTeX.pkg" file.
 
 ![](){alt="The MacTeX download page showing the MacTeX.pkg download link"}
@@ -98,7 +98,7 @@ users.
 
 ### Step 2 — Install TeXStudioa
 
-Visit the TeXStudio download page (!!!  link to the TeXStudio download page) and download the
+Visit the TeXStudio [download page](https://texstudio.org/#download) and download the
 macOS version. Two builds are available: one for Intel Macs and one for Apple Silicon (M1/M2/M3)
 Macs. Download the version that matches your hardware.
 
@@ -222,7 +222,7 @@ Hello, \LaTeX!
 \end{document}
 ```
 
-Press **F6** (or select "Tools" > "Build & View") to compile the document. TeXStudio will run
+Press **F5** (or select "Tools" > "Build & View") to compile the document. TeXStudio will run
 the LaTeX compiler and, if successful, display the resulting PDF in the panel to the right of the
 editor.
 
