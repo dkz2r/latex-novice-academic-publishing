@@ -1,0 +1,123 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{newtxtext}
+\usepackage[subscriptcorrection]{newtxmath}
+
+\usepackage[plain,noend]{algorithm2e}
+\usepackage{enumitem}
+
+\newcommand{\authorinfo}[3]{
+  \noindent\textbf{#1}\hfill #2\par
+  \noindent\textit{#3}\par\vspace{0.5em}}
+
+\begin{document}
+
+
+\begin{titlepage}
+\centering
+\begin{huge}
+    An Example Article Used To Demonstrate
+\end{huge}
+
+\vspace{1cm}
+
+\begin{large}
+	\textit{Using input and include to create a clean file structure}
+\end{large}
+
+
+\vfill
+
+\raggedright
+
+\authorinfo{First Author}{DKZ.2R, Aachen, Germany}{info@dkr2r.de}
+
+\authorinfo{Second Author}{University, City, Germany}{givenname.name@university.de}
+
+\end{titlepage}
+
+\section*{Abstract}
+This document is a general example document used to demonstrate how to use multiple files in LaTeX.
+The final document should be made up of a collection of linked files, which are included or input into one final main document.
+This will demonstrate how a LaTeX document can be split into multiple files, facilitating collaboration and portability.
+
+\newpage
+
+\tableofcontents
+
+\listoffigures
+
+\newpage
+
+\section{Introduction}
+
+\lipsum[1-2]
+
+\section{Methods}
+
+\lipsum[3]
+
+\subsection{Data Collection}
+
+\lipsum[4]
+
+The following equipment was used in the experiment:
+
+\begin{itemize}[label=\arabic*.]
+	\item Microscope for observations
+	\item Thermometer for temperature readings
+	\begin{itemize}[label=\arabic*.\arabic*]
+		\item Digital thermometer
+		\item Mercury thermometer
+	\end{itemize}
+	\item Spectrometer
+\end{itemize}
+
+\section{Results}
+
+\lipsum[6]
+
+\subsection{Experimental Results Table}
+
+\lipsum[1]
+
+\begin{table}[h]
+	\centering
+	\caption{Experimental measurements}
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Trial} & \textbf{Temperature (°C)} & \textbf{pH Level} \\
+		\midrule
+		Trial 1 & 22.5 & 7.2 \\
+		Trial 2 & 23.1 & 7.1 \\
+		Trial 3 & 22.8 & 7.3 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:sample}
+\end{table}
+
+As shown in Table \ref{tab:sample}, the temperature and pH values were consistent across trials.
+
+\subsection{Figure Example}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{my-awesome-image}
+	\caption{Our main image.}
+	\label{fig:sample}
+\end{figure}
+
+As shown in Figure \ref{fig:sample}, \lipsum[7]
+
+\section{Conclusion}
+
+\lipsum[10]
+
+We used several references in earlier chapters like: \cite{Graham1995, Huff1954}.
+
+\end{document}
