@@ -409,7 +409,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Lists</h1>
-        <p>Last updated on 2026-07-24 |
+        <p>Last updated on 2026-07-27 |
 
         <a href="https://github.com/dkz2r/latex-novice-academic-publishing/edit/main/episodes/lists.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -771,7 +771,12 @@ Main
 <li>
 Discussion
 </li>
-</ol><p>How would you write this in LaTeX?</p>
+</ol><p>Our colleague suggests that we use the <code>enumitem</code> package.
+Add <code>\usepackage{enumitem}</code> to our document, then look at the
+<a href="https://ftp.rrze.uni-erlangen.de/ctan/macros/latex/contrib/enumitem/enumitem.pdf" class="external-link">enumitem
+documentation</a>, specifically the “Quick Reference” for an idea how to
+use it.</p>
+<p>How would you write this in LaTeX?</p>
 </div>
 </div>
 </div>
@@ -783,12 +788,45 @@ Discussion
 <div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>The <code>enumitem</code> package provides commands to reference
-counters at different nesting levels of a list. To refer to the counter
-at the first level, use <code>\theenumi</code>, where the trailing
-<code>i</code> indicates the first level. The levels are denoted using
-Roman numerals, so the second level uses <code>\theenumii</code>, the
-third <code>\theenumiii</code>, and the fourth
-<code>\theenumiv</code>.</p>
+counters at different nesting levels of a list.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
+  <h4 class="accordion-header" id="headingHint2"> Give me a hint </h4>
+</button>
+<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div class="accordion-body">
+<p><code>enumitem</code> adds options to the
+<code>\begin{enumerate}</code> command that com in square brackets
+immediately after:
+<code>\begin{enumerate}[label={label format}]</code>.</p>
+<p>We can use <code>\arabic</code> in the label to use arabic numbering,
+but we specifically want something like “2.1” - where the first number
+refers to the outer list value. We could write
+<code>\begin{enumerate}[label=2.\arabic*]</code>, but see if you can
+find a command to refer to value of the outer list.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionHint3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint3" aria-expanded="false" aria-controls="collapseHint3">
+  <h4 class="accordion-header" id="headingHint3"> Give me a hint </h4>
+</button>
+<div id="collapseHint3" class="accordion-collapse collapse" data-bs-parent="#accordionHint3" aria-labelledby="headingHint3">
+<div class="accordion-body">
+<p>To refer to the counter at the first level, use
+<code>\theenumi</code>, where the trailing <code>i</code> indicates the
+first level. The levels are denoted using Roman numerals, so the second
+level uses <code>\theenumii</code>, the third <code>\theenumiii</code>,
+and the fourth <code>\theenumiv</code>.</p>
+<p>We are using arabic numerals, so we will use the <code>\arabic</code>
+command after the counter.</p>
 </div>
 </div>
 </div>
@@ -909,8 +947,8 @@ any links that you are not going to use.
   "url": "https://dkz2r.github.io/latex-novice-academic-publishing/lists.html",
   "identifier": "https://dkz2r.github.io/latex-novice-academic-publishing/lists.html",
   "dateCreated": "2024-12-09",
-  "dateModified": "2026-07-24",
-  "datePublished": "2026-07-26"
+  "dateModified": "2026-07-27",
+  "datePublished": "2026-07-27"
 }
 
   </script><script>
