@@ -76,7 +76,7 @@ When you compile this document, you should see something like this in the previe
 Note that the `\item` commands do not need to be enclosed in braces. These commands do not take
 any arguments, so they can be used as standalone commands. The text that follows the `\item`
 command will be treated as the content of the list item. However, you are able to specify your own
-bullet point symbols with `\item[]` manually. For instance, you can use `>` if 
+bullet point symbols with `\item[]` manually. For instance, you can use `>` if
 you want a list with this symbol you can use the following LaTeX code:
 
 ```latex
@@ -182,9 +182,9 @@ Notice also that an unordered list is just as easy. We can use the exact same sy
 <!--   \item Item 2 -->
 <!--   \item Item 3 -->
 <!-- \end{enumerate} -->
-<!-- 
+<!--
 <!-- \subsection{Unordered} -->
-<!-- 
+<!--
 <!-- Unordered lists are just a series of items preceded by a marker. -->
 <!-- -->
 <!-- \begin{itemize} -->
@@ -192,7 +192,7 @@ Notice also that an unordered list is just as easy. We can use the exact same sy
 <!--   \item Item 2 -->
 <!--   \item Item 3 -->
 <!-- \end{itemize} -->
-<!-- 
+<!--
 <!-- \end{document} -->
 <!-- ```  -->
 <!--  -->
@@ -346,7 +346,7 @@ In this case we customized the second level list locally, meaning the changes on
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Lists in LaTeX are created using the `enumerate` and `itemize` environments.
-- Using the `enumitem` package to customize bullet points. 
+- Using the `enumitem` package to customize bullet points.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
