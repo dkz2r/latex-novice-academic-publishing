@@ -65,23 +65,24 @@ contact: 'hartman@itc.rwth-aachen.de'
 
 # Order of episodes in your lesson
 episodes:
-- 01-introduction.md
-- 02-document-structure.md
-- 03-error-handling.md
-- 04-logical-structure.md
-- 06-extending-latex.md
-- lists.md
-- 07-font-format-and-spacing.md
-- 08-using-graphics.md
-- 09-tables.md
-- 10-cross-references.md
-- 11-mathematics-and-scientific-units.md
+- 14-structuring-sources.md
 - 12-citations-and-references.md
 - 13-context-sensitive-quotation.md
-- 14-structuring-sources.md
 - 15-loading-and-manipulating-data.md
 - 15a-templates.md
-- 16-documentation-and-finding-help.md
+
+#- 01-introduction.md
+#- 02-document-structure.md
+#- 03-error-handling.md
+#- 04-logical-structure.md
+#- 06-extending-latex.md
+#- lists.md
+#- 07-font-format-and-spacing.md
+#- 08-using-graphics.md
+#- 09-tables.md
+#- 10-cross-references.md
+#- 11-mathematics-and-scientific-units.md
+#- 16-documentation-and-finding-help.md
 
 # Information for Learners
 learners:
